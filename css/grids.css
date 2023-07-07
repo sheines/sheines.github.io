@@ -1,11 +1,19 @@
 :root {
-    --bg-color: #232323;
+    --bg-global: #232323;
+    --bg-header: #004c5c;
+    --fg-text: #a8a7a7;
+    --fg-header: darkgoldenrod;
+    --bloom-bg: aqua;
+    --bloom-fg: goldenrod;
+    --shadow-fg: gold;
 }
 
 body {
     min-height: 100vh;
     overflow: hidden;
-    background-color: var(--bg-color);
+    background-color: var(--bg-global);
+    color: var(--fg-text);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
     display: grid;
     grid-template: 
@@ -14,7 +22,6 @@ body {
         "aside  main     main    main"  1fr
         "footer footer   footer  footer" auto /
         1fr     1fr      1fr     1fr;
-    grid-gap: 0.3rem;
 }
 @media screen and (max-width: 700px) {
     body {
@@ -30,21 +37,30 @@ body {
 }
 header {
     grid-area: header;
-    background: red;
-}
-main {
-    grid-area: main;
-    background: green;
-}
-aside {
-    grid-area: aside;
-    background: yellow;
+    background: var(--bg-header);
+    color: var(--fg-header);
+    display: flex;
+    justify-content: center;
 }
 nav {
     grid-area: nav;
-    background: blue;
+    background: var(--bg-header);
+    color: var(--fg-header);
+
+    display: flex;
+    flex-wrap: wrap;
+
 }
+main {
+    grid-area: main;
+
+}
+aside {
+    grid-area: aside;
+
+}
+
 footer {
     grid-area: footer;
-    background: orange;
+
 }

@@ -1,0 +1,14 @@
+a {
+    color: var(--fg-header);
+    text-decoration: none;
+}
+a:hover {
+    color: var(--bloom-fg);
+    text-shadow: 0 0 1em var(--shadow-fg);
+}
+.teaser {
+    display: flex;
+    justify-content: center;
+    height: 300px;
+    object-fit: cover;
+}
