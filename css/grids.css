@@ -9,8 +9,6 @@
 }
 
 body {
-    min-height: 100vh;
-    overflow: hidden;
     background-color: var(--bg-global);
     color: var(--fg-text);
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -19,7 +17,7 @@ body {
     grid-template: 
         "header header   header  header" auto
         "nav    nav      nav     nav"    auto
-        "aside  main     main    main"  1fr
+        "main   main     main    aside"  1fr
         "footer footer   footer  footer" auto /
         1fr     1fr      1fr     1fr;
 }
@@ -53,7 +51,8 @@ nav {
 }
 main {
     grid-area: main;
-
+    padding-left: 10px;
+    padding-right: 10px;
 }
 aside {
     grid-area: aside;
