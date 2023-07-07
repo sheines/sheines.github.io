@@ -7,8 +7,8 @@ a:hover {
     text-shadow: 0 0 1em var(--shadow-fg);
 }
 .teaser {
+    padding: 10px;
     display: flex;
     justify-content: center;
     height: 300px;
-    object-fit: cover;
 }
