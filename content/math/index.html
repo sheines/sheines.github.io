@@ -60,136 +60,147 @@
                 // Step 1: Animate the appearance of the x-axis
                 const xAxis = document.getElementById('xAxis');
                 xAxis.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 1000, fill: 'forwards' });
-              
+
                 // Step 1: Animate the appearance of the y-axis
                 const yAxis = document.getElementById('yAxis');
                 yAxis.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 1000, fill: 'forwards', delay: 1000 });
-              
+
                 // Step 2: Plot the graph after y-axis animation
                 setTimeout(() => {
-                  const graph = document.getElementById('graph');
-                  graph.style.opacity = 1;
-                  graph.setAttribute("d", getGraphPath());
-                  const pathLength = graph.getTotalLength();
-                  graph.style.strokeDasharray = pathLength;
-                  graph.style.strokeDashoffset = pathLength;
-                  graph.animate([{ strokeDashoffset: pathLength }, { strokeDashoffset: 0 }], { duration: 2000, fill: "forwards" });
-              
-                  // Step 3: Mark the zeros of the function after graph animation
-                  setTimeout(() => {
+                    const graph = document.getElementById('graph');
+                    graph.style.opacity = 1;
+                    graph.setAttribute("d", getGraphPath());
+                    const pathLength = graph.getTotalLength();
+                    graph.style.strokeDasharray = pathLength;
+                    graph.style.strokeDashoffset = pathLength;
+                    graph.animate([{ strokeDashoffset: pathLength }, { strokeDashoffset: 0 }], { duration: 2000, fill: "forwards" });
+
+                    // Step 3: Mark the zeros of the function after graph animation
+                    setTimeout(() => {
                     const zeros = document.getElementById('zeros');
                     const xValues = getZeroValues();
                     xValues.forEach((x, index) => {
-                      setTimeout(() => {
-                        const y = 150 - equation(x) * 10;
+                        setTimeout(() => {
+                        const y = equation(x);
                         const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-                        circle.setAttribute("cx", x * 20 + 250);
-                        circle.setAttribute("cy", y);
+                        circle.setAttribute("cx", getSvgX(x));
+                        circle.setAttribute("cy", getSvgY(y));
                         circle.setAttribute("r", "4");
                         circle.setAttribute("fill", "red");
                         zeros.appendChild(circle);
                         circle.style.opacity = 0;
                         circle.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 500, fill: "forwards" });
                         setTimeout(() => {
-                          circle.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 500, fill: "forwards" });
+                            circle.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 500, fill: "forwards" });
                         }, 2000);
-                      }, index * 500);
+                        }, index * 500);
                     });
                     zeros.style.opacity = 1;
                     
-                    // Step 4: Move a point along the function graph
+
+                    // Step 4: Animate the motion of the tangentPoint along the graph path
                     setTimeout(() => {
                         const tangentPoint = document.getElementById('tangentPoint');
-                        const greenDot = document.getElementById('greenDot');
-                        tangentPoint.style.opacity = 1;
+    const greenDot = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+    greenDot.setAttribute("id", "greenDot");
+    greenDot.setAttribute("r", "4");
+    greenDot.setAttribute("fill", "green");
+    tangentPoint.appendChild(greenDot);
+    tangentPoint.style.opacity = 1;
 
-                        // Find the length of the graph path
-                        const graph = document.getElementById('graph');
-                        const pathLength = graph.getTotalLength();
+    const tangentLine = document.createElementNS("http://www.w3.org/2000/svg", "line");
+    tangentLine.setAttribute("x1", 0);
+    tangentLine.setAttribute("y1", 0);
+    tangentLine.setAttribute("x2", 0);
+    tangentLine.setAttribute("y2", 0);
+    tangentLine.setAttribute("stroke", "limegreen");
+    tangentLine.setAttribute("stroke-width", "2");
+    tangentLine.style.opacity = 0;
+    tangentPoint.appendChild(tangentLine);
 
-                        // Set the initial position of the greenDot to the start of the graph path
-                        const initialPoint = graph.getPointAtLength(0);
-                        greenDot.setAttribute('cx', initialPoint.x);
-                        greenDot.setAttribute('cy', initialPoint.y);
+    const pathLengthTangent = graph.getTotalLength();
 
-                        // Animate the motion of the greenDot along the graph path
-                        let currentTime = null;
-                        const duration = 3000; // Animation duration in milliseconds
+    function moveTangentPoint() {
+      const greenDotX = leftmostPoint.x; // Subtract the x offset
+      const greenDotY = equation(getFuncX(greenDotX)); // Adjust the vertical offset as needed
 
-                        // Create the tangent line element
-                        const tangentLine = document.createElementNS("http://www.w3.org/2000/svg", "line");
-                        tangentLine.setAttribute("stroke", "limegreen");
-                        tangentLine.setAttribute("stroke-width", "2");
-                        tangentLine.setAttribute("opacity", "0");
-                        tangentPoint.appendChild(tangentLine);
+      const tangentSlope = derivative(getFuncX(greenDotX));
+      const tangentLineLength = 100; // Adjust the length of the tangent line as needed
+      const tangentLineX1 = greenDotX - (tangentLineLength / Math.sqrt(1 + Math.pow(tangentSlope, 2)));
+      const tangentLineY1 = greenDotY - (tangentLineLength * tangentSlope) / Math.sqrt(1 + Math.pow(tangentSlope, 2));
+      const tangentLineX2 = greenDotX + (tangentLineLength / Math.sqrt(1 + Math.pow(tangentSlope, 2)));
+      const tangentLineY2 = greenDotY + (tangentLineLength * tangentSlope) / Math.sqrt(1 + Math.pow(tangentSlope, 2));
 
-                        // Append the tangent line to the tangentPoint group
-                        tangentPoint.appendChild(tangentLine);
+      greenDot.setAttribute("cx", getSvgX(greenDotX));
+      greenDot.setAttribute("cy", getSvgY(greenDotY));
+      tangentLine.setAttribute("x1", getSvgX(tangentLineX1));
+      tangentLine.setAttribute("y1", getSvgY(tangentLineY1));
+      tangentLine.setAttribute("x2", getSvgX(tangentLineX2));
+      tangentLine.setAttribute("y2", getSvgY(tangentLineY2));
 
-                        function animateMotion(timestamp) {
-                            if (!currentTime) currentTime = timestamp;
-                            const progress = timestamp - currentTime;
-                            const fraction = progress / duration;
-                            let distance = fraction * pathLength;
-                          
-                            // Adjust the distance to wrap around the path
-                            distance %= pathLength;
-                          
-                            // Adjust the distance to stop at x = -4
-                            const stopX = -4 * 20 + 250; // Convert x-value to coordinate space
-                          
-                            if (distance >= pathLength && distance % pathLength <= stopX) {
-                              distance = stopX;
-                            }
-                          
-                            // Get the x and y coordinates of the green dot
-                            const greenDotX = parseFloat(greenDot.getAttribute("cx"));
-                            const greenDotY = parseFloat(greenDot.getAttribute("cy"));
+      const animationDuration = 3000; // Animation duration in milliseconds
 
-                            const point = graph.getPointAtLength(distance);
-                            const tangentSlope = derivative((greenDotX - 250) / 20);
-                            const tangentLineLength = 50; // Adjust the length of the tangent line as needed
+      function animateMotion(timestamp) {
+        if (!currentTime) currentTime = timestamp;
+        const progress = timestamp - currentTime;
+        const fraction = progress / animationDuration;
+        let distance = fraction * pathLengthTangent;
 
-                          
-                            // Set the position and slope of the greenDot
-                            greenDot.setAttribute("cx", point.x);
-                            greenDot.setAttribute("cy", point.y);
-                          
-                            // Set the position and angle of the tangent line
-                            const tangentLineX1 = greenDotX;
-                            const tangentLineY1 = greenDotY;
-                            const tangentLineX2 = greenDotX + tangentLineLength;
-                            const tangentLineY2 = greenDotY - tangentLineLength * tangentSlope;
+        // Adjust the distance to wrap around the path
+        distance %= pathLengthTangent;
 
-                            tangentLine.setAttribute("x1", tangentLineX1);
-                            tangentLine.setAttribute("y1", tangentLineY1);
-                            tangentLine.setAttribute("x2", tangentLineX2);
-                            tangentLine.setAttribute("y2", tangentLineY2);
-                            tangentLine.style.opacity = 1;
+        // Adjust the distance to stop at x = -4
+        const stopX = getSvgX(-4); // Convert x-value to coordinate space
 
-                            if (progress < duration || distance < stopX) {
-                              requestAnimationFrame(animateMotion);
-                            }
-                          }
+        if (distance >= pathLengthTangent && distance % pathLengthTangent <= stopX) {
+          distance = stopX;
+        }
 
-                        // Start the animation
-                        requestAnimationFrame(animateMotion);
+        const point = graph.getPointAtLength(distance);
 
-                        },3000);
-                    }, 2000);
-                }, 2000); 
+        // Set the position of the greenDot
+        greenDot.setAttribute('cx', point.x);
+        greenDot.setAttribute('cy', point.y);
+
+        // Set the position of the tangent line
+        const tangentSlope = derivative(getFuncX(getFuncX(point.x)));
+        const tangentLineLength = 100; // Adjust the length of the tangent line as needed
+        const tangentLineX1 = point.x - (tangentLineLength / Math.sqrt(1 + Math.pow(tangentSlope, 2)));
+        const tangentLineY1 = getFuncY(equation(getFuncX(tangentLineX1)));
+        const tangentLineX2 = point.x + (tangentLineLength / Math.sqrt(1 + Math.pow(tangentSlope, 2)));
+        const tangentLineY2 = getFuncY(equation(getFuncX(tangentLineX2)));
+
+        tangentLine.setAttribute("x1", tangentLineX1);
+        tangentLine.setAttribute("y1", tangentLineY1);
+        tangentLine.setAttribute("x2", tangentLineX2);
+        tangentLine.setAttribute("y2", tangentLineY2);
+
+        if (progress < animationDuration || distance < stopX) {
+          requestAnimationFrame(animateMotion);
+        }
+      }
+
+      // Start the animation
+      let currentTime = null;
+      requestAnimationFrame(animateMotion);
+    }
+
+    moveTangentPoint();
+                        }, 4000);
+                    }, 3000);
+                }, 2000);
               
                 
 
                 function getGraphPath() {
                   let d = "";
                   for (let x = -10; x <= 10; x += 0.1) {
-                    const y = 150 - equation(x) * 10;
+                    const y = getSvgY(equation(x));
                     if (y >= 50 && y <= 250) {
                       if (d === "") {
-                        d += `M${x * 20 + 250},${y}`;
+                        d += `M${getSvgX(x)},${y}`;
                       } else {
-                        d += ` L${x * 20 + 250},${y}`;
+                        d += ` L${getSvgX(x)},${y}`;
                       }
                     }
                   }
@@ -211,14 +222,25 @@
                 function markPoint(point, color, parentElement) {
                   const { x, y } = point;
                   const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
-                  circle.setAttribute("cx", x * 20 + 250);
-                  circle.setAttribute("cy", 150 - y * 10);
+                  circle.setAttribute("cx", getSvgX(x));
+                  circle.setAttribute("cy", getSvgY(y));
                   circle.setAttribute("r", "4");
                   circle.setAttribute("fill", color);
                   parentElement.appendChild(circle);
                 }
-                
-                function equation(x) {
+                function getSvgX(x) {
+                    return x * 20 + 250;
+                }
+                function getSvgY(y) {
+                    return 150 - y * 10;
+                }
+                function getFuncX(x) {
+                    return (x - 250) / 20;
+                }
+                function getFuncY(y) {
+                    return (150 - y) / 10;
+                }
+                function equation(x) { 
                   return (1 / 12) * (Math.pow(x, 3) - 25 * x);
                 }
                 function derivative(x) {
