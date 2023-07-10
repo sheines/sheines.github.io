@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="300">
+                <!-- Step 1: Draw the x-axis -->
+                <line id="xAxis" x1="50" y1="150" x2="450" y2="150" stroke="black" opacity="0" marker-end="url(#xArrowhead)" />
+              
+                <!-- Step 1: Draw the y-axis -->
+                <line id="yAxis" x1="250" y1="250" x2="250" y2="50" stroke="black" opacity="0" marker-end="url(#yArrowhead)" />
+              
+                <!-- Step 1: Add arrowhead marker for x-axis -->
+                <defs>
+                  <marker id="xArrowhead" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
+                    <polygon points="0,0 10,5 0,10" fill="black" />
+                  </marker>
+              
+                  <!-- Step 1: Add arrowhead marker for y-axis -->
+                  <marker id="yArrowhead" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
+                    <polygon points="0,0 10,5 0,10" fill="black" />
+                  </marker>
+                </defs>
+              
+                <!-- Step 2: Draw the graph -->
+                <path id="graph" fill="none" stroke="blue" stroke-width="2" opacity="0" clip-path="url(#clip)" />
+              
+                <!-- Step 3: Mark the zeros of the function -->
+                <g id="zeros" opacity="0"></g>
+              
+                <defs>
+                  <clipPath id="clip">
+                    <rect x="50" y="50" width="400" height="200" />
+                  </clipPath>
+                </defs>
+              
+                <script>
+                  // Step 1: Animate the appearance of the x-axis
+                  const xAxis = document.getElementById('xAxis');
+                  xAxis.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 1000, fill: 'forwards' });
+              
+                  // Step 1: Animate the appearance of the y-axis
+                  const yAxis = document.getElementById('yAxis');
+                  yAxis.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 1000, fill: 'forwards', delay: 1000 });
+              
+                  // Step 2: Plot the graph after y-axis animation
+                  setTimeout(() => {
+                    const graph = document.getElementById('graph');
+                    graph.style.opacity = 1;
+                    graph.setAttribute("d", getGraphPath());
+                    const pathLength = graph.getTotalLength();
+                    graph.style.strokeDasharray = pathLength;
+                    graph.style.strokeDashoffset = pathLength;
+                    graph.animate([{ strokeDashoffset: pathLength }, { strokeDashoffset: 0 }], { duration: 2000, fill: "forwards" });
+              
+                    // Step 3: Mark the zeros of the function after graph animation
+                    setTimeout(() => {
+                      const zeros = document.getElementById('zeros');
+                      const equation = (x) => (1 / 12) * (Math.pow(x, 3) - 25 * x);
+                      const xValues = getZeroValues();
+                      xValues.forEach((x, index) => {
+                        setTimeout(() => {
+                          const y = 150 - equation(x) * 10;
+                          const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+                          circle.setAttribute("cx", x * 20 + 250);
+                          circle.setAttribute("cy", y);
+                          circle.setAttribute("r", "4");
+                          circle.setAttribute("fill", "red");
+                          zeros.appendChild(circle);
+                          circle.style.opacity = 0;
+                          circle.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 500, fill: "forwards" });
+                          setTimeout(() => {
+                            circle.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 500, fill: "forwards" });
+                          }, 2000);
+                        }, index * 500);
+                      });
+                      zeros.style.opacity = 1;
+                    }, 2000);
+                  }, 2000);
+              
+                  function getGraphPath() {
+                    const equation = (x) => (1 / 12) * (Math.pow(x, 3) - 25 * x);
+                    let d = "";
+                    for (let x = -10; x <= 10; x += 0.1) {
+                      const y = 150 - equation(x) * 10;
+                      if (y >= 50 && y <= 250) {
+                        if (d === "") {
+                          d += `M${x * 20 + 250},${y}`;
+                        } else {
+                          d += ` L${x * 20 + 250},${y}`;
+                        }
+                      }
+                    }
+                    return d;
+                  }
+              
+                  function getZeroValues() {
+                    const equation = (x) => (1 / 12) * (Math.pow(x, 3) - 25 * x);
+                    const zeros = [];
+                    for (let x = -9.9; x <= 9.9; x += 0.1) {
+                      const y1 = equation(x);
+                      const y2 = equation(x + 0.1);
+                      if (y1 * y2 < 0) {
+                        zeros.push(x);
+                      }
+                    }
+                    return zeros;
+                  }
+              
+                  function markPoint(point, color, parentElement) {
+                    const { x, y } = point;
+                    const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+                    circle.setAttribute("cx", x * 20 + 250);
+                    circle.setAttribute("cy", 150 - y * 10);
+                    circle.setAttribute("r", "4");
+                    circle.setAttribute("fill", color);
+                    parentElement.appendChild(circle);
+                  }
+                </script>
+              </svg>
