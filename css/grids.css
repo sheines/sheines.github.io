@@ -38,7 +38,9 @@ header {
     background: var(--bg-header);
     color: var(--fg-header);
     display: flex;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
 }
 nav {
     grid-area: nav;
@@ -58,10 +60,10 @@ aside {
     grid-area: aside;
 
 }
-
 footer {
     grid-area: footer;
-
+    display: flex;
+    justify-content: space-around;
 }
 section {
     max-width: 1000px;
