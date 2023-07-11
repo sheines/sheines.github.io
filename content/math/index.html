@@ -155,24 +155,34 @@
                           const pointY = getFuncY(point.y);
                           const slope = derivative(pointX); 
                       
-                          // Calculate the coordinates of the tangent line endpoints
-                        const lineLength = 6; // Length of the tangent line
-                        const dx = lineLength / (2 * Math.sqrt(1 + slope * slope));
-                        const dy = slope * dx;
+                          // Calculate the coordinates of the tangent line endpoint in svg-coordinates
+                          const tangentEndX = getSvgX(pointX + 1);
+                          const tangentEndY = getSvgY(pointY + slope);
+
+                          //Calculate the distance in svg-coordinates
+                          let dx = point.x - tangentEndX;
+                          let dy = point.y - tangentEndY; 
+                          const tangentLength = Math.sqrt(dx*dx + dy*dy);
+
+                          //Calculate the new endpoints of the tangent line
+                          const lineLength = 50;
+                          dx = dx / tangentLength * lineLength;
+                          dy = dy / tangentLength * lineLength;
+                        
 
                         // Calculate the endpoint coordinates
-                        const startX = pointX - dx;
-                        const startY = pointY - dy;
-                        const endX = pointX + dx;
-                        const endY = pointY + dy;
+                        const startX = point.x - dx;
+                        const startY = point.y - dy;
+                        const endX = point.x + dx;
+                        const endY = point.y + dy;
 
                         // Set the position of the greenDot and tangentLine
                         greenDot.setAttribute('cx', point.x);
                         greenDot.setAttribute('cy', point.y);
-                        tangentLine.setAttribute("x1", getSvgX(startX));
-                        tangentLine.setAttribute("y1", getSvgY(startY));
-                        tangentLine.setAttribute("x2", getSvgX(endX));
-                        tangentLine.setAttribute("y2", getSvgY(endY));
+                        tangentLine.setAttribute("x1", startX);
+                        tangentLine.setAttribute("y1", startY);
+                        tangentLine.setAttribute("x2", endX);
+                        tangentLine.setAttribute("y2", endY);
                       
                           if (progress < duration || distance < stopX) {
                             requestAnimationFrame(animateMotion);
