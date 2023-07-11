@@ -29,6 +29,8 @@ a:hover {
     display: none;
     cursor: pointer;
     margin: 5px;
+    background: none;
+    border: none;
   }
   
   .hamburger-menu .bar {
