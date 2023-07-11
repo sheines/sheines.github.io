@@ -39,8 +39,11 @@ header {
     color: var(--fg-header);
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 20px;
+    justify-content: space-around;
+    padding: 5px;
+    border-radius: 25px;
+    gap: 10px;
+    margin: 5px;
 }
 nav {
     grid-area: nav;

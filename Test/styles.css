@@ -1,22 +1,19 @@
-a {
-    cursor: pointer;
-    color: var(--fg-header);
-    text-decoration: none;
-}
-a:hover {
-    color: var(--bloom-fg);
-    text-shadow: 0 0 1em var(--shadow-fg);
-}
-.teaser {
-    padding: 10px;
+header {
     display: flex;
-    justify-content: center;
-    height: 300px;
-}  
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  
+  .header-title {
+    font-size: 24px;
+    margin: 0;
+  }
+  
   .header-menu {
     display: flex;
     align-items: center;
-    margin: 5px;
   }
   
   .header-menu a {
@@ -28,7 +25,6 @@ a:hover {
   .hamburger-menu {
     display: none;
     cursor: pointer;
-    margin: 5px;
   }
   
   .hamburger-menu .bar {
@@ -36,6 +32,7 @@ a:hover {
     height: 3px;
     background-color: #333;
     margin-bottom: 5px;
+    border-radius: 5px;
   }
   
   @media (max-width: 700px) {
@@ -62,3 +59,4 @@ a:hover {
       display: flex;
     }
   }
+  

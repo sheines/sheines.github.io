@@ -6,3 +6,4 @@ document.addEventListener('DOMContentLoaded', () => {
       menuLinks.classList.toggle('active-menu');
     });
   });
+  
