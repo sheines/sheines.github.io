@@ -21,7 +21,7 @@ a:hover {
   
   .header-menu a {
     margin-left: 10px;
-    color: #333;
+    color: var(--fg-header);
     text-decoration: none;
   }
   
@@ -34,7 +34,7 @@ a:hover {
   .hamburger-menu .bar {
     width: 25px;
     height: 3px;
-    background-color: #333;
+    background-color: var(--fg-header);
     margin-bottom: 5px;
   }
   
