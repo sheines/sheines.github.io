@@ -46,8 +46,15 @@
 
                 <!-- Step 4: Move a point along the function graph -->
                 <g id="tangentPoint" opacity="0">
-                    <circle id="greenDot" r="4" fill="green" cx="0" cy="0" />
-                </g>
+                  <circle id="greenDot" cx="0" cy="0" r="3" fill="limegreen" />
+                  <line id="tangentLine" x1="0" y1="0" x2="0" y2="0" stroke="limegreen" stroke-width="2" />
+                  <polygon id="gradientTriangle" fill="url(#gradient)" stroke="darkgrey" />
+              </g>
+
+                <!-- Step 5: Animate integral -->
+                <g id="area" opacity="0">
+                  <rect id="areaRect" x="0" y="150" width="0" height="0" fill="rgba(255, 165, 0, 0.5)" />
+              </g>
               
                 <defs>
                   <clipPath id="clip">
@@ -193,9 +200,42 @@
                       
                         // Start the animation
                         requestAnimationFrame(animateMotion);
-                        }, 4500);
-                      }, 3000);
-                  }, 2000);
+
+                        // Step 5: Add the area between the x-axis and the function graph
+                        setTimeout(() => {
+                          const area = document.getElementById('area');
+                          const areaRect = document.getElementById('areaRect');
+                          const startX = 1; // Start x-value of the integral area
+                          const endX = 5; // End x-value of the integral area
+                        
+                          area.style.opacity = 1;
+                          areaRect.style.animation = `revealArea 3s forwards`;
+                        
+                          // Define the keyframes for the area animation
+                          const keyframes = '
+                            @keyframes revealArea {
+                              0% {
+                                x: ${getSvgX(startX)};
+                                width: 0;
+                              }
+                              100% {
+                                x: ${getSvgX(startX)};
+                                width: ${getSvgX(endX) - getSvgX(startX)};
+                              }
+                            }
+                          ';
+                        
+                          // Create a <style> element and insert the keyframes
+                          const styleElement = document.createElement('style');
+                          styleElement.appendChild(document.createTextNode(keyframes));
+                          document.head.appendChild(styleElement);
+                        }, 4000); // 8000
+
+                        }, 4500); // 4500
+                      }, 3000); // 3000
+                  }, 2000); // 2000
+
+                  
 
 
 
@@ -253,6 +293,22 @@
                   function derivative(x) {
                       return (1 / 12) * (3 * Math.pow(x, 2) - 25);
                     }
+                  function getXValues(startX, endX, stepSize) {
+                    const xValues = [];
+                    for (let x = startX; x <= endX; x += stepSize) {
+                        xValues.push(x);
+                    }
+                    return xValues;
+                  }
+                  function getYValues(xValues) {
+                      const yValues = [];
+                      for (let i = 0; i < xValues.length; i++) {
+                          const x = xValues[i];
+                          const y = equation(x); // Modify this to use your equation function
+                          yValues.push(y);
+                      }
+                      return yValues;
+                  }
                 </script>
             </svg>
               
