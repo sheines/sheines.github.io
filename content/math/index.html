@@ -212,7 +212,7 @@
                           areaRect.style.animation = `revealArea 3s forwards`;
                         
                           // Define the keyframes for the area animation
-                          const keyframes = '
+                          const keyframes = `
                             @keyframes revealArea {
                               0% {
                                 x: ${getSvgX(startX)};
@@ -223,7 +223,7 @@
                                 width: ${getSvgX(endX) - getSvgX(startX)};
                               }
                             }
-                          ';
+                          ´;
                         
                           // Create a <style> element and insert the keyframes
                           const styleElement = document.createElement('style');
