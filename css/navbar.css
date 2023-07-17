@@ -80,7 +80,6 @@
       height: 10px;
       border-top: 4px solid var(--fg-header);
       border-radius: 1px;
-      margin-right: 10px;
     }
     .nav > .nav-links {
       position: absolute;
