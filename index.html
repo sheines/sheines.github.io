@@ -6,23 +6,33 @@
     <meta name="robot" content="noindex"/>
     <title> Hr. Hitzigers Unterricht </title>
     <link rel="stylesheet" type="text/css" href="/css/grids.css" />
+    <link rel="stylesheet" type="text/css" href="/css/navbar.css" />
     <link rel="stylesheet" type="text/css" href="/css/styles.css" />
     <link rel="stylesheet" type="text/css" href="/css/book.css" />
-    <script src="/js/menu.js"></script>
 </head>
 <body>
     <header>
-        <h1>Hr. Hitzigers Unterricht</h1>
-        <nav class="header-menu">
-          <a href="/content/math/index.html"><h4>Mathematik</h4></a>
-          <a href="#"><h4>Physik</h4></a>
-          <a href="#"><h4>Informatik</h4></a>
-        </nav>
-        <button class="hamburger-menu">
-          <div class="bar"></div>
-          <div class="bar"></div>
-          <div class="bar"></div>
-        </button>
+        <div class="nav">
+            <input type="checkbox" id="nav-check">
+            <div class="nav-header">
+              <div class="nav-title">
+                <a href="#">Hr. Hitzigers Unterricht</a>
+              </div>       
+            </div>
+            <div class="nav-btn">
+              <label for="nav-check">
+                <span></span>
+                <span></span>
+                <span></span>
+              </label>
+            </div>
+            
+            <div class="nav-links">
+              <a href="/content/math/index.html">Mathematik</a>
+              <a href="#">Informatik</a>
+              <a href="#">Physik</a>
+            </div>
+        </div>
       </header>
     <!--
     <nav>

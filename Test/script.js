@@ -1,9 +1,9 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const hamburgerMenu = document.querySelector('.hamburger-menu');
-    const menuLinks = document.querySelector('.header-menu');
-  
-    hamburgerMenu.addEventListener('click', () => {
-      menuLinks.classList.toggle('active-menu');
-    });
-  });
-  
+/* Toggle between adding and removing the "responsive" class to topnav when the user clicks on the icon */
+function myFunction() {
+  var x = document.getElementById("myTopnav");
+  if (x.className === "topnav") {
+    x.className += " responsive";
+  } else {
+    x.className = "topnav";
+  }
+} 

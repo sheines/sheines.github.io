@@ -1,37 +1,28 @@
 setTimeout(() => {
                           const area = document.getElementById('area');
+                          const areaRect = document.getElementById('areaRect');
                           const startX = 1; // Start x-value of the integral area
                           const endX = 5; // End x-value of the integral area
-                          const stepSize = 0.1; // Step size for x-values
-                          const xValues = getXValues(startX, endX, stepSize);
-                          const yValues = getYValues(xValues);
-                      
-                          let path = `M${getSvgX(xValues[0])},${getSvgY(0)}`;
-                      
-                          // Build the path for the area
-                          for (let i = 0; i < xValues.length; i++) {
-                              const x = xValues[i];
-                              const y = yValues[i];
-                              const xCoord = getSvgX(x);
-                              const yCoord = getSvgY(y);
-                              path += ` L${xCoord},${yCoord}`;
-                          }
-                      
-                          // Close the path to form a polygon
-                          const endXCoord = getSvgX(xValues[xValues.length - 1]);
-                          path += ` L${endXCoord},${getSvgY(0)} Z`;
-                      
-                          // Set the initial position and opacity of the area
-                          area.setAttribute('d', path);
+                        
                           area.style.opacity = 1;
-                      
-                          // Calculate the total length of the path
-                          const totalLength = area.getTotalLength();
-                      
-                          // Set the stroke-dasharray and stroke-dashoffset for animation
-                          area.style.strokeDasharray = totalLength;
-                          area.style.strokeDashoffset = totalLength;
-                      
-                          // Animate the building of the area from left to right
-                          area.animate([{ strokeDashoffset: totalLength }, { strokeDashoffset: 0 }], { duration: 3000, fill: 'forwards' });
-                      }, 6000);
+                          areaRect.style.animation = `revealArea 3s forwards`;
+                        
+                          // Define the keyframes for the area animation
+                          const keyframes = `
+                            @keyframes revealArea {
+                              0% {
+                                x: ${getSvgX(startX)};
+                                width: 0;
+                              }
+                              100% {
+                                x: ${getSvgX(startX)};
+                                width: ${getSvgX(endX) - getSvgX(startX)};
+                              }
+                            }
+                          ´;
+                        
+                          // Create a <style> element and insert the keyframes
+                          const styleElement = document.createElement('style');
+                          styleElement.appendChild(document.createTextNode(keyframes));
+                          document.head.appendChild(styleElement);
+                        }, 4000); // 8000

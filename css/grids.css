@@ -7,11 +7,15 @@
     --bloom-fg: goldenrod;
     --shadow-fg: gold;
 }
+* {
+    box-sizing: border-box;
+}
 
 body {
     background-color: var(--bg-global);
     color: var(--fg-text);
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0px;
 
     display: grid;
     grid-template: 
@@ -20,6 +24,7 @@ body {
         "main   main     main    aside"  1fr
         "footer footer   footer  footer" auto /
         1fr     1fr      1fr     1fr;
+    gap: 0px;
 }
 @media screen and (max-width: 700px) {
     body {
@@ -35,14 +40,13 @@ body {
 }
 header {
     grid-area: header;
-    background: var(--bg-header);
+    /*background: var(--bg-header); */
     color: var(--fg-header);
     display: flex;
     align-items: center;
     justify-content: space-around;
-    padding: 5px;
+    padding: 0px;
     border-radius: 25px;
-    gap: 10px;
     margin: 5px;
 }
 nav {
