@@ -15,7 +15,7 @@
   
   .nav > .nav-header > .nav-title {
     display: inline-block;
-    font-size: 22px;
+    font-size: 23px;
     font-weight: 600;
     /*color: #fff; */
     padding: 10px 10px 10px 10px;
@@ -42,6 +42,8 @@
   
   .nav > .nav-links > a:hover {
     background-color: var(--bg-header);
+    filter: brightness(0.9);
+    border-radius: 5px;
   }
   
   .nav > #nav-check {
