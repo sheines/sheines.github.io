@@ -47,9 +47,8 @@ header {
     justify-content: space-around;
     padding: 0px;
     border-radius: 25px;
-    margin: 5px;
 }
-nav {
+/*nav {
     grid-area: nav;
     background: var(--bg-header);
     color: var(--fg-header);
@@ -57,7 +56,7 @@ nav {
     display: flex;
     flex-wrap: wrap;
 
-}
+} */
 main {
     grid-area: main;
     padding-left: 10px;
