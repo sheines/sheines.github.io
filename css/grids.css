@@ -20,7 +20,7 @@ body {
     display: grid;
     grid-template: 
         "header header   header  header" auto
-        "nav    nav      nav     nav"    auto
+        /*"nav    nav      nav     nav"    auto */
         "main   main     main    aside"  1fr
         "footer footer   footer  footer" auto /
         1fr     1fr      1fr     1fr;
@@ -30,7 +30,7 @@ body {
     body {
         grid-template: 
             "header" auto
-            "nav"    auto
+            /*"nav"    auto */
             "aside"  auto
             "main"   1fr
             "footer" auto /
