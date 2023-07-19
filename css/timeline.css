@@ -2,27 +2,28 @@
     --accent-color: green;
 }
 .mathe {
-    --accent-color: blue;
+    --accent-color: #0000c3;
 }
 .info {
-    --accent-color: purple;
+    --accent-color: #003c00;
 }
 .physik {
-
+    --accent-color: #7c0000;
 }
 
 .timeline {
 
-    min-height: 100vh;
+    /*min-height: 100vh; */
     display: grid;
     align-content: center;
-    gap: 2rem;
-    padding: 2rem;
-    font-family: "Poppins", sans-serif;
+    gap: 1rem;
+    padding: 0;
     color: var(--fg-text);
     /*background: var(--bgColor); */
   }
-  
+.timeline-header {
+    text-align: center;
+}
   .timeline h2 {
     text-align: center;
   }
@@ -76,7 +77,7 @@
     text-align: center;
     background-color: var(--accent-color);
   
-    color: white;
+    color: var(--fg-text);
     font-size: 1.25rem;
     font-weight: 700;
   
@@ -130,6 +131,7 @@
     padding-block-start: 1.5rem;
     padding-block-end: 1rem;
     font-weight: 500;
+    border-radius: 0 0 10px 10px;
   }
   .timeline ul li .descr {
     padding-block-end: 1.5rem;
@@ -157,3 +159,12 @@
     z-index: -1;
     bottom: 0.25rem;
   }
+  /* Hide the timeline by default on small screens */
+@media screen and (max-width: 700px) {
+    .timeline {
+        display: none;
+    }
+    .timeline-header {
+        cursor: pointer;
+    }
+}
