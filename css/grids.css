@@ -69,6 +69,8 @@ footer {
     grid-area: footer;
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 section {
     max-width: 1000px;
