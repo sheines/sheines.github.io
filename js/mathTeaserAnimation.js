@@ -165,7 +165,7 @@ setTimeout(() => {
             // Remove the stroke from the rectangle
             areaOutline.setAttribute('stroke', 'none');
 
-            // Reverse the animation using the 'reverseWidth' animation with a duration of 3 seconds
+            // Reverse the animation using the 'animateWidth' animation with a duration of 3 seconds
             areaOutline.style.animation = 'animateWidth 3s forwards';
             }, 5500); // 5500
      
