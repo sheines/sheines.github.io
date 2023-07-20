@@ -76,7 +76,7 @@
         </div>  
 </aside>
     <main>
-        <section class="teaser">
+        <section class="teaserMath">
             <svg xmlns="http://www.w3.org/2000/svg" width="500" height="300">
                 <!-- Step 1: Draw the x-axis -->
                 <line id="xAxis" x1="50" y1="150" x2="450" y2="150" stroke="black" opacity="0" marker-end="url(#xArrowhead)" />
@@ -94,6 +94,12 @@
                   <marker id="yArrowhead" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
                     <polygon points="0,0 10,5 0,10" fill="black" />
                   </marker>
+
+                  <!-- Step 5: Define the gradient for the integral area -->
+                  <linearGradient id="gradient" gradientTransform="rotate(90)">
+                    <stop offset="0%" stop-color="rgba(255, 165, 0, 0.5)" />
+                    <stop offset="100%" stop-color="rgba(255, 255, 255, 0)" />
+                  </linearGradient>
                 </defs>
               
                 <!-- Step 2: Draw the graph -->
@@ -107,13 +113,12 @@
                   <circle id="greenDot" cx="0" cy="0" r="3" fill="limegreen" />
                   <line id="tangentLine" x1="0" y1="0" x2="0" y2="0" stroke="limegreen" stroke-width="2" />
                   <polygon id="gradientTriangle" fill="url(#gradient)" stroke="darkgrey" />
-              </g>
+                </g>
 
                 <!-- Step 5: Animate integral -->
-                <g id="area" opacity="0">
-                  <rect id="areaRect" x="0" y="150" width="0" height="0" fill="rgba(255, 165, 0, 0.5)" />
-              </g>
-              
+                <path id="area" fill="rgba(255, 165, 0, 0.5)" clip-path="url(#clip)" opacity="1"/>
+
+
                 <defs>
                   <clipPath id="clip">
                     <rect x="50" y="50" width="400" height="200" />
@@ -260,11 +265,16 @@
                         requestAnimationFrame(animateMotion);
 
                         // Step 5: Add the area between the x-axis and the function graph
-                        
+                        setTimeout(() => {
+                          const area = document.getElementById('area');
+                          area.style.opacity = 1;
+                          const path = getAreaPath();
+                          area.setAttribute("d", path);
+                        }, 4500); // Delay before animating the integral area
 
-                        }, 4500); // 4500
-                      }, 3000); // 3000
-                  }, 2000); // 2000
+                        }, 450); // 4500
+                      }, 300); // 3000
+                  }, 200); // 2000
 
                   
 
@@ -283,6 +293,22 @@
                       }
                     }
                     return d;
+                  }
+
+                  function getAreaPath() {
+                    const startX = 0;
+                    const endX = 5; // Adjust this value based on where you want the integral area to end
+                    const step = 0.01;
+                    
+                    let path = `M${getSvgX(startX)},${getSvgY(0)}`;
+                    
+                    for (let x = startX; x <= endX; x += step) {
+                      const y = equation(x);
+                      path += ` L${getSvgX(x)},${getSvgY(y)}`;
+                    }
+                    
+                    path += ` L${getSvgX(endX)},${getSvgY(0)} Z`;
+                    return path;
                   }
 
                   function getZeroValues() {
