@@ -19,24 +19,15 @@ body {
 
     display: grid;
     grid-template: 
-        "header header   header  header" auto
-        /*"nav    nav      nav     nav"    auto */
-        "main   main     main    aside"  1fr
-        "footer footer   footer  aside" auto /
-        1fr     1fr      1fr     1.5fr;
-    gap: 0px;
-}
-@media screen and (max-width: 700px) {
-    body {
-        grid-template: 
             "header" auto
             /*"nav"    auto */
-            "aside"  auto
+            /*"aside"  auto */
             "main"   1fr
             "footer" auto /
             1fr;
-    }
+    gap: 0px;
 }
+
 header {
     grid-area: header;
     /*background: var(--bg-header); */
