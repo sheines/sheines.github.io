@@ -14,10 +14,10 @@ a:hover {
 .teaser,
 .teaserMath,
 .teaserSun {
-    padding: 0;
+    padding-top: 20px;
     display: flex;
     justify-content: center;
-    height: 220px;
+    height: 250px;
 }  
 .teaserMath {
     height: 270px;
