@@ -1,14 +1,14 @@
  .book {
-    scale: 1.2;
+    scale: 1.0;
     position: relative;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    margin: auto;
+
     width: 15.5rem;
     height: 12.5rem;
-    perspective: 70rem;
+    perspective: 40rem;
   }
   .cover {
     background-color: #003c4c;
