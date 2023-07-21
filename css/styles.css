@@ -1,47 +1,46 @@
 body {
   margin: 0px;
-  font-family: 'segoe ui';
+  font-family: "segoe ui";
 }
+
 a {
-    cursor: pointer;
-    color: var(--fg-header);
-    text-decoration: none;
+  cursor: pointer;
+  color: var(--fg-header);
+  text-decoration: none;
 }
+
 a:hover {
-    color: var(--bloom-fg);
-    text-shadow: 0 0 1em var(--shadow-fg);
+  color: var(--bloom-fg);
+  text-shadow: 0 0 1em var(--shadow-fg);
 }
+
 .scale {
-  scale: 1.0;
+  scale: 1;
 }
+
 .teaser,
 .teaserMath,
 .teaserSun {
-    
-    padding-top: 20px;
-    display: flex;
-    justify-content: center;
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
 
-    height: 250px;
-}  
+  height: 250px;
+}
+
 .teaserMath {
-    overflow: hidden;
-    overflow-x: hidden;
-    height: 270px;
-}  
+  overflow: hidden;
+  overflow-x: hidden;
+  height: 270px;
+}
+
 .teaserSun {
-    height: 400px;
-} 
+  height: 400px;
+}
+
 @media screen and (max-width: 700px) {
   .scale {
-    scale: 1;
-  }
-}
-@keyframes animateWidth {
-  from {
-    x: 50%;
-  }
-  to {
-    x: 70%;
+    scale: 0.99;
+    overflow: hidden;
   }
 }

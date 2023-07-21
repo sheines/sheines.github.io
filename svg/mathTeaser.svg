@@ -1,57 +1,59 @@
+<svg id="mathTeaser" xmlns="http://www.w3.org/2000/svg" width="500" height="250">
+    <style>
+@keyframes translateX {
+    from {
+        transform: translateX(0);
+    }
 
-<svg id="mathTeaser" xmlns="http://www.w3.org/2000/svg" width="500" height="250">    
-        <link rel="stylesheet" href="/css/mathTeaser.css"></link>
-        <!-- Step 5: Animate integral -->
-        <g id="integralGroup" opacity="0">
+    to {
+        transform: translateX(100px);
+    }
+}
+    </style>
+    <!-- Step 5: Animate integral -->
+    <g id="integralGroup" opacity="0">
         <path id="area" fill="rgba(255, 165, 0, 0.5)" clip-path="url(#clip)" opacity="1" />
-        <rect id="areaOutline" fill="none" stroke="none" x="0" y="0" width="50%" height="0" opacity="1" />
-        </g>
+        <rect id="areaOutline" fill="none" stroke="none" x="0" y="0" width="0" height="0" opacity="1"/>
+    </g>
 
-        <!-- Step 1: Draw the x-axis -->
-        <line id="xAxis" x1="50" y1="150" x2="450" y2="150" stroke="black" opacity="0" marker-end="url(#xArrowhead)" />
-    
-        <!-- Step 1: Draw the y-axis -->
-        <line id="yAxis" x1="250" y1="250" x2="250" y2="50" stroke="black" opacity="0" marker-end="url(#yArrowhead)" />
-    
-        <!-- Step 1: Add arrowhead marker for x-axis -->
-        <defs>
+    <!-- Step 1: Draw the x-axis -->
+    <line id="xAxis" x1="50" y1="150" x2="450" y2="150" stroke="black" opacity="0" marker-end="url(#xArrowhead)" />
+
+    <!-- Step 1: Draw the y-axis -->
+    <line id="yAxis" x1="250" y1="250" x2="250" y2="50" stroke="black" opacity="0" marker-end="url(#yArrowhead)" />
+
+    <!-- Step 1: Add arrowhead marker for x-axis -->
+    <defs>
         <marker id="xArrowhead" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
             <polygon points="0,0 10,5 0,10" fill="black" />
         </marker>
-    
+
         <!-- Step 1: Add arrowhead marker for y-axis -->
         <marker id="yArrowhead" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
             <polygon points="0,0 10,5 0,10" fill="black" />
         </marker>
 
-        <!-- Step 4: Define the gradient for the integral area -->
-        <!--<linearGradient id="gradient" gradientTransform="rotate(90)">
-            <stop offset="0%" stop-color="rgba(255, 165, 0, 0.5)" />
-            <stop offset="100%" stop-color="rgba(255, 255, 255, 0)" />
-        </linearGradient>-->
-        </defs>
+    </defs>
 
-        <!-- Step 2: Draw the graph -->
-        <path id="graph" fill="none" stroke="blue" stroke-width="2" opacity="0" clip-path="url(#clip)" />
-    
-        <!-- Step 3: Mark the zeros of the function -->
-        <g id="zeros" opacity="0"></g>
+    <!-- Step 2: Draw the graph -->
+    <path id="graph" fill="none" stroke="blue" stroke-width="2" opacity="0" clip-path="url(#clip)" />
 
-        <!-- Step 4: Move a point along the function graph -->
-        <g id="tangentPoint" opacity="0">
+    <!-- Step 3: Mark the zeros of the function -->
+    <g id="zeros" opacity="0"></g>
+
+    <!-- Step 4: Move a point along the function graph -->
+    <g id="tangentPoint" opacity="0">
         <circle id="greenDot" cx="0" cy="0" r="3" fill="limegreen" />
         <line id="tangentLine" x1="0" y1="0" x2="0" y2="0" stroke="limegreen" stroke-width="2" />
         <polygon id="gradientTriangle" fill="url(#gradient)" stroke="darkgrey" />
-        </g>
+    </g>
 
-    
-        <defs>
+
+    <defs>
         <clipPath id="clip">
             <rect x="50" y="50" width="400" height="200" />
         </clipPath>
-        </defs>
-    <style>
-    
-  </style> 
+    </defs>
     <script type="text/javascript" href="/js/mathTeaserAnimation.js"></script>
+    
 </svg>
