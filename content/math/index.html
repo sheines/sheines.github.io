@@ -1,162 +1,107 @@
 <!DOCTYPE html>
+
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" initial-scale=1.0/>
-    <meta name="author" content="Sebastian Hitziger"/>
-    <meta name="robot" content="noindex"/>
-    <title> Hr. Hitzigers Mathematik </title>
-    <link rel="stylesheet" type="text/css" href="/css/grids.css" />
-    <link rel="stylesheet" type="text/css" href="/css/navbar.css" />
-    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
-    <link rel="stylesheet" type="text/css" href="/css/timeline.css" /> 
-    <script type="text/javascript" src="jquery-3.3.1.js"></script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-  </head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" initial-scale=1.0 />
+  <meta name="author" content="Sebastian Hitziger" />
+  <meta name="robot" content="noindex" />
+  <title> Hr. Hitzigers Mathematik </title>
+  <link rel="stylesheet" type="text/css" href="/css/grids.css" />
+  <link rel="stylesheet" type="text/css" href="/css/navbar.css" />
+  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="/css/timeline.css" />
+  <link rel="stylesheet" href="/css/mathTeaser.css" />
+  <script type="text/javascript" src="jquery-3.3.1.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
 <body>
   <header>
     <div class="nav">
-        <input type="checkbox" id="nav-check">
-        <div class="nav-header">
-          <div class="nav-title">
-            <a href="/index.html">Hr. Hitzigers Mathematik</a>
-          </div>       
+      <input type="checkbox" id="nav-check">
+      <div class="nav-header">
+        <div class="nav-title">
+          <a href="/index.html">Hr. Hitzigers Mathematik</a>
         </div>
-        <div class="nav-btn">
-          <label for="nav-check">
-            <span></span>
-            <span></span>
-            <span></span>
-          </label>
-        </div>
-        
-        <div class="nav-links">
-          <a href="#">Klasse 11</a>
-          <a href="#">Klasse 12</a>
-          <a href="#">Klasse 13</a>
-        </div>
+      </div>
+      <div class="nav-btn">
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+
+      <div class="nav-links">
+        <a href="#">Klasse 11</a>
+        <a href="#">Klasse 12</a>
+        <a href="#">Klasse 13</a>
+      </div>
     </div>
   </header>
   <aside>
     <script>
-        function toggleTimelineVisibility() {
-            const isMobile = window.matchMedia('(max-width: 700px)').matches;
-            if (isMobile) {
-                const timeline = document.querySelector('.timeline');
-                timeline.style.display = timeline.style.display === 'none' ? 'grid' : 'none';
-            }
+      function toggleTimelineVisibility() {
+        const isMobile = window.matchMedia('(max-width: 700px)').matches;
+        if (isMobile) {
+          const timeline = document.querySelector('.timeline');
+          timeline.style.display = timeline.style.display === 'none' ? 'grid' : 'none';
         }
+      }
     </script>
     <div class="timeline-header" onclick="toggleTimelineVisibility()">
-        <h2>Zeitplanung</h2>
+      <h2>Zeitplanung</h2>
     </div>
     <div class="timeline">
-        <ul>
-            <li class="mathe">
-                <div class="date">15. November</div>
-                <div class="title">Mathematik 13</div>
-            </li>
-            <li class="info">
-                <div class="date">17. November</div>
-                <div class="title">Informatik 11</div>
-            </li>
-            <li class="physik">
-                <div class="date">1. Dezember</div>
-                <div class="title">Physik 7</div>
-            </li>
-            <li class="mathe">
-                <div class="date">3. Dezember</div>
-                <div class="title">Mathematik 12</div>
-            </li>
-            <li class="mathe">
-                <div class="date">8. Dezember</div>
-                <div class="title">Mathematik 13</div>
-            </li>
-        </ul>
-        </div>  
-</aside>
-    <main>
-        <section class="teaserMath">
-            <svg id="mathTeaser" xmlns="http://www.w3.org/2000/svg" width="500" height="300">
-                
-                <!-- Step 5: Animate integral -->
-                <g id="integralGroup" opacity="0">
-                  <path id="area" fill="rgba(255, 165, 0, 0.5)" clip-path="url(#clip)" opacity="1" />
-                  <rect id="areaOutline" fill="none" stroke="black" x="0" y="0" width="50%" height="0" opacity="1" />
-                </g>
+      <ul>
+        <li class="mathe">
+          <div class="date">15. November</div>
+          <div class="title">Mathematik 13</div>
+        </li>
+        <li class="info">
+          <div class="date">17. November</div>
+          <div class="title">Informatik 11</div>
+        </li>
+        <li class="physik">
+          <div class="date">1. Dezember</div>
+          <div class="title">Physik 7</div>
+        </li>
+        <li class="mathe">
+          <div class="date">3. Dezember</div>
+          <div class="title">Mathematik 12</div>
+        </li>
+        <li class="mathe">
+          <div class="date">8. Dezember</div>
+          <div class="title">Mathematik 13</div>
+        </li>
+      </ul>
+    </div>
+  </aside>
+  <main>
+    <section class="teaserMath">
+      <object data="/svg/mathTeaser.svg" type="image/svg+xml"></object>
 
-                <!-- Step 1: Draw the x-axis -->
-                <line id="xAxis" x1="50" y1="150" x2="450" y2="150" stroke="black" opacity="0" marker-end="url(#xArrowhead)" />
-              
-                <!-- Step 1: Draw the y-axis -->
-                <line id="yAxis" x1="250" y1="250" x2="250" y2="50" stroke="black" opacity="0" marker-end="url(#yArrowhead)" />
-              
-                <!-- Step 1: Add arrowhead marker for x-axis -->
-                <defs>
-                  <marker id="xArrowhead" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
-                    <polygon points="0,0 10,5 0,10" fill="black" />
-                  </marker>
-              
-                  <!-- Step 1: Add arrowhead marker for y-axis -->
-                  <marker id="yArrowhead" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
-                    <polygon points="0,0 10,5 0,10" fill="black" />
-                  </marker>
+    </section>
+    <section>
+      <h2>Hier kommt dann der Part zur Mathematik hin.</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Libero quidem at cupiditate culpa ipsa illo rerum repudiandae,
+        odit nesciunt, deleniti neque facilis officia iste distinctio
+        iure reiciendis temporibus nihil. Laborum.
+      </p>
+      <p>
+        \[e^{i \pi} + 1= 0\]
+      </p>
+    </section>
 
-                  <!-- Step 4: Define the gradient for the integral area -->
-                  <!--<linearGradient id="gradient" gradientTransform="rotate(90)">
-                    <stop offset="0%" stop-color="rgba(255, 165, 0, 0.5)" />
-                    <stop offset="100%" stop-color="rgba(255, 255, 255, 0)" />
-                  </linearGradient>-->
-                </defs>
+  </main>
+  <footer>
+    <a href="/misc/impressum.html">Impressum</a>
+    <div class="lastModified" align="center"> Zuletzt geändert:<br> <span id="lastModifiedDate"></span></div>
+    <a href="/misc/datenschutz.html">Datenschutz</a>
+  </footer>
 
-                <!-- Step 2: Draw the graph -->
-                <path id="graph" fill="none" stroke="blue" stroke-width="2" opacity="0" clip-path="url(#clip)" />
-              
-                <!-- Step 3: Mark the zeros of the function -->
-                <g id="zeros" opacity="0"></g>
-
-                <!-- Step 4: Move a point along the function graph -->
-                <g id="tangentPoint" opacity="0">
-                  <circle id="greenDot" cx="0" cy="0" r="3" fill="limegreen" />
-                  <line id="tangentLine" x1="0" y1="0" x2="0" y2="0" stroke="limegreen" stroke-width="2" />
-                  <polygon id="gradientTriangle" fill="url(#gradient)" stroke="darkgrey" />
-                </g>
-
-                
-
-                <defs>
-                  <clipPath id="clip">
-                    <rect x="50" y="50" width="400" height="200" />
-                  </clipPath>
-                  <!--<clipPath id="clipArea">
-                    <rect x="50" y="50" width="400" height="200" />
-                  </clipPath>-->
-                </defs>
-              
-                <script type="text/javascript" href="/js/mathTeaserAnimation.js"></script>
-            </svg>
-                
-              
-        </section>
-        <section>
-            <h2>Hier kommt dann der Part zur Mathematik hin.</h2>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Libero quidem at cupiditate culpa ipsa illo rerum repudiandae, 
-                odit nesciunt, deleniti neque facilis officia iste distinctio 
-                iure reiciendis temporibus nihil. Laborum.
-            </p>
-            <p>
-                \[e^{i \pi} + 1= 0\]
-            </p>
-        </section>
-
-    </main>
-    <footer>
-      <a href="/misc/impressum.html">Impressum</a>
-      <div class="lastModified" align="center"> Zuletzt geändert:<br> <span id="lastModifiedDate"></span></div>
-      <a href="/misc/datenschutz.html">Datenschutz</a>
-</footer>
-
-<script src="/js/lastModified.js"></script>
+  <script src="/js/lastModified.js"></script>
 </body>

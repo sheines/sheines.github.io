@@ -38,15 +38,6 @@
     </div>
   </header>
   <aside>
-    <script>
-        function toggleTimelineVisibility() {
-            const isMobile = window.matchMedia('(max-width: 700px)').matches;
-            if (isMobile) {
-                const timeline = document.querySelector('.timeline');
-                timeline.style.display = timeline.style.display === 'none' ? 'grid' : 'none';
-            }
-        }
-    </script>
     <div class="timeline-header" onclick="toggleTimelineVisibility()">
         <h2>Zeitplanung</h2>
     </div>
@@ -101,4 +92,5 @@
   </footer>
   
   <script src="/js/lastModified.js"></script>
+  <script src="/js/toggleTimelineVisibility.js"></script>
 </body>
