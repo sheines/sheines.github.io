@@ -1,19 +1,19 @@
 <svg id="mathTeaser" xmlns="http://www.w3.org/2000/svg" width="500" height="250">
     <style>
-@keyframes translateX {
-    from {
-        transform: translateX(0);
-    }
+        @keyframes translateX {
+            from {
+                transform: translateX(0);
+            }
 
-    to {
-        transform: translateX(100px);
-    }
-}
+            to {
+                transform: translateX(100px);
+            }
+        }
     </style>
     <!-- Step 5: Animate integral -->
     <g id="integralGroup" opacity="0">
         <path id="area" fill="rgba(255, 165, 0, 0.5)" clip-path="url(#clip)" opacity="1" />
-        <rect id="areaOutline" fill="none" stroke="none" x="0" y="0" width="0" height="0" opacity="1"/>
+        <rect id="areaOutline" fill="none" stroke="green" x="0" y="0" width="0" height="0" opacity="1" />
     </g>
 
     <!-- Step 1: Draw the x-axis -->
@@ -55,5 +55,5 @@
         </clipPath>
     </defs>
     <script type="text/javascript" href="/js/mathTeaserAnimation.js"></script>
-    
+
 </svg>
