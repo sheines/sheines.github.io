@@ -15,7 +15,7 @@ a:hover {
 }
 
 .scale {
-  scale: 1;
+  scale: 1.2;
 }
 
 .teaser,
@@ -29,8 +29,6 @@ a:hover {
 }
 
 .teaserMath {
-  overflow: hidden;
-  overflow-x: hidden;
   height: 270px;
 }
 
@@ -40,7 +38,7 @@ a:hover {
 
 @media screen and (max-width: 700px) {
   .scale {
-    scale: 0.99;
+    scale: 1;
     overflow: hidden;
   }
 }
