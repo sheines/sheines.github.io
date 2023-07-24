@@ -9,6 +9,7 @@
   <link rel="stylesheet" type="text/css" href="/css/grids.css" />
   <link rel="stylesheet" type="text/css" href="/css/navbar.css" />
   <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="/css/courses.css" />
   <link rel="stylesheet" type="text/css" href="/css/timeline.css" />
   <link rel="stylesheet" type="text/css" href="/css/mathTeaser.css" />
   <script type="text/javascript" src="jquery-3.3.1.js"></script>
@@ -75,67 +76,96 @@
         <!-- <object data="/svg/mathTeaser.svg" type="image/svg+xml"></object> -->
         <svg id="mathTeaser" xmlns="http://www.w3.org/2000/svg" width="500" height="250">
           <style>
-              @keyframes translateX {
-                  from {
-                      transform: translateX(0);
-                  }
-      
-                  to {
-                      transform: translateX(100px);
-                  }
+            @keyframes translateX {
+              from {
+                transform: translateX(0);
               }
+
+              to {
+                transform: translateX(100px);
+              }
+            }
           </style>
           <!-- Step 5: Animate integral -->
           <g id="integralGroup" opacity="0">
-              <path id="area" fill="rgba(255, 165, 0, 0.5)" clip-path="url(#clip)" opacity="1" />
-              <rect id="areaOutline" fill="none" stroke="green" x="0" y="0" width="0" height="0" opacity="1" />
+            <path id="area" fill="rgba(255, 165, 0, 0.5)" clip-path="url(#clip)" opacity="1" />
+            <rect id="areaOutline" fill="none" stroke="green" x="0" y="0" width="0" height="0" opacity="1" />
           </g>
-      
+
           <!-- Step 1: Draw the x-axis -->
-          <line id="xAxis" x1="50" y1="150" x2="450" y2="150" stroke="black" opacity="0" marker-end="url(#xArrowhead)" />
-      
+          <line id="xAxis" x1="50" y1="150" x2="450" y2="150" stroke="black" opacity="0"
+            marker-end="url(#xArrowhead)" />
+
           <!-- Step 1: Draw the y-axis -->
-          <line id="yAxis" x1="250" y1="250" x2="250" y2="50" stroke="black" opacity="0" marker-end="url(#yArrowhead)" />
-      
+          <line id="yAxis" x1="250" y1="250" x2="250" y2="50" stroke="black" opacity="0"
+            marker-end="url(#yArrowhead)" />
+
           <!-- Step 1: Add arrowhead marker for x-axis -->
           <defs>
-              <marker id="xArrowhead" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
-                  <polygon points="0,0 10,5 0,10" fill="black" />
-              </marker>
-      
-              <!-- Step 1: Add arrowhead marker for y-axis -->
-              <marker id="yArrowhead" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
-                  <polygon points="0,0 10,5 0,10" fill="black" />
-              </marker>
-      
+            <marker id="xArrowhead" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
+              <polygon points="0,0 10,5 0,10" fill="black" />
+            </marker>
+
+            <!-- Step 1: Add arrowhead marker for y-axis -->
+            <marker id="yArrowhead" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto">
+              <polygon points="0,0 10,5 0,10" fill="black" />
+            </marker>
+
           </defs>
-      
+
           <!-- Step 2: Draw the graph -->
           <path id="graph" fill="none" stroke="blue" stroke-width="2" opacity="0" clip-path="url(#clip)" />
-      
+
           <!-- Step 3: Mark the zeros of the function -->
           <g id="zeros" opacity="0"></g>
-      
+
           <!-- Step 4: Move a point along the function graph -->
           <g id="tangentPoint" opacity="0">
-              <circle id="greenDot" cx="0" cy="0" r="3" fill="limegreen" />
-              <line id="tangentLine" x1="0" y1="0" x2="0" y2="0" stroke="limegreen" stroke-width="2" />
-              <polygon id="gradientTriangle" fill="url(#gradient)" stroke="darkgrey" />
+            <circle id="greenDot" cx="0" cy="0" r="3" fill="limegreen" />
+            <line id="tangentLine" x1="0" y1="0" x2="0" y2="0" stroke="limegreen" stroke-width="2" />
+            <polygon id="gradientTriangle" fill="url(#gradient)" stroke="darkgrey" />
           </g>
-      
-      
+
+
           <defs>
-              <clipPath id="clip">
-                  <rect x="50" y="50" width="400" height="200" />
-              </clipPath>
+            <clipPath id="clip">
+              <rect x="50" y="50" width="400" height="200" />
+            </clipPath>
           </defs>
           <script type="text/javascript" href="/js/mathTeaserAnimation.js"></script>
-      
-      </svg>
+
+        </svg>
       </div>
     </section>
     <section>
-      <h2>Hier kommt dann der Part zur Mathematik hin.</h2>
+      <h2>Mathematik</h2>
+      <div class="course-container">
+        <a href="#">
+          <div class="course">
+
+            <img />
+            <h4>Grundlagen</h4>
+
+          </div>
+        </a>
+        <a href="#">
+          <div class="course">
+
+            <img />
+            <h4>Klasse 11</h4>
+
+          </div>
+        </a>
+        <a href="#">
+          <div class="course">
+
+            <img />
+            <h4>Klasse 12</h4>
+
+          </div>
+        </a>
+      </div>
+
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit.
         Libero quidem at cupiditate culpa ipsa illo rerum repudiandae,
@@ -150,8 +180,8 @@
   </main>
   <footer>
     <a href="/misc/impressum.html">Impressum</a>
-    <div class="lastModified" align="center"> 
-      Zuletzt geändert:<br> 
+    <div class="lastModified" align="center">
+      Zuletzt geändert:<br>
       23. Juli 2023
       <!-- <span id="lastModifiedDate"></span> -->
     </div>
