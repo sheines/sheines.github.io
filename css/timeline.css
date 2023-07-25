@@ -11,6 +11,30 @@
     --accent-color: #5c0000;
 }
 
+/* Klassenweise Farben */
+/* Mathe */
+.mathe7 {
+  --accent-color: #00095d;
+}
+.mathe8 {
+  --accent-color: #001a5a;
+}
+.mathe9 {
+  --accent-color: #003057;
+}
+.mathe10 {
+  --accent-color: #004055;
+}
+.mathe11 {
+  --accent-color: #004d52;
+}
+.mathe12 {
+  --accent-color: #00594e;
+}
+.mathe13 {
+  --accent-color: #006645;
+}
+
 .timeline {
 
     /*min-height: 100vh; */
