@@ -1,6 +1,6 @@
 * {
 	background-color: #232323;
-}
+} 
 
 .card {
   height: 400px;
@@ -29,10 +29,20 @@
   border-radius: 20px;
 }
 .card-front {
-  background-color: #f2f2f2;
+  background-color: var(--bg-header);
+  color: var(--fg-header);
 }
+.card-front h2{
+  background-color: var(--bg-header);
+}
+
 .card-back {
-  background-color: #ff0066;
-  color: #fff;
+  background-color: var(--fg-header);
+  color: red;
   transform: rotateY(180deg);
+}
+.card-back h2 {
+  background-color: var(--fg-header);
+  color: black;
+  
 }

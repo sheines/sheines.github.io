@@ -10,6 +10,15 @@
 .physik {
     --accent-color: #5c0000;
 }
+.next {
+    --accent-color: #ff5722;
+}
+.final {
+  --accent-color: #730000;
+}
+.future {
+  --accent-color: #0a720d;
+}
 
 /* Klassenweise Farben */
 /* Mathe */

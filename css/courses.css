@@ -18,9 +18,37 @@
     height: 50px;
     width: auto;
 }
-.course:hover {
+.course:hover,
+.subject:hover {
     background-color: var(--bg-header);
     filter: brightness(1.1);
     cursor: pointer;
     box-shadow: 0 0 12px #44999999; 
+}
+.subject-container {
+    display: grid;
+    gap: 1em;    
+    counter-reset: css-counter 0;
+}
+.subject {
+    display: flex;
+    background-color: #004c5c;
+    border-radius: 15px;
+    padding: 0;
+    color: goldenrod;
+    justify-content: center;
+    align-items: center;
+    counter-increment: css-counter 1;
+}
+.subject h4:before {
+    content: counter(css-counter) ". ";
+}
+.ziele {
+
+    /*background-color: #454545;
+    border-radius: 15px; */
+    padding-left: 10px;
+}
+.theorie {
+    padding-left: 10px;
 }
