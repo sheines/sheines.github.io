@@ -35,6 +35,23 @@ a:hover {
 .teaserSun {
   height: 400px;
 }
+.tabelle {
+  display: flex;
+  justify-content: center;
+}
+.tabelle tr, td {
+  border-collapse:collapse;
+  
+  text-align: center;
+  border: 1px solid black;
+
+  padding: 5px;
+  
+}
+table {
+  border-collapse: collapse;
+  border-style: hidden;
+}
 
 @media screen and (max-width: 700px) {
   .scale {

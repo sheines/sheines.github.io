@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-12 -6 26 13">
+  <!-- The viewBox is set to (-12, -6, 26, 13) which provides a coordinate space of width 38 and height 19 units.
+       The center of the SVG is (0, 0). You can adjust this viewBox as needed. -->
+
+  <!-- Draw the x-axis line -->
+  <line x1="-10" y1="0" x2="10" y2="0" stroke="black" stroke-width="0.05" />
+
+  <!-- Draw the x-axis arrowhead -->
+  <polygon points="10.5,0 9.8,-0.15 9.8,0.15" fill="black" />
+
+  <!-- Draw the y-axis line -->
+  <line x1="0" y1="5" x2="0" y2="-5" stroke="black" stroke-width="0.05" />
+
+  <!-- Draw the y-axis arrowhead -->
+  <polygon points="0,-5.5 -0.15,-4.8 0.15,-4.8" fill="black" />
+
+  <!-- Add the x-axis label using SVG text -->
+  <text x="10.8" y="1" font-size="1.5" font-family="Arial" fill="black">x</text>
+</svg>
