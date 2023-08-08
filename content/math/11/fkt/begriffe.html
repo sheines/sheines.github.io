@@ -1,9 +1,10 @@
 <!DOCTYPE html>
+
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" initial-scale=1.0/>
-    <meta name="author" content="Sebastian Hitziger"/>
-    <meta name="robot" content="noindex"/>
+    <meta name="viewport" content="width=device-width" initial-scale=1.0 />
+    <meta name="author" content="Sebastian Hitziger" />
+    <meta name="robot" content="noindex" />
     <title> HITZ | Funktionen | Begriffe</title>
     <link rel="stylesheet" type="text/css" href="/css/gridNoTimeline.css" />
     <link rel="stylesheet" type="text/css" href="/css/navbar.css" />
@@ -12,45 +13,38 @@
     <script type="text/javascript" src="jquery-3.3.1.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-   </head>
+</head>
+
 <body>
-  <header>
-    <div class="nav">
-        <input type="checkbox" id="nav-check">
-        <div class="nav-header">
-          <div class="nav-title">
-            <a href="/">Hr. Hitzigers Unterricht</a>
-          </div>       
+    <header>
+        <div class="nav">
+            <input type="checkbox" id="nav-check">
+            <div class="nav-header">
+                <div class="nav-title">
+                    <a href="/">Hr. Hitzigers Unterricht</a>
+                </div>
+            </div>
+            <div class="nav-btn">
+                <label for="nav-check">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+
+            <div class="nav-links">
+                <a href="/content/math/">Startseite Mathematik</a>
+                <a href="/content/math/11/">Übersicht Klasse 11</a>
+                <a href="/content/math/11/fkt/">Übersicht Funktionen</a>
+            </div>
         </div>
-        <div class="nav-btn">
-          <label for="nav-check">
-            <span></span>
-            <span></span>
-            <span></span>
-          </label>
-        </div>
-        
-        <div class="nav-links">
-          <a href="/content/math/">Startseite Mathematik</a>
-          <a href="/content/math/11/">Übersicht Klasse 11</a>
-          <a href="/content/math/11/fkt/">Übersicht Funktionen</a>
-        </div>
-    </div>
-  </header>
+    </header>
     <main>
-        <!-- Test! -->
-        <section>
-            <object data="/svg/template.svg" type="image/svg+xml" ></object>
-            
-        </section>
-        <!-- <section class="teaser">
-            
-        </section> -->
         <section>
             <h2>Begriffe und Definitionen</h2>
             <div class="ziele">
                 <p>
-                    Nachfolgend sind die wichtigsten Begriffe zum Thema 
+                    Nachfolgend sind die wichtigsten Begriffe zum Thema
                     Funktionen aufgeführt und erklärt.
                 </p>
                 <p>
@@ -58,38 +52,40 @@
                 </p>
             </div>
             <div class="theorie">
-                <h3>Defintion Funktion</h3>
-                <p>
-                    Eine Zuordnung&nbsp;\(f\), die jedem \(x\) einer Menge&nbsp;\(D\) (Definitionsmenge) 
-                    <b>genau ein</b> Element&nbsp;\(f(x)\) der Menge&nbsp;\(Z\) (Zielmenge) zuordnet, heißt 
-                    <span style="color: var(--fg-header); font-weight: 600;">Funktion</span>.
-                </p>
+                <div class="definition">
+                    <h3>Defintion Funktion</h3>
+                    <p>
+                        Eine Zuordnung&nbsp;\(f\), die jedem \(x\) einer Menge&nbsp;\(D\) (Definitionsmenge)
+                        <b>genau ein</b> Element&nbsp;\(f(x)\) der Menge&nbsp;\(Z\) (Zielmenge) zuordnet, heißt
+                        <span style="color: var(--fg-header); font-weight: 600;">Funktion</span>.
+                    </p>
+                </div>
                 <h6>Beispiel 1:</h6>
                 <div class="tabelle">
                     <table style="width:40%">
                         <tr>
-                        <th>Note:</th>
-                        <td>1</td>
-                        <td>2</td>
-                        <td>3</td>
-                        <td>4</td>
-                        <td>5</td>
-                        <td>6</td>
+                            <th>Note:</th>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
                         </tr>
                         <tr>
-                        <th>Anzahl:</th>
-                        <td>1</td>
-                        <td>7</td>
-                        <td>9</td>
-                        <td>3</td>
-                        <td>2</td>
-                        <td>2</td>
+                            <th>Anzahl:</th>
+                            <td>1</td>
+                            <td>7</td>
+                            <td>9</td>
+                            <td>3</td>
+                            <td>2</td>
+                            <td>2</td>
                         </tr>
-                        </table>              
+                    </table>
                 </div>
-                <p> 
+                <p>
                     Die obige Tabelle zeigt einen Notenspiegel. Ausgangs- oder Definitionsmenge&nbsp;\(D\)
-                    ist hier die Art der Note. Die Zielmenge&nbsp;\(Z\) ist die jeweilige Anzahl der Noten. 
+                    ist hier die Art der Note. Die Zielmenge&nbsp;\(Z\) ist die jeweilige Anzahl der Noten.
                     Es gab beispielweise sieben Zweien.<br>
                     In diesem Beispiel wird also die Art der Note ihrer Anzahl zugeordnet.
                     <!--Beispielbild - Mengendiagramm - Animation-->
@@ -98,98 +94,149 @@
                 <div class="tabelle">
                     <table style="width:70%">
                         <tr>
-                        <th>Zahl:</th>
-                        <td>2</td>
-                        <td>15</td>
-                        <td>23</td>
-    
+                            <th>Zahl:</th>
+                            <td>2</td>
+                            <td>15</td>
+                            <td>23</td>
+
                         </tr>
                         <tr>
-                        <th>Teiler (ohne 1):</th>
-                        <td>2</td>
-                        <td>3 ; 5 ; 15</td>
-                        <td>23</td>
+                            <th>Teiler (ohne 1):</th>
+                            <td>2</td>
+                            <td>3 ; 5 ; 15</td>
+                            <td>23</td>
                         </tr>
-                        </table>              
+                    </table>
                 </div>
-                <p> 
-                    Die zweite Tabelle zeigt eine Übersicht der Teiler von Zahlen. Ausgangs- oder Definitionsmenge&nbsp;\(D\)
-                    ist hier die Zahl, welche geprüft werden soll. Die Zielmenge&nbsp;\(Z\) sind die jeweiligen (ganzzahligen) 
-                    Teiler der Zahlen aus \(D\). 
+                <p>
+                    Die zweite Tabelle zeigt eine Übersicht der Teiler von Zahlen. Ausgangs- oder
+                    Definitionsmenge&nbsp;\(D\)
+                    ist hier die Zahl, welche geprüft werden soll. Die Zielmenge&nbsp;\(Z\) sind die jeweiligen
+                    (ganzzahligen)
+                    Teiler der Zahlen aus \(D\).
                     Die Zahl 15 hat demnach die Teiler (1), 3, 5 und 15.<br>
                     In diesem Beispiel wird also eine Zahl ihren Teilern zugeordnet.
                     <!--Beispielbild - Mengendiagramm - Animation-->
                 </p>
-                <p>    
+                <p>
                     Für den Beweis der &bdquo;Nichtfunktion&ldquo; reicht ein einziges Gegenbeispiel aus.
                 </p>
                 <h6>Funktionen außerhalb der Mathematik:</h6>
-                <p> 
+                <p>
                     Aber auch außerhalb der Mathematik können Zuordnungen als Funktion beschrieben werden:
-                    <ul>
-                        <li><span style="font-weight: 600;">Person &rarr; Körpergröße:</span> ist eine Funktion, 
-                            da jeder Person nur genau eine Körpergröße haben kann. Diese ändert sich freilich 
-                            im Laufe des Lebens, es ist jedoch immer genau eine. </li>
-                        <li><span style="font-weight: 600;">Tier &rarr; Klasse:</span></li> bspw. Hund&nbsp;&rarr; Säugetier oder 
-                        Hammerhai&nbsp;&rarr;Fisch, ist eine Funktion, da kein Tier zwei Klassen angehört.
-                    </ul>
-                    Dagegen sind die folgenden Zuordnungen keine Funktionen:
-                    <ul>
-                        <li><span style="font-weight: 600;">Person &rarr; Eltern:</span> ist keine Funktion, da, zumindest
-                         ein Großteil der Menschen, zwei Elternteile hat.</li>
-                        <li><span style="font-weight: 600;">Land &rarr; Kontinentale Lage:</span> Auch wenn die meisten Länder
-                         nur auf einem Kontinent liegen, gibt es welche, z.B. die Türkei, die auf zwei Kontinenten liegt.</li>
-                         <li><span style="font-weight: 600;">Fahrzeug &rarr; Antriebsart:</span> ist keine Funktion, da, selbst
-                         wenn man nur bei Autos bleibt, es Fahrzeuge gibt, die mehrere Antriebskonzepte nutzen.</li>
-                    </ul>
+                <ul>
+                    <li><span style="font-weight: 600;">Person &rarr; Körpergröße:</span> ist eine Funktion,
+                        da jeder Person nur genau eine Körpergröße haben kann. Diese ändert sich freilich
+                        im Laufe des Lebens, es ist jedoch immer genau eine. </li>
+                    <li><span style="font-weight: 600;">Tier &rarr; Klasse:</span></li> bspw. Hund&nbsp;&rarr; Säugetier
+                    oder
+                    Hammerhai&nbsp;&rarr;Fisch, ist eine Funktion, da kein Tier zwei Klassen angehört.
+                </ul>
+                Dagegen sind die folgenden Zuordnungen keine Funktionen:
+                <ul>
+                    <li><span style="font-weight: 600;">Person &rarr; Eltern:</span> ist keine Funktion, da, zumindest
+                        ein Großteil der Menschen, zwei Elternteile hat.</li>
+                    <li><span style="font-weight: 600;">Land &rarr; Kontinentale Lage:</span> Auch wenn die meisten
+                        Länder
+                        nur auf einem Kontinent liegen, gibt es welche, z.B. die Türkei, die auf zwei Kontinenten liegt.
+                    </li>
+                    <li><span style="font-weight: 600;">Fahrzeug &rarr; Antriebsart:</span> ist keine Funktion, da,
+                        selbst
+                        wenn man nur bei Autos bleibt, es Fahrzeuge gibt, die mehrere Antriebskonzepte nutzen.</li>
+                </ul>
                 </p>
             </div>
             <h3>Definitionsmenge</h3>
             <p>
-                Die Definitionsmenge \(D\) ist die Gesamtheit aller Ausgangswerte, die meistens mit \(x\) betitelt werden.
+                Die Definitionsmenge \(D\) ist die Gesamtheit aller Ausgangswerte, die meistens mit \(x\) betitelt
+                werden.
             </p>
             <p>
-                Die einzelnen Elemente \(x\) der Definitionsmenge \(D\) heißen <span style="font-weight: 600;">Argumente</span>.
+                Die einzelnen Elemente \(x\) der Definitionsmenge \(D\) heißen <span
+                    style="font-weight: 600;">Argumente</span>.
             </p>
             <h3>Zielmenge</h3>
             <p>
-                Die Zielmenge \(Z\) ist die Menge aller möglichen Ergebnisse, unabhängig davon ob diese tatsächlich verknüpft wurden.
+                Die Zielmenge \(Z\) ist die Menge aller möglichen Ergebnisse, unabhängig davon ob diese tatsächlich
+                verknüpft wurden.
             </p>
             <h3>Wertemenge</h3>
             <p>
-                Die Wertemenge \(W\) ist die Menge aller tatsächlich verknüpften Ergebnisse. Sie ist immer eine Teilmenge der Zielmenge \(Z\).
+                Die Wertemenge \(W\) ist die Menge aller tatsächlich verknüpften Ergebnisse. Sie ist immer eine
+                Teilmenge der Zielmenge \(Z\).
             </p>
             <p>
-                Die einzelnen Elemente \(f(x)\) der Wertemenge heißen <span style="font-weight: 600;">Funktionswerte</span>.
+                Die einzelnen Elemente \(f(x)\) der Wertemenge heißen <span
+                    style="font-weight: 600;">Funktionswerte</span>.
             </p>
             <h6>Beispiel Mengen</h6>
             <p>
                 Beim Dartspiel können die verschiedenen Mengen gut veranschaulicht werden:
-                <ul>
-                    <li>Die einzelnen Würfe (1. Wurf, 2. Wurf, etc.) sind Teil der Definitions- oder Ausgangsmenge \(D\).</li>
-                    <li>Die verschiedenen Bereiche (1, 2, dreifach 20, aus, etc.) auf der Dartscheibe sind die Zielmenge \(Z\).</li>
-                    <li>Die tatsächlich getroffenen Bereiche sind die Wertemenge \(W\).</li>
-                </ul>
-                Die Zuordnung wäre dann bspw. 1. Wurf &rarr; \(4\) Punkte, 2. Wurf &rarr; \(2\times 7\) Punkte, usw.
+            <ul>
+                <li>Die einzelnen Würfe (1. Wurf, 2. Wurf, etc.) sind Teil der Definitions- oder Ausgangsmenge \(D\).
+                </li>
+                <li>Die verschiedenen Bereiche (1, 2, dreifach 20, aus, etc.) auf der Dartscheibe sind die Zielmenge
+                    \(Z\).</li>
+                <li>Die tatsächlich getroffenen Bereiche sind die Wertemenge \(W\).</li>
+            </ul>
+            Die Zuordnung wäre dann bspw. 1. Wurf &rarr; \(4\) Punkte, 2. Wurf &rarr; \(2\times 7\) Punkte, usw.
             </p>
             <!--Mengendiagramm mit verschiedenen Mengen-->
-    
-        </section>
-        <section  id="aufgaben">
-            <h3>Aufgaben zu den Begriffen</h3>
-            
+            <!--Beschreibung von Funktionen-->
         </section>
         <section>
-            
+            <!--Videos einbinden-->
+        </section>
+        <section id="aufgaben">
+            <h3>Aufgaben zu den Begriffen</h3>
+            <ol>
+                <li>
+                    Löse im Mathebuch, Seite 42, die Aufgabe 1!
+                </li>
+                <li>
+                    Löse im Mathebuch, Seite 45, die Aufgabe 6!
+                </li>
+                <li>
+                    Zeichne die Graphen folgenden Funktionen im (maximalen) Bereich von \(-5 \leq x \leq 5\)!
+                    Erstelle jeweils eine passende Wertetabelle! Bestimme anschließend die Wertemenge!
+                    <!--Funktionsgleichungen-->
+                </li>
+                <li>
+                    Die folgenden Graphen zeigen eine Übersicht der bekannten und noch kommenden Standardfunktionen.
+                    <!--Funktionsgraphen-->
+                    Prüfe außerdem die folgenden Punkte!
+                    <ol> <!--Überarbeiten!-->
+                        <li>Liegt Symmetrie zum Ursprung oder zur \(y\)-Achse vor?</li>
+                        <li>Ist die Funktion durchgängig ansteigend?</li>
+                        <li>Kann der Graph der Funktion im abgebildeten Bereich ohne Absetzen des Stiftes
+                            gezeichnet werden?
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    Löse im Mathebuch, Seite 45, die Aufgabe 7!
+                </li>
+            </ol>
+        </section>
+        <section class="loesungen">
+            <h3>Lösungen zu den Begriffen</h3>
+                <details>
+                    <summary>Löse im Mathebuch, Seite 42, die Aufgabe 1!</summary>
+                    Bla, bla bla.
+                </details>
+                <details>
+                    <summary>Löse im Mathebuch, Seite 45, die Aufgabe 6!</summary>
+                    Bla, bla bla.
+                </details>
         </section>
     </main>
     <footer>
-      <a href="/misc/impressum.html">Impressum</a>
-      <div class="lastModified" align="center">
-        Zuletzt geändert:<br>
-        27. Juli 2023
-        <!-- <span id="lastModifiedDate"></span> -->
-      </div>
-      <a href="/misc/datenschutz.html">Datenschutz</a>
-</footer>
+        <a href="/misc/impressum.html">Impressum</a>
+        <div class="lastModified" align="center">
+            Zuletzt geändert:<br>
+            8. August 2023
+            <!-- <span id="lastModifiedDate"></span> -->
+        </div>
+        <a href="/misc/datenschutz.html">Datenschutz</a>
+    </footer>
 </body>

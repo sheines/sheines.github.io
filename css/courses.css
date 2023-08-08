@@ -40,7 +40,7 @@
     align-items: center;
     counter-increment: css-counter 1;
 }
-.subject h4:before {
+.subject h4::before {
     content: counter(css-counter) ". ";
 }
 .ziele {
