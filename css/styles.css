@@ -81,15 +81,31 @@ table {
 }
 details {
   padding-left: 10px;
+  padding: 0.5em;
+  border: 1px solid var(--loesungen);
+  border-radius: 4px;
+  margin-bottom: 0.75em;
+  transition: all 0.4s ease-in-out;
 }
 details summary {
+  outline: none;
+  cursor: pointer;
   counter-increment: lsg-counter 1;
 }
-summary {
-  
+details[open] {
+  background-color: var(--bg-global-light);
+}
+details[open] summary {
+  padding-bottom: 1rem;
 }
 details summary::before {
   content: counter(lsg-counter) ". ";
+}
+
+.centered {
+  display: flex;
+  justify-content: center;
+  
 }
 
 @media screen and (max-width: 700px) {
