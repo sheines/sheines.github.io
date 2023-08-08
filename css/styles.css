@@ -18,6 +18,16 @@ a:hover {
   scale: 1.2;
 }
 
+.teaserImg {
+  width: 100%;
+  height: 350px;
+}
+.teaserImg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .teaser,
 .teaserMath,
 .teaserSun {
