@@ -51,7 +51,8 @@ a:hover {
   padding: 1px 20px;
   background-color: var(--bg-header);
   border-radius: 20px;
-  box-shadow: 3px 3px 10px var(--shadow-bg);
+  border: 2px solid var(--fg-header);
+  margin: 0px 0px 10px 0px;
 }
 
 .tabelle {
@@ -83,6 +84,9 @@ details {
 }
 details summary {
   counter-increment: lsg-counter 1;
+}
+summary {
+  
 }
 details summary::before {
   content: counter(lsg-counter) ". ";
