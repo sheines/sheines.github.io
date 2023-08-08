@@ -1,13 +1,3 @@
-:root {
-    --bg-global: #232323;
-    --bg-header: #004c5c;
-    --fg-text: #a8a7a7;
-    --fg-header: darkgoldenrod;
-    --bloom-bg: aqua;
-    --shadow-bg: #007c8c;
-    --bloom-fg: goldenrod;
-    --shadow-fg: gold;
-}
 * {
     box-sizing: border-box;
 }
