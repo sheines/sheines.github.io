@@ -108,6 +108,40 @@ details summary::before {
   
 }
 
+.outer-list {
+  counter-reset: outer-counter;
+}
+
+.outer-list > li {
+  counter-increment: outer-counter;
+  margin-bottom: 10px;
+}
+
+.inner-list {
+  counter-reset: inner-counter;
+  list-style: none;
+}
+
+.inner-list > li {
+  counter-increment: inner-counter;
+  padding-bottom: 5px;
+  padding-top: 5px;
+}
+
+.inner-list > li::before {
+  content: counter(inner-counter, lower-alpha) ") ";
+  margin-right: 5px;
+}
+.images {
+  display: flex;
+  flex-wrap: wrap;
+}
+.funktionsbundle {
+  text-align: center;
+  
+}
+
+
 @media screen and (max-width: 700px) {
   .scale {
     scale: 1;

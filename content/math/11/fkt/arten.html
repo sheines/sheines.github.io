@@ -47,8 +47,7 @@
             <div class="ziele">
                 <p>
                     Nachfolgend werden verschiedene Arten der Darstellung von Funktionen gezeigt.
-                    Außerdem werden die wichtigsten Funktionsarten (in einer Aufgabe) der nächsten
-                    drei Jahre aufgeführt.
+                    Außerdem werden die wichtigsten Funktionsarten (in einer Aufgabe) der Sekundarstufe I aufgeführt.
                 </p>
                 <p>
                     <a href="#aufgaben">Direkt zu den Aufgaben</a>
@@ -130,7 +129,7 @@
                     dargestellt werden.
                 </p>
                 <div class="centered" style="max-height: 200px;">
-                    <img src="svg/diag.svg" >
+                    <img src="svg/diag.svg">
                 </div>
             </div>
         </section>
@@ -139,19 +138,89 @@
         </section>
         <section id="aufgaben" class="aufgaben">
             <h3>Aufgaben zu Funktionsarten</h3>
-            <ol>
+            <ol class="outer-list">
                 <li>
                     Zeichne die Graphen folgenden Funktionen im (maximalen) Bereich von \(-5 \leq x \leq 5\)!
                     Erstelle jeweils eine passende Wertetabelle! Bestimme anschließend die Wertemenge! <a
                         href="#a1">Lösungen</a>
-                    <!--Funktionsgleichungen-->
+                    <ol class="inner-list">
+                        <li>\(f(x)=x+(-1)^x, \quad\ \qquad\quad\quad D=\mathbb N\)</li>
+                        <li>\(f(x)=x+\sqrt x, \quad\ \qquad\quad\qquad D=\mathbb R_0^+\)</li>
+                        <li>\(f(x)=\frac 1x \quad\ \qquad\quad\qquad\qquad\quad\! D=\{x\in\mathbb R: x > 1\}\)</li>
+                        <li>\(f(x)=\left\{\begin{matrix} -x,\!\quad\text{wenn } x\leq 2 \\ 
+                                \phantom{-}x,\quad\text{wenn } x>2 \end{matrix} \right.\   \quad D=\mathbb R\)</li>
+                        <li>\(f(x)=\left\{\begin{array}{l}\ 0,5,\!\!\quad\text{wenn } x\leq 1 \\ 
+                            \phantom{-}0,\quad\text{wenn } 1 < x < 2\\
+                            \phantom{-}1,\quad\text{wenn } x\geq 2 \end{array} \right. \quad D=\mathbb R\)</li>
+                    </ol>
                 </li>
                 <li>
-                    Die folgenden Graphen zeigen eine Übersicht der bekannten und noch kommenden
-                    Standardfunktionen.
-                    <!--Funktionsgraphen-->
+                    Die folgenden Graphen zeigen eine Übersicht der bekannten Standardfunktionen.
+                    <div class="images">
+                        <div class="funktionsbundle">
+                            <a href="svg/fkt_konst.svg" target="_blank" rel="noopener noreferrer">
+                            <p>\(f(x)=1\)</p>
+                            <img src="svg/fkt_konst.svg" height="150px"> </a>
+                        </div>
+                        <div class="funktionsbundle">
+                            <a href="svg/fkt_lin.svg" target="_blank" rel="noopener noreferrer">
+                            <p>\(f(x)=x\)</p>
+                            <img src="svg/fkt_lin.svg" height="150px"> </a>
+                        </div>
+                        <div class="funktionsbundle">
+                            <a href="svg/fkt_quad.svg" target="_blank" rel="noopener noreferrer">
+                            <p>\(f(x)=x^2\)</p>
+                            <img src="svg/fkt_quad.svg" height="150px"> </a>
+                        </div>
+                        <div class="funktionsbundle">
+                            <a href="svg/fkt_cub.svg" target="_blank" rel="noopener noreferrer">
+                            <p>\(f(x)=x^3\)</p>
+                            <img src="svg/fkt_cub.svg" height="150px"> </a>
+                        </div>
+                        <div class="funktionsbundle">
+                            <a href="svg/fkt_quart.svg" target="_blank" rel="noopener noreferrer">
+                            <p>\(f(x)=x^4\)</p>
+                            <img src="svg/fkt_quart.svg" height="150px"> </a>
+                        </div>
+                        <div class="funktionsbundle">
+                            <a href="svg/fkt_sqrt.svg" target="_blank" rel="noopener noreferrer">
+                            <p>\(f(x)=\sqrt x\)</p>
+                            <img src="svg/fkt_sqrt.svg" height="150px"> </a>
+                        </div>
+                        <div class="funktionsbundle">
+                            <a href="svg/fkt_rezi.svg" target="_blank" rel="noopener noreferrer">
+                            <p>\(f(x)=\frac 1x\)</p>
+                            <img src="svg/fkt_rezi.svg" height="150px"> </a>
+                        </div>
+                        <div class="funktionsbundle">
+                            <a href="svg/fkt_reziquad.svg" target="_blank" rel="noopener noreferrer">
+                            <p>\(f(x)=\frac 1{x^2}\)</p>
+                            <img src="svg/fkt_reziquad.svg" height="150px"> </a>
+                        </div>
+                        <div class="funktionsbundle">
+                            <a href="svg/fkt_abs.svg" target="_blank" rel="noopener noreferrer">
+                            <p>\(f(x)=|x|\)</p>
+                            <img src="svg/fkt_abs.svg" height="150px"> </a>
+                        </div>
+                        <div class="funktionsbundle">
+                            <a href="svg/fkt_sgn.svg" target="_blank" rel="noopener noreferrer">
+                            <p>\(f(x)=\text{sgn}\, x\)</p>
+                            <img src="svg/fkt_sgn.svg" height="150px"> </a>
+                        </div>
+                        <div class="funktionsbundle">
+                            <a href="svg/fkt_sin.svg" target="_blank" rel="noopener noreferrer">
+                            <p>\(f(x)=\sin x\)</p>
+                            <img src="svg/fkt_sin.svg" height="150px"> </a>
+                        </div>
+                        <div class="funktionsbundle">
+                            <a href="svg/fkt_cos.svg" target="_blank" rel="noopener noreferrer">
+                            <p>\(f(x)=\cos x\)</p>
+                            <img src="svg/fkt_cos.svg" height="150px"> </a>
+                        </div>
+                    </div>
                     Prüfe außerdem die folgenden Punkte! <a href="#a2">Lösungen</a>
-                    <ol> <!--Überarbeiten!-->
+                    <ol class="inner-list"> <!--Überarbeiten!-->
+                        <li>Wie heißt die Funktion?</li>
                         <li>Liegt Symmetrie zum Ursprung oder zur \(y\)-Achse vor?</li>
                         <li>Ist die Funktion durchgängig ansteigend?</li>
                         <li>Kann der Graph der Funktion im abgebildeten Bereich ohne Absetzen des Stiftes
