@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" initial-scale=1.0 />
+    <meta name="author" content="Sebastian Hitziger" />
+    <meta name="robot" content="noindex" />
+    <title> HITZ | Funktionen | Funktionsarten</title>
+    <link rel="stylesheet" type="text/css" href="/css/colors.css" />
+    <link rel="stylesheet" type="text/css" href="/css/gridNoTimeline.css" />
+    <link rel="stylesheet" type="text/css" href="/css/navbar.css" />
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="/css/courses.css" />
+    <script type="text/javascript" src="jquery-3.3.1.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="nav">
+            <input type="checkbox" id="nav-check">
+            <div class="nav-header">
+                <div class="nav-title">
+                    <a href="/">Hr. Hitzigers Unterricht</a>
+                </div>
+            </div>
+            <div class="nav-btn">
+                <label for="nav-check">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+
+            <div class="nav-links">
+                <a href="/content/math/">Startseite Mathematik</a>
+                <a href="/content/math/11/">Übersicht Klasse 11</a>
+                <a href="/content/math/11/fkt/">Übersicht Funktionen</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section>
+            <h2>Funktionsarten</h2>
+            <div class="ziele">
+                <p>
+                    Nachfolgend werden verschiedene Arten der Darstellung von Funktionen gezeigt.
+                    Außerdem werden die wichtigsten Funktionsarten (in einer Aufgabe) der nächsten
+                    drei Jahre aufgeführt.
+                </p>
+                <p>
+                    <a href="#aufgaben">Direkt zu den Aufgaben</a>
+                </p>
+            </div>
+            <div class="theorie">
+                <h3>Darstellungsarten</h3>
+                <p>
+                    Funktionen können auf verschiedenste Art und Weise dargestellt werden
+                    (es handelt sich in den Beispielen immer um die gleiche Funktion):
+                </p>
+                <h4>Zuordnungsvorschrift</h4>
+                <p>
+                    Jede Funktion besitzt eine Zuordnungsvorschrift. Gemeint ist damit das
+                    Gesetz/die Vorschrift/die Anleitung, mit dem man zu jedem \(x\)-Wert (Argument)
+                    den zugehörigen \(y\)-Wert (Funktionswert) finden kann.
+                </p>
+                <p>
+                    Selbstverständlich dürfen \(x\) und \(y\) auch durch andere Variablen, wie bspw.
+                    \(t\) für die Zeit oder \(s\) für die Strecke, ersetzt werden.
+                </p>
+                <h6>Beispiel</h6>
+                <p>
+                    Jeder Zahl \(x\in\mathbb R\) wird das Doppelte zugeordnet.
+                </p>
+                <h4>Funktionsgleichung</h4>
+                <p>
+                    Häufig ist die Darstellung der Vorschrift durch eine Gleichung möglich.
+                </p>
+                <h6>Beispiel</h6>
+                <p>
+                    \(y=2\cdot x\) oder \(f(x)=2\cdot x\), wobei \(f\) der Name der Zuordnung und beliebig
+                    wählbar ist.
+                </p>
+                <h4>Pfeilschreibweise</h4>
+                <p>
+                    Neben der Funktionsgleichung wird gelegentlich auch die Pfeilschreibweise verwendet.
+                    Wir nutzen sie nicht, ihr solltet aber mit ihr umgehen können, wenn sie irgendwo auftaucht.
+                </p>
+                <h6>Beispiel</h6>
+                <p>
+                    \(f:x\rightarrow 2\cdot x\)
+                </p>
+                <h4>Wertetabelle</h4>
+                <p>
+                    In einer Wertetabelle werden zu bestimmten Argumenten (\(x\)) die zugehörigen Funktionswerte 
+                    (\(y\) oder \(f(x)\)) aufgeführt.
+                </p>
+                <h6>Beispiel</h6>
+                <div class="tabelle">
+                    <table style="width:40%">
+                        <tr>
+                            <th>\(x\)</th>
+                            <td>\(1\)</td>
+                            <td>\(2\)</td>
+                            <td>\(5\)</td>
+                            <td>\(8\)</td>
+                            <td>\(15\)</td>
+                        </tr>
+                        <tr>
+                            <th>\(f(x)\)</th>
+                            <td>\(2\)</td>
+                            <td>\(4\)</td>
+                            <td>\(10\)</td>
+                            <td>\(16\)</td>
+                            <td>\(30\)</td>
+                        </tr>
+                    </table>
+                </div>
+                <p>
+                    Wie man eine Wertetabelle erstellt, kann <a href="/content/math/grundlagen/wertetabelle.html">hier</a> 
+                    nachgelesen werden.
+                </p>
+                <h4>Funktionsgraph</h4>
+                Wenn man die Zahlenpaare \((x|y)\) bzw. \((x|f(x))\) als Punktmenge begreift, können Funktionen auch in einem Koordinatensystem 
+                dargestellt werden.
+            </div>
+        </section>
+        <section>
+            <!--Videos einbinden-->
+        </section>
+        <section id="aufgaben" class="aufgaben">
+            <h3>Aufgaben zu Funktionsarten</h3>
+            <ol>
+                <li>
+                    Zeichne die Graphen folgenden Funktionen im (maximalen) Bereich von \(-5 \leq x \leq 5\)!
+                    Erstelle jeweils eine passende Wertetabelle! Bestimme anschließend die Wertemenge! <a
+                        href="#a1">Lösungen</a>
+                    <!--Funktionsgleichungen-->
+                </li>
+                <li>
+                    Die folgenden Graphen zeigen eine Übersicht der bekannten und noch kommenden
+                    Standardfunktionen.
+                    <!--Funktionsgraphen-->
+                    Prüfe außerdem die folgenden Punkte! <a href="#a2">Lösungen</a>
+                    <ol> <!--Überarbeiten!-->
+                        <li>Liegt Symmetrie zum Ursprung oder zur \(y\)-Achse vor?</li>
+                        <li>Ist die Funktion durchgängig ansteigend?</li>
+                        <li>Kann der Graph der Funktion im abgebildeten Bereich ohne Absetzen des Stiftes
+                            gezeichnet werden?
+                        </li>
+                    </ol>
+                </li>
+                <li>
+                    Löse im Mathebuch, Seite 44, die Aufgabe 5! <a href="#a3">Lösungen</a>
+                </li>
+            </ol>
+        </section>
+        <section class="loesungen">
+            <h3>Lösungen zu Funktionsarten</h3>
+            <details id="a1">
+                <summary>Graphen zeichnen</summary>
+
+                Bla, bla bla.
+            </details>
+            <details id="a2">
+                <summary>Standardfunktionen</summary>
+                Bla, bla bla.
+            </details>
+            <details id="a3">
+                <summary>Seite 44, Aufgabe 5</summary>
+                Bla, bla bla.
+            </details>
+        </section>
+        <section id="meme">
+            <div class="centered" style="max-height: 350px">
+                <img src="/img/fkt-meme.jpg" style="object-fit:scale-down;">
+            </div>
+            <div class="centered">
+                <a href="https://www.flickr.com/photos/dylanng/6267107228/">
+                    <h6>Original von Dylan Ng</h6>
+                </a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <a href="/misc/impressum.html">Impressum</a>
+        <div class="lastModified" align="center">
+            Zuletzt geändert:<br>
+            9. August 2023
+            <!-- <span id="lastModifiedDate"></span> -->
+        </div>
+        <a href="/misc/datenschutz.html">Datenschutz</a>
+    </footer>
+</body>
