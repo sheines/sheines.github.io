@@ -3,17 +3,28 @@
        The center of the SVG is (0, 0). You can adjust this viewBox as needed. -->
 
   <!-- Draw the x-axis line -->
-  <line x1="-10" y1="0" x2="10" y2="0" stroke="black" stroke-width="0.05" />
+  <line x1="-10" y1="0" x2="10" y2="0" stroke="#a7a7a7" stroke-width="0.05" />
 
   <!-- Draw the x-axis arrowhead -->
-  <polygon points="10.5,0 9.8,-0.15 9.8,0.15" fill="black" />
+  <polygon points="10.5,0 9.8,-0.15 9.8,0.15" fill="#a7a7a7" />
 
   <!-- Draw the y-axis line -->
-  <line x1="0" y1="5" x2="0" y2="-5" stroke="black" stroke-width="0.05" />
+  <line x1="0" y1="5" x2="0" y2="-5" stroke="#a7a7a7" stroke-width="0.05" />
 
   <!-- Draw the y-axis arrowhead -->
-  <polygon points="0,-5.5 -0.15,-4.8 0.15,-4.8" fill="black" />
+  <polygon points="0,-5.5 -0.15,-4.8 0.15,-4.8" fill="#a7a7a7" />
 
-  <!-- Add the x-axis label using SVG text -->
-  <text x="10.8" y="1" font-size="1.5" font-family="Arial" fill="black">x</text>
+    <!-- Add "x" at the end of the x-axis -->
+  <text x="10.7" y="0.7" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">x</text>
+
+  <!-- Add "y" at the end of the y-axis -->
+  <text x="-0.8" y="-5.3" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">y</text>
+
+
+  <!-- Add numbers to x-axis-->
+  <text x="1.9" y="0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">2</text>
+    
+  <!-- Add numbers to y-axis-->
+    <text x="-0.75" y="-1.75" font-family="serif" font-size="0.7" fill="#a8a7a7">2</text>
+
 </svg>
