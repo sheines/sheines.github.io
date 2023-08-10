@@ -135,10 +135,10 @@ details summary::before {
 .images {
   display: flex;
   flex-wrap: wrap;
+  gap: 10px;
 }
 .funktionsbundle {
   text-align: center;
-  gap: 10px;
 }
 
 
