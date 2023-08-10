@@ -13,6 +13,18 @@ a:hover {
   color: var(--bloom-fg);
   text-shadow: 0 0 1em var(--shadow-fg);
 }
+s {
+  text-decoration-color: darkred;
+  text-decoration-line: line-through;
+  text-decoration-thickness: 0.2rem;
+}
+th {
+  min-width: 2rem;
+  padding: 5px;
+}
+td {
+  min-width: 3rem;
+}
 
 .scale {
   scale: 1.2;
@@ -141,7 +153,24 @@ details summary::before {
   
 }
 
-.outer-list {
+ol.custom-marker {
+  counter-reset: list;
+}
+
+ol.custom-marker > li {
+  list-style: none;
+  counter-increment: list;
+}
+
+ol.custom-marker.point-after.decimal > li::marker {
+  content: counter(list) ".\a0";
+}
+
+ol.custom-marker.parens-around.lower-alpha > li::marker {
+  content: counter(list, lower-alpha) ")\a0";
+}
+
+/* .outer-list {
   counter-reset: outer-counter;
 }
 
@@ -164,7 +193,7 @@ details summary::before {
 .inner-list > li::before {
   content: counter(inner-counter, lower-alpha) ") ";
   margin-right: 5px;
-}
+} */
 .images {
   display: flex;
   flex-wrap: wrap;
