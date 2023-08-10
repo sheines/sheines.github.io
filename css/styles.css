@@ -74,7 +74,6 @@ table {
 }
 .table-wrapper {
   width: 100%;
-  border: 1px solid #ff0000;
   overflow-x: auto;
   padding: 0 30px;
   box-sizing: border-box;
