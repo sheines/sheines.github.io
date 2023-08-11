@@ -141,6 +141,9 @@ details[open] summary {
 details summary::before {
   content: counter(lsg-counter) ". ";
 }
+.nonumber::before {
+  content: "";
+}
 
 .centered {
   display: flex;
