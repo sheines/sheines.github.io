@@ -84,6 +84,26 @@ table {
   overflow-x: auto;
   padding: 0 30px;
   box-sizing: border-box;
+  white-space: nowrap; /* Neues Attribut */
+}
+.responsive-table {
+  display: inline-block;
+  /* Entferne 'min-width: 100%;' */
+  box-sizing: border-box;
+}
+.wechseltabelle {
+  /* Entferne 'width: 100%;' */
+}
+.wechseltabelle td, .wechseltabelle th {
+  border: 1px solid #121212;
+  padding: 8px;
+  white-space: normal; /* Füge dieses Attribut hinzu */
+}
+/* .table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  padding: 0 30px;
+  box-sizing: border-box;
 }
 .responsive-table{
   display: inline-block;
@@ -96,7 +116,7 @@ table {
 .wechseltabelle td, .wechseltabelle th {
   border: 1px solid #121212;
   padding: 8px;
-}
+} */
 
 .wechseltabelle tr:nth-child(even){background-color: #343434;}
 .wechseltabelle tr:nth-child(odd){background-color: #454545;}
