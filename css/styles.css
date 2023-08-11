@@ -144,6 +144,12 @@ details summary::before {
 .nonumber::before {
   content: "";
 }
+.openClose[open] summary::after {
+  content: attr(data-open);
+}
+.openClose:not([open]) summary::after {
+  content: attr(data-close);
+}
 
 .centered {
   display: flex;
