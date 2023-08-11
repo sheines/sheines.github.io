@@ -156,6 +156,13 @@ details summary::before {
   justify-content: center;
   
 }
+.videos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
 
 ol.custom-marker {
   counter-reset: list;

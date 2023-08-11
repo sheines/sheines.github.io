@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" initial-scale=1.0 />
+    <meta name="author" content="Sebastian Hitziger" />
+    <meta name="robot" content="noindex" />
+    <title> HITZ | Grundlagen | Wertetabellen</title>
+    <link rel="stylesheet" type="text/css" href="/css/colors.css" />
+    <link rel="stylesheet" type="text/css" href="/css/gridNoTimeline.css" />
+    <link rel="stylesheet" type="text/css" href="/css/navbar.css" />
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="/css/courses.css" />
+    <script type="text/javascript" src="jquery-3.3.1.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="https://www.geogebra.org/apps/deployggb.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="nav">
+            <input type="checkbox" id="nav-check">
+            <div class="nav-header">
+                <div class="nav-title">
+                    <a href="/">Hr. Hitzigers Unterricht</a>
+                </div>
+            </div>
+            <div class="nav-btn">
+                <label for="nav-check">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+
+            <div class="nav-links">
+                <a href="/content/math/">Startseite Mathematik</a>
+                <a href="/content/math/grundlagen/">Übersicht Grundlagen</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section>
+            <h2>Wertetabellen</h2>
+            <div class="ziele">
+                <p>
+                    Nachfolgend wird das Erstellen einer Wertetabelle erklärt.
+                </p>
+                <!-- <p>
+                    <a href="#aufgaben">Direkt zu den Aufgaben</a>
+                </p> -->
+            </div>
+            <div class="theorie">
+                <h3>Allgemein</h3>
+                <p>
+                    Eine Wertetabelle ist eine Tabelle, welche \(x\)- und \(y\)- einer Funktion gegenüber stellt.
+                    Ob die Tabelle waagerecht (wie unten links) oder senkrecht ist, ist egal.
+                </p>
+                <p>
+                    Die Beschriftung mit \(x\) und \(y\), bzw. \(f(x)\) ist dagegen zwingend. Es sollte natürlich
+                    auf den Funktionsnamen und die Variablen geachtet werden. Es könnte beispielsweise auch \(h(x)\)
+                    oder \(t\) und \(s\) sein.
+                </p>
+                <div class="tabelle">
+                    <table>
+                        <tr>
+                            <th>\(x\)</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th>\(f(x)\)</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                    <span style="color: transparent">Platz</span>
+                    <table>
+                        <tr>
+                            <th>\(x\)</th>
+                            <td>\(f(x)\)</td>
+
+                        </tr>
+                        <tr>
+                            <th><span style="color: transparent">a</span></th>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th><span style="color: transparent">a</span></th>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th><span style="color: transparent">a</span></th>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+                <p>
+                    Im weiteren Verlauf wird \(x\) und \(f(x)\), sowie die waagerechte Tabelle genutzt.
+                    Die dargestellte Funktion lautet <span style="color: darkgoldenrod">\(f(x)=x^2-4x-7\) </span> .
+                </p>
+                <h3>Zeile der Argument (\(x\))</h3>
+                <p>
+                    Die Werte für die Argumente können frei gewählt werden. Natürlich sollte der Definitionsbereich
+                    \(D\)
+                    der Funktion beachtet werden. So brauchen beispielweise bei einer Wurzelfunktion keine negativen
+                    Argumente
+                    genutzt werden, da diese außerhalb des Definitionsbereiches liegen.
+                </p>
+                <p>
+                    Prinzipiell ist es egal, welche Argumente genutzt werden, sie sollten jedoch den zu betrachtenden
+                    wiederspiegeln. Ist bekannt, dass die Funktion besondere Stellen besitzt, kann um diese eine
+                    engmaschigere
+                    Wiedergabe erfolgen.
+                </p>
+                <p>
+                    Für die oben genannte Funktion könnte die Tabelle folgendermaßen aussehen:
+                <div class="tabelle">
+                    <table>
+                        <tr>
+                            <th>\(x\)</th>
+                            <td>\(-3\)</td>
+                            <td>\(-1\)</td>
+                            <td>\(0\)</td>
+                            <td>\(2\)</td>
+                            <td>\(5\)</td>
+                        </tr>
+                        <tr>
+                            <th>\(f(x)\)</th>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+                </p>
+                <h3>Wertezeile \(y\)</h3>
+                <p>
+                    Zuerst, ob die Zeile mit \(y\) oder \(f(x)\) beschriftet ist, ist egal.
+                </p>
+                <p>
+                    Nun werden die Argumente \(x\) nacheinander in die Funktionsgleichung eingesetzt und \(y\)
+                    berechnet.
+                </p>
+                <p>
+                    \(\color{red}{x_1=-3}\) wird nun in die Funktionsgleichung eingesetzt:
+                    \(\color{blue}{}f(x)\color{darkgoldenrod}{}=(\color{red}{-3}\color{darkgoldenrod}{})^2
+                    -4\cdot(\color{red}{-3}\color{darkgoldenrod}{})-7=\color{blue}{14}\).
+                </p>
+                <p>
+                    Insbesondere bei negativen Zahlen sollte auf die Klammern geachtet werden.
+                </p>
+                <p>
+                    Das Ergebnis wird nun in die Tabelle übernommen:
+                <div class="tabelle">
+                    <table>
+                        <tr>
+                            <th>\(x\)</th>
+                            <td>\(\color{red}{-3}\)</td>
+                            <td>\(-1\)</td>
+                            <td>\(0\)</td>
+                            <td>\(2\)</td>
+                            <td>\(5\)</td>
+                        </tr>
+                        <tr>
+                            <th>\(f(x)\)</th>
+                            <td>\(\color{blue}{14}\) </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+                </p>
+                <p>
+                Der Vorgang wird nun für alle weiteren Argumente wiederholt:
+                <ul>
+                    <li>\(\color{red}{x_2=-1}\):
+                        \(\color{blue}{}f(x)\color{darkgoldenrod}{}=(\color{red}{-1}\color{darkgoldenrod}{})^2
+                        -4\cdot(\color{red}{-1}\color{darkgoldenrod}{})-7=\color{blue}{-2}\)
+                    </li>
+                    <li>\(\color{red}{x_3=0}\):
+                        \(\color{blue}{}f(x)\color{darkgoldenrod}{}=\color{red}{0}\color{darkgoldenrod}{}^2
+                        -4\cdot\color{red}{0}\color{darkgoldenrod}{}-7=\color{blue}{-7}\)
+                    </li>
+                    <li>\(\color{red}{x_4=2}\):
+                        \(\color{blue}{}f(x)\color{darkgoldenrod}{}=\color{red}{2}\color{darkgoldenrod}{}^2
+                        -4\cdot\color{red}{2}\color{darkgoldenrod}{}-7=\color{blue}{-11}\)
+                    </li>
+                    <li>\(\color{red}{x_5=5}\):
+                        \(\color{blue}{}f(x)\color{darkgoldenrod}{}=\color{red}{5}\color{darkgoldenrod}{}^2
+                        -4\cdot\color{red}{5}\color{darkgoldenrod}{}-7=\color{blue}{-2}\)
+                    </li>
+                </ul>
+                In die Tabelle übertragen ergibt das:
+                <div class="tabelle">
+                    <table>
+                        <tr>
+                            <th>\(x\)</th>
+                            <td>\(-3\)</td>
+                            <td>\(\color{red}{-1}\)</td>
+                            <td>\(\color{red}{0}\)</td>
+                            <td>\(\color{red}{2}\)</td>
+                            <td>\(\color{red}{5}\)</td>
+                        </tr>
+                        <tr>
+                            <th>\(f(x)\)</th>
+                            <td>\(14\) </td>
+                            <td>\(\color{blue}{-2}\)</td>
+                            <td>\(\color{blue}{-7}\)</td>
+                            <td>\(\color{blue}{-11}\)</td>
+                            <td>\(\color{blue}{-2}\)</td>
+                        </tr>
+                    </table>
+                </div>
+                Und damit wurde erfolgreich eine Wertetabelle für die Funktion 
+                <span style="color: darkgoldenrod">\(f(x)=x^2-4x-7\) </span> erstellt.
+                </p>
+            </div>
+            <h3>Wertetabelle mit dem Taschenrechner erstellen</h3>
+            <p>
+                Wertetabellen können auch sehr einfach mit dem Taschenrechner erstellt werden. 
+                Die Beschreibung folgt dem von der Schule empfohlenen Casio fx-87DE X. Mit anderen 
+                Taschenrechnern kann es aber ähnlich funktionieren:
+                <ol>
+                    <li>Oben Rechts auf Menu gehen,</li>
+                    <li>&bdquo;Tabellen&ldquo; (Table) auswählen,</li>
+                    <li>Funktionsgleichung eingeben. \(x\) ist oben rechts zu finden, mit \(=\) bestätigen,</li>
+                    <li>Ggf. zweite Funktion eingeben, mit \(=\) bestätigen oder überspringen,</li>
+                    <li>Startwert eingeben, z.B. \(-5\), mit \(=\) bestätigen,</li>
+                    <li>Endwert eingeben, z.B. \(5\), mit \(=\) bestätigen,</li>
+                    <li>Schrittweite (Inkrement) eingeben, z.B. \(1\), es können auch Kommazahlen 
+                        eingegeben werden, mit \(=\) bestätigen</li>
+                    <li>Ein weiterer Druck auf \(=\) erstellt die Wertetabelle, links sind die \(x\)-Werte, 
+                        rechts die \(y\)-Werte der (beiden) Funktion(en).
+                    </li>
+                </ol>
+            </p>
+        </section>
+        <!-- Videos einbinden -->
+        <section class="centered">
+            <iframe width="360" height="202" src="https://www.youtube.com/embed/o1NahBqXHKE" 
+            title="Funktionen - Wertetabellen" frameborder="0" 
+            allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" 
+            allowfullscreen></iframe>
+        </section>
+
+        <!-- <section id="aufgaben" class="aufgaben"> -->
+
+        </section>
+        <!-- <section id="meme">
+            <div class="centered" style="max-height: 500px;" >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500">
+                    <image xlink:href="/img/fkt-meme.jpg"></image>
+                </svg> 
+            </div>
+            <div class="centered">
+                <a href="https://www.flickr.com/photos/dylanng/6267107228/"  target="_blank" rel="noopener noreferrer">
+                    <h6>Original von Dylan Ng</h6>
+                </a>
+            </div>
+        </section> -->
+    </main>
+    <footer>
+        <a href="/misc/impressum.html">Impressum</a>
+        <div class="lastModified" align="center">
+            Zuletzt geändert:<br>
+            11. August 2023
+            <!-- <span id="lastModifiedDate"></span> -->
+        </div>
+        <a href="/misc/datenschutz.html">Datenschutz</a>
+    </footer>
+</body>
