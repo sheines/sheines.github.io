@@ -2,10 +2,12 @@
     height: 50px;
     width: 100%;
     background-color: var(--bg-header);
-    position: relative;
+    position: sticky;
+    top: 0;
     border-radius: 25px;
     margin: 5px;
     z-index: 100;
+    
   }
   
   .nav > .nav-header {
