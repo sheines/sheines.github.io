@@ -41,17 +41,12 @@ td {
 }
 
 .teaser,
-.teaserMath,
 .teaserSun {
   padding-top: 20px;
   display: flex;
   justify-content: center;
 
   height: 250px;
-}
-
-.teaserMath {
-  height: 270px;
 }
 
 .teaserSun {
