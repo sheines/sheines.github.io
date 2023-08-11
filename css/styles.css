@@ -150,6 +150,7 @@ details summary::before {
 
 ol.custom-marker {
   counter-reset: list;
+  margin: 5px 0;
 }
 
 ol.custom-marker > li {
@@ -165,30 +166,9 @@ ol.custom-marker.parens-around.lower-alpha > li::marker {
   content: counter(list, lower-alpha) ")\a0";
 }
 
-/* .outer-list {
-  counter-reset: outer-counter;
+.bigger-spacing li:not(:last-child) {
+  margin-bottom: 20px;
 }
-
-.outer-list > li {
-  counter-increment: outer-counter;
-  margin-bottom: 10px;
-}
-
-.inner-list {
-  counter-reset: inner-counter;
-  list-style: none;
-}
-
-.inner-list > li {
-  counter-increment: inner-counter;
-  padding-bottom: 5px;
-  padding-top: 5px;
-}
-
-.inner-list > li::before {
-  content: counter(inner-counter, lower-alpha) ") ";
-  margin-right: 5px;
-} */
 .images {
   display: flex;
   flex-wrap: wrap;
