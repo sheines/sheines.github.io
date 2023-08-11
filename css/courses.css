@@ -1,7 +1,6 @@
 .course-container {
-    display: flex;
+    display: grid;
     flex-wrap: wrap;
-    justify-content: space-around;
 }
 .course {
     display: flex;
@@ -12,11 +11,10 @@
     justify-content: center;
     align-items: center;
     margin: 15px;
-    width: 150px;
+    
 }
 .course img {
     height: 50px;
-    width: auto;
 }
 .course:hover,
 .subject:hover {
