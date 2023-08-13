@@ -97,6 +97,7 @@ table {
 .wechseltabelle td, .wechseltabelle th {
   border: 1px solid #121212;
   padding: 8px;
+  text-align: center;
 }
 /* .table-wrapper {
   width: 100%;
