@@ -1,6 +1,8 @@
 document.addEventListener("DOMContentLoaded", function () {
 
     // Get the elements
+    const svgElement = document.getElementById("mathTeaser");
+
     const xAxis = document.getElementById("xAxis");
     const yAxis = document.getElementById("yAxis");
     const functionPath = document.getElementById("functionPath");
@@ -214,6 +216,45 @@ document.addEventListener("DOMContentLoaded", function () {
         fill: "forwards",
         delay: 20000,
     });
+
+    // Function to restart the animation
+    function restartAnimation() {
+        // Set all opacities to 0
+        const elementsToReset = [
+            document.getElementById("xAxis"),
+            document.getElementById("yAxis"),
+            document.getElementById("functionPath"),
+            document.getElementById("zeros"),
+            document.getElementById("minmax"),
+            document.getElementById("tangentPoint"),
+            document.getElementById("integralGroup"),
+            document.getElementById("area"),
+            document.getElementById("clipRect")
+        ];
+
+        // Set the opacity of all elements to 0
+        elementsToReset.forEach(element => {
+            element.style.opacity = 0;
+        });
+
+        // Step 1: Animate the appearance of the x-axis
+    xAxis.animate([{ opacity: 0 }, { opacity: 1 }], {
+        duration: 1000,
+        fill: "forwards",
+    });
+
+    // Step 1: Animate the appearance of the y-axis
+    yAxis.animate([{ opacity: 0 }, { opacity: 1 }], {
+        duration: 100,
+        fill: "forwards",
+        delay: 1000,
+    });
+
+        
+    }
+
+    // Add click event listener to the SVG element
+    svgElement.addEventListener("click", restartAnimation);
 
 
 
