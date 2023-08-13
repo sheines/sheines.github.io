@@ -146,8 +146,6 @@ details {
   border-radius: 4px;
   margin-bottom: 0.75em;
   transition: all 0.4s ease-in-out;
-  overflow-x: auto; 
-  white-space: nowrap; 
 }
 details summary {
   outline: none;
