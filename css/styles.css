@@ -79,20 +79,16 @@ table {
   border-collapse: collapse;
   border-style: hidden;
 }
-.scrollable-table-wrapper {
-  overflow-x: auto;
-  white-space: nowrap;
-}
 .table-wrapper {
-  width: 100%;
+  overflow-x: hidden; /* Enable horizontal scrollbar */
+  max-width: 100%; /* Prevent table from extending beyond container */
+  /* width: 100%;
   overflow-x: auto;
   padding: 0 30px;
-  box-sizing: border-box;
-  white-space: nowrap; /* Neues Attribut */
+  box-sizing: border-box; */
 }
 .responsive-table {
   display: inline-block;
-  /* Entferne 'min-width: 100%;' */
   box-sizing: border-box;
 }
 .wechseltabelle {
@@ -101,7 +97,6 @@ table {
 .wechseltabelle td, .wechseltabelle th {
   border: 1px solid #121212;
   padding: 8px;
-  white-space: normal; /* Füge dieses Attribut hinzu */
 }
 /* .table-wrapper {
   width: 100%;
