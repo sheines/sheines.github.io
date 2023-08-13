@@ -143,12 +143,59 @@
     aspect-ratio: 1;
     background: var(--bg-global);
     filter: brightness(1.5);
-    border: 0.3rem solid var(--accent-color);
+    border: 0.25rem solid var(--accent-color);
+    color: var(--accent-color);
     border-radius: 50%;
     top: 50%;
+
   
     transform: translate(50%, -50%);
     right: calc(100% + var(--col-gap) + var(--line-w) / 2);
+  }
+  .timeline .next .date::after {
+    content: "~";
+  }
+  .timeline .final .date::after {
+    content: "!";
+  }
+  .timeline .future .date::after {
+    content: "↗";
+  }
+  .timeline .mathe .date::after {
+    content: "Ma";
+  }
+  .timeline .mathe11 .date::after {
+    content: "11";
+  }
+  .timeline .mathe12 .date::after {
+    content: "12";
+  }
+  .timeline .mathe13 .date::after {
+    content: "13";
+  }
+  .timeline .physik .date::after {
+    content: "Phy";
+  }
+  .timeline .physik11 .date::after {
+    content: "11";
+  }
+  .timeline .physik12 .date::after {
+    content: "12";
+  }
+  .timeline .physik13 .date::after {
+    content: "13";
+  }
+  .timeline .info .date::after {
+    content: "Inf";
+  }
+  .timeline .info11 .date::after {
+    content: "11";
+  }
+  .timeline .info12 .date::after {
+    content: "12";
+  }
+  .timeline .info13 .date::after {
+    content: "13";
   }
   
   /* title descr */
