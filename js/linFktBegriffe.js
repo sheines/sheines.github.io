@@ -14,6 +14,14 @@ const redTextStart = parseInt(rgbTextComponents[0], 10);
 const greenTextStart = parseInt(rgbTextComponents[1], 10);
 const blueTextStart = parseInt(rgbTextComponents[2], 10);
 
+// Get rgb-value of current graph and equation color
+const computedStyle = window.getComputedStyle(graphLine);
+const fillColor = computedStyle.getPropertyValue('stroke');
+const rgbComponents = fillColor.match(/\d+/g);
+const redStart = rgbComponents[0];
+const greenStart = rgbComponents[1];
+const blueStart = rgbComponents[2];
+
 // Wartevariable
 let waiting = true;
 
@@ -44,24 +52,25 @@ requestAnimationFrame(animateLine);
 // Show y-axis Point an change color in equation
 //
 
-// Get rgb-value of current color
-const computedStyle = window.getComputedStyle(absglied);
-const fillColor = computedStyle.getPropertyValue('fill');
-const rgbComponents = fillColor.match(/\d+/g);
-const redStart = rgbComponents[0];
-const greenStart = rgbComponents[1];
-const blueStart = rgbComponents[2];
-
-
 // Expected Color
-let redAbsEnd = 255;
-let greenAbsEnd = 0;
-let blueAbsEnd = 0;
+const redAbsEnd = 255;
+const greenAbsEnd = 0;
+const blueAbsEnd = 0;
 
 // Set animation duration in milliseconds
 const animateAbsGliedDuration = 2000;
 
+//
+//  Show zero point, change equation color and show calculation
+//
 
+// Expected Color
+const redZeroEnd = 0;
+const greenZeroEnd = 0;
+const blueZeroEnd = 255;
+
+// Set animation duration in milliseconds
+const animateZeroGliedDuration = 4000;
 
 
 
@@ -191,6 +200,6 @@ function animateZero(timestamp) {
     const elapsedTime = timestamp - startTime;
 
     // Calculate the new rgb values based on the progress of the animation
-    const progress = Math.min(elapsedTime / animateAbsGliedDuration, 1);
+    const progress = Math.min(elapsedTime / animateZeroDuration, 1);
 }
 
