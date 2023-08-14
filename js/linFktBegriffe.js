@@ -164,7 +164,6 @@ function animateAbsGlied(timestamp) {
     absglied.setAttribute("fill", newFillColor);
     absglied.setAttribute("stroke", newFillColor);
     absgliedText.style.color = newTextColor;
-    // absgliedText.setAttribute("color", newFillColor);
 
     ycircle.setAttribute("opacity", progress);
 
@@ -203,3 +202,31 @@ function animateZero(timestamp) {
     const progress = Math.min(elapsedTime / animateZeroDuration, 1);
 }
 
+
+
+// Attach click event listener to the SVG element
+const svgElement = document.getElementById('linfkt_svg');
+
+svgElement.addEventListener('click', () => {
+    // reset all parameters
+    graphLine.setAttribute("x2","-6");
+    graphLine.setAttribute("y2","5");
+
+    equation.setAttribute("opacity", "0");
+    textColor = 'rgb(' + redTextStart + ', ' + greenTextStart + ',' + blueTextStart + ')';
+    graphText.style.color(textColor);
+    absgliedText.style.color(textColor);
+
+    opacityEquation = 0;
+
+//     const graphText = document.getElementById("graphText");
+// const ycircle = document.getElementById("ycircle");
+// const absglied = document.getElementById("absglied");
+// const absgliedText = document.getElementById("absGliedText");
+
+
+  // Restart the animation when the SVG is clicked
+  startTime = null;
+  waiting = true;
+  requestAnimationFrame(animateLine);
+});
