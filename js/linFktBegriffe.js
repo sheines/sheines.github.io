@@ -98,7 +98,7 @@ function animateLine(timestamp) {
 
     // Calculate opacity of equation
     if (opacityEquation < 1) {
-        opacityEquation = 2 * elapsedTime / animateLineDuration;
+        opacityEquation = 2 * progress;
     }
     if (opacityEquation > 1) {
         opacityEquation = 1;
