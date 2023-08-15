@@ -5,6 +5,15 @@ const equation = document.getElementById("equation");
 const ycircle = document.getElementById("ycircle");
 const absglied = document.getElementById("absglied");
 const absgliedText = document.getElementById("absGliedText");
+const yaxisnumber = document.getElementById("yaxisnumber");
+const xcircle = document.getElementById("xcircle");
+const zeroformula = document.getElementById("zeroCalculation");
+const zerozaehler = document.getElementById("zeroZaehler")
+const zeronenner = document.getElementById("zeroNenner");
+const steigung = document.getElementById("steigung");
+const zeroText = document.getElementById("zeroText");
+const zeroTextForumla = document.getElementById("zeroTextFormula");
+const xaxisnumber = document.getElementById("xaxisnumber");
 
 
 // Get rgb-value of current textcolor
@@ -65,13 +74,24 @@ const animateAbsGliedDuration = 2000;
 //
 
 // Expected Color
+const redFracEnd = 0;
+const greenFracEnd = 255;
+const blueFracEnd = 0;
+
 const redZeroEnd = 0;
 const greenZeroEnd = 0;
 const blueZeroEnd = 255;
 
 // Set animation duration in milliseconds
-const animateZeroGliedDuration = 4000;
+const animateZeroDuration = 4000;
+let opacityFormula = 0;
 
+//
+//  show and move gradient
+//
+
+// Set animation duration in milliseconds
+const animateGradientDuration = 4000;
 
 
 
@@ -128,7 +148,7 @@ function animateLine(timestamp) {
 function animateAbsGlied(timestamp) {
     // Initialize the start time if it's null
     if (!startTime) startTime = timestamp;
-     
+
     // Etwas warten
     if (waiting && timestamp - startTime < 1000) {
         requestAnimationFrame(animateAbsGlied);
@@ -164,6 +184,10 @@ function animateAbsGlied(timestamp) {
     absglied.setAttribute("fill", newFillColor);
     absglied.setAttribute("stroke", newFillColor);
     absgliedText.style.color = newTextColor;
+    yaxisnumber.style.fill = newTextColor;
+
+    // absgliedMove.setAttribute("transform", "translate(20, 20)");
+
 
     ycircle.setAttribute("opacity", progress);
 
@@ -200,6 +224,103 @@ function animateZero(timestamp) {
 
     // Calculate the new rgb values based on the progress of the animation
     const progress = Math.min(elapsedTime / animateZeroDuration, 1);
+
+    xcircle.setAttribute("opacity", progress);
+
+    // Calculate opacity of equation
+    if (opacityFormula < 1) {
+        opacityFormula = 2 * progress;
+    }
+    if (opacityFormula > 1) {
+        opacityFormula = 1;
+    }
+
+    zeroformula.setAttribute("opacity", opacityFormula);
+
+    if (progress > 0) {
+        // Calculate textcolor
+        const newTextR = Math.round(redTextStart * 1.0 + (redZeroEnd - redTextStart) * progress);
+        const newTextG = Math.round(greenTextStart * 1.0 + (greenZeroEnd - greenTextStart) * progress);
+        const newTextB = Math.round(blueTextStart * 1.0 + (blueZeroEnd - blueTextStart) * progress);
+
+        const newTextColor = 'rgb(' + newTextR + ', ' + newTextG + ', ' + newTextB + ')';
+
+        zeroText.style.color = newTextColor;
+        zeroTextForumla.style.color = newTextColor;
+
+        xaxisnumber.style.fill = newTextColor;
+
+    }
+
+    if (progress > 0.5) {
+        let colorprogress = progress * 2 - 1;
+        if (colorprogress > 1) colorprogress = 1;
+        // Calculate textcolor
+        const newTextR = Math.round(redTextStart * 1.0 + (redAbsEnd - redTextStart) * colorprogress);
+        const newTextG = Math.round(greenTextStart * 1.0 + (greenAbsEnd - greenTextStart) * colorprogress);
+        const newTextB = Math.round(blueTextStart * 1.0 + (blueAbsEnd - blueTextStart) * colorprogress);
+
+        const newTextColor = 'rgb(' + newTextR + ', ' + newTextG + ', ' + newTextB + ')';
+
+        zerozaehler.setAttribute("fill", newTextColor);
+        zerozaehler.setAttribute("stroke", newTextColor);
+        zerozaehler.setAttribute("color", newTextColor);
+    }
+    if (progress > 0.75) {
+        let colorprogress = progress * 4 - 3;
+        if (colorprogress > 1) colorprogress = 1;
+        // Calculate textcolor
+        const newTextR = Math.round(redTextStart * 1.0 + (redFracEnd - redTextStart) * colorprogress);
+        const newTextG = Math.round(greenTextStart * 1.0 + (greenFracEnd - greenTextStart) * colorprogress);
+        const newTextB = Math.round(blueTextStart * 1.0 + (blueFracEnd - blueTextStart) * colorprogress);
+
+        const newRed = Math.round(redStart * 1.0 + (redFracEnd - redStart) * colorprogress);
+        const newGreen = Math.round(greenStart * 1.0 + (greenFracEnd - greenStart) * colorprogress);
+        const newBlue = Math.round(blueStart * 1.0 + (blueFracEnd - blueStart) * colorprogress);
+
+        const newTextColor = 'rgb(' + newTextR + ', ' + newTextG + ', ' + newTextB + ')';
+        const newFormColor = 'rgb(' + newTextR + ', ' + newTextG + ', ' + newTextB + ')';
+
+        zeronenner.setAttribute("fill", newTextColor);
+        zeronenner.setAttribute("stroke", newTextColor);
+
+        steigung.setAttribute("fill", newFormColor);
+        steigung.setAttribute("stroke", newFormColor);
+    }
+
+
+    // Continue the animation if not finished
+    if (progress < 1) {
+        requestAnimationFrame(animateZero);
+    }
+    else {
+        startTime = null;
+        waiting = true;
+        requestAnimationFrame(animateGradient);
+    }
+}
+
+function animateGradient(timestamp) {
+    // Initialize the start time if it's null
+    if (!startTime) startTime = timestamp;
+
+    // Etwas warten
+    if (waiting && timestamp - startTime < 1000) {
+        requestAnimationFrame(animateGradient);
+        return;
+    }
+    else {
+        if (waiting) {
+            startTime = timestamp;
+            waiting = false;
+        }
+    }
+
+    // Calculate the elapsed time since the animation started
+    const elapsedTime = timestamp - startTime;
+
+    // Calculate the new rgb values based on the progress of the animation
+    const progress = Math.min(elapsedTime / animateGradientDuration, 1);
 }
 
 
@@ -208,25 +329,45 @@ function animateZero(timestamp) {
 const svgElement = document.getElementById('linfkt_svg');
 
 svgElement.addEventListener('click', () => {
+
     // reset all parameters
-    graphLine.setAttribute("x2","-6");
-    graphLine.setAttribute("y2","5");
+    graphLine.setAttribute("x2", "-6");
+    graphLine.setAttribute("y2", "5");
 
     equation.setAttribute("opacity", "0");
-    textColor = 'rgb(' + redTextStart + ', ' + greenTextStart + ',' + blueTextStart + ')';
-    graphText.style.color(textColor);
-    absgliedText.style.color(textColor);
+    const oldTextColor = 'rgb(' + redTextStart + ', ' + greenTextStart + ',' + blueTextStart + ')';
+    const oldGraphColor = 'rgb(' + redStart + ', ' + greenStart + ',' + blueStart + ')';
+    graphText.style.color = oldTextColor;
+    absglied.setAttribute("fill", oldGraphColor);
+    absglied.setAttribute("stroke", oldGraphColor);
+    absgliedText.style.color = oldTextColor;
+    yaxisnumber.style.fill = oldTextColor;
+
+    zeroformula.setAttribute("opacity", "0");
+    zerozaehler.setAttribute("fill", oldTextColor);
+    zerozaehler.setAttribute("stroke", oldTextColor);
+    zerozaehler.setAttribute("color", oldTextColor);
+    zeronenner.setAttribute("fill", oldTextColor);
+    zeronenner.setAttribute("stroke", oldTextColor);
+
+    steigung.setAttribute("fill", oldGraphColor);
+    steigung.setAttribute("stroke", oldGraphColor);
+
+    zeroText.style.color = oldTextColor;
+    zeroTextForumla.style.color = oldTextColor;
+
+    xaxisnumber.style.fill = oldTextColor;
+
+
+
+    ycircle.setAttribute("opacity", "0");
+    xcircle.setAttribute("opacity", "0");
 
     opacityEquation = 0;
-
-//     const graphText = document.getElementById("graphText");
-// const ycircle = document.getElementById("ycircle");
-// const absglied = document.getElementById("absglied");
-// const absgliedText = document.getElementById("absGliedText");
+    opacityFormula = 0;
 
 
-  // Restart the animation when the SVG is clicked
-  startTime = null;
-  waiting = true;
-  requestAnimationFrame(animateLine);
+    // Restart the animation when the SVG is clicked
+    startTime = null;
+    requestAnimationFrame(animateLine);
 });
