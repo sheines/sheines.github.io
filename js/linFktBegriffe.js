@@ -538,7 +538,7 @@ function animateGradientMove3(timestamp) {
     const elapsedTime = timestamp - startTime;
 
     // Calculate the new rgb values based on the progress of the animation
-    const progress = Math.min(elapsedTime / (animateGradientMoveDuration * 2), 1);
+    const progress = Math.min(elapsedTime / animateGradientMoveDuration, 1);
 
     const xx1 = -5.0 + 2.5*progress*2;
     const xy1 = 4.5 - 2.5*progress;
