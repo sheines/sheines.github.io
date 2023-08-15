@@ -14,6 +14,14 @@ const steigung = document.getElementById("steigung");
 const zeroText = document.getElementById("zeroText");
 const zeroTextForumla = document.getElementById("zeroTextFormula");
 const xaxisnumber = document.getElementById("xaxisnumber");
+const gradientX = document.getElementById("gradientX");
+const gradientXText = document.getElementById("gradientXText");
+const steigungX = document.getElementById("steigungNenner");
+const steigText1 = document.getElementById("steigText1");
+const gradientY = document.getElementById("gradientY");
+const gradientYText = document.getElementById("gradientYText");
+const steigungY = document.getElementById("steigungZaehler");
+const steigText2 = document.getElementById("steigText2");
 
 
 // Get rgb-value of current textcolor
@@ -90,8 +98,18 @@ let opacityFormula = 0;
 //  show and move gradient
 //
 
+// Expected Colors
+const redXEnd = 10;
+const greenXEnd = 200;
+const blueXEnd = 100;
+
+const redYEnd = 100;
+const greenYEnd = 200;
+const blueYEnd = 10;
+
 // Set animation duration in milliseconds
-const animateGradientDuration = 4000;
+const animateGradientDuration = 2000; // mal 2!
+const animateGradientMoveDuration = 2000; // mal 4!
 
 
 
@@ -279,7 +297,7 @@ function animateZero(timestamp) {
         const newBlue = Math.round(blueStart * 1.0 + (blueFracEnd - blueStart) * colorprogress);
 
         const newTextColor = 'rgb(' + newTextR + ', ' + newTextG + ', ' + newTextB + ')';
-        const newFormColor = 'rgb(' + newTextR + ', ' + newTextG + ', ' + newTextB + ')';
+        const newFormColor = 'rgb(' + newRed + ', ' + newGreen + ', ' + newBlue + ')';
 
         zeronenner.setAttribute("fill", newTextColor);
         zeronenner.setAttribute("stroke", newTextColor);
@@ -296,17 +314,17 @@ function animateZero(timestamp) {
     else {
         startTime = null;
         waiting = true;
-        requestAnimationFrame(animateGradient);
+        requestAnimationFrame(animateGradientX);
     }
 }
 
-function animateGradient(timestamp) {
+function animateGradientX(timestamp) {
     // Initialize the start time if it's null
     if (!startTime) startTime = timestamp;
 
     // Etwas warten
     if (waiting && timestamp - startTime < 1000) {
-        requestAnimationFrame(animateGradient);
+        requestAnimationFrame(animateGradientX);
         return;
     }
     else {
@@ -321,6 +339,249 @@ function animateGradient(timestamp) {
 
     // Calculate the new rgb values based on the progress of the animation
     const progress = Math.min(elapsedTime / animateGradientDuration, 1);
+
+    // Calculate line Color
+    const newLineR = Math.round(redTextStart * 1.0 + (redXEnd - redTextStart) * progress);
+    const newLineG = Math.round(greenTextStart * 1.0 + (greenXEnd - greenTextStart) * progress);
+    const newLineB = Math.round(blueTextStart * 1.0 + (blueXEnd - blueTextStart) * progress);
+
+    // Calculate Color of nenner
+    const newFracR = Math.round(redFracEnd * 1.0 + (redXEnd - redFracEnd) * progress);
+    const newFracG = Math.round(greenFracEnd * 1.0 + (greenXEnd - greenFracEnd) * progress);
+    const newFracB = Math.round(blueFracEnd * 1.0 + (blueXEnd - blueFracEnd) * progress);
+
+    
+    const newLineColor = 'rgb(' + newLineR + ', ' + newLineG + ', ' + newLineB + ')';
+    const newFracColor = 'rgb(' + newFracR + ', ' + newFracG + ', ' + newFracB + ')';
+
+    gradientX.setAttribute("stroke", newLineColor);
+    gradientXText.setAttribute("opacity", progress);
+    gradientXText.setAttribute("fill", newLineColor);
+    steigungX.setAttribute("stroke", newFracColor);
+    steigungX.setAttribute("fill", newFracColor);
+    steigText1.style.color = newLineColor;
+
+    // Draw x-line
+    const x2 = progress * 4.0;
+
+    gradientX.setAttribute("x2", x2);
+
+    // Continue the animation if not finished
+    if (progress < 1) {
+        requestAnimationFrame(animateGradientX);
+    }
+    else {
+        startTime = null;
+        waiting = true;
+        requestAnimationFrame(animateGradientY);
+    }
+}
+function animateGradientY(timestamp) {
+    // Initialize the start time if it's null
+    if (!startTime) startTime = timestamp;
+
+    // Calculate the elapsed time since the animation started
+    const elapsedTime = timestamp - startTime;
+
+    // Calculate the new rgb values based on the progress of the animation
+    const progress = Math.min(elapsedTime / animateGradientDuration, 1);
+
+    // Calculate line Color
+    const newLineR = Math.round(redTextStart * 1.0 + (redYEnd - redTextStart) * progress);
+    const newLineG = Math.round(greenTextStart * 1.0 + (greenYEnd - greenTextStart) * progress);
+    const newLineB = Math.round(blueTextStart * 1.0 + (blueYEnd - blueTextStart) * progress);
+
+    // Calculate Color of nenner
+    const newFracR = Math.round(redFracEnd * 1.0 + (redYEnd - redFracEnd) * progress);
+    const newFracG = Math.round(greenFracEnd * 1.0 + (greenYEnd - greenFracEnd) * progress);
+    const newFracB = Math.round(blueFracEnd * 1.0 + (blueYEnd - blueFracEnd) * progress);
+
+    
+    const newLineColor = 'rgb(' + newLineR + ', ' + newLineG + ', ' + newLineB + ')';
+    const newFracColor = 'rgb(' + newFracR + ', ' + newFracG + ', ' + newFracB + ')';
+
+    gradientY.setAttribute("stroke", newLineColor);
+    gradientYText.setAttribute("opacity", progress);
+    gradientYText.setAttribute("fill", newLineColor);
+    steigungY.setAttribute("stroke", newFracColor);
+    steigungY.setAttribute("fill", newFracColor);
+    steigText2.style.color = newLineColor;
+
+    // Draw y-line
+    const y2 = 2 - progress * 2.0;
+
+    gradientY.setAttribute("y2", y2);
+
+    // Continue the animation if not finished
+    if (progress < 1) {
+        requestAnimationFrame(animateGradientY);
+    }
+    else {
+        startTime = null;
+        waiting = true;
+        requestAnimationFrame(animateGradientMove1);
+    }
+}
+
+function animateGradientMove1(timestamp) {
+    // Initialize the start time if it's null
+    if (!startTime) startTime = timestamp;
+
+    // Calculate the elapsed time since the animation started
+    const elapsedTime = timestamp - startTime;
+
+    // Calculate the new rgb values based on the progress of the animation
+    const progress = Math.min(elapsedTime / animateGradientMoveDuration, 1);
+
+    const xx1 = 0.0 + 2.5*progress*2;
+    const xy1 = 2.0 - 2.5*progress;
+    const xx2 = 4.0 + 2.5*progress*2;
+    const xy2 = 2.0 - 2.5*progress;
+
+    const xtx = 1.9 + 2.5*progress*2;
+    const xty = 2.75 - 2.5*progress;
+
+    gradientX.setAttribute("x1", xx1);
+    gradientX.setAttribute("y1", xy1);
+    gradientX.setAttribute("x2", xx2);
+    gradientX.setAttribute("y2", xy2);
+
+    gradientXText.setAttribute("x", xtx);
+    gradientXText.setAttribute("y", xty);
+
+    const yx1 = 4.0 + 2.5*progress*2;
+    const yy1 = 2.0 - 2.5*progress;
+    const yx2 = 4.0 + 2.5*progress*2;
+    const yy2 = 0.0 - 2.5*progress;
+
+    const ytx = 4.25 + 2.5*progress*2;
+    const yty = 1.25 - 2.5*progress;
+
+    gradientY.setAttribute("x1", yx1);
+    gradientY.setAttribute("y1", yy1);
+    gradientY.setAttribute("x2", yx2);
+    gradientY.setAttribute("y2", yy2);
+
+    gradientYText.setAttribute("x", ytx);
+    gradientYText.setAttribute("y", yty);
+
+
+    // Continue the animation if not finished
+    if (progress < 1) {
+        requestAnimationFrame(animateGradientMove1);
+    }
+    else {
+        startTime = null;
+        waiting = true;
+        requestAnimationFrame(animateGradientMove2);
+    }
+}
+
+function animateGradientMove2(timestamp) {
+    // Initialize the start time if it's null
+    if (!startTime) startTime = timestamp;
+
+    // Calculate the elapsed time since the animation started
+    const elapsedTime = timestamp - startTime;
+
+    // Calculate the new rgb values based on the progress of the animation
+    const progress = Math.min(elapsedTime / (animateGradientMoveDuration * 2), 1);
+
+    const xx1 = 5.0 - 5*progress*2;
+    const xy1 = -0.5 + 5*progress;
+    const xx2 = 9.0 - 5*progress*2;
+    const xy2 = -0.5 + 5*progress;
+
+    const xtx = 6.9 - 5*progress*2;
+    const xty = 0.25 + 5*progress;
+
+    gradientX.setAttribute("x1", xx1);
+    gradientX.setAttribute("y1", xy1);
+    gradientX.setAttribute("x2", xx2);
+    gradientX.setAttribute("y2", xy2);
+
+    gradientXText.setAttribute("x", xtx);
+    gradientXText.setAttribute("y", xty);
+
+    const yx1 = 9.0 - 5*progress*2;
+    const yy1 = -0.5 + 5*progress;
+    const yx2 = 9.0 - 5*progress*2;
+    const yy2 = -2.5 + 5*progress;
+
+    const ytx = 9.25 - 5*progress*2;
+    const yty = -1.25 + 5*progress;
+
+    gradientY.setAttribute("x1", yx1);
+    gradientY.setAttribute("y1", yy1);
+    gradientY.setAttribute("x2", yx2);
+    gradientY.setAttribute("y2", yy2);
+
+    gradientYText.setAttribute("x", ytx);
+    gradientYText.setAttribute("y", yty);
+
+
+    // Continue the animation if not finished
+    if (progress < 1) {
+        requestAnimationFrame(animateGradientMove2);
+    }
+    else {
+        startTime = null;
+        waiting = true;
+        requestAnimationFrame(animateGradientMove3);
+    }
+}
+function animateGradientMove3(timestamp) {
+    // Initialize the start time if it's null
+    if (!startTime) startTime = timestamp;
+
+    // Calculate the elapsed time since the animation started
+    const elapsedTime = timestamp - startTime;
+
+    // Calculate the new rgb values based on the progress of the animation
+    const progress = Math.min(elapsedTime / (animateGradientMoveDuration * 2), 1);
+
+    const xx1 = -5.0 + 2.5*progress*2;
+    const xy1 = 4.5 - 2.5*progress;
+    const xx2 = -1.0 + 2.5*progress*2;
+    const xy2 = 4.5 - 2.5*progress;
+
+    const xtx = -3.1 + 2.5*progress*2;
+    const xty = 5.25 - 2.5*progress;
+
+    gradientX.setAttribute("x1", xx1);
+    gradientX.setAttribute("y1", xy1);
+    gradientX.setAttribute("x2", xx2);
+    gradientX.setAttribute("y2", xy2);
+
+    gradientXText.setAttribute("x", xtx);
+    gradientXText.setAttribute("y", xty);
+
+    const yx1 = -1.0 + 2.5*progress*2;
+    const yy1 = 4.5 - 2.5*progress;
+    const yx2 = -1.0 + 2.5*progress*2;
+    const yy2 = 2.5 - 2.5*progress;
+
+    const ytx = -0.75 + 2.5*progress*2;
+    const yty = 3.75 - 2.5*progress;
+
+    gradientY.setAttribute("x1", yx1);
+    gradientY.setAttribute("y1", yy1);
+    gradientY.setAttribute("x2", yx2);
+    gradientY.setAttribute("y2", yy2);
+
+    gradientYText.setAttribute("x", ytx);
+    gradientYText.setAttribute("y", yty);
+
+
+    // Continue the animation if not finished
+    if (progress < 1) {
+        requestAnimationFrame(animateGradientMove3);
+    }
+    else {
+        startTime = null;
+        waiting = true;
+        // requestAnimationFrame(animateGradientMove3);
+    }
 }
 
 
@@ -357,6 +618,41 @@ svgElement.addEventListener('click', () => {
     zeroTextForumla.style.color = oldTextColor;
 
     xaxisnumber.style.fill = oldTextColor;
+
+    gradientX.setAttribute("stroke", oldTextColor);
+    gradientXText.setAttribute("opacity", 0);
+    gradientXText.setAttribute("fill", oldTextColor);
+    steigungX.setAttribute("stroke", oldGraphColor);
+    steigungX.setAttribute("fill", oldGraphColor);
+    steigText1.style.color = oldTextColor;
+
+    gradientX.setAttribute("x2", 0);
+
+    gradientY.setAttribute("stroke", oldTextColor);
+    gradientYText.setAttribute("opacity", 0);
+    gradientYText.setAttribute("fill", oldTextColor);
+    steigungY.setAttribute("stroke", oldGraphColor);
+    steigungY.setAttribute("fill", oldGraphColor);
+    steigText2.style.color = oldTextColor;
+
+
+    gradientY.setAttribute("y2", 2);
+
+    gradientX.setAttribute("x1", 0);
+    gradientX.setAttribute("y1", 2);
+    gradientX.setAttribute("x2", 0);
+    gradientX.setAttribute("y2", 2);
+
+    gradientXText.setAttribute("x", 1.9);
+    gradientXText.setAttribute("y", 2.75);
+
+    gradientY.setAttribute("x1", 4);
+    gradientY.setAttribute("y1", 2);
+    gradientY.setAttribute("x2", 4);
+    gradientY.setAttribute("y2", 2);
+
+    gradientYText.setAttribute("x", 4.25);
+    gradientYText.setAttribute("y", 1.25);
 
 
 
