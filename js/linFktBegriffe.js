@@ -304,6 +304,10 @@ function animateZero(timestamp) {
 
         steigung.setAttribute("fill", newFormColor);
         steigung.setAttribute("stroke", newFormColor);
+        steigungX.setAttribute("stroke", newFormColor);
+        steigungX.setAttribute("fill", newFormColor);
+        steigungY.setAttribute("stroke", newFormColor);
+        steigungY.setAttribute("fill", newFormColor);
     }
 
 
