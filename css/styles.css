@@ -214,6 +214,13 @@ ol.custom-marker.parens-around.lower-alpha > li::marker {
 .funktionsbundle {
   text-align: center;
 }
+.firstLetter::first-letter {
+  font-size: 150%;
+  font-weight: 400;
+  font-family: 'Times New Roman', Times, serif;
+  color: var(--fg-header);
+  
+}
 
 
 @media screen and (max-width: 700px) {
