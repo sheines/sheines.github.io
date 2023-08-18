@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" initial-scale=1.0 />
+    <meta name="author" content="Sebastian Hitziger" />
+    <meta name="robot" content="noindex" />
+    <title> HITZ | Lin. Funktionen | Funktionsgleichung</title>
+    <link rel="stylesheet" type="text/css" href="/css/colors.css" />
+    <link rel="stylesheet" type="text/css" href="/css/gridNoTimeline.css" />
+    <link rel="stylesheet" type="text/css" href="/css/navbar.css" />
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="/css/courses.css" />
+    <!-- <script type="text/javascript" src="jquery-3.3.1.js"></script> -->
+    <!-- <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script> -->
+    <!-- <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script> -->
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+</head>
+
+<body>
+    <header>
+        <div class="nav">
+            <input type="checkbox" id="nav-check">
+            <div class="nav-header">
+                <div class="nav-title">
+                    <a href="/">Hr. Hitzigers Unterricht</a>
+                </div>
+            </div>
+            <div class="nav-btn">
+                <label for="nav-check">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+
+            <div class="nav-links">
+                <a href="/content/math/">Mathematik</a>
+                <a href="/content/math/11/">Klasse 11</a>
+                <a href="/content/math/11/linfkt/">Lineare Funktionen</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section>
+            <h2>Funktionsgleichung bestimmen</h2>
+            <div class="ziele">
+                <p>
+                    Nachfolgend wird beschrieben, wie die Funktionsgleichung einer linearen Funktion aus zwei Punkten bestimmt wird.
+                </p>
+                <p>
+                    <a href="#aufgaben">Direkt zu den Aufgaben</a>
+                </p>
+            </div>
+            <div class="theorie">
+                <h3>Funktionsgleichung aus zwei Punkten</h3>
+                <h4>Mit Nachdenken</h4>
+                <p>
+                    Oft lässt sich die Gleichungen durch bloßes Nachdenken bestimmen:
+                    <h6>Beispiel:</h6>
+                    Das Taxi kostet 2 € Grundgebühr und 40 Cent pro Kilometer: \(y=0,4x+2\)<br>
+                    Die Grundgebühr ist der feste Wert, der \(y\)-Achsenabschnitt.<br> 
+                    Die 40 Cent sind die Steigung 
+                    (xyz <span style="font-style: italic; font-family: 'Times New Roman', Times, serif;">pro</span> Kilometer).
+                    Und 40 Cent sind 0,4 Euro.
+                </p>
+                <h4>Rechenweg/Vorgehen</h4>
+                <ol start="0">
+                    <li>Gegebenenfalls Wertetabelle aufstellen</li>
+                    <li>Anstieg/Steigung mithilfe zweier Punkte berechnen,</li>
+                    <li>Steigung und einen der Punkte in allgemeine Gleichung einsetzen und \(y\)-Achsenabschnitt berechnen,</li>
+                    <li>Probe mit anderem Punkt machen,</li>
+                    <li>Gleichung angeben.</li>
+                </ol>
+                <div class="definition">
+                    <h4>Steigung \(m\) berechnen</h4>
+                    <p>
+                        Liegen die Punkte \(P_1(x_1\,|\, y_1)\) und \(P_2(x_2\,|\, y_2)\) auf einer Geraden, so kann deren Anstieg mithilfe
+                        des <span style="color: \var(--fg-header); font-weight: 600;">Differenzenquotienten</span>
+                        $$
+                            m=\frac{\Delta y}{\Delta x}=\frac{y_2-y_1}{x_2-x_1}=\frac{f(x_2)-f(x_1)}{x_2-x_1}
+                        $$
+                        berechnet werden.
+                    </p>
+                </div>
+                <!-- Grafik mit Steigungsdreieck und dx und dy -->
+                <h6>Beispiel:</h6>
+                <p>
+                    Gegeben sind die Punkte \(P_1(7\,|\, -3)\) und \(P_2(2\,|\, 7)\):
+                    $$
+                        m=\frac{y_2-y_1}{x_2-x_1}=\frac{7-(-3)}{2-7}=\frac{10}{-5}=-2
+                    $$
+                    Die Steigung der Funktion beträgt \(-2\).
+                </p>
+                <div class="definition">
+                    <h4>\(y\)-Achsenabschnitt \(n\) berechnen</h4>
+                    <ol>
+                        <li>Berechnete Steigung \(m\) in allgemeine Gleichung (\(y=mx+n\)) einsetzen,</li>
+                        <li>Einen der beiden Punkte (\(x\) und \(y\)) in diese Gleichung einsetzen,</li>
+                        <li>\(n\) durch umstellen berechnen.</li>
+                    </ol>
+                </div>
+                <h6>Beispiel:</h6>
+                <p>
+                    Für die Rechnung wird \(P_1(7\,|\, -3)\) und \(m=-2\) verwendet. Mit \(P_2\) funktioniert es natürlich auch.
+                    $$
+                        \begin{aligned}
+                            y&=mx+n\\ 
+                            y&=-2x+n\\
+                            -3&=-2\cdot 7 +n \\
+                            -3&=-14+n\qquad |+14\\
+                            11&=n
+                        \end{aligned}
+                    $$
+                    Der \(y\)-Achsenabschnitt beträgt \(11\). Damit ergibt dich die Gleichung \(y=-2x+11\).
+                </p>
+                <h6>Probe:</h6>
+                <p>
+                    Die vorherige Rechnung mit \(P_1\) erledigt wurde, wird für die Probe \(P_2(2\,|\, 7)\) verwendet:
+                    $$
+                        \begin{aligned}
+                            y&=-2x+11\\ 
+                            7&=-2\cdot 2+11\\
+                            7&=-4 +11 \\
+                            7&=7\quad \checkmark
+                        \end{aligned}
+                    $$
+                    Die Rechnung stimmt.
+                </p>
+                <h6>Gleichung:</h6>
+                <p>
+                    Die Gerade, welche durch die Punkte \(P_1(7\,|\, -3)\) und \(P_2(2\,|\, 7)\) verläuft,
+                    hat die Gleichung: \(y=-2x+11\).
+                </p>
+            </div>
+        </section>
+        <!-- <section>
+            <div class="videos">
+                <iframe width="360" height="202" src="https://www.youtube.com/embed/zOmsRoWWaXs"
+                    title="Lineare Funktionen - Nullstellen" frameborder="0" allow="web-share" allowfullscreen></iframe>
+            </div>
+            <p>
+                Achtung, hier ist die Steigung \(a\) und der \(y\)-Achsenabschnitt \(b\).
+            </p>
+        </section> -->
+        <section id="aufgaben" class="aufgaben">
+            <h3>Aufgaben zu Begriffen</h3>
+            <ol class="custom-marker point-after decimal">
+                <li>
+                    ...
+                </li>
+            </ol>
+        </section>
+        <section class="loesungen">
+            <h3>Lösungen zu Begriffen</h3>
+
+            <details id="a1">
+                <summary>...</summary>
+                
+            </details>
+        </section>
+        <!-- <section id="meme">
+            <div class="centered" style="max-height: 350px">
+                <img src="/img/fkt-meme.jpg" style="object-fit:scale-down;">
+            </div> 
+            <div class="centered"> 
+                <a href="https://www.flickr.com/photos/dylanng/6267107228/"><h6>Original von Dylan Ng</h6></a>
+            </div>
+        </section> -->
+    </main>
+    <footer>
+        <a href="/misc/impressum.html">Impressum</a>
+        <div class="lastModified" align="center">
+            Zuletzt geändert:<br>
+            18. August 2023
+            <!-- <span id="lastModifiedDate"></span> -->
+        </div>
+        <a href="/misc/datenschutz.html">Datenschutz</a>
+    </footer>
+</body>
