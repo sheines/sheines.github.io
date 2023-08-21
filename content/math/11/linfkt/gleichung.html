@@ -164,77 +164,138 @@
                             </pattern>
                         </defs>
                         <rect x="-9.9" y="-5.5" width="19.8" height="11" fill="url(#grid)" />
-                    
+
                         <!-- Draw the x-axis line -->
                         <line x1="-10" y1="0" x2="10" y2="0" stroke="#a7a7a7" stroke-width="0.05" />
-                    
+
                         <!-- Draw the x-axis arrowhead -->
                         <polygon points="10.5,0 9.8,-0.15 9.8,0.15" fill="#a7a7a7" />
-                    
+
                         <!-- Draw the y-axis line -->
                         <line x1="0" y1="5" x2="0" y2="-5" stroke="#a7a7a7" stroke-width="0.05" />
-                    
+
                         <!-- Draw the y-axis arrowhead -->
                         <polygon points="0,-5.5 -0.15,-4.8 0.15,-4.8" fill="#a7a7a7" />
-                    
+
                         <!-- Add "x" at the end of the x-axis -->
-                        <text x="10.7" y="0.7" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">x</text>
-                    
+                        <text x="10.7" y="0.7" font-family="serif" font-size="0.9" font-style="italic"
+                            fill="#a8a7a7">x</text>
+
                         <!-- Add "y" at the end of the y-axis -->
-                        <text x="-0.8" y="-5.3" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">y</text>
-                    
-                    
+                        <text x="-0.8" y="-5.3" font-family="serif" font-size="0.9" font-style="italic"
+                            fill="#a8a7a7">y</text>
+
+
                         <!-- Add numbers to x-axis-->
                         <text x="1.9" y="0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">2</text>
                         <text x="3.9" y="0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">4</text>
                         <text x="5.9" y="0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">6</text>
                         <text x="7.9" y="0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">8</text>
-                    
+
                         <text x="-2.25" y="0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">−2</text>
                         <text x="-4.25" y="0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">−4</text>
                         <text x="-6.25" y="0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">−6</text>
                         <text x="-8.25" y="0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">−8</text>
-                    
+
                         <!-- Add numbers to y-axis-->
                         <text x="-0.75" y="-1.75" font-family="serif" font-size="0.7" fill="#a8a7a7">2</text>
                         <text x="-0.75" y="-3.75" font-family="serif" font-size="0.7" fill="#a8a7a7">4</text>
-                    
+
                         <text x="-0.95" y="2.25" font-family="serif" font-size="0.7" fill="#a8a7a7">−2</text>
                         <text x="-0.95" y="4.255" font-family="serif" font-size="0.7" fill="#a8a7a7">−4</text>
-                    
+
                         <!-- Gradient Triangle -->
                         <line x1="0" y1="3" x2="5" y2="3" stroke-width="0.05" stroke="magenta" />
+
+                        <text x="0.9" y="3.5" font-family="serif" font-size="0.4" fill="magenta">1</text>
+                        <text x="1.9" y="3.5" font-family="serif" font-size="0.4" fill="magenta">2</text>
+                        <text x="2.9" y="3.5" font-family="serif" font-size="0.4" fill="magenta">3</text>
+                        <text x="3.9" y="3.5" font-family="serif" font-size="0.4" fill="magenta">4</text>
+                        <text x="4.9" y="3.5" font-family="serif" font-size="0.4" fill="magenta">5</text>
+
                         <line x1="5" y1="3" x2="5" y2="-1" stroke-width="0.05" stroke="green" />
+
+                        <text x="5.25" y="2.15" font-family="serif" font-size="0.4" fill="green">1</text>
+                        <text x="5.25" y="1.15" font-family="serif" font-size="0.4" fill="green">2</text>
+                        <text x="5.25" y="0.15" font-family="serif" font-size="0.4" fill="green">3</text>
+                        <text x="5.25" y="-0.85" font-family="serif" font-size="0.4" fill="green">4</text>
 
                         <!-- Add Function -->
                         <line x1="-2.5" y1="5" x2="10" y2="-5" stroke="darkgoldenrod" stroke-width="0.15" />
 
                         <!-- Add dots -->
-                        <circle cx="0" cy="3" r="0.2" fill="red"/>
-                        <circle cx="5" cy="-1" r="0.2" fill="blue"/>
+                        <circle cx="0" cy="3" r="0.2" fill="red" />
+                        <circle cx="5" cy="-1" r="0.2" fill="blue" />
+
+                        <!-- Add function name -->
+                        <text x="7.8" y="-4.3" font-family="serif" font-size="0.8" font-style="italic"
+                            fill="darkgoldenrod">f</text>
                     </svg>
                 </div>
                 <p>
-                    <ul>
-                        <li>Der Graph schneidet die \(y\)-Achse bei <span style="color: red">\(y=-3\)</span>.</li>
-                        <li>Nun muss ein weiterer <span style="color: blue; font-weight: 600;">Schnittpunkt</span> des Graphen mit 
-                            dem Gitternetz gefunden werden.</li>
-                        <li>Nun muss gezählt werden, wie viele Schritte (oder Kästchen oder etc.) nach 
-                            <span style="color: magenta; font-weight: 600;">rechts</span> und wie viele Schitte nach 
-                            <span style="color: green; font-weight: 600;">oben</span> gegangen wurde. </li> 
-                    </ul>
+                <ul>
+                    <li>Der Graph schneidet die \(y\)-Achse bei <span style="color: red">\(y=-3=n\)</span>.</li>
+                    <li>Nun muss ein weiterer <span style="color: blue; font-weight: 600;">Schnittpunkt</span> des
+                        Graphen mit
+                        dem Gitternetz gefunden werden.</li>
+                    <li>Nun muss gezählt werden, wie viele Schritte (oder Kästchen oder etc.) nach
+                        <span style="color: magenta; font-weight: 600;">rechts (Nenner)</span> und wie viele Schitte
+                        nach
+                        <span style="color: green; font-weight: 600;">oben (Zähler)</span> gegangen wurde.
+                    </li>
+                    <li>Nun kann die Steigung \(m\) leicht berechnet werden:
+                        \(m=\frac{\color{green}{\text{Schritte nach oben}}}{\color{magenta}{\text{Schritte nach rechts}}}\).<br>
+                        Im Beispiel also: \(\color{teal}{m}=\frac{\color{green}4}{\color{magenta}5}\). (Ggf. kürzen oder
+                        ausrechnen.)
+                    </li>
+                    <li>Die Gleichung der oben dargestellten Funktion lautet also: \(y=\color{teal}{\frac
+                        45}x\color{red}{-3}\).</li>
+                </ul>
                 </p>
+                <h4>Funktionsgraph ohne Wertetabelle zeichnen</h4>
+                <div class="definition">
+                    <h4>Vorgehen</h4>
+                    Das Vorgehen ist sehr ähnlich:
+                    <ol>
+                        <li>Der Schnittpunkt mit der \(y\)-Achse ist der Parameter \(n\).</li>
+                        <li>Ein weiterer Punkt kann mithilfe des Steigungsdreiecks und dem Anstieg gefunden werden.</li>
+                        <li>Anschließend werden beide Punkte verbunden, die Gerade verlängert und beschriftet.</li>
+                    </ol>
+                </div>
+                <h6>Beispiel:</h6>
+                <p>
+                    Das Vorgehen soll anhand der Funktion \(f(x)=\frac45 x -3\) beschrieben werden.
+                <ul>
+                    <li>Der Parameter \(n\) der Funktion \(f\) lautet \(\color{red}{-3}\). Deshalb wird bei \(y=-3\) ein 
+                        <span style="color: red; font-weight: 600;">roter Kreis</span> gezeichnet.
+                    </li>
+                    <li>
+                        Die Steigung beträgt \(m=\frac 45\): Man geht nun 
+                        <span style="color: magenta; font-weight: 600;">Nennerschritte nach rechts</span> (hier 5) und 
+                        <span style="color: green; font-weight: 600;">Zählerschritte nach oben</span> (hier 4).<br>
+                        Hier wird nun ein <span style="color: blue; font-weight: 600;">blauer Kreis</span> gezeichnet.
+                    </li>
+                    <li>
+                        Nun werden die beiden Punkt mit dem <span style="color: darkgoldenrod; font-weight: 600;">Lineal verbunden </span> 
+                        und verlängert. Beschriftung nicht vergessen (\(\color{darkgoldenrod}{f}\))!
+                    </li>
+                </ul>
+                </p>
+
             </div>
         </section>
-        <!-- <section>
+        <section>
             <div class="videos">
-                <iframe width="360" height="202" src="https://www.youtube.com/embed/zOmsRoWWaXs"
-                    title="Lineare Funktionen - Nullstellen" frameborder="0" allow="web-share" allowfullscreen></iframe>
+                <iframe width="360" height="202" src="https://www.youtube.com/embed/Bti-aegWv3k"
+                    title="Lineare Funktionen - Funktionsgleichung aus Text extrahieren" frameborder="0" allow="web-share" allowfullscreen></iframe>
+                <iframe width="360" height="202" src="https://www.youtube.com/embed/9Rygwg-Nb6Y"
+                    title="Lineare Funktionen - Funktionsgleichung aus zwei Punkten berechnen" frameborder="0" allow="web-share" allowfullscreen></iframe>
+                <iframe width="360" height="202" src="https://www.youtube.com/embed/9ykYz9gsyOg"
+                    title="Lineare Funktionen - Funktionsgleichung ablesen" frameborder="0" allow="web-share" allowfullscreen></iframe>
+                <iframe width="360" height="202" src="https://www.youtube.com/embed/706ZpxBG4d0"
+                    title="Lineare Funktionen - Funktionsgraphen zeichnen" frameborder="0" allow="web-share" allowfullscreen></iframe>
             </div>
-            <p>
-                Achtung, hier ist die Steigung \(a\) und der \(y\)-Achsenabschnitt \(b\).
-            </p>
-        </section> -->
+        </section>
         <section id="aufgaben" class="aufgaben">
             <h3>Aufgaben zu Begriffen</h3>
             <ol class="custom-marker point-after decimal">
