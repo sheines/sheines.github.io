@@ -154,10 +154,76 @@
                 </div>
                 <h6>Beispiel:</h6>
                 <div class="centered">
-                    <a href="svg/eq_example.svg"  target="_blank" rel="noopener noreferrer">
-                        <img src="/content/math/11/linfkt/svg/eq_example.svg" height="350px">
-                    </a>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="-12 -6 26 13" style="background-color: #232323">
+                        <!-- The viewBox is set to (-12, -6, 26, 13) which provides a coordinate space of width 38 and height 19 units.
+                                                 The center of the SVG is (0, 0). You can adjust this viewBox as needed. -->
+                        <!-- Add grid lines -->
+                        <defs>
+                            <pattern id="grid" width="1" height="1" patternUnits="userSpaceOnUse">
+                                <path d="M 1 0 L 0 0 0 1" fill="none" stroke="#333333" stroke-width="0.05" />
+                            </pattern>
+                        </defs>
+                        <rect x="-9.9" y="-5.5" width="19.8" height="11" fill="url(#grid)" />
+                    
+                        <!-- Draw the x-axis line -->
+                        <line x1="-10" y1="0" x2="10" y2="0" stroke="#a7a7a7" stroke-width="0.05" />
+                    
+                        <!-- Draw the x-axis arrowhead -->
+                        <polygon points="10.5,0 9.8,-0.15 9.8,0.15" fill="#a7a7a7" />
+                    
+                        <!-- Draw the y-axis line -->
+                        <line x1="0" y1="5" x2="0" y2="-5" stroke="#a7a7a7" stroke-width="0.05" />
+                    
+                        <!-- Draw the y-axis arrowhead -->
+                        <polygon points="0,-5.5 -0.15,-4.8 0.15,-4.8" fill="#a7a7a7" />
+                    
+                        <!-- Add "x" at the end of the x-axis -->
+                        <text x="10.7" y="0.7" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">x</text>
+                    
+                        <!-- Add "y" at the end of the y-axis -->
+                        <text x="-0.8" y="-5.3" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">y</text>
+                    
+                    
+                        <!-- Add numbers to x-axis-->
+                        <text x="1.9" y="0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">2</text>
+                        <text x="3.9" y="0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">4</text>
+                        <text x="5.9" y="0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">6</text>
+                        <text x="7.9" y="0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">8</text>
+                    
+                        <text x="-2.25" y="0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">−2</text>
+                        <text x="-4.25" y="0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">−4</text>
+                        <text x="-6.25" y="0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">−6</text>
+                        <text x="-8.25" y="0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">−8</text>
+                    
+                        <!-- Add numbers to y-axis-->
+                        <text x="-0.75" y="-1.75" font-family="serif" font-size="0.7" fill="#a8a7a7">2</text>
+                        <text x="-0.75" y="-3.75" font-family="serif" font-size="0.7" fill="#a8a7a7">4</text>
+                    
+                        <text x="-0.95" y="2.25" font-family="serif" font-size="0.7" fill="#a8a7a7">−2</text>
+                        <text x="-0.95" y="4.255" font-family="serif" font-size="0.7" fill="#a8a7a7">−4</text>
+                    
+                        <!-- Gradient Triangle -->
+                        <line x1="0" y1="3" x2="5" y2="3" stroke-width="0.05" stroke="magenta" />
+                        <line x1="5" y1="3" x2="5" y2="-1" stroke-width="0.05" stroke="green" />
+
+                        <!-- Add Function -->
+                        <line x1="-2.5" y1="5" x2="10" y2="-5" stroke="darkgoldenrod" stroke-width="0.15" />
+
+                        <!-- Add dots -->
+                        <circle cx="0" cy="3" r="0.2" fill="red"/>
+                        <circle cx="5" cy="-1" r="0.2" fill="blue"/>
+                    </svg>
                 </div>
+                <p>
+                    <ul>
+                        <li>Der Graph schneidet die \(y\)-Achse bei <span style="color: red">\(y=-3\)</span>.</li>
+                        <li>Nun muss ein weiterer <span style="color: blue; font-weight: 600;">Schnittpunkt</span> des Graphen mit 
+                            dem Gitternetz gefunden werden.</li>
+                        <li>Nun muss gezählt werden, wie viele Schritte (oder Kästchen oder etc.) nach 
+                            <span style="color: magenta; font-weight: 600;">rechts</span> und wie viele Schitte nach 
+                            <span style="color: green; font-weight: 600;">oben</span> gegangen wurde. </li> 
+                    </ul>
+                </p>
             </div>
         </section>
         <!-- <section>
