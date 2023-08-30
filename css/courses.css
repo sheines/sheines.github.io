@@ -1,9 +1,13 @@
 .extra-container {
     display: grid;
+    gap: 5px;
+    margin-top: 5px;;
 }
 .course-container {
     display: flex;
     flex-wrap: wrap;
+    gap: 0px;
+    row-gap: 5px;
 }
 .course {
     flex: 1 1 auto;
@@ -14,7 +18,7 @@
     color: var(--fg-header);
     justify-content: center;
     align-items: center;
-    margin: 15px;
+    margin: 5px;
     min-width: 200px;
 }
 .course img {
