@@ -1,8 +1,12 @@
-.course-container {
+.extra-container {
     display: grid;
+}
+.course-container {
+    display: flex;
     flex-wrap: wrap;
 }
 .course {
+    flex: 1 1 auto;
     display: flex;
     background-color: var(--bg-header);
     border-radius: 15px;
@@ -11,7 +15,6 @@
     justify-content: center;
     align-items: center;
     margin: 15px;
-    
 }
 .course img {
     height: 50px;
