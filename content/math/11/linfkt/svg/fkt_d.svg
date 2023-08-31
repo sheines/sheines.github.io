@@ -29,9 +29,32 @@
 
 
   <!-- Add numbers to x-axis-->
-  <text x="1.9" y="0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">2</text>
+  <text x="0.9" y="0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">1</text>
     
   <!-- Add numbers to y-axis-->
-    <text x="-0.75" y="-1.75" font-family="serif" font-size="0.7" fill="#a8a7a7">2</text>
+    <text x="-0.75" y="-0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">1</text>
 
+    <circle cx="-3" cy="-2" r="0.2" fill="#008c9c" />
+    <text x="-2.5" y="-2.5" fill="#008c9c" font-family="serif" font-size="0.9" font-style="italic">P</text>
+
+    <!-- <circle cx="-1" cy="-4" r="0.2" fill="#008c9c" />
+    <text x="-0.5" y="-3.5" fill="#008c9c" font-family="serif" font-size="0.9" font-style="italic">X</text> -->
+
+
+    <path stroke="darkgoldenrod" stroke-width="0.15" fill="none"
+        d="M -6 -5 L
+            -5.8 -4.8 -5.6 -4.6 -5.4 -4.4 -5.2 -4.2 -5 -4
+            -4.8 -3.8 -4.6 -3.6 -4.4 -3.4 -4.2 -3.2 -4 -3
+            -3.8 -2.8 -3.6 -2.6 -3.4 -2.4 -3.2 -2.2 -3 -2
+            -2.8 -1.8 -2.6 -1.6 -2.4 -1.4 -2.2 -1.2 -2 -1
+            -1.8 -0.8 -1.6 -0.6 -1.4 -0.4 -1.2 -0.2 -1 0
+            -0.8 0.2 -0.6 0.4 -0.4 0.6 -0.2 0.8 0 1
+            0.2 1.2 0.4 1.4 0.6 1.6 0.8 1.8 1 2
+            1.2 2.2 1.4 2.4 1.6 2.6 1.8 2.8 2 3
+            2.2 3.2 2.4 3.4 2.6 3.6 2.8 3.8 3 4
+            3.2 4.2 3.4 4.4 3.6 4.6 3.8 4.8 4 5"/>
+    
+    <text x="4.5" y="5" fill="darkgoldenrod" font-family="serif" font-size="0.9" font-style="italic">d</text>
+    <path stroke="a7a7a8" stroke-width="0.1" fill="none"
+        d="M -3 -2 L -2 -2 -2 -1" />
 </svg>
