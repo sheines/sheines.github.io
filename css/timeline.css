@@ -19,6 +19,9 @@
 .future {
   --accent-color: #0a720d;
 }
+.past {
+    --accent-color: gray;
+}
 
 /* Klassenweise Farben */
 /* Mathe */
@@ -151,6 +154,9 @@
   
     transform: translate(50%, -50%);
     right: calc(100% + var(--col-gap) + var(--line-w) / 2);
+  }
+    .timeline .past .date::after {
+    content: "⊖";
   }
   .timeline .next .date::after {
     content: "~";
