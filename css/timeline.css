@@ -155,8 +155,8 @@
     transform: translate(50%, -50%);
     right: calc(100% + var(--col-gap) + var(--line-w) / 2);
   }
-    .timeline .past .date::after {
-    content: "⊖";
+.timeline .past .date::after {
+    content: "✔"; /* ⧖ ☄ ⊝ */
   }
   .timeline .next .date::after {
     content: "~";
