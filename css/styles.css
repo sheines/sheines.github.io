@@ -201,7 +201,9 @@ ol.custom-marker.point-after.decimal > li::marker {
 ol.custom-marker.parens-around.lower-alpha > li::marker {
   content: counter(list, lower-alpha) ")\a0";
 }
-
+.more-spacing li:not(:last-child) {
+  margin-bottom: 10px;
+}
 .bigger-spacing li:not(:last-child) {
   margin-bottom: 20px;
 }
