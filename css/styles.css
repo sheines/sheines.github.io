@@ -99,24 +99,7 @@ table {
   padding: 8px;
   text-align: center;
 }
-/* .table-wrapper {
-  width: 100%;
-  overflow-x: auto;
-  padding: 0 30px;
-  box-sizing: border-box;
-}
-.responsive-table{
-  display: inline-block;
-  min-width: 100%;
-  box-sizing: border-box;
-}
-.wechseltabelle {
-  width: 100%;
-}
-.wechseltabelle td, .wechseltabelle th {
-  border: 1px solid #121212;
-  padding: 8px;
-} */
+
 
 .wechseltabelle tr:nth-child(even){background-color: #343434;}
 .wechseltabelle tr:nth-child(odd){background-color: #454545;}
@@ -129,6 +112,10 @@ table {
   text-align: left;
   background-color: var(--bg-header);
   color: var(--fg-header);
+}
+.cellCentered tr th, 
+.cellCentered tr td {
+  text-align: center;
 }
 
 
