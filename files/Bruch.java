@@ -6,7 +6,7 @@ public class Bruch {
     public void kuerzen() {
         int h = groessterGemeinsamerTeiler(zaehler, nenner);
     }
-    private int groessterGemeinsamerTeiler(int a, int b) {
+    private int groessterGemeinsamerTeiler(int a, int b) { // Euklidischer Algorithmus
             
             if (a == 0) return Math.abs(b);
             if (b == 0) return Math.abs(a);
