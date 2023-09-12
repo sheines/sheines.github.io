@@ -21,4 +21,12 @@ public class Bruch {
 
             return Math.abs(a);
     }
+
+    public void div(Bruch a) {
+        zaehler *= a.nenner;
+        nenner *= a.zaehler;
+
+        kuerzen();        
+    }
+
 }
