@@ -4,12 +4,10 @@ public class Bruch {
     int nenner; 
 
     public void kuerzen() {
-        public void kuerzen() {
             int ggt = groessterGemeinsamerTeiler(zaehler, nenner);
             
             zaehler /= ggt;
             nenner /= ggt;
-        }
     }
     private int groessterGemeinsamerTeiler(int a, int b) { // Euklidischer Algorithmus
             
