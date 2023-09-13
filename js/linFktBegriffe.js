@@ -84,10 +84,10 @@ const animateAbsGliedDuration = 2000;
 // Expected Color
 const redFracEnd = 0;
 const greenFracEnd = 255;
-const blueFracEnd = 0;
+const blueFracEnd = 255;
 
 const redZeroEnd = 0;
-const greenZeroEnd = 0;
+const greenZeroEnd = 255;
 const blueZeroEnd = 255;
 
 // Set animation duration in milliseconds
