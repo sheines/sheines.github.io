@@ -255,7 +255,9 @@
   .tooltip span[role=tooltip] {
     display: none;
   }
-  
+  dfn {
+    /* font-style: normal; */
+  }
   .tooltip:hover span[role=tooltip] {
     display: block;
     position: relative;
@@ -265,8 +267,10 @@
     padding: 0.25em;
     z-index: 100;
     background-color: #343434;
-    border: solid 1px var(--bg-header);
+    border: solid 1px var(--accent-color);
     border-radius: 0.3em;
+    font-style: normal;
+    font-weight: 400;
   }
 
 
