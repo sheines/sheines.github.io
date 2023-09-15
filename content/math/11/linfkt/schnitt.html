@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" initial-scale=1.0 />
+    <meta name="author" content="Sebastian Hitziger" />
+    <meta name="robot" content="noindex" />
+    <title> HITZ | Lin. Funktionen | Schnittpunkt & -winkel</title>
+    <link rel="stylesheet" type="text/css" href="/css/colors.css" />
+    <link rel="stylesheet" type="text/css" href="/css/gridNoTimeline.css" />
+    <link rel="stylesheet" type="text/css" href="/css/navbar.css" />
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="/css/courses.css" />
+    <!-- <script type="text/javascript" src="jquery-3.3.1.js"></script> -->
+    <!-- <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script> -->
+    <!-- <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script> -->
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+</head>
+
+<body>
+    <header>
+        <div class="nav">
+            <input type="checkbox" id="nav-check">
+            <div class="nav-header">
+                <div class="nav-title">
+                    <a href="/">Hr. Hitzigers Unterricht</a>
+                </div>
+            </div>
+            <div class="nav-btn">
+                <label for="nav-check">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+
+            <div class="nav-links">
+                <a href="/content/math/">Mathematik</a>
+                <a href="/content/math/11/">Klasse 11</a>
+                <a href="/content/math/11/linfkt/">Lineare Funktionen</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section>
+            <h2>Schnittpunkt und -winkel schneidender Geraden</h2>
+            <div class="ziele">
+                <p>
+                    Nachfolgend wird beschrieben, wie Schnittpunkt und -winkel zweier 
+                    schneidenden Geraden bestimmt werden können.
+                </p>
+                <p>
+                    <a href="#aufgaben">Direkt zu den Aufgaben</a>
+                </p>
+            </div>
+            <div class="theorie">
+                <div class="definition">
+                    <h3>Schnittpunkt</h3>
+                    <p>
+                        Geraden können sich maximal einmal schneiden. An der Stelle des Schnittpunktes sind sowohl Argument 
+                        (meist \(x\)) als auch Funktionswert (meist \(y\)) beider Geraden gleich.
+                    </p>
+                </div>
+                <h4>Vorgehen</h4>
+                <ol>
+                    <li>Geradengleichungen gleichsetzen,</li>
+                    <li>Argument (\(x\)) berechnen,</li>
+                    <li>Lösung in eine der beiden Geradengleichungen einsetzen und Funktionswert (\(y\)) berechnen.</li>
+                    <li>Probe mit anderer Geradengleichung machen und</li>
+                    <li>Schnittpunkt \(S\) angeben.</li>
+                </ol>
+                <h6>Beispiel:</h6>
+                <p>
+                    Es soll der Schnittpunkt der Geraden \(f: y=\color{red}{4x+2}\) und \(g: y=\color{green}{2x-4}\) bestimmt werden.
+                </p>
+                <p>Gleichungen gleichsetzen und \(x\) berechnen:
+                    $$
+                        \begin{aligned}
+                        \color{red}{4x+2}&=\color{green}{2x-4} &&|-2x -2 \\
+                        2x&=-6 &&|:2 \\
+                        x&=\color{cyan}{-3}
+                        \end{aligned}
+                    $$
+                    \(x\) in \(f\) einsetzen (\(g\) geht natürlich auch) und \(y\) berechnen:
+                    $$
+                        \begin{aligned}
+                        y&=\color{red}{4x+2} \\
+                        y&=\color{red}{4\cdot\color{cyan}{(-3)}+2} \\
+                        y&=-12+2\\
+                        y&=\color{orange}{-10}
+                        \end{aligned}
+                    $$
+                    Probe mit \(g\) (oder \(f\), wenn oben \(g\) verwendet wurde):
+                    $$
+                    \begin{aligned}
+                        y&=\color{green}{2x-4} \\
+                        \color{orange}{-10}&=\color{green}{2\cdot\color{cyan}{(-3)}-4} \\
+                        -10&=-6-4\\
+                        -10&=-10\quad\checkmark
+                        \end{aligned}
+                    $$
+                    D.h. die Funktionen \(f\) und \(g\) schneiden sich im Punkt 
+                    \(S(\color{cyan}{-3}\,|\,\color{orange}{-10})\).
+                </p>
+            </div>
+        </section>
+        <section>
+            <!-- <div class="videos">
+                <iframe width="360" height="202" src="https://www.youtube.com/embed/Bti-aegWv3k"
+                    title="Lineare Funktionen - Funktionsgleichung aus Text extrahieren" frameborder="0"
+                    allow="web-share" allowfullscreen></iframe>
+            </div> -->
+        </section>
+        <section id="aufgaben" class="aufgaben">
+            <h3>Aufgaben zu Schnittpunkten und -winkeln</h3>
+            <ol class="custom-marker point-after decimal">
+                <li>
+                    Bestimme die Lagebeziehung der Funktionen zueinander! <a href="#a1">Lösungen</a>
+                    
+                </li>
+
+            </ol>
+        </section>
+        <section class="loesungen">
+            <h3>Lösungen zu Schnittpunkten und -winkeln</h3>
+
+            <details id="a1">
+                <summary>Lagebeziehungen bestimmen</summary>
+                
+                
+            </details>
+
+            </details>
+        </section>
+        <section id="meme">
+            <!-- <div class="centered" style="max-height: 100px">
+                <img src="/img/linfkt_intersect_meme.jpg" style="object-fit:scale-down;">
+            </div> 
+            <div class="centered">
+                <a href="https://andertoons.com/school/cartoon/7139/for-our-purposes-no-crash-explosion-they-just-intersect">
+                    <h6>Original von Mark Anderson</h6>
+                </a>
+            </div> -->
+        </section>
+    </main>
+    <footer>
+        <a href="/misc/impressum.html">Impressum</a>
+        <div class="lastModified" align="center">
+            Zuletzt geändert:<br>
+            15. September 2023
+            <!-- <span id="lastModifiedDate"></span> -->
+        </div>
+        <a href="/misc/datenschutz.html">Datenschutz</a>
+    </footer>
+</body>
