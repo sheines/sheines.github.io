@@ -59,24 +59,28 @@ function Animation() {
         duration: 2000,
         fill: "forwards",
         delay: 6500,
+        easing: "ease-in-out"
     });
     angleG.animate([{ transform: "translate(-55px,19.5px)" },
     { transform: "translate(0,0)" }], {
         duration: 2000,
         fill: "forwards",
         delay: 7500,
+        easing: "ease-in-out"
     });
     dashedLineF.animate([{ transform: "translate(47px,19.5px)" },
     { transform: "translate(0,0)" }], {
         duration: 2000,
         fill: "forwards",
         delay: 6500,
+        easing: "ease-in-out"
     });
     dashedLineG.animate([{ transform: "translate(-55px,19.5px)" },
     { transform: "translate(0,0)" }], {
         duration: 2000,
         fill: "forwards",
         delay: 7500,
+        easing: "ease-in-out"
     });
 
     //Zwischenwinkel animieren und Winkel verschwinden lassen
