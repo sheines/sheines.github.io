@@ -113,10 +113,26 @@
                 </div>
                 <h6>Beispiel:</h6>
                 <p>
-                    Es soll die Orthogonale zur Geraden \(f(x)=\frac12 x+1\) durch den Punkt 
-                    \(P(4\,|\,3)\) bestimmt werden.
+                    Es soll die Orthogonale zur Geraden \(f(x)=\color{red}{\frac12} x+1\) durch den Punkt 
+                    \(P(\color{green}{4}\,|\,\color{magenta}{3})\) bestimmt werden.
                 </p>
-
+                <p>
+                    Anstieg der Orthogonalen berechnen: 
+                    \(\displaystyle m_o=-\frac{1}{\color{red}{\frac12}}=\color{cyan}{-2}\)
+                </p>
+                <p>
+                    Punkt \(P\) und Steigung \(m_o\) in allgemeine Geradengleichung einsetzen:
+                    $$
+                        \begin{aligned}
+                            y&=mx+n \\
+                            \color{magenta}{3}&=\color{cyan}{-2} \cdot \color{green}{4} +n \\
+                            3&=-8+n \qquad |+8 \\
+                            \color{orange}{11}&=n
+                        \end{aligned}
+                    $$
+                    Die Gleichung der Orthogonalen lautet demnach: \(o(x)=\color{cyan}{-2}x+\color{orange}{11}\)
+                </p>
+                
             </div>
         </section>
         <section>
@@ -130,6 +146,8 @@
         <section id="aufgaben" class="aufgaben">
             <h3>Aufgaben zu Orthogonalen Geraden</h3>
             <p>
+                
+
                 Alle Aufgaben beziehen sich auf die folgenden Funktionen:
             <details class="openClose" style="border-color: lightblue; margin-top: 10px;">
                 <summary class="nonumber" data-open="Funktionen einklappen" data-close="Funktionen ausklappen">
@@ -140,7 +158,7 @@
                     <li>\(c(x)=\frac15x-4\)</li>
                     <li>\(d(x)=-\frac13x-8\)</li>
                     <li>\(e(x)=-\frac32x+12\)</li>
-                    <li>\( f(x)=\frac58x-\frac38 \)</li>
+                    <li>\(f(x)=\frac58x-\frac38 \)</li>
                 </ol>
             </details>
             </p>
@@ -153,112 +171,77 @@
                     ist! <a href="#a3">Lösungen</a> </li>
                 <li>Bestimme jeweils den Schnittpunkt der oben genannten Geraden mit ihren orthogonalen Ursprungsgeraden
                     aus Aufgabe 3! <a href="#a4">Lösungen</a> </li>
+                <li>
+                    Zeige, dass die Diagonalen im Viereck \(ABCD\) mit \(A(-3\,|\,1)\), \(B(-1\,|\,-5)\), \(C(3\,|\,-2)\) 
+                    und \(D(4\,|\,5)\) senkrecht aufeinander stehen! Löse die Aufgabe, ohne den Schnittwinkel zu berechnen! <a href="#a5">Lösungen</a>
+                </li>
             </ol>
         </section>
         <section class="loesungen">
             <h3>Lösungen zu Orthogonalen Geraden</h3>
 
             <details id="a1">
-                <summary>Graphen zeichnen und berechnen</summary>
-                <p>Zum Vergrößern anklicken.</p>
-                <div class="images">
-                    <div class="funktionsbundle">
-                        <a href="svg/fkt_a.svg" target="_blank" rel="noopener noreferrer">
-                            <img src="svg/fkt_a.svg" height="160px">
-                            <p>
-                                \(a(x)=2x-5\)
-                            </p>
-                        </a>
-                    </div>
-                    <div class="funktionsbundle">
-                        <a href="svg/fkt_b.svg" target="_blank" rel="noopener noreferrer">
-                            <img src="svg/fkt_b.svg" height="160px">
-                            <p>
-                                \(b(x)=\frac12 x+\frac 72\)
-                            </p>
-                        </a>
-                    </div>
-                    <div class="funktionsbundle">
-                        <a href="svg/fkt_c.svg" target="_blank" rel="noopener noreferrer">
-                            <img src="svg/fkt_c.svg" height="160px">
-                            <p>
-                                \(c(x)=6x+10\)
-                            </p>
-                        </a>
-                    </div>
-                    <div class="funktionsbundle">
-                        <a href="svg/fkt_d.svg" target="_blank" rel="noopener noreferrer">
-                            <img src="svg/fkt_d.svg" height="160px">
-                            <p>
-                                \(d(x)=-x-1\)
-                            </p>
-                        </a>
-                    </div>
-                    <div class="funktionsbundle">
-                        <a href="svg/fkt_e.svg" target="_blank" rel="noopener noreferrer">
-                            <img src="svg/fkt_e.svg" height="160px">
-                            <p>
-                                \(e(x)=-2x-8\)
-                            </p>
-                        </a>
-                    </div>
-                    <div class="funktionsbundle">
-                        <a href="svg/fkt_f.svg" target="_blank" rel="noopener noreferrer">
-                            <img src="svg/fkt_f.svg" height="160px">
-                            <p>
-                                \(f(x)=-\frac13x-2\)
-                            </p>
-                        </a>
-                    </div>
-                    <div class="funktionsbundle">
-                        <a href="svg/fkt_g.svg" target="_blank" rel="noopener noreferrer">
-                            <img src="svg/fkt_g.svg" height="160px">
-                            <p>
-                                \(g(x)=-\frac14x+1\)
-                            </p>
-                        </a>
-                    </div>
-                    <div class="funktionsbundle">
-                        <a href="svg/fkt_h.svg" target="_blank" rel="noopener noreferrer">
-                            <img src="svg/fkt_h.svg" height="160px">
-                            <p>
-                                \(h(x)=\frac1{12}x-\frac83\)
-                            </p>
-                        </a>
-                    </div>
-                    <div class="funktionsbundle">
-                        <a href="svg/fkt_i.svg" target="_blank" rel="noopener noreferrer">
-                            <img src="svg/fkt_i.svg" height="160px">
-                            <p>
-                                \(i(x)=2x+8\)
-                            </p>
-                        </a>
-                    </div>
-                    <div class="funktionsbundle">
-                        <a href="svg/fkt_j.svg" target="_blank" rel="noopener noreferrer">
-                            <img src="svg/fkt_j.svg" height="160px">
-                            <p>
-                                \(j(x)=-\frac13x+\frac43\)
-                            </p>
-                        </a>
-                    </div>
-                    <div class="funktionsbundle">
-                        <a href="svg/fkt_k.svg" target="_blank" rel="noopener noreferrer">
-                            <img src="svg/fkt_k.svg" height="160px">
-                            <p>
-                                \(k(x)=-\frac15x-\frac35\)
-                            </p>
-                        </a>
-                    </div>
-                    <div class="funktionsbundle">
-                        <a href="svg/fkt_l.svg" target="_blank" rel="noopener noreferrer">
-                            <img src="svg/fkt_l.svg" height="160px">
-                            <p>
-                                \(l(x)=2x+2\)
-                            </p>
-                        </a>
-                    </div>
-                </div>
+                <summary>Steigung bestimmen</summary>
+                <ul class="custom-marker parens-around lower-alpha more-spacing">
+                    <li>\(m_{o_a}=-\frac12\)</li>
+                    <li>\(m_{o_b}=\frac14\)</li>
+                    <li>\(m_{o_c}=-5\)</li>
+                    <li>\(m_{o_d}=3\)</li>
+                    <li>\(m_{o_e}=\frac23\)</li>
+                    <li>\(m_{o_f}=-\frac85\)</li>
+                </ul>
+            </details>
+            <details id="a2">
+                <summary>Orthogonalengleichung bestimmen</summary>
+                <ul class="custom-marker parens-around lower-alpha more-spacing">
+                    <li>\(o_a(x)=-\frac12x+5\)</li>
+                    <li>\(o_b(x)=\frac14x+\frac72\)</li>
+                    <li>\(o_c(x)=-5x+14\)</li>
+                    <li>\(o_d(x)=3x-2\)</li>
+                    <li>\(o_e(x)=\frac23x+\frac83\)</li>
+                    <li>\(o_f(x)=-\frac85x+\frac{36}{5}\)</li>
+                </ul>
+            </details>
+            <details id="a3">
+                <summary>Orthogonale Ursprungsgerade bestimmen</summary>
+                Ursprungsgeraden verlaufen durch den Ursprung. \(n\) ist demnach immer \(0\).
+                <ul class="custom-marker parens-around lower-alpha more-spacing">
+                    <li>\(o_a(x)=-\frac12x\)</li>
+                    <li>\(o_b(x)=\frac14x\)</li>
+                    <li>\(o_c(x)=-5x\)</li>
+                    <li>\(o_d(x)=3x\)</li>
+                    <li>\(o_e(x)=\frac23x\)</li>
+                    <li>\(o_f(x)=-\frac85x\)</li>
+                </ul>
+            </details>
+            <details id="a4">
+                <summary>Schnittpunkt mit orthogonaler Ursprungsgeraden bestimmen</summary>
+                Ursprungsgeraden verlaufen durch den Ursprung. \(n\) ist demnach immer \(0\).
+                <ul class="custom-marker parens-around lower-alpha more-spacing">
+                    <li>\(P_a(\frac65\,|\,-\frac35)\)</li>
+                    <li>\(P_b(\frac{24}{17}\,|\,\frac{6}{17})\)</li>
+                    <li>\(P_c(\frac{10}{13}\,|\,-\frac{50}{13})\)</li>
+                    <li>\(P_d(-\frac{12}{5}\,|\,-\frac{36}{5})\)</li>
+                    <li>\(P_e(\frac{72}{13}\,|\,\frac{48}{13})\)</li>
+                    <li>\(P_f(\frac{15}{89}\,|\,-\frac{24}{89})\)</li>
+                </ul>
+            </details>
+            <details id="a5">
+                <summary>Diagonalen prüfen</summary>
+                <ul class="custom-marker parens-around lower-alpha more-spacing">
+                    <li>Diagonale sind: \(\overline{AC}\) und \(\overline{BD}\),</li>
+                    <li>\(m_{_{\overline{AC}}}=-\frac12\), \(m_{_{\overline{BD}}}=2\)</li>      
+                    <li>\(\displaystyle m_{_{\overline{BD}}}=-\frac{1}{m_{_{\overline{AC}}}}\) prüfen:
+                        $$
+                            \begin{aligned}
+                            m_{_{\overline{BD}}}&=-\frac{1}{m_{_{\overline{AC}}}} \\
+                            2&=-\frac{1}{-\frac12} \\
+                            2&=2\qquad\checkmark
+                            \end{aligned}
+                        $$
+                    </li>
+                    <li>Ja, die Diagonalen des Vierecks stehen senkrecht aufeinander.</li>
+                </ul>
             </details>
         </section>
         <section id="meme">
@@ -276,7 +259,7 @@
         <a href="/misc/impressum.html">Impressum</a>
         <div class="lastModified" align="center">
             Zuletzt geändert:<br>
-            3. Oktober 2023
+            9. Oktober 2023
             <!-- <span id="lastModifiedDate"></span> -->
         </div>
         <a href="/misc/datenschutz.html">Datenschutz</a>
