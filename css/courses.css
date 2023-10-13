@@ -30,6 +30,8 @@
     filter: brightness(1.1);
     cursor: pointer;
     box-shadow: 0 0 12px #44999999; 
+    border-color: var(--fg-header);
+    border: 1px solid;
 }
 .subject-container {
     display: grid;
