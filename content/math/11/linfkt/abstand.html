@@ -740,44 +740,56 @@
 
                 <h6>Beispiel:</h6>
                 <p>
-                    Es soll der Abstand zwischen dem Punkt \(P(\color{green}{4}\,|\,\color{orange}{1})\)
-                    und der Geraden \(g: y=\color{teal}{\color{red}{-2}x-3}\) bestimmt werden.
+                    Es soll der Abstand zwischen den Geraden \(f: y=\color{green}{3x-8}\) und \(g:y=\color{blue}{3x+2}\) bestimmt werden.
                 </p>
                 <p>
-                    Bestimmung der Orthogonalen:
+                    Punkt auf \(f\) bestimmen, hier mit \(x=\color{orange}{0}\):
+                    $$
+                        y=f(x)=\color{green}{3\cdot \color{orange}{0}-8}=\color{red}{-8}
+                    $$
+                    Der Punkt \(P\) hat die Koordinaten \((\color{orange}{0}\,|\,\color{red}{-8})\).
+                </p>
+                <p>
+                    Orthogonale \(o_g\) bestimmen:
                     $$
                     \begin{aligned}
-                    m_o&=-\frac{1}{m_g}=-\frac{1}{\color{red}{-2}}=\color{cyan}{\tfrac12}\\[0.5em]
-                    y&=mx+n \\
-                    \color{orange}{1}&=\color{cyan}{\tfrac12}\cdot \color{green}{4} +n \\
-                    1&=2+n \Rightarrow n=\color{purple}{-1} \\[0.5em]
-                    o(x)&=\color{cyan}{\tfrac12}x\color{purple}{-1}
+                        m_o&=-\frac{1}{\color{blue}{3}}=\color{magenta}{-\tfrac13} \\[0.5em]
+                        y&=mx+n \\
+                        \color{red}{-8}&=\color{magenta}{-\tfrac13}\cdot \color{orange}{0} +n\\
+                        n&=\color{red}{-8} \\[0.5em]
+                        o_g(x)&=\color{magenta}{-\tfrac13}x\color{red}{-8}
                     \end{aligned}
                     $$
-                    Schnittpunkt \(S\) von \(o\) und \(g\) bestimmen:
+                    Dass hier \(n\) gleich \(y\) ist, ist tatsächlich kein Zufall. Das klappt immer, wenn \(x=\color{orange}{0}\)
+                    gewählt wird.
+                </p>
+                <p>
+                    Schnittpunkt/Lotfußpunkt bestimmen:
                     $$
                     \begin{aligned}
-                    \color{teal}{\color{red}{-2}x-3}&=\color{cyan}{\tfrac12}x\color{purple}{-1} \qquad | +2x +1 \\
-                    -2&=\tfrac52x\qquad\qquad\!\! |:\tfrac52 \\
-                    x&=\color{coral}{-\tfrac45} \\[0.5em]
-                    y&=\color{teal}{\color{red}{-2}\cdot \left(\color{coral}{-\tfrac45}\right)-3} \\
-                    y&=\color{pink}{-\tfrac75} \\[0.5em]
-                    S&\left(\color{coral}{-\tfrac45} | \color{pink}{-\tfrac75} \right)
+                        o_g&=g \\
+                        \color{magenta}{-\tfrac13}x\color{red}{-8}&=\color{blue}{3x+2}\qquad |+\tfrac13x -2 \\
+                        -6&=\tfrac{10}{3}x \qquad\quad\,|:\tfrac{10}{3} \\
+                        x&=\color{cyan}{-\tfrac{9}{5}} \\[0.5em]
+                        y&=\color{blue}{3\cdot\left(\color{cyan}{-\tfrac{9}{5}}\right)+2}=\color{salmon}{-\tfrac{17}{5}}
                     \end{aligned}
                     $$
-                    Abstand der Punkte \(P\) und \(S\) bestimmen:
+                    Der Schnittpunkt \(S\) hat die Koordinaten 
+                    \(\left(\color{cyan}{-\tfrac{9}{5}}|\color{salmon}{-\tfrac{17}{5}}\right)\).
+                </p>
+                <p>
+                    Abstand der beiden Punkte berechnen:
                     $$
                     \begin{aligned}
                         d&=\sqrt{(x_2-x_1)^2+(y_2-y_1)^2} \\
-                        d&=\sqrt{\left(\color{green}{4}-\left(\color{coral}{-\tfrac45}\right)\right)^2
-                            +\left(\color{orange}{1}-\left(\color{pink}{-\tfrac75}\right)\right)^2}\\
-                        d&=\sqrt{\left(\tfrac{24}{5}\right)^2+\left(\tfrac{12}{5}\right)^2}\\
-                        d&=\frac{12\sqrt 5}{5}\,\text{LE}\approx5,37\,\text{LE}
+                        d&=\sqrt{\left(\color{cyan}{-\tfrac{9}{5}}-\color{orange}{0}\right)^2
+                                +\left(\color{salmon}{-\tfrac{17}{5}}-\color{red}{(-8)}\right)^2}\\
+                        d&=\sqrt{\tfrac{122}{5}}\,\text{LE}\approx4,94\,\text{LE}
                     \end{aligned}
                     $$
                 </p>
                 <p>
-                    Die beiden Geraden sind ...
+                    Die beiden Geraden sind knapp \(5\,\text{LE}\) voneinander entfernt.
                 </p>
             </div>
         </section>
