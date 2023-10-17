@@ -49,6 +49,8 @@
     justify-content: center;
     align-items: center;
     counter-increment: css-counter 1;
+    border: 2px solid;
+    border-color: var(--bg-header);
 }
 .subject h4::before {
     content: counter(css-counter) ". ";

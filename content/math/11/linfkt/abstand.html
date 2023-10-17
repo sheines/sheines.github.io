@@ -900,9 +900,27 @@
         <section id="aGG" class="aufgaben">
             <h3>Aufgaben zu Abstand Gerade - Gerade</h3>
             <ol class="custom-marker point-after decimal">
-                <li>Die Gerade \(g\) geht durch die Punkte \(A(1\,|\,6)\) und \(B(10\,|\,3)\).
-                    Berechne den Abstand der Geraden \(g\) zum Punkt \(P(6\,|\,1)\)! <a href="#aGG1">Lösungen</a> </li>
-
+                <li>
+                    Gegeben sind die Geraden \(f(x)=3x+2\) und \(g(x)=3x-8\). <a href="#aGG1">Lösungen</a>
+                    <ol class="custom-marker parens-around lower-alpha more-spacing">
+                        <li>Begründe, dass \(f\) und \(g\) parallel zueinander sind!</li>
+                        <li>Berechne den Abstand der beiden Geraden!</li>
+                    </ol> 
+                </li>         
+                <li>
+                    Gegeben ist das abgebildete Parallelogramm. Bestimme die Gleichungen für seiner Seitengeraden \(f\) und \(g\). 
+                    Berechne die Länge der Strecke \(h\), sowie den Flächeninhalt des Parallelogramms! <a href="#aGG2">Lösungen</a>
+                    <div class="images">
+                        <div class="funktionsbundle">
+                            <a href="svg/parallelogramm.svg" target="_blank" rel="noopener noreferrer">
+                                <img src="svg/parallelogramm.svg" width="360px">
+                                <div>
+                                    Zum Vergrößern: Klicken
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </li>
             </ol>
         </section>
         <section class="loesungen">
@@ -910,7 +928,30 @@
             <details id="aGG1">
                 <summary>Abstand bestimmen</summary>
                 <ul class="custom-marker parens-around lower-alpha more-spacing">
-                    <li>Geradengleichung: \(g(x)=-\tfrac13 x+\tfrac{19}{3}\)</li>
+                    <li>Beide Geraden haben den gleichen Abstieg, aber unterschiedliche \(y\)-Achsenabschnitte</li>
+                    <li>\(d=\sqrt{\tfrac{122}{5}}\,\text{LE}\approx4,94\,\text{LE}\), für den ausführlichen Weg: Beispiel studieren!</li>
+                </ul>
+            </details>
+            <details id="aGG2">
+                <summary>Parallelogramm</summary>
+                <ul class="custom-marker parens-around more-spacing">
+                    <li>\(f(x)=\tfrac13x+\tfrac{11}{3}\) und \(g(x)=\tfrac13x+\tfrac13\)</li>
+                    <li>\(h\) ist der Abstand der beiden Geraden: \(h=\sqrt{10}\,\text{LE}\approx 3,16\,\text{LE}\)</li>
+                    <li>Parallelogramm: \(A=g\cdot h\)
+                        <ul>
+                            <li>\(h\) ist bereits bekannt,</li>
+                            <li>\(g\) (Grundseite) ist bspw. \(d_{\overline{AB}}\):
+                                $$
+                                    \begin{aligned}
+                                        d&=\sqrt{(8-2)^2+(3-1)^2}\\
+                                        d&=\sqrt{40}\,\text{LE}\approx 6,32\,\text{LE}
+                                    \end{aligned}
+                                $$
+                            </li>
+                            <li>Fläche \(A=g\cdot h=\sqrt{40}\cdot\sqrt{10}=20\,\text{FE}\)</li>
+                        </ul>
+                    </li>
+                    <li>Das Parallelogramm hat einen Flächeninhalt von \(20\,\text{FE}\) (Flächeneinheiten).</li>
                 </ul>
             </details>
 
@@ -919,21 +960,21 @@
 
 
         <section id="meme">
-            <!-- <div class="centered" style="max-height: 350px">
-                <img src="/img/steigung-meme.jpg" style="object-fit:scale-down;">
+            <div class="centered" style="max-height: 350px">
+                <img src="/img/distance-meme.jpg" style="object-fit:scale-down;">
             </div>
             <div class="centered">
-                <a href="https://mrkylebrown.weebly.com/1-slope--rate-of-change.html">
-                    <h6>Original von Kyle Brown</h6>
+                <a href="https://www.facebook.com/mathsassociationsa/photos/a.1369363099911670/1835684879946154">
+                    <h6>Original von Mathematical Association of South Australia</h6>
                 </a>
-            </div> -->
+            </div>
         </section>
     </main>
     <footer>
         <a href="/misc/impressum.html">Impressum</a>
         <div class="lastModified" align="center">
             Zuletzt geändert:<br>
-            15. Oktober 2023
+            17. Oktober 2023
             <!-- <span id="lastModifiedDate"></span> -->
         </div>
         <a href="/misc/datenschutz.html">Datenschutz</a>

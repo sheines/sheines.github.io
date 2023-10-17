@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="-3 -6 14.5 7.5" style="background-color: #232323">
+  <!-- The viewBox is set to (-12, -6, 26, 13) which provides a coordinate space of width 38 and height 19 units.
+       The center of the SVG is (0, 0). You can adjust this viewBox as needed. -->
+  <!-- Add grid lines -->
+  <defs>
+    <pattern id="grid" width="1" height="1" patternUnits="userSpaceOnUse">
+      <path d="M 1 0 L 0 0 0 1" fill="none" stroke="#333333" stroke-width="0.05" />
+    </pattern>
+  </defs>
+  <rect x="-9.9" y="-5.5" width="19.8" height="11" fill="url(#grid)" />
+
+  <!-- Draw the x-axis line -->
+  <line x1="-10" y1="0" x2="10" y2="0" stroke="#a7a7a7" stroke-width="0.05" />
+
+  <!-- Draw the x-axis arrowhead -->
+  <polygon points="10.5,0 9.8,-0.15 9.8,0.15" fill="#a7a7a7" />
+
+  <!-- Draw the y-axis line -->
+  <line x1="0" y1="5" x2="0" y2="-5" stroke="#a7a7a7" stroke-width="0.05" />
+
+  <!-- Draw the y-axis arrowhead -->
+  <polygon points="0,-5.5 -0.15,-4.8 0.15,-4.8" fill="#a7a7a7" />
+
+  <!-- Add "x" at the end of the x-axis -->
+  <text x="10.7" y="0.7" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">x</text>
+
+  <!-- Add "y" at the end of the y-axis -->
+  <text x="-0.8" y="-5.3" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">y</text>
+
+
+  <!-- Add numbers to x-axis-->
+  <text x="0.9" y="0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">1</text>
+
+  <!-- Add numbers to y-axis-->
+  <text x="-0.75" y="-0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">1</text>
+
+  <path stroke="darkgoldenrod" stroke-width="0.075" fill="#343434" d="M -2 -3 L 4 -5 8 -3 2 -1 -2 -3" />
+
+  <path stroke="#6a0000" stroke-width="0.05" d="M 2 -4.333 L 3.1666 -1.4" />
+  <circle cx="2" cy="-4.3333" r="0.1" fill="#6a0000" />
+  <circle cx="3.16666" cy="-1.4" r="0.1" fill="#6a0000" />
+
+
+  <circle cx="-2" cy="-3" r="0.15" fill="#008c9c" />
+  <text x="-2.95" y="-3" fill="#008c9c" font-family="serif" font-size="0.9" font-style="italic">A</text>
+
+  <circle cx="4" cy="-5" r="0.15" fill="#008c9c" />
+  <text x="4.5" y="-5.25" fill="#008c9c" font-family="serif" font-size="0.9" font-style="italic">B</text>
+
+  <circle cx="8" cy="-3" r="0.15" fill="#008c9c" />
+  <text x="8.5" y="-2.75" fill="#008c9c" font-family="serif" font-size="0.9" font-style="italic">C</text>
+
+  <circle cx="2" cy="-1" r="0.15" fill="#008c9c" />
+  <text x="2.5" y="-0.25" fill="#008c9c" font-family="serif" font-size="0.9" font-style="italic">D</text>
+
+
+
+
+  <text x="0.5" y="-4.5" fill="darkgoldenrod" font-family="serif" font-size="0.9" font-style="italic">f</text>
+  <text x="6.5" y="-1.75" fill="darkgoldenrod" font-family="serif" font-size="0.9" font-style="italic">g</text>
+
+  <text x="2.9" y="-2.75" fill="#6a0000" font-family="serif" font-size="0.9" font-style="italic">h</text>
+  
+
+
+  
+
+</svg>
