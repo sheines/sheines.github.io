@@ -20,6 +20,8 @@
     align-items: center;
     margin: 5px;
     min-width: 200px;
+    border: 2px solid;
+    border-color: var(--bg-header);
 }
 .course img {
     height: 50px;
