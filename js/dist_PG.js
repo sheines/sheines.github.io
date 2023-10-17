@@ -10,10 +10,10 @@ const arrowPG = document.getElementById("arrowPG");
 
 
 
-Animation();
+AnimationPG();
 
 
-function Animation() {
+function AnimationPG() {
     
     // Punkt/Gerade animieren
     pointPG.animate([{ opacity: 0 }, { opacity: 1 }], {
@@ -119,5 +119,5 @@ svgElementPG.addEventListener('click', () => {
         delay: 500,
     });
     
-    setTimeout(Animation, 2000);
+    setTimeout(AnimationPG, 2000);
 });

@@ -12,10 +12,10 @@ const arrowGG = document.getElementById("arrowGG");
 
 
 
-Animation();
+AnimationGG();
 
 
-function Animation() {
+function AnimationGG() {
     
     // Punkt/Gerade animieren
     
@@ -137,5 +137,5 @@ svgElementGG.addEventListener('click', () => {
         delay: 500,
     });
     
-    setTimeout(Animation, 2000);
+    setTimeout(AnimationGG, 2000);
 });

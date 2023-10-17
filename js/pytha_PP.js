@@ -18,10 +18,10 @@ const pyth2 = document.getElementById("pyth2");
 const pyth3 = document.getElementById("pyth3");
 
 
-Animation();
+AnimationPP();
 
 
-function Animation() {
+function AnimationPP() {
 
     
     // Abstand animieren
@@ -187,5 +187,5 @@ svgElement.addEventListener('click', () => {
         delay: 500,
     });
     
-    setTimeout(Animation, 2000);
+    setTimeout(AnimationPP, 2000);
 });
