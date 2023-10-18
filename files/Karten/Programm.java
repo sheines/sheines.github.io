@@ -19,7 +19,7 @@ public class Programm {
                 
                 // Farbe auswählen
                 String farbe = "";
-                switch((int)(Math.round(4*Math.random()))) {
+                switch(f) {   // Schaue, ob f (Farbe) ...
                     case 0: farbe = ""; break; // rot
                     case 1: farbe = ""; break; // grün
                     case 2: farbe = ""; break; // blau
