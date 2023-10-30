@@ -29,7 +29,8 @@
 	<text systemLanguage="vi" x="20" y="15" id="trsvg21"><tspan id="trsvg4">y&#x1EBF;u v&#x1ECB;</tspan></text>
     
    <text x="20" y="15" id="trsvg22-id" systemLanguage="id"><tspan id="trsvg5-id">modus</tspan></text>
-   <text x="20" y="15" id="trsvg22-mk" systemLanguage="mk"><tspan id="trsvg5-mk">&#x43C;&#x43E;&#x434;&#x443;&#x441;</tspan></text><text x="20" y="15" id="trsvg22-el" systemLanguage="el"><tspan id="trsvg5-el">&#x3B5;&#x3C0;&#x3B9;&#x3BA;&#x3C1;&#x3B1;&#x3C4;&#x3BF;&#x3CD;&#x3C3;&#x3B1; &#x3C4;&#x3B9;&#x3BC;&#x3AE;</tspan></text><text x="20" y="15" id="trsvg22"><tspan id="trsvg5">mode</tspan></text>
+   <text x="20" y="15" id="trsvg22-mk" systemLanguage="mk"><tspan id="trsvg5-mk">&#x43C;&#x43E;&#x434;&#x443;&#x441;</tspan></text>
+   <text x="20" y="15" id="trsvg22-el" systemLanguage="el"><tspan id="trsvg5-el">&#x3B5;&#x3C0;&#x3B9;&#x3BA;&#x3C1;&#x3B1;&#x3C4;&#x3BF;&#x3CD;&#x3C3;&#x3B1; &#x3C4;&#x3B9;&#x3BC;&#x3AE;</tspan></text><text x="20" y="15" id="trsvg22"><tspan id="trsvg5">mode</tspan></text>
    </switch>
   </g>
   <g transform="translate(0,100)">
@@ -48,21 +49,28 @@
     <text systemLanguage="uk" x="30" y="15" id="trsvg27"><tspan id="trsvg10">&#x43C;&#x435;&#x434;&#x456;&#x430;&#x43D;&#x430;</tspan></text>
 	<text systemLanguage="vi" x="30" y="15" id="trsvg28"><tspan id="trsvg11">trung v&#x1ECB;</tspan></text>
     
-   <text x="30" y="15" id="trsvg29-id" systemLanguage="id"><tspan id="trsvg12-id">median</tspan></text><text x="30" y="15" id="trsvg29-mk" systemLanguage="mk"><tspan id="trsvg12-mk">&#x43C;&#x435;&#x434;&#x438;&#x458;&#x430;&#x43D;&#x430;</tspan></text><text x="30" y="15" id="trsvg29-el" systemLanguage="el"><tspan id="trsvg12-el">&#x3B4;&#x3B9;&#x3AC;&#x3BC;&#x3B5;&#x3C3;&#x3BF;&#x3C2;</tspan></text><text x="30" y="15" id="trsvg29"><tspan id="trsvg12">median</tspan></text></switch>
+   <text x="30" y="15" id="trsvg29-id" systemLanguage="id"><tspan id="trsvg12-id">median</tspan></text>
+   <text x="30" y="15" id="trsvg29-mk" systemLanguage="mk"><tspan id="trsvg12-mk">&#x43C;&#x435;&#x434;&#x438;&#x458;&#x430;&#x43D;&#x430;</tspan></text>
+   <text x="30" y="15" id="trsvg29-el" systemLanguage="el"><tspan id="trsvg12-el">&#x3B4;&#x3B9;&#x3AC;&#x3BC;&#x3B5;&#x3C3;&#x3BF;&#x3C2;</tspan></text><text x="30" y="15" id="trsvg29"><tspan id="trsvg12">median</tspan></text>
+   </switch>
   </g>
   <g transform="translate(0,160)">
    <use xlink:href="#area"/>
-   <rect x="20" y="5" width="30" height="5" fill="url(#pattern_right)"/>
-   <path d="M 30,5 L 35,0.5 L 40,5" fill="#4444ff"/>
-   <path d="M 20,5 H 50  M -2,-5 A 10,10 0 0 0 0,5 M -4,-4 A 10,10 0 0 0 -2,5  M 102,-5 A 10,10 0 0 1 100,5 M 104,-4 A 10,10 0 0 1 102,5" stroke="#888866" fill="none"/>
+   <rect x="25" y="5" width="30" height="5" fill="url(#pattern_right)"/>
+   <path d="M 35,5 L 40,0.5 L 45,5" fill="#4444ff"/>
+   <path d="M 25,5 H 55  M -2,-5 A 10,10 0 0 0 0,5 M -4,-4 A 10,10 0 0 0 -2,5  M 102,-5 A 10,10 0 0 1 100,5 M 104,-4 A 10,10 0 0 1 102,5" stroke="#888866" fill="none"/>
    <switch allowReorder="yes">
-    <text systemLanguage="de" x="35" y="20" id="trsvg30"><tspan id="trsvg13">Mittelwert</tspan></text>
-    <text systemLanguage="es" x="35" y="20" id="trsvg30"><tspan id="trsvg13">media</tspan></text>
-    <text systemLanguage="fi" x="35" y="20" id="trsvg31"><tspan id="trsvg14">odotusarvo</tspan></text>
-    <text systemLanguage="uk" x="35" y="20" id="trsvg32"><tspan id="trsvg15">&#x441;&#x435;&#x440;&#x435;&#x434;&#x43D;&#x454;</tspan></text>
-	<text systemLanguage="vi" x="35" y="20" id="trsvg33"><tspan id="trsvg16">b&#xEC;nh qu&#xE2;n</tspan></text>
+    <text systemLanguage="de" x="40" y="20" id="trsvg30"><tspan id="trsvg13">Mittelwert</tspan></text>
+    <text systemLanguage="es" x="40" y="20" id="trsvg30"><tspan id="trsvg13">media</tspan></text>
+    <text systemLanguage="fi" x="40" y="20" id="trsvg31"><tspan id="trsvg14">odotusarvo</tspan></text>
+    <text systemLanguage="uk" x="40" y="20" id="trsvg32"><tspan id="trsvg15">&#x441;&#x435;&#x440;&#x435;&#x434;&#x43D;&#x454;</tspan></text>
+	<text systemLanguage="vi" x="40" y="20" id="trsvg33"><tspan id="trsvg16">b&#xEC;nh qu&#xE2;n</tspan></text>
     
-   <text x="35" y="20" id="trsvg34-id" systemLanguage="id"><tspan id="trsvg17-id">rata-rata</tspan></text><text x="35" y="20" id="trsvg34-mk" systemLanguage="mk"><tspan id="trsvg17-mk">&#x441;&#x440;&#x435;&#x434;&#x438;&#x43D;&#x430;</tspan></text><text x="35" y="20" id="trsvg34-el" systemLanguage="el"><tspan id="trsvg17-el">&#x3BC;&#x3AD;&#x3C3;&#x3B7; &#x3C4;&#x3B9;&#x3BC;&#x3AE;</tspan></text><text x="35" y="20" id="trsvg34"><tspan id="trsvg17">mean</tspan></text></switch>
+   <text x="40" y="20" id="trsvg34-id" systemLanguage="id"><tspan id="trsvg17-id">rata-rata</tspan></text>
+   <text x="40" y="20" id="trsvg34-mk" systemLanguage="mk"><tspan id="trsvg17-mk">&#x441;&#x440;&#x435;&#x434;&#x438;&#x43D;&#x430;</tspan></text>
+   <text x="40" y="20" id="trsvg34-el" systemLanguage="el"><tspan id="trsvg17-el">&#x3BC;&#x3AD;&#x3C3;&#x3B7; &#x3C4;&#x3B9;&#x3BC;&#x3AE;</tspan></text>
+   <text x="40" y="20" id="trsvg34"><tspan id="trsvg17">mean</tspan></text>
+   </switch>
   </g>
  </g>
 </svg>
