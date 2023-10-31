@@ -13,7 +13,7 @@ a:hover {
   color: var(--bloom-fg);
   text-shadow: 0 0 1em var(--shadow-fg);
 }
-s {
+sf {
   text-decoration-color: darkred;
   text-decoration-line: line-through;
   text-decoration-thickness: 0.2rem;
@@ -74,6 +74,9 @@ td {
 
   padding: 5px;
   
+}
+.tabelle table s {
+  text-decoration-line: line-through;
 }
 table {
   border-collapse: collapse;
