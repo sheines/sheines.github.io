@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1698778964 "f:/Dokumente/GitHub/shitziger.github.io/tex/stat_gewinne.tex" "stat_gewinne.pdf" "stat_gewinne" 1698778965 2
+["pdflatex"] 1698781094 "f:/Dokumente/GitHub/shitziger.github.io/tex/stat_gewinne.tex" "stat_gewinne.pdf" "stat_gewinne" 1698781095 2
   "c:/Program Files/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1698515032 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/tcrm1095.tfm" 1698514609 1536 02c06700a42be0f5a28664c7273f82e7 ""
   "c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm" 1698514042 1528 abec98dbc43e172678c11b3b9031252a ""
@@ -90,6 +90,7 @@
   "c:/Program Files/texlive/2023/texmf-dist/tex/latex/base/article.cls" 1698515928 20144 fbcf51733730d8f1a62143512ff5b1fe ""
   "c:/Program Files/texlive/2023/texmf-dist/tex/latex/base/ifthen.sty" 1698515928 5319 5435f8f7051e23a851a1c665c5b84e22 ""
   "c:/Program Files/texlive/2023/texmf-dist/tex/latex/base/size11.clo" 1698515928 8464 a4a9a859b7fd5b6c1450673c4d301348 ""
+  "c:/Program Files/texlive/2023/texmf-dist/tex/latex/base/textcomp.sty" 1698515928 2894 3ac7bdb70dd9b75530be2ade2842c355 ""
   "c:/Program Files/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty" 1698514728 13886 d1306dcf79a944f6988e688c1785f9ce ""
   "c:/Program Files/texlive/2023/texmf-dist/tex/latex/graphics-cfg/color.cfg" 1698515274 1213 620bba36b25224fa9b7e1ccb4ecb76fd ""
   "c:/Program Files/texlive/2023/texmf-dist/tex/latex/graphics-cfg/graphics.cfg" 1698515274 1224 978390e9c2234eab29404bc21b268d1e ""
@@ -124,9 +125,9 @@
   "c:/Program Files/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1698519593 4750316 4c3c1622616d55072a2397635ed90999 ""
   "c:/Program Files/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1698519740 8208736 8a742e68f35b883a4a2674b856c10902 ""
   "c:/Program Files/texlive/2023/texmf.cnf" 1698519568 713 e69b156964470283e0530f5060668171 ""
-  "f:/Dokumente/GitHub/shitziger.github.io/tex/stat_gewinne.tex" 1698778960 2054 8bb0bea83d6ca4376e162c171c8c93fd ""
-  "stat_gewinne.aux" 1698778965 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
-  "stat_gewinne.tex" 1698778960 2054 8bb0bea83d6ca4376e162c171c8c93fd ""
+  "f:/Dokumente/GitHub/shitziger.github.io/tex/stat_gewinne.tex" 1698781090 7576 039e952fdcdfb0aa91f2c3f742bdfcf8 ""
+  "stat_gewinne.aux" 1698781095 33 6bbbc4989d0c340984f875bce9661f09 "pdflatex"
+  "stat_gewinne.tex" 1698781090 7576 039e952fdcdfb0aa91f2c3f742bdfcf8 ""
   (generated)
   "stat_gewinne.aux"
   "stat_gewinne.log"

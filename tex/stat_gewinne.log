@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.28)  31 OCT 2023 20:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.28)  31 OCT 2023 20:38
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -58,7 +58,9 @@ Package: nicefrac 1998/08/04 v0.9b Nice fractions
 \L@UnitsRaiseDisplaystyle=\skip50
 \L@UnitsRaiseTextstyle=\skip51
 \L@UnitsRaiseScriptstyle=\skip52
-)) (c:/Program Files/texlive/2023/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (c:/Program Files/texlive/2023/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (c:/Program Files/texlive/2023/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (c:/Program Files/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
+)) (c:/Program Files/texlive/2023/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+) (c:/Program Files/texlive/2023/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty (c:/Program Files/texlive/2023/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty (c:/Program Files/texlive/2023/texmf-dist/tex/latex/pgf/utilities/pgfrcs.sty (c:/Program Files/texlive/2023/texmf-dist/tex/generic/pgf/utilities/pgfutil-common.tex
 \pgfutil@everybye=\toks19
 \pgfutil@tempdima=\dimen141
 \pgfutil@tempdimb=\dimen142
@@ -311,20 +313,20 @@ File: l3backend-pdftex.def 2023-10-23 L3 backend support: PDF output (pdfTeX)
 ) (./stat_gewinne.aux)
 \openout1 = `stat_gewinne.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
-LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 20.
+LaTeX Font Info:    ... okay on input line 20.
  (c:/Program Files/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count288
@@ -345,34 +347,16 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 48
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 27.
+(Font)              <10.95> on input line 28.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 27.
+(Font)              <8> on input line 28.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 27.
+(Font)              <6> on input line 28.
 
-f:/Dokumente/GitHub/shitziger.github.io/tex/stat_gewinne.tex:27: Undefined control sequence.
-<argument> \text 
-                 \texteuro 
-l.27 ...rate] at (-2,0) {$\unit[4]{\text\texteuro}
-                                                  $};
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-LaTeX Warning: Command \texteuro invalid in math mode on input line 27.
-
-
-LaTeX Warning: Command \texteuro invalid in math mode on input line 27.
-
-Missing character: There is no ¿ in font cmr10!
 f:/Dokumente/GitHub/shitziger.github.io/tex/stat_gewinne.tex:28: Undefined control sequence.
 <argument> \text 
                  \texteuro 
-l.28 ...orate] at (0,0) {$\unit[3]{\text\texteuro}
+l.28 ...rate] at (-2,0) {$\unit[4]{\text\texteuro}
                                                   $};
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -387,10 +371,42 @@ LaTeX Warning: Command \texteuro invalid in math mode on input line 28.
 LaTeX Warning: Command \texteuro invalid in math mode on input line 28.
 
 Missing character: There is no ¿ in font cmr10!
-f:/Dokumente/GitHub/shitziger.github.io/tex/stat_gewinne.tex:29: Undefined control sequence.
+f:/Dokumente/GitHub/shitziger.github.io/tex/stat_gewinne.tex:37: Improper \prevdepth.
+\newpage ...everypar {}\fi \par \ifdim \prevdepth 
+                                                  >\z@ \vskip -\ifdim \prevd...
+l.37 \newpage
+             
+You can refer to \spacefactor only in horizontal mode;
+you can refer to \prevdepth only in vertical mode; and
+neither of these is meaningful inside \write. So
+I'm forgetting what you said and using zero instead.
+
+f:/Dokumente/GitHub/shitziger.github.io/tex/stat_gewinne.tex:37: Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.37 \newpage
+             
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+f:/Dokumente/GitHub/shitziger.github.io/tex/stat_gewinne.tex:37: Missing } inserted.
+<inserted text> 
+                }
+l.37 \newpage
+             
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+f:/Dokumente/GitHub/shitziger.github.io/tex/stat_gewinne.tex:45: Undefined control sequence.
 <argument> \text 
                  \texteuro 
-l.29 ...orate] at (2,0) {$\unit[6]{\text\texteuro}
+l.45 ...orate] at (0,0) {$\unit[3]{\text\texteuro}
                                                   $};
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -399,249 +415,277 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Command \texteuro invalid in math mode on input line 29.
+LaTeX Warning: Command \texteuro invalid in math mode on input line 45.
 
 
-LaTeX Warning: Command \texteuro invalid in math mode on input line 29.
-
-Missing character: There is no ¿ in font cmr10!
-f:/Dokumente/GitHub/shitziger.github.io/tex/stat_gewinne.tex:30: Undefined control sequence.
-<argument> \text 
-                 \texteuro 
-l.30 ...orate] at (4,0) {$\unit[2]{\text\texteuro}
-                                                  $};
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-LaTeX Warning: Command \texteuro invalid in math mode on input line 30.
-
-
-LaTeX Warning: Command \texteuro invalid in math mode on input line 30.
-
-Missing character: There is no ¿ in font cmr10!
-f:/Dokumente/GitHub/shitziger.github.io/tex/stat_gewinne.tex:31: Undefined control sequence.
-<argument> \text 
-                 \texteuro 
-l.31 ...orate] at (6,0) {$\unit[3]{\text\texteuro}
-                                                  $};
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-LaTeX Warning: Command \texteuro invalid in math mode on input line 31.
-
-
-LaTeX Warning: Command \texteuro invalid in math mode on input line 31.
-
-Missing character: There is no ¿ in font cmr10!
-f:/Dokumente/GitHub/shitziger.github.io/tex/stat_gewinne.tex:32: Undefined control sequence.
-<argument> \text 
-                 \texteuro 
-l.32 ...orate] at (8,0) {$\unit[4]{\text\texteuro}
-                                                  $};
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-LaTeX Warning: Command \texteuro invalid in math mode on input line 32.
-
-
-LaTeX Warning: Command \texteuro invalid in math mode on input line 32.
-
-Missing character: There is no ¿ in font cmr10!
-f:/Dokumente/GitHub/shitziger.github.io/tex/stat_gewinne.tex:33: Undefined control sequence.
-<argument> \text 
-                 \texteuro 
-l.33 ...rate] at (10,0) {$\unit[3]{\text\texteuro}
-                                                  $};
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-LaTeX Warning: Command \texteuro invalid in math mode on input line 33.
-
-
-LaTeX Warning: Command \texteuro invalid in math mode on input line 33.
-
-Missing character: There is no ¿ in font cmr10!
-f:/Dokumente/GitHub/shitziger.github.io/tex/stat_gewinne.tex:34: Undefined control sequence.
-<argument> \text 
-                 \texteuro 
-l.34 ...rate] at (12,0) {$\unit[4]{\text\texteuro}
-                                                  $};
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-LaTeX Warning: Command \texteuro invalid in math mode on input line 34.
-
-
-LaTeX Warning: Command \texteuro invalid in math mode on input line 34.
-
-Missing character: There is no ¿ in font cmr10!
-f:/Dokumente/GitHub/shitziger.github.io/tex/stat_gewinne.tex:35: Undefined control sequence.
-<argument> \text 
-                 \texteuro 
-l.35 ...ate] at (-1,-1) {$\unit[4]{\text\texteuro}
-                                                  $};
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-LaTeX Warning: Command \texteuro invalid in math mode on input line 35.
-
-
-LaTeX Warning: Command \texteuro invalid in math mode on input line 35.
-
-Missing character: There is no ¿ in font cmr10!
-f:/Dokumente/GitHub/shitziger.github.io/tex/stat_gewinne.tex:36: Undefined control sequence.
-<argument> \text 
-                 \texteuro 
-l.36 ...rate] at (1,-1) {$\unit[5]{\text\texteuro}
-                                                  $};
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-LaTeX Warning: Command \texteuro invalid in math mode on input line 36.
-
-
-LaTeX Warning: Command \texteuro invalid in math mode on input line 36.
-
-Missing character: There is no ¿ in font cmr10!
-f:/Dokumente/GitHub/shitziger.github.io/tex/stat_gewinne.tex:37: Undefined control sequence.
-<argument> \text 
-                 \texteuro 
-l.37 ...rate] at (3,-1) {$\unit[5]{\text\texteuro}
-                                                  $};
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-LaTeX Warning: Command \texteuro invalid in math mode on input line 37.
-
-
-LaTeX Warning: Command \texteuro invalid in math mode on input line 37.
-
-Missing character: There is no ¿ in font cmr10!
-f:/Dokumente/GitHub/shitziger.github.io/tex/stat_gewinne.tex:38: Undefined control sequence.
-<argument> \text 
-                 \texteuro 
-l.38 ...rate] at (5,-1) {$\unit[4]{\text\texteuro}
-                                                  $};
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-LaTeX Warning: Command \texteuro invalid in math mode on input line 38.
-
-
-LaTeX Warning: Command \texteuro invalid in math mode on input line 38.
-
-Missing character: There is no ¿ in font cmr10!
-f:/Dokumente/GitHub/shitziger.github.io/tex/stat_gewinne.tex:39: Undefined control sequence.
-<argument> \text 
-                 \texteuro 
-l.39 ...rate] at (7,-1) {$\unit[3]{\text\texteuro}
-                                                  $};
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-LaTeX Warning: Command \texteuro invalid in math mode on input line 39.
-
-
-LaTeX Warning: Command \texteuro invalid in math mode on input line 39.
-
-Missing character: There is no ¿ in font cmr10!
-f:/Dokumente/GitHub/shitziger.github.io/tex/stat_gewinne.tex:40: Undefined control sequence.
-<argument> \text 
-                 \texteuro 
-l.40 ...rate] at (9,-1) {$\unit[3]{\text\texteuro}
-                                                  $};
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-LaTeX Warning: Command \texteuro invalid in math mode on input line 40.
-
-
-LaTeX Warning: Command \texteuro invalid in math mode on input line 40.
-
-Missing character: There is no ¿ in font cmr10!
-f:/Dokumente/GitHub/shitziger.github.io/tex/stat_gewinne.tex:41: Undefined control sequence.
-<argument> \text 
-                 \texteuro 
-l.41 ...ate] at (11,-1) {$\unit[1]{\text\texteuro}
-                                                  $};
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-LaTeX Warning: Command \texteuro invalid in math mode on input line 41.
-
-
-LaTeX Warning: Command \texteuro invalid in math mode on input line 41.
+LaTeX Warning: Command \texteuro invalid in math mode on input line 45.
 
 Missing character: There is no ¿ in font cmr10!
 [1
 
-{c:/Program Files/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (./stat_gewinne.aux)
+{c:/Program Files/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
+f:/Dokumente/GitHub/shitziger.github.io/tex/stat_gewinne.tex:62: Undefined control sequence.
+<argument> \text 
+                 \texteuro 
+l.62 ...orate] at (2,0) {$\unit[6]{\text\texteuro}
+                                                  $};
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Command \texteuro invalid in math mode on input line 62.
+
+
+LaTeX Warning: Command \texteuro invalid in math mode on input line 62.
+
+Missing character: There is no ¿ in font cmr10!
+[2]
+f:/Dokumente/GitHub/shitziger.github.io/tex/stat_gewinne.tex:79: Undefined control sequence.
+<argument> \text 
+                 \texteuro 
+l.79 ...orate] at (4,0) {$\unit[2]{\text\texteuro}
+                                                  $};
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Command \texteuro invalid in math mode on input line 79.
+
+
+LaTeX Warning: Command \texteuro invalid in math mode on input line 79.
+
+Missing character: There is no ¿ in font cmr10!
+[3]
+f:/Dokumente/GitHub/shitziger.github.io/tex/stat_gewinne.tex:96: Undefined control sequence.
+<argument> \text 
+                 \texteuro 
+l.96 ...orate] at (6,0) {$\unit[3]{\text\texteuro}
+                                                  $};
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Command \texteuro invalid in math mode on input line 96.
+
+
+LaTeX Warning: Command \texteuro invalid in math mode on input line 96.
+
+Missing character: There is no ¿ in font cmr10!
+[4]
+f:/Dokumente/GitHub/shitziger.github.io/tex/stat_gewinne.tex:114: Undefined control sequence.
+<argument> \text 
+                 \texteuro 
+l.114 ...rate] at (8,0) {$\unit[4]{\text\texteuro}
+                                                  $};
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Command \texteuro invalid in math mode on input line 114.
+
+
+LaTeX Warning: Command \texteuro invalid in math mode on input line 114.
+
+Missing character: There is no ¿ in font cmr10!
+[5]
+f:/Dokumente/GitHub/shitziger.github.io/tex/stat_gewinne.tex:131: Undefined control sequence.
+<argument> \text 
+                 \texteuro 
+l.131 ...ate] at (10,0) {$\unit[3]{\text\texteuro}
+                                                  $};
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Command \texteuro invalid in math mode on input line 131.
+
+
+LaTeX Warning: Command \texteuro invalid in math mode on input line 131.
+
+Missing character: There is no ¿ in font cmr10!
+[6]
+f:/Dokumente/GitHub/shitziger.github.io/tex/stat_gewinne.tex:148: Undefined control sequence.
+<argument> \text 
+                 \texteuro 
+l.148 ...ate] at (12,0) {$\unit[4]{\text\texteuro}
+                                                  $};
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Command \texteuro invalid in math mode on input line 148.
+
+
+LaTeX Warning: Command \texteuro invalid in math mode on input line 148.
+
+Missing character: There is no ¿ in font cmr10!
+[7]
+f:/Dokumente/GitHub/shitziger.github.io/tex/stat_gewinne.tex:165: Undefined control sequence.
+<argument> \text 
+                 \texteuro 
+l.165 ...te] at (-1,-1) {$\unit[4]{\text\texteuro}
+                                                  $};
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Command \texteuro invalid in math mode on input line 165.
+
+
+LaTeX Warning: Command \texteuro invalid in math mode on input line 165.
+
+Missing character: There is no ¿ in font cmr10!
+[8]
+f:/Dokumente/GitHub/shitziger.github.io/tex/stat_gewinne.tex:182: Undefined control sequence.
+<argument> \text 
+                 \texteuro 
+l.182 ...ate] at (1,-1) {$\unit[5]{\text\texteuro}
+                                                  $};
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Command \texteuro invalid in math mode on input line 182.
+
+
+LaTeX Warning: Command \texteuro invalid in math mode on input line 182.
+
+Missing character: There is no ¿ in font cmr10!
+[9]
+f:/Dokumente/GitHub/shitziger.github.io/tex/stat_gewinne.tex:200: Undefined control sequence.
+<argument> \text 
+                 \texteuro 
+l.200 ...ate] at (3,-1) {$\unit[5]{\text\texteuro}
+                                                  $};
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Command \texteuro invalid in math mode on input line 200.
+
+
+LaTeX Warning: Command \texteuro invalid in math mode on input line 200.
+
+Missing character: There is no ¿ in font cmr10!
+[10]
+f:/Dokumente/GitHub/shitziger.github.io/tex/stat_gewinne.tex:217: Undefined control sequence.
+<argument> \text 
+                 \texteuro 
+l.217 ...ate] at (5,-1) {$\unit[4]{\text\texteuro}
+                                                  $};
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Command \texteuro invalid in math mode on input line 217.
+
+
+LaTeX Warning: Command \texteuro invalid in math mode on input line 217.
+
+Missing character: There is no ¿ in font cmr10!
+[11]
+f:/Dokumente/GitHub/shitziger.github.io/tex/stat_gewinne.tex:234: Undefined control sequence.
+<argument> \text 
+                 \texteuro 
+l.234 ...ate] at (7,-1) {$\unit[3]{\text\texteuro}
+                                                  $};
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Command \texteuro invalid in math mode on input line 234.
+
+
+LaTeX Warning: Command \texteuro invalid in math mode on input line 234.
+
+Missing character: There is no ¿ in font cmr10!
+[12]
+f:/Dokumente/GitHub/shitziger.github.io/tex/stat_gewinne.tex:251: Undefined control sequence.
+<argument> \text 
+                 \texteuro 
+l.251 ...te] at (11,-1) {$\unit[1]{\text\texteuro}
+                                                  $};
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Command \texteuro invalid in math mode on input line 251.
+
+
+LaTeX Warning: Command \texteuro invalid in math mode on input line 251.
+
+Missing character: There is no ¿ in font cmr10!
+[13]
+f:/Dokumente/GitHub/shitziger.github.io/tex/stat_gewinne.tex:264: Extra \endgroup.
+\color@endgroup ->\endgraf \endgroup 
+                                     
+l.264 \end{document}
+                    
+Things are pretty mixed up, but I think the worst is over.
+
+f:/Dokumente/GitHub/shitziger.github.io/tex/stat_gewinne.tex:264: Too many }'s.
+\endsa@boxit ...dvarwidth \color@endgroup \egroup 
+                                                  
+l.264 \end{document}
+                    
+You've closed more groups than you opened.
+Such booboos are generally harmless, so keep going.
+
+[14] (./stat_gewinne.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-10-23>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 14908 strings out of 474398
- 330448 string characters out of 5747129
- 1942036 words of memory out of 5000000
- 36721 multiletter control sequences out of 15000+600000
+ 14937 strings out of 474398
+ 331090 string characters out of 5747129
+ 1925036 words of memory out of 5000000
+ 36747 multiletter control sequences out of 15000+600000
  561149 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,7n,107p,465b,870s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,7n,107p,465b,867s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/Program Files/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
-Output written on stat_gewinne.pdf (1 page, 12962 bytes).
+Output written on stat_gewinne.pdf (14 pages, 16538 bytes).
 PDF statistics:
- 16 PDF objects out of 1000 (max. 8388607)
- 10 compressed objects within 1 object stream
+ 58 PDF objects out of 1000 (max. 8388607)
+ 39 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

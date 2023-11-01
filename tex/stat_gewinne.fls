@@ -39,6 +39,8 @@ INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/base/ifthen.sty
 INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/base/ifthen.sty
 INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/units/nicefrac.sty
 INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/units/nicefrac.sty
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/base/textcomp.sty
+INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/base/textcomp.sty
 INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
 INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/pgf/frontendlayer/tikz.sty
 INPUT c:/Program Files/texlive/2023/texmf-dist/tex/latex/pgf/basiclayer/pgf.sty
