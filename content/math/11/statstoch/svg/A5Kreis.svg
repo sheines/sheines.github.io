@@ -1,0 +1,69 @@
+<svg viewBox="0 0 1345 993" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xml:space="preserve" overflow="hidden" style="Background: #454545">
+    <defs>
+        <clipPath id="clip0">
+            <rect x="1146" y="201" width="1345" height="993" />
+        </clipPath>
+    </defs>
+    <g clip-path="url(#clip0)" transform="translate(-1146 -201)">
+        <!-- <rect x="1147" y="202" width="1342" height="990" fill="#FFFFFF" /> -->
+        <g>
+            <path d="M1700 252.542C1832.5 252.542 1958.1 311.643 2042.56 413.737L1700 697.125Z" stroke="#a7a7a8"
+                stroke-width="6.875" stroke-linejoin="round" stroke-miterlimit="10" fill="#548235"
+                fill-rule="evenodd" />
+        </g>
+        <g>
+            <path d="M2042.56 413.737C2192.16 594.575 2175.43 860.551 2004.34 1021.21L1700 697.125Z" stroke="#a7a7a8"
+                stroke-width="6.875" stroke-linejoin="round" stroke-miterlimit="10" fill="#C00000"
+                fill-rule="evenodd" />
+        </g>
+        <g>
+            <path d="M2004.34 1021.21C1907.75 1111.92 1775.74 1154.81 1644.28 1138.2L1700 697.125Z" stroke="#a7a7a8"
+                stroke-width="6.875" stroke-linejoin="round" stroke-miterlimit="10" fill="#2F5597"
+                fill-rule="evenodd" />
+        </g>
+        <g>
+            <path
+                d="M1644.28 1138.2C1400.68 1107.43 1228.15 885.005 1258.92 641.404 1279.25 480.517 1385.56 343.459 1536.34 283.762L1700 697.125Z"
+                stroke="#a7a7a8" stroke-width="6.875" stroke-linejoin="round" stroke-miterlimit="10" fill="#0D0D0D"
+                fill-rule="evenodd" />
+        </g>
+        <g>
+            <path d="M1536.34 283.762C1588.44 263.134 1643.97 252.541 1700 252.541L1700 697.125Z" stroke="#a7a7a8"
+                stroke-width="6.875" stroke-linejoin="round" stroke-miterlimit="10" fill="#FF00FF"
+                fill-rule="evenodd" />
+        </g>
+        <g>
+            <rect x="2248.5" y="540.5" width="23" height="22" stroke="none" stroke-width="6.875"
+                stroke-linejoin="round" stroke-miterlimit="10" fill="#548235" />
+        </g>
+        <g><text fill="#a7a7a8" font-family="Calibri,Calibri_MSFontService,sans-serif" font-weight="400" font-size="41"
+                transform="matrix(1 0 0 1 2280.89 563)">grün</text></g>
+        <g>
+            <rect x="2248.5" y="617.5" width="23" height="23.0001" stroke="none" stroke-width="6.875"
+                stroke-linejoin="round" stroke-miterlimit="10" fill="#C00000" />
+        </g>
+        <g><text fill="#a7a7a8" font-family="Calibri,Calibri_MSFontService,sans-serif" font-weight="400" font-size="41"
+                transform="matrix(1 0 0 1 2280.89 640)">rot</text></g>
+        <g>
+            <rect x="2248.5" y="694.5" width="23" height="23.0001" stroke="none" stroke-width="6.875"
+                stroke-linejoin="round" stroke-miterlimit="10" fill="#2F5597" />
+        </g>
+        <g><text fill="#a7a7a8" font-family="Calibri,Calibri_MSFontService,sans-serif" font-weight="400" font-size="41"
+                transform="matrix(1 0 0 1 2280.89 718)">blau</text></g>
+        <g>
+            <rect x="2248.5" y="772.5" width="23" height="22" stroke="none" stroke-width="6.875"
+                stroke-linejoin="round" stroke-miterlimit="10" fill="#0D0D0D" />
+        </g>
+        <g><text fill="#a7a7a8" font-family="Calibri,Calibri_MSFontService,sans-serif" font-weight="400" font-size="41"
+                transform="matrix(1 0 0 1 2280.89 795)">schwarz</text></g>
+        <g>
+            <rect x="2248.5" y="849.5" width="23" height="23.0001" stroke="none" stroke-width="6.875"
+                stroke-linejoin="round" stroke-miterlimit="10" fill="#FF00FF" />
+        </g>
+        <g><text fill="#a7a7a8" font-family="Calibri,Calibri_MSFontService,sans-serif" font-weight="400" font-size="41"
+                transform="matrix(1 0 0 1 2280.89 873)">pink</text></g>
+        <!-- <rect x="1147.5" y="202.5" width="1342" height="990" stroke="#D9D9D9" stroke-width="3.4375"
+            stroke-linejoin="round" stroke-miterlimit="10" fill="none" /> -->
+    </g>
+</svg>

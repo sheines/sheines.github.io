@@ -1,0 +1,78 @@
+<svg viewBox="0 0 1652 993" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xml:space="preserve" overflow="hidden" style="Background: #454545">
+    <defs>
+        <clipPath id="clip0">
+            <rect x="2865" y="1238" width="1652" height="993" />
+        </clipPath>
+    </defs>
+    <g clip-path="url(#clip0)" transform="translate(-2865 -1238)">
+        <!-- <rect x="2866" y="1239" width="1649" height="990" fill="#FFFFFF" /> -->
+        <g>
+            <path
+                d="M3282.61 1289.5 3282.61 2025.5M3514.62 1289.5 3514.62 2025.5M3745.62 1289.5 3745.62 2025.5M3977.63 1289.5 3977.63 2025.5M4208.5 1289.5 4208.5 2025.5"
+                stroke="#D9D9D9" stroke-width="3.4375" stroke-linejoin="round" stroke-miterlimit="10" fill="none" />
+        </g>
+        <g>
+            <path d="M3376.11 1927.06 3052 1927.06 3052 1819.06 3376.11 1819.06Z" fill="#548235" />
+        </g>
+        <g>
+            <path d="M3607.12 1819.06 3052 1819.06 3052 1711.06 3607.12 1711.06Z" fill="#C00000" />
+        </g>
+        <g>
+            <path d="M3376.11 1711.06 3052 1711.06 3052 1603.05 3376.11 1603.05Z" fill="#2F5597" />
+        </g>
+        <g>
+            <path d="M4023.13 1603.05 3052 1603.05 3052 1495.05 4023.13 1495.05Z" />
+        </g>
+        <g>
+            <path d="M3190.1 1495.05 3052 1495.05 3052 1387.05 3190.1 1387.05Z" fill="#FF00FF" />
+        </g>
+        <g>
+            <path d="M0 0 0.000360892 736" stroke="#D9D9D9" stroke-width="3.4375" stroke-linejoin="round"
+                stroke-miterlimit="10" fill="none" fill-rule="evenodd" transform="matrix(1 0 0 -1 3051.5 2025.5)" />
+        </g>
+        <g>
+            <path d="M3038.5 2025.5 3051.5 2025.5M3038.5 1289.5 3051.5 1289.5" stroke="#D9D9D9" stroke-width="3.4375"
+                stroke-linejoin="round" stroke-miterlimit="10" fill="none" />
+        </g>
+        <g><text fill="#a7a7a8" font-family="Calibri,Calibri_MSFontService,sans-serif" font-weight="400" font-size="41"
+                transform="matrix(1 0 0 1 3041.2 2091)">0</text></g>
+        <g><text fill="#a7a7a8" font-family="Calibri,Calibri_MSFontService,sans-serif" font-weight="400" font-size="41"
+                transform="matrix(1 0 0 1 3272.61 2091)">5</text></g>
+        <g><text fill="#a7a7a8" font-family="Calibri,Calibri_MSFontService,sans-serif" font-weight="400" font-size="41"
+                transform="matrix(1 0 0 1 3493.56 2091)">10</text></g>
+        <g><text fill="#a7a7a8" font-family="Calibri,Calibri_MSFontService,sans-serif" font-weight="400" font-size="41"
+                transform="matrix(1 0 0 1 3724.97 2091)">15</text></g>
+        <g><text fill="#a7a7a8" font-family="Calibri,Calibri_MSFontService,sans-serif" font-weight="400" font-size="41"
+                transform="matrix(1 0 0 1 3956.38 2091)">20</text></g>
+        <g><text fill="#a7a7a8" font-family="Calibri,Calibri_MSFontService,sans-serif" font-weight="400" font-size="41"
+                transform="matrix(1 0 0 1 4187.78 2091)">25</text></g>
+        <g>
+            <rect x="4302" y="1568" width="22" height="23" fill="#FF00FF" />
+        </g>
+        <g><text fill="#a7a7a8" font-family="Calibri,Calibri_MSFontService,sans-serif" font-weight="400" font-size="41"
+                transform="matrix(1 0 0 1 4333.91 1591)">pink</text></g>
+        <g>
+            <rect x="4302" y="1645" width="22" height="23" />
+        </g>
+        <g><text fill="#a7a7a8" font-family="Calibri,Calibri_MSFontService,sans-serif" font-weight="400" font-size="41"
+                transform="matrix(1 0 0 1 4333.91 1668)">schwarz</text></g>
+        <g>
+            <rect x="4302" y="1723" width="22" height="22" fill="#2F5597" />
+        </g>
+        <g><text fill="#a7a7a8" font-family="Calibri,Calibri_MSFontService,sans-serif" font-weight="400" font-size="41"
+                transform="matrix(1 0 0 1 4333.91 1745)">blau</text></g>
+        <g>
+            <rect x="4302" y="1800" width="22" height="23" fill="#C00000" />
+        </g>
+        <g><text fill="#a7a7a8" font-family="Calibri,Calibri_MSFontService,sans-serif" font-weight="400" font-size="41"
+                transform="matrix(1 0 0 1 4333.91 1823)">rot</text></g>
+        <g>
+            <rect x="4302" y="1877" width="22" height="23" fill="#548235" />
+        </g>
+        <g><text fill="#a7a7a8" font-family="Calibri,Calibri_MSFontService,sans-serif" font-weight="400" font-size="41"
+                transform="matrix(1 0 0 1 4333.91 1900)">grün</text></g>
+        <!-- <rect x="2866.5" y="1239.5" width="1649" height="990" stroke="#D9D9D9" stroke-width="3.4375"
+            stroke-linejoin="round" stroke-miterlimit="10" fill="none" /> -->
+    </g>
+</svg>

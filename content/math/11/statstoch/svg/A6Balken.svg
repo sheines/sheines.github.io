@@ -1,0 +1,76 @@
+<svg viewBox="0 0 1653 993" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xml:space="preserve" overflow="hidden" style="Background: #454545">
+    <defs>
+        <clipPath id="clip0">
+            <rect x="1143" y="1238" width="1653" height="993" />
+        </clipPath>
+    </defs>
+    <g clip-path="url(#clip0)" transform="translate(-1143 -1238)">
+        <!-- <rect x="1144" y="1239" width="1650" height="990" fill="#FFFFFF" /> -->
+        <g>
+            <path
+                d="M1204.5 1289.5 1204.5 2017.5M1586.55 1289.5 1586.55 2017.5M1968.56 1289.5 1968.56 2017.5M2350.58 1289.5 2350.58 2017.5M2733.5 1289.5 2733.5 2017.5"
+                stroke="#D9D9D9" stroke-width="3.4375" stroke-linejoin="round" stroke-miterlimit="10" fill="none" />
+        </g>
+        <g>
+            <path d="M1587.05 1933.06 1205 1933.06 1205 1840.06 1587.05 1840.06Z" fill="#4472C4" />
+        </g>
+        <g>
+            <path d="M1587.05 1840.06 1205 1840.06 1205 1747.06 1587.05 1747.06Z" fill="#ED7D31" />
+        </g>
+        <g>
+            <path d="M2733.09 1747.06 1205 1747.06 1205 1653.05 2733.09 1653.05Z" fill="#A5A5A5" />
+        </g>
+        <g>
+            <path d="M2733.09 1653.05 1205 1653.05 1205 1560.05 2733.09 1560.05Z" fill="#FFC000" />
+        </g>
+        <g>
+            <path d="M2351.08 1560.05 1205 1560.05 1205 1467.05 2351.08 1467.05Z" fill="#5B9BD5" />
+        </g>
+        <g>
+            <path d="M1587.05 1467.05 1205 1467.05 1205 1374.05 1587.05 1374.05Z" fill="#70AD47" />
+        </g>
+        <g><text fill="#a7a7a8" font-family="Calibri,Calibri_MSFontService,sans-serif" font-weight="400" font-size="41"
+                transform="matrix(1 0 0 1 1194.42 2083)">0</text></g>
+        <g><text fill="#a7a7a8" font-family="Calibri,Calibri_MSFontService,sans-serif" font-weight="400" font-size="41"
+                transform="matrix(1 0 0 1 1576.48 2083)">1</text></g>
+        <g><text fill="#a7a7a8" font-family="Calibri,Calibri_MSFontService,sans-serif" font-weight="400" font-size="41"
+                transform="matrix(1 0 0 1 1958.55 2083)">2</text></g>
+        <g><text fill="#a7a7a8" font-family="Calibri,Calibri_MSFontService,sans-serif" font-weight="400" font-size="41"
+                transform="matrix(1 0 0 1 2340.62 2083)">3</text></g>
+        <g><text fill="#a7a7a8" font-family="Calibri,Calibri_MSFontService,sans-serif" font-weight="400" font-size="41"
+                transform="matrix(1 0 0 1 2722.68 2083)">4</text></g>
+        <g>
+            <rect x="1589" y="2151" width="22.9996" height="23" fill="#70AD47" />
+        </g>
+        <g><text fill="#a7a7a8" font-family="Calibri,Calibri_MSFontService,sans-serif" font-weight="400" font-size="41"
+                transform="matrix(1 0 0 1 1630.67 2174)">6 € </text></g>
+        <g>
+            <rect x="1724" y="2151" width="23" height="23" fill="#5B9BD5" />
+        </g>
+        <g><text fill="#a7a7a8" font-family="Calibri,Calibri_MSFontService,sans-serif" font-weight="400" font-size="41"
+                transform="matrix(1 0 0 1 1765.52 2174)">5 € </text></g>
+        <g>
+            <rect x="1859" y="2151" width="22" height="23" fill="#FFC000" />
+        </g>
+        <g><text fill="#a7a7a8" font-family="Calibri,Calibri_MSFontService,sans-serif" font-weight="400" font-size="41"
+                transform="matrix(1 0 0 1 1900.37 2174)">4 € </text></g>
+        <g>
+            <rect x="1994" y="2151" width="22" height="23" fill="#A5A5A5" />
+        </g>
+        <g><text fill="#a7a7a8" font-family="Calibri,Calibri_MSFontService,sans-serif" font-weight="400" font-size="41"
+                transform="matrix(1 0 0 1 2035.23 2174)">3 € </text></g>
+        <g>
+            <rect x="2128" y="2151" width="22.9998" height="23" fill="#ED7D31" />
+        </g>
+        <g><text fill="#a7a7a8" font-family="Calibri,Calibri_MSFontService,sans-serif" font-weight="400" font-size="41"
+                transform="matrix(1 0 0 1 2170.08 2174)">2 € </text></g>
+        <g>
+            <rect x="2263" y="2151" width="23" height="23" fill="#4472C4" />
+        </g>
+        <g><text fill="#a7a7a8" font-family="Calibri,Calibri_MSFontService,sans-serif" font-weight="400" font-size="41"
+                transform="matrix(1 0 0 1 2304.93 2174)">1 € </text></g>
+        <!-- <rect x="1144.5" y="1239.5" width="1650" height="990" stroke="#D9D9D9" stroke-width="3.4375"
+            stroke-linejoin="round" stroke-miterlimit="10" fill="none" /> -->
+    </g>
+</svg>
