@@ -1,1 +1,28 @@
-<svg width="1653" height="993" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" overflow="hidden"><defs><clipPath id="clip0"><rect x="1146" y="1227" width="1653" height="993"/></clipPath><clipPath id="clip1"><rect x="1197" y="1278" width="1552" height="892"/></clipPath></defs><g clip-path="url(#clip0)" transform="translate(-1146 -1227)"><rect x="1147" y="1228" width="1650" height="990" fill="#FFFFFF"/><g clip-path="url(#clip1)"><path d="M1584.05 1880.06 1197 1880.06 1197 1565.05 1584.05 1565.05Z" fill="#4472C4"/></g><g><path d="M1894.06 1880.06 1584.05 1880.06 1584.05 1565.05 1894.06 1565.05Z" fill="#ED7D31"/></g><g><path d="M2049.07 1880.06 1894.06 1880.06 1894.06 1565.05 2049.07 1565.05Z" fill="#A5A5A5"/></g><g><path d="M2591.08 1880.06 2049.07 1880.06 2049.07 1565.05 2591.08 1565.05Z" fill="#FFC000"/></g><rect x="1147.5" y="1228.5" width="1650" height="990" stroke="#D9D9D9" stroke-width="3.4375" stroke-linejoin="round" stroke-miterlimit="10" fill="none"/></g></svg>
+<svg viewBox="0 0 1653 993" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+    xml:space="preserve" overflow="hidden">
+    <defs>
+        <clipPath id="clip0">
+            <rect x="1146" y="1227" width="1653" height="993" />
+        </clipPath>
+        <clipPath id="clip1">
+            <rect x="1197" y="1278" width="1552" height="892" />
+        </clipPath>
+    </defs>
+    <g clip-path="url(#clip0)" transform="translate(-1146 -1227)">
+        <!-- <rect x="1147" y="1228" width="1650" height="990" fill="#FFFFFF" /> -->
+        <g clip-path="url(#clip1)">
+            <path d="M1584.05 1880.06 1197 1880.06 1197 1565.05 1584.05 1565.05Z" fill="#4472C4" />
+        </g>
+        <g>
+            <path d="M1894.06 1880.06 1584.05 1880.06 1584.05 1565.05 1894.06 1565.05Z" fill="#ED7D31" />
+        </g>
+        <g>
+            <path d="M2049.07 1880.06 1894.06 1880.06 1894.06 1565.05 2049.07 1565.05Z" fill="#A5A5A5" />
+        </g>
+        <g>
+            <path d="M2591.08 1880.06 2049.07 1880.06 2049.07 1565.05 2591.08 1565.05Z" fill="#FFC000" />
+        </g>
+        <!-- <rect x="1147.5" y="1228.5" width="1650" height="990" stroke="#D9D9D9" stroke-width="3.4375"
+            stroke-linejoin="round" stroke-miterlimit="10" fill="none" /> -->
+    </g>
+</svg>
