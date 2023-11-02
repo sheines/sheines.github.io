@@ -1,0 +1,34 @@
+<svg viewBox="0 0 1653 993" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+        <clipPath id="clip0">
+            <rect x="1146" y="201" width="1653" height="993" />
+        </clipPath>
+    </defs>
+    <g clip-path="url(#clip0)" transform="translate(-1146 -201)">
+        <!-- <rect x="1147" y="202" width="1650" height="990" fill="#FFFFFF" /> -->
+        <g>
+            <path d="M1971.75 252.542C2065.64 252.542 2157.11 282.264 2233.07 337.45L1971.75 697.125Z" stroke="#FFFFFF"
+                stroke-width="6.875" stroke-linejoin="round" stroke-miterlimit="10" fill="#4472C4"
+                fill-rule="evenodd" />
+        </g>
+        <g>
+            <path d="M2233.07 337.449C2388.89 450.66 2454.09 651.33 2394.57 834.508L1971.75 697.125Z" stroke="#FFFFFF"
+                stroke-width="6.875" stroke-linejoin="round" stroke-miterlimit="10" fill="#ED7D31"
+                fill-rule="evenodd" />
+        </g>
+        <g>
+            <path
+                d="M2394.57 834.509C2318.7 1068.03 2067.89 1195.82 1834.37 1119.95 1790 1105.53 1748.17 1084.22 1710.43 1056.8L1971.75 697.125Z"
+                stroke="#FFFFFF" stroke-width="6.875" stroke-linejoin="round" stroke-miterlimit="10" fill="#A5A5A5"
+                fill-rule="evenodd" />
+        </g>
+        <g>
+            <path
+                d="M1710.43 1056.8C1511.79 912.478 1467.75 634.449 1612.07 435.806 1695.72 320.672 1829.44 252.542 1971.75 252.542L1971.75 697.125Z"
+                stroke="#FFFFFF" stroke-width="6.875" stroke-linejoin="round" stroke-miterlimit="10" fill="#FFC000"
+                fill-rule="evenodd" />
+        </g>
+        <!-- <rect x="1147.5" y="202.5" width="1650" height="990" stroke="#D9D9D9" stroke-width="3.4375"
+            stroke-linejoin="round" stroke-miterlimit="10" fill="none" /> -->
+    </g>
+</svg>
