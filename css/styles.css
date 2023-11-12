@@ -214,10 +214,17 @@ ol.custom-marker.parens-around.lower-alpha > li::marker {
   
 }
 
+.theorie dt {
+  font-weight: 700;
+  color: var(--fg-header);
+  text-shadow: 7px 4px 3.5px rgb(130, 104, 0);
+}
+
 .schnipsel {
   min-height: 1rem;
   max-height: 20rem;
 }
+
 
 
 @media screen and (max-width: 700px) {
