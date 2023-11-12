@@ -217,7 +217,11 @@ ol.custom-marker.parens-around.lower-alpha > li::marker {
 .theorie dt {
   font-weight: 700;
   color: var(--fg-header);
-  text-shadow: 7px 4px 3.5px rgb(130, 104, 0);
+  text-shadow: 7px 4px 3.5px rgb(104, 83, 0);
+}
+.definition h4, .definition h3 {
+  color: var(--fg-header);
+  text-shadow: 7px 4px 3.5px rgb(104, 83, 0);
 }
 
 .schnipsel {
