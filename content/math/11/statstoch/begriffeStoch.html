@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width" initial-scale=1.0 />
     <meta name="author" content="Sebastian Hitziger" />
     <meta name="robot" content="noindex" />
-    <title> HITZ | Stat. & Stoch. | Begriffe Statistik</title>
+    <title> HITZ | Stat. & Stoch. | Begriffe Stochastik</title>
     <link rel="stylesheet" type="text/css" href="/css/colors.css" />
     <link rel="stylesheet" type="text/css" href="/css/gridNoTimeline.css" />
     <link rel="stylesheet" type="text/css" href="/css/navbar.css" />
@@ -42,11 +42,14 @@
     </header>
     <main>
         <section>
-            <h2>Begriffe der Statistik</h2>
+            <h2>Begriffe der Stochastik</h2>
             <div class="ziele">
                 <p>
-                    Nachfolgend sollen die bereits bekannten statistischen Begriffe aus der Sekundarstufe I wiederholt
+                    Nachfolgend sollen die bereits bekannten stochastikschen Begriffe aus der Sekundarstufe I wiederholt
                     und aufgefrischt werden.
+                </p>
+                <p>
+                    Weiterhin werden verschiedene Arten der Verknüpfung von Mengen betrachtet.
                 </p>
                 <p>
                     <a href="#aufgaben">Direkt zu den Aufgaben</a>
@@ -56,18 +59,49 @@
             <section>
                 <div class="theorie" id="PunktPunkt">
                     <div class="definition">
-                        <h4>Statistik</h4>
+                        <h4>Stochastik</h4>
                         <p>
-                            Statistik ist die Lehre von Methoden zum Umgang mit quantitativen Informationen (Daten).
+                            Die Stochastik ist die Mathematik des Zufalls und umfasst als Oberbegriff das Gebiet der Wahrscheinlichkeitsrechnung.
                         </p>
+                        
                         <p>
-                            Sie derjenige Teil der Mathematik, der euch wirklich ein Leben lang begleiten wird,
-                            selbst, wenn ihr Genderwissenschaften studieren solltet. &#128521;
+                            <h5>Begriffe der Stochastik</h5>
+                            <dl>
+                                <dt>Zufallversuch</dt>
+                                <dd>Ein Zufallsversuch ist ein Experiment dessen Ausgang (mit unseren Mitteln) nicht sicher vorhersagbar ist.</dd>
+                                <dt>Beobachtetes Merkmal</dt>
+                                <dd>Das beobachtete Merkmal ist jene Eigenschaft der Zufallsversuches, welche im weiteren Verlauf betrachtet wird.</dd>
+                                <dt>Ergebnis</dt>
+                                <dd>Ein Ergebnis ist ein möglicher Ausgang eines Zufallsversuchs.</dd>
+                                <dt>Ergebnisraum \(\Omega\)</dt>
+                                <dd>Der Ergebnisraum \(\Omega\) ist die Menge aller möglichen Ergebnisse.</dd>
+                                <dt>Ereignis</dt>
+                                <dd>Als Ereignis wird eine Zusammenfassung von Ergebnissen bezeichnet, die eine Teilmenge der Ergebnismenge ist. 
+                                    Meistens gibt es einen beschreibenden Satz dazu: z.B. &bdquo;Es wird eine gerade Zahl gewürfelt.&ldquo;</dd>
+                                <dt>Ereignismenge \(E\)</dt>
+                                <dd>Die Ereignismenge ist die Menge aller Ergebnisse, die zu dem Ereignis gehört.</dd>
+                                <dt>Elementarereignis</dt>
+                                <dd>Ein Elementarereignis ist ein Ereignis, welches nur ein einziges Ergebnis enthält.</dd>
+                                <dt>Unmögliches Ereignis</dt>
+                                <dd>Ein unmögliches Ereignis ist ein Ereignis, welches nie eintreten kann, da es keine Elementarereignisse enthält.</dd>
+                                <dt>Sicheres Ereignis</dt>
+                                <dd>Ein sicheres Ereignis ist ein Ereignis, welches immer eintritt, da es alle Elementarereignisse enthält.</dd>
+                                <dt>Laplace-Experiment</dt>
+                                <dd>Ein Laplace-Experiment ist ein Zufallsversuch, bei dem alle Ergebisse gleich wahrscheinlich sind.</dd>
+                            </dl>
                         </p>
                     </div>
+                    <h6>Beispiel</h6>
                     <p>
-                        Und weil die Statistik so wichtig ist, gibt es hier nun keine stupide Erklärung, sondern direkt
-                        die Aufgaben.
+                        Es soll mit einem klassischen Würfel gewürfelt werden:
+                        <ul>
+                            <li>Zufallsexperiment: Würfelwurf</li>
+                            <li>Beobachtetes Merkmal: Augenzahl</li>
+                            <li>Mögliche Ergebnisse: Augenzahlen 1 bis 6</li>
+                            <li>Ergebnisraum: \(\Omega=\{1, 2, 3, 4, 5, 6\}\)</li>
+                            <li>Mögliches Ereignis: \(E:\)&bdquo;Es wird eine gerade Zahl gewürfelt.&ldquo;</li>
+                            <li>Ereignismenge: \(E=\{2, 4, 6\}\)</li>
+                        </ul>
                     </p>
                 </div>
             </section>
@@ -466,7 +500,7 @@
         <a href="/misc/impressum.html">Impressum</a>
         <div class="lastModified" align="center">
             Zuletzt geändert:<br>
-            8. November 2023
+            12. November 2023
             <!-- <span id="lastModifiedDate"></span> -->
         </div>
         <a href="/misc/datenschutz.html">Datenschutz</a>
