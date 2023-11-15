@@ -61,67 +61,232 @@
                     <div class="definition">
                         <h4>Stochastik</h4>
                         <p>
-                            Die Stochastik ist die Mathematik des Zufalls und umfasst als Oberbegriff das Gebiet der Wahrscheinlichkeitsrechnung.
+                            Die Stochastik ist die Mathematik des Zufalls und umfasst als Oberbegriff das Gebiet der
+                            Wahrscheinlichkeitsrechnung.
                         </p>
-                        
+
                         <p>
-                            <h5>Begriffe der Stochastik</h5>
-                            <dl>
-                                <dt>Zufallversuch</dt>
-                                <dd>Ein Zufallsversuch ist ein Experiment dessen Ausgang (mit unseren Mitteln) nicht sicher vorhersagbar ist.</dd>
-                                <dt>Beobachtetes Merkmal</dt>
-                                <dd>Das beobachtete Merkmal ist jene Eigenschaft der Zufallsversuches, welche im weiteren Verlauf betrachtet wird.</dd>
-                                <dt>Ergebnis</dt>
-                                <dd>Ein Ergebnis ist ein möglicher Ausgang eines Zufallsversuchs.</dd>
-                                <dt>Ergebnisraum \(\Omega\)</dt>
-                                <dd>Der Ergebnisraum \(\Omega\) ist die Menge aller möglichen Ergebnisse.</dd>
-                                <dt>Ereignis</dt>
-                                <dd>Als Ereignis wird eine Zusammenfassung von Ergebnissen bezeichnet, die eine Teilmenge der Ergebnismenge ist. 
-                                    Meistens gibt es einen beschreibenden Satz dazu: z.B. &bdquo;Es wird eine gerade Zahl gewürfelt.&ldquo;</dd>
-                                <dt>Ereignismenge \(E\)</dt>
-                                <dd>Die Ereignismenge ist die Menge aller Ergebnisse, die zu dem Ereignis gehört.</dd>
-                                <dt>Elementarereignis</dt>
-                                <dd>Ein Elementarereignis ist ein Ereignis, welches nur ein einziges Ergebnis enthält.</dd>
-                                <dt>Unmögliches Ereignis</dt>
-                                <dd>Ein unmögliches Ereignis ist ein Ereignis, welches nie eintreten kann, da es keine Elementarereignisse enthält.</dd>
-                                <dt>Sicheres Ereignis</dt>
-                                <dd>Ein sicheres Ereignis ist ein Ereignis, welches immer eintritt, da es alle Elementarereignisse enthält.</dd>
-                                <dt>Laplace-Experiment</dt>
-                                <dd>Ein Laplace-Experiment ist ein Zufallsversuch, bei dem alle Ergebisse gleich wahrscheinlich sind.</dd>
-                            </dl>
+                        <h5>Begriffe der Stochastik</h5>
+                        <dl>
+                            <dt>Zufallversuch</dt>
+                            <dd>Ein Zufallsversuch ist ein Experiment dessen Ausgang (mit unseren Mitteln) nicht sicher
+                                vorhersagbar ist.</dd>
+                            <dt>Beobachtetes Merkmal</dt>
+                            <dd>Das beobachtete Merkmal ist jene Eigenschaft der Zufallsversuches, welche im weiteren
+                                Verlauf betrachtet wird.</dd>
+                            <dt>Ergebnis</dt>
+                            <dd>Ein Ergebnis ist ein möglicher Ausgang eines Zufallsversuchs.</dd>
+                            <dt>Ergebnisraum \(\Omega\)</dt>
+                            <dd>Der Ergebnisraum \(\Omega\) ist die Menge aller möglichen Ergebnisse.</dd>
+                            <dt>Ereignis</dt>
+                            <dd>Als Ereignis wird eine Zusammenfassung von Ergebnissen bezeichnet, die eine Teilmenge
+                                der Ergebnismenge ist.
+                                Meistens gibt es einen beschreibenden Satz dazu: z.B. &bdquo;Es wird eine gerade Zahl
+                                gewürfelt.&ldquo;</dd>
+                            <dt>Ereignismenge \(E\)</dt>
+                            <dd>Die Ereignismenge ist die Menge aller Ergebnisse, die zu dem Ereignis gehört.</dd>
+                            <dt>Elementarereignis</dt>
+                            <dd>Ein Elementarereignis ist ein Ereignis, welches nur ein einziges Ergebnis enthält.</dd>
+                            <dt>Unmögliches Ereignis</dt>
+                            <dd>Ein unmögliches Ereignis ist ein Ereignis, welches nie eintreten kann, da es keine
+                                Elementarereignisse enthält.</dd>
+                            <dt>Sicheres Ereignis</dt>
+                            <dd>Ein sicheres Ereignis ist ein Ereignis, welches immer eintritt, da es alle
+                                Elementarereignisse enthält.</dd>
+                            <dt>Laplace-Experiment</dt>
+                            <dd>Ein Laplace-Experiment ist ein Zufallsversuch, bei dem alle Ergebisse gleich
+                                wahrscheinlich sind.</dd>
+                        </dl>
                         </p>
                     </div>
                     <h6>Beispiel</h6>
                     <p>
                         Es soll mit einem klassischen Würfel gewürfelt werden:
-                        <ul>
-                            <li>Zufallsexperiment: Würfelwurf</li>
-                            <li>Beobachtetes Merkmal: Augenzahl</li>
-                            <li>Mögliche Ergebnisse: Augenzahlen 1 bis 6</li>
-                            <li>Ergebnisraum: \(\Omega=\{1, 2, 3, 4, 5, 6\}\)</li>
-                            <li>Mögliches Ereignis: \(E:\)&bdquo;Es wird eine gerade Zahl gewürfelt.&ldquo;</li>
-                            <li>Ereignismenge: \(E=\{2, 4, 6\}\)</li>
-                        </ul>
+                    <ul>
+                        <li>Zufallsexperiment: Würfelwurf</li>
+                        <li>Beobachtetes Merkmal: Augenzahl</li>
+                        <li>Mögliche Ergebnisse: Augenzahlen 1 bis 6</li>
+                        <li>Ergebnisraum: \(\Omega=\{1, 2, 3, 4, 5, 6\}\)</li>
+                        <li>Mögliches Ereignis: \(E:\)&bdquo;Es wird eine gerade Zahl gewürfelt.&ldquo;</li>
+                        <li>Ereignismenge: \(E=\{2, 4, 6\}\)</li>
+                    </ul>
                     </p>
                     <div class="definition">
                         <h4>Vereinigungs- und Schnittmengen</h4>
                         <p>
-                            Wenn zwei Ereignisse \(E_1\) und \(E_2\) miteinander interagieren, gibt es mehrere Möglichkeiten, wie diese zu betrachten:
+                            Wenn zwei Ereignisse \(E_1\) und \(E_2\) miteinander interagieren, gibt es mehrere
+                            Möglichkeiten, wie diese zu betrachten:
 
                             <!-- Bild -->
-                            <dl>
-                                <dt>Vereinigungsmenge</dt>
-                                <dd>
-                                    Die Vereinigungsmenge \(E_1 \cup E_2\) enthält <i>alle</i> Elemente der beiden Ereignismengen \(E_1\) und \(E_2\).
-                                    <!-- Bild -->
-                                </dd>
-                                <dt>Schnittmenge</dt>
-                                <dd>
-                                    Die Schnittmenge \(E_1 \cap E_2\) enthält alle Elemente, die jeweils in \(E_1\) <i>und</i> \(E_2\) enthalten sind.
-                                    <!-- Bild -->
-                                </dd>
-                            </dl>
+                        <dl>
+                            <dt>Vereinigungsmenge</dt>
+                            <dd>
+                                Die Vereinigungsmenge \(E_1 \cup E_2\) enthält <i>alle</i> Elemente der beiden
+                                Ereignismengen \(E_1\) und \(E_2\).
+                                <!-- Bild -->
+                            </dd>
+                            <dt>Schnittmenge</dt>
+                            <dd>
+                                Die Schnittmenge \(E_1 \cap E_2\) enthält alle Elemente, die jeweils in \(E_1\)
+                                <i>und</i> \(E_2\) enthalten sind.
+                                <!-- Bild -->
+                            </dd>
+                        </dl>
                         </p>
+                    </div>
+                    <div class="centered">
+                        <svg id="mengen_svg" version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'
+                            viewBox='0 -192.913 284.66 192.913'>
+                            <g id='page1'>
+                                <g transform='matrix(1 0 0 -1 0 0)'>
+                                    <path
+                                        d='M.597656 24.082V147.195C.597656 160.164 11.1133 170.68 24.082 170.68H260.582C273.551 170.68 284.066 160.164 284.066 147.195V24.082C284.066 11.1133 273.551 .597656 260.582 .597656H24.082C11.1133 .597656 .597656 11.1133 .597656 24.082Z'
+                                        fill='#545353' />
+                                    <path
+                                        d='M.597656 24.082V147.195C.597656 160.164 11.1133 170.68 24.082 170.68H260.582C273.551 170.68 284.066 160.164 284.066 147.195V24.082C284.066 11.1133 273.551 .597656 260.582 .597656H24.082C11.1133 .597656 .597656 11.1133 .597656 24.082Z'
+                                        stroke='#ffc' fill='none' stroke-width='1.19553' stroke-miterlimit='10' />
+                                    <g id="textA" opacity="0">
+
+                                    </g>
+                                    <g id="red" opacity="1">
+                                        <path
+                                            d='M60.3086 36.2305H54.2734L50.0078 31.9609V25.9258L54.2734 21.6602H60.3086L64.5781 25.9258V31.9609Z'
+                                            fill='red' />
+                                        <path d='M103.809 27.332L115.598 18.7695L124.16 30.5586L112.375 39.1211Z'
+                                            fill='red' />
+                                        <path
+                                            d='M195.129 36.3984L190.621 29.2969L194.52 21.8438L202.922 21.4922L207.43 28.5938L203.531 36.0469Z'
+                                            fill='red' />
+                                        <path d='M256.043 18.6484L266.016 29.2695L255.395 39.2422L245.422 28.6211Z'
+                                            fill='red' />
+                                        <path
+                                            d='M164.375 62.0273L162.871 56.1797L165.945 50.9844L171.789 49.4844L176.984 52.5586L178.484 58.4023L175.414 63.5977L169.566 65.0977Z'
+                                            fill='red' />
+                                        <path
+                                            d='M77.2305 85.8164L81.2813 78.4453L89.6914 78.2695L94.0469 85.4609L89.9961 92.832L81.5859 93.0078Z'
+                                            fill='red' />
+                                        <path
+                                            d='M114.551 76.6523L122.707 83.3984L118.809 93.2422L108.246 92.5781L105.613 82.3242Z'
+                                            fill='red' />
+                                        <path
+                                            d='M200.461 93.1602L195.766 92.5703L192.312 89.3281L191.426 84.6797L193.441 80.3945L197.59 78.1133L202.285 78.707L205.738 81.9492L206.625 86.5977L204.609 90.8828Z'
+                                            fill='red' />
+                                        <path
+                                            d='M220.832 109.234L227.012 105.91L233.461 108.664L235.328 115.43L231.203 121.105L224.195 121.418L219.578 116.137Z'
+                                            fill='red' />
+                                        <path
+                                            d='M256.34 121.848L250.598 119.98L247.859 114.605L249.723 108.863L255.102 106.125L260.84 107.988L263.578 113.367L261.715 119.105Z'
+                                            fill='red' />
+                                        <path
+                                            d='M22.4023 137.578L28.582 134.254L35.0352 137.012L36.8984 143.777L32.7773 149.453L25.7656 149.766L21.1523 144.484Z'
+                                            fill='red' />
+                                        <path d='M161.223 146.422L166.586 132.879L180.133 138.242L174.77 151.785Z'
+                                            fill='red' />
+                                    </g>
+                                    <g id="redViereck" opacity="1">
+                                        <path d='M256.043 18.6484L266.016 29.2695L255.395 39.2422L245.422 28.6211Z'
+                                        fill='red' />
+                                    <path d='M103.809 27.332L115.598 18.7695L124.16 30.5586L112.375 39.1211Z'
+                                        fill='red' />
+                                    <path d='M161.223 146.422L166.586 132.879L180.133 138.242L174.77 151.785Z'
+                                        fill='red' />
+                                    </g>
+                                    <g id="viereck" opacity="1">
+                                        
+                                        <path d='M18.6875 29.9141L27.9766 18.6875L39.2031 27.9766L29.9141 39.2031Z'
+                                            fill='blue' />
+                                        <path d='M152.387 31.1914L140.086 39L132.277 26.6953L144.578 18.8906Z'
+                                            fill='blue' />
+                                        <path d='M47.3984 54.418L60.1641 47.3984L67.1836 60.1641L54.418 67.1836Z'
+                                            fill='lime' />
+                                        <path d='M231.465 95.0938L217.918 89.7305L223.281 76.1836L236.828 81.5469Z'
+                                            fill='blue' />
+                                        <path d='M112.375 124.16L103.809 112.375L115.598 103.809L124.16 115.598Z'
+                                            fill='#ffbfbf' />
+                                        <path d='M67.4688 87.25L55.6797 95.8125L47.1172 84.0273L58.9023 75.4609Z'
+                                            fill='#ffbfbf' />
+                                        <path d='M188.852 115.598L197.414 103.809L209.203 112.375L200.637 124.16Z'
+                                            fill='lime' />
+                                        <path d='M225.762 47.1172L237.547 55.6797L228.984 67.4688L217.195 58.9023Z'
+                                            fill='magenta' />
+                                        <path d='M48.1133 147.008L52.6133 133.152L66.4727 137.656L61.9688 151.512Z'
+                                            fill='blue' />
+                                        <path d='M76.457 137.656L90.3164 133.152L94.8164 147.008L80.9609 151.512Z'
+                                            fill='magenta' />
+                                        <path d='M233.164 150.852L218.852 148.125L221.582 133.812L235.895 136.543Z'
+                                            fill='blue' />
+                                        <path d='M26.6992 124.039L18.8906 111.738L31.1914 103.93L39 116.234Z'
+                                            fill='lime' />
+                                    </g>
+
+                                    <g id="rest" opacity="1">
+                                        <path
+                                            d='M79.0742 35.1094L77.7461 24.6055L87.3242 20.1016L94.5703 27.8164L89.4727 37.0938Z'
+                                            fill='#ff8000' />
+                                        <path
+                                            d='M175.504 36.5469L164.937 35.8828L162.309 25.6289L171.246 19.957L179.398 26.707Z'
+                                            fill='lime' />
+                                        <path
+                                            d='M230.687 20.5742L236.359 29.5117L229.613 37.6641L219.77 33.7695L220.434 23.207Z'
+                                            fill='magenta' />
+                                        <path
+                                            d='M25.9688 64.8086L21.2109 59.6523L22.2773 52.7188L28.3633 49.2266L34.8867 51.8086L36.9336 58.5195L32.9648 64.3047Z'
+                                            fill='cyan' />
+                                       <path
+                                            d='M82.8711 49.3477L91.1328 50.9258L93.9023 58.8672L88.4063 65.2344L80.1406 63.6602L77.375 55.7148Z'
+                                            fill='blue' />
+                                        <path
+                                            d='M122.918 58.4219L115.672 66.1367L106.094 61.6289L107.422 51.1289L117.82 49.1445Z'
+                                            fill='#ff8000' />
+                                        <path
+                                            d='M151.055 59.5313L142.898 66.2773L133.961 60.6055L136.594 50.3555L147.156 49.6875Z'
+                                            fill='cyan' />
+                                        <path
+                                            d='M206.445 55.3867L206.148 60.1094L203.129 63.7578L198.543 64.9336L194.145 63.1914L191.605 59.1953L191.906 54.4727L194.922 50.8242L199.508 49.6484L203.906 51.3906Z'
+                                            fill='purple' />
+                                        <path
+                                            d='M251.887 65.4375L246.785 56.1641L254.031 48.4453L263.609 52.9531L262.281 63.457Z'
+                                            fill='lime' />
+                                        <path
+                                            d='M31.4414 93.3281L24.4922 92.3867L20.8906 86.3633L23.3594 79.793L30.0313 77.625L35.8867 81.4922L36.5156 88.4805Z'
+                                            fill='white' />
+                                        <path
+                                            d='M150.223 81.3008L148.895 91.8008L138.5 93.7852L133.398 84.5117L140.645 76.793Z'
+                                            fill='cyan' />
+                                        <path
+                                            d='M164.227 81.1055L169.324 77.8711L175.211 79.1875L178.445 84.2813L177.129 90.1719L172.035 93.4063L166.145 92.0898L162.91 86.9922Z'
+                                            fill='lime' />
+                                        <path
+                                            d='M261.457 92.5781L250.895 93.2422L247 83.3984L255.152 76.6523L264.09 82.3242Z'
+                                            fill='teal' />
+                                        <path
+                                            d='M56.7266 122.973L48.5703 116.223L52.4688 106.383L63.0313 107.047L65.6641 117.301Z'
+                                            fill='#ff8000' />
+                                        <path
+                                            d='M78.4258 112.133L79.8008 109.359L82.1875 107.387L85.1719 106.555L88.2344 107.004L90.8477 108.664L92.5625 111.242L93.0781 114.297L92.3086 117.297L90.3867 119.723L87.6406 121.156L84.5508 121.352L81.6484 120.273L79.4375 118.105L78.2969 115.227Z'
+                                            fill='blue' />
+                                        <path
+                                            d='M146.664 120.813L139.695 121.629L134.715 116.691L135.469 109.715L141.391 105.957L148.023 108.242L150.371 114.855Z'
+                                            fill='darkgoldenrod' />
+                                        <path
+                                            d='M178.051 116.379L174.785 120.559L169.602 121.66L164.918 119.172L162.934 114.254L164.57 109.211L169.066 106.402L174.316 107.141L177.867 111.082Z'
+                                            fill='blue' />
+                                        <path
+                                            d='M107.82 148.895L105.84 138.5L115.113 133.398L122.828 140.645L118.324 150.223Z'
+                                            fill='darkgoldenrod' />
+                                        <path
+                                            d='M145.098 150.273L136.836 148.699L134.07 140.758L139.566 134.391L147.828 135.965L150.594 143.906Z'
+                                            fill='#007688' />
+                                        <path
+                                            d='M193.719 136.68L198.594 134.594L203.668 136.125L206.574 140.562L205.945 145.828L202.078 149.457L196.785 149.754L192.539 146.578L191.328 141.414Z'
+                                            fill='magenta' />
+                                        <path
+                                            d='M264.09 139.02L261.457 149.27L250.895 149.934L247 140.094L255.152 133.348Z'
+                                            fill='teal' />
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
                     </div>
                 </div>
             </section>
@@ -143,7 +308,7 @@
                             <li>Häufigkeitstabelle</li>
                         </ul>
                     </li>
-                    
+
                 </ol>
             </section>
             <section class="loesungen">
@@ -151,16 +316,18 @@
                 <details id="a1">
                     <summary>Begriffe</summary>
                     <ul class="custom-marker parens-around lower-alpha more-spacing">
-                        <li>Absolute Häufigkeit: Wie oft kommt ein Merkmal vor? Z.B In einer Klasse sind 13 Jungen und 15 Mädchen.</li>
-                        <li>Relative Häufigkeit: Wie groß ist der Anteil des Merkmals an der Gesamtmenge? 
+                        <li>Absolute Häufigkeit: Wie oft kommt ein Merkmal vor? Z.B In einer Klasse sind 13 Jungen und
+                            15 Mädchen.</li>
+                        <li>Relative Häufigkeit: Wie groß ist der Anteil des Merkmals an der Gesamtmenge?
                             Z.B. Ein Viertel der Personen ist 16 Jahre alt, 40 % dagegen 17.</li>
-                        <li>Häufigkeitstabelle: Stellt die absoluten und/oder relativen Häufigkeiten übersichtlich tabellarisch dar.</li> 
+                        <li>Häufigkeitstabelle: Stellt die absoluten und/oder relativen Häufigkeiten übersichtlich
+                            tabellarisch dar.</li>
                     </ul>
                 </details>
-                
 
 
-            <!-- <section id="meme">
+
+                <!-- <section id="meme">
                 <div class="images">
                     <img src="/img/meanmedianmode-meme.svg" style="object-fit:scale-down; max-width: 300px;">
                 </div>
