@@ -231,7 +231,7 @@ svgElement.addEventListener('click', () => {
     Animation();
 });
 
-gesamtMenge.onclick = function () {
+gesamtMenge.addEventListener('click', () => {
     red.setAttribute("opacity", "1");
     viereck.setAttribute("opacity", "1");
     redViereck.setAttribute("opacity", "1");
@@ -242,11 +242,11 @@ gesamtMenge.onclick = function () {
     viereckMenge.style.filter = "brightness(0.5)";
     schnittMenge.style.filter = "brightness(0.5)";
     vereinigungsMenge.style.filter = "brightness(0.5)";
-};
+});
 
 
 
-viereckMenge.onclick = function () {
+viereckMenge.addEventListener('click', () => {
     red.setAttribute("opacity", "0");
     viereck.setAttribute("opacity", "1");
     redViereck.setAttribute("opacity", "0");
@@ -257,11 +257,11 @@ viereckMenge.onclick = function () {
     viereckMenge.style.filter = "brightness(1)";
     schnittMenge.style.filter = "brightness(0.5)";
     vereinigungsMenge.style.filter = "brightness(0.5)";
-};
+});
 
 
 
-redMenge.onclick = function () {
+redMenge.addEventListener('click', () => {
     red.setAttribute("opacity", "1");
     viereck.setAttribute("opacity", "0");
     redViereck.setAttribute("opacity", "0");
@@ -272,11 +272,11 @@ redMenge.onclick = function () {
     viereckMenge.style.filter = "brightness(0.5)";
     schnittMenge.style.filter = "brightness(0.5)";
     vereinigungsMenge.style.filter = "brightness(0.5)";
-};
+});
 
 
 
-schnittMenge.onclick = function () {
+schnittMenge.addEventListener('click', () => {
     red.setAttribute("opacity", "0");
     viereck.setAttribute("opacity", "0");
     redViereck.setAttribute("opacity", "1");
@@ -287,11 +287,11 @@ schnittMenge.onclick = function () {
     viereckMenge.style.filter = "brightness(0.5)";
     schnittMenge.style.filter = "brightness(1)";
     vereinigungsMenge.style.filter = "brightness(0.5)";
-};
+});
 
 
 
-vereinigungsMenge.onclick = function () {
+vereinigungsMenge.addEventListener('click', () => {
     red.setAttribute("opacity", "1");
     viereck.setAttribute("opacity", "1");
     redViereck.setAttribute("opacity", "0");
@@ -302,5 +302,5 @@ vereinigungsMenge.onclick = function () {
     viereckMenge.style.filter = "brightness(0.5)";
     schnittMenge.style.filter = "brightness(0.5)";
     vereinigungsMenge.style.filter = "brightness(1)";
-};
+});
 
