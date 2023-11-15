@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1700073549 "f:/Dokumente/GitHub/shitziger.github.io/tex/statstoch/stat_mengen_cup.tex" "stat_mengen_cup.pdf" "stat_mengen_cup" 1700073550 0
+["pdflatex"] 1700073642 "f:/Dokumente/GitHub/shitziger.github.io/tex/statstoch/stat_mengen_cap.tex" "stat_mengen_cap.pdf" "stat_mengen_cap" 1700073643 0
   "c:/Program Files/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1698515032 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmmi10.tfm" 1698514042 1528 abec98dbc43e172678c11b3b9031252a ""
   "c:/Program Files/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm" 1698514042 1512 f21f83efb36853c0b70002322c1ab3ad ""
@@ -129,11 +129,11 @@
   "c:/Program Files/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1698519593 4750316 4c3c1622616d55072a2397635ed90999 ""
   "c:/Program Files/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1698519740 8208736 8a742e68f35b883a4a2674b856c10902 ""
   "c:/Program Files/texlive/2023/texmf.cnf" 1698519568 713 e69b156964470283e0530f5060668171 ""
-  "f:/Dokumente/GitHub/shitziger.github.io/tex/statstoch/stat_mengen_cup.tex" 1700073548 1652 93f8357bbdaa87e1795beb3a359b90ff ""
-  "stat_mengen_cup.aux" 1700073550 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
-  "stat_mengen_cup.tex" 1700073548 1652 93f8357bbdaa87e1795beb3a359b90ff ""
+  "f:/Dokumente/GitHub/shitziger.github.io/tex/statstoch/stat_mengen_cap.tex" 1700073641 1720 1f70cb1d9a4f1525712869f0008434ef ""
+  "stat_mengen_cap.aux" 1700073643 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "stat_mengen_cap.tex" 1700073641 1720 1f70cb1d9a4f1525712869f0008434ef ""
   (generated)
-  "stat_mengen_cup.aux"
-  "stat_mengen_cup.log"
-  "stat_mengen_cup.pdf"
+  "stat_mengen_cap.aux"
+  "stat_mengen_cap.log"
+  "stat_mengen_cap.pdf"
   (rewritten before read)

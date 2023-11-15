@@ -40,15 +40,19 @@
 
 	\draw[draw=yellow!20, fill=darkgray, rounded corners=5ex, very thick] (0,0) rectangle (6,3);
 	\node at (5.5,2.5) {$\Omega$};
-	\draw[fill=blue!50, opacity=0.5] \EllA;
+	\draw[fill=blue!50, opacity=0.15] \EllA;
 	\draw \EllA;
 	\node at (0.8,1.75) {$E_1$};
-	\draw[fill=red!50, opacity=0.5] \EllB;
+	\draw[fill=red!50, opacity=0.15] \EllB;
 	\node at (4,2.7) {$E_2$};
 	\draw \EllA \EllB;
 
-	\fill[green!50!black]  \EllA \EllB;
-	\node at (3.5,1.05) {$E_1\cup E_2$};
+	\begin{scope}
+		\clip \EllA;
+		\draw[green!50!black,fill] \EllB;
+	\end{scope}
+	\node at (3.35,1.0) {$E_1\cap E_2$};
+	\draw \EllA \EllB;
 
 
 
