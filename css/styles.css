@@ -61,6 +61,14 @@ td {
   border: 2px solid var(--fg-header);
   margin: 0px 0px 10px 0px;
 }
+.menge {
+  cursor: pointer;
+  padding: 3px 10px;
+  background-color: var(--bg-header);
+  border-radius: 5px;
+  border: 2px solid var(--fg-header);
+  margin: 5px 0px -3px 0px;
+}
 
 .tabelle {
   display: flex;

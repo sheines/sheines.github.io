@@ -134,9 +134,10 @@
                         </dl>
                         </p>
                     </div>
-                    <div class="centered">
-                        <svg id="mengen_svg" version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'
-                            viewBox='0 -192.913 284.66 192.913'>
+                    Anklicken zum Starten der Animation.
+                    <div class="centered" style="cursor: pointer;">
+                        <svg id="mengen_svg" version='1.1' xmlns='http://www.w3.org/2000/svg'
+                            xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 -192.913 284.66 192.913'>
                             <g id='page1'>
                                 <g transform='matrix(1 0 0 -1 0 0)'>
                                     <path
@@ -185,14 +186,14 @@
                                     </g>
                                     <g id="redViereck" opacity="1">
                                         <path d='M256.043 18.6484L266.016 29.2695L255.395 39.2422L245.422 28.6211Z'
-                                        fill='red' />
-                                    <path d='M103.809 27.332L115.598 18.7695L124.16 30.5586L112.375 39.1211Z'
-                                        fill='red' />
-                                    <path d='M161.223 146.422L166.586 132.879L180.133 138.242L174.77 151.785Z'
-                                        fill='red' />
+                                            fill='red' />
+                                        <path d='M103.809 27.332L115.598 18.7695L124.16 30.5586L112.375 39.1211Z'
+                                            fill='red' />
+                                        <path d='M161.223 146.422L166.586 132.879L180.133 138.242L174.77 151.785Z'
+                                            fill='red' />
                                     </g>
                                     <g id="viereck" opacity="1">
-                                        
+
                                         <path d='M18.6875 29.9141L27.9766 18.6875L39.2031 27.9766L29.9141 39.2031Z'
                                             fill='blue' />
                                         <path d='M152.387 31.1914L140.086 39L132.277 26.6953L144.578 18.8906Z'
@@ -217,6 +218,12 @@
                                             fill='blue' />
                                         <path d='M26.6992 124.039L18.8906 111.738L31.1914 103.93L39 116.234Z'
                                             fill='lime' />
+                                        <path d='M256.043 18.6484L266.016 29.2695L255.395 39.2422L245.422 28.6211Z'
+                                            fill='red' />
+                                        <path d='M103.809 27.332L115.598 18.7695L124.16 30.5586L112.375 39.1211Z'
+                                            fill='red' />
+                                        <path d='M161.223 146.422L166.586 132.879L180.133 138.242L174.77 151.785Z'
+                                            fill='red' />
                                     </g>
 
                                     <g id="rest" opacity="1">
@@ -232,7 +239,7 @@
                                         <path
                                             d='M25.9688 64.8086L21.2109 59.6523L22.2773 52.7188L28.3633 49.2266L34.8867 51.8086L36.9336 58.5195L32.9648 64.3047Z'
                                             fill='cyan' />
-                                       <path
+                                        <path
                                             d='M82.8711 49.3477L91.1328 50.9258L93.9023 58.8672L88.4063 65.2344L80.1406 63.6602L77.375 55.7148Z'
                                             fill='blue' />
                                         <path
@@ -287,6 +294,25 @@
                                 </g>
                             </g>
                         </svg>
+                        
+                    </div>
+                    Ansicht der einzelnen Mengen durch Anklicken.
+                    <div class="centered" style="gap: 10px; display: flex; flex-wrap: wrap; margin-top: 5px;">
+                        <div class="menge" id="gesamtMenge">
+                            \(A:\) Gesamte Menge
+                        </div>
+                        <div class="menge" id="viereckMenge" style="filter: brightness(0.5);">
+                            \(B:\) Vierecke
+                        </div>
+                        <div class="menge" id="redMenge" style="filter: brightness(0.5);">
+                            \(C:\) rote Figuren
+                        </div>
+                        <div class="menge" id="schnittMenge" style="filter: brightness(0.5);">
+                            \(D=B\cap C:\) Schnittmenge 
+                        </div>
+                        <div class="menge" id="vereinigungsMenge" style="filter: brightness(0.5);">
+                            \(E=B\cup C:\) Vereinigungsmenge 
+                        </div>
                     </div>
                 </div>
             </section>
@@ -337,6 +363,7 @@
                     </a>
                 </div>
             </section> -->
+            <script type="text/javascript" src="/js/schnittmenge.js"></script>
     </main>
     <footer>
         <a href="/misc/impressum.html">Impressum</a>

@@ -1,132 +1,226 @@
-const graph = document.getElementById("graph");
+const red = document.getElementById("red");
+const viereck = document.getElementById("viereck");
+const redViereck = document.getElementById("redViereck");
 
-const point1 = document.getElementById("point1");
-const point2 = document.getElementById("point2");
-const point1axes = document.getElementById("point1axes");
-const point2axes = document.getElementById("point2axes");
+const rest = document.getElementById("rest");
 
-const deltaXsign = document.getElementById("deltaXsign");
-const deltaXline = document.getElementById("deltaXline");
-const deltaXequation = document.getElementById("deltaXequation");
-const deltaYsign = document.getElementById("deltaYsign");
-const deltaYline = document.getElementById("deltaYline");
-const deltaYequation = document.getElementById("deltaYequation");
+const gesamtMenge = document.getElementById('gesamtMenge');
+const viereckMenge = document.getElementById('viereckMenge');
+const redMenge = document.getElementById('redMenge');
+const schnittMenge = document.getElementById('schnittMenge');
+const vereinigungsMenge = document.getElementById('vereinigungsMenge');
 
-const x1 = document.getElementById("x1");
-const y1 = document.getElementById("y1");
-const x2 = document.getElementById("x2");
-const y2 = document.getElementById("y2");
-
-Animation();
+// Animation();
 
 
 function Animation() {
+    gesamtMenge.style.filter = 'brightness(1)';
+    redMenge.style.filter = 'brightness(0.5)';
+    viereckMenge.style.filter = 'brightness(0.5)';
+    schnittMenge.style.filter = 'brightness(0.5)';
+    vereinigungsMenge.style.filter = 'brightness(0.5)';
 
-    
+    // Reset
+    red.setAttribute("opacity", "1");
+    viereck.setAttribute("opacity", "1");
+    redViereck.setAttribute("opacity", "1");
+    rest.setAttribute("opacity", "1");
 
-    // Punkte animieren
-    point1.animate([{ opacity: 0 }, { opacity: 1 }], {
-        duration: 1000,
-        fill: "forwards",
-        delay: 500,
-    });
-    point2.animate([{ opacity: 0 }, { opacity: 1 }], {
-        duration: 1000,
-        fill: "forwards",
-        delay: 1500,
-    });
-
-    // Gerade animieren
-    graph.animate([{ opacity: 0 }, { opacity: 1 }], {
+    // Menge der Vierecke
+    rest.animate([{ opacity: 1 }, { opacity: 0 }], {
         duration: 1500,
         fill: "forwards",
-        delay: 3000,
+        delay: 1000,
+    });
+    red.animate([{ opacity: 1 }, { opacity: 0 }], {
+        duration: 1500,
+        fill: "forwards",
+        delay: 1000,
+    });
+    gesamtMenge.animate([{ filter: 'brightness(100%)' }, { filter: 'brightness(50%)' }],
+    {
+      duration: 1500, 
+      fill: 'forwards',
+      delay: 1000
+    });
+    viereckMenge.animate([{ filter: 'brightness(50%)' }, { filter: 'brightness(100%)' }],
+    {
+      duration: 1500, 
+      fill: 'forwards',
+      delay: 1000
     });
 
-    // Koordinaten animieren
-    point1axes.animate([{ opacity: 0 }, { opacity: 1 }], {
-        duration: 1000,
+    // Reset
+    rest.animate([{ opacity: 0 }, { opacity: 1 }], {
+        duration: 500,
         fill: "forwards",
-        delay: 5000,
+        delay: 4000,
     });
-    point2axes.animate([{ opacity: 0 }, { opacity: 1 }], {
-        duration: 1000,
+    red.animate([{ opacity: 0 }, { opacity: 1 }], {
+        duration: 500,
         fill: "forwards",
-        delay: 6500,
+        delay: 4000,
+    });
+    gesamtMenge.animate([{ filter: 'brightness(50%)' }, { filter: 'brightness(100%)' }],
+    {
+      duration: 500, 
+      fill: 'forwards',
+      delay: 4000
+    });
+    viereckMenge.animate([{ filter: 'brightness(100%)' }, { filter: 'brightness(50%)' }],
+    {
+      duration: 500, 
+      fill: 'forwards',
+      delay: 4000
     });
 
-    // Pfeile animieren
-    deltaXline.animate([{ opacity: 0 }, { opacity: 1 }], {
-        duration: 2000,
+    // Menge der roten Figuren
+    rest.animate([{ opacity: 1 }, { opacity: 0 }], {
+        duration: 1500,
         fill: "forwards",
-        delay: 8000,
+        delay: 5500,
     });
-    deltaXsign.animate([{ opacity: 0 }, { opacity: 1 }], {
-        duration: 1000,
+    viereck.animate([{ opacity: 1 }, { opacity: 0 }], {
+        duration: 1500,
         fill: "forwards",
-        delay: 9000,
+        delay: 5500,
     });
-    deltaYline.animate([{ opacity: 0 }, { opacity: 1 }], {
-        duration: 2000,
+    gesamtMenge.animate([{ filter: 'brightness(100%)' }, { filter: 'brightness(50%)' }],
+    {
+      duration: 1500, 
+      fill: 'forwards',
+      delay: 5500
+    });
+    redMenge.animate([{ filter: 'brightness(50%)' }, { filter: 'brightness(100%)' }],
+    {
+      duration: 1500, 
+      fill: 'forwards',
+      delay: 5500
+    });
+
+    // Reset
+    rest.animate([{ opacity: 0 }, { opacity: 1 }], {
+        duration: 500,
+        fill: "forwards",
+        delay: 8500,
+    });
+    viereck.animate([{ opacity: 0 }, { opacity: 1 }], {
+        duration: 500,
+        fill: "forwards",
+        delay: 8500,
+    });
+    gesamtMenge.animate([{ filter: 'brightness(50%)' }, { filter: 'brightness(100%)' }],
+    {
+      duration: 500, 
+      fill: 'forwards',
+      delay: 8500
+    });
+    redMenge.animate([{ filter: 'brightness(100%)' }, { filter: 'brightness(50%)' }],
+    {
+      duration: 500, 
+      fill: 'forwards',
+      delay: 8500,
+    });
+
+    // Schnittmenge
+    rest.animate([{ opacity: 1 }, { opacity: 0 }], {
+        duration: 1500,
         fill: "forwards",
         delay: 10000,
     });
-    deltaYsign.animate([{ opacity: 0 }, { opacity: 1 }], {
-        duration: 1000,
+    viereck.animate([{ opacity: 1 }, { opacity: 0 }], {
+        duration: 1500,
         fill: "forwards",
-        delay: 11000,
+        delay: 10000,
+    });
+    red.animate([{ opacity: 1 }, { opacity: 0 }], {
+        duration: 1500,
+        fill: "forwards",
+        delay: 10000,
+    });
+    gesamtMenge.animate([{ filter: 'brightness(100%)' }, { filter: 'brightness(50%)' }],
+    {
+      duration: 1500, 
+      fill: 'forwards',
+      delay: 10000
+    });
+    schnittMenge.animate([{ filter: 'brightness(50%)' }, { filter: 'brightness(100%)' }],
+    {
+      duration: 1500, 
+      fill: 'forwards',
+      delay: 10000
     });
 
-    // Gleichung animieren
-    deltaXsign.animate([{ opacity: 1 }, { opacity: 0 }], {
-        duration: 1000,
+    // Reset
+    rest.animate([{ opacity: 0 }, { opacity: 1 }], {
+        duration: 500,
         fill: "forwards",
-        delay: 12000,
+        delay: 13000,
     });
-    deltaXequation.animate([{ opacity: 0 }, { opacity: 1 }], {
-        duration: 2000,
+    viereck.animate([{ opacity: 0 }, { opacity: 1 }], {
+        duration: 500,
         fill: "forwards",
-        delay: 12000,
+        delay: 13000,
     });
-    deltaYsign.animate([{ opacity: 1 }, { opacity: 0 }], {
-        duration: 1000,
+    red.animate([{ opacity: 0 }, { opacity: 1 }], {
+        duration: 500,
         fill: "forwards",
-        delay: 14000,
+        delay: 13000,
     });
-    deltaYequation.animate([{ opacity: 0 }, { opacity: 1 }], {
-        duration: 2000,
-        fill: "forwards",
-        delay: 14000,
+    gesamtMenge.animate([{ filter: 'brightness(50%)' }, { filter: 'brightness(100%)' }],
+    {
+      duration: 500, 
+      fill: 'forwards',
+      delay: 13000
+    });
+    schnittMenge.animate([{ filter: 'brightness(100%)' }, { filter: 'brightness(50%)' }],
+    {
+      duration: 500, 
+      fill: 'forwards',
+      delay: 13000,
     });
 
+    // Vereinigungsmenge
+    rest.animate([{ opacity: 1 }, { opacity: 0 }], {
+        duration: 1500,
+        fill: "forwards",
+        delay: 14500,
+    });
+    gesamtMenge.animate([{ filter: 'brightness(100%)' }, { filter: 'brightness(50%)' }],
+    {
+      duration: 1500, 
+      fill: 'forwards',
+      delay: 14500
+    });
+    vereinigungsMenge.animate([{ filter: 'brightness(50%)' }, { filter: 'brightness(100%)' }],
+    {
+      duration: 1500, 
+      fill: 'forwards',
+      delay: 14500
+    });
+    
 
-    // xy farbig machen
-    x1.animate([{fill: "#a7a7a8"}, {fill: "red" }], {
-        duration: 1500,
+    // Reset
+    rest.animate([{ opacity: 0 }, { opacity: 1 }], {
+        duration: 500,
         fill: "forwards",
-        delay: 16000,
+        delay: 17500,
     });
-    y1.animate([{fill: "#a7a7a8"}, {fill: "green" }], {
-        duration: 1500,
-        fill: "forwards",
-        delay: 16000,
+    gesamtMenge.animate([{ filter: 'brightness(50%)' }, { filter: 'brightness(100%)' }],
+    {
+      duration: 500, 
+      fill: 'forwards',
+      delay: 17500
     });
-    x2.animate([{fill: "#a7a7a8"}, {fill: "cyan" }], {
-        duration: 1500,
-        fill: "forwards",
-        delay: 16000,
-    });
-    y2.animate([{fill: "#a7a7a8"}, {fill: "orange" }], {
-        duration: 1500,
-        fill: "forwards",
-        delay: 16000,
+    vereinigungsMenge.animate([{ filter: 'brightness(100%)' }, { filter: 'brightness(50%)' }],
+    {
+      duration: 500, 
+      fill: 'forwards',
+      delay: 17500,
     });
 
 
 }
-
-
-
 
 
 // Attach click event listener to the SVG element
@@ -134,73 +228,79 @@ const svgElement = document.getElementById('mengen_svg');
 
 svgElement.addEventListener('click', () => {
 
-    // Animation rückwärts
-
-    // Punkte animieren
-    point1.animate([{ opacity: 1 }, { opacity: 0 }], {
-        duration: 1000,
-        fill: "forwards",
-    });
-    point2.animate([{ opacity: 1 }, { opacity: 0 }], {
-        duration: 1000,
-        fill: "forwards",
-    });
-
-    // Gerade animieren
-    graph.animate([{ opacity: 1 }, { opacity: 0 }], {
-        duration: 1000,
-        fill: "forwards",
-    });
-
-    // Koordinaten animieren
-    point1axes.animate([{ opacity: 1 }, { opacity: 0 }], {
-        duration: 1000,
-        fill: "forwards",
-    });
-    point2axes.animate([{ opacity: 1 }, { opacity: 0 }], {
-        duration: 1000,
-        fill: "forwards",
-    });
-
-    // Pfeile animieren
-    deltaXline.animate([{ opacity: 1 }, { opacity: 0 }], {
-        duration: 1000,
-        fill: "forwards",
-    });
-
-    deltaYline.animate([{ opacity: 1 }, { opacity: 0 }], {
-        duration: 1000,
-        fill: "forwards",
-    });
-
-    // Gleichung animieren
-    deltaXequation.animate([{ opacity: 1 }, { opacity: 0 }], {
-        duration: 1000,
-        fill: "forwards",
-    });
-    deltaYequation.animate([{ opacity: 1 }, { opacity: 0 }], {
-        duration: 1000,
-        fill: "forwards",
-    });
-
-
-    // xy farbig machen
-    x1.animate([{fill: "red"}, {fill: "#a7a7a8" }], {
-        duration: 1000,
-        fill: "forwards",
-    });
-    y1.animate([{fill: "green"}, {fill: "#a7a7a8" }], {
-        duration: 1000,
-        fill: "forwards",
-    });
-    x2.animate([{fill: "cyan"}, {fill: "#a7a7a8" }], {
-        duration: 1000,
-        fill: "forwards",
-    });
-    y2.animate([{fill: "orange"}, {fill: "#a7a7a8" }], {
-        duration: 1000,
-        fill: "forwards",
-    });
-    
-    setTimeout(Animation, 2000);
+    Animation();
 });
+
+gesamtMenge.onclick = function () {
+    red.setAttribute("opacity", "1");
+    viereck.setAttribute("opacity", "1");
+    redViereck.setAttribute("opacity", "1");
+    rest.setAttribute("opacity", "1");
+    
+    gesamtMenge.style.filter = "brightness(1)";
+    redMenge.style.filter = "brightness(0.5)";
+    viereckMenge.style.filter = "brightness(0.5)";
+    schnittMenge.style.filter = "brightness(0.5)";
+    vereinigungsMenge.style.filter = "brightness(0.5)";
+};
+
+
+
+viereckMenge.onclick = function () {
+    red.setAttribute("opacity", "0");
+    viereck.setAttribute("opacity", "1");
+    redViereck.setAttribute("opacity", "0");
+    rest.setAttribute("opacity", "0");
+
+    gesamtMenge.style.filter = "brightness(0.5)";
+    redMenge.style.filter = "brightness(0.5)";
+    viereckMenge.style.filter = "brightness(1)";
+    schnittMenge.style.filter = "brightness(0.5)";
+    vereinigungsMenge.style.filter = "brightness(0.5)";
+};
+
+
+
+redMenge.onclick = function () {
+    red.setAttribute("opacity", "1");
+    viereck.setAttribute("opacity", "0");
+    redViereck.setAttribute("opacity", "0");
+    rest.setAttribute("opacity", "0");
+
+    gesamtMenge.style.filter = "brightness(0.5)";
+    redMenge.style.filter = "brightness(1)";
+    viereckMenge.style.filter = "brightness(0.5)";
+    schnittMenge.style.filter = "brightness(0.5)";
+    vereinigungsMenge.style.filter = "brightness(0.5)";
+};
+
+
+
+schnittMenge.onclick = function () {
+    red.setAttribute("opacity", "0");
+    viereck.setAttribute("opacity", "0");
+    redViereck.setAttribute("opacity", "1");
+    rest.setAttribute("opacity", "0");
+
+    gesamtMenge.style.filter = "brightness(0.5)";
+    redMenge.style.filter = "brightness(0.5)";
+    viereckMenge.style.filter = "brightness(0.5)";
+    schnittMenge.style.filter = "brightness(1)";
+    vereinigungsMenge.style.filter = "brightness(0.5)";
+};
+
+
+
+vereinigungsMenge.onclick = function () {
+    red.setAttribute("opacity", "1");
+    viereck.setAttribute("opacity", "1");
+    redViereck.setAttribute("opacity", "0");
+    rest.setAttribute("opacity", "0");
+
+    gesamtMenge.style.filter = "brightness(0.5)";
+    redMenge.style.filter = "brightness(0.5)";
+    viereckMenge.style.filter = "brightness(0.5)";
+    schnittMenge.style.filter = "brightness(0.5)";
+    vereinigungsMenge.style.filter = "brightness(1)";
+};
+
