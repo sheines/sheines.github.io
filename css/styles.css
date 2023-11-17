@@ -26,6 +26,11 @@ td {
   min-width: 3rem;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .scale {
   scale: 1.2;
 }

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" initial-scale=1.0 />
+    <meta name="author" content="Sebastian Hitziger" />
+    <meta name="robot" content="noindex" />
+    <title> HITZ | Stat. & Stoch. | Laplace-Experimente</title>
+    <link rel="stylesheet" type="text/css" href="/css/colors.css" />
+    <link rel="stylesheet" type="text/css" href="/css/gridNoTimeline.css" />
+    <link rel="stylesheet" type="text/css" href="/css/navbar.css" />
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="/css/courses.css" />
+    <script type="text/javascript" src="jquery-3.3.1.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="nav">
+            <input type="checkbox" id="nav-check">
+            <div class="nav-header">
+                <div class="nav-title">
+                    <a href="/">Hr. Hitzigers Unterricht</a>
+                </div>
+            </div>
+            <div class="nav-btn">
+                <label for="nav-check">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+
+            <div class="nav-links">
+                <a href="/content/math/">Mathematik</a>
+                <a href="/content/math/11/">Klasse 11</a>
+                <a href="/content/math/11/statstoch/">Statistik und Stochastik</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section>
+            <h2>Laplace-Experimente</h2>
+            <div class="ziele">
+                <p>
+                    Nachfolgend sollen erklärt werden, wie die Wahrscheinlichkeit von Laplace-Experimenten berechnet wird.
+                </p>
+                <p>
+                    <a href="#aufgaben">Direkt zu den Aufgaben</a>
+                </p>
+            </div>
+
+            <section>
+                <div class="theorie" id="PunktPunkt">
+                    <div class="definition">
+                        <h4>Laplace-Experimente</h4>
+                        <p>
+                            Bereits aus der vorigen Einheit ist bekannt: Laplace-Experimente sind Zufallsversuche, bei 
+                            dem alle Ergebnisse gleich wahrscheinlich sind.
+                        </p>
+                        <h5>Berechnung der Wahrscheinlichkeit</h5>
+                        <p>
+                            Um die Wahrscheinlichkeit eines Ereignisses eines Laplace-Experiments zu berechnen, gilt 
+                            folgende Formel:
+                            $$
+                                p(E)=\frac{|E|}{|\Omega|}=\frac{\text{Anzahl der günstigen Ergebnisse}}{\text{Anzahl der möglichen Ergebnisse}}
+                            $$
+                            Die Wahrscheinlichkeit eines Elementarereignisses kann , wie folgt, berechnet werden:
+                            $$
+                                p(E)=\frac{1}{|\Omega|}=\frac{1}{\text{Anzahl der möglichen Ergebnisse}}
+                            $$
+                            Die Wahrscheinlichkeit kann als Bruch (\(\frac29\)), als Dezimalzahl (\(0,222\)) oder in Prozent (\(22,2\,\%\)) 
+                            angegeben werden.
+                        </p>
+                        
+                        
+                    </div>
+                    <h6>Beispiele</h6>
+                    <p>
+                        Es soll mit einem klassischen Würfel gewürfelt werden:
+                        <ul>
+                            <li>Ergebnisraum: \(\Omega=\{1, 2, 3, 4, 5, 6\}\)</li>
+                            <li>Dass heißt: \(|\Omega|=\color{magenta}{6}\), weil der Ergebnisraum sechs Elemente enthält, bzw. 
+                                es sechs mögliche Ergebnisse gibt.</li>
+                        </ul>
+                        Das gerade Notierte gilt immer. Es können nun verschiedene Ereignisse betrachtet werden:
+                        <ul>
+                            <li>
+                                \(E_1\): &bdquo;Es wird eine sechs gewürfelt.&ldquo;
+                                <ul>
+                                    <li>Ereignisraum: \(E_1=\{6\}\)</li>
+                                    <li>Dass heißt: \(|E_1|=\color{green}{1}\), weil der Ereignisraum nur ein Element (die 6) enthält.</li>
+                                    <li>Wahrscheinlichkeit: \(p(E_1)=\frac{\color{green}{1}}{\color{magenta}{6}}\)</li>
+                                    <li>Es gibt ein günstiges Ergebnis (die 6) und sechs mögliche Ergebnisse (eben eins bis sechs).</li>
+                                    <li>Die Wahrscheinlich eine sechs zu würfeln, liegt bei \(\frac16=16,7\,\%\).</li>
+                                </ul>
+                            </li>
+                            <li>
+                                \(E_2\): &bdquo;Es wird eine gerade Zahl gewürfelt.&ldquo;
+                                <ul>
+                                    <li>Ereignisraum: \(E_2=\{2, 4, 6\}\)</li>
+                                    <li>Dass heißt: \(|E_2|=\color{cyan}{3}\), weil der Ereignisraum drei Elemente enthält.</li>
+                                    <li>Wahrscheinlichkeit: \(p(E_2)=\frac{\color{cyan}{3}}{\color{magenta}{6}}=\frac12\)</li>
+                                    <li>Es gibt drei günstige Ergebnisse und sechs mögliche Ergebnisse.</li>
+                                    <li>Die Wahrscheinlich eine gerade Zahl zu würfeln, liegt bei \(\frac12=50\,\%\).</li>
+                                </ul>
+                            </li>
+                            <li>
+                                \(E_3\): &bdquo;Es wird eine Zahl größer als vier gewürfelt.&ldquo;
+                                <ul>
+                                    <li>Ereignisraum: \(E_3=\{5, 6\}\)</li>
+                                    <li>Dass heißt: \(|E_3|=\color{goldenrod}{2}\), weil der Ereignisraum zwei Elemente enthält.</li>
+                                    <li>Wahrscheinlichkeit: \(p(E_3)=\frac{\color{goldenrod}{2}}{\color{magenta}{6}}=\frac13\)</li>
+                                    <li>Es gibt zwei günstige Ergebnisse und sechs mögliche Ergebnisse.</li>
+                                    <li>Die Wahrscheinlich eine Zahl größer als vier zu würfeln, liegt bei \(\frac13=33,3\,\%\).</li>
+                                </ul>
+                            </li>
+                            <li>
+                                \(E_4\): &bdquo;Es wird keine zwei gewürfelt.&ldquo;
+                                <ul>
+                                    <li>Ereignisraum: \(E_4=\{1, 3, 4, 5, 6\}\)</li>
+                                    <li>Dass heißt: \(|E_4|=\color{teal}{5}\), weil der Ereignisraum fünf Elemente enthält.</li>
+                                    <li>Wahrscheinlichkeit: \(p(E_4)=\frac{\color{teal}{5}}{\color{magenta}{6}}\)</li>
+                                    <li>Es gibt fünf günstige Ergebnisse und sechs mögliche Ergebnisse.</li>
+                                    <li>Die Wahrscheinlich keine zwei zu würfeln, liegt bei \(\frac56=83,3\,\%\).</li>
+                                </ul>
+                            </li>
+                            <li>
+                                \(E_5\): &bdquo;Es wird eine neun gewürfelt.&ldquo;
+                                <ul>
+                                    <li>Ereignisraum: \(E_5=\{\}\)</li>
+                                    <li>Dass heißt: \(|E_5|=\color{lime}{0}\), weil der Ereignisraum keine Elemente enthält.<br> 
+                                        (Der 6er-Würfel besitzt keine Seite, die mit neun beschriftet ist.)</li>
+                                    <li>Wahrscheinlichkeit: \(p(E_5)=\frac{\color{lime}{0}}{\color{magenta}{6}}=0\)</li>
+                                    <li>Es gibt keine günstigen Ergebnisse und sechs mögliche Ergebnisse.</li>
+                                    <li>Die Wahrscheinlich eine neun zu würfeln, liegt bei \(0=0\,\%\).</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </p>
+                    
+                    
+                    
+                    
+                </div>
+            </section>
+            <!-- <section>
+            <div class="videos">
+                <iframe width="360" height="202" src="https://www.youtube.com/embed/19goPRnthCE"
+                    title="Abstand Punkt - Punkt" frameborder="0" allow="web-share" allowfullscreen></iframe>
+
+            </div>
+        </section> -->
+            <section id="aufgaben" class="aufgaben">
+                <h3>Aufgaben zu den Begriffen der Stochastik</h3>
+                <ol class="custom-marker point-after decimal more-spacing">
+                    <li>Buch, Seite 435 Übung 9 <a href="#a1">Lösungen</a></li>
+                    <li>Buch, Seite 435 Übung 10 <a href="#a2">Lösungen</a></li>
+                    <li>Buch, Seite 435 Übung 11 <a href="#a3">Lösungen</a></li>
+                    <li>Buch, Seite 435 Übung 12 <a href="#a4">Lösungen</a></li>
+                    <li>Buch, Seite 435 Übung 13 <a href="#a5">Lösungen</a></li>
+                    <li>Buch, Seite 436 Übung 14 <a href="#a6">Lösungen</a></li>
+                </ol>
+            </section>
+            <section class="loesungen">
+                <h3>Lösungen zu den Begriffen der Stochastik</h3>
+                <details id="a1">
+                    <summary>Glücksrad</summary>
+                    <ol class="custom-marker parens-around lower-alpha more-spacing">
+                        <li>Weil der Ausgang nicht vorhersehbar ist</li>
+                        <li>\(\Omega=\{0, 1, \ldots, 9\}\)</li>
+                        <li>\(E=\{0, 2, 4, 6, 8\}\)</li>
+                        <li>
+                            <ul>
+                                <li>\(E_1\): &bdquo;Es kommt eine ungerade Zahl.&ldquo;</li>
+                                <li>\(E_2\): &bdquo;Es kommt eine durch 3 teilbare Zahl.&ldquo;</li>
+                                <li>\(E_3\): &bdquo;Es kommt eine Primzahl.&ldquo;</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </details>
+                
+
+
+                <section id="meme">
+                <div class="images">
+                    <img src="/img/laplacememe.jpg" style="object-fit:scale-down; max-width: 300px;">
+                </div>
+                <div class="centered">
+                    <a href="https://i.redd.it/fu7g05ko59k41.jpg">
+                        <h6>Original von yagami_raito23</h6>
+                    </a>
+                </div>
+            </section>
+            <script type="text/javascript" src="/js/schnittmenge.js"></script>
+    </main>
+    <footer>
+        <a href="/misc/impressum.html">Impressum</a>
+        <div class="lastModified" align="center">
+            Zuletzt geändert:<br>
+            17. November 2023
+            <!-- <span id="lastModifiedDate"></span> -->
+        </div>
+        <a href="/misc/datenschutz.html">Datenschutz</a>
+    </footer>
+</body>
