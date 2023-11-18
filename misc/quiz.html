@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" initial-scale="1.0" />
+  <meta name="author" content="Sebastian Hitziger" />
+  <meta name="robot" content="noindex" />
+  <title>Hr. Hitzigers Datenschutz</title>
+  <link rel="stylesheet" type="text/css" href="/css/colors.css" />
+  <link rel="stylesheet" type="text/css" href="/css/gridNoTimeline.css" />
+  <link rel="stylesheet" type="text/css" href="/css/navbar.css" />
+  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="/css/quiz.css" />
+  <script type="text/javascript" src="jquery-3.3.1.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script
+    id="MathJax-script"
+    async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+  ></script>
+</head>
+<body>
+  <header>
+    <div class="nav">
+      <input type="checkbox" id="nav-check" />
+      <div class="nav-header">
+        <div class="nav-title">
+          <a href="/">Hr. Hitzigers Unterricht</a>
+        </div>
+      </div>
+      <div class="nav-btn">
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+
+      <div class="nav-links">
+        <a href="/content/math/">Mathematik</a>
+        <a href="/content/info/">Informatik</a>
+        <a href="/content/phy/">Physik</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <!-- <section class="teaserImg">
+        <img src="/img/gannet.jpg" alt="Papageientaucher"> 
+          
+      </section> -->
+    <section>
+      <h2>Quiz zum Testen</h2>
+      <div class="quiz-container">
+        <div id="quiz">
+          <div class="question">
+            <p id="q1">Frage 1: Welche Städte liegen in Deutschland?</p>  
+              <input type="checkbox" name="q1" value="Berlin" />Berlin<br />
+              <input type="checkbox" name="q1" value="Oslo" />Oslo<br />
+              <input type="checkbox" name="q1" value="Kopenhagen"/>Kopenhagen<br />
+              <input type="checkbox" name="q1" value="London" />London
+          </div>
+          <div class="question">
+            <p id="q2">Frage 2: Welcher Fluss fließt durch Paris?</p>
+            <input type="radio" name="q2" value="Rhein" />Rhein<br />
+            <input type="radio" name="q2" value="Seine" />Seine<br />
+            <input type="radio" name="q2" value="Themse" />Themse<br />
+            <input type="radio" name="q2" value="Loire" />Loire
+          </div>
+          <button type="button" onclick="submitQuiz()">Quiz abschließen</button>
+        </div>
+        <div id="result" style="display: none">
+          <h4>Ergebnisse</h4>
+          <div id="score">0 Punkte</div>
+          <div id="correct-answers">Nö.</div>
+        </div>
+      </div>
+      <script src="/js/quiz.js"></script>
+    </section>
+  </main>
+  <footer>
+    <a href="/misc/impressum.html">Impressum</a>
+    <a href="/misc/datenschutz.html">Datenschutz</a>
+  </footer>
+</body>
