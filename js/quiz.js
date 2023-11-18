@@ -18,6 +18,7 @@ function submitQuiz() {
             } else if (i === 1 && (answer === 'Seine')) {
                 correctCount++;
                 correctAnswers += '<p>Frage 2: Richtig!</p>';
+                document.getElementById("q2").style.color = "green";
             }
         }
         const resultContainer = document.getElementById("result");
