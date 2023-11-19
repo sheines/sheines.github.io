@@ -144,6 +144,7 @@
                     </ul>
                 </li>
             </ul>
+            Es ist nicht nötig jede Aufgabe so ausführlich aufzuschreiben. Meistens kann man die einzelnen Punkte problemlos im Kopf lösen.
         </p>
       </div>
     </section>
@@ -168,23 +169,69 @@
     <section class="loesungen">
       <h3>Lösungen zu den Laplace-Experimenten</h3>
       <details id="a1">
-        <summary>Glücksrad</summary>
+        <summary>Beste Wahl</summary>
+        <p>
+          Es sollte Urne zwei gewählt werden, da hier die Wahrscheinlichkeit (\(p(\text{rot})=\frac12\))  im Vergleich 
+          zu Urne 1 (\(p(\text{rot})=\frac38\)) und Urne 3 (\(p(\text{rot})=\frac13\)) am größten ist.
+        </p>
+      </details>
+      <details id="a2">
+        <summary>Ziehen einer Spielkarte</summary>
         <ol class="custom-marker parens-around lower-alpha more-spacing">
-          <li>Weil der Ausgang nicht vorhersehbar ist</li>
-          <li>\(\Omega=\{0, 1, \ldots, 9\}\)</li>
-          <li>\(E=\{0, 2, 4, 6, 8\}\)</li>
-          <li>
-            <ul>
-              <li>\(E_1\): &bdquo;Es kommt eine ungerade Zahl.&ldquo;</li>
-              <li>
-                \(E_2\): &bdquo;Es kommt eine durch 3 teilbare Zahl.&ldquo;
-              </li>
-              <li>\(E_3\): &bdquo;Es kommt eine Primzahl.&ldquo;</li>
-            </ul>
-          </li>
+          <li>Es gibt 32 Karten, davon ist eine ein Pik Bube: \(p(\text{Pik Bube})=\frac{1}{32}\approx3,1\,\%\)</li>
+          <li>Es gibt 32 Karten, davon sind acht Pik-Karten: \(p(\text{Pik})=\frac{8}{32}=\frac14=25\,\%\)</li>
+          <li>Es gibt vier 7er, vier 8er und vier 9er Karten: \(p(\text{Lusche})=\frac{12}{32}=\frac38=37,5\,\%\)<br>
+              Das Ziehen einer Lusche ist wahrscheinlicher als das Ziehen einer Herzkarte (gleiche Wahrscheinlichkeit wie b) ).</li>
         </ol>
       </details>
-    </section>
+      <details id="a3">
+      <summary>Lose ziehen</summary>
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>Es gibt vier Hauptgewinne: \(p(\text{Hauptgewinn})=\frac{4}{500}=\frac{1}{125}=0,8\,\%\)</li>
+          <li>Es gibt vier Hauptgewinne und 16 weitere Gewinne: \(p(\text{Gewinn})=\frac{20}{500}=\frac{1}{25}=4\,\%\)</li>
+          <li>Es gibt insgesamt zwanzig Gewinne, bleiben 480 Nieten: \(p(\text{Niete})=\frac{480}{500}=\frac{24}{25}=96\,\%\)</li>
+          <li>Man muss 481 Lose ziehen, um mit Sicherheit einen Gewinn zu erhalten.</li>
+        </ol>
+      </details>
+      <details id="a4">
+        <summary>Glücksrad</summary>
+          <ol class="custom-marker parens-around lower-alpha more-spacing">
+            <li>Der Ereignisraum \(E_a=\{2, 4, 6, 8\}\) enthält vier Elemente. Insgesamt gibt es neun mögliche Ergebnisse: 
+              \(p(\text{gerade Zahl})=\frac49\approx44,4\,\%\)</li>
+            <li><ul>
+              <li>Wenn das Rad zweimal gedreht wird, gibt es insgesamt 81 Ergebnisse (\((1; 1), (1; 2), \ldots\)). 
+                Davon sind neun Paare Pasche: \(p(\text{Pasch})=\frac{9}{81}=\frac19\approx11,1\,\%\)</li>
+                <li>
+                  Die Summe 16 wird mit drei Paaren erreicht: \((7; 9), (8; 8), (9; 7)\)<br>
+                  Die Wahrscheinlichkeit für die Summe 16: \(p(\sum = 16)=\frac{3}{81}=\frac1{27}\approx3,7\,\%\)
+                </li>
+            </ul>
+            </li>
+          </ol>
+        </details>
+        <details id="a5">
+          <summary>Münzwurf</summary>
+            <p>Es gibt insgesamt acht mögliche Ausgänge des dreimaligen Werfens einer Münze.</p>
+            <ul class="custom-marker parens-around lower-alpha more-spacing">
+              <li>Es gibt genau eine Ergebnis mit KZK: \(p(E_1)=\frac18\approx12,5\,\%\)</li>
+              <li>Auch dreimal Kopf, gibt es genau einmal: \(p(E_2)=\frac18\approx12,5\,\%\)</li>
+              <li>Mindestens einmal Zahl bedeutet, es gibt einmal Zahl, oder zweimal Zahl oder dreimal Zahl.<br>
+                  Einmal Zahl gibt es dreimal (ZKK; KZK, KKZ), zweimal Zahl gibt es ebenfalls dreimal (ZZK, ZKZ, KZZ) und dreimal Zahl gibt es einmal (ZZZ): \(p(E_3)=\frac78\approx87,5\,\%\)</li>
+              <li>Mindestens zweimal Kopf heißt zweimal Kopf und dreimal Kopf.<br>
+                  Zweimal Kopf gibt es dreimal (KKZ, KZK, ZKK) und dreimal Kopf gibt es einmal (KKK): \(p(E_4)=\frac48=\frac12\approx50\,\%\)</li>
+            </ul>
+          </details>
+          <details id="a6">
+            <summary>Doppeltes Glücksrad</summary>
+              <p>Es gibt insgesamt 16 mögliche Ausgänge des doppelten Glücksrades.</p>
+              <ol class="custom-marker parens-around lower-alpha more-spacing">
+                <li>Es gibt drei Ergebnisse mit Augensumme 4: \((1; 3), (2; 2), (3; 1)\) <br>
+                  Die Wahrscheinlichkeit beträgt dann: \(p(E_a)=\frac{3}{16}\approx18,8\,\%\)</li>
+                <li>Es gibt vier Pasche: \(p(E_b)=\frac4{16}=\frac14=25\,\%\)</li>
+
+              </ol>
+            </details>
+  </section>
 
     <section id="meme">
       <div class="images">
@@ -204,7 +251,7 @@
     <a href="/misc/impressum.html">Impressum</a>
     <div class="lastModified" align="center">
       Zuletzt geändert:<br />
-      17. November 2023
+      19. November 2023
       <!-- <span id="lastModifiedDate"></span> -->
     </div>
     <a href="/misc/datenschutz.html">Datenschutz</a>
