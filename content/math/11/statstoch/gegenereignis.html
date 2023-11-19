@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" initial-scale="1.0" />
+  <meta name="author" content="Sebastian Hitziger" />
+  <meta name="robot" content="noindex" />
+  <title>HITZ | Stat. & Stoch. | Gegenereignis</title>
+  <link rel="stylesheet" type="text/css" href="/css/colors.css" />
+  <link rel="stylesheet" type="text/css" href="/css/gridNoTimeline.css" />
+  <link rel="stylesheet" type="text/css" href="/css/navbar.css" />
+  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="/css/courses.css" />
+  <script type="text/javascript" src="jquery-3.3.1.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script
+    id="MathJax-script"
+    async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+  ></script>
+</head>
+
+<body>
+  <header>
+    <div class="nav">
+      <input type="checkbox" id="nav-check" />
+      <div class="nav-header">
+        <div class="nav-title">
+          <a href="/">Hr. Hitzigers Unterricht</a>
+        </div>
+      </div>
+      <div class="nav-btn">
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+
+      <div class="nav-links">
+        <a href="/content/math/">Mathematik</a>
+        <a href="/content/math/11/">Klasse 11</a>
+        <a href="/content/math/11/statstoch/">Statistik und Stochastik</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section>
+      <h2>Gegenereignis</h2>
+      <div class="ziele">
+        <p>
+          Nachfolgend soll erklärt werden, was das Gegenereignis ist und wie es
+          berechnet wird.
+        </p>
+        <p>
+          <a href="#aufgaben">Direkt zu den Aufgaben</a>
+        </p>
+      </div>
+      <div class="theorie">
+        <div class="definition">
+          <h4>Gegenereignis</h4>
+          <p>
+            Das Gegenereignis \(\overline{E}\) beschreibt das Gegenteil des
+            Ereignisses \(E\). Es enthält alle Elemente der Ergebnismenge
+            \(\Omega\), die nicht im Ereignisraum \(E\) enthalten sind.
+          </p>
+          <h5>Berechnung der Wahrscheinlichkeit</h5>
+          <p>
+            Die Wahrscheinlich des Gegenereignisses \(\overline E\) berechnet
+            sich wie folgt: $$ p(\overline E)=1-p(E) $$ Nützlich kann auch die
+            Umkehrung dieser Gleichung sein: $$ p(E)=1-p(\overline E) $$
+          </p>
+        </div>
+        <h6>Beispiel</h6>
+        <p>
+            Das Ereignis \(E\) sei, bei einem klassischen Würfel: &bdquo;Es wird eine sechs gewürfelt.&ldquo;
+        </p>
+        <p>
+            Das Gegenereignis \(\overline E\) lautet dann: &bdquo;Es wird keine sechs gewürfelt.&ldquo;
+        </p>
+        <ul>
+            <li>
+                Die Wahrscheinlichkeit des Ereignisses \(E\) beträgt: \(p(E)=\color{cyan}{\frac16}\)
+            </li>
+            <li>
+                Dementsprechend beträgt die Wahrscheinlichkeit des Gegenereignisses \(\overline E\):
+                \(p(\overline E)=1-{\color{cyan}{\frac{1}{6}}}=\frac56\)
+            </li>
+        </ul>
+      </div>
+    </section>
+    <!-- <section>
+            <div class="videos">
+                <iframe width="360" height="202" src="https://www.youtube.com/embed/19goPRnthCE"
+                    title="Abstand Punkt - Punkt" frameborder="0" allow="web-share" allowfullscreen></iframe>
+
+            </div>
+        </section> -->
+    <section id="aufgaben" class="aufgaben">
+      <h3>Aufgaben zum Gegenereignis</h3>
+      <ol class="custom-marker point-after decimal more-spacing">
+        <!-- <li>Buch, Seite 435 Übung 9 <a href="#a1">Lösungen</a></li>
+        <li>Buch, Seite 435 Übung 10 <a href="#a2">Lösungen</a></li>
+        <li>Buch, Seite 435 Übung 11 <a href="#a3">Lösungen</a></li>
+        <li>Buch, Seite 435 Übung 12 <a href="#a4">Lösungen</a></li>
+        <li>Buch, Seite 435 Übung 13 <a href="#a5">Lösungen</a></li>
+        <li>Buch, Seite 436 Übung 14 <a href="#a6">Lösungen</a></li> -->
+      </ol>
+    </section>
+    <section class="loesungen">
+      <h3>Lösungen zu den Begriffen der Stochastik</h3>
+      <details id="a1">
+        <summary>Glücksrad</summary>
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>Weil der Ausgang nicht vorhersehbar ist</li>
+          <li>\(\Omega=\{0, 1, \ldots, 9\}\)</li>
+          <li>\(E=\{0, 2, 4, 6, 8\}\)</li>
+          <li>
+            <ul>
+              <li>\(E_1\): &bdquo;Es kommt eine ungerade Zahl.&ldquo;</li>
+              <li>
+                \(E_2\): &bdquo;Es kommt eine durch 3 teilbare Zahl.&ldquo;
+              </li>
+              <li>\(E_3\): &bdquo;Es kommt eine Primzahl.&ldquo;</li>
+            </ul>
+          </li>
+        </ol>
+      </details>
+    </section>
+
+    <section id="meme">
+      <div class="images">
+        <img
+          src="/img/laplacememe.jpg"
+          style="object-fit: scale-down; max-width: 300px"
+        />
+      </div>
+      <div class="centered">
+        <a href="https://i.redd.it/fu7g05ko59k41.jpg">
+          <h6>Original von yagami_raito23</h6>
+        </a>
+      </div>
+    </section>
+    <script type="text/javascript" src="/js/schnittmenge.js"></script>
+  </main>
+  <footer>
+    <a href="/misc/impressum.html">Impressum</a>
+    <div class="lastModified" align="center">
+      Zuletzt geändert:<br />
+      17. November 2023
+      <!-- <span id="lastModifiedDate"></span> -->
+    </div>
+    <a href="/misc/datenschutz.html">Datenschutz</a>
+  </footer>
+</body>
