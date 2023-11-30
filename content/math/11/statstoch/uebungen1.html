@@ -82,9 +82,150 @@
 
                 <details id="a1">
                     <summary>Teilbarkeit</summary>
+                    Es gibt insgesamt 200 Zahlen.
+                    <ul class="custom-marker parens-around lower-alpha more-spacing">
+                        <li>\(E_1\): Zahl ist durch 7 teilbar.</li>
+                        <li>\(E_2\): Zahl ist durch 9 teilbar.</li>
+                        <li>\(E_1=\{7, 14, \ldots, 196\}\) (28 Zahlen)</li>
+                        <li>\(E_2=\{9, 18, \ldots, 198\}\) (22 Zahlen)</li>
+                        <li>\(E_1\cap E_2=\{63, 126, 189\}\) (3 Zahlen)</li>
+                    </ul>
+                    Von diesen 200 Zahlen sind 28 durch 7 teilbar und 22 durch 9 teilbar. Insgesamt sind 47 Zahlen (\(28+22-3\)) durch 7 <i>oder</i> 9 teilbar. 
+                    (Die drei Zahlen aus \(E_1\cap E_2\) müssen abgezogen werden, da diese beim Addieren doppelt gezählt wurde, weil sie in beiden Mengen enthalten sind.)
+                    $$
+                        p(E_1 \cup E_2) = \frac{47}{200}=23,5\,\%
+                    $$
+                </details>
+                <details id="a2">
+                    <summary>Reihenfolge beim Würfeln</summary>
+                    <p>
+                        Die Folge \(6666\) tritt beim viermaligen Würfeln genauso oft auf wie die Folge \(4513\), nämlich genau einmal. Soll heißen, jedes Ergebnis gibt es genau einmal. 
+                    </p>
+                    <p>
+                        Tatsächlich gibt es \(6\cdot 6\cdot 6\cdot 6 = 6^4=1\,296\) verschiedene Möglichkeiten.
+                    </p>                 
+                </details>
+                <details id="a3">
+                    <summary>Riemer-U-Würfel</summary>
                     <ol class="custom-marker parens-around lower-alpha more-spacing">
-                        <li>...</li>
+                        <li>
+                            <p>
+                                Insgesamt wurde 2000 mal geworfen.
+                            </p>
+                            <div class="wechseltabelle"> <!-- <s>||||</s> -->
+                                <table>
+                                    <tr><th>Zahl</th>
+                                        <td>1</td>
+                                        <td>2</td>
+                                        <td>3</td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td>6</td>
+                                    </tr>
+                                    <tr>
+                                        <th>rel. Häuf. (\(\%\) )</th>
+                                        <td>\(7,1\)</td>
+                                        <td>\(3,7\)</td>
+                                        <td>\(25,5\)</td>
+                                        <td>\(52,3\)</td>
+                                        <td>\(4,5\)</td>
+                                        <td>\(7,0\)</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </li>
+                        <li>
+                            <p>
+                                Hier gibt es verschiedene Möglichkeiten, je nachdem wie stark man rundet:
+                            </p>  
+                            <div class="wechseltabelle"> <!-- <s>||||</s> -->
+                                <table>
+                                    <tr><th>Zahl</th>
+                                        <td>1</td>
+                                        <td>2</td>
+                                        <td>3</td>
+                                        <td>4</td>
+                                        <td>5</td>
+                                        <td>6</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Wahrsch. (\(\%\) )</th>
+                                        <td>\(7\)</td>
+                                        <td>\(4\)</td>
+                                        <td>\(25\)</td>
+                                        <td>\(52\)</td>
+                                        <td>\(5\)</td>
+                                        <td>\(7\)</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </li>
+                        <li>
+                            Mit den in b) angegeben Wahrscheinlichkeiten erhält man:
+                            $$
+                                p=7\,\% + 7\,\% = 14\,\%
+                            $$
+                        </li>
                     </ol>
+                </details>
+                <details id="a4">
+                    <summary>Würfelschnitt</summary>
+                    Es gibt insgesamt 27 neue Würfel.
+                    <ul class="custom-marker parens-around lower-alpha more-spacing">
+                        <li>\(E_1\): 1 Würfel: \(p=\frac{1}{27}\)</li>
+                        <li>\(E_2\): 12 Würfel: \(p=\frac{12}{27}=\frac{4}{9}\)</li>
+                        <li>\(E_3\): 20 Würfel: \(p=\frac{20}{27}\)</li>
+                        <li>\(E_4\): 19 Würfel: \(p=\frac{19}{27}\)</li>
+                    </ul>
+                </details>
+                <details id="a5">
+                    <summary>Würfelprodukt</summary>
+                    Es gibt insgesamt 36 Ergebnisse beim Wurf zweier Würfel.
+                    <ul class="custom-marker parens-around lower-alpha more-spacing">
+                        <li>\(E=\{(4;5), (4;6)\)\(, (5;4), (5;5), (5;6)\)\(, (6;4), (6;5), (6;6) \}\)</li>
+                        <li>\(p(\prod > 18)=\frac{8}{36}=\frac29\)</li>
+                    </ul>
+                    (\(\prod\) ist das mathematische Symbol für &bdquo;Produkt&ldquo;.)
+                </details>
+                <details id="a6">
+                    <summary>Urnen</summary>
+                    <p>
+                        Es gibt insgesamt sieben verschiedene Ergebnisse:
+                            
+                    </p>
+                    <p>
+                        \(\Omega=\{(\color{red}{R},\color{red}{R},\color{red}{R})\)\(, (\color{red}{R},\color{red}{R},\color{blue}{B}), (\color{red}{R},\color{blue}{B},\color{red}{R})\)\(,  
+                            (\color{blue}{B},\color{red}{R},\color{red}{R}), (\color{red}{R},\color{blue}{B},\color{blue}{B})\)\(, (\color{blue}{B},\color{red}{R},\color{blue}{B}), (\color{blue}{R},\color{blue}{B},\color{red}{R})\}\)
+                    </p>                               
+                    <ul class="custom-marker parens-around lower-alpha more-spacing">
+                        <li>\(p(E_1)=\frac37 \)</li>
+                        <li>\(p(E_2)=\frac17 \)</li>
+                        <li>\(p(E_3)=\frac47 \)</li>
+                    </ul>
+                </details>
+                <details id="a7">
+                    <summary>Würfelnetze</summary>
+                    Es gibt insgesamt 36 Ergebnisse. Davon sind:
+                        <ol class="custom-marker parens-around lower-alpha more-spacing">
+                            <li>
+                                <p>
+                                    <ul class="custom-marker parens-around lower-alpha more-spacing">
+                                        <li>Augensumme 2: \(6\) Ergebnisse</li>
+                                        <li>Augensumme 3: \(3+4=7\) Ergebnisse</li>
+                                        <li>Augensumme 4: \(9+2+2=13\) Ergebnisse</li>
+                                        <li>Augensumme 5: \(6+1=7\) Ergebnisse</li>
+                                        <li>Augensumme 6: \(3\) Ergebnisse</li>
+                                    </ul>
+                                    Augensumme 4 ist am wahrscheinlichsten.
+                                </p>
+                            </li>
+                            <li>
+                                \(p(\sum < 5)=\frac{6+7+13}{36}=\frac{26}{36}=\frac{13}{18}\)
+                            </li>
+                            <li>
+                                \(p(\text{Pasch})=\frac{3\cdot2+2\cdot1+1\cdot3}{36}=\frac{11}{36}\)
+                            </li>
+                        </ol>
                 </details>
                 
             </section>
