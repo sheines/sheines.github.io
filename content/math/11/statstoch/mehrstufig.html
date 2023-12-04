@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" initial-scale="1.0" />
+  <meta name="author" content="Sebastian Hitziger" />
+  <meta name="robot" content="noindex" />
+  <title>HITZ | Stat. & Stoch. | Mehrstufige Zufallsversuche</title>
+  <link rel="stylesheet" type="text/css" href="/css/colors.css" />
+  <link rel="stylesheet" type="text/css" href="/css/gridNoTimeline.css" />
+  <link rel="stylesheet" type="text/css" href="/css/navbar.css" />
+  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="/css/courses.css" />
+  <script type="text/javascript" src="jquery-3.3.1.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="nav">
+      <input type="checkbox" id="nav-check" />
+      <div class="nav-header">
+        <div class="nav-title">
+          <a href="/">Hr. Hitzigers Unterricht</a>
+        </div>
+      </div>
+      <div class="nav-btn">
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+
+      <div class="nav-links">
+        <a href="/content/math/">Mathematik</a>
+        <a href="/content/math/11/">Klasse 11</a>
+        <a href="/content/math/11/statstoch/">Statistik und Stochastik</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section>
+      <h2>Mehrstufige Zufallsversuche</h2>
+      <div class="ziele">
+        <p>
+          Nachfolgend soll erklärt werden, wie Zufallsexperimente, die aus mehreren Schritten bestehen, berechnet und
+          dargestellt werden können.
+        </p>
+        <p>
+          <a href="#aufgaben">Direkt zu den Aufgaben</a>
+        </p>
+      </div>
+
+      <div class="theorie">
+        <div class="definition">
+          <h4>Was ist das?</h4>
+          <p>
+            Ein mehrstufiger Zufallsversuch setzt sich aus mehreren ausgeführten einstufigen Versuchen zusammen.
+          <ul>
+            <li>Mehrmaliges Würfeln</li>
+            <li>Ziehen mehrerer Lose/Kugeln</li>
+            <li>Verknüpfung verschiedener Zufallsversuche</li>
+            <li>...</li>
+          </ul>
+          Zur besseren Übersichtlichkeit werden Baumdiagramme gezeichnet:
+          </p>
+          <div class="centered" style="max-height: 150px; margin-bottom: 8px;">
+            <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'
+              viewBox='0 0 109.896 48.061'>
+              <g id="defStufe1" opacity="0">
+                <path
+                  d='M31.74385 14.373391C31.74385 11.533161 29.44144 9.230751 26.60121 9.230751C23.76099 9.230751 21.45856 11.533161 21.45856 14.373391C21.45856 17.213631 23.76099 19.516041 26.60121 19.516041C29.44144 19.516041 31.74385 17.213631 31.74385 14.373391Z'
+                  stroke='black' fill='none' stroke-width='.3985' stroke-miterlimit='10' />
+                <path d='M54.948 .200001L31.3789 11.984641' stroke='#a8a7a7' fill='none' stroke-width='.3985'
+                  stroke-miterlimit='10' />
+                <path
+                  d='M88.43749 14.373391C88.43749 11.533161 86.13506 9.230751 83.29483 9.230751S78.1522 11.533161 78.1522 14.373391C78.1522 17.213631 80.4546 19.516041 83.29483 19.516041S88.43749 17.213631 88.43749 14.373391Z'
+                  fill='#bfbfbf' />
+                <path
+                  d='M88.43749 14.373391C88.43749 11.533161 86.13506 9.230751 83.29483 9.230751S78.1522 11.533161 78.1522 14.373391C78.1522 17.213631 80.4546 19.516041 83.29483 19.516041S88.43749 17.213631 88.43749 14.373391Z'
+                  stroke='black' fill='none' stroke-width='.3985' stroke-miterlimit='10' />
+                <path d='M54.948 .200001L78.51715 11.984641' stroke='#a8a7a7' fill='none' stroke-width='.3985'
+                  stroke-miterlimit='10' />
+              </g>
+              <g id="defStufe2" opacity="0">
+                <path
+                  d='M17.57048 28.546791C17.57048 25.706561 15.26807 23.404151 12.42783 23.404151C9.5876 23.404151 7.28519 25.706561 7.28519 28.546791C7.28519 31.387011 9.5876 33.689441 12.42783 33.689441C15.26807 33.689441 17.57048 31.387011 17.57048 28.546791Z'
+                  stroke='black' fill='none' stroke-width='.3985' stroke-miterlimit='10' />
+                <path d='M22.82392 18.150681L16.20513 24.769491' stroke='#a8a7a7' fill='none' stroke-width='.3985'
+                  stroke-miterlimit='10' />
+                <path
+                  d='M45.91728 28.546791C45.91728 25.706561 43.61487 23.404151 40.77464 23.404151C37.9344 23.404151 35.63199 25.706561 35.63199 28.546791C35.63199 31.387011 37.9344 33.689441 40.77464 33.689441C43.61487 33.689441 45.91728 31.387011 45.91728 28.546791Z'
+                  fill='#bfbfbf' />
+                <path
+                  d='M45.91728 28.546791C45.91728 25.706561 43.61487 23.404151 40.77464 23.404151C37.9344 23.404151 35.63199 25.706561 35.63199 28.546791C35.63199 31.387011 37.9344 33.689441 40.77464 33.689441C43.61487 33.689441 45.91728 31.387011 45.91728 28.546791Z'
+                  stroke='black' fill='none' stroke-width='.3985' stroke-miterlimit='10' />
+                <path d='M30.37851 18.150591L36.99735 24.769491' stroke='#a8a7a7' fill='none' stroke-width='.3985'
+                  stroke-miterlimit='10' />
+                <path
+                  d='M74.2641 28.546791C74.2641 25.706561 71.96169 23.404151 69.12145 23.404151C66.28122 23.404151 63.9788 25.706561 63.9788 28.546791C63.9788 31.387011 66.28122 33.689441 69.12145 33.689441C71.96169 33.689441 74.2641 31.387011 74.2641 28.546791Z'
+                  stroke='black' fill='none' stroke-width='.3985' stroke-miterlimit='10' />
+                <path d='M79.51753 18.150681L72.89874 24.769491' stroke='#a8a7a7' fill='none' stroke-width='.3985'
+                  stroke-miterlimit='10' />
+                <path
+                  d='M102.6109 28.546791C102.6109 25.706561 100.30849 23.404151 97.46826 23.404151C94.62802 23.404151 92.32561 25.706561 92.32561 28.546791C92.32561 31.387011 94.62802 33.689441 97.46826 33.689441C100.30849 33.689441 102.6109 31.387011 102.6109 28.546791Z'
+                  fill='#bfbfbf' />
+                <path
+                  d='M102.6109 28.546791C102.6109 25.706561 100.30849 23.404151 97.46826 23.404151C94.62802 23.404151 92.32561 25.706561 92.32561 28.546791C92.32561 31.387011 94.62802 33.689441 97.46826 33.689441C100.30849 33.689441 102.6109 31.387011 102.6109 28.546791Z'
+                  stroke='black' fill='none' stroke-width='.3985' stroke-miterlimit='10' />
+                <path d='M87.07213 18.150591L93.69097 24.769491' stroke='#a8a7a7' fill='none' stroke-width='.3985'
+                  stroke-miterlimit='10' />
+              </g>
+              <g id="defStufe3" opacity="0">
+                <path
+                  d='M10.4838 42.720191C10.4838 39.879951 8.18138 37.577531 5.34116 37.577531C2.50092 37.577531 .1985 39.879951 .1985 42.720191C.1985 45.560411 2.50092 47.862831 5.34116 47.862831C8.18138 47.862831 10.4838 45.560411 10.4838 42.720191Z'
+                  stroke='black' fill='none' stroke-width='.3985' stroke-miterlimit='10' />
+                <path d='M10.03908 33.324371L7.7299 37.942601' stroke='#a8a7a7' fill='none' stroke-width='.3985'
+                  stroke-miterlimit='10' />
+                <path
+                  d='M24.6572 42.720191C24.6572 39.879951 22.35478 37.577531 19.51456 37.577531C16.67432 37.577531 14.3719 39.879951 14.3719 42.720191C14.3719 45.560411 16.67432 47.862831 19.51456 47.862831C22.35478 47.862831 24.6572 45.560411 24.6572 42.720191Z'
+                  fill='#bfbfbf' />
+                <path
+                  d='M24.6572 42.720191C24.6572 39.879951 22.35478 37.577531 19.51456 37.577531C16.67432 37.577531 14.3719 39.879951 14.3719 42.720191C14.3719 45.560411 16.67432 47.862831 19.51456 47.862831C22.35478 47.862831 24.6572 45.560411 24.6572 42.720191Z'
+                  stroke='black' fill='none' stroke-width='.3985' stroke-miterlimit='10' />
+                <path d='M14.81674 33.324471L17.12581 37.942601' stroke='#a8a7a7' fill='none' stroke-width='.3985'
+                  stroke-miterlimit='10' />
+                <path
+                  d='M38.83061 42.720191C38.83061 39.879951 36.5282 37.577531 33.68796 37.577531C30.84773 37.577531 28.54532 39.879951 28.54532 42.720191C28.54532 45.560411 30.84773 47.862831 33.68796 47.862831C36.5282 47.862831 38.83061 45.560411 38.83061 42.720191Z'
+                  stroke='black' fill='none' stroke-width='.3985' stroke-miterlimit='10' />
+                <path d='M38.3859 33.324371L36.07671 37.942601' stroke='#a8a7a7' fill='none' stroke-width='.3985'
+                  stroke-miterlimit='10' />
+                <path
+                  d='M53.00402 42.720191C53.00402 39.879951 50.70159 37.577531 47.86136 37.577531C45.02114 37.577531 42.71872 39.879951 42.71872 42.720191C42.71872 45.560411 45.02114 47.862831 47.86136 47.862831C50.70159 47.862831 53.00402 45.560411 53.00402 42.720191Z'
+                  fill='#bfbfbf' />
+                <path
+                  d='M53.00402 42.720191C53.00402 39.879951 50.70159 37.577531 47.86136 37.577531C45.02114 37.577531 42.71872 39.879951 42.71872 42.720191C42.71872 45.560411 45.02114 47.862831 47.86136 47.862831C50.70159 47.862831 53.00402 45.560411 53.00402 42.720191Z'
+                  stroke='black' fill='none' stroke-width='.3985' stroke-miterlimit='10' />
+                <path d='M43.16356 33.324471L45.47261 37.942601' stroke='#a8a7a7' fill='none' stroke-width='.3985'
+                  stroke-miterlimit='10' />
+                <path
+                  d='M67.17742 42.720191C67.17742 39.879951 64.875 37.577531 62.03478 37.577531C59.19454 37.577531 56.89212 39.879951 56.89212 42.720191C56.89212 45.560411 59.19454 47.862831 62.03478 47.862831C64.875 47.862831 67.17742 45.560411 67.17742 42.720191Z'
+                  stroke='black' fill='none' stroke-width='.3985' stroke-miterlimit='10' />
+                <path d='M66.7327 33.324371L64.42352 37.942601' stroke='#a8a7a7' fill='none' stroke-width='.3985'
+                  stroke-miterlimit='10' />
+                <path
+                  d='M81.35082 42.720191C81.35082 39.879951 79.0484 37.577531 76.20818 37.577531C73.36794 37.577531 71.06552 39.879951 71.06552 42.720191C71.06552 45.560411 73.36794 47.862831 76.20818 47.862831C79.0484 47.862831 81.35082 45.560411 81.35082 42.720191Z'
+                  fill='#bfbfbf' />
+                <path
+                  d='M81.35082 42.720191C81.35082 39.879951 79.0484 37.577531 76.20818 37.577531C73.36794 37.577531 71.06552 39.879951 71.06552 42.720191C71.06552 45.560411 73.36794 47.862831 76.20818 47.862831C79.0484 47.862831 81.35082 45.560411 81.35082 42.720191Z'
+                  stroke='black' fill='none' stroke-width='.3985' stroke-miterlimit='10' />
+                <path d='M71.51036 33.324471L73.81943 37.942601' stroke='#a8a7a7' fill='none' stroke-width='.3985'
+                  stroke-miterlimit='10' />
+                <path
+                  d='M95.52423 42.720191C95.52423 39.879951 93.22182 37.577531 90.38158 37.577531C87.54135 37.577531 85.23894 39.879951 85.23894 42.720191C85.23894 45.560411 87.54135 47.862831 90.38158 47.862831C93.22182 47.862831 95.52423 45.560411 95.52423 42.720191Z'
+                  stroke='black' fill='none' stroke-width='.3985' stroke-miterlimit='10' />
+                <path d='M95.07952 33.324371L92.77033 37.942601' stroke='#a8a7a7' fill='none' stroke-width='.3985'
+                  stroke-miterlimit='10' />
+                <path
+                  d='M109.69763 42.720191C109.69763 39.879951 107.39522 37.577531 104.55498 37.577531C101.71475 37.577531 99.41234 39.879951 99.41234 42.720191C99.41234 45.560411 101.71475 47.862831 104.55498 47.862831C107.39522 47.862831 109.69763 45.560411 109.69763 42.720191Z'
+                  fill='#bfbfbf' />
+                <path
+                  d='M109.69763 42.720191C109.69763 39.879951 107.39522 37.577531 104.55498 37.577531C101.71475 37.577531 99.41234 39.879951 99.41234 42.720191C99.41234 45.560411 101.71475 47.862831 104.55498 47.862831C107.39522 47.862831 109.69763 45.560411 109.69763 42.720191Z'
+                  stroke='black' fill='none' stroke-width='.3985' stroke-miterlimit='10' />
+                <path d='M99.85718 33.324471L102.16623 37.942601' stroke='#a8a7a7' fill='none' stroke-width='.3985'
+                  stroke-miterlimit='10' />
+              </g>
+            </svg>
+            <script type="text/javascript" src="/js/stoch_baum1.js"></script>
+          </div>
+          <!-- <h5>Berechnung der Wahrscheinlichkeit</h5>
+          <p>
+
+          </p> -->
+        </div>
+        <h6>Beispiele</h6>
+        <p>
+        </p>
+      </div>
+    </section>
+    <!-- <section>
+            <div class="videos">
+                <iframe width="360" height="202" src="https://www.youtube.com/embed/19goPRnthCE"
+                    title="Abstand Punkt - Punkt" frameborder="0" allow="web-share" allowfullscreen></iframe>
+
+            </div>
+        </section> -->
+    <section id="aufgaben" class="aufgaben">
+      <h3>Aufgaben zu den Laplace-Experimenten</h3>
+      <ol class="custom-marker point-after decimal more-spacing">
+        <li>Buch, Seite 435 Übung 9 <a href="#a1">Lösungen</a></li>
+      </ol>
+    </section>
+    <section class="loesungen">
+      <h3>Lösungen zu den Laplace-Experimenten</h3>
+      <details id="a1">
+        <summary>Beste Wahl</summary>
+        <p>
+          Es sollte Urne zwei gewählt werden, da hier die Wahrscheinlichkeit (\(p(\text{rot})=\frac12\)) im Vergleich
+          zu Urne 1 (\(p(\text{rot})=\frac38\)) und Urne 3 (\(p(\text{rot})=\frac13\)) am größten ist.
+        </p>
+      </details>
+    </section>
+
+    <!-- <section id="meme">
+      <div class="images">
+        <img
+          src="/img/laplacememe.jpg"
+          style="object-fit: scale-down; max-width: 300px"
+        />
+      </div>
+      <div class="centered">
+        <a href="https://i.redd.it/fu7g05ko59k41.jpg">
+          <h6>Original von yagami_raito23</h6>
+        </a>
+      </div>
+    </section> -->
+  </main>
+  <footer>
+    <a href="/misc/impressum.html">Impressum</a>
+    <div class="lastModified" align="center">
+      Zuletzt geändert:<br />
+      21. November 2023
+      <!-- <span id="lastModifiedDate"></span> -->
+    </div>
+    <a href="/misc/datenschutz.html">Datenschutz</a>
+  </footer>
+</body>
