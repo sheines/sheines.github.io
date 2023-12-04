@@ -41,7 +41,7 @@ function Animation1() {
         delay: 11000,
     });
 
-    Animation1();
+    setTimeout(Animation1, 11500);
 
 
 
