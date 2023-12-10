@@ -1,0 +1,66 @@
+\documentclass[11pt]{standalone}
+
+\usepackage{helvet}
+\usepackage{units}
+\usepackage{textcomp}
+
+\usepackage{ifthen}
+\usepackage{tikz} 
+\usetikzlibrary{shapes.misc}
+\usetikzlibrary{arrows,arrows.meta}
+\usetikzlibrary{calc,intersections, patterns, math}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{shapes.geometric}
+
+\definecolor{pfeil}{RGB}{168,167,167}
+\definecolor{petrol}{RGB}{0, 118, 136}
+\definecolor{darkgoldenrod}{RGB}{184, 134, 11}
+\colorlet{petrol-lighter}{petrol!40}
+\colorlet{darkgoldenrod-lighter}{darkgoldenrod!40}
+
+\begin{document}
+
+\begin{tikzpicture}[pfeil,yscale=-1,scale=0.97, xscale=-1]
+        \node[draw=none,fill,circle] (S) at (0,0) {};
+		\node[draw,circle, thick] (K1) at (3,1) {K};
+		\node[draw,circle, thick] (Z1) at (-3,1) {Z};
+		\draw[very thick] (S) -- node[above] {$\frac 12$} (K1);
+		\draw[very thick] (S) -- node[above] {$\frac 12$} (Z1);
+		\node[draw,circle, thick] (K21) at (4.5,2) {K};
+		\node[draw,circle, thick] (Z21) at (1.5,2) {Z};
+		\draw[very thick] (K1) -- node[above] {$\frac 12$} (K21);
+		\draw[very thick] (K1) -- node[above] {$\frac 12$} (Z21);
+		\node[draw,circle, thick] (K22) at (-1.5,2) {K};
+		\node[draw,circle, thick] (Z22) at (-4.5,2) {Z};
+		\draw[very thick] (Z1) -- node[above] {$\frac 12$} (K22);
+		\draw[very thick] (Z1) -- node[above] {$\frac 12$} (Z22);
+		\node[draw,circle, thick] (K31) at (5,4) {K};
+		\node[draw,circle, thick] (Z31) at (4,4) {Z};
+		\draw[very thick] (K21) -- node[left] {$\frac 12$} (K31);
+		\draw[very thick] (K21) -- node[right] {$\frac 12$} (Z31);
+		\node[draw,circle, thick] (K32) at (2,4) {K};
+		\node[draw,circle, thick] (Z32) at (1,4) {Z};
+		\draw[very thick] (Z21) -- node[left] {$\frac 12$} (K32);
+		\draw[very thick] (Z21) -- node[right] {$\frac 12$} (Z32);
+		
+		\node[draw,circle, thick] (K33) at (-1,4) {K};
+		\node[draw,circle, thick] (Z33) at (-2,4) {Z};
+		\draw[very thick] (K22) -- node[left] {$\frac 12$} (K33);
+		\draw[very thick] (K22) -- node[right] {$\frac 12$} (Z33);
+		\node[draw,circle, thick] (K34) at (-4,4) {K};
+		\node[draw,circle, thick] (Z34) at (-5,4) {Z};
+		\draw[very thick] (Z22) -- node[left] {$\frac 12$} (K34);
+		\draw[very thick] (Z22) -- node[right] {$\frac 12$} (Z34);
+   
+
+    
+
+
+
+
+\end{tikzpicture}
+
+
+
+
+\end{document}

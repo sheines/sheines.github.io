@@ -1,0 +1,60 @@
+\documentclass[11pt]{standalone}
+
+\usepackage{helvet}
+\usepackage{units}
+\usepackage{textcomp}
+
+\usepackage{ifthen}
+\usepackage{tikz} 
+\usetikzlibrary{shapes.misc}
+\usetikzlibrary{arrows,arrows.meta}
+\usetikzlibrary{calc,intersections, patterns, math}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{shapes.geometric}
+
+\definecolor{pfeil}{RGB}{168,167,167}
+\definecolor{petrol}{RGB}{0, 118, 136}
+\definecolor{blue}{RGB}{0, 118, 136}
+% \definecolor{blue}{RGB}{100, 100, 255}
+\definecolor{darkgoldenrod}{RGB}{184, 134, 11}
+\colorlet{petrol-lighter}{petrol!40}
+\colorlet{darkgoldenrod-lighter}{darkgoldenrod!40}
+\definecolor{background}{RGB}{35,35,35}
+
+\begin{document}
+
+\begin{tikzpicture}[pfeil,yscale=-0.8,scale=0.8,xscale=-1]
+	\node[draw=none,fill,circle] (S) at (0,0) {};
+	\node[draw,circle, thick, red, fill] (K1) at (3,1) {};
+	\node[draw,circle, thick, blue, fill] (Z1) at (-3,1) {};
+	\draw[very thick] (S) -- node[fill=background] {$\frac 35$} (K1);
+	\draw[very thick] (S) -- node[fill=background] {$\frac 25$} (Z1);
+	\node[draw=none,circle, thick, red, fill] (K21) at (4.5,2) {};
+	\node[draw=none,circle, thick, blue, fill] (Z21) at (1.5,2) {};
+	\draw[very thick] (K1) -- node[fill=background] {$\frac 12$} (K21);
+	\draw[very thick] (K1) -- node[fill=background] {$\frac 12$} (Z21);
+	\node[draw=none,circle, thick, red, fill] (K22) at (-1.5,2) {};
+	\node[draw=none,circle, thick, blue, fill] (Z22) at (-4.5,2) {};
+	\draw[very thick] (Z1) -- node[fill=background] {$\frac 34$} (K22);
+	\draw[very thick] (Z1) -- node[fill=background] {$\frac 14$} (Z22);
+	\node[draw=none,circle, thick, red, fill] (K31) at (5,4) {};
+	\node[draw=none,circle, thick, blue, fill] (Z31) at (4,4) {};
+	\draw[very thick] (K21) -- node[fill=background] {$\frac 13$} (K31);
+	\draw[very thick] (K21) -- node[fill=background] {$\frac 23$} (Z31);
+	\node[draw=none,circle, thick, red, fill] (K32) at (2,4) {};
+	\node[draw=none,circle, thick, blue, fill] (Z32) at (1,4) {};
+	\draw[very thick] (Z21) -- node[fill=background] {$\frac 23$} (K32);
+	\draw[very thick] (Z21) -- node[fill=background] {$\frac 13$} (Z32);
+	
+	\node[draw=none,circle, thick, red, fill] (K33) at (-1,4) {};
+	\node[draw=none,circle, thick, blue, fill] (Z33) at (-2,4) {};
+	\draw[very thick] (K22) -- node[fill=background] {$\frac 23$} (K33);
+	\draw[very thick] (K22) -- node[fill=background] {$\frac 13$} (Z33);
+	\node[draw=none,circle, thick, red, fill] (K34) at (-4.5,4) {};
+	\draw[very thick] (Z22) -- node[fill=background] {$1$} (K34);
+\end{tikzpicture}
+
+
+
+
+\end{document}
