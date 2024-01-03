@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" initial-scale="1.0" />
+  <meta name="author" content="Sebastian Hitziger" />
+  <meta name="robot" content="noindex" />
+  <title>HITZ | Stat. & Stoch. | Erwartungswert</title>
+  <link rel="stylesheet" type="text/css" href="/css/colors.css" />
+  <link rel="stylesheet" type="text/css" href="/css/gridNoTimeline.css" />
+  <link rel="stylesheet" type="text/css" href="/css/navbar.css" />
+  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="/css/courses.css" />
+  <script type="text/javascript" src="jquery-3.3.1.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="nav">
+      <input type="checkbox" id="nav-check" />
+      <div class="nav-header">
+        <div class="nav-title">
+          <a href="/">Hr. Hitzigers Unterricht</a>
+        </div>
+      </div>
+      <div class="nav-btn">
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+
+      <div class="nav-links">
+        <a href="/content/math/">Mathematik</a>
+        <a href="/content/math/11/">Klasse 11</a>
+        <a href="/content/math/11/statstoch/">Statistik und Stochastik</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section>
+      <h2>Erwartungswert</h2>
+      <div class="ziele">
+        <p>
+          Nachfolgend soll erklärt werden, wie der Erwartungswert eines Zufallsexperiments bestimmt und wie damit die
+          Fairness eines
+          Spiels bewertet wird.
+        </p>
+        <p>
+          <a href="#aufgaben">Direkt zu den Aufgaben</a>
+        </p>
+      </div>
+
+      <div class="theorie">
+        <div class="definition">
+          <h4>Erwartungswert</h4>
+          <p>
+            Der Erwartungswert \(\mu\) einer Zufallsvariablen beschreibt die Zahl, die die Zufallsvariable im Mittel
+            annimmt.
+            $$
+            \mu=\sum_{i=1}^{n} e_i\cdot p(e_i)
+            $$
+            Der Erwartungswert ist die Summe der Produkte aller Ergebnisse mit ihrer Wahrscheinlichkeit.
+          </p>
+        </div>
+        <h6>Beispiel</h6>
+        <p>
+          Welchen Erwartungswert hat ein klassischer Würfel?
+        <div class="table-wrapper centered" style="margin-top: 12px; margin-bottom: 12px;">
+          <table class="wechseltabelle cellCentered" style="width: max-content; white-space: nowrap;">
+            <!-- Haken: &#10004; Kreuz: &#x2718; -->
+            <tr>
+              <th>Ergebnis \(e_i\)</th>
+              <td>1</td>
+              <td>2</td>
+              <td>3</td>
+              <td>4</td>
+              <td>5</td>
+              <td>6</td>
+            </tr>
+            <tr>
+              <th>Wahrs. \(p(e_i)\)</th>
+              <td>\(\frac16\)</td>
+              <td>\(\frac16\)</td>
+              <td>\(\frac16\)</td>
+              <td>\(\frac16\)</td>
+              <td>\(\frac16\)</td>
+              <td>\(\frac16\)</td>
+            </tr>
+          </table>
+        </div>
+        Der Erwartungswert \(\mu\) kann nun, wie folgt, berechnet werden:
+        $$
+          \begin{aligned}
+            \mu&=1\cdot\tfrac16 +2\cdot\tfrac16+3\cdot\tfrac16+4\cdot\tfrac16+5\cdot\tfrac16+6\cdot\tfrac16 \\
+            \mu&=\tfrac72=3,5
+          \end{aligned}
+        $$ 
+        Der Erwartungswert eines klassischen Würfels liegt also bei 3,5. Das heißt bei unendlichen vielen Würfen wird der 
+        Mittelwert aller Würfe bei 3,5 liegen.
+        </p>
+
+        <div class="definition">
+          <h4>Faires Spiel</h4>
+          <p>
+            Ein Spiel ist immer dann fair, wenn der erwartete Gewinn genauso groß ist wie der Spieleinsatz.
+          </p>
+          <p>
+            Das heißt der Spieleinsatz muss genauso groß sein wie der Erwartungswert.
+          </p>
+        </div>
+        <h6>Beispiel</h6>
+        <p>
+          Würfelspiel mit einem Einsatz von 1 €. Es gelten folgende Regeln:
+          <ul class="custom-marker point-after decimal more-spacing">
+            <li>Es wird einmal geworfen.</li>
+            <li>Wird eine 6 geworfen: 3 € Gewinn</li>
+            <li>Wird eine Zahl größer 2 geworfen: 1 € Gewinn</li>
+            <li>Sonst: kein Gewinn</li>
+          </ul>
+          Wahrscheinlichkeitstabelle:
+
+        <div class="table-wrapper centered" style="margin-top: 12px; margin-bottom: 12px;">
+          <table class="wechseltabelle cellCentered" style="width: max-content; white-space: nowrap;">
+            <!-- Haken: &#10004; Kreuz: &#x2718; -->
+            <tr>
+              <th>Gewinn \(e_i\)</th>
+              <td>3 €</td>
+              <td>1 €</td>
+              <td>0 €</td>
+            </tr>
+            <tr>
+              <th>Wahrs. \(p(e_i)\)</th>
+              <td>\(\frac16\)</td>
+              <td>\(\frac36\)</td>
+              <td>\(\frac26\)</td>
+            </tr>
+          </table>
+        </div>
+        Der Erwartungswert \(\mu\) kann nun, wie folgt, berechnet werden (Der Part mit 0 € Gewinn kann natürlich weggelassen werden.):
+        $$
+          \begin{aligned}
+            \mu&=3\,\text€\cdot\tfrac16 + 1\,\text€\cdot\tfrac36 + 0\,\text€\cdot\tfrac26 \\
+            \mu&=1\,\text€
+          \end{aligned}
+        $$ 
+        Der zu erwartende Gewinn liegt bei 1 €, dass heißt das Spiel ist fair.
+        </p>
+        <p>
+          <b><span style="color: var(--fg-header);"> Spiel ist auch dann nicht fair, wenn der zu erwartende Gewinn größer als der Einsatz ist.</span></b>
+        </p>
+      </div>
+    </section>
+    <!-- <section>
+            <div class="videos">
+                <iframe width="360" height="202" src="https://www.youtube.com/embed/19goPRnthCE"
+                    title="Abstand Punkt - Punkt" frameborder="0" allow="web-share" allowfullscreen></iframe>
+
+            </div>
+        </section> -->
+    <section id="aufgaben" class="aufgaben">
+      <h3>Aufgaben zum Erwartungswert</h3>
+      <ol class="custom-marker point-after decimal more-spacing">
+        <li>Bei einem Spiel mit einem Einsatz von 1 € 
+          werden zwei Würfel geworfen. Der Spieler gewinnt 2 €, 
+          falls es ein Pasch ist. <a href="#a1">Lösungen</a>
+          <ol class="custom-marker parens-around lower-alpha more-spacing">
+            <li>Berechne den zu erwartenden Gewinn/Verlust!</li>
+            <li>Wie groß müsste der Gewinn sein, damit das Spiel fair wird?</li>
+          </ol>
+        </li>
+        <li>Ein Glücksrad besteht aus sechs gleichgroßen Sektoren. 
+          Davon sind drei <i>rot</i>, zwei <i>grün</i> und einer <i>blau</i>. <a href="#a2">Lösungen</a>
+          <p>
+            Es werden folgende Gewinne ausgezahlt:
+            <ul class="custom-marker point-after decimal more-spacing">
+              <li><i>rot</i>: \(-2\,\text€\)</li>
+              <li><i>grün</i>: \(1\,\text€\)</li>
+              <li><i>blau</i>: \(3\,\text€\)</li>
+            </ul>
+          </p>
+          <ol class="custom-marker parens-around lower-alpha more-spacing">
+            <li>Erstelle eine Wahrscheinlichkeitstabelle für die einzelnen Gewinne!</li>
+            <li>Ermittle den zu erwartenden Gewinn/Verlust!</li>
+            <li>Wie hoch ist der zu erwartenden Gewinn/Verlust nach zehn Spielen?</li>
+            <li>Wie hoch müsste der Gewinn bei <i>blau</i> sein, damit das Spiel fair wird?</li>
+            <li>Wie hoch müsste stattdessen der Gewinn bei <i>grün</i> sein, damit das Spiel fair wird?</li>
+            <li>Wie hoch müsste stattdessen der Gewinn bei <i>rot</i> sein, damit das Spiel fair wird?</li>
+          </ol>
+        </li>
+        <li>Eine Urne enthält 2 <i>rote</i> und 3 <i>grüne</i> Kugeln. 
+          Es wird so lange jeweils eine Kugel ohne Zurücklegen gezogen, 
+          bis zum ersten Mal eine <i>grüne</i> Kugel gezogen wird. 
+          Wie oft muss man durchschnittlich ziehen? <a href="#a3">Lösungen</a>
+        </li>
+        <li>Ein Glücksrad besteht aus sechs gleichgroßen Sektoren. 
+          Davon sind drei <i>rot</i>, zwei <i>grün</i> und einer <i>blau</i>. 
+          Der Einsatz beträgt 2 €. <a href="#a4">Lösungen</a>
+          <p>
+            Es werden folgende Gewinne ausgezahlt:
+            <ul class="custom-marker point-after decimal more-spacing">
+              <li><i>rot</i>: \(0\,\text€\)</li>
+              <li><i>grün</i>: \(3\,\text€\)</li>
+              <li><i>blau</i>: \(5\,\text€\)</li>
+            </ul>
+          </p>
+          Berechne den Erwartungswert für den Gewinn bzw. Verlust. Ist das Spiel fair?
+        </li>
+        <li>Ein Glücksrad besteht aus zehn gleichgroßen Sektoren. 
+          Einer ist <i>rot</i>, zwei sind <i>weiß</i>, drei sind <i>blau</i> und 
+          vier sind <i>schwarz</i>. Der Einsatz beträgt 1 €. <a href="#a5">Lösungen</a>
+          <p>
+            Farben werden folgende Gewinne ausgezahlt:
+            <ul class="custom-marker point-after decimal more-spacing">
+              <li><i>rot</i>: \(4\,\text€\)</li>
+              <li><i>weiß</i>: \(2\,\text€\)</li>
+              <li><i>blau</i>: \(0,50\,\text€\)</li>
+              <li><i>schwarz</i>: \(0\,\text€\)</li>
+            </ul>
+          </p>
+          <ol class="custom-marker parens-around lower-alpha more-spacing">
+            <li>Mit wie viel Gewinn (oder Verlust) ist pro Runde zu Rechnen?</li>
+            <li>Wie müsste der Auszahlungswert für <i>rot</i> geändert werden, damit das Spiel fair wird?</li>
+          </ol>
+        </li>
+        <li>Bei einem Glücksspiel wird ein Glücksrad verwendet, das in zwei Felder mit den 
+          Aufschriften &bdquo;Gewinn&ldquo; und &bdquo;Leider kein Gewinn&ldquo; eingeteilt ist. 
+          Das Glücksrad wird dreimal gedreht. Der Einsatz beträgt 2 €. 
+          Kommt der Zeiger mindestens einmal bei &bdquo;Gewinn&ldquo; zu stehen, bekommt man 
+          5 € ausbezahlt, ansonsten bekommt man nichts. Wie groß muss der 
+          Mittelpunktswinkel des Sektors &bdquo;Gewinn&ldquo; sein, damit das Spiel fair ist? <a href="#a6">Lösungen</a></li>
+      </ol>
+    </section>
+    <section class="loesungen">
+      <h3>Lösungen zum Erwartungswert</h3>
+      <details id="a1">
+        <summary>Pasch würfeln</summary>
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>Es gibt 32 Karten, davon ist eine ein Pik Bube: \(p(\text{Pik Bube})=\frac{1}{32}\approx3,1\,\%\)</li>
+          <li>Es gibt 32 Karten, davon sind acht Pik-Karten: \(p(\text{Pik})=\frac{8}{32}=\frac14=25\,\%\)</li>
+          <li>Es gibt vier 7er, vier 8er und vier 9er Karten: \(p(\text{Lusche})=\frac{12}{32}=\frac38=37,5\,\%\)<br>
+            Das Ziehen einer Lusche ist wahrscheinlicher als das Ziehen einer Herzkarte (gleiche Wahrscheinlichkeit wie
+            b) ).</li>
+        </ol>
+      </details>
+
+
+    </section>
+
+    <section id="meme">
+      <div class="images">
+        <img src="/img/laplacememe.jpg" style="object-fit: scale-down; max-width: 300px" />
+      </div>
+      <div class="centered">
+        <a href="https://i.redd.it/fu7g05ko59k41.jpg">
+          <h6>Original von yagami_raito23</h6>
+        </a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <a href="/misc/impressum.html">Impressum</a>
+    <div class="lastModified" align="center">
+      Zuletzt geändert:<br />
+      3. Januar 2024
+      <!-- <span id="lastModifiedDate"></span> -->
+    </div>
+    <a href="/misc/datenschutz.html">Datenschutz</a>
+  </footer>
+</body>
