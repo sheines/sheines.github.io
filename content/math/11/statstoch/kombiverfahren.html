@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" initial-scale="1.0" />
+  <meta name="author" content="Sebastian Hitziger" />
+  <meta name="robot" content="noindex" />
+  <title>HITZ | Stat. & Stoch. | Kombinatorische Abzählverfahren</title>
+  <link rel="stylesheet" type="text/css" href="/css/colors.css" />
+  <link rel="stylesheet" type="text/css" href="/css/gridNoTimeline.css" />
+  <link rel="stylesheet" type="text/css" href="/css/navbar.css" />
+  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="/css/courses.css" />
+  <script type="text/javascript" src="jquery-3.3.1.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="nav">
+      <input type="checkbox" id="nav-check" />
+      <div class="nav-header">
+        <div class="nav-title">
+          <a href="/">Hr. Hitzigers Unterricht</a>
+        </div>
+      </div>
+      <div class="nav-btn">
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+
+      <div class="nav-links">
+        <a href="/content/math/">Mathematik</a>
+        <a href="/content/math/11/">Klasse 11</a>
+        <a href="/content/math/11/statstoch/">Statistik und Stochastik</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section>
+      <h2>Kombinatorische Abzählverfahren</h2>
+      <div class="ziele">
+        <p>
+          Nachfolgend soll erklärt werden, wie für verschiedene Zufallsversuche die Anzahl der möglichen Ergebnisse
+          ermittelt wird.
+        </p>
+        <p>
+          <a href="#aufgaben">Direkt zu den Aufgaben</a>
+        </p>
+      </div>
+
+      <div class="theorie">
+        <div class="definition">
+          <h4>Warum das Ganze?</h4>
+          <p>
+            In vielen Fällen ist es wichtig zu wissen, <i>wie viele</i> Möglichkeiten/Ergebnisse es
+            für einen Versuch gibt und weniger <i>welche</i> das im Speziellen sind.
+          </p>
+        </div>
+        Zu den verschiedenen Varianten:
+        <ul class="custom-marker point-after decimal more-spacing" id="uebersicht">
+          <li><a href="#var1">Kombination verschiedener Zufallsversuche</a></li>
+          <li><a href="#var2">Ziehen aus einer Urne <b style="color: red">mit</b> Zurücklegen
+              <b style="color: cyan">unter Beachtung</b> der Reihenfolge</a></li>
+          <li><a href="#var3">Ziehen aus einer Urne <b style="color: magenta">ohne</b>
+              Zurücklegen <b style="color: cyan">unter Beachtung</b> der Reihenfolge</a></li>
+          <li><a href="#var4">Ziehen aus einer Urne <b style="color: magenta">ohne</b>
+              Zurücklegen <b style="color: blue">ohne Beachtung</b> der Reihenfolge</a></li>
+        </ul>
+        <div class="definition" id="var1">
+          <h4>Produktregel</h4>
+          <p>
+            Ein Zufallsversuch wird in \(k\) Stufen durchgeführt und die Anzahl der möglichen Ergebnisse
+            einer Stufe sind unabhängig von den Ergebnissen der vorherigen Stufen.
+          </p>
+          <p>
+            In der ersten Stufe gibt es \(n_1\) mögliche Ergebnisse, in der zweiten Stufe \(n_2\), ... und in
+            der \(k\)-ten Stufe gibt es \(n_k\) mögliche Ergebnisse.
+          </p>
+          <p>
+            Dann hat der Zufallsversuch insgesamt
+            \begin{align*}
+            N&=n_1\cdot n_2\cdot\ldots \cdot n_k
+            \end{align*}
+            mögliche Ergebnisse.
+          </p>
+        </div>
+        <h6>Beispiel</h6>
+        <p>
+          Ein Fahrzeug wird mit fünf verschiedenen Motorvarianten, sechs verschiedenen Farben
+          und drei verschiedenen Ausstattungsvarianten angeboten.
+        </p>
+        <p>
+          Wie viele verschiedene Kombinationsmöglichkeiten gibt es?
+          \begin{align*}
+          N&=5\cdot 6\cdot 3=90
+          \end{align*}
+          Es werden insgesamt 90 verschiedene Kombinationen angeboten.
+        </p>
+        <p>
+          Zurück zur <a href="#uebersicht">Übersicht</a>.
+        </p>
+        <div class="definition" id="var2">
+          <h4>Ziehen mit Zurücklegen unter Beachtung der Reihenfolge</h4>
+          <p>
+            Aus einer Urne mit \(n\) unterscheidbaren Kugeln werden nacheinander \(k\) Kugeln 
+            <span style="color: red"><b>mit Zurücklegen</b></span>
+            gezogen.
+          </p>
+          <p>
+            Die Ergebnisse werden <span style="color: cyan"><b>in der Reihenfolge</b></span> des Ziehens notiert.
+          </p>
+          <p>
+            Dann hat der Zufallsversuch insgesamt
+            \begin{align*}
+              N&=n^k
+            \end{align*}
+            mögliche Ergebnisse.
+          </p>
+        </div>
+        <h6>Beispiel</h6>
+        <p>
+          Ein Passwort enthält 5 Kleinbuchstaben.
+        </p>
+        <p>
+          Wie viele mögliche Passwörter gibt es?
+          \begin{align*}
+          N&=26^5=11\,881\,376
+          \end{align*}
+          Es gibt insgesamt \(11\,881\,376\) verschiedene Passwörter.
+        </p>
+        <p>
+          Zurück zur <a href="#uebersicht">Übersicht</a>.
+        </p>
+        <div class="definition" id="var3">
+          <h4>Ziehen ohne Zurücklegen unter Beachtung der Reihenfolge</h4>
+          <p>
+            Aus einer Urne mit \(n\) unterscheidbaren Kugeln werden nacheinander \(k\) Kugeln 
+            <span style="color: magenta"><b>ohne Zurücklegen</b></span>
+            gezogen.
+          </p>
+          <p>
+            Die Ergebnisse werden <span style="color: cyan"><b>in der Reihenfolge</b></span> des Ziehens notiert.
+          </p>
+          <p>
+            Dann hat der Zufallsversuch insgesamt
+            \begin{align*}
+            N&=n\cdot (n-1) \cdot \ldots \cdot (n-k+1)
+            \end{align*}
+            mögliche Ergebnisse.
+          </p>
+          <p>
+            Auf dem Taschenrechner gibt es eine Taste mit der Beschriftung <code>nPr</code> Diese berechnet \(N\).
+          </p>
+        </div>
+        <h6>Beispiel</h6>
+        <p>
+          Aus einer Gruppe von 25 Personen werden nacheinander die vier verschiedene Positionen des Gruppenvorstands gelost.
+        </p>
+        <p>
+          Wie viele mögliche Vorstände gibt es?
+          \begin{align*}
+          N&=25\cdot 24\cdot 23\cdot 22=303\,600
+          \end{align*}
+          Es gibt insgesamt \(303\,600\) verschiedene Vorstände.
+        </p>
+        <p>
+          Zurück zur <a href="#uebersicht">Übersicht</a>.
+        </p>
+        <div class="definition" id="var4">
+          <h4>Ziehen ohne Zurücklegen ohne Beachtung der Reihenfolge</h4>
+          <p>
+            Aus einer Urne mit \(n\) unterscheidbaren Kugeln wird eine ungeordnete Teilmenge 
+            von \(k\) Kugeln entnommen.
+          </p>
+          <p>
+            Es ist egal an welcher Stelle ein einzelnes Ergebnis gezogen wird.
+          </p>
+          <p>
+            Dann hat der Zufallsversuch insgesamt
+            \begin{align*}
+            N&=\binom{n}{k}=\frac{n!}{k!\cdot (n-k)!}
+            \end{align*}
+            mögliche Ergebnisse.
+          </p>
+          <p>
+            Der Ausdruck \(\binom nk\) heißt <b style="color: var(--fg-header)">Binomialkoeffizient</b> und wird 
+            &bdquo;En über Ka&ldquo; ausgesprochen. Das Ausrufezeichen steht für die Fakultät.
+          </p>
+          <p>
+            Auf dem Taschenrechner gibt es eine Taste mit der Beschriftung <code>nCr</code> Diese berechnet \(N\).
+          </p>
+        </div>
+        <h6>Beispiel</h6>
+        <p>
+          Aus einer Gruppe von 25 Personen soll eine 5er-Gruppe herausgelöst werden.
+        </p>
+        <p>
+          Wie viele mögliche Gruppen gibt es?
+          \begin{align*}
+          N&=\binom{25}{5}=\dfrac{25!}{5!\cdot (\underbrace{25-5}_{=20})!}=53\,130
+          \end{align*}
+          Es gibt insgesamt \(53\,130\) verschiedene Möglichkeiten eine 5er-Gruppe zu bilden.
+        </p>
+          Die Eingabe in die Taschenrechner würde hier: <code>25 nCr 5</code> lauten.
+        <p>
+        </p>
+        <p>
+          Zurück zur <a href="#uebersicht">Übersicht</a>.
+        </p>
+      </div>
+    </section>
+    <!-- <section>
+            <div class="videos">
+                <iframe width="360" height="202" src="https://www.youtube.com/embed/19goPRnthCE"
+                    title="Abstand Punkt - Punkt" frameborder="0" allow="web-share" allowfullscreen></iframe>
+
+            </div>
+        </section> -->
+    <section id="aufgaben" class="aufgaben">
+      <h3>Aufgaben zu Kombinatorischen Abzählverfahren</h3>
+      <ol class="custom-marker point-after decimal more-spacing">
+        <li>Buch, Seite 461 Übung 1 <a href="#a1">Lösungen</a></li>
+        <li>Buch, Seite 462 Übung 2  <a href="#a2">Lösungen</a></li>
+        <li>Buch, Seite 464 Übung 3  <a href="#a3">Lösungen</a></li>
+        <li>Buch, Seite 464 Übung 4  <a href="#a4">Lösungen</a></li>
+        <li>Buch, Seite 464 Übung 5  <a href="#a5">Lösungen</a></li>
+        <li>Buch, Seite 465 Übung 6  <a href="#a6">Lösungen</a></li>
+        <li>Buch, Seite 465 Übung 7  <a href="#a7">Lösungen</a></li>
+      </ol>
+    </section>
+    <section class="loesungen">
+      <h3>Lösungen zu Kombinatorischen Abzählverfahren</h3>
+      <details id="a1">
+        <summary>Autokennzeichen</summary>
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>...</li>
+        </ol>
+      </details>
+
+
+    </section>
+
+    <section id="meme">
+      <div class="images">
+        <img src="/img/fakult-meme.jpg" style="object-fit: scale-down; max-width: 300px" />
+      </div>
+      <div class="centered">
+        <a href="https://twitter.com/kj_cheetham/status/1149966666836656128?lang=de">
+          <h6>Original von KJ Cheetham</h6>
+        </a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <a href="/misc/impressum.html">Impressum</a>
+    <div class="lastModified" align="center">
+      Zuletzt geändert:<br />
+      3. Januar 2024
+      <!-- <span id="lastModifiedDate"></span> -->
+    </div>
+    <a href="/misc/datenschutz.html">Datenschutz</a>
+  </footer>
+</body>
