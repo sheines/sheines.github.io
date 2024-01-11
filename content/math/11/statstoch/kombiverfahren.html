@@ -229,16 +229,52 @@
         <li>Buch, Seite 464 Übung 3  <a href="#a3">Lösungen</a></li>
         <li>Buch, Seite 464 Übung 4  <a href="#a4">Lösungen</a></li>
         <li>Buch, Seite 464 Übung 5  <a href="#a5">Lösungen</a></li>
-        <li>Buch, Seite 465 Übung 6  <a href="#a6">Lösungen</a></li>
-        <li>Buch, Seite 465 Übung 7  <a href="#a7">Lösungen</a></li>
       </ol>
     </section>
     <section class="loesungen">
       <h3>Lösungen zu Kombinatorischen Abzählverfahren</h3>
       <details id="a1">
         <summary>Autokennzeichen</summary>
-        <ol class="custom-marker parens-around lower-alpha more-spacing">
+        Es gibt 26 Buchstaben und 10 Ziffern. Es gibt also \(n=26^3\cdot 10^2=1\,757\,600\) verschiedene Kennzeichen.
+        <!-- <ol class="custom-marker parens-around lower-alpha more-spacing">
           <li>...</li>
+        </ol> -->
+      </details>
+      <details id="a2">
+        <summary>Zahlenschloss</summary>
+        <ul class="custom-marker parens-around lower-alpha more-spacing">
+          <li>Anzahl der 5-stelligen Zahlencodes: \(n=10^5=100\,000\)</li>
+          <li>Anzahl der 5-stelligen Zahlencodes mit verschiedenen Ziffern: \(n=10\cdot 9\cdot 8\cdot 7\cdot 6=30\,240\)</li>
+          <li>Anzahl der 5-stelligen Zahlencodes mit gleichen Ziffern: \(n=10\) (mit nachdenken)</li>
+        </ul>
+      </details>
+      <details id="a3">
+        <summary>Binomialkoeffizienten</summary>
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>\(\binom{5}{3}=10\), \(\binom{7}{6}=7\), \(\binom{4}{4}=1\), \(\binom{5}{0}=1\), 
+            \(\binom{8}{3}=56\), \(\binom{9}{2}=36\), \(\binom{22}{11}=705\,432\), 
+            \(\binom{100}{20}=535\,983\,370\,403\,809\,682\,970\)</li>
+          <li>\(\binom{12}{5}=792\)</li> 
+          <li>\(\binom{9}{5}+\binom{9}{6}+\binom{9}{7}+\binom{9}{8}+\binom{9}{9}\) \(=126+84+36+9+1=256\)</li>
+          <li>\(\displaystyle\sum_{i=0}^{10} \binom{10}{i}=1\,024\)</li>
+        </ol>
+      </details>
+      <details id="a4">
+        <summary>Fußballturnier</summary>
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>Im Endspiel nehmen zwei Mannschaften teil: \(\binom 82=28\)</li>
+          <li>\(\binom{5000}{2}=12\,497\,500\)</li>
+          <li>\(\binom{25}{3}=2\,300\)</li>
+        </ol>
+      </details>
+      <details id="a5">
+        <summary>Ungeordnete Stichprobe</summary>
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>Es gibt \(\binom{32}{4}=35\,960\) Möglichkeiten vier Karten auszuwählen. 
+            Nur eine dieser Möglichkeiten enthält vier Asse. \(p(\text{4 Asse})=\frac{1}{35960}\approx0,0028\,\%\)</li>
+          <li>Es gibt genau eine Auswahl von fünf Buchstaben ohne Konsonanten, nämlich die fünf Vokale:
+            \(p(\text{keine Konsonanten})=p(\text{nur Vokale})\) \(=\frac{1}{\binom{26}{5}}=\frac{1}{65\,780}\approx 0,0015\,\%\)
+          </li>
         </ol>
       </details>
 
@@ -260,7 +296,7 @@
     <a href="/misc/impressum.html">Impressum</a>
     <div class="lastModified" align="center">
       Zuletzt geändert:<br />
-      3. Januar 2024
+      11. Januar 2024
       <!-- <span id="lastModifiedDate"></span> -->
     </div>
     <a href="/misc/datenschutz.html">Datenschutz</a>
