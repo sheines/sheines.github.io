@@ -1,0 +1,40 @@
+\documentclass[11pt]{standalone}
+
+\usepackage{helvet}
+
+\usepackage{ifthen}
+\usepackage{tikz} 
+\usetikzlibrary{shapes.misc}
+\usetikzlibrary{arrows,arrows.meta}
+\usetikzlibrary{calc,intersections, patterns, math}
+
+\definecolor{pfeil}{RGB}{168,167,167}
+\definecolor{petrol}{RGB}{0, 118, 136}
+\definecolor{darkgoldenrod}{RGB}{184, 134, 11}
+\colorlet{petrol-lighter}{petrol!40}
+\colorlet{darkgoldenrod-lighter}{darkgoldenrod!40}
+
+\begin{document}
+
+\def\scl{0.25}
+
+\begin{tikzpicture}[pfeil, scale=\scl,>=stealth]
+
+    % \draw[thick, fill=petrol!20, draw=petrol-lighter, rounded corners=2ex, opacity=0.5] (0,0) rectangle ++ (1.5,3.5);
+    % \draw[thick, fill=darkgoldenrod!20, draw=darkgoldenrod-lighter, rounded corners=2ex, opacity=0.5] (5,0) rectangle ++ (1.5,3.5);
+
+	\draw[thin,gray] (-4.99,-4.99) grid (4.99,4.99);
+	
+	\draw[thick, ->] (-5,0) -- (5,0) node[below] {$x$};
+	\draw[thick, ->] (0,-5) -- (0,5) node[left] {$y$};
+	
+	%\draw[very thick, samples=250, smooth, domain=-4:5, petrol] plot (\x,{0.25*(\x*\x-4*\x)-3});
+    % \draw[very thick, samples=250, smooth, domain=-4:5, petrol] plot (\x,{0.25*(\x)-3});
+    % \draw[very thick, samples=250, smooth, domain=-2.236:2.236, petrol] plot (\x,{\x*\x});
+    % \draw[very thick, samples=250, smooth, domain=-2.646:2.646, petrol] plot (\x*\x-2,{\x-1});
+    % \draw[very thick, samples=250, smooth, domain=-5:5, petrol] plot (\x,{3*cos(0.18*pi*\x r)});
+    % \draw[very thick, samples=250, smooth, domain=-5:2.183, petrol] plot (\x,{-0.4*(\x+2)^2+2});
+
+\end{tikzpicture}
+
+\end{document}

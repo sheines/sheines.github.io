@@ -137,10 +137,17 @@ table {
 
 .aufgaben {
   color: lightblue;
+  
 }
 .loesungen {
   counter-reset: lsg-counter 0;
   color: blanchedalmond;
+}
+.aufgaben details {
+  border-color: lightblue;
+}
+.loesungen details {
+  border-color: var(--loesungen);
 }
 details {
   padding-left: 10px;
