@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" initial-scale="1.0" />
+  <meta name="author" content="Sebastian Hitziger" />
+  <meta name="robot" content="noindex" />
+  <title>HITZ | Ganzrat. Fkt. | Darstellungsformen und Streckungsparameter a</title>
+  <link rel="stylesheet" type="text/css" href="/css/colors.css" />
+  <link rel="stylesheet" type="text/css" href="/css/gridNoTimeline.css" />
+  <link rel="stylesheet" type="text/css" href="/css/navbar.css" />
+  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="/css/courses.css" />
+  <script type="text/javascript" src="jquery-3.3.1.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="nav">
+      <input type="checkbox" id="nav-check" />
+      <div class="nav-header">
+        <div class="nav-title">
+          <a href="/">Hr. Hitzigers Unterricht</a>
+        </div>
+      </div>
+      <div class="nav-btn">
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+
+      <div class="nav-links">
+        <a href="/content/math/">Mathematik</a>
+        <a href="/content/math/11/">Klasse 11</a>
+        <a href="/content/math/11/ganzrat/">Ganzrationale Funktionen</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section>
+      <h2>Darstellungsformen und Streckungsparameter \(a\)</h2>
+      <div class="ziele">
+        <p>
+          Nachfolgend sollen die verschiedenen Darstellungsformen quadratischer Funktionen erklärt werden und 
+        </p>
+        <!-- <p>
+          TODO: Kapitelmarken
+        </p> -->
+        <p>
+          <a href="#aufgaben">Direkt zu den Aufgaben</a>
+        </p>
+      </div>
+
+      <div class="theorie">
+        <div class="definition">
+          <h4>Darstellungsformen</h4>
+          <p>
+            Es gibt fünf Darstellungsformen:
+            <ul>
+              <li>Allgemeine Form: \(y=ax^2+bx+c\)</li>
+              <li>Normalform: \(y=x^2+px+q\)</li>
+              <li>Scheitelpunktform: \(y=a(x-d)^2+e\), Scheitelpunkt \(S(d\,|\,e)\)</li>
+              <li>Linearfaktorzerlegung: \(y=a(x-x_1)\cdot (x-x_2)\), Nullstellen \(x_1\) und \(x-2\)</li>
+              <li>Graphische Darstellung: im Koordinatensystem</li>
+            </ul>
+          </p>
+        </div>
+        <h6>Beispiel</h6>
+        <p>
+          Die folgenden Gleichungen stellen jeweils die gleichen Funktionen in den verschiedenen Formen dar:
+          <ul>
+            <li>Allgemeine Form: \(y=2x^2-8x+6\)</li>
+              <li>Normalform: \(y=x^2-4x+3\)</li>
+              <li>Scheitelpunktform: \(y=2(x-2)^2-2\), <br>Scheitelpunkt \(S(2\,|\,-2)\)</li>
+              <li>Linearfaktorzerlegung: \(y=2(x-1)\cdot (x-3)\), <br>Nullstellen \(x_1=1\) und \(x_2=3\)</li>
+              <li>Graphische Darstellung: eine nach oben geöffnete Parabel</li>
+          </ul>
+        </p>
+        <div class="definition">
+          <h4>Umwandlung Allgemeine Form in Normalform</h4>
+          <p>
+            Um eine Gleichung aus der allgemeinen Form (\(y=ax^2+bx+c\)) in die Normalform (\(y=x^2+px+q\)) umzuwandeln, muss diese 
+            lediglich durch den Streckungsfaktor (meist \(a\)) geteilt werden.
+          </p>
+        </div>
+        <h6>Beispiel</h6>
+        <p>
+          Gegeben ist die Funktion: \(f(x)=4x^2+12x-48\)
+          \begin{align*}
+            f(x)&={\color{red}4}x^2+12x-48\qquad | : {\color{red}4} \\
+            f(x)&=x^2+3x-12
+          \end{align*}
+          Die Normalform der Funktion lautet: \(f(x)=x^2+3x-12\)
+        </p>
+
+        <div class="definition">
+          <h4>Umwandlung Normalform in Allgemeine Form</h4>
+          <p>
+            Um eine Gleichung aus der Normalform in die allgemeine Form umzuwandeln, muss diese 
+            lediglich mit den Streckungsfaktor (meist \(a\)) multipliziert werden.
+          </p>
+        </div>
+        <h6>Beispiel</h6>
+        <p>
+          Gegeben ist die Funktion: \(f(x)=x^2-5x+2\), sowie der Streckungsfaktor \(\color{cyan}a=-3\)
+          \begin{align*}
+            f(x)&=x^2-5x+2\qquad | \cdot {\color{cyan}(-3)} \\
+            f(x)&={\color{cyan}-3}x^2-9x+36
+          \end{align*}
+          Die allgemeine Form der Funktion lautet: \(f(x)=-3x^2-9x+36\)
+        </p>
+
+        <div class="definition">
+          <h4>Umwandlung Scheitelpunktform in Allgemeine Form</h4>
+          <p>
+            Das Vorgehen ist ähnlich dem mit der Normalform. Lediglich der Streckungsfaktor muss nun auch beachtet werden:
+            <ol>
+              <li>Klammer mithilfe der binomischen Formeln auflösen,</li>
+              <li>Klammer mit Streckungsfaktor $a$ multiplizieren und</li>
+              <li>Gegebenenfalls Zusammenfassen.</li>
+            </ol>
+          </p>
+        </div>
+        <h6>Beispiel</h6>
+        <p>
+          Gegeben ist die Funktion: \(f(x)=3(x-5)^2+4\), welche den Scheitelpunkt \(S(5\,|\,4)\) besitzt.
+          \begin{align*}
+            f(x)&=3{\color{orange}(x-5)^2}+4 \\
+            f(x)&=3{\color{orange}(x^2-10x+25)}+4
+          \end{align*}
+          Die allgemeine Form der Funktion lautet: \(f(x)=-3x^2-9x+36\)
+        </p>
+
+
+      </div>
+
+    </section>
+    <!-- <section>
+            <div class="videos">
+                <iframe width="360" height="202" src="https://www.youtube.com/embed/19goPRnthCE"
+                    title="Abstand Punkt - Punkt" frameborder="0" allow="web-share" allowfullscreen></iframe>
+
+            </div>
+        </section> -->
+    <!-- <section class="aufgaben">
+      <h3>Aufgaben zum Fächermodell</h3>
+      <ol class="custom-marker point-after decimal more-spacing">
+        <li>Buch, Seite 465 Übung 6 <a href="#a1">Lösungen</a></li>
+      </ol>
+    </section>
+
+    <section class="loesungen">
+      <h3>Lösungen zum Fächermodell</h3>
+      <details id="a1">
+        <summary>Lotto I</summary>
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>3 Richtige: \(\displaystyle p=\frac{\binom63\cdot\binom{43}{3}}{\binom{49}{6}}=1,77\,\%\)</li>
+          <li>Mindestens 5 Richtige heißt fünf oder sechs Richtige: \(\displaystyle
+            p=\frac{\binom65\cdot\binom{43}{1}}{\binom{49}{6}}+\frac{\binom66\cdot\binom{43}{0}}{\binom{49}{6}}\)
+            \(=0,0019\,\%\)</li>
+        </ol>
+      </details>
+    </section> -->
+
+    <section id="meme">
+      <div class="images">
+        <img src="/img/roots_meme.jpg" style="object-fit: scale-down; max-width: 300px" />
+      </div>
+      <div class="centered">
+        <a href="https://www.pinterest.de/pin/642114859355355289/">
+          <h6>Original von English Masters League</h6>
+        </a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <a href="/misc/impressum.html">Impressum</a>
+    <div class="lastModified" align="center">
+      Zuletzt geändert:<br />
+      10. Februar 2024
+      <!-- <span id="lastModifiedDate"></span> -->
+    </div>
+    <a href="/misc/datenschutz.html">Datenschutz</a>
+  </footer>
+</body>
