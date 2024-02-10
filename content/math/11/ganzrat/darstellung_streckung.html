@@ -120,7 +120,7 @@
             Das Vorgehen ist ähnlich dem mit der Normalform. Lediglich der Streckungsfaktor muss nun auch beachtet werden:
             <ol>
               <li>Klammer mithilfe der binomischen Formeln auflösen,</li>
-              <li>Klammer mit Streckungsfaktor $a$ multiplizieren und</li>
+              <li>Klammer mit Streckungsfaktor \(a\) multiplizieren und</li>
               <li>Gegebenenfalls Zusammenfassen.</li>
             </ol>
           </p>
@@ -130,9 +130,73 @@
           Gegeben ist die Funktion: \(f(x)=3(x-5)^2+4\), welche den Scheitelpunkt \(S(5\,|\,4)\) besitzt.
           \begin{align*}
             f(x)&=3{\color{orange}(x-5)^2}+4 \\
-            f(x)&=3{\color{orange}(x^2-10x+25)}+4
+            f(x)&={\color{magenta}3}{\color{orange}(x^2-10x+25)}+4 \\
+            f(x)&={\color{magenta}3}x^2{\color{magenta}\,-\,30}x+{\color{magenta}25} +4 \\
+            f(x)&=3x^2-30x+29
           \end{align*}
-          Die allgemeine Form der Funktion lautet: \(f(x)=-3x^2-9x+36\)
+          Die allgemeine Form der Funktion lautet: \(f(x)=3x^2-30x+29\)
+        </p>
+
+        <div class="definition">
+          <h4>Umwandlung Allgemeine Form in Scheitelpunktform</h4>
+          <p>
+            Das Vorgehen ist ähnlich dem mit der Normalform. Lediglich der Streckungsfaktor muss nun auch beachtet werden:
+            <ol>
+              <li>Funktionsgleichung in Normalform umwandeln,</li>
+              <li>Quadratische Ergänzung ermitteln,</li>
+              <li>Quadratische Ergänzung neutral anfügen,</li>
+              <li>Mit binomischer Formel einklammern und Rest zusammenfassen und</li>
+              <li>Gesamte Gleichung mit Streckungsfaktor \(a\) multiplizieren</li>
+            </ol>
+          </p>
+        </div>
+        <h6>Beispiel</h6>
+        <p>
+          Gegeben ist die Funktion: \(f(x)=3x^2-24x+27\).
+          <ol>
+            <li>Normalform bestimmen, indem durch <span style="color: red;">Streckungsfaktor</span> geteilt wird:
+              \begin{align*}
+              f(x)&={\color{red}3}x^2-24x+27\qquad | : {\color{red}3} \\
+              f(x)&=x^2\,{\color{green}-\,8}x+9
+              \end{align*}
+            </li>
+            <li>Die <span style="color: cyan">quadratische Ergänzung</span> wird mithilfe des Parameters
+              \(\color{green}p\) bestimmt:
+              \begin{align*}
+              {\color{green}p}\,=\,{\color{green}-8} \Rightarrow {\color{green}-8}:2=\,{\color{teal}-4} \Rightarrow
+              ({\color{teal}-4})^2={\color{cyan}16}
+              \end{align*}
+            </li>
+            <li>
+              Die <span style="color: cyan">quadratische Ergänzung</span> wird nun <span
+                style="color: lightgreen">neutral</span> angefügt:
+              \begin{align*}
+              f(x)&=x^2-8x+9 \\
+              f(x)&=x^2-8x+9+\underbrace{\color{cyan}16-16}_{\color{lightgreen}=0}
+              \end{align*}
+            </li>
+            <li>
+              Der entstandene Term wird erst umgestellt und dann 
+              <span style="color: magenta">eingeklammert</span> und zusammengefasst:
+              \begin{align*}
+              f(x)&=x^2-8x+9+{\color{cyan}16-16} \\
+              f(x)&={\color{magenta}\underbrace{\color{#a7a7a8}x^2-8x\color{cyan}+16}_{} } +9 \color{cyan} -16 \\
+              f(x)&={\color{magenta} ({\color{#a7a7a8}x}\, {\color{teal} -\,4})^2} +9 \color{cyan} -16 \\
+              f(x)&={\color{magenta} ({\color{#a7a7a8}x}\, {\color{teal} -\,4})^2} +9 \color{cyan} -16 \\
+              f(x)&= (x-4)^2-7
+              \end{align*}
+            </li>
+            <li>
+              Das Ergebnis wird nun mit dem <span style="color: red;">Streckungsfaktor</span> multipliziert:
+              \begin{align*}
+              f(x)&= (x-4)^2-7 \qquad | \cdot {\color{red}3} \\
+              f(x)&={\color{red}3} (x-4)^2-\,{\color{red}3}\cdot7 \\
+              f(x)&=3(x-4)^2-21
+              \end{align*}
+            </li>
+          </ol>
+          Die Scheitelpunktform lautet also \(f(x)=3(x-4)^2-21\). Der Scheitelpunkt liegt bei \(S_f(4\,|\,-21)\)
+          </p>
         </p>
 
 
