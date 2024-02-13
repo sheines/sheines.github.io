@@ -318,13 +318,13 @@
             Lösungsformel berechnet werden:
             \begin{align*}
             x_{1/2}&=\frac{-b\pm\sqrt{b^2-4ac}}{2a}\\
-              &=\frac{-b\pm\sqrt{D}}{2a}
+            &=\frac{-b\pm\sqrt{D}}{2a}
             \end{align*}
             Da sinnvollerweise erst berechnet wird, wie viele Nullstellen die Funktion hat, bietet sich besonders die
             letzte Formel an.
           </p>
           <p>
-            Wer die \(p\)-\(q\)-Formel als leichter empfindet, kann auch erst die Normalform bestimmen und 
+            Wer die \(p\)-\(q\)-Formel als leichter empfindet, kann auch erst die Normalform bestimmen und
             damit dann die Nullstellen berechnen.
           </p>
         </div>
@@ -346,7 +346,74 @@
         </p>
       </div>
 
+      <div class="definition">
+        <h4>Umwandlung Allgemeine Form in Linearfaktorzerlegung</h4>
+        <ol>
+          <li>Nullstellen der Funktion bestimmen,</li>
+          <li>Linearfaktoren mit den Nullstellen aufstellen \((x-x_0)\) und </li>
+          <li>Streckungsfaktor \(a\) vor das Produkt setzen.</li>
+        </ol>
+        Sollte die Quadratische Funktion nur eine Nullstelle besitzen, so wird dieser Linearfaktor quadriert.
       </div>
+      <h6>Beispiel</h6>
+      <p>
+        Gegeben ist die Funktion \(f(x)={\color{orange}3}x^2\,{\color{cyan}-3}x{\color{magenta}\,-18}\).
+      </p>
+      <ol>
+        <li>Nullstelle berechnen:
+          <ul>
+            <li>Diskriminante: \({\color{green}D}=({\color{cyan}-3})^2-4\cdot {\color{orange}3} \cdot ({\color{magenta}\,-18})=\color{green}225\) </li>
+            <li>Erste Nullstelle: \(\displaystyle x_1=\frac{-({\color{cyan}-3})+\sqrt{\color{green}225}}{2\cdot {\color{orange}3}}=\color{red}3\)</li>
+            <li>Erste Nullstelle: \(\displaystyle x_1=\frac{-({\color{cyan}-3})-\sqrt{\color{green}225}}{2\cdot {\color{orange}3}}=\color{pink}-2\)</li>
+          </ul>
+        </li>
+        <li>Linearfaktoren aufstellen:
+          <ul>
+            <li>Mit erster Nullstelle: \((x-{\color{red}3})\)</li>
+            <li>Mit zweiter Nullstelle: \((x-({\color{pink}-2}))=(x+{\color{pink}2})\)</li>
+          </ul>
+          Daraus resultiert das Produkt: \((x-{\color{red}3})\cdot (x+{\color{pink}2})\)
+        </li>
+        <li>Streckungsfaktor \(a\) dazu multiplizieren: 
+          \begin{align*}
+            f(x)&={\color{orange}3} \cdot (x-{\color{red}3})\cdot (x+{\color{pink}2})
+          \end{align*}
+        </li>
+      </ol>
+
+      <div class="definition">
+        <h4>Umwandlung Linearfaktorzerlegung in Allgemeine Form</h4>
+        <ol>
+          <li>Klammern ausmultiplizieren und</li>
+          <li>Ergebnis mit Streckungsfaktor multiplizieren</li>
+        </ol>
+      </div>
+      <h6>Beispiel</h6>
+      <p>
+        Gegeben ist die Funktion in Linearfaktorzerlegung \(f(x)=5(x-7)(x+4)\).
+      </p>
+      <ol>
+        <li>Klammern ausmultiplizieren:
+          \begin{align*}
+            f(x)&=5\cdot \color{orange}(x-7)\cdot (x+4) \\
+            f(x)&=5\cdot \color{orange}(x^2+3x-28)
+          \end{align*}
+        </li>
+        <li>Streckungsfaktor \(a\) dazu multiplizieren: 
+          \begin{align*}
+          f(x)&={\color{magenta}5}\cdot (x^2+3x-28) \\
+          f(x)&={\color{magenta}5}x^2+{\color{magenta}15}x\,\color{magenta}-140
+          \end{align*}
+        </li>
+      </ol>
+      <p>
+        Die allgemeine Form der oben genannten Funktion lautet \(f(x)=5x^2+15x\,-140\).
+      </p>
+
+    </div>
+
+
+
 
     </section>
     <!-- <section>
