@@ -137,13 +137,7 @@ table {
 
 .aufgaben {
   color: lightblue;
-  
-}
-.count {
-  counter-reset: aufg-counter 0;
-}
-.count details {
-  counter-increment: aufg-counter 1;
+  counter-reset: lsg-counter 0;
 }
 
 .loesungen {
@@ -179,9 +173,7 @@ details[open] summary {
 details summary::before {
   content: counter(lsg-counter) ". ";
 }
-.count summary::before {
-  content: counter(aufg-counter) ". ";
-}
+
 .nonumber::before {
   content: "";
 }
