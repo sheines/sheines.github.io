@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" initial-scale="1.0" />
+  <meta name="author" content="Sebastian Hitziger" />
+  <meta name="robot" content="noindex" />
+  <title>HITZ | Ganzrat. Fkt. | Lagebeziehungen II</title>
+  <link rel="stylesheet" type="text/css" href="/css/colors.css" />
+  <link rel="stylesheet" type="text/css" href="/css/gridNoTimeline.css" />
+  <link rel="stylesheet" type="text/css" href="/css/navbar.css" />
+  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="/css/courses.css" />
+  <script type="text/javascript" src="jquery-3.3.1.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="nav">
+      <input type="checkbox" id="nav-check" />
+      <div class="nav-header">
+        <div class="nav-title">
+          <a href="/">Hr. Hitzigers Unterricht</a>
+        </div>
+      </div>
+      <div class="nav-btn">
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+
+      <div class="nav-links">
+        <a href="/content/math/">Mathematik</a>
+        <a href="/content/math/11/">Klasse 11</a>
+        <a href="/content/math/11/ganzrat/">Ganzrationale Funktionen</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section>
+      <h2>Lagebeziehungen von Parabeln und Geraden II</h2>
+      <div class="ziele">
+        <p>
+          Nachfolgend sollen Lagebeziehungen von Gleichungen mit Parameter, z.B. \(f(x)=3x+a\), bestimmt werden.
+        </p>
+        <p>
+          <a href="#aufgaben">Direkt zu den Aufgaben</a>
+        </p>
+      </div>
+
+      <div class="theorie">
+        <div class="definition">
+          <h4>Lagebeziehungen mit Parametern</h4>
+          <p>
+            Wenn mathematische Fragestellungen mit Parametern allgemein gestellt werden, ist meistens gefragt, in welchen Bereichen 
+            diese oder jene Eigenschaft auftritt. 
+          </p>
+          <p>
+            Bezogen auf die Lagebeziehungen heißt das: Für welche Werte des Parameters liegt eine Passante, eine Tangente oder eine Sekante vor.
+          </p>
+          <p>
+            Ein Parameter wird wie eine normale Zahl behandelt.
+          </p>
+        </div>
+        <h6>Beispiel</h6>
+        <p>
+          Gegeben sind die Gerade \(g: y=\color{red}{\color{magenta}m}x-6\) und die Parabel \(p:y=\color{green}2x^2-6x+2\). Welche Lage
+          haben diese zueinander?
+        <ol>
+          <li>Gleichsetzen:
+            \begin{align*}
+            {\color{red}{\color{magenta}m}x-6}&={\color{green}2x^2-6x+2}\qquad\qquad\qquad\qquad\,\,
+            \end{align*}
+          </li>
+          <li>Umstellen:
+            \begin{align*}
+            {\color{magenta}m}x-6&=2x^2-6x+2\qquad | -{\color{magenta}m}x\qquad | +6 \\
+            0&=2x^2-6x-{\color{magenta}m}x+8 \\
+            0&=2x^2-(6+{\color{magenta}m})x+8
+            \end{align*}
+          </li>
+          <li>Diskriminante:
+            \begin{align*}
+            0&={\color{orange}2}x^2\,{\color{cyan}-(6+{\color{magenta}m})}x+\,{\color{salmon}8}\quad
+            \end{align*}
+            Das heißt: \(\color{orange}a=2\), \(\color{cyan}b=-(6+{\color{magenta}m})\) und \(\color{salmon} c=8\).
+            \begin{align*}
+            D&={\color{cyan}b}^2-4\cdot {\color{orange}a} \cdot {\color{salmon}c} \\
+            D&=({\color{cyan}-(6+{\color{magenta}m})})^2-4\cdot {\color{orange}2} \cdot {\color{salmon}8} \\
+            D&=36\,+12{\color{magenta}m} + {\color{magenta}m}^2-64 \\
+            D&={\color{magenta}m}^2+12{\color{magenta}m}-28
+            \end{align*}
+            Für die Lagebeziehungen muss nun geprüft werden, für welche Werte von \({\color{magenta}m}\) die Diskriminante \(D\) größer, kleiner oder gleich null ist:
+            <ul style="margin-top: 9px;">
+              <li>\(D=0\): Tangente
+                \begin{align*}
+                0&={\color{magenta}m}^2+12{\color{magenta}m}-28
+                \end{align*}
+                Das ist eine quadratische Gleichung. Mithilfe der \(p\)-\(q\)-Formel (\(p=12\) und \(q=-28\)) kann bestimmt werden, dass \({\color{magenta}m}_1=-14\) und \({\color{magenta}m}_2=2\) ist.
+                <p>
+                  Das heißt: Die Gerade \(\color{red} g\) und die Parabel \(\color{green}p\) bilden eine Tangente, wenn \({\color{magenta}m}=-14\) oder \({\color{magenta}m}=2\) ist.
+                </p>
+              </li>
+              <li>\(D &lt; 0\): Passante
+                <p>
+                  Für den Bereich \(D &lt; 0\) gibt es nun drei Möglichkeiten: 
+                  <ol>
+                    <li>\({\color{magenta}m}&lt;-14\): Der Bereich links neben der ersten, kleineren, Nullstelle.</li>
+                    <li>\(-14&lt;{\color{magenta}m}&lt;2\): Der Bereich zwischen den Nullstellen.</li>
+                    <li>\({\color{magenta}m} &gt; 2\): Der Bereich rechts neben der zweiten, größeren, Nullstelle.</li>
+                  </ol>
+                  Wenn man sich nun die Gleichung für \(D\) anschaut, stellt man fest, dass es sich dabei um eine nach oben geöffnete Parabel handeln muss. 
+                  Bei einer nach oben geöffneten Parabel ist nur der Bereich <i>zwischen</i> den Nullstellen negativ.
+                </p>
+                <p>
+                  Das heißt, wenn \({\color{magenta}m}\) zwischen \(-14\) und \(2\) liegt, bilden die Gerade \(\color{red} g\) und die Parabel \(\color{green}p\)
+                  eine Passante.
+                </p>
+              </li>
+              <li>\(D &gt; 0\): Sekante
+                <p>
+                  Für den Fall \(D &gt; 0\) werden die gleichen Überlegungen angestellt, wie für den Fall \(D &lt; 0\). Nur sollen die Werte nun größer als Null sein.
+                </p>
+                <p>
+                  Dies ist bei einer nach oben geöffneten Parabel immer dann der Fall, wenn man sich außerhalb der beiden Nullstellen befindet.
+                </p>
+                <p>
+                  Das heißt, wenn \({\color{magenta}m}\) kleiner als \(-14\) oder größer \(2\) ist, bilden die Gerade \(\color{red} g\) und die Parabel \(\color{green}p\)
+                  eine Sekante.
+                </p>
+              </li>
+            </ul>
+            Zusammengefasst: die Gerade \(\color{red} g\) und die Parabel \(\color{green}p\) bilden:
+            <ul style="margin-top: 5px;">
+              <li>Eine Sekante, wenn \({\color{magenta}m}&lt;-14\) oder \({\color{magenta}m}&gt;2\)</li>
+              <li>Eine Tangente, wenn \({\color{magenta}m}=-14\) oder \({\color{magenta}m}=2\)</li>
+              <li>Eine Passante, wenn \({\color{magenta}m}&gt;-14\) <i>und</i> \({\color{magenta}m}&lt;2\)</li>
+            </ul>     
+          </li>
+        </ol>
+        <i>Die oben genannten Überlegungen dürfen natürlich auch im Kopf stattfinden. Es kann passieren, dass nicht alle drei Fälle auftreten.</i>
+        </p>
+
+        
+
+      </div>
+
+
+
+
+    </section>
+    <!-- <section>
+            <div class="videos">
+                <iframe width="360" height="202" src="https://www.youtube.com/embed/19goPRnthCE"
+                    title="Abstand Punkt - Punkt" frameborder="0" allow="web-share" allowfullscreen></iframe>
+
+            </div>
+        </section> -->
+    <section class="aufgaben" id="aufgaben">
+      <h3>Aufgaben zu Lagebeziehungen</h3>
+      <details>
+        <summary>Prüfe, ob die Gerade \(g\) Sekante, Passante oder Tangente der Parabel \(f(x)=2x^2-3x+2\) ist! <a
+            href="#a1">Lösungen</a> </summary>
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>\(g(x)=5x-2a\)</li>
+          <li>\(g(x)=bx+2\)</li>
+          <li>\(g(x)=2cx, c>0\)</li>
+        </ol>
+        </div>
+      </details>
+
+      <details>
+        <summary>Bestimme den Parameter \(a\) so, dass die folgenden Geraden Passanten sind! <a href="#a2">Lösungen</a>
+        </summary>
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>\(p(x)=x^2-2x+a, g(x)=2x\)</li>
+          <li>\(p(x)=x^2-6x+2a, g(x)=-10x+4\)</li>
+          <li>\(p(x)=x^2+8x-2, g(x)=18x+9a\)</li>
+          <li>\(p(x)=x^2-2ax+9, g(x)=2x-7\)</li>
+          <li>\(p(x)=x^2+7ax+4, g(x)=ax-5\)</li>
+          <li>\(p(x)=x^2+ax-a, g(x)=3ax+6a\)</li>
+          <li>\(p(x)=ax^2+2ax-15, g(x)=10x-3a\)</li>
+        </ol>
+        </div>
+      </details>
+
+      <details>
+        <summary>Bestimme den Parameter \(a\) so, dass die folgenden Geraden Sekanten sind!
+          Ermittle außerdem eine allgemeine Gleichung für die Schnittstellen (also nur der \(x\)-Wert)! <a href="#a3">Lösungen</a>
+        </summary>
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>\(p(x)=x^2-8x+4a, g(x)=-4x+3a\)</li>
+          <li>\(p(x)=x^2+3ax-2a, g(x)=ax+a\)</li>
+        </ol>
+        </div>
+      </details>
+
+      
+
+
+
+    </section>
+
+    <section class="loesungen">
+      <h3>Lösungen zu Lagebeziehungen</h3>
+
+      <details id="a1">
+        <summary>Lagebeziehungen</summary>
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>
+            <ul>
+              <li>Sekante: \(a&lt;3\)</li>
+              <li>Tangente: \(a=3\)</li>
+              <li>Passante: \(a&gt;3\)</li>
+            </ul>
+          </li>
+          <li>
+            <ul>
+              <li>Tangente: \(b=3\)</li>
+              <li>Sekante:
+                <ul>
+                  <li>Schreibweise 1: \(b \neq 3\)</li>
+                  <li>Schreibweise 2: \(b &lt; 3\) oder \(b &gt; 3\)</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <ul>
+              <li>Sekante: \(c&gt;\frac12\)</li>
+              <li>Tangente: \(c=\frac12\)</li>
+              <li>Passante: \(c&lt;\frac12\)</li>
+            </ul>
+            Der letzte Punkt muss nicht weiter eingeschränkt werden, da in der Aufgabe bereits festgelegt wurde, dass \(c>0\) ist.
+          </li>
+        </ol>
+        </div>
+      </details>
+
+      <details id="a2">
+        <summary>Passanten</summary>
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li></li>
+        </ol>
+        </div>
+      </details>
+
+      <details id="a3">
+        <summary>Sekanten und Schnittstellen</summary>
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li></li>
+
+        </ol>
+        </div>
+      </details>
+
+      
+
+    </section>
+
+    <section id="meme">
+      <div class="images">
+        <img src="/img/parabolic_meme.jpg" style="object-fit: scale-down; max-width: 300px" />
+      </div>
+      <div class="centered">
+        <a href="https://i.chzbgr.com/full/5656348416/hCDB0F678/parabolic-throw">
+          <h6>Original von Ally Perry</h6>
+        </a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <a href="/misc/impressum.html">Impressum</a>
+    <div class="lastModified" align="center">
+      Zuletzt geändert:<br />
+      18. Februar 2024
+      <!-- <span id="lastModifiedDate"></span> -->
+    </div>
+    <a href="/misc/datenschutz.html">Datenschutz</a>
+  </footer>
+</body>
