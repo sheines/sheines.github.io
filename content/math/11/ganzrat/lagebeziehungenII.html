@@ -144,9 +144,6 @@
         </ol>
         <i>Die oben genannten Überlegungen dürfen natürlich auch im Kopf stattfinden. Es kann passieren, dass nicht alle drei Fälle auftreten.</i>
         </p>
-
-        
-
       </div>
 
 
@@ -243,17 +240,66 @@
 
       <details id="a2">
         <summary>Passanten</summary>
-        <ol class="custom-marker parens-around lower-alpha more-spacing">
-          <li></li>
+        In der Lösung wurden alle Diskriminanten mit \(D=b^2-4ac\) berechnet. 
+          Die Nutzung von \(D=\left(\frac p2\right)^2-q\) ist natürlich auch möglich. 
+          Die Gleichung für \(D\) kann dann aber anders sein. \(a\) bleibt aber unverändert.
+        <ol class="custom-marker parens-around lower-alpha more-spacing">   
+          <li>\(D=16-4a\Rightarrow a &gt; 4\)</li>
+          <li>\(D=32-8a\Rightarrow a &gt; 4\)</li>
+          <li>\(D=108-36a\Rightarrow a &gt; 3\)</li>
+          <li>\(D=a^2+2a-15\Rightarrow -5 &lt; a &lt; 3\)</li>
+          <li>\(D=36a^2-36\Rightarrow -1 &lt; a &lt; 1\)</li>
+          <li>\(D=16a^2+28a\Rightarrow -\frac74 &lt; a &lt; 0\)</li>
+          <li>\(D=-8a^2+20a+100\Rightarrow a &lt; -\frac52\) oder \(a &gt; 5\)</li>
         </ol>
         </div>
       </details>
 
       <details id="a3">
         <summary>Sekanten und Schnittstellen</summary>
+        <p>
+          In der Lösung wurden alle Diskriminanten mit \(D=\left(\frac p2\right)^2-q\) berechnet. 
+        Die Nutzung von \(D=b^2-4ac\) ist natürlich auch möglich. 
+        Die Gleichung für \(D\) kann dann aber anders sein. \(a\) bleibt aber unverändert.
+        </p>
+        <p>
+          Die Beispiele (z.B. für \(a=1\)) dienen nur der Veranschaulichung, was passiert, wenn \(a\) tatsächlich einen Wert hat.
+        </p>
+        
         <ol class="custom-marker parens-around lower-alpha more-spacing">
-          <li></li>
-
+          <li>
+            <ul>
+              <li>\(D=4-a\Rightarrow a &lt; 4\)</li>
+              <li>\(x_{1/2}=2\pm\sqrt{4-a}\)</li>
+              <li>z.B. für \(a=-5\):
+                <ul>
+                  <li>\(p(x)=x^2-8x-20\) und \(g(x)=-4x-15\)</li>
+                  <li>\(D=4-(-5)=9\)</li>
+                  <li>\(x_1=-1\) und \(x_2=5\)</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <ul>
+              <li>\(D=a^2+3a\Rightarrow a &lt; -3\) oder \(a &gt; 0\)</li>
+              <li>\(x_{1/2}=a\pm\sqrt{a^2+3a}\)</li>
+              <li>z.B. für \(a=1\):
+                <ul>
+                  <li>\(p(x)=x^2+3x-2\) und \(g(x)=x+1\)</li>
+                  <li>\(D=1^2+3\cdot 1=4\)</li>
+                  <li>\(x_1=-1\) und \(x_2=3\)</li>
+                </ul>
+              </li>
+              <li>z.B. für \(a=-4\):
+                <ul>
+                  <li>\(p(x)=x^2-12x+8\) und \(g(x)=-4x-4\)</li>
+                  <li>\(D=(-4)^2+3\cdot (-4)=4\)</li>
+                  <li>\(x_1=-6\) und \(x_2=-2\)</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
         </ol>
         </div>
       </details>
@@ -277,7 +323,7 @@
     <a href="/misc/impressum.html">Impressum</a>
     <div class="lastModified" align="center">
       Zuletzt geändert:<br />
-      18. Februar 2024
+      20. Februar 2024
       <!-- <span id="lastModifiedDate"></span> -->
     </div>
     <a href="/misc/datenschutz.html">Datenschutz</a>
