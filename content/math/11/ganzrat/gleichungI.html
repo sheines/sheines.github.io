@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" initial-scale="1.0" />
+  <meta name="author" content="Sebastian Hitziger" />
+  <meta name="robot" content="noindex" />
+  <title>HITZ | Ganzrat. Fkt. | Gleichung bestimmen</title>
+  <link rel="stylesheet" type="text/css" href="/css/colors.css" />
+  <link rel="stylesheet" type="text/css" href="/css/gridNoTimeline.css" />
+  <link rel="stylesheet" type="text/css" href="/css/navbar.css" />
+  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="/css/courses.css" />
+  <script type="text/javascript" src="jquery-3.3.1.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="nav">
+      <input type="checkbox" id="nav-check" />
+      <div class="nav-header">
+        <div class="nav-title">
+          <a href="/">Hr. Hitzigers Unterricht</a>
+        </div>
+      </div>
+      <div class="nav-btn">
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+
+      <div class="nav-links">
+        <a href="/content/math/">Mathematik</a>
+        <a href="/content/math/11/">Klasse 11</a>
+        <a href="/content/math/11/ganzrat/">Ganzrationale Funktionen</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section>
+      <h2>Funktionsgleichung bestimmen</h2>
+      <div class="ziele">
+        <p>
+          Nachfolgend soll beschrieben werden, wie die Funktiongleichung quadratischer Funktionen auf 
+          verschiedene Weise bestimmt werden kann
+        </p>
+        <p>
+          <a href="#aufgaben">Direkt zu den Aufgaben</a>
+        </p>
+        <p>
+          Es sind folgende Fälle möglich (Anmerkungen in Klammern für allgemeine Form):
+          <ul class="custom-marker parens-around lower-alpha more-spacing" id="uebersicht">
+            <li><a href="#punkte">Es sind zwei (drei) beliebige Punkte gegeben.</a></li>
+            <li><a href="#scheitel">Es ist der Scheitelpunkt (und einer weiterer Punkt) gegeben.</a></li>
+            <li>Es sind die Nullstellen (und ein weiterer Punkt) gegeben:</li>
+          </ul>
+          Wenn es in Klausuren oder Tests heißt &bdquo;Geben Sie eine Gleichung der Funktion an...&ldquo;, ist es egal, welche Form diese hat.
+        </p>
+      </div>
+
+
+
+      <div class="theorie">
+        <div class="definition" id="punkte">
+          <h4>Funktionsgleichung aus beliebigen Punkten</h4>
+          <p>
+            Damit eine quadratische Funktion eindeutig bestimmt ist, müssen für die Normalform zwei Punkte und 
+            für die allgemeine Form drei Punkte bekannt sein.
+          </p>
+          <!-- <div class="cetered">
+              TODO Animation!
+          </div> -->
+          <p>
+            Vorgehen:
+            <ol>
+              <li>Mithilfe der gegebenen Punkte \(P_i(x_i\,|\,y_i)\) zwei, bzw. drei Gleichungen der Form \(y_i=a{x_i}^2+bx_i+c\)
+                bzw. \(y_i={x_i}^2+px_i+q\) aufstellen,
+              </li>
+              <li>Gleichungssystem nach \(a, b\) und \(c\), bzw. \(p\) und \(q\) auflösen und</li>
+              <li>Funktionsgleichung aufstellen.</li>
+            </ol>
+            Zur Probe können die Punkte in die Funktionsgleichung eingesetzt werden.
+          </p>
+        </div>
+        <h6>Beispiel</h6>
+        <p>Bestimme die Gleichung der Normalparabel, welche durch die Punkte 
+          \(({\color{green}1}\,|\,{\color{red}2})\) und \(({\color{cyan}-2}\,|\,{\color{orange}-4})\) verläuft!
+        </p>
+        <p>Normalform: \(y=x^2+{\color{magenta}p}x+{\color{salmon}q}\)</p>
+        <ol>
+          <li>Punkte einsetzen und Gleichungssystem aufstellen: 
+            \begin{alignat*}{4}
+            {\color{red}2} & {}={} & {\color{green}1}^2 & {}+{} & {\color{green}1}\cdot {\color{magenta}p} & {}+{} & {\color{salmon}q} \\
+            {\color{orange}-4} & {}={} & ({\color{cyan}-2})^2 & {}+{} & ({\color{cyan}-2})\cdot {\color{magenta}p} & {}+{} & {\color{salmon}q}
+            \end{alignat*}
+            Zusammenfassen:
+            \begin{alignat*}{4}
+            I: & & 2 & {}={} & 1 & {}+{} & p & {}+{} & q \\
+            II:& & -4 & {}={} & 4 & {}-{} & 2p & {}+{} & q
+            \end{alignat*}
+          </li>
+          <li>
+            Additionsverfahren: \(I - II\) 
+            \begin{alignat*}{4}
+            I':{} & {} & 6 & {}={} & -3 & {}+{} & 3p 
+            \end{alignat*}
+            \(p\) berechnen (\(\ |\,+\,3\quad |:3\ \)):
+            \begin{align*}
+              \color{magenta}p&=\color{magenta}3
+            \end{align*}
+            \(p\) in \(I\) einsetzen:
+            \begin{align*}
+              2&=1+{\color{magenta}3} +q\qquad |-4 \\
+              \color{salmon}q&=\color{salmon}-2
+            \end{align*}
+          </li>
+          <li>
+            Die Funktionsgleichung lautet:
+            \begin{align*}
+              y=x^2+{\color{magenta}3}x\color{salmon}-2
+            \end{align*} 
+          </li>
+        </ol>
+        <i>Mit der allgemeinen Form müssen drei Gleichungen aufgestellt werden. Es ist egal, welches Lösungsverfahren verwendet wird.</i>
+        <p>
+          <a href="#uebersicht">Zurück zur Übersicht</a>
+        </p>
+      </div>
+
+
+
+      <div class="theorie">
+        <div class="definition" id="scheitel">
+          <h4>Funktionsgleichung mit Scheitelpunkt</h4>
+          <p>
+            Die Normalform der quadratischen Funktion ist bereits durch den Scheitelpunkt eindeutig bestimmt. Für die allgemeine Form ist ein weiterer Punkt nötig.
+          </p>
+          <!-- <div class="cetered">
+              TODO Animation!
+          </div> -->
+          <p>
+            Vorgehen:
+            <ol>
+              <li>Scheitelpunkt in Scheitelpunktform \(y = a(x - d)^2 + e\) einsetzen,</li>
+              <li>Anderen Punkt für \(x\) und \(y\) einsetzen, damit \(a\) berechnen und </li>
+              <li>Funktionsgleichung aufstellen.</li>
+            </ol>
+          </p>
+        </div>
+        <h6>Beispiel</h6>
+        <p>Welche Funktion hat ihren Scheitelpunkt bei
+          \(S({\color{green}2}\,|\,{\color{red}6})\) und verläuft durch den Punkt\(({\color{cyan}-1}\,|\,{\color{orange}3})\) verläuft!
+        </p>
+        <p>Scheitelpunktform: \(y={\color{magenta}a}(x-d)^2+e\)</p>
+        <ol>
+          <li>Scheitelpunkt einsetzen:
+            \begin{align*}
+              y&=a(x-{\color{green}2})^2+{\color{red}6}\qquad\quad\ 
+            \end{align*}
+          </li>
+          <li>
+            Punkt für \(x\) und \(y\) einsetzen:
+            \begin{align*}
+              {\color{orange}3}&=a({\color{cyan}-1}-2)^2+6\qquad\quad
+            \end{align*}
+            \(a\) berechnen:
+            \begin{align*}
+            3&=a(-1-2)^2+6\qquad |-6 \\
+            -3&=a(-3)^2 \\
+            -3&=9a \qquad\qquad\qquad\quad\ \,|:9 \\
+            \color{magenta}a&=\color{magenta}-\tfrac13
+            \end{align*}
+          </li>
+          <li>Die Funktionsgleichung lautet:
+            \begin{align*}
+              y&={\color{magenta}-\tfrac13}(x-{\color{green}2})^2+{\color{red}6}\qquad\quad
+            \end{align*}
+          </li>
+        </ol>
+        <i>Wenn es sich um eine Normalparabel handelt, ist \(a=1\).</i>
+        <p>
+          <a href="#uebersicht">Zurück zur Übersicht</a>
+        </p>
+      </div>
+
+
+
+
+    </section>
+    <!-- <section>
+            <div class="videos">
+                <iframe width="360" height="202" src="https://www.youtube.com/embed/19goPRnthCE"
+                    title="Abstand Punkt - Punkt" frameborder="0" allow="web-share" allowfullscreen></iframe>
+
+            </div>
+        </section> -->
+    <section class="aufgaben" id="aufgaben">
+      <h3>Aufgaben zu Lagebeziehungen</h3>
+      <details>
+        <summary>... <a
+            href="#a1">Lösungen</a> </summary>
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li></li>
+
+        </ol>
+        </div>
+      </details>
+
+
+    </section>
+
+    <section class="loesungen">
+      <h3>...</h3>
+
+      <details id="a1">
+        <summary>Lagebeziehungen</summary>
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>
+          </li>
+        </ol>
+        </div>
+      </details>      
+
+    </section>
+
+    <section id="meme">
+      <div class="images">
+        <img src="/img/cat_meme.webp" style="object-fit: scale-down; max-width: 300px" />
+      </div>
+      <div class="centered">
+        <a href="https://www.yourdecoration.de/cdn/shop/products/pyramid-pp34253-pusheen-reasons-to-be-a-cat-poster-61x91-5cm_grande.jpg?v=1707561714">
+          <h6>Original von Pyramid</h6>
+        </a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <a href="/misc/impressum.html">Impressum</a>
+    <div class="lastModified" align="center">
+      Zuletzt geändert:<br />
+      20. Februar 2024
+      <!-- <span id="lastModifiedDate"></span> -->
+    </div>
+    <a href="/misc/datenschutz.html">Datenschutz</a>
+  </footer>
+</body>
