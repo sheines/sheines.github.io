@@ -268,6 +268,7 @@
           <ol class="custom-marker parens-around lower-alpha more-spacing">
             <li>Die Punkte \(P_1(-1\,|\,11)\), \(P_2(0\,|\,5)\) und \(P_3(2\,|\,5)\) liegen auf dem Graphen \(f\).</li>
             <li>\(S(1\,|\,2)\) ist der Scheitelpunkt von \(f\). Der Graph verläuft außerdem durch \(P(2\,|\,5)\).</li>
+            <li>Die Nullstelle der Normalparabel liegt bei \(x=-6\).</li>
           </ol>
         </li>
         <li>
@@ -286,43 +287,46 @@
         </li>
         <li>
           <p>
-          Im Jahr 1947 schrieb die Stadt Saint Louis einen Wettbewerb für ein Bauwerk aus, welches die Öffnung Amerikas symbolisieren sollte.
-          Der erste Preis ging an den Finnen Eero Saarinen, dessen Werk eine Art Triumphbogen war und erst 1965, vier Jahre nach seinem Tod, vollendet wurde.
-          Die Form des inneren und äußeren Bogens kann durch eine Parabel modelliert werden.
+            Im Jahr 1947 schrieb die Stadt Saint Louis einen Wettbewerb für ein Bauwerk aus, welches die Öffnung
+            Amerikas symbolisieren sollte.
+            Der erste Preis ging an den Finnen Eero Saarinen, dessen Werk eine Art Triumphbogen war und erst 1965, vier
+            Jahre nach seinem Tod, vollendet wurde.
+            Die Form des inneren und äußeren Bogens kann durch eine Parabel modelliert werden.
           </p>
           <p>
-            Bestimme ein geeignetes Koordinatensystem  und gib die zugehörigen Funktionsgleichungen an! <a href="#a4">Lösungen</a>
+            Bestimme ein geeignetes Koordinatensystem und gib die zugehörigen Funktionsgleichungen an! <a
+              href="#a4">Lösungen</a>
           </p>
           <div class="table-wrapper centered">
             <table class="wechseltabelle cellCentered" style="width: max-content; white-space: nowrap;">
-                <!-- Haken: &#10004; Kreuz: &#x2718; -->
-                <tr>
-                    <th ></th>
-                    <th >Höhe</th>
-                    <th >Breite</th>
-                </tr>
-                <tr>
-                    <th >Äußerer Bogen</th>
-                    <td>\(192\,\text m\)</td>
-                    <td>\(192\,\text m\)</td>
-                </tr>
-                <tr>
-                  <th >Innerer Bogen</th>
-                  <td>\(187\,\text m\)</td>
-                  <td>\(163\,\text m\)</td>
+              <!-- Haken: &#10004; Kreuz: &#x2718; -->
+              <tr>
+                <th></th>
+                <th>Höhe</th>
+                <th>Breite</th>
+              </tr>
+              <tr>
+                <th>Äußerer Bogen</th>
+                <td>\(192\,\text m\)</td>
+                <td>\(192\,\text m\)</td>
+              </tr>
+              <tr>
+                <th>Innerer Bogen</th>
+                <td>\(187\,\text m\)</td>
+                <td>\(163\,\text m\)</td>
               </tr>
 
-                
+
 
             </table>
-            
-        </div>
+
+          </div>
           <div class="images" style="margin-top: 15px;">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/STL_Skyline_2007_crop_%28Gateway_Arch%29.jpg" style="object-fit: scale-down; max-height: 250px" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/e/e0/STL_Skyline_2007_crop_%28Gateway_Arch%29.jpg"
+              style="object-fit: scale-down; max-height: 250px" />
           </div>
           <div class="centered">
-            <a
-              href="https://upload.wikimedia.org/wikipedia/commons/e/e0/STL_Skyline_2007_crop_%28Gateway_Arch%29.jpg">
+            <a href="https://upload.wikimedia.org/wikipedia/commons/e/e0/STL_Skyline_2007_crop_%28Gateway_Arch%29.jpg">
               <h6>Original von Buphoff</h6>
             </a>
           </div>
@@ -338,12 +342,127 @@
       </h3>
 
       <details id="a1">
-        <summary>...</summary>
+        <summary>Gleichung bestimmen I</summary>
         <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>Gleichungssystem:
+            \begin{alignat*}{4}
+            I:\ & & 11 & {}={} & a\cdot (-1)^2 & {}+{} & b\cdot (-1) & {}+{} & c \\
+            II:\ & & 5 & {}={} & a\cdot 0^2 & {}+{} & b\cdot 0 & {}+{} & c \\
+            III:\ & & 5 & {}={} & a\cdot 2^2 & {}+{} & b\cdot 2 & {}+{} & c \\
+            \end{alignat*}
+            Ergebnis: \(a=2\), \(b=-4\) und \(c=5\)
+            \begin{align*}
+            f(x)&=2x^2-4x+5
+            \end{align*}
+          </li>
           <li>
+            Scheitelpunktform nutzen:
+            \begin{align*}
+            f(x)&=3(x-1)^2+2=3x^2-6x+5
+            \end{align*}
+          </li>
+          <li>
+            Einzige Nullstelle ist Doppelnullstelle:
+            \begin{align*}
+            f(x)&=(x+6)(x+6)=(x+6)^2\\
+            &=x^2+12x+36
+            \end{align*}
           </li>
         </ol>
         </div>
+      </details>
+
+      <details id="a2">
+        <summary>Gleichung bestimmen II</summary>
+        Gleichung \(I\) mit \(A\), Gleichung \(II\) mit \(B\) und Gleichung \(III\) mit \(C\). Die Reihenfolge ist aber
+        natürlich egal.
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>Gleichungssystem:
+            \begin{alignat*}{4}
+            I:\ & & 4 & {}={} & a\cdot 0^2 & {}+{} & b\cdot 0 & {}+{} & c \\
+            II:\ & & 5 & {}={} & a\cdot 1^2 & {}+{} & b\cdot 1 & {}+{} & c \\
+            III:\ & & -5 & {}={} & a\cdot 3^2 & {}+{} & b\cdot 3 & {}+{} & c \\
+            \end{alignat*}
+            \begin{align*}
+            f(x)&=-2x^2+3x+4
+            \end{align*}
+          </li>
+          <li>Gleichungssystem:
+            \begin{alignat*}{4}
+            I:\ & & 6 & {}={} & a\cdot 3^2 & {}+{} & b\cdot 3 & {}+{} & c \\
+            II:\ & & 6 & {}={} & a\cdot (-3)^2 & {}+{} & b\cdot (-3) & {}+{} & c \\
+            III:\ & & 9 & {}={} & a\cdot 6^2 & {}+{} & b\cdot 6 & {}+{} & c \\
+            \end{alignat*}
+            \begin{align*}
+            f(x)&=\frac19 x^2+5
+            \end{align*}
+          </li>
+          <li>
+            \(f(x) = 3x^2-8\)
+          </li>
+          <li>
+            \(f(x)=\frac12 x^2-\frac92x+1\)
+          </li>
+        </ol>
+        </div>
+      </details>
+
+      <details id="a3">
+        <summary>Gleichung bestimmen III</summary>
+        \begin{align*}
+        f(x)&=\tfrac23(x-2)^2+1\\
+        &=\tfrac23x^2-\tfrac83 x + \tfrac{11}{3}
+        \end{align*}
+      </details>
+
+      <details id="a4">
+        <summary>Gateway Arch</summary>
+        <ul class="custom-marker parens-around lower-alpha more-spacing">
+          <li>Geeignetes Koordinatensystem festlegen: z.B. Koordinatenursprung in der Mitte des Bogens am Boden</li>
+          <li>Damit gegebene Punkte:
+            <ul>
+              <li>Scheitelpunkt bei: \(S_a(0\,|\,192)\) und \(S_i(0\,|\,187)\)</li>
+              <li>Nullstellen bei:
+                <ul>
+                  <li>Außen: \(x_1=-96\) und \(x_2=96\)</li>
+                  <li>Innen: \(x_1=-81,5\) und \(x_2=81,5\)</li>
+                </ul>
+              </li>
+              <li>Mit den Nullstellen gibt es auch zwei Punkte:
+                <ul>
+                  <li>Außen: \(P_1(-96\,|\,0)\) und \(P_2(96\,|\,0)\)</li>
+                  <li>Innen: \(P_1(-81,5\,|\,0)\) und \(P_2(81,5\,|\,0)\)</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>Ob man das jetzt mit Gleichungssystem, Linearfaktorzerlegung oder Scheitelpunktform löst,
+            hängt von der eigenen Präferenz ab.
+            <ul>
+              <li>Linearfaktorzerlegung:
+                \begin{align*}
+                f_a(x)&=-\tfrac1{48}(x-96)(x+96) \\
+                f_i(x)&=-\tfrac{748}{26\,569}(x-81,5)(x+81,5) \\
+                      &\approx-0,0282(x-81,5)(x+81,5)
+                \end{align*}
+              </li>
+              <li>Scheitelpunktform:
+                \begin{align*}
+                  f_a&=-\tfrac{1}{48}x^2+192 \\
+                  f_i&=-\tfrac{748}{26\,569}x^2+187 \\
+                     &\approx -0,0282x^2+187
+                \end{align*}
+              </li>
+              <li>Gleichungssystem:
+                \begin{align*}
+                  f_a&=-\tfrac{1}{48}x^2+192 \\
+                  f_i&=-\tfrac{748}{26\,569}x^2+187 \\
+                     &\approx -0,0282x^2+187
+                \end{align*}
+              </li>
+            </ul>
+          </li>
+        </ul>
       </details>
 
     </section>
