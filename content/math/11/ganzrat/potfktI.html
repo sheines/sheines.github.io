@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" initial-scale="1.0" />
+  <meta name="author" content="Sebastian Hitziger" />
+  <meta name="robot" content="noindex" />
+  <title>HITZ | Ganzrat. Fkt. | Einfache Potenzfunktionen </title>
+  <link rel="stylesheet" type="text/css" href="/css/colors.css" />
+  <link rel="stylesheet" type="text/css" href="/css/gridNoTimeline.css" />
+  <link rel="stylesheet" type="text/css" href="/css/navbar.css" />
+  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="/css/courses.css" />
+  <script type="text/javascript" src="jquery-3.3.1.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="nav">
+      <input type="checkbox" id="nav-check" />
+      <div class="nav-header">
+        <div class="nav-title">
+          <a href="/">Hr. Hitzigers Unterricht</a>
+        </div>
+      </div>
+      <div class="nav-btn">
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+
+      <div class="nav-links">
+        <a href="/content/math/">Mathematik</a>
+        <a href="/content/math/11/">Klasse 11</a>
+        <a href="/content/math/11/ganzrat/">Ganzrationale Funktionen</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section>
+      <h2>Einfache Potenzfunktionen</h2>
+      <div class="ziele">
+        <p>
+          Nachfolgend soll beschrieben werden, was einfache Potenzfunktionen sind, welche Eigenschaften diese haben und 
+          wie deren Gleichung aus zwei Punkten bestimmt werden kann.
+        </p>
+        <p>
+          <a href="#aufgaben">Direkt zu den Aufgaben</a>
+        </p>
+      </div>
+
+
+
+      <div class="theorie">
+        <div class="definition">
+          <h4>Funktionsgleichung aus beliebigen Punkten</h4>
+          <p>
+            Jede Funktion der Form \(y=f(x)=a\cdot x^n\) heißt Potenzfunktion.
+          </p>
+          <p>
+            Für die Parameter gelten folgende Einschränkungen:
+            <ul>
+              <li>\(a\in\mathbb R, a\neq 0\): Alle reellen Zahlen, mit Ausnahme der Null</li>
+              <li>\(n\in\mathbb N\): Nur natürliche Zahlen</li>
+            </ul>
+          </p>
+        </div>
+
+        <div class="aufgaben">
+          <details>
+            <summary class="nonumber">Aufgabe 1</summary>
+            Erstelle eine Wertetabelle mit mindestens neun Werten zwischen \(x=-2\) und \(x=2\) für die beiden Funktionen
+            <ul class="custom-marker parens-around lower-alpha more-spacing">
+              <li>\(f(x)=\tfrac12x^2\)</li>
+              <li>\(g(x)=\tfrac14x^3\)</li>
+            </ul>
+            Notiere dir Gemeinsamkeiten und Unterschiede der beiden Funktionen!
+            <div class="loesungen">
+              <details>
+                <summary class="nonumber">Lösungen</summary>
+                <ul class="custom-marker parens-around lower-alpha more-spacing">
+                  <li>Gemeinsamkeiten:</li>
+                  <li>Unterschiede:</li>
+                </ul>
+              </details>
+            </div>
+          </details>
+          <details>
+            <summary class="nonumber">Aufgabe 2</summary>
+            Im Buch, Seite 46, löse die
+            <ul class="custom-marker parens-around lower-alpha more-spacing">
+              <li>Übungen 2 bis 4</li>
+            </ul>
+            <p>
+              <a href="geogebra.org" target="_blank" rel="noopener noreferrer">Geogebra.org</a> 
+                oder als App kann helfen.
+            </p>
+            <div class="loesungen" >
+              <details>
+                <summary class="nonumber">Lösungen</summary>
+                <ul class="custom-marker parens-around lower-alpha more-spacing">
+                  <li>Gemeinsamkeiten:</li>
+                  <li>Unterschiede:</li>
+                </ul>
+              </details>
+            </div>
+          </details>
+        </div>
+
+        <div class="definition">
+          <h4>Funktionsgleichung aus zwei Punkten bestimmen</h4>
+          <p>
+            Sind zwei Punkte einer Potenzfunktion bekannt, kann die Funktionsgleichung der 
+            Form \(f(x)=a\cdot x^n\) bestimmt werden:
+            <ol class="parens-around decimal more-spacing">
+			        <li>Beide Punkte jeweils in die Gleichung einsetzen,</li>
+              <li>Beide Gleichungen nach \(a\) umstellen, </li>
+              <li>Beide Gleichungen gleichsetzen, </li>
+              <li>\(n\) berechnen </li>
+              <li>Einen der Punkte erneut einsetzen und </li>
+              <li>\(a\) berechnen. </li>
+            </ol>
+          </p>
+        </div>
+        <h6>Beispiel</h6>
+        <p>Bestimme die Gleichung der Potenzfunktion, welche durch die Punkte
+          \(({\color{green}2}\,|\,{\color{red}4})\) und \(({\color{cyan}4}\,|\,{\color{orange}32})\) verläuft!
+        </p>
+        <p>Allgemeine Form: \(y={\color{magenta}a}\cdot x^{\color{salmon}n}\)</p>
+        <ol>
+          <li>Punkte einsetzen:
+            \begin{align*}
+            {\color{red}4}&={\color{magenta}a}\cdot {\color{green}2}^{\color{salmon}n} \\
+            {\color{orange}32}&={\color{magenta}a}\cdot {\color{cyan}4}^{\color{salmon}n} \qquad\qquad\ 
+            \end{align*}
+          </li>
+          <li>
+            Nach \({\color{magenta}a}\) umstellen: 
+            \begin{align*}
+            {4}&={\color{magenta}a}\cdot {2}^{\color{salmon}n} \qquad | :{2}^{\color{salmon}n} \\
+            \frac{4}{2^{\color{salmon}n}}&={\color{magenta}a} \\[2em]
+            {32}&={\color{magenta}a}\cdot {4}^{\color{salmon}n} \qquad |:{4}^{\color{salmon}n}\quad \\
+            \frac{32}{4^{\color{salmon}n}}&={\color{magenta}a}
+            \end{align*}
+          </li>
+          <li>
+            Gleichsetzen:
+            \begin{align*}
+            {\color{magenta}a}&={\color{magenta}a} \\
+            \frac{4}{2^{\color{salmon}n}}&=\frac{32}{4^{\color{salmon}n}} \qquad\qquad\qquad
+            \end{align*}
+          </li>
+          <li>
+            \({\color{salmon}n}\) berechnen:
+            \begin{align*}
+            \frac{4}{2^{\color{salmon}n}}&=\frac{32}{4^{\color{salmon}n}}\qquad\quad |\cdot 4^{\color{salmon}n} \quad |:4\\
+            \frac{4^{\color{salmon}n}}{2^{\color{salmon}n}}&=\frac{32}{4} \\[0.75em]
+            \left(\frac{4}{2}\right)^{\color{salmon}n}&=8 \\[0.75em]
+            2^{\color{salmon}n}&=8\qquad\qquad\! | \log \\
+            {\color{salmon}n}&=3
+            \end{align*}
+            Als letzter Schritt wird hier der Logarithmus berechnet. Im Kopf muss &bdquo;2 hoch <i>was</i> ergibt 8?&ldquo; gerechnet werden.
+            <p>
+              Im Taschenrechner muss \(\log_2 8\) eingegeben werden. <i>Achtung: Bei vielen Taschenrechnern bezeichnet <b>log</b> den dekadischen 
+              Logarithmus (Basis 10). In diesem Fall muss \(\frac{\log 8}{\log 2}\) gerechnet werden. Letztere Rechnung funktioniert auch mit \(\ln\).</i>
+            </p>
+          </li>
+          <li>
+            \({\color{salmon}n}\) in Ausgangsgleichung einsetzen:
+            \begin{align*}
+            {\color{red}4}&={\color{magenta}a}\cdot {\color{green}2}^{\color{salmon}3}\qquad\quad 
+            \end{align*}
+          </li>
+          <li>
+            \({\color{magenta}a}\) berechnen:
+            \begin{align*}
+            {4}&={\color{magenta}a}\cdot {2}^{\color{salmon}3} \\
+            4&={\color{magenta}a}\cdot 8 \qquad |:8 \\
+            {\color{magenta}a}&=\tfrac12
+            \end{align*}
+          </li>
+        </ol>
+        Die Gleichung der Potenzfunktion lautet: \(f(x)={\color{magenta}\tfrac12}\cdot x^{\color{salmon}3}\).
+      </div>
+
+
+
+      
+
+      
+
+
+
+
+    </section>
+    <!-- <section>
+            <div class="videos">
+                <iframe width="360" height="202" src="https://www.youtube.com/embed/19goPRnthCE"
+                    title="Abstand Punkt - Punkt" frameborder="0" allow="web-share" allowfullscreen></iframe>
+
+            </div>
+        </section> -->
+    <section class="aufgaben" id="aufgaben">
+      <h3>Aufgaben zu einfache Potenzfunktionen</h3>
+      <ol class="custom-marker point-after decimal" style="counter-set: list 2;">
+        <li>
+          Im Buch, Seite 47, löse die
+            <ul class="custom-marker parens-around lower-alpha more-spacing">
+              <li>Übungen 5 bis 8</li>
+            </ul>
+            <a href="#a1">Lösungen</a>
+        </li>
+      </ol>
+
+
+
+    </section>
+
+    <section class="loesungen" style="counter-set: lsg-counter 2">
+      <h3>Lösungen zur Gleichungsbestimmung
+      </h3>
+
+      <details id="a1">
+        <summary>...</summary>
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>
+          </li>
+        </ol>
+        </div>
+      </details>
+
+      
+
+    </section>
+
+    <section id="meme">
+      <div class="images">
+        <img src="/img/power_meme.jpg" style="object-fit: scale-down; max-width: 300px" />
+      </div>
+      <div class="centered">
+        <a
+          href="https://makeameme.org/meme/the-power-and-28c45141e4">
+          <h6>Original von Make a Meme</h6>
+        </a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <a href="/misc/impressum.html">Impressum</a>
+    <div class="lastModified" align="center">
+      Zuletzt geändert:<br />
+      10. März 2024
+      <!-- <span id="lastModifiedDate"></span> -->
+    </div>
+    <a href="/misc/datenschutz.html">Datenschutz</a>
+  </footer>
+</body>
