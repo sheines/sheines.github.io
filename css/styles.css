@@ -103,6 +103,9 @@ table {
   padding: 0 30px;
   box-sizing: border-box; */
 }
+.wertetabelle th, .wertetabelle td {
+  border: 1px solid #575757;
+}
 .responsive-table {
   display: inline-block;
   box-sizing: border-box;
