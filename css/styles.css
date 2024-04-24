@@ -104,7 +104,7 @@ table {
   box-sizing: border-box; */
 }
 .wertetabelle th, .wertetabelle td {
-  border: 1px solid #575757;
+  border: 2px solid #575757;
 }
 .responsive-table {
   display: inline-block;
