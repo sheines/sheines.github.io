@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" initial-scale=1.0 />
+  <meta name="author" content="Sebastian Hitziger" />
+  <meta name="robot" content="noindex" />
+  <title> HITZ | Exp. Wachstum</title>
+  <link rel="stylesheet" type="text/css" href="/css/colors.css" />
+  <link rel="stylesheet" type="text/css" href="/css/grids.css" />
+  <link rel="stylesheet" type="text/css" href="/css/navbar.css" />
+  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="/css/timeline.css" />
+  <link rel="stylesheet" type="text/css" href="/css/courses.css" />
+  <script type="text/javascript" src="jquery-3.3.1.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="nav">
+      <input type="checkbox" id="nav-check">
+      <div class="nav-header">
+        <div class="nav-title">
+          <a href="/">Hr. Hitzigers Unterricht</a>
+        </div>
+      </div>
+      <div class="nav-btn">
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+
+      <div class="nav-links">
+        <a href="/content/math/">Mathematik</a>
+        <a href="/content/math/11/">Klasse 11</a>
+        <!-- <a href="/content/phy/index.html">Physik</a> -->
+      </div>
+    </div>
+  </header>
+  <aside>
+    <div class="timeline-header" onclick="toggleTimelineVisibility()">
+      <h2>Zeitplanung</h2>
+    </div>
+    <div class="timeline">
+      <ul>
+        <li class="future">
+          <div class="date">8. Mai</div>
+          <div class="title">Halbwerts- und Verdopplungszeit</div>
+        </li>
+        <li class="next">
+          <div class="date">7. Mai</div>
+          <div class="title">Wiederholung Grundlagen</div>
+        </li>
+
+      </ul>
+    </div>
+  </aside>
+  <main>
+    <!-- <section class="teaser">
+            
+        </section> -->
+    <section>
+      <h2>Exponentielles Wachstum</h2>
+      <div class="ziele">
+        <h3>Lernziele</h3>
+        <p>
+          Am Ende des Abschnitts Exponentielles Wachstum sollst du folgende Lernziele erreicht haben:
+        <ul>
+          <li>Wachstumsarten unterscheiden können,</li>
+          <li>Charakteristische Größen, wie Halbwerts- und Verdopplungszeit bestimmen können,</li>
+          <li>Wachstumsgleichungen aus verschiedenen Kontexten aufstellen können.</li>
+        </ul>
+        </p>
+      </div>
+      <div class="subject-container" style="counter-reset: css-counter -1;">
+        <a href="/content/math/11/exp/wissensstand.html">
+          <div class="subject">
+
+            <img />
+            <h4>Was kann ich schon?</h4>
+
+          </div>
+        </a>
+        <a href="/content/math/11/exp/begriffe.html">
+          <div class="subject">
+
+            <img />
+            <h4>Begriffe und Definitionen</h4>
+
+          </div>
+        </a>
+        <a href="/content/math/11/exp/">
+          <div class="subject">
+
+            <img />
+            <h4>Halbwerts- und Verdopplungszeit</h4>
+
+          </div>
+        </a>
+        
+      </div>
+    </section>
+  </main>
+  <footer>
+    <a href="/misc/impressum.html">Impressum</a>
+    <div class="lastModified" align="center">
+      Zuletzt geändert:<br>
+      3. Mai 2024
+      <!-- <span id="lastModifiedDate"></span> -->
+    </div>
+    <a href="/misc/datenschutz.html">Datenschutz</a>
+  </footer>
+
+    <!-- <script src="/js/lastModified.js"></script> -->
+    <script src="/js/toggleTimelineVisibility.js"></script>
+</body>
