@@ -871,12 +871,16 @@
                     <li>
                         Rechenweg:
                         \begin{align*}
-                        30 &= 20\cdot 1,014^x \quad |:20\\
-                        1,5&=1,014^x \qquad \quad\!\! |\log \\
-                        x&=\log_{1,014} 1,5 \\
-                        x&=29,16
+                        5 &= \frac{20}{1+10\cdot 2^{^{-0.5\cdot t}}} \quad |\cdot \left(1+10\cdot 2^{^{-0.5\cdot t}}\right) \\
+                        5\left(1+10\cdot 2^{^{-0.5\cdot t}}\right)&=20 \qquad\qquad\qquad\!  | : 5 \\
+                        1+10\cdot 2^{^{-0.5\cdot t}} &=4 \qquad\qquad\qquad\ |-1 \\
+                        10\cdot 2^{^{-0.5\cdot t}} &=3 \qquad\qquad\qquad\ |: 10 \\
+                        2^{^{-0.5\cdot t}} &=0,3 \quad\qquad\qquad\ | \log \\
+                        -0.5\cdot t &= \log_2 0,3 \\
+                        -0.5 \cdot t &=-1,737 \qquad \quad\ \,  | \cdot (-2) \\
+                        t&=3,474
                         \end{align*}
-                        Es dauert reichlich 29 Jahre, bis das Land 30 Millionen Einwohner hat.
+                        Es dauert etwa dreieinhalb Jahre bis 5000 Fische im Lake Hurst leben.
                     </li>
                 </ol>
             </details>
