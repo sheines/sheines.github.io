@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" initial-scale=1.0 />
+    <meta name="author" content="Sebastian Hitziger" />
+    <meta name="robot" content="noindex" />
+    <title> HITZ | Funktionen | Gleichung bestimmen</title>
+    <link rel="stylesheet" type="text/css" href="/css/colors.css" />
+    <link rel="stylesheet" type="text/css" href="/css/gridNoTimeline.css" />
+    <link rel="stylesheet" type="text/css" href="/css/navbar.css" />
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="/css/courses.css" />
+    <script type="text/javascript" src="jquery-3.3.1.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="nav">
+            <input type="checkbox" id="nav-check">
+            <div class="nav-header">
+                <div class="nav-title">
+                    <a href="/">Hr. Hitzigers Unterricht</a>
+                </div>
+            </div>
+            <div class="nav-btn">
+                <label for="nav-check">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+
+            <div class="nav-links">
+                <a href="/content/math/">Mathematik</a>
+                <a href="/content/math/11/">Klasse 11</a>
+                <a href="/content/math/11/exp/">Exponentielles Wachstum</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section>
+            <h2>Gleichung bestimmen</h2>
+            <div class="ziele">
+                <p>
+                    Nachfolgend soll erklärt werden, wie die Wachstumsgleichung aus zwei Punkten bestimmt werden kann.
+                </p>
+                <p>
+                    <a href="#aufgaben">Direkt zu den Aufgaben</a>
+                </p>
+            </div>
+            <div class="theorie">
+                <div class="definition">
+                    <h3>Vorgehen</h3>
+                    <ol class="more-spacing" start="0">
+                        <li>Gegebenfalls Wertetabelle erstellen,</li>
+                        <li>Punkte jeweils in \(y=w_0\cdot q^x\) einsetzen,</li>
+                        <li>Gleichungen nach \(w_0\) umstellen,</li>
+                        <li>Umgestellte Gleichungen gleichsetzen,</li>
+                        <li>\(q\) berechnen und</li>
+                        <li>\(q\) in Ausgangsgleichung einsetzen und \(w_0\) berechnen.</li>
+                    </ol>
+                </div>
+                    
+            </div>
+
+            <div class="theorie">
+                <h6>Beispiel 1: Kapitalwachstum</h6>
+                <p>
+                    Auf einem Konto wurden vor fünf Jahren 500&nbsp;€ eingezahlt. 
+                    Nun sind es 600&nbsp;€ geworden. Wie wurde das Geld verzinst?
+                <ol class="more-spacing" start="0">
+                    <li>Wertetabelle:
+                        <div class="tabelle">
+                            <table class="wechseltabelle">
+                                <tr>
+                                    <th style="text-align-last: center;">Zeit in Jahren</th>
+                                    <td>\(\color{orange}0\)</td>
+                                    <td>\(\color{green}5\)</td>
+                                </tr>
+                                <tr>
+                                    <th style="text-align-last: center;">Guthaben (€)</th>
+                                    <td>\(\color{red}500\)</td>
+                                    <td>\(\color{cyan}600\)</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </li>
+                    <li>Gleichungen:
+                        \begin{align*}
+                            {\color{red}500} &= w_0 \cdot q^{\color{orange}0} \\
+                            {\color{cyan}600} &= w_0 \cdot q^{\color{green}5}
+                        \end{align*}
+                    </li>
+                    <li>Umstellen (jeweils durch \(q^x\) teilen):
+                        \begin{align*}
+                        w_0&=\frac{\color{red}500}{q^{\color{orange}0}} \\
+                        w_0&=\frac{\color{cyan}600}{q^{\color{green}5}}
+                        \end{align*}
+                        Zwei Dinge können hier den Weg vereinfachen:
+                        <ul>
+                            <li>Wenn der Startwert bekannt ist, kann direkt \(w_0\) 
+                                bestimmt werden. Hier also: \(w_0=500\)
+                            </li>
+                            <li>
+                                \(q^0=1\)
+                            </li>
+                        </ul>
+                        Um trotzdem einen vollständigen Weg zu zeigen, werden diese
+                        Vereinfachungen jetzt hier ignoriert.
+                    </li>
+                    <li>Gleichsetzen:
+                        \begin{align*}
+                        \frac{\color{red}500}{q^{\color{orange}0}}&=\frac{\color{cyan}600}{q^{\color{green}5}}
+                        \end{align*}
+                    </li>
+                    <li>
+                        \(q\) berechnen:
+                        \begin{align*}
+                        \frac{\color{red}500}{q^{\color{orange}0}}&=\frac{\color{cyan}600}{q^{\color{green}5}}\qquad |\cdot q^{\color{green}5} \\
+                        \frac{500 \cdot q^5}{q^0} &= 600 \qquad\ \, | :500 \\
+                        \frac{q^5}{q^0}&=\tfrac65 \\
+                        q^{5-0}&=\tfrac65 \\
+                        q^5&=\tfrac65 \qquad \quad |\sqrt[5]{\ } \\
+                        q&=\color{magenta}1,037
+                        \end{align*}
+                    </li>
+                    <li>
+                        Für die Fragestellung hier wird \(w_0\) nicht benötigt.
+                        <p>
+                            Der Vollständigkeit halber:
+                            \begin{align*}
+                                w_0&=\frac{\color{red}500}{{\color{magenta}1,037}^{\color{orange}0}} \\
+                                w_0&=500
+                            \end{align*}
+                        </p>
+                    </li>
+                </ol>
+                Die Wachstumsfunktion lautet: \(f(x)=500\cdot 1,037^x\). Zurück zur Frage: der Wachstumsfaktor beträgt \(q=1,037\), das heißt
+                die Wachstumsrate liegt bei \(3,5\,\%\).
+                </p>
+                <p>
+                    Das Geld wurde demnach mit 3,5&nbsp;% pro Jahr verzinst.
+                </p>
+                
+            </div>
+        </section>
+        <!-- Videos einbinden -->
+        <!-- <section class="videos">
+            <iframe width="360" height="202" src="https://www.youtube.com/embed/x1zdRZmOk_Q"
+                title="Funktionen - Zuordnungen" frameborder="0"
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            <iframe width="360" height="202" src="https://www.youtube.com/embed/XwzxV8vifmY"
+                title="Funktionen - Am Graphen erkennen" frameborder="0"
+                allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+        </section> -->
+        <section id="aufgaben" class="aufgaben">
+            <h3>Aufgaben zur Gleichungsbestimmung</h3>
+            <ol class="custom-marker point-after decimal">
+                <li>Buch, Seite 206 Nr. 1 <a href="#a1">Lösungen</a></li>
+            </ol>
+        </section>
+        <section class="loesungen">
+            <h3>Lösungen zur Gleichungsbestimmung</h3>
+
+            <details id="a1">
+                <summary>...</summary>
+                <ul class="custom-marker parens-around lower-alpha">
+                    <li>...</li>
+                </ul>
+            </details>
+
+            
+
+        </section>
+        <section id="meme">
+            <div class="centered" style="max-height: 350px">
+                <img src="/img/half_meme.jpg" style="object-fit:scale-down;">
+            </div>
+            <div class="centered">
+                <a href="https://www.pinterest.de/pin/525232375266566969/">
+                    <h6>Original von Evangelina Flores</h6>
+                </a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <a href="/misc/impressum.html">Impressum</a>
+        <div class="lastModified" align="center">
+            Zuletzt geändert:<br>
+            8. Mai 2024
+            <!-- <span id="lastModifiedDate"></span> -->
+        </div>
+        <a href="/misc/datenschutz.html">Datenschutz</a>
+    </footer>
+</body>
