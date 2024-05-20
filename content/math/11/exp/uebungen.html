@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" initial-scale=1.0 />
+    <meta name="author" content="Sebastian Hitziger" />
+    <meta name="robot" content="noindex" />
+    <title> HITZ | Funktionen | Übungen</title>
+    <link rel="stylesheet" type="text/css" href="/css/colors.css" />
+    <link rel="stylesheet" type="text/css" href="/css/gridNoTimeline.css" />
+    <link rel="stylesheet" type="text/css" href="/css/navbar.css" />
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="/css/courses.css" />
+    <script type="text/javascript" src="jquery-3.3.1.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="nav">
+            <input type="checkbox" id="nav-check">
+            <div class="nav-header">
+                <div class="nav-title">
+                    <a href="/">Hr. Hitzigers Unterricht</a>
+                </div>
+            </div>
+            <div class="nav-btn">
+                <label for="nav-check">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+
+            <div class="nav-links">
+                <a href="/content/math/">Mathematik</a>
+                <a href="/content/math/11/">Klasse 11</a>
+                <a href="/content/math/11/exp/">Exponentielles Wachstum</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section>
+            <h2>Übungs- und Anwendungsaufgaben</h2>
+            <div class="ziele">
+                <p>
+                    Nachfolgend sollen die im vorherigen Kapitel erlernten Fähigkeiten vertieft und gefestigt
+                    werden..
+                </p>
+            </div>
+            <section id="aufgaben" class="aufgaben">
+
+                <ol class="custom-marker point-after decimal">
+                    <li>
+                        <p>
+                            Starte bei 5000. Welcher Wert wird nach fünf Schritten erreicht?
+                        </p>
+                        <p>
+                            Rechne in einem Schritt und notiere jeweils die zugehörige Wachstumsgleichung und Rechnung!
+                            <a href="#a1">Lösungen</a>
+                        </p>
+                        <ol class="custom-marker parens-around lower-alpha">
+                            <li>Lineare Zunahme um je 200,</li>
+                            <li>Prozentuale Zunahme um je 8 %,</li>
+                            <li>Prozentuale Abnahme um je 3,5 %,</li>
+                            <li>Lineare Abnahme um je 64.</li>
+                        </ol>
+                    </li>
+                    <li>
+                        Ein Autofahrer fährt in den Graben. Er entfernt sich von der Unfallstelle. Fünf Stunden später
+                        wird eine Blutprobe genommen.
+                        Der Alkoholgehalt beträgt 0,7 Promille. Eine weitere Stunde später ist er auf 0,6 Promille
+                        gefallen. <a href="#a2">Lösungen</a>
+                        <ol class="custom-marker parens-around lower-alpha more-spacing">
+                            <li>Wie viele Promille hatte der Mann, wenn man eine exponentielle Abnahme unterstellt?</li>
+                            <li>Wie viele Promille wäre es bei linearer Abnahme?</li>
+                            <li>Stelle beide Abnahmen in einem Diagramm grafisch gegenüber!</li>
+                        </ol>
+                    </li>
+                    <li>
+                        Die Helligkeit nimmt mit zunehmender Tiefe dramatisch ab, nämlich exponentiell. In 16 Metern
+                        Tiefe sind
+                        nur noch 15 % der Lichtmenge übrig. <a href="#a3">Lösungen</a>
+                        <ol class="custom-marker parens-around lower-alpha more-spacing">
+                            <li>Gib eine Funktion an, welche die Resthelligkeit in Abhängkeit von der Tauchtiefe
+                                beschreibt! (Oberfläche: 100 %)</li>
+                            <li>In welcher Tiefe befindet sich ein Taucher, wenn dessen Belichtungsmesser nur noch 0,1 %
+                                Restlichtmenge misst?</li>
+                            <li>Bestimme die &bdquo;Halbwertstiefe&ldquo; (Tiefe bei der sich die Lichtmenge halbiert)!
+                            </li>
+                        </ol>
+                    </li>
+                    <li>
+                        Auf einem 900 m² großen Teich werden zwei Seerosenkolonien gepflanzt. Zu Beginn bedeckt Kolonie
+                        Alpha 3000 cm² der Wasseroberfläche
+                        und Kolonie Beta 8000 cm². Alpha vermehrt sich täglich um 60 %. Beta wächst langsamer, nämlich
+                        täglich um 20 %. <a href="#a4">Lösungen</a>
+                        <ol class="custom-marker parens-around lower-alpha more-spacing">
+                            <li>Stelle für beide Seerosenkolonien die Wachstumsgleichung auf!</li>
+                            <li>Bestimme die Verdopplungszeit der beiden Kolonien!</li>
+                            <li>Wann wird die Größe von Kolonie Alpha 50 m² betragen?</li>
+                            <li>Nach welcher Zeit (Tage, Stunden und Minuten) sind beide Kolonien gleich groß?</li>
+                            <li>Bestimme Näherungsweise, wann der ganze Teich bedeckt ist!</li>
+                        </ol>
+                    </li>
+                    <li>
+                        Die Holzmasse eines Waldes wird 20 Jahre nach der Anpflanzung über einen Zeitraum von fünf
+                        Jahren vermessen,
+                        um Prognosen stellen zu können. <a href="#a5">Lösungen</a>
+                        <div class="tabelle">
+                            <table class="wechseltabelle">
+                                <tr>
+                                    <th style="text-align-last: center;">Zeit seit Pflanzung</th>
+                                    <td>\(20\)</td>
+                                    <td>\(21\)</td>
+                                    <td>\(22\)</td>
+                                    <td>\(23\)</td>
+                                    <td>\(24\)</td>
+                                </tr>
+                                <tr>
+                                    <th style="text-align-last: center;">Holzmasse in m³</th>
+                                    <td>\(2165\)</td>
+                                    <td>\(2230\)</td>
+                                    <td>\(2300\)</td>
+                                    <td>\(2370\)</td>
+                                    <td>\(2440\)</td>
+                                </tr>
+                            </table>
+                        </div>
+                        <ol class="custom-marker parens-around lower-alpha more-spacing">
+                            <li>Überprüfe, ob das Wachstum annähernd exponentiell verläuft!</li>
+                            <li>Stelle eine Wachtstumsgleichung für die Holzmasse auf!</li>
+                            <li>Wie groß war der Anfangsbestand?</li>
+                            <li>Wann betrug der Bestand 1500 m³? Wann wird er 3000 m³ betragen?</li>
+                        </ol>
+                    </li>
+                    <li>
+                        <p>
+                            Die Frequenzen von Tönen in der Musik zeichnen sich ebenfalls durch exponentielles Wachstum aus.
+                        </p>
+                        <p>
+                            Das folgende Bild zeigt das Saiten- und Bundlayout eine klassischen Gitarre.
+                        </p>
+                        <div class="centered">
+                            <a href="svg/exp_guitar.svg" target="_blank" rel="noopener noreferrer">
+                                <img src="svg/exp_guitar.svg" height="375px">
+                            </a>
+                        </div>
+                        <p>
+                            <a href="svg/exp_guitar.svg" target="_blank" rel="noopener noreferrer">Zum Vergrößern: Anklicken</a>
+                        </p>
+                        <p>
+                            Zur Orientierung:
+                        <div class="centered" style="max-height: 150px;">
+                            <img src="/img/Acoustic_guitar.png" style="object-fit:scale-down;">
+                        </div>
+                        </p>
+                        <p>
+                            Der einfachheithalber beschränken wir uns in dieser Aufgabe auf die höchste Saite der Gitarre, also die obere E-Saite.
+                        </p>
+                        <p>
+                            Der Abstand zweier Bünde (senkrechte Striche) heißt Halbtonschritt. Der Abstand zweier gleichnamiger Töne, 
+                            z.B. f' zu f'' heißt Oktave. Eine Oktave fasst immer zwölf Halbtonschritte. Die obenstehenden Zahlen geben
+                            den Abstand des Tones zum a' in Halbtonschritten an.
+                        </p>
+                        <p>
+                            Der Kammerton a' hat eine Frequenz 440 Hz. Das eine Oktave höher liegende a'' hat die doppelte Frequenz, also 880 Hz.
+                        </p>
+                        <ol class="custom-marker parens-around lower-alpha more-spacing">
+                            <li>Ermittle eine Gleichung mit der die Frequenzen einzelner Töne, ausgehed vom a', berechnet werden können!</li>
+                            <li>Berechne die Frequenzen der Töne e'' und f'! </li>
+                            <li>Prüfe, ob bei den ebenfalls eine Oktave auseinanderliegenden Tönen f' und f'' 
+                                ebenfalls eine Frequenzverdopplung vorliegt!</li>
+                            <li>Bestimme rechnerisch die &bdquo;Verdopplungsbundzahl&ldquo;! Vergleiche diese mit der Angabe aus dem Text!</li>
+                        </ol>
+                    </li>
+                </ol>
+            </section>
+            <section class="loesungen">
+                <h3>Lösungen zu Übungs- und Anwendungsaufgaben</h3>
+
+                <details id="a1">
+                    <summary>Lineares und prozentuales Wachstum</summary>
+                    <ol class="custom-marker parens-around lower-alpha">
+                        <li>Lineares Wachstum:
+                            \begin{align*}
+                            y&=200\cdot x +5000 \\
+                            y&=200\cdot 5+5000=6000
+                            \end{align*}
+                        </li>
+                        <li>Exponentielles Wachstum:
+                            \begin{align*}
+                            y&=5000\cdot 1,08^x \\
+                            y&=5000\cdot 1,08^5=7346,64
+                            \end{align*}
+                        </li>
+                        <li>Exponentielles Wachstum:
+                            \begin{align*}
+                            y&=5000\cdot 0,965^x \\
+                            y&=5000\cdot 0,965^5=4184,14
+                            \end{align*}
+                        </li>
+                        <li>Lineares Wachstum:
+                            \begin{align*}
+                            y&=-64\cdot x +5000 \\
+                            y&=-64\cdot 5+5000=4680
+                            \end{align*}
+                        </li>
+                    </ol>
+
+                </details>
+
+                <details id="a2">
+                    <summary>Restalkohol</summary>
+                    Um die Punkte zu finden, muss die Abstandsformel &bdquo;rückwärts&ldquo; genutzt werden:
+                    <ul class="custom-marker parens-around lower-alpha more-spacing">
+                        <li>
+                            ...
+                        </li>
+
+                    </ul>
+                </details>
+            </section>
+            <section id="meme">
+                <div class="images">
+                    <img src="/img/uebe-meme.jpg" style="object-fit:scale-down; max-width: 300px;">
+                </div>
+                <div class="centered">
+                    <!-- <a href="https://mrkylebrown.weebly.com/1-slope--rate-of-change.html"> -->
+                    <h6>Original leider nicht mehr auffindbar</h6>
+                    <!-- </a> -->
+                </div>
+            </section>
+    </main>
+    <footer>
+        <a href="/misc/impressum.html">Impressum</a>
+        <div class="lastModified" align="center">
+            Zuletzt geändert:<br>
+            20. Mai 2024
+            <!-- <span id="lastModifiedDate"></span> -->
+        </div>
+        <a href="/misc/datenschutz.html">Datenschutz</a>
+    </footer>
+</body>
