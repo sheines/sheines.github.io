@@ -148,10 +148,11 @@
                                 <img src="svg/exp_guitar.svg" height="375px">
                             </a>
                         </div>
-                        <p>
+                        <p class="centered">
                             <a href="svg/exp_guitar.svg" target="_blank" rel="noopener noreferrer">Zum Vergrößern:
                                 Anklicken</a>
                         </p>
+                        
                         <p>
                             Zur Orientierung:
                         <div class="centered" style="max-height: 150px;">
@@ -518,7 +519,105 @@
                             \end{align*}
                             Der Anfangsbestand betrug etwa 1200 m³.
                         </li>
-                        
+                        <li>
+                            Einsetzen und Umstellen:
+                            \begin{align*}
+                                1500&=2165\cdot 1,03^x\qquad |:2165 \\
+                                \tfrac{1500}{2165}&=1,03^x\qquad\qquad\ \ \,  |\log \\ 
+                                x&=\log_{1,03}\left(\tfrac{1500}{2165}\right) \\
+                                x&\approx-12,41
+                            \end{align*}
+                            Nach etwa \(7,5\) Jahren (\(20-12,41\)) lag der Bestand bei 1500 m³.
+                            \begin{align*}
+                                3000&=2165\cdot 1,03^x\qquad |:2165 \\
+                                \tfrac{3000}{2165}&=1,03^x\qquad\qquad\ \ \,  |\log \\ 
+                                x&=\log_{1,03}\left(\tfrac{3000}{2165}\right) \\
+                                x&\approx-11,04
+                            \end{align*}
+                            Nach etwa 31 Jahren wird der Bestand bei 3000 m³ liegen.
+                        </li>
+                    </ol>
+
+                </details>
+
+                <details id="a6">
+                    <summary>Gitarre</summary>
+                    <ol class="custom-marker parens-around lower-alpha">
+                        <li>Wertetabelle (HTS = Halbtonschritte): 
+                            <div class="tabelle" style="margin: 10px;">
+                                <table class="wechseltabelle">
+                                    <tr>
+                                        <th style="text-align-last: center;">Ton</th>
+                                        <td>a'</td>
+                                        <td>a''</td>
+                                    </tr>
+                                    <tr>
+                                        <th style="text-align-last: center;">HTS vom a'</th>
+                                        <td>\(0\)</td>
+                                        <td>\(\color{cyan}12\)</td>
+                                    </tr>
+                                    <tr>
+                                        <th style="text-align-last: center;">Frequenz in Hz</th>
+                                        <td>\(440\)</td>
+                                        <td>\(\color{magenta}880\)</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <p>
+                                Aus dem Ton a' folgt direkt: \(w_0=\color{orange}440\).
+                            </p>
+                            <p>
+                                Werte von a'' einsetzen:
+                                \begin{align*}
+                                    {\color{magenta}880}&={\color{orange}440}\cdot q^{\color{cyan}12} \qquad |:440 \\
+                                    2&=q^{12} \qquad \qquad \, | \sqrt[12]{\ } \\
+                                    q&=\sqrt[12]{2}\approx1,0595
+                                \end{align*}
+                                Die Gleichung lautet: \(y=440\cdot 1,0595^x\)
+                            </p>
+                        </li>
+                        <li>
+                            <ul>
+                                <li>e'': \(x=7\):
+                                    \begin{align*}
+                                        y&=440\cdot 1,0595^7\\
+                                        y&=659,41\,\text{Hz}
+                                    \end{align*}
+                                </li>
+                                <li>f': \(x=-4\):
+                                    \begin{align*}
+                                        y&=440\cdot 1,0595^{-4}\\
+                                        y&=349,18\,\text{Hz}
+                                    \end{align*}
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li>f'': \(x=8\):
+                                    \begin{align*}
+                                        y&=440\cdot 1,0595^8\\
+                                        y&=698,65\,\text{Hz}
+                                    \end{align*}
+                                </li>
+                                <li>Aus b): f': \(349,18\,\text{Hz}\) 
+                                </li>
+                                <li>
+                                    Probe:
+                                    \begin{align*}
+                                        \frac{698,65}{349,18}&=2,0008\approx 2
+                                    \end{align*}
+                                    Ja, es handelt sich ebenfalls um eine Verdopplung der Frequenzen.
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            Einsetzen und ausrechnen:
+                            \begin{align*}
+                                T_2&=\frac{\ln 2}{\ln 1,0595}\approx11,993\approx12
+                            \end{align*}
+                            Die Verdopplungstastenzahl von ungefähr 12 stimmt mit der aus dem Text (12 HTS für eine Oktave) überein.
+                        </li>
                     </ol>
 
                 </details>
