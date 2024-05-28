@@ -200,6 +200,21 @@ details summary::before {
   gap: 15px;
 }
 
+dl {
+  display: grid;
+  grid-template-columns: max-content auto;
+}
+
+dt {
+  grid-column-start: 1;
+  color: darkgoldenrod;
+  box-shadow: none;
+  text-shadow: none;
+}
+
+dd {
+  grid-column-start: 2;
+}
 
 ol.custom-marker {
   counter-reset: list;
