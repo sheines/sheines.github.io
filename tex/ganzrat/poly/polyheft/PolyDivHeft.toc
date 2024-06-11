@@ -1,0 +1,23 @@
+\babel@toc {ngerman}{}\relax 
+\contentsline {section}{\numberline {1}Grundlagen}{3}{}%
+\contentsline {subsection}{\numberline {1.1}Terme addieren, subtrahieren und multiplizieren}{3}{}%
+\contentsline {subsection}{\numberline {1.2}Potenzgesetze anwenden}{3}{}%
+\contentsline {section}{\numberline {2}Sehr einfache Polynomdivision}{5}{}%
+\contentsline {section}{\numberline {3}Einfache Polynomdivision}{7}{}%
+\contentsline {section}{\numberline {4}Komplexe Polynomdivision}{9}{}%
+\contentsline {section}{\numberline {5}Polynomdivision mit fehlenden Gliedern}{11}{}%
+\contentsline {section}{\numberline {6}Polynomdivision mit Rest}{15}{}%
+\contentsline {section}{\numberline {7}Polynomdivision mit Fehlern}{17}{}%
+\contentsline {section}{\numberline {8}Weiterführende Aufgaben}{19}{}%
+\contentsline {section}{\numberline {L}Lösungen}{24}{}%
+\contentsline {subsection}{\numberline {L.1}Grundlagen}{24}{}%
+\contentsline {subsubsection}{\numberline {L.1.1}Terme addieren, subtrahieren und multiplizieren}{24}{}%
+\contentsline {subsubsection}{\numberline {L.1.2}Potenzgesetze anwenden}{24}{}%
+\contentsline {subsection}{\numberline {L.2}Sehr einfache Polynomdivision}{25}{}%
+\contentsline {subsection}{\numberline {L.3}Einfache Polynomdivision}{26}{}%
+\contentsline {subsection}{\numberline {L.4}Komplexe Polynomdivision}{27}{}%
+\contentsline {subsection}{\numberline {L.5}Polynomdivision mit fehlenden Gliedern}{28}{}%
+\contentsline {subsection}{\numberline {L.6}Polynomdivision mit Rest}{30}{}%
+\contentsline {subsection}{\numberline {L.7}Polynomdivision mit Fehlern}{31}{}%
+\contentsline {subsection}{\numberline {L.8}Weiterführende Aufgaben}{32}{}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
