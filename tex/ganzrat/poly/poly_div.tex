@@ -1,21 +1,35 @@
-\documentclass[11pt]{standalone}
+\documentclass[serif]{scrartcl}
+
+
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+
+\usepackage{amssymb,amsmath,amsfonts}
+
+
+
+
+\usepackage{xcolor}
+
+\usepackage{ifthen}
+\usepackage{animate}
 
 \usepackage{helvet}
 
-\usepackage{amsmath}
 
-\usepackage{ifthen}
-\usepackage{tikz} 
+\usepackage{tikz}
 \usepackage{pgfplots}
 \usetikzlibrary{shapes.misc}
-\usetikzlibrary{arrows,arrows.meta}
-\usetikzlibrary{calc,intersections, patterns, math}
-\usetikzlibrary{decorations.pathmorphing}
-\usetikzlibrary{angles,quotes}
 \usetikzlibrary{arrows.meta}
 \usetikzlibrary{calc,angles,quotes,babel,shapes}
+\usetikzlibrary{intersections}
 \usetikzlibrary{decorations}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{arrows}
 \usepgfplotslibrary{fillbetween}
+\usetikzlibrary{patterns, animations, math}
 \usetikzlibrary{backgrounds}
 
 
@@ -27,45 +41,45 @@
 \colorlet{darkgoldenrod-lighter}{darkgoldenrod!40} 
 
 
-% \tikzstyle{every picture}+=[remember picture]
-
-\newcommand{\link}[2]{\tikz[baseline, remember picture]{\node[anchor=base] (#1) {$#2$}}}
-\newcommand{\pb}{\phantom{\big)}}
+\tikzstyle{every picture}+=[remember picture]
 
 \begin{document}
+\pagestyle{empty}
+\color{pfeil}
 
-\arraycolsep=1.4pt
+\tikzstyle{every picture}+=[remember picture]
 
 \begin{align*}
-	4x-6&=4
-	% \begin{array}[t]{*{25}{r}}
-	% 	\big( x^3&-\pb x^2\pb &-\pb14x\pb&+\pb24\big)&:&\big( x+4\big) = x^2-5x+6
-	% 	% \big( \link{a1}{x^3}&-\pb x^2\pb &\link{a5}{-\pb14x}\pb&\link{a9}{+\pb24}\big)&:&\big( x+4\big) =  \link{e1}{x^2}\link{e2}{-5 x}\link{e3}{+6}\\
-	% 	% -\big( \tikz[baseline]{\node[anchor=base] (a3) {$x^3$}}\pb&+\pb4 x^2\,\big)\tikz[baseline]{\node[] (a2) {}} \\\cline{1-2}&
-	% 	% \tikz[baseline]{\node[anchor=base] (a17) {$-\pb5 x^2$}}\tikz[baseline]{\node[] (a4) {}}&\tikz[baseline]{\node[anchor=base] (a6) {$-\pb14x$}} \pb&\\&
-	% 	% \hspace*{-1.5em}-\big(-\pb5 x^2\pb&-\pb20 x\big)\tikz[baseline]{\node[] (a7) {}} \\\cline{2-3}&&
-	% 	% \tikz[baseline]{\node[anchor=base] (a11) {$6x\pb$}}\tikz[baseline]{\node[] (a8) {}}&\tikz[baseline]{\node[anchor=base] (a10) {$+\pb24\pb$}}\\&&
-	% 	% -\big(6 x\pb&+\pb24\big)\tikz[baseline]{\node[] (a12) {}} \\\cline{3-4}&&&
-	% 	% 0\pb\tikz[baseline]{\node[] (a13){}}
-	% \end{array}
+	\arraycolsep=1.4pt\newcommand{\pb}{\phantom{\big)}}
+	\begin{array}[t]{*{25}{r}}
+		\big( \tikz[baseline]{\node[anchor=base] (a1) {$x^3$}}&-\pb x^2\pb &\tikz[baseline]{\node[anchor=base] (a5) {$-\pb14x$}}\pb&\tikz[baseline]{\node[anchor=base] (a9) {$+\pb24$}}\big)&:&\big( x+4\big) = \tikz[baseline]{\node[anchor=base] (e1) {$x^2$}}\tikz[baseline]{\node[anchor=base] (e2) {$-5 x$}}\tikz[baseline]{\node[anchor=base] (e3) {$+6$}}\\
+		-\big(\tikz[baseline]{\node[anchor=base] (a3) {$x^3$}}\pb&+\pb4 x^2\,\big)\tikz[baseline]{\node[] (a2) {}} \\\cline{1-2}&
+		\tikz[baseline]{\node[anchor=base] (a17) {$-\pb5 x^2$}}\tikz[baseline]{\node[] (a4) {}}&\tikz[baseline]{\node[anchor=base] (a6) {$-\pb14x$}} \pb&\\&
+		\hspace*{-1.5em}-\big(-\pb5 x^2\pb&-\pb20 x\big)\tikz[baseline]{\node[] (a7) {}} \\\cline{2-3}&&
+		{\tikz[baseline]{\node[anchor=base] (a11) {$6x\pb$}}}\tikz[baseline]{\node[] (a8) {}}&\tikz[baseline]{\node[anchor=base] (a10) {$+\pb24\,\pb$}}\\&&
+		-\big(6 x\pb&+\pb24\big)\tikz[baseline]{\node[] (a12) {}} \\\cline{3-4}&&&
+		0\pb\tikz[baseline]{\node[] (a13){}}
+	\end{array}
 \end{align*}
 
-% \begin{tikzpicture}[overlay]
-	% \draw[-stealth, blue, thick] (a1) to [in=160, out=20] node[above,sloped] {$x^3:x=$} (e1); % 
-	% \draw[-stealth, green!50!black, thick] (e1) to [in=0, out=210] node[below,sloped] {$x^2\cdot (x+4)=$} (a2);
-	% \draw[-stealth, orange, thick] (a2) to [out=-20, in=20] node[right] {$(x^3-x^2) - (x^3+4x^2)=$} (a4);
-	% \draw[-stealth, magenta, thick] (a5) to (a6);
-	% \draw[-stealth, blue, thick] (a17) to [in=250, out=-30] node[below,sloped] {$-5x^2:x=$} (e2);
-	% \draw[-stealth, green!50!black, thick] (e2) to [in=0, out=210] node[below,sloped] {$-5x\cdot (x+4)=$} (a7);
-	% \draw[-stealth, orange, thick] (a7) to [out=-20, in=20] node[right] {$(-5x^2-14x) - (-5x^2-20x)=$} (a8);
-	% \draw[-stealth, magenta, thick] (a9) to (a10);
-	% \draw[-stealth, blue, thick] (a11) to [in=250, out=-30] node[below,sloped] {$6x:x=$} (e3);
-	% \draw[-stealth, green!50!black, thick] (e3) to [in=0, out=270] node[below,sloped] {$6\cdot (x+4)=$} (a12);
-	% \draw[-stealth, orange, thick] (a12) to [out=-20, in=20] node[right] {$(6x+24) - (6x+24)=$} (a13);
-% \end{tikzpicture}
-% \centering
+\begin{tikzpicture}[overlay]
+	\draw[-stealth, cyan, thick] (a1) to [in=160, out=20] node[above,sloped] {$x^3:x=$} (e1); % 
+	\draw[-stealth, green, thick] (e1) to [in=0, out=210] node[below,sloped] {$x^2\cdot (x+4)=$} (a2);
+	\draw[-stealth, orange, thick] (a2) to [out=-20, in=20] node[right] {$(x^3-x^2) - (x^3+4x^2)=$} (a4);
+	\draw[-stealth, magenta, thick] (a5) to (a6);
+	\draw[-stealth, cyan, thick] (a17) to [in=250, out=-30] node[below,sloped] {$-5x^2:x=$} (e2);
+	\draw[-stealth, green, thick] (e2) to [in=0, out=210] node[below,sloped] {$-5x\cdot (x+4)=$} (a7);
+	\draw[-stealth, orange, thick] (a7) to [out=-20, in=20] node[right] {$(-5x^2-14x) - (-5x^2-20x)=$} (a8);
+	\draw[-stealth, magenta, thick] (a9) to (a10);
+	\draw[-stealth, cyan, thick] (a11) to [in=250, out=-30] node[below,sloped] {$6x:x=$} (e3);
+	\draw[-stealth, green, thick] (e3) to [in=0, out=270] node[below,sloped] {$6\cdot (x+4)=$} (a12);
+	\draw[-stealth, orange, thick] (a12) to [out=-20, in=20] node[right] {$(6x+24) - (6x+24)=$} (a13);
+\end{tikzpicture}
+
+% Division (blau), Multiplikation (grün) Subtraktion (orange), Nachholen (magenta)
+
 % \begin{tikzpicture}
-% 	\node[blue!30] at (-3,0) {\only<2,3,10,11,18,19>{\color{blue}\bfseries}Division};
+% 	\node[cyan!30] at (-3,0) {\only<2,3,10,11,18,19>{\color{blue}\bfseries}Division};
 % 	\node[green!50!black!30] at (0,0) {\only<5,6,13,14,21,22>{\color{green!50!black}\bfseries}Multiplikation};
 % 	\node[orange!30] at (3,0) {\only<7,8,15,16,23,24>{\color{orange}\bfseries}Subtraktion};
 % 	\node[magenta!30] at (6,0) {\only<9,17>{\color{magenta}\bfseries}Nachholen};

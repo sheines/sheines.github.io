@@ -1,0 +1,125 @@
+\documentclass[12pt, parskip=half, fleqn, a4paper, twoside]{scrartcl}
+\usepackage[ngerman]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath, amssymb, amsfonts}
+\usepackage{lmodern, clock, graphicx, units, textcomp, multicol, booktabs}
+\usepackage[Smaller]{cancel}
+\usepackage{xlop}
+\usepackage[left=1.5cm, right=1cm, top=1.7cm, bottom=2.3cm]{geometry}
+\usepackage{icomma, paralist, array}
+
+\usepackage{wasysym, pifont,xstring}      % Vierecke zum Ankreuzen (\Square) und bereits gekreuzte Vierecke (\XBox)
+
+\usepackage[clock]{ifsym} % Uhrsymbol
+
+\usepackage{stmaryrd}
+
+\usepackage{polynom}
+
+\renewcommand{\d}{\text{\, d}}
+\newcommand{\e}{\text{e}}
+
+%\setkomafont{section}{\sffamily\huge\centering}
+%\setkomafont{subsection}{\normalfont\large\centering}
+
+\newcounter{aufgabe}
+\setcounter{aufgabe}{0}
+
+\newcommand{\aufgabe}{\paragraph{Aufgabe \arabic{aufgabe}:}\stepcounter{aufgabe}}
+
+\KOMAoptions{numbers=noenddot}
+
+%Kopf und Fusszeilen definieren
+\usepackage{scrlayer-scrpage}
+\clearpairofpagestyles
+\setkomafont{pageheadfoot}{\sffamily}
+\setkomafont{pagination}{}
+
+ 
+%\ohead[6. Oktober 2017]{6. Oktober 2017} 
+%\ihead[Name, Vorname:]{Name,Vorname:} 
+\cfoot[Seite \arabic{page}]{Seite \arabic{page}}
+ 
+%\KOMAoptions{headsepline=true}\setheadsepline[\textwidth+1.5cm]{ 0.8pt}[\hspace*{-0.75cm}\centering]
+
+\allowdisplaybreaks[1]
+
+\let\v\vec
+
+\renewcommand{\d}{\text\textdegree}
+
+\renewcommand{\t}[1]{\text{\tiny{#1}}}
+\newcommand{\sq}{\text{\raisebox{-0.3ex}{\huge\Square~}}}
+\newcommand{\sa}{\raisebox{-1.5ex}{\rule{0pt}{0.7cm}}}
+\newcommand{\sd}{{\Large\hspace*{-0.5ex}\textcolor{white}{I}}}
+\newcommand{\strich}[1][1cm]{\raisebox{-1.5ex}{\rule{#1}{0.5pt}}} 
+
+\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
+
+\newenvironment{aufgaben}{\begin{addmargin}[10pt]{0pt}\begin{enumerate}[a)]}{\end{enumerate}\end{addmargin}}
+
+
+\usepackage{tikz}
+\usetikzlibrary{shapes.misc}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{angles,quotes}
+%\usetikzlibrary{intersections}
+\usetikzlibrary{calc}
+\usetikzlibrary{decorations.text}
+
+\usepackage{tikzsymbols}
+
+\begin{document}
+
+
+\title{Übungsheft Polynomdivision}
+\date{12. Juni 2024}
+\author{\strich[9cm]}
+
+\maketitle
+\vfill
+
+\setcounter{tocdepth}{2}   
+\thispagestyle{empty}
+\tableofcontents
+
+\vfill
+\cleardoublepage
+
+%\setcounter{section}{-1}
+
+%\include{Selbst}
+%\cleardoublepage
+\include{Grundlagen}
+\cleardoublepage
+\include{Trivial}
+\cleardoublepage
+\include{Einfach}
+\cleardoublepage
+\include{Schwerer}
+\cleardoublepage
+\include{Fehlend}
+\cleardoublepage
+\include{Rest}
+\cleardoublepage
+\include{Fehler}
+\cleardoublepage
+\include{Weiter}
+
+
+\appendix
+\setcounter{section}{11}
+\chead{Lösungen}
+\section{Lösungen}
+
+\input{GrundlagenL}
+\include{TrivialL}
+\include{EinfachL}
+\include{SchwererL}
+\include{FehlendL}
+\include{RestL}
+\include{FehlerL}
+\include{WeiterL}
+
+
+\end{document}
