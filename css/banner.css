@@ -5,6 +5,7 @@
 }
 .autor {
     color: rgb(75, 75, 75);
+    font-weight: 100;
 } 
 .text {
     color: var(--fg-header);
