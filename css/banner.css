@@ -1,21 +1,12 @@
-.banner {
-    width: 100%;
-    overflow: hidden;
-    background-color: transparent;
-    color: white;
-    white-space: nowrap;
-    box-sizing: border-box;
-    margin-bottom: 10px;
+.sdt {
+    color: var(--bg-header);
+    font-weight: 800;
+    font-size: larger;
 }
-
+.autor {
+    color: rgb(75, 75, 75);
+}
 .text {
-    display: inline-block;
     color: var(--fg-header);
-    padding-left: 100%;
-    animation: laufbanner 500ms linear infinite;
-}
-
-@keyframes laufbanner {
-    0%   { transform: translateX(100%); }
-    100% { transform: translateX(-100%); }
+    font-size: larger;
 }
