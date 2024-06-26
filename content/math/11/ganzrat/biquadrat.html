@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" initial-scale="1.0" />
+  <meta name="author" content="Sebastian Hitziger" />
+  <meta name="robot" content="noindex" />
+  <title>HITZ | Ganzrat. Fkt. | Biquadratische Gleichungen </title>
+  <link rel="stylesheet" type="text/css" href="/css/colors.css" />
+  <link rel="stylesheet" type="text/css" href="/css/gridNoTimeline.css" />
+  <link rel="stylesheet" type="text/css" href="/css/navbar.css" />
+  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="/css/courses.css" />
+  <script type="text/javascript" src="jquery-3.3.1.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="nav">
+      <input type="checkbox" id="nav-check" />
+      <div class="nav-header">
+        <div class="nav-title">
+          <a href="/">Hr. Hitzigers Unterricht</a>
+        </div>
+      </div>
+      <div class="nav-btn">
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+
+      <div class="nav-links">
+        <a href="/content/math/">Mathematik</a>
+        <a href="/content/math/11/">Klasse 11</a>
+        <a href="/content/math/11/ganzrat/">Ganzrationale Funktionen</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section>
+      <h2>Biquadratische Funktionen</h2>
+      <div class="ziele">
+        <p>
+          Nachfolgend soll geklärt werden, was biquadratische Funktionen sind und wie deren Nullstellen bestimmt werden.
+        </p>
+        <p>
+          <a href="#aufgaben">Direkt zu den Aufgaben</a>
+        </p>
+      </div>
+
+
+
+      <div class="theorie">
+
+        <div class="definition">
+          <h4>Biquadratische Funktionen</h4>
+          <p>
+            Funktionen der Form \(f(x)=ax^{2n}+bx^n+c\) heißen biquadratische Funktionen. In den meisten Fällen wird \(n=2\) sein, z.B. 
+            \(f(x)=2x^4-3x^2+4\)
+          </p>
+          <p>
+            Das heißt, der Exponent des ersten Summanden ist doppelt so groß, wie der des zweiten Summanden.		
+          </p>
+          <p>
+            Um Nullstellen solcher Funktionen zu bestimmen, geht man, wie folgt vor:
+            <h4>Vorgehen</h4>
+          Abhängig vom Grad gibt es verschiedene Vorgehensweisen:
+          <ol class="more-spacing">
+            <li>\(x^n\) durch, z.B., \(u\) substituiren (ersetzen)</li>
+            <li>Nullstellen der neu entstandenen quadratischen Funktion bestimmen</li>
+            <li>Lösungen rücksubstituieren</li>
+          </ol>
+          </p>
+        </div>
+        <h6>Beispiel:</h6>
+        <p>
+          Gegeben ist die Funktion \(f(x) = 2x^4-6x^2-8\)
+          <ol class="more-spacing">
+            <li>
+              Die Funktion ist vom Grad 4, das heißt, die Substitution sollte \({\color{green}x^2}={\color{orange}u}\) lauten.
+              Das heißt, jedes \(x^2\) wird durch \(u\) ersetzt:
+              \begin{align*}
+              f(x) &= 2x^4-6x^2-8 \\
+              f({\color{green}x})&=2({\color{green}x^2})^2-6{\color{green}x^2}-8 \\
+              f({\color{orange}u})&=2({\color{orange}u})^2-6{\color{orange}u}-8 \\
+              f(u)&=2u^2-6u-8
+              \end{align*}
+            </li>
+            <li>
+              Die Nullstellen dieser quadratischen Funktion werden nun auf bekanntem Wege, z.B. \(p\)-\(q\)-Formel, berechnet.
+              <p>
+                Hier:
+                \begin{align*}
+                  u_1&=-1 & u_2&=4
+                \end{align*}
+              </p>
+            </li>
+            <li>
+              Im Zuge der Rücksubstitution wird, in den Lösungen, \({\color{orange}u}\) wieder durch \({\color{green}x^2}\) ersetzt:
+              <ul>
+                <li>\(u_1=-1\):
+                  \begin{align*}
+                  {\color{orange}u}&=-1 \\
+                  {\color{green}x^2}&=-1\quad \Large\unicode{x21af}
+                  \end{align*}
+                  Da \(u_1\) negativ ist, gibt es darausfolgend keine Lösungen für \(x\) geben.
+                </li>
+                <li>\(u_2=4\):
+                  \begin{align*}
+                  {\color{orange}u}&=4 \\
+                  {\color{green}x^2}&=4\quad | \sqrt\ \\
+                  x_1&=2 \\
+                  x_2&=-2 
+                  \end{align*}
+                  Aus \(u_2=4\) folgen also zwei Nullstellen für \(x\)
+              </ul>
+            </li>
+          </ol>
+          Biquadratische Funktionen können also:
+          <ul>
+            <li>keine Nullstellen haben (beide Nullstellen \(u\) sind negativ),</li>
+            <li>eine Nullstelle haben (eine Nullstelle \(u\) ist negativ, die andere null),</li>
+            <li>zwei Nullstellen haben (eine Nullstelle \(u\) ist positiv, die andere negativ),</li>
+            <li>drei Nullstellen haben (eine Nullstelle \(u\) ist positiv, die andere null) oder</li>
+            <li>vier Nullstellen haben (beide Nullstellen \(u\) sind positiv).</li>
+          </ul>
+        </p>
+
+      </div>
+    </section>
+    <section>
+            <div class="videos"> 
+                <iframe width="360" height="202" src="https://www.youtube.com/embed/Y0Y4G-GKteI"
+                    title="Abstand Punkt - Punkt" frameborder="0" allow="web-share" allowfullscreen></iframe>
+
+            </div>
+        </section>
+    <section class="aufgaben" id="aufgaben">
+      <h3>Aufgaben zu Biquadratische Funktionen</h3>
+      <ol class="parens-around more-spacing">
+        <li>Löse im Buch <a href="#a1">Lösungen</a>
+          <ol type="i" class="parens-around more-spacing">
+            <li>Seite 60 Übung 8</li>
+            <li>Seite 64 Übung 19</li>
+          </ol>
+        </li>
+        <li>Übungen zur Wiederholung <a href="#a1">Lösungen</a>
+          <ol type="i" class="parens-around more-spacing">
+            <li>Seite 65 Übung 21</li>
+            <li>Seite 65 Übung 22</li>
+            <li>Seite 65 Übung 23</li>
+            <li>Seite 65 Übung 25</li>
+          </ol>
+        </li>
+        
+      </ol>
+
+
+
+    </section>
+
+    <section class="loesungen">
+      <h3>Lösungen zu Biquadratische Funktionen</h3>
+
+      <details id="a1">
+        <summary>Biquadratische Funktionen</summary>
+        <ol type="i" class="more-spacing" start="1">
+          <li>Seite 60 Übung 8
+            <ol class="custom-marker parens-around lower-alpha more-spacing">
+              <li>\(x_{1/2}=\pm 2\)</li>
+              <li>keine Nullstellen</li>
+              <li>\(x_{1/2}=\pm 1\), \(x_{3/4}=\pm 2\)</li>
+            </ol>
+            Verlauf: Geogebra
+          </li>
+        </ol>
+        <ol type="i" class="more-spacing" start="2">
+          <li>Seite 64 Übung 19
+            <ol class="custom-marker parens-around lower-alpha more-spacing">
+              <li>\(x_{1/2}=\pm 1\), \(x_{3/4}=\pm 2\)</li>
+              <li>\(x_{1/2}=\pm 2\)</li>
+              <li>keine Nullstellen</li>
+            </ol>
+            Verlauf: Geogebra
+          </li>
+        </ol>
+
+      </details>
+
+      <details id="a2">
+        <summary>Wiederholungsübungen</summary>
+        <ol type="i" class="more-spacing" start="1">
+          <li>Seite 65 Übung 21
+            <ol class="custom-marker parens-around lower-alpha more-spacing">
+              <li>\(f \rightarrow -\infty\) für \(x\rightarrow \pm \infty\)</li>
+              <li>\(f \rightarrow \mp\infty\) für \(x\rightarrow \pm \infty\)</li>
+              <li>\(f \rightarrow \infty\) für \(x\rightarrow \pm \infty\)</li>
+            </ol>
+            Zeichnungen: Geogebra
+          </li>
+        </ol>
+        <ol type="i" class="more-spacing" start="2">
+          <li>Seite 65 Übung 22
+            <ul class="custom-marker parens-around lower-alpha more-spacing">
+              <li>I &rarr; A</li>
+              <li>II &rarr; D</li>
+              <li>III &rarr; B</li>
+              <li>IV &rarr; F</li>
+              <li>V &rarr; E</li>
+              <li>VI &rarr; C</li>
+            </ul>
+          </li>
+        </ol>
+        <ol type="i" class="more-spacing" start="3">
+          <li>Seite 65 Übung 23
+            <p>
+              Linearfaktorzerlegung ist zu empfehlen, bei der ersten und letzten auch Scheitelpunktform
+            </p>
+            <ol class="custom-marker parens-around lower-alpha more-spacing">
+              <li>\(f(x)=x(x-1)=(x-\frac12)^2-\frac14=x^2-x\)</li>
+              <li>\(f(x)=x(x-1)(x+1)=x^3-x\)</li>
+              <li>\(f(x)=x^2(x-1)(x+1)=x^4-x^2\)</li>
+              <li>\(f(x)=x^3-1\)</li>
+            </ol>
+          </li>
+        </ol>
+        <ol type="i" class="more-spacing" start="4">
+          <li>Seite 65 Übung 25
+            <p>
+              Geogebra zur Kontrolle nutzen.
+            </p>
+
+          </li>
+        </ol>
+
+      </details>
+
+      
+
+
+
+    </section>
+
+    <section id="meme">
+      <div class="images">
+        <img src="/img/biquad_meme.webp" style="object-fit: scale-down; max-width: 300px" />
+      </div>
+      <div class="centered">
+        <a href="https://www.reddit.com/r/mathmemes/comments/ixmxxq/there_are_actually_multiple_cubic_and_quartic/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button">
+          <h6>Original von 12_Seimitones</h6>
+        </a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <a href="/misc/impressum.html">Impressum</a>
+    <div class="lastModified" align="center">
+      Zuletzt geändert:<br />
+      25. Juni 2024
+      <!-- <span id="lastModifiedDate"></span> -->
+    </div>
+    <a href="/misc/datenschutz.html">Datenschutz</a>
+  </footer>
+</body>
