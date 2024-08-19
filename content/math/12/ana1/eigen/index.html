@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" initial-scale=1.0 />
+  <meta name="author" content="Sebastian Hitziger" />
+  <meta name="robot" content="noindex" />
+  <title> HITZ | Funktionseigenschaften</title>
+  <link rel="stylesheet" type="text/css" href="/css/colors.css" />
+  <link rel="stylesheet" type="text/css" href="/css/grids.css" />
+  <link rel="stylesheet" type="text/css" href="/css/navbar.css" />
+  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="/css/timeline.css" />
+  <link rel="stylesheet" type="text/css" href="/css/courses.css" />
+  <script type="text/javascript" src="jquery-3.3.1.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="nav">
+      <input type="checkbox" id="nav-check">
+      <div class="nav-header">
+        <div class="nav-title">
+          <a href="/">Hr. Hitzigers Unterricht</a>
+        </div>
+      </div>
+      <div class="nav-btn">
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+
+      <div class="nav-links">
+        <a href="/content/math/">Mathematik</a>
+        <a href="/content/math/12/">Klasse 12</a>
+        <a href="/content/math/12/ana1/">Analysis I</a>
+        <!-- <a href="/content/phy/index.html">Physik</a> -->
+      </div>
+    </div>
+  </header>
+  <aside>
+    <div class="timeline-header" onclick="toggleTimelineVisibility()">
+      <h2>Zeitplanung</h2>
+    </div>
+    <div class="timeline"> <!-- future, next, past, final -->
+      <ul>
+        <li class="next">
+          <div class="date">September</div>
+          <div class="title">Wiederholung bekannter Funktionseigenschaften<br>
+          </div>
+        </li>
+       
+        
+        <!-- <li class="final">
+          <div class="date">26. Januar</div>
+          <div class="title">
+            &#x2022;
+            <b>
+              <dfn class="tooltip"> Test
+                <span role="tooltip">
+                  &#x2022; <a href="/content/math/11/statstoch/mehrstufig.html">Mehrstufige Zufallsversuche</a> <br>
+                  &#x2022; <a href="/content/math/11/statstoch/kombiverfahren.html">Kombinatorische Abzählverfahren</a> <br>
+                  &#x2022; <a href="/content/math/11/statstoch/faechermodell.html">Fächermodell</a>
+                </span>
+              </dfn>
+            </b>
+          </div>
+        </li> -->
+      </ul>
+    </div>
+  </aside>
+  <main>
+    <!-- <section class="teaser">
+            
+        </section> -->
+    <section>
+      <h2>Analysis I</h2>
+      <div class="ziele">
+        <h3>Lernziele</h3>
+        <p>
+          Am Ende des Abschnitts Funktionseigenschaften sollst du folgende Lernziele erreicht haben:
+        <ul>
+          <li>Funktionsarten erkennen,</li>
+          <li>Definitions- und Wertebereich bestimmen,</li>
+          <li>Symmetrie erkennen und rechnerisch prüfen und</li>
+          <li>Achsenschnittpunkte berechnen können.</li>
+        </ul>
+          Dazu werden unter Anderem folgende Fertigkeiten benötigt:
+          <ul>
+            <li>\(p\)-\(q\)-Formel anwenden,</li>
+            <li>Polynomdivision.</li>
+            <li>Logarithmen</li>
+          </ul> 
+        </p>
+      </div>
+      <div class="subject-container" > <!-- style="counter-reset: css-counter -1;" -->
+        <!-- <a href="/content/math/11/ganzrat/wissensstand.html">
+          <div class="subject">
+
+            <img />
+            <h4>Was kann ich schon?</h4>
+
+          </div>
+        </a> -->
+        <a href="/content/math/12/ana1/eigen/wdhlEigenschaften.html">
+          <div class="subject">
+
+            <img />
+            <h4>Wiederholung Eigenschaften</h4>
+
+          </div>
+        </a>
+
+        
+
+        <a href="#">
+          <div class="subject">
+
+            <img />
+            <h4> ... </h4>
+
+          </div>
+        </a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <a href="/misc/impressum.html">Impressum</a>
+    <div class="lastModified" align="center">
+      Zuletzt geändert:<br>
+      19. August 2024
+      <!-- <span id="lastModifiedDate"></span> -->
+    </div>
+    <a href="/misc/datenschutz.html">Datenschutz</a>
+  </footer>
+
+  <!-- <script src="/js/lastModified.js"></script> -->
+  <script src="/js/toggleTimelineVisibility.js"></script>
+</body>
