@@ -1,6 +1,6 @@
 const point1 = { x: -6, y: 2.6 };
 const point2 = { x: 4, y: -3.4 }; // Startposition des zweiten Punktes
-const point2bak = point2;
+const point2bak = { x: 4, y: -3.4 };
 
 const svgPoint2 = document.getElementById('point2');
 const connectingLine = document.getElementById('connectingLine');

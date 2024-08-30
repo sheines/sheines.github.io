@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" initial-scale="1.0" />
+  <meta name="author" content="Sebastian Hitziger" />
+  <meta name="robot" content="noindex" />
+  <title>HITZ | Fkt-Eigensch. | Definitionsbereich I </title>
+  <link rel="stylesheet" type="text/css" href="/css/colors.css" />
+  <link rel="stylesheet" type="text/css" href="/css/gridNoTimeline.css" />
+  <link rel="stylesheet" type="text/css" href="/css/navbar.css" />
+  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="/css/courses.css" />
+  <script type="text/javascript" src="jquery-3.3.1.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="nav">
+      <input type="checkbox" id="nav-check" />
+      <div class="nav-header">
+        <div class="nav-title">
+          <a href="/">Hr. Hitzigers Unterricht</a>
+        </div>
+      </div>
+      <div class="nav-btn">
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+
+      <div class="nav-links">
+        <a href="/content/math/">Mathematik</a>
+        <a href="/content/math/12/">Klasse 12</a>
+        <a href="/content/math/12/ana1/">Analysis I</a>
+        <a href="/content/math/12/ana1/eigen/">Funktionseigenschaften</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section>
+      <h2>Definitionensbereich I</h2>
+      <div class="ziele">
+        <p>
+          Nachfolgend soll erklärt werden, was der definitionsbereich einer Funktion ist und wie dieser für einfache 
+          Funktionen bestimmt wird.
+        </p>
+        <p>
+          <a href="#aufgaben">Direkt zu den Aufgaben</a>
+        </p>
+      </div>
+
+
+
+      <div class="theorie">
+
+        <div class="definition">
+          <h4>Definitionensbereich</h4>
+          <p>
+            Der Definitionsbereich gibt an, für welche Zahlen eine Funktion definiert ist, sprich, welche Zahlen 
+            für \(x\) eingesetzt werden dürfen.
+            <p>
+              Ohne Angabe darf immer davon ausgegangen werden, dass alle reellen Zahlen erlaubt sind (\(D:x\in\mathbb R\)).
+            </p>
+          <h5>Was geht nicht?</h5>
+          <p>
+            Für die Untersuchung des maximalen Definitionsbereiches gibt es nur drei Todsünden:
+          </p>
+            <ul class="custom-marker more-spacing">
+              <li>Es darf nicht durch null geteilt werden.</li>
+              <li>Der Radikant von Wurzelfunktionen darf nicht negativ sein.</li>
+              <li>Der Numerus eines Logarithmus darf weder negativ noch null sein.</li>
+            </ul>
+            Die Zahl null ist dabei weder positiv noch negativ.
+          </p>
+          <div class="images">
+            <div class="funktionsbundle">
+                <a href="svg/def_pot.svg" target="_blank" rel="noopener noreferrer">
+                    <img src="svg/def_pot.svg" height="270px">
+                </a>
+                <a href="svg/def_frac.svg" target="_blank" rel="noopener noreferrer">
+                  <img src="svg/def_frac.svg" height="270px">
+              </a>
+              <a href="svg/def_sqrt.svg" target="_blank" rel="noopener noreferrer">
+                <img src="svg/def_sqrt.svg" height="270px">
+            </a>
+            <a href="svg/def_log.svg" target="_blank" rel="noopener noreferrer">
+              <img src="svg/def_log.svg" height="270px">
+          </a>
+            </div>
+          </div>
+                    
+
+        </div>
+        <h6>Beispiel 1:</h6>
+      </div>
+    </section>
+    <!-- <section>
+            <div class="videos">
+                <iframe width="360" height="202" src="https://www.youtube.com/embed/19goPRnthCE"
+                    title="Abstand Punkt - Punkt" frameborder="0" allow="web-share" allowfullscreen></iframe>
+
+            </div>
+        </section> -->
+    <section class="aufgaben" id="aufgaben">
+      <h3>Aufgaben zum Definitionensbereich</h3>
+      <ol class="custom-marker point-after decimal">
+        <li>Bestimme für die folgenden Standardfunktionen den maximalen Definitionsbereich durch Ablesen oder Rechnen!<a href="#a1">Lösungen</a>
+          <p>
+            Die Nutzung von <a href="https://geogebra.org/calculator" target="_blank" rel="noopener noreferrer">Geogebra</a> ist empfohlen.
+          </p>
+          <ol class="custom-marker parens-around lower-alpha more-spacing">
+            <li>Konstante Funktion: \(f(x)=a\)</li>
+            <li>Lineare Funktion: \(f(x)=x\)</li>
+            <li>Quadratische Funktion: \(f(x)=x^2\)</li>
+            <li>Potenzfunktion I: \(f(x)=x^n\), \(n\) ungerade</li>
+            <li>Potenzfunktion II: \(f(x)=x^n\), \(n\) gerade</li>
+            <li>Potenzfunktion III: \(f(x)=\frac1{x^n}\), \(n\) ungerade</li>
+            <li>Potenzfunktion IV: \(f(x)=\frac1{x^n}\), \(n\) gerade</li>
+            <li>Wurzelfunktion: \(f(x)=\sqrt{x}\)</li>
+            <li>Betragsfunktion: \(f(x)=|x|\)</li>
+            <li>Exponentialfunktion: \(f(x)=a^x\)</li>
+            <li>Logarithmusfunktion: \(f(x)=\log_a x\)</li>
+            <li>Sinusfunktion: \(f(x)=\sin x\)</li>
+            <li>Cosinusfunktion: \(f(x)=\cos x\)</li>
+            <li>Signumsfunktion: \(f(x)=\text{sgn}\,x\)</li>
+          </ol>
+          All diese Funktionstypen können beliebig miteinander kombiniert werden (nicht Teil der Aufgabe):
+          \begin{align*}
+          f(x)=\sqrt{\frac{\log_3(4(\sin(2^x))^2)}{\left|\text{sgn} \left(5x\cdot 6^{^{\frac{\frac{\sin\left(2^x-5x\right)}{x^2-5x+7}+\tan (x^8)}{\log_2 (4x-2)}}}\right)\right|^{4x-\log_7\left(\cos (3x^5-6)\right)}}}-1
+          \end{align*}
+        </li>
+        
+      </ol>
+
+
+
+    </section>
+
+    <section class="loesungen">
+      <h3>Lösungen zu Funktionseigenschaften</h3>
+
+      Werden im Unterricht besprochen.
+
+      <!-- <details id="a1">
+        <summary>Nullstellen</summary>
+
+        <ol type="i" class="more-spacing">
+
+        </ol>
+      </details> -->
+
+      
+
+
+
+    </section>
+
+    <section id="meme">
+      <div class="images">
+        <img src="/img/fktprop_meme.webp" style="object-fit: scale-down; max-width: 300px" />
+      </div>
+      <div class="centered">
+        <a href="https://b2831176.smushcdn.com/2831176/wp-content/uploads/real-estate-memes-14.jpeg?lossy=2&strip=1&webp=1" target="_blank" rel="noopener noreferrer">
+          <h6>Original von Aarin Chung</h6>
+        </a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <a href="/misc/impressum.html">Impressum</a>
+    <div class="lastModified" align="center">
+      Zuletzt geändert:<br />
+      30. August 2024
+      <!-- <span id="lastModifiedDate"></span> -->
+    </div>
+    <a href="/misc/datenschutz.html">Datenschutz</a>
+  </footer>
+</body>
