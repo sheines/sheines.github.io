@@ -97,6 +97,28 @@
 
         </div>
         <h6>Beispiel 1:</h6>
+        <p>
+          Es soll der Definitionsbereicht der Funktion \(f(x)=\frac{12}{3x+12}\) bestimmt werden.
+          <ul class="custom-marker more-spacing">
+            <li>Bei der Funktion handelt es sich um eine gebrochenrationale Funktion. Das heißt, der Nenner darf
+              nicht null werden.
+            </li>
+            <li>Es muss <i>ausschließlich</i> der Nenner (\(\color{red}3x+12\)) betrachtet werden.</li>
+            <li>Ungleichung aufstellen und lösen:
+              \begin{align*}
+                {\color{red}3x+12}&\neq 0 \qquad | -12 \\
+                3x &\neq -12\,\ \ | : 3 \\
+                x &\neq \color{green}-4
+              \end{align*}
+            </li>
+            <li>Das heißt, die Funktion \(f(x)=\frac{12}{3x+12}\) ist für alle reellen Zahlen außer 
+              \(\color{green}-4\) definiert:
+            \begin{align*}
+              D: x\in \mathbb R, x\neq\color{green} -4
+            \end{align*}
+          </li>
+          </ul>
+        </p>
       </div>
     </section>
     <!-- <section>
@@ -113,22 +135,26 @@
           <p>
             Die Nutzung von <a href="https://geogebra.org/calculator" target="_blank" rel="noopener noreferrer">Geogebra</a> ist empfohlen.
           </p>
-          <ol class="custom-marker parens-around lower-alpha more-spacing">
-            <li>Konstante Funktion: \(f(x)=a\)</li>
-            <li>Lineare Funktion: \(f(x)=x\)</li>
-            <li>Quadratische Funktion: \(f(x)=x^2\)</li>
-            <li>Potenzfunktion I: \(f(x)=x^n\), \(n\) ungerade</li>
-            <li>Potenzfunktion II: \(f(x)=x^n\), \(n\) gerade</li>
-            <li>Potenzfunktion III: \(f(x)=\frac1{x^n}\), \(n\) ungerade</li>
-            <li>Potenzfunktion IV: \(f(x)=\frac1{x^n}\), \(n\) gerade</li>
-            <li>Wurzelfunktion: \(f(x)=\sqrt{x}\)</li>
-            <li>Betragsfunktion: \(f(x)=|x|\)</li>
-            <li>Exponentialfunktion: \(f(x)=a^x\)</li>
-            <li>Logarithmusfunktion: \(f(x)=\log_a x\)</li>
-            <li>Sinusfunktion: \(f(x)=\sin x\)</li>
-            <li>Cosinusfunktion: \(f(x)=\cos x\)</li>
-            <li>Signumsfunktion: \(f(x)=\text{sgn}\,x\)</li>
-          </ol>
+          <details class="openClose" style="border-color: lightblue; margin-top: 10px;">
+            <summary class="nonumber" data-open="Funktionen einklappen" data-close="Funktionen ausklappen">
+            </summary>
+              <ol class="custom-marker parens-around lower-alpha more-spacing">
+                <li>Konstante Funktion: \(f(x)=a\)</li>
+                <li>Lineare Funktion: \(f(x)=x\)</li>
+                <li>Quadratische Funktion: \(f(x)=x^2\)</li>
+                <li>Potenzfunktion I: \(f(x)=x^n\), \(n\) ungerade</li>
+                <li>Potenzfunktion II: \(f(x)=x^n\), \(n\) gerade</li>
+                <li>Potenzfunktion III: \(f(x)=\frac1{x^n}\), \(n\) ungerade</li>
+                <li>Potenzfunktion IV: \(f(x)=\frac1{x^n}\), \(n\) gerade</li>
+                <li>Wurzelfunktion: \(f(x)=\sqrt{x}\)</li>
+                <li>Betragsfunktion: \(f(x)=|x|\)</li>
+                <li>Exponentialfunktion: \(f(x)=a^x\)</li>
+                <li>Logarithmusfunktion: \(f(x)=\log_a x\)</li>
+                <li>Sinusfunktion: \(f(x)=\sin x\)</li>
+                <li>Cosinusfunktion: \(f(x)=\cos x\)</li>
+                <li>Signumsfunktion: \(f(x)=\text{sgn}\,x\)</li>
+              </ol>
+          </details>
           All diese Funktionstypen können beliebig miteinander kombiniert werden (nicht Teil der Aufgabe):
           \begin{align*}
           f(x)=\sqrt{\frac{\log_3(4(\sin(2^x))^2)}{\left|\text{sgn} \left(5x\cdot 6^{^{\frac{\frac{\sin\left(2^x-5x\right)}{x^2-5x+7}+\tan (x^8)}{\log_2 (4x-2)}}}\right)\right|^{4x-\log_7\left(\cos (3x^5-6)\right)}}}-1
@@ -175,7 +201,7 @@
     <a href="/misc/impressum.html">Impressum</a>
     <div class="lastModified" align="center">
       Zuletzt geändert:<br />
-      30. August 2024
+      4. September 2024
       <!-- <span id="lastModifiedDate"></span> -->
     </div>
     <a href="/misc/datenschutz.html">Datenschutz</a>
