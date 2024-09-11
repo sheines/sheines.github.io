@@ -114,7 +114,65 @@
             <li>Das heißt, die Funktion \(f(x)=\frac{12}{3x+12}\) ist für alle reellen Zahlen außer 
               \(\color{green}-4\) definiert:
             \begin{align*}
-              D: x\in \mathbb R, x\neq\color{green} -4
+              D=\left\{x\in \mathbb R\,|\,  x\neq\color{green} -4 \right\}
+            \end{align*}
+          </li>
+          </ul>
+        </p>
+
+        <h6>Beispiel 2:</h6>
+        <p>
+          Es soll der Definitionsbereicht der Funktion \(f(x)=\sqrt{-4x+8}\) bestimmt werden.
+          <ul class="custom-marker more-spacing">
+            <li>Bei der Funktion handelt es sich um eine Wurzelfunktion. Das heißt, der Radikant darf
+              nicht negativ werden.
+            </li>
+            <li>Es muss <i>ausschließlich</i> der Radikant (\(\color{red}-4x+8\)) betrachtet werden.</li>
+            <li>Ungleichung aufstellen und lösen:
+              \begin{align*}
+                {\color{red}-4x+8}&\geq 0 \qquad | +8 \\
+                -4x &\geq 8\,\ \ | : (-4) \\
+                x &\leq \color{green}-2
+              \end{align*}
+            </li>
+            <li>Das heißt, die Funktion \(f(x)=\sqrt{-4x+8}\) ist für alle reellen Zahlen mit
+              \(x\leq\color{green}-2\) definiert:
+            \begin{align*}
+              D=\left\{x\in \mathbb R\,|\,  x\leq\color{green} -2 \right\}
+            \end{align*}
+          </li>
+          </ul>
+        </p>
+        <h6>Beispiel 3:</h6>
+        <p> Der Vollständigkeit halber:
+        </p>
+        <p> Es soll der Definitionsbereicht der Funktion \(f(x)=\log_8\left(x^2-9\right)\) bestimmt werden.
+          <ul class="custom-marker more-spacing">
+            <li>Bei der Funktion handelt es sich um eine Logarithmusfunktion. Das heißt, der Numerus muss größer als null sein.
+            </li>
+            <li>Es muss <i>ausschließlich</i> der Numerus (\(\color{red}x^2-9\)) betrachtet werden.</li>
+            <li>Ungleichung aufstellen und lösen:
+              \begin{align*}
+                {\color{red}x^2-9}&>0 \qquad | +9 \\
+                x^2 &> 9\,\ \ | \sqrt{\ } \\
+                x &\gtrless \color{green}\pm3
+              \end{align*}
+            </li>
+            <li>
+              Nun stellt sich die Frage: ist der Bereich zwischen \(-3\) und \(+3\) gemeint, oder Bereich außerhalb der Zahlen?
+              <p>
+                Dazu muss man sich den Verlauf von \(\color{red}x^2-9\) ansehen:
+                <ul>
+                  <li>Nach oben geöffnete Parabel,</li>
+                  <li>Der Bereich zwischen den Nullstellen \(\color{green}\pm3\) ist negativ,</li>
+                  <li>Der Bereich außerhalb der Nullstellen ist positiv.</li>
+                </ul>
+              </p>
+            </li>
+            <li>Das heißt, die Funktion \(f(x)=\log_8\left(x^2-9\right)\) ist für alle reellen Zahlen mit
+              \(x<\color{green}-3\) und \(x>\color{green}+3\) definiert:
+            \begin{align*}
+              D=\left\{ x\in \mathbb R\,|\, x<{\color{green} -3}\ \wedge\ x >{\color{green} 3} \right\}
             \end{align*}
           </li>
           </ul>
@@ -122,7 +180,8 @@
       </div>
     </section>
     <section>
-            <div class="videos"> 
+            
+            <div class="videos" style="margin-bottom: 15px;"> 
                 <iframe width="360" height="202" src="https://www.youtube.com/embed/MoYOfFcK3m4"
                     title="Definitionensbereich - Rationale Funktion" frameborder="0" allow="web-share" allowfullscreen></iframe>
 
@@ -132,11 +191,12 @@
                 <iframe width="360" height="202" src="https://www.youtube.com/embed/C2r-wUBAI50"
                     title="Definitionensbereich - Logarithmusfunktion" frameborder="0" allow="web-share" allowfullscreen></iframe>
             </div>
+            Die finale Schreibweise der Definitionsmengen in den Videos ist leicht falsch.
         </section>
     <section class="aufgaben" id="aufgaben">
       <h3>Aufgaben zum Definitionensbereich</h3>
       <ol class="custom-marker point-after decimal">
-        <li>Bestimme für die folgenden Standardfunktionen den maximalen Definitionsbereich durch Ablesen oder Rechnen!<a href="#a1">Lösungen</a>
+        <li>Bestimme für die folgenden Standardfunktionen den maximalen Definitionsbereich durch Ablesen oder Rechnen! <a href="#a1">Lösungen</a>
           <p>
             Die Nutzung von <a href="https://geogebra.org/calculator" target="_blank" rel="noopener noreferrer">Geogebra</a> ist empfohlen.
           </p>
@@ -165,7 +225,7 @@
           f(x)=\sqrt{\frac{\log_3(4(\sin(2^x))^2)}{\left|\text{sgn} \left(5x\cdot 6^{^{\frac{\frac{\sin\left(2^x-5x\right)}{x^2-5x+7}+\tan (x^8)}{\log_2 (4x-2)}}}\right)\right|^{4x-\log_7\left(\cos (3x^5-6)\right)}}}-1
           \end{align*}
         </li>
-        
+        <li>Buch, Seite 44 Nummer 3 <a href="#a1">Lösungen</a></li>
       </ol>
 
 
@@ -193,11 +253,11 @@
 
     <section id="meme">
       <div class="images">
-        <img src="/img/fktprop_meme.webp" style="object-fit: scale-down; max-width: 300px" />
+        <img src="/img/domain_meme.jpg" style="object-fit: scale-down; max-width: 300px" />
       </div>
       <div class="centered">
-        <a href="https://b2831176.smushcdn.com/2831176/wp-content/uploads/real-estate-memes-14.jpeg?lossy=2&strip=1&webp=1" target="_blank" rel="noopener noreferrer">
-          <h6>Original von Aarin Chung</h6>
+        <a href="https://www.reddit.com/r/mathmemes/comments/1df0dp2/domain_of_a_function_meme/#lightbox" target="_blank" rel="noopener noreferrer">
+          <h6>Original von Delicious_Maize9656 </h6>
         </a>
       </div>
     </section>
@@ -206,7 +266,7 @@
     <a href="/misc/impressum.html">Impressum</a>
     <div class="lastModified" align="center">
       Zuletzt geändert:<br />
-      4. September 2024
+      11. September 2024
       <!-- <span id="lastModifiedDate"></span> -->
     </div>
     <a href="/misc/datenschutz.html">Datenschutz</a>
