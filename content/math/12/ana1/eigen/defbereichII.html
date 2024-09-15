@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" initial-scale="1.0" />
+  <meta name="author" content="Sebastian Hitziger" />
+  <meta name="robot" content="noindex" />
+  <title>HITZ | Fkt-Eigensch. | Definitionsbereich II </title>
+  <link rel="stylesheet" type="text/css" href="/css/colors.css" />
+  <link rel="stylesheet" type="text/css" href="/css/gridNoTimeline.css" />
+  <link rel="stylesheet" type="text/css" href="/css/navbar.css" />
+  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="/css/courses.css" />
+  <script type="text/javascript" src="jquery-3.3.1.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="nav">
+      <input type="checkbox" id="nav-check" />
+      <div class="nav-header">
+        <div class="nav-title">
+          <a href="/">Hr. Hitzigers Unterricht</a>
+        </div>
+      </div>
+      <div class="nav-btn">
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+
+      <div class="nav-links">
+        <a href="/content/math/">Mathematik</a>
+        <a href="/content/math/12/">Klasse 12</a>
+        <a href="/content/math/12/ana1/">Analysis I</a>
+        <a href="/content/math/12/ana1/eigen/">Funktionseigenschaften</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section>
+      <h2>Definitionsbereich II</h2>
+      <div class="ziele">
+        <p>
+          Nachfolgend soll erklärt werden, was der Definitionsbereich einer Funktion ist und wie dieser für einfache
+          Funktionen bestimmt wird. Außerdem wird auch auf den Wertebereich eingegangen.
+        </p>
+        <p>
+          <a href="#aufgaben">Direkt zu den Aufgaben</a>
+        </p>
+      </div>
+
+
+
+      <div class="theorie">
+
+        <div class="definition">
+          <h4>Definitionsbereich verschachtelter Funktionen</h4>
+          <p>
+            Ist eine Funktion verschachtelt, z.B. \(f(x)=\sin\left(3x^2-\sqrt{3^{x-5}}\right)\), so muss jeder 
+            Bereich für sich betrachtet werden. 
+          <p>
+            Wichtig ist hierbei, dass der Wertebereich der inneren Funktion, z.B. \(x-5\) zum Definitionsbereich der 
+            äußeren Funktion, z.B. \(3^{x-5}\) wird. Dies kann natürlich beliebig geschachtelt werden.
+          </p>
+          <h5 style="color: var(--fg-header);">Wertebereiche der Funktionstypen</h5>
+          <ul class="custom-marker more-spacing">
+            <li>Potenzfunktionen...
+              <ul>
+                <li>... mit geradem Exponenten: \(W=\{y\in\mathbb R \,|\, y \geq 0\}\)</li>
+                <li>... mit ungeradem Exponenten: \(W=\{y\in\mathbb R\}\)</li>
+                <li>... mit negativen Exponenten gilt zusätzlich: \(y \neq 0\)</li>
+              </ul>
+            </li>
+            <li>Wurzelfunktionen: \(W=\{y\in\mathbb R \,|\, y \geq 0\}\) </li>
+            <li>Exponentialfunktion: \(W=\{y\in\mathbb R \,|\, y > 0\}\)</li>
+            <li>Logarithmusfunktion: \(W=\{y\in\mathbb R\}\)</li>
+            <li>Sinus- und Cosinusfunktion: \(W=\{y\in\mathbb R \,|\, -1\leq y\leq 1\}\)</li>
+            <li>Betragsfunktion: \(W=\{y\in\mathbb R \,|\, y \geq 0\}\)</li>
+            <li>Signumsfunktion: \(W=\{-1; 0; 1\} \)</li>
+          </ul>
+          </p>
+          <!-- <div class="images">
+            <div class="funktionsbundle">
+              <a href="svg/def_pot.svg" target="_blank" rel="noopener noreferrer">
+                <img src="svg/def_pot.svg" height="270px">
+              </a>
+              <a href="svg/def_frac.svg" target="_blank" rel="noopener noreferrer">
+                <img src="svg/def_frac.svg" height="270px">
+              </a>
+              <a href="svg/def_sqrt.svg" target="_blank" rel="noopener noreferrer">
+                <img src="svg/def_sqrt.svg" height="270px">
+              </a>
+              <a href="svg/def_log.svg" target="_blank" rel="noopener noreferrer">
+                <img src="svg/def_log.svg" height="270px">
+              </a>
+            </div>
+          </div> -->
+
+
+        </div>
+        <h6>Beispiel Definitionsbereich:</h6>
+        <p>
+          Es soll der Definitionsbereicht der Funktion \(f(x)=\sin\left(3x^2-\sqrt{3^{x-5}}\right)\) bestimmt werden.
+        <ul class="custom-marker more-spacing">
+          <li>Weiterhin wird nur geschaut, ob es einen Nenner, eine Wurzel oder einen Logarithmus gibt. 
+            Alle anderen Funktionsteile sind weiterhin irrelevant (für die Definitionensbereichsbestimmung). 
+          </li>
+          <li>
+            Die Funktion enthält eine Wurzel. Das heißt, der Radikant, hier \(\color{green}3^{x-5}\) muss größer oder gleich
+            null sein:
+            \begin{align*}
+              {\color{green}3^{x-5}}\geq 0
+            \end{align*}
+          </li>
+          <li>
+            Diese Ungleichung müsste nun hier gelöst werden. Es ist jedoch bekannt, dass die Exponentialfunktion
+            nur positive Werte (\(W=\{y\in\mathbb R \,|\, y > 0\}\)) ergibt. Das heißt, die Gleichung ist für jedes 
+            \(x\) erfüllt, weshalb der Definitionsbereich bei \(D=\{x\in\mathbb R\}\) verbleibt.
+          </li>
+          
+        </ul>
+        </p>
+        <h6>Beispiel Wertebereich:</h6>
+        <p>
+          Es soll der Wertebereich der Funktion \(f(x)=\sin\left(3x^2-\sqrt{3^{x-5}}\right)\) bestimmt werden.
+        <ul class="custom-marker more-spacing">
+          <li>Es ist eine verschachtelte Funktion: man könnte sie, wie folgt, zerlegen: 
+            <ul>
+              <li>\(f(a)=\sin(a)\)</li>
+              <li>\(a(b,c)=b-c\)</li>
+              <li>\(b(x)=3x^2\)</li>
+              <li>\(c(d)=\sqrt{d}\)</li>
+              <li>\(d(e)=d^e\)</li>
+              <li>\(e(x)=x-5\)</li>
+            </ul>
+          </li>
+          <li>Nun könnte man die Funktionen von innen, also unten, nach außen durchgehen:
+            <ul>
+              <li>\(e(x)=x-5\):
+                <ul>
+                  <li>\(D=\{x\in\mathbb R\}\)</li>
+                  <li>\(W=\{{\color{green}y\in\mathbb R}\}\)</li>
+                </ul>
+              </li>
+              <li>\(d(e)=d^e\):
+                <ul>
+                  <li>\(D=\{{\color{green}x\in\mathbb R}\}\)</li>
+                  <li>\(W=\{{\color{orange}y\in\mathbb R \,|\, y>0}\}\)</li>
+                </ul>
+              </li>
+              <li>\(c(d)=\sqrt{d}\):
+                <ul>
+                  <li>\(D=\{{\color{orange}x\in\mathbb R \,|\, x>0}\}\)</li>
+                  <li>\(W=\{{\color{cyan}y\in\mathbb R \,|\, y>0}\}\)</li>
+                </ul>
+                Da nur Zahlen größer 0 rein gehen, muss der Definitionsbereich nicht eingeschränkt werden 
+                und es kommen auch nur Zahlen größer null heraus.
+              </li>
+              <li>\(b(x)=3x^2\):
+                <ul>
+                  <li>\(D=\{x\in\mathbb R\}\)</li>
+                  <li>\(W=\{{\color{magenta}y\in\mathbb R \,|\,y \geq 0}\}\)</li>
+                </ul>
+              </li>
+              <li>\(a(b,c)=b-c\):
+                <ul>
+                  <li>\(D_b=\{{\color{magenta}x\in\mathbb R \,|\,x \geq 0}\}\) und \(D_c=\{{\color{cyan}x\in\mathbb R \,|\,x > 0}\}\)</li>
+                  <li>\(W=\{{\color{red}y\in\mathbb R}\}\)</li>
+                </ul>
+                Weil Positiv minus Positiv auch negativ sein kann, besteht der Wertebereich wieder aus allen reellen Zahlen.
+              </li>
+              <li>\(f(a)=\sin(a)\)
+                <ul>
+                  <li>\(D=\{{\color{red}x\in\mathbb R}\}\)</li>
+                  <li>\(W=\{{\color{pink}y\in\mathbb R \,|\,-1\leq y\leq 1}\}\)</li>
+                </ul>
+              </li>
+            </ul>
+            Der Wertebereich der Funktion \(f(x)=\sin\left(3x^2-\sqrt{3^{x-5}}\right)\) besteht also aus allen reellen
+            Zahlen im Bereich von \(-1\) bis \(1\).
+          </li>
+        </ul>
+        </p>
+      </div>
+        
+    </section>
+    <section>
+
+      <div class="videos" style="margin-bottom: 15px;">
+        <iframe width="360" height="202" src="https://www.youtube.com/embed/Vxgz3azUaU8"
+          title="Definitionensbereich - verschachtelte Funktion" frameborder="0" allow="web-share" allowfullscreen></iframe>
+      </div>
+      Die finale Schreibweise der Definitionsmengen in dem Video ist leicht falsch.
+    </section>
+    <section class="aufgaben" id="aufgaben">
+      <h3>Aufgaben zum Definitionsbereich</h3>
+      <ol class="custom-marker point-after decimal">
+        <li>Bestimme für die folgenden Standardfunktionen den maximalen Wertebereich durch Ablesen oder Rechnen!
+          <a href="#a1">Lösungen</a>
+          <p>
+            Die Nutzung von <a href="https://geogebra.org/calculator" target="_blank"
+              rel="noopener noreferrer">Geogebra</a> ist empfohlen.
+          </p>
+          <details class="openClose" style="border-color: lightblue; margin-top: 10px;">
+            <summary class="nonumber" data-open="Funktionen einklappen" data-close="Funktionen ausklappen">
+            </summary>
+            <ol class="custom-marker parens-around lower-alpha more-spacing">
+              <li>Konstante Funktion: \(f(x)=a\)</li>
+              <li>Lineare Funktion: \(f(x)=x\)</li>
+              <li>Quadratische Funktion: \(f(x)=x^2\)</li>
+              <li>Potenzfunktion I: \(f(x)=x^n\), \(n\) ungerade</li>
+              <li>Potenzfunktion II: \(f(x)=x^n\), \(n\) gerade</li>
+              <li>Potenzfunktion III: \(f(x)=\frac1{x^n}\), \(n\) ungerade</li>
+              <li>Potenzfunktion IV: \(f(x)=\frac1{x^n}\), \(n\) gerade</li>
+              <li>Wurzelfunktion: \(f(x)=\sqrt{x}\)</li>
+              <li>Betragsfunktion: \(f(x)=|x|\)</li>
+              <li>Exponentialfunktion: \(f(x)=a^x\)</li>
+              <li>Logarithmusfunktion: \(f(x)=\log_a x\)</li>
+              <li>Sinusfunktion: \(f(x)=\sin x\)</li>
+              <li>Cosinusfunktion: \(f(x)=\cos x\)</li>
+              <li>Signumsfunktion: \(f(x)=\text{sgn}\,x\)</li>
+            </ol>
+          </details>
+        </li>
+        <li>Bestimme für die folgenden Funktionen den maximalen Definitionsbereich! <a href="#a2">Lösungen</a>
+          <details class="openClose" style="border-color: lightblue; margin-top: 10px;">
+            <summary class="nonumber" data-open="Funktionen einklappen" data-close="Funktionen ausklappen">
+            </summary>
+            <ol class="custom-marker parens-around lower-alpha more-spacing">
+              <li>\(a(x)=4x-2\)</li>
+              <li>\(b(x)=2x^2-5x+2\)</li>
+              <li>\(c(x)=x^2+x^{-2}\)</li>
+              <li>\(d(x)=4+3^x\)</li>
+              <li>\(e(x)=\left(x^2-4\right)^{-1}\)</li>
+              <li>\(f(x)=\sqrt{2^x}\)</li>
+              <li>\(g(x)=2^{^{\sqrt{x}}}\)</li>
+              <li>\(h(x)=\sqrt{2x-3}\)</li>
+              <li>\(i(x)=\frac{2x+1}{x-1}\)</li>
+              <li>\(j(x)=\frac1{2^x}\)</li>
+              <li>\(k(x)=1+\sqrt{x+1}\)</li>
+              <li>\(l(x)=\sqrt{4-x^2}\)</li>
+              <li>\(m(x)=2^{^{\sin\left(\frac{1}{(4x+1)^2+1}\right)}}\)</li>
+            </ol>
+          </details>
+         </li>
+      </ol>
+
+
+
+    </section>
+
+    <section class="loesungen">
+      <h3>Lösungen zu Funktionseigenschaften</h3>
+
+      <details id="a1">
+        <summary>Standardfunktionen</summary>
+
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>Konstante Funktion: \(W=\{a \}\)</li>
+          <li>Lineare Funktion: \(W=\{y\in\mathbb R \}\)</li>
+          <li>Quadratische Funktion: \(W=\{y\in\mathbb R \,|\, y \geq 0 \}\)</li>
+          <li>Potenzfunktion I: \(W=\{y\in\mathbb R \}\)</li>
+          <li>Potenzfunktion II: \(W=\{y\in\mathbb R \,|\, y \geq 0 \}\)</li>
+          <li>Potenzfunktion III: \(W=\{y\in\mathbb R\,|\, y\neq 0 \}\)</li>
+          <li>Potenzfunktion IV: \(W=\{y\in\mathbb R\,|\, y> 0 \}\)</li>
+          <li>Wurzelfunktion: \(W=\{y\in\mathbb R\,|\, y\geq 0 \}\)</li>
+          <li>Betragsfunktion: \(W=\{y\in\mathbb R\,|\, y\geq 0 \}\)</li>
+          <li>Exponentialfunktion: \(W=\{y\in\mathbb R\,|\, y> 0 \}\)</li>
+          <li>Logarithmusfunktion: \(W=\{y\in\mathbb R \}\)</li>
+          <li>Sinusfunktion: \(W=\{y\in\mathbb R \,|\, -1 \leq y\leq 1 \}\)</li>
+          <li>Cosinusfunktion: \(W=\{y\in\mathbb R\,|\, -1 \leq y\leq 1 \} \}\)</li>
+          <li>Signumsfunktion: \(W=\{-1; 0; 1 \}\)</li>
+        </ol>
+      </details>
+
+      <details id="a2">
+        <summary>Komplexere Funktionen</summary>
+
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>\(D=\{x\in\mathbb R \}\)</li>
+          <li>\(D=\{x\in\mathbb R \}\)</li>
+          <li>\(D=\{x\in\mathbb R\,|\, x\neq 0 \}\)</li>
+          <li>\(D=\{x\in\mathbb R \}\)</li>
+          <li>\(D=\{x\in\mathbb R\,|\, x\neq -2 \wedge x \neq 2 \}\)</li>
+          <li>\(D=\{x\in\mathbb R \}\)</li>
+          <li>\(D=\{x\in\mathbb R\,|\, x\geq 0 \}\)</li>
+          <li>\(D=\{x\in\mathbb R\,|\, x\geq \frac32 \}\)</li>
+          <li>\(D=\{x\in\mathbb R\,|\, x\neq 1 \}\)</li>
+          <li>\(D=\{x\in\mathbb R \}\)</li>
+          <li>\(D=\{x\in\mathbb R\,|\, x\geq -1 \}\)</li>
+          <li>\(D=\{x\in\mathbb R\,|\, -2 \leq x\leq 2 \}\)</li>
+          <li>\(D=\{x\in\mathbb R \}\)</li>
+        </ol>
+      </details>
+    </section>
+
+    <section id="meme">
+      <div class="images">
+        <img src="/img/DomainRange_meme.jpg" style="object-fit: scale-down; max-width: 300px" />
+      </div>
+      <div class="centered">
+        <a href="https://quizizz.com/_media/quizzes/c6107fc9-168a-4d0c-916f-beb08a52e793_900_900"
+          target="_blank" rel="noopener noreferrer">
+          <h6>Original von Nicole Norton </h6>
+        </a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <a href="/misc/impressum.html">Impressum</a>
+    <div class="lastModified" align="center">
+      Zuletzt geändert:<br />
+      15. September 2024
+      <!-- <span id="lastModifiedDate"></span> -->
+    </div>
+    <a href="/misc/datenschutz.html">Datenschutz</a>
+  </footer>
+</body>
