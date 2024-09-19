@@ -1,0 +1,6 @@
+.loesung {
+    color: transparent;
+}
+.loesung:hover {
+    color: var(--fg-header);
+}

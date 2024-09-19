@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" initial-scale=1.0 />
+    <meta name="author" content="Sebastian Hitziger" />
+    <meta name="robot" content="noindex" />
+    <title> HITZ | Grundlagen | Übungen</title>
+    <link rel="stylesheet" type="text/css" href="/css/colors.css" />
+    <link rel="stylesheet" type="text/css" href="/css/gridNoTimeline.css" />
+    <link rel="stylesheet" type="text/css" href="/css/navbar.css" />
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="/css/courses.css" />
+    <link rel="stylesheet" type="text/css" href="/css/uebung.css" />
+    <script type="text/javascript" src="jquery-3.3.1.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <!-- MathJax-Konfiguration -->
+  <script type="text/javascript">
+    window.MathJax = {
+      tex: {
+        inlineMath: [['\\(', '\\)'], ['$', '$']],
+      },
+      chtml: {
+        scale: 1.5  // Skalierung für die Formelgröße (150%)
+      }
+    };
+  </script>
+</head>
+
+<body>
+    <header>
+        <div class="nav">
+            <input type="checkbox" id="nav-check">
+            <div class="nav-header">
+                <div class="nav-title">
+                    <a href="/">Hr. Hitzigers Unterricht</a>
+                </div>
+            </div>
+            <div class="nav-btn">
+                <label for="nav-check">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+
+            <div class="nav-links">
+                <a href="/content/math/">Mathematik</a>
+                <a href="/content/math/grundlagen/">Grundlagen</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section>
+            <h2>Übungen zum Grundwissen</h2>
+            <div class="ziele">
+                <p>
+                    Nachfolgend sollen zufallsgenerierte Aufgaben zum Üben erzeugt werden.
+                </p>
+                <p>
+                    Die Lösung wird sichtbar, wenn man mit der Maus über den Bereich geht. Ein Klick auf die Aufgabe erstellt eine Neue.
+                </p>
+            </div>
+        </section>
+        <section>
+            <h3>Inhaltsverzeichnis</h3>
+            <ul>
+                <li><a href="#natzahl">Natürliche Zahlen: Grundrechenarten</a> </li>
+            </ul>
+        </section>
+
+        <!--Natürliche Zahlen Grundrechenarten-->
+        <section id="natzahl">
+            <h4>Natürliche Zahlen: Grundrechenarten</h4>
+            <ul class="more-spacing">
+                <li>Addition: <span id="natadd"> \(5+7=\)</span><span id="nataddL" class="loesung">\(12\)</span></li>
+                <li>Subtraktion: <span id="natsub"> \(5+7=\)</span><span id="natsubL" class="loesung">\(12\)</span></li>
+                <li>Multiplikation: <span id="natmul"> \(5+7=\)</span><span id="natmulL" class="loesung">\(12\)</span></li>
+                <li>Division: <span id="natdiv"> \(5+7=\)</span><span id="natdivL" class="loesung">\(12\)</span></li>
+            </ul>
+        </section>
+
+
+
+
+        <script type="text/javascript" src="/js/uebungen.js"></script>
+    </main>
+    <footer>
+        <a href="/misc/impressum.html">Impressum</a>
+        <div class="lastModified" align="center">
+            Zuletzt geändert:<br>
+            19. September 2024
+            <!-- <span id="lastModifiedDate"></span> -->
+        </div>
+        <a href="/misc/datenschutz.html">Datenschutz</a>
+    </footer>
+</body>
