@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" initial-scale="1.0" />
+  <meta name="author" content="Sebastian Hitziger" />
+  <meta name="robot" content="noindex" />
+  <title>HITZ | Fkt-Eigensch. | Symmetrie I </title>
+  <link rel="stylesheet" type="text/css" href="/css/colors.css" />
+  <link rel="stylesheet" type="text/css" href="/css/gridNoTimeline.css" />
+  <link rel="stylesheet" type="text/css" href="/css/navbar.css" />
+  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="/css/courses.css" />
+  <script type="text/javascript" src="jquery-3.3.1.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+
+<style>
+  /* Animation, um die Spiegelsymmetrie darzustellen */
+  @keyframes spiegeln {
+      0% {
+          transform: scaleX(1); /* Original */
+      }
+      5% {
+          transform: scaleX(1); /* Original */
+      }
+      45% {
+          transform: scaleX(-1); /* Gespiegelt */
+      }
+      55% {
+          transform: scaleX(-1); /* Gespiegelt */
+      }
+      95% {
+          transform: scaleX(1); /* Zurück zum Original */
+      }
+      100% {
+          transform: scaleX(1); /* Zurück zum Original */
+      }
+  }
+  
+  /* Ziel nur den Graphen */
+  .graphAchse {
+      animation: spiegeln 5s ease-in-out infinite; /* Animation auf dem Graphen */
+      transform-origin: left; /* Drehpunkt ist die Mitte */
+  }
+
+  /* Animation, um eine Drehsymmetrie darzustellen */
+  @keyframes drehen {
+            0% {
+                transform: rotate(360deg); /* Startposition */
+            }
+            5% {
+                transform: rotate(360deg); /* Startposition */
+            }
+            45% {
+                transform: rotate(180deg); /* Eine volle Drehung */
+            }
+            55% {
+                transform: rotate(180deg); /* Eine volle Drehung */
+            }
+            95% {
+                transform: rotate(360deg); /* Zurück zum Original */
+            }
+            100% {
+                transform: rotate(360deg); /* Zurück zum Original */
+            }
+        }
+        
+  /* Ziel nur den Graphen */
+  .graphPunkt {
+            animation: drehen 7s linear infinite; /* Endlose Rotation */
+            transform-origin: 0 0; /* Drehpunkt ist der Ursprung */
+        }
+</style>
+
+<body>
+  <header>
+    <div class="nav">
+      <input type="checkbox" id="nav-check" />
+      <div class="nav-header">
+        <div class="nav-title">
+          <a href="/">Hr. Hitzigers Unterricht</a>
+        </div>
+      </div>
+      <div class="nav-btn">
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+
+      <div class="nav-links">
+        <a href="/content/math/">Mathematik</a>
+        <a href="/content/math/12/">Klasse 12</a>
+        <a href="/content/math/12/ana1/">Analysis I</a>
+        <a href="/content/math/12/ana1/eigen/">Funktionseigenschaften</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section>
+      <h2>Symmetrie I</h2>
+      <div class="ziele">
+        <p>
+          Nachfolgend soll erklärt werden, welche Arten von Symmetrie es gibt und wie diese bei Polynomen bestimmt wird.
+        </p>
+        <p>
+          <a href="#aufgaben">Direkt zu den Aufgaben</a>
+        </p>
+      </div>
+
+
+
+      <div class="theorie">
+
+        <div class="definition">
+          <h4>Arten der Symmetrie</h4>
+          <p>
+            Es gibt zwei Arten von Symmetrie: Achsensymmetrie und Punktsymmetrie.
+          </p>
+
+          <div class="course-container" style="gap: 10px; flex-grow: 1; margin-bottom: 20px;">
+            <div style="flex: 1; min-width: 250px;">
+                <div class="centered" style="max-width: 450px">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="-5.5 -6 12 11">
+                                
+                    <!-- Draw the x-axis line -->
+                    <line x1="-5" y1="0" x2="5" y2="0" stroke="#a7a7a7" stroke-width="0.05" />
+                  
+                    <!-- Draw the x-axis arrowhead -->
+                    <polygon points="5.5,0 4.8,-0.15 4.8,0.15" fill="#a7a7a7" />
+                  
+                    <!-- Draw the y-axis line -->
+                    <line x1="0" y1="5" x2="0" y2="-5" stroke="#a7a7a7" stroke-width="0.05" />
+                  
+                    <!-- Draw the y-axis arrowhead -->
+                    <polygon points="0,-5.5 -0.15,-4.8 0.15,-4.8" fill="#a7a7a7" />
+                  
+                    <!-- Add "x" at the end of the x-axis -->
+                    <text x="5.7" y="0.7" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">x</text>
+                  
+                    <!-- Add "y" at the end of the y-axis -->
+                    <text x="-0.8" y="-5.3" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">y</text>
+                  
+                    <!-- Graph of f(x) = -x^2 -->
+                    <g class="graphAchse">
+                      <path d="M 0 0 L 0.1 0 0.2 -0.01 0.3 -0.03 0.4 -0.05 0.5 -0.08
+                              0.6 -0.12 0.7 -0.16 0.8 -0.21 0.9 -0.27 1 -0.33
+                              1.1 -0.4 1.2 -0.48 1.3 -0.56 1.4 -0.65 1.5 -0.75
+                              1.6 -0.85 1.7 -0.96 1.8 -1.08 1.9 -1.2 2 -1.33
+                              2.1 -1.47 2.2 -1.61 2.3 -1.76 2.4 -1.92 2.5 -2.08
+                              2.6 -2.25 2.7 -2.43 2.8 -2.61 2.9 -2.8 3 -3
+                              3.1 -3.2 3.2 -3.41 3.3 -3.63 3.4 -3.85 3.5 -4.08
+                              3.6 -4.32 3.7 -4.56 3.8 -4.81 3.9 -5.07"
+                            fill="none" stroke="darkgoldenrod" stroke-width="0.1" />
+                    </g>
+                    <g>
+                      <path d="M 0 0 L 0.1 0 0.2 -0.01 0.3 -0.03 0.4 -0.05 0.5 -0.08
+                              0.6 -0.12 0.7 -0.16 0.8 -0.21 0.9 -0.27 1 -0.33
+                              1.1 -0.4 1.2 -0.48 1.3 -0.56 1.4 -0.65 1.5 -0.75
+                              1.6 -0.85 1.7 -0.96 1.8 -1.08 1.9 -1.2 2 -1.33
+                              2.1 -1.47 2.2 -1.61 2.3 -1.76 2.4 -1.92 2.5 -2.08
+                              2.6 -2.25 2.7 -2.43 2.8 -2.61 2.9 -2.8 3 -3
+                              3.1 -3.2 3.2 -3.41 3.3 -3.63 3.4 -3.85 3.5 -4.08
+                              3.6 -4.32 3.7 -4.56 3.8 -4.81 3.9 -5.07"
+                            fill="none" stroke="darkgoldenrod" stroke-width="0.1" />
+                    </g>
+                  </svg>
+                </div>
+                <p>
+                  <h5>Achsensymmetrie</h5>
+                  Eine Funktion ist achsensymmetrisch oder auch spiegelsymmetrisch, wenn die Funktionswerte von Zahl und Gegenzahl gleich sind.
+                  \begin{align*}
+                    f(-x)&=f(x)
+                  \end{align*}
+                </p>
+            </div>
+            <div style="flex: 1; min-width: 250px;">
+              <div class="centered" style="max-width: 450px">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="-5.5 -6 12 11">
+                              
+                  <!-- Draw the x-axis line -->
+                  <line x1="-5" y1="0" x2="5" y2="0" stroke="#a7a7a7" stroke-width="0.05" />
+                
+                  <!-- Draw the x-axis arrowhead -->
+                  <polygon points="5.5,0 4.8,-0.15 4.8,0.15" fill="#a7a7a7" />
+                
+                  <!-- Draw the y-axis line -->
+                  <line x1="0" y1="5" x2="0" y2="-5" stroke="#a7a7a7" stroke-width="0.05" />
+                
+                  <!-- Draw the y-axis arrowhead -->
+                  <polygon points="0,-5.5 -0.15,-4.8 0.15,-4.8" fill="#a7a7a7" />
+                
+                  <!-- Add "x" at the end of the x-axis -->
+                  <text x="5.7" y="0.7" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">x</text>
+                
+                  <!-- Add "y" at the end of the y-axis -->
+                  <text x="-0.8" y="-5.3" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">y</text>
+                
+                  <!-- Graph of f(x) = -x^2 -->
+                  <g class="graphPunkt">
+                    <path d="M 0 0 L 0.1 0 0.2 -0.01 0.3 -0.03 0.4 -0.05 0.5 -0.08
+                            0.6 -0.12 0.7 -0.16 0.8 -0.21 0.9 -0.27 1 -0.33
+                            1.1 -0.4 1.2 -0.48 1.3 -0.56 1.4 -0.65 1.5 -0.75
+                            1.6 -0.85 1.7 -0.96 1.8 -1.08 1.9 -1.2 2 -1.33
+                            2.1 -1.47 2.2 -1.61 2.3 -1.76 2.4 -1.92 2.5 -2.08
+                            2.6 -2.25 2.7 -2.43 2.8 -2.61 2.9 -2.8 3 -3
+                            3.1 -3.2 3.2 -3.41 3.3 -3.63 3.4 -3.85 3.5 -4.08
+                            3.6 -4.32 3.7 -4.56 3.8 -4.81 3.9 -5.07"
+                          fill="none" stroke="darkgoldenrod" stroke-width="0.1" />
+                  </g>
+                  <g>
+                    <path d="M 0 0 L 0.1 0 0.2 -0.01 0.3 -0.03 0.4 -0.05 0.5 -0.08
+                            0.6 -0.12 0.7 -0.16 0.8 -0.21 0.9 -0.27 1 -0.33
+                            1.1 -0.4 1.2 -0.48 1.3 -0.56 1.4 -0.65 1.5 -0.75
+                            1.6 -0.85 1.7 -0.96 1.8 -1.08 1.9 -1.2 2 -1.33
+                            2.1 -1.47 2.2 -1.61 2.3 -1.76 2.4 -1.92 2.5 -2.08
+                            2.6 -2.25 2.7 -2.43 2.8 -2.61 2.9 -2.8 3 -3
+                            3.1 -3.2 3.2 -3.41 3.3 -3.63 3.4 -3.85 3.5 -4.08
+                            3.6 -4.32 3.7 -4.56 3.8 -4.81 3.9 -5.07"
+                          fill="none" stroke="darkgoldenrod" stroke-width="0.1" />
+                  </g>
+                </svg>
+              </div>
+              <p>
+                <h5>Punktsymmetrie</h5>
+                Eine Funktion ist punktsymmetrisch oder auch drehsymmetrisch, wenn die Funktionswerte von Zahl und Gegenzahl Gegenzahlen sind.
+                \begin{align*}
+                  f(-x)&=-f(x)
+                \end{align*}
+              </p>
+          </div>
+          </div>
+          <p> 
+            Die Art der Symmetrie prüft man, in dem man für \(f(-x)\) berechnet.
+          </p>         
+          <p>
+            <span style="color: darkgoldenrod; font-weight: 800;">Wichtig:</span> Mit dem Einsetzen einer Zahl (z.B. \(-1\) und \(1\)) und dem Nachrechnen kann
+            man die Symmetrieart widerlegen, jedoch nicht beweisen.
+          </p>
+         </div>
+        <h6>Beispiel 1:</h6>
+        <p>
+          Es soll die Symmetrie der Funktion \(f(x)=2x^8+x^2-6\) geprüft werden.
+          <ul class="custom-marker more-spacing">
+            <li> \(\color{green}-x\) einsetzen: \(f({\color{green}-x})=2\cdot ({\color{green}-x})^8 + ({\color{green}-x})^2-6 \)
+            </li>
+
+          </ul>
+        </p>
+
+        
+      </div>
+    </section>
+    <!-- <section>
+      <div class="videos" style="margin-bottom: 15px;">
+        <iframe width="360" height="202" src="https://www.youtube.com/embed/MoYOfFcK3m4"
+          title="Definitionensbereich - Rationale Funktion" frameborder="0" allow="web-share" allowfullscreen></iframe>
+      </div>
+    </section> -->
+    <section class="aufgaben" id="aufgaben">
+      <h3>Aufgaben zur Symmetrie</h3>
+      <ol class="custom-marker point-after decimal">
+        <li>Bestimme für die folgenden Standardfunktionen den maximalen Definitionsbereich durch Ablesen oder Rechnen!
+          <a href="#a1">Lösungen</a>
+          <p>
+            Die Nutzung von <a href="https://geogebra.org/calculator" target="_blank"
+              rel="noopener noreferrer">Geogebra</a> ist empfohlen.
+          </p>
+          <details class="openClose" style="border-color: lightblue; margin-top: 10px;">
+            <summary class="nonumber" data-open="Funktionen einklappen" data-close="Funktionen ausklappen">
+            </summary>
+            <ol class="custom-marker parens-around lower-alpha more-spacing">
+              <li>\(f(x)=a\)</li>
+
+            </ol>
+          </details>
+        </li>
+        <li>Buch, Seite 44 Nummer 3 (ohne Wertemenge) <a href="#a2">Lösungen</a></li>
+      </ol>
+
+
+
+    </section>
+
+    <section class="loesungen">
+      <h3>Lösungen zu Funktionseigenschaften</h3>
+
+      <details id="a1">
+        <summary>Standardfunktionen</summary>
+
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>\(D=\{ \}\)</li>
+        </ol>
+      </details>
+
+      <details id="a2">
+        <summary>Buch Seite 44 Nummer 3</summary>
+
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>\(\)</li>
+
+        </ol>
+
+      </details>
+    </section>
+
+    <section id="meme">
+      <div class="images">
+        <img src="/img/sym_meme.jpg" style="object-fit: scale-down; max-width: 300px" />
+      </div>
+      <div class="centered">
+        <a href="https://www.pinterest.de/pin/x-why-symmetry--334392341056274723/"
+          target="_blank" rel="noopener noreferrer">
+          <h6>Original von Christopher Burke </h6>
+        </a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <a href="/misc/impressum.html">Impressum</a>
+    <div class="lastModified" align="center">
+      Zuletzt geändert:<br />
+      11. September 2024
+      <!-- <span id="lastModifiedDate"></span> -->
+    </div>
+    <a href="/misc/datenschutz.html">Datenschutz</a>
+  </footer>
+</body>
