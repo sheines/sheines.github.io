@@ -251,8 +251,43 @@
             <li>
               Gleichung vereinfachen:
               \begin{align*}
-              f({\color{green}-x})&=2\cdot ({\color{green}-x})^8 + ({\color{green}-x})^2-6
+                f({\color{green}-x})&=2\cdot ({\color{green}-x})^8 + ({\color{green}-x})^2-6 \\
+                f({\color{green}-x})&=2x^8+x^2-6
               \end{align*}
+              Anmerkung: \(- \cdot - = +\)
+            </li>
+            <li>
+              Mit Ausgangsgleichung vergleichen: \(f({\color{green}-x})=f(x) \), weil <i>alle</i>
+              Vor/Rechenzeichen gleich sind.
+            </li>
+            </li>
+            <li>Schlussfolgerung: Die beiden Funktionen sind gleich, das heißt, die Funktion \(f(x)=2x^8+x^2-6\)
+              ist achsensymmetrisch.
+            </li>
+          </ul>
+        </p>
+
+        <h6>Beispiel 2:</h6>
+        <p>
+          Es soll die Symmetrie der Funktion \(f(x)=3x^5-2x^3+7x\) geprüft werden.
+          <ul class="custom-marker more-spacing">
+            <li> \(\color{green}-x\) einsetzen: \(f({\color{green}-x})=3\cdot ({\color{green}-x})^5 - 2\cdot({\color{green}-x})^3+7\cdot ({\color{green}-x}) \)
+            </li>
+            <li>
+              Gleichung vereinfachen:
+              \begin{align*}
+              f({\color{green}-x})&=3\cdot ({\color{green}-x})^5 - 2\cdot({\color{green}-x})^3+7\cdot ({\color{green}-x}) \\
+                f({\color{green}-x})&=3\cdot (-x^5)-2\cdot (-x^3)+7\cdot (-x) \\
+                f({\color{green}-x})&=-3x^5+2x^3-7x
+              \end{align*}
+              Anmerkung: \(- \cdot - \cdot - = -\)
+            </li>
+            <li>
+              Mit Ausgangsgleichung vergleichen: \(f({\color{green}-x})=-f(x) \), weil <i>alle</i>
+              Vor/Rechenzeichen verschieden sind.
+            </li>
+            <li>Schlussfolgerung: Die beiden Funktionen sind gleich, das heißt, die Funktion \(f(x)=3x^5-2x^3+7x\)
+              ist punktsymmetrisch.
             </li>
           </ul>
         </p>
@@ -267,11 +302,8 @@
       </div>
     </section> -->
     <section class="aufgaben" id="aufgaben">
-      <h3>Aufgaben zur Symmetrie</h3>
-      <ol class="custom-marker point-after decimal">
-        <li>Bestimme für die folgenden Standardfunktionen den maximalen Definitionsbereich durch Ablesen oder Rechnen!
-          <a href="#a1">Lösungen</a>
-          <p>
+
+      <!-- <p>
             Die Nutzung von <a href="https://geogebra.org/calculator" target="_blank"
               rel="noopener noreferrer">Geogebra</a> ist empfohlen.
           </p>
@@ -282,9 +314,43 @@
               <li>\(f(x)=a\)</li>
 
             </ol>
-          </details>
+          </details> -->
+
+      <h3>Aufgaben zur Symmetrie</h3>
+      <ol class="custom-marker point-after decimal more-spacing">
+        <li>Buch, Seite 48, Übung 9 b) <a href="#a1">Lösungen</a></li>
+        <li>Buch, Seite 58, Übung 5 a) und b) <a href="#a2">Lösungen</a></li>
+        <li>Buch, Seite 65, Übung 24 <a href="#a3">Lösungen</a></li>
+        <li>Weiterführende Fragen: <a href="#a4">Lösungen</a>
+          <ol class="custom-marker parens-around lower-alpha more-spacing" >    
+            <li>Nenne je eine trigonometrische Funktion, die Achsen- und 
+              Punktsymmetrisch ist!</li>
+            <li>Ordne die restlichen Funktionstypen den Symmetriearten zu!
+              <details class="openClose" style="border-color: lightblue; margin-top: 10px;">
+                <summary class="nonumber" data-open="Funktionen einklappen" data-close="Funktionen ausklappen">
+                </summary>
+                <ol class="more-spacing" type="I">
+                  <li>Konstante Funktion: \(f(x)=a\)</li>
+                  <li>Lineare Funktion: \(f(x)=x\)</li>
+                  <li>Quadratische Funktion: \(f(x)=x^2\)</li>
+                  <li>Potenzfunktion I: \(f(x)=x^n\), \(n\) ungerade</li>
+                  <li>Potenzfunktion II: \(f(x)=x^n\), \(n\) gerade</li>
+                  <li>Potenzfunktion III: \(f(x)=\frac1{x^n}\), \(n\) ungerade</li>
+                  <li>Potenzfunktion IV: \(f(x)=\frac1{x^n}\), \(n\) gerade</li>
+                  <li>Wurzelfunktion: \(f(x)=\sqrt{x}\)</li>
+                  <li>Betragsfunktion: \(f(x)=|x|\)</li>
+                  <li>Exponentialfunktion: \(f(x)=a^x\)</li>
+                  <li>Logarithmusfunktion: \(f(x)=\log_a x\)</li>
+                  <li>Sinusfunktion: \(f(x)=\sin x\)</li>
+                  <li>Cosinusfunktion: \(f(x)=\cos x\)</li>
+                  <li>Signumsfunktion: \(f(x)=\text{sgn}\,x\)</li>
+                </ol>
+              </details>
+            </li>
+            <li>Begründe, warum punktsymmetrische Funktionen immer durch den
+              Koordinatenursprung verlaufen müssen! (und finde ein Gegenbeispiel!)</li>
+          </ol>
         </li>
-        <li>Buch, Seite 44 Nummer 3 (ohne Wertemenge) <a href="#a2">Lösungen</a></li>
       </ol>
 
 
@@ -295,14 +361,79 @@
       <h3>Lösungen zu Funktionseigenschaften</h3>
 
       <details id="a1">
-        <summary>Standardfunktionen</summary>
+        <summary>Übung 9 b)</summary>
 
-        <ol class="custom-marker parens-around lower-alpha more-spacing">
-          <li>\(D=\{ \}\)</li>
+        <ol class="more-spacing" type="I">
+          <li>Punktsymmetrie</li>
+          <li>Achsensymmetrie</li>
+          <li>Punktsymmetrie</li>
+          <li>Achsensymmetrie</li>
+          <li>Achsensymmetrie</li>
+          <li>Punktsymmetrie</li>
+          <li>Achsensymmetrie</li>
+          <li>Keine Symmetrie</li>
         </ol>
       </details>
 
       <details id="a2">
+        <summary>Übung 5 a) und b)</summary>
+
+        <ol class="more-spacing" type="I">
+          <li>Achsensymmetrie</li>
+          <li>Punktsymmetrie</li>
+          <li>Keine Symmetrie</li>
+          <li>Punktsymmetrie</li>
+        </ol>
+      </details>
+
+      <details id="a3">
+        <summary>Übung 24</summary>
+
+        <ol class="custom-marker parens-around lower-alpha" >    
+          <li>Punktsymmetrie</li>
+          <li>Achsensymmetrie</li>
+          <li>Punktsymmetrie</li>
+          <li>Achsensymmetrie</li>
+        </ol>
+      </details>
+
+      <details id="a4">
+        <summary>Weiterführende Fragen</summary>
+
+        <ol class="custom-marker parens-around lower-alpha more-spacing" >    
+          <li>
+            <ul>
+              <li>Punktsymmetrisch: Sinus, Tangens</li>
+              <li>achsensymmetrisch: Cosinus</li>
+            </ul>
+          </li>
+          <li>Standardfunktionen:
+            <ol class="more-spacing" type="I">
+              <li>Konstante Funktion: Achsensymmetrie</li>
+              <li>Lineare Funktion: Punktsymmetrie</li>
+              <li>Quadratische Funktion: Achsensymmetrie</li>
+              <li>Potenzfunktion I: Punktsymmetrie</li>
+              <li>Potenzfunktion II: Achsensymmetrie</li>
+              <li>Potenzfunktion III: Punktsymmetrie</li>
+              <li>Potenzfunktion IV: Achsensymmetrie</li>
+              <li>Wurzelfunktion: Keine Symmetrie</li>
+              <li>Betragsfunktion: Achsensymmetrie</li>
+              <li>Exponentialfunktion: Keine Symmetrie</li>
+              <li>Logarithmusfunktion: Keine Symmetrie</li>
+              <li>Sinusfunktion: Punktsymmetrie</li>
+              <li>Cosinusfunktion: Achsensymmetrie</li>
+              <li>Signumsfunktion: Punktsymmetrie</li>
+            </ol>
+          </li>
+          <li>Der Koordinatenursprung ist der einzige Punkt auf der \(y\)-Achse, welcher 
+            nach einer 180°-Drehung der Gleiche bleibt. Beispielsweise die Funktion \(f(x)=\frac 1x\) ist auf der 
+           \(y\)-Achse nicht definiert (\(x\neq 0\)), weshalb sie auch nicht durch den Koordinatenursprung
+           verläuft.</li>
+        </ol>
+      </details>
+
+
+      <!-- <details id="a2">
         <summary>Buch Seite 44 Nummer 3</summary>
 
         <ol class="custom-marker parens-around lower-alpha more-spacing">
@@ -310,7 +441,7 @@
 
         </ol>
 
-      </details>
+      </details> -->
     </section>
 
     <section id="meme">
@@ -329,7 +460,7 @@
     <a href="/misc/impressum.html">Impressum</a>
     <div class="lastModified" align="center">
       Zuletzt geändert:<br />
-      11. September 2024
+      22. September 2024
       <!-- <span id="lastModifiedDate"></span> -->
     </div>
     <a href="/misc/datenschutz.html">Datenschutz</a>
