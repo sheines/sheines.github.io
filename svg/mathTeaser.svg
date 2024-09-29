@@ -54,6 +54,6 @@
             <rect x="50" y="50" width="400" height="200" />
         </clipPath>
     </defs>
-    <script type="text/javascript" href="/js/mathTeaserAnimation.js"></script>
+    <script type="text/javascript" href="/js/math/mathTeaserAnimation.js"></script>
 
 </svg>

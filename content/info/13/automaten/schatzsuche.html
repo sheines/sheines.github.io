@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width" initial-scale="1.0" />
   <meta name="author" content="Sebastian Hitziger" />
   <meta name="robot" content="noindex" />
-  <title>HITZ | Fkt-Eigensch. | Definitionsbereich I </title>
+  <title>HITZ | Automaten | Schatzsuche </title>
   <link rel="stylesheet" type="text/css" href="/css/colors.css" />
   <link rel="stylesheet" type="text/css" href="/css/gridNoTimeline.css" />
   <link rel="stylesheet" type="text/css" href="/css/navbar.css" />
@@ -34,212 +34,53 @@
       </div>
 
       <div class="nav-links">
-        <a href="/content/math/">Mathematik</a>
-        <a href="/content/math/12/">Klasse 12</a>
-        <a href="/content/math/12/ana1/">Analysis I</a>
-        <a href="/content/math/12/ana1/eigen/">Funktionseigenschaften</a>
+        <a href="/content/info/">Informatik</a>
+        <a href="/content/info/13/">Klasse 13</a>
+        <a href="/content/info/13/automaten/">Automaten</a>
       </div>
     </div>
   </header>
   <main>
     <section>
-      <h2>Definitionsbereich I</h2>
-      <div class="ziele">
+      <h2>Schatzsuche</h2>
+      <!-- <div class="ziele">
         <p>
-          Nachfolgend soll erklärt werden, was der Definitionsbereich einer Funktion ist und wie dieser für einfache
-          Funktionen bestimmt wird.
+          Nachfolgend soll mithilfe eines einfachen Spiel das Grundkonzept von Automaten gezeigt werden.
         </p>
         <p>
           <a href="#aufgaben">Direkt zu den Aufgaben</a>
         </p>
-      </div>
-
-
-
+      </div> -->
       <div class="theorie">
-
-        <div class="definition">
-          <h4>Definitionsbereich</h4>
-          <p>
-            Der Definitionsbereich gibt an, für welche Zahlen eine Funktion definiert ist, sprich, welche Zahlen
-            für \(x\) eingesetzt werden dürfen.
-          <p>
-            Ohne Angabe darf immer davon ausgegangen werden, dass alle reellen Zahlen erlaubt sind (\(D:x\in\mathbb
-            R\)).
-          </p>
-          <h5>Was geht nicht?</h5>
-          <p>
-            Für die Untersuchung des maximalen Definitionsbereiches gibt es nur drei Todsünden:
-          </p>
-          <ul class="custom-marker more-spacing">
-            <li>Es darf nicht durch null geteilt werden.</li>
-            <li>Der Radikant von Wurzelfunktionen darf nicht negativ sein.</li>
-            <li>Der Numerus eines Logarithmus darf weder negativ noch null sein.</li>
-          </ul>
-          Die Zahl null ist dabei weder positiv noch negativ.
-          </p>
-          <div class="images">
-            <div class="funktionsbundle">
-              <a href="svg/def_pot.svg" target="_blank" rel="noopener noreferrer">
-                <img src="svg/def_pot.svg" height="270px">
-              </a>
-              <a href="svg/def_frac.svg" target="_blank" rel="noopener noreferrer">
-                <img src="svg/def_frac.svg" height="270px">
-              </a>
-              <a href="svg/def_sqrt.svg" target="_blank" rel="noopener noreferrer">
-                <img src="svg/def_sqrt.svg" height="270px">
-              </a>
-              <a href="svg/def_log.svg" target="_blank" rel="noopener noreferrer">
-                <img src="svg/def_log.svg" height="270px">
-              </a>
-            </div>
-          </div>
+        
 
 
-        </div>
-        <h6>Beispiel 1:</h6>
-        <p>
-          Es soll der Definitionsbereicht der Funktion \(f(x)=\frac{12}{3x+12}\) bestimmt werden.
-        <ul class="custom-marker more-spacing">
-          <li>Bei der Funktion handelt es sich um eine gebrochenrationale Funktion. Das heißt, der Nenner darf
-            nicht null werden.
-          </li>
-          <li>Es muss <i>ausschließlich</i> der Nenner (\(\color{red}3x+12\)) betrachtet werden.</li>
-          <li>Ungleichung aufstellen und lösen:
-            \begin{align*}
-            {\color{red}3x+12}&\neq 0 \qquad | -12 \\
-            3x &\neq -12\,\ \ | : 3 \\
-            x &\neq \color{green}-4
-            \end{align*}
-          </li>
-          <li>Das heißt, die Funktion \(f(x)=\frac{12}{3x+12}\) ist für alle reellen Zahlen außer
-            \(\color{green}-4\) definiert:
-            \begin{align*}
-            D=\left\{x\in \mathbb R\,|\, x\neq\color{green} -4 \right\}
-            \end{align*}
-          </li>
-        </ul>
-        </p>
 
-        <h6>Beispiel 2:</h6>
-        <p>
-          Es soll der Definitionsbereich der Funktion \(f(x)=\sqrt{-4x+8}\) bestimmt werden.
-        <ul class="custom-marker more-spacing">
-          <li>Bei der Funktion handelt es sich um eine Wurzelfunktion. Das heißt, der Radikant darf
-            nicht negativ werden.
-          </li>
-          <li>Es muss <i>ausschließlich</i> der Radikant (\(\color{red}-4x+8\)) betrachtet werden.</li>
-          <li>Ungleichung aufstellen und lösen:
-            \begin{align*}
-            {\color{red}-4x+8}&\geq 0 \qquad | -8 \\
-            -4x &\geq -8\,\ \ | : (-4) \\
-            x &\leq \color{green}2
-            \end{align*}
-          </li>
-          <li>Das heißt, die Funktion \(f(x)=\sqrt{-4x+8}\) ist für alle reellen Zahlen mit
-            \(x\leq\color{green}2\) definiert:
-            \begin{align*}
-            D=\left\{x\in \mathbb R\,|\, x\leq\color{green} 2 \right\}
-            \end{align*}
-          </li>
-        </ul>
-        </p>
-        <h6>Beispiel 3:</h6>
-        <p> Der Vollständigkeit halber:
-        </p>
-        <p> Es soll der Definitionsbereicht der Funktion \(f(x)=\log_8\left(x^2-9\right)\) bestimmt werden.
-        <ul class="custom-marker more-spacing">
-          <li>Bei der Funktion handelt es sich um eine Logarithmusfunktion. Das heißt, der Numerus muss größer als null
-            sein.
-          </li>
-          <li>Es muss <i>ausschließlich</i> der Numerus (\(\color{red}x^2-9\)) betrachtet werden.</li>
-          <li>Ungleichung aufstellen und lösen:
-            \begin{align*}
-            {\color{red}x^2-9}&>0 \qquad | +9 \\
-            x^2 &> 9\,\ \ | \sqrt{\ } \\
-            x &\gtrless \color{green}\pm3
-            \end{align*}
-          </li>
-          <li>
-            Nun stellt sich die Frage: ist der Bereich zwischen \(-3\) und \(+3\) gemeint, oder Bereich außerhalb der
-            Zahlen?
-            <p>
-              Dazu muss man sich den Verlauf von \(\color{red}x^2-9\) ansehen:
-            <ul>
-              <li>Nach oben geöffnete Parabel,</li>
-              <li>Der Bereich zwischen den Nullstellen \(\color{green}\pm3\) ist negativ,</li>
-              <li>Der Bereich außerhalb der Nullstellen ist positiv.</li>
-            </ul>
-            </p>
-          </li>
-          <li>Das heißt, die Funktion \(f(x)=\log_8\left(x^2-9\right)\) ist für alle reellen Zahlen mit
-            \(x<\color{green}-3\) und \(x>\color{green}+3\) definiert:
-              \begin{align*}
-              D=\left\{ x\in \mathbb R\,|\, x<{\color{green} -3}\ \wedge\ x>{\color{green} 3} \right\}
-                \end{align*}
-          </li>
-        </ul>
-        </p>
+        
       </div>
     </section>
-    <section>
+    <!-- <section>
 
       <div class="videos" style="margin-bottom: 15px;">
         <iframe width="360" height="202" src="https://www.youtube.com/embed/MoYOfFcK3m4"
           title="Definitionensbereich - Rationale Funktion" frameborder="0" allow="web-share" allowfullscreen></iframe>
 
-        <iframe width="360" height="202" src="https://www.youtube.com/embed/M8ZyrUUu_mo"
-          title="Definitionensbereich - Wurzelfunktion" frameborder="0" allow="web-share" allowfullscreen></iframe>
-
-        <iframe width="360" height="202" src="https://www.youtube.com/embed/C2r-wUBAI50"
-          title="Definitionensbereich - Logarithmusfunktion" frameborder="0" allow="web-share" allowfullscreen></iframe>
       </div>
-      Die finale Schreibweise der Definitionsmengen in den Videos ist leicht falsch.
-    </section>
-    <section class="aufgaben" id="aufgaben">
-      <h3>Aufgaben zum Definitionensbereich</h3>
+    </section> -->
+    <!-- <section class="aufgaben" id="aufgaben">
+      <h3>Aufgaben zu Automaten</h3>
       <ol class="custom-marker point-after decimal">
-        <li>Bestimme für die folgenden Standardfunktionen den maximalen Definitionsbereich durch Ablesen oder Rechnen!
+        <li>...
           <a href="#a1">Lösungen</a>
-          <p>
-            Die Nutzung von <a href="https://geogebra.org/calculator" target="_blank"
-              rel="noopener noreferrer">Geogebra</a> ist empfohlen.
-          </p>
-          <details class="openClose" style="border-color: lightblue; margin-top: 10px;">
-            <summary class="nonumber" data-open="Funktionen einklappen" data-close="Funktionen ausklappen">
-            </summary>
-            <ol class="custom-marker parens-around lower-alpha more-spacing">
-              <li>Konstante Funktion: \(f(x)=a\)</li>
-              <li>Lineare Funktion: \(f(x)=x\)</li>
-              <li>Quadratische Funktion: \(f(x)=x^2\)</li>
-              <li>Potenzfunktion I: \(f(x)=x^n\), \(n\) ungerade</li>
-              <li>Potenzfunktion II: \(f(x)=x^n\), \(n\) gerade</li>
-              <li>Potenzfunktion III: \(f(x)=\frac1{x^n}\), \(n\) ungerade</li>
-              <li>Potenzfunktion IV: \(f(x)=\frac1{x^n}\), \(n\) gerade</li>
-              <li>Wurzelfunktion: \(f(x)=\sqrt{x}\)</li>
-              <li>Betragsfunktion: \(f(x)=|x|\)</li>
-              <li>Exponentialfunktion: \(f(x)=a^x\)</li>
-              <li>Logarithmusfunktion: \(f(x)=\log_a x\)</li>
-              <li>Sinusfunktion: \(f(x)=\sin x\)</li>
-              <li>Cosinusfunktion: \(f(x)=\cos x\)</li>
-              <li>Signumsfunktion: \(f(x)=\text{sgn}\,x\)</li>
-            </ol>
-          </details>
-          All diese Funktionstypen können beliebig miteinander kombiniert werden (nicht Teil der Aufgabe):
-          \begin{align*}
-          f(x)=\sqrt{\frac{\log_3(4(\sin(2^x))^2)}{\left|\text{sgn} \left(5x\cdot
-          6^{^{\frac{\frac{\sin\left(2^x-5x\right)}{x^2-5x+7}+\tan (x^8)}{\log_2
-          (4x-2)}}}\right)\right|^{4x-\log_7\left(\cos (3x^5-6)\right)}}}-1
-          \end{align*}
+          
         </li>
-        <li>Buch, Seite 44 Nummer 3 (ohne Wertemenge) <a href="#a2">Lösungen</a></li>
       </ol>
 
 
 
-    </section>
+    </section> -->
 
-    <section class="loesungen">
+    <!-- <section class="loesungen">
       <h3>Lösungen zu Funktionseigenschaften</h3>
 
       <details id="a1">
@@ -247,68 +88,12 @@
 
         <ol class="custom-marker parens-around lower-alpha more-spacing">
           <li>Konstante Funktion: \(D=\{x\in\mathbb R \}\)</li>
-          <li>Lineare Funktion: \(D=\{x\in\mathbb R \}\)</li>
-          <li>Quadratische Funktion: \(D=\{x\in\mathbb R \}\)</li>
-          <li>Potenzfunktion I: \(D=\{x\in\mathbb R \}\)</li>
-          <li>Potenzfunktion II: \(D=\{x\in\mathbb R \}\)</li>
-          <li>Potenzfunktion III: \(D=\{x\in\mathbb R\,|\, x\neq 0 \}\)</li>
-          <li>Potenzfunktion IV: \(D=\{x\in\mathbb R\,|\, x\neq 0 \}\)</li>
-          <li>Wurzelfunktion: \(D=\{x\in\mathbb R\,|\, x\geq 0 \}\)</li>
-          <li>Betragsfunktion: \(D=\{x\in\mathbb R \}\)</li>
-          <li>Exponentialfunktion: \(D=\{x\in\mathbb R \}\)</li>
-          <li>Logarithmusfunktion: \(D=\{x\in\mathbb R\,|\, x> 0 \}\)</li>
-          <li>Sinusfunktion: \(D=\{x\in\mathbb R \}\)</li>
-          <li>Cosinusfunktion: \(D=\{x\in\mathbb R \}\)</li>
-          <li>Signumsfunktion: \(D=\{x\in\mathbb R \}\)</li>
         </ol>
       </details>
 
-      <details id="a2">
-        <summary>Buch Seite 44 Nummer 3</summary>
+    </section> -->
 
-        <ol class="custom-marker parens-around lower-alpha more-spacing">
-          <li>\(D=\{x\in\mathbb R \}\)</li>
-          <li>\(D=\{x\in\mathbb R \}\)</li>
-          <li>\(D=\{x\in\mathbb R\,|\, x\neq 0 \}\)</li>
-          <li>\(D=\{x\in\mathbb R\,|\, x \geq 0 \}\)</li>
-          <li>\(D=\{x\in\mathbb R\,|\, x\neq 2 \}\)</li>
-          <li>\(D=\{x\in\mathbb R\,|\, x\neq 0 \}\)</li>
-          <li>\(D=\{x\in\mathbb R\,|\, x\geq 4 \}\)</li>
-          <li>\(D=\{x\in\mathbb R \}\)</li>
-        </ol>
-        <p>Zum Vergrößern anklicken.</p>
-        <div class="images">
-          <div class="funktionsbundle">
-            <a href="svg/fkt_a.svg" target="_blank" rel="noopener noreferrer">
-              <img src="svg/fkt_a.svg" height="200px" width="200px">
-            </a>
-            <a href="svg/fkt_b.svg" target="_blank" rel="noopener noreferrer">
-              <img src="svg/fkt_b.svg" height="200px" width="200px">
-            </a>
-            <a href="svg/fkt_c.svg" target="_blank" rel="noopener noreferrer">
-              <img src="svg/fkt_c.svg" height="200px" width="200px">
-            </a>
-            <a href="svg/fkt_d.svg" target="_blank" rel="noopener noreferrer">
-              <img src="svg/fkt_d.svg" height="200px" width="200px">
-            </a>
-            <a href="svg/fkt_e.svg" target="_blank" rel="noopener noreferrer">
-              <img src="svg/fkt_e.svg" height="200px" width="200px">
-            </a>
-            <a href="svg/fkt_f.svg" target="_blank" rel="noopener noreferrer">
-              <img src="svg/fkt_f.svg" height="200px" width="200px">
-            </a>
-            <a href="svg/fkt_g.svg" target="_blank" rel="noopener noreferrer">
-              <img src="svg/fkt_g.svg" height="200px" width="200px">
-            </a>
-            <a href="svg/fkt_h.svg" target="_blank" rel="noopener noreferrer">
-              <img src="svg/fkt_h.svg" height="200px" width="200px">
-            </a>
-          </div>
-        </div>
-      </details>
-    </section>
-
-    <section id="meme">
+    <!-- <section id="meme">
       <div class="images">
         <img src="/img/domain_meme.jpg" style="object-fit: scale-down; max-width: 300px" />
       </div>
@@ -318,7 +103,7 @@
           <h6>Original von Delicious_Maize9656 </h6>
         </a>
       </div>
-    </section>
+    </section> -->
   </main>
   <footer>
     <a href="/misc/impressum.html">Impressum</a>
