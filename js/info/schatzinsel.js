@@ -31,13 +31,13 @@ let previousImage = 4;
 leftOverlayPRI.addEventListener('click', () => {
     popup.style.display = 'flex';
     if (previousImage === 4) {
-        popText.innerHTML = "Auf zur Schiffswrackbucht!";
+        popText.innerHTML = "Auf zur <span style='font-weight: 700'>Schiffswrackbucht</span>!";
         route.innerHTML += "<li>Schiffswrackbucht</li>";
         // drawLine(image4, image1);
         previousImage = 1;
     }
     else {
-        popText.innerHTML = "Du bist doch gar nicht auf der Pirateninsel.";
+        popText.innerHTML = "Du bist doch gar nicht auf der <span style='font-weight: 700'>Pirateninsel</span>.";
     }
 
 });
@@ -45,13 +45,13 @@ leftOverlayPRI.addEventListener('click', () => {
 rightOverlayPRI.addEventListener('click', () => {
     popup.style.display = 'flex';
     if (previousImage === 4) {
-        popText.innerHTML = "Auf zum Musketenhügel!";
+        popText.innerHTML = "Auf zum <span style='font-weight: 700'>Musketenhügel</span>!";
         route.innerHTML += "<li>Musketenhügel</li>";
         // drawLine(image4, image7);
         previousImage = 7;
     }
     else {
-        popText.innerHTML = "Du bist doch gar nicht auf der Pirateninsel.";
+        popText.innerHTML = "Du bist doch gar nicht auf der <span style='font-weight: 700'>Pirateninsel</span>.";
     }
 });
 
@@ -59,26 +59,26 @@ rightOverlayPRI.addEventListener('click', () => {
 leftOverlaySWB.addEventListener('click', () => {
     popup.style.display = 'flex';
     if (previousImage === 1) {
-        popText.innerHTML = "Auf zum Musketenhügel!";
+        popText.innerHTML = "Auf zum <span style='font-weight: 700'>Musketenhügel!";
         route.innerHTML += "<li>Musketenhügel</li>";
         // drawLine(image1, image7);
         previousImage = 7;
     }
     else {
-        popText.innerHTML = "Du bist doch gar nicht in der Schiffswrackbucht.";
+        popText.innerHTML = "Du bist doch gar nicht in der <span style='font-weight: 700'>Schiffswrackbucht</span>.";
     }
 });
 // Beim Klicken auf B, Popup anzeigen
 rightOverlaySWB.addEventListener('click', () => {
     popup.style.display = 'flex';
     if (previousImage === 1) {
-        popText.innerHTML = "Auf zur Totenkopfinsel!";
+        popText.innerHTML = "Auf zur <span style='font-weight: 700'>Totenkopfinsel</span>!";
         route.innerHTML += "<li>Totenkopfinsel</li>";
         //   drawLine(image1, image2);
         previousImage = 2;
     }
     else {
-        popText.innerHTML = "Du bist doch gar nicht in der Schiffswrackbucht.";
+        popText.innerHTML = "Du bist doch gar nicht in der <span style='font-weight: 700'>Schiffswrackbucht</span>.";
     }
 });
 
@@ -86,26 +86,26 @@ rightOverlaySWB.addEventListener('click', () => {
 leftOverlaySMB.addEventListener('click', () => {
     popup.style.display = 'flex';
     if (previousImage === 6) {
-        popText.innerHTML = "Auf zur Pirateninsel!";
+        popText.innerHTML = "Auf zur <span style='font-weight: 700'>Pirateninsel</span>!";
         route.innerHTML += "<li>Pirateninsel</li>";
         // drawLine(image6, image4);
         previousImage = 4;
     }
     else {
-        popText.innerHTML = "Du bist doch gar nicht in der Schmugglerbucht.";
+        popText.innerHTML = "Du bist doch gar nicht in der <span style='font-weight: 700'>Schmugglerbucht</span>.";
     }
 });
 // Beim Klicken auf B, Popup anzeigen
 rightOverlaySMB.addEventListener('click', () => {
     popup.style.display = 'flex';
     if (previousImage === 6) {
-        popText.innerHTML = "Auf zur Schatzinsel!";
+        popText.innerHTML = "Auf zur <span style='font-weight: 700'>Schatzinsel</span>!";
         route.innerHTML += "<li style='background-color: darkgoldenrod;'> <span style='color: var(--bg-header); font-weight: 800;'>Schatzinsel </span></li>";
         //   drawLine(image6, image3);
         previousImage = 3;
     }
     else {
-        popText.innerHTML = "Du bist doch gar nicht in der Schmugglerbucht.";
+        popText.innerHTML = "Du bist doch gar nicht in der <span style='font-weight: 700'>Schmugglerbucht</span>.";
     }
 });
 
@@ -113,26 +113,26 @@ rightOverlaySMB.addEventListener('click', () => {
 leftOverlayMTI.addEventListener('click', () => {
     popup.style.display = 'flex';
     if (previousImage === 5) {
-        popText.innerHTML = "Auf zur Schmugglerbucht!";
+        popText.innerHTML = "Auf zur <span style='font-weight: 700'>Schmugglerbucht</span>!";
         route.innerHTML += "<li>Schmugglerbucht</li>";
         // drawLine(image5, image6);
         previousImage = 6;
     }
     else {
-        popText.innerHTML = "Du bist doch gar nicht auf der Meutererinsel.";
+        popText.innerHTML = "Du bist doch gar nicht auf der <span style='font-weight: 700'>Meutererinsel</span>.";
     }
 });
 // Beim Klicken auf B, Popup anzeigen
 rightOverlayMTI.addEventListener('click', () => {
     popup.style.display = 'flex';
     if (previousImage === 5) {
-        popText.innerHTML = "Auf zur Totenkopfinsel!";
+        popText.innerHTML = "Auf zur <span style='font-weight: 700'>Totenkopfinsel</span>!";
         route.innerHTML += "<li>Totenkopfinsel</li>";
         //   drawLine(image5, image2);
         previousImage = 2;
     }
     else {
-        popText.innerHTML = "Du bist doch gar nicht auf der Meutererinsel.";
+        popText.innerHTML = "Du bist doch gar nicht auf der <span style='font-weight: 700'>Meutererinsel</span>.";
     }
 });
 
@@ -140,26 +140,26 @@ rightOverlayMTI.addEventListener('click', () => {
 leftOverlayMKH.addEventListener('click', () => {
     popup.style.display = 'flex';
     if (previousImage === 7) {
-        popText.innerHTML = "Auf zur Pirateninsel!";
+        popText.innerHTML = "Auf zur <span style='font-weight: 700'>Pirateninsel</span>!";
         route.innerHTML += "<li>Pirateninsel</li>";
         // drawLine(image7, image4);
         previousImage = 4;
     }
     else {
-        popText.innerHTML = "Du bist doch gar nicht auf dem Musketenhügel.";
+        popText.innerHTML = "Du bist doch gar nicht auf dem <span style='font-weight: 700'> Musketenhügel</span>.";
     }
 });
 // Beim Klicken auf B, Popup anzeigen
 rightOverlayMKH.addEventListener('click', () => {
     popup.style.display = 'flex';
     if (previousImage === 7) {
-        popText.innerHTML = "Auf zur Meutererinsel!";
+        popText.innerHTML = "Auf zur <span style='font-weight: 700'>Meutererinsel</span>!";
         route.innerHTML += "<li>Meutererinsel</li>";
         //   drawLine(image7, image5);
         previousImage = 5;
     }
     else {
-        popText.innerHTML = "Du bist doch gar nicht auf dem Musketenhügel.";
+        popText.innerHTML = "Du bist doch gar nicht auf dem <span style='font-weight: 700'> Musketenhügel</span>.";
     }
 });
 
@@ -167,26 +167,26 @@ rightOverlayMKH.addEventListener('click', () => {
 leftOverlayTKI.addEventListener('click', () => {
     popup.style.display = 'flex';
     if (previousImage === 2) {
-        popText.innerHTML = "Auf zum Musketenhügel!";
+        popText.innerHTML = "Auf zum <span style='font-weight: 700'>Musketenhügel</span>!";
         route.innerHTML += "<li>Musketenhügel</li>";
         // drawLine(image2, image7);
         previousImage = 7;
     }
     else {
-        popText.innerHTML = "Du bist doch gar nicht auf der Totenkopfinsel.";
+        popText.innerHTML = "Du bist doch gar nicht auf der <span style='font-weight: 700'>Totenkopfinsel</span>.";
     }
 });
 // Beim Klicken auf B, Popup anzeigen
 rightOverlayTKI.addEventListener('click', () => {
     popup.style.display = 'flex';
     if (previousImage === 2) {
-        popText.innerHTML = "Auf zur Schiffwrackbucht!";
+        popText.innerHTML = "Auf zur <span style='font-weight: 700'>Schiffwrackbucht</span>!";
         route.innerHTML += "<li>Schiffswrackbucht</li>";
         //   drawLine(image2, image1);
         previousImage = 1;
     }
     else {
-        popText.innerHTML = "Du bist doch gar nicht auf der Totenkopfinsel.";
+        popText.innerHTML = "Du bist doch gar nicht auf der <span style='font-weight: 700'>Totenkopfinsel</span>.";
     }
 });
 
@@ -231,6 +231,6 @@ window.addEventListener('click', (e) => {
 
 image8.addEventListener('click', () => {
 svg.innerHTML = '';
-route.innerHTML = "";
+route.innerHTML = "<li>Pirateninsel</li>";
 previousImage = 4;
 });
