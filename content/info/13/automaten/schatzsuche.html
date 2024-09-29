@@ -11,9 +11,11 @@
   <link rel="stylesheet" type="text/css" href="/css/navbar.css" />
   <link rel="stylesheet" type="text/css" href="/css/styles.css" />
   <link rel="stylesheet" type="text/css" href="/css/courses.css" />
-  <script type="text/javascript" src="jquery-3.3.1.js"></script>
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <link rel="stylesheet" type="text/css" href="/css/schatz.css" />
+  
+  <!-- <script type="text/javascript" src="jquery-3.3.1.js"></script> -->
+  <!-- <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script> -->
+  <!-- <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script> -->
 </head>
 
 <body>
@@ -52,12 +54,148 @@
         </p>
       </div> -->
       <div class="theorie">
+        <p>
+          Im Folgenden sollt ihr, von der Pirateninsel beginnend einen Weg zur Schatzinsel finden.
+        Von jeder Insel immer zwei Schiffe (A und B) ab. Leider weiß man vor der Abfahrt nicht, wo sie hinfahren.
+        Der Routen ändern sich aber nicht, das heißt Schiff A von Insel X fährt immer zu Insel Y.
+        </p>
+        <p>
+          Ein Klick auf den Wal löscht die aktuelle Route und man startet wieder auf der Pirateninsel.
+        </p>
+        <p>
+          Deine aktuelle Route:  
+          <ol class="multi-column" id="route">
+
+          </ol>
+        </p>
         
 
+        <div class="image-grid">
+          <!-- Reihe 1 -->
+          <div class="image-container image1" id="image1">
+            <img src="img/SWB.png" alt="Bild 1" class="main-image">
+            <div class="overlay">
+              <div class="left" id="left-overlaySWB">
+                <!-- Kleines Bild für Overlay A -->
+                <img src="img/BootL.png" alt="Bild A">
+                A
+              </div>
+              <div class="right" id="right-overlaySWB">
+                <!-- Kleines Bild für Overlay B -->
+                <img src="img/BootR.png" alt="Bild B">
+                B
+              </div>
+            </div>
+          </div>
+          <div class="image-container image2" id="image2">
+            <img src="img/TKI.png" alt="Bild 2" class="main-image">
+            <div class="overlay">
+              <div class="left" id="left-overlayTKI">
+                <!-- Kleines Bild für Overlay A -->
+                <img src="img/BootL.png" alt="Bild A">
+                A
+              </div>
+              <div class="right" id="right-overlayTKI">
+                <!-- Kleines Bild für Overlay B -->
+                <img src="img/BootR.png" alt="Bild B">
+                B
+              </div>
+            </div>
+          </div>
+          <div class="image-container image3" id="image3">
+            <img src="img/SZI.png" alt="Bild 3" class="main-image">
+          </div>
+
+          <!-- Reihe 2 -->
+          <div class="image-container image4" id="image4">
+            <img src="img/PRI.png" alt="Bild 4" class="main-image">
+            <div class="overlay">
+              <div class="left" id="left-overlayPRI">
+                <!-- Kleines Bild für Overlay A -->
+                <img src="img/BootL.png" alt="Bild A">
+                A
+              </div>
+              <div class="right" id="right-overlayPRI">
+                <!-- Kleines Bild für Overlay B -->
+                <img src="img/BootR.png" alt="Bild B">
+                B
+              </div>
+            </div>
+          </div>
+          <div class="image-container image5" id="image5">
+            <img src="img/MTI.png" alt="Bild 5" class="main-image">
+            <div class="overlay">
+              <div class="left" id="left-overlayMTI">
+                <!-- Kleines Bild für Overlay A -->
+                <img src="img/BootL.png" alt="Bild A">
+                A
+              </div>
+              <div class="right" id="right-overlayMTI">
+                <!-- Kleines Bild für Overlay B -->
+                <img src="img/BootR.png" alt="Bild B">
+                B
+              </div>
+            </div>
+          </div>
+          <div class="image-container image6" id="image6">
+            <img src="img/SMB.png" alt="Bild 6" class="main-image">
+            <div class="overlay">
+              <div class="left" id="left-overlaySMB">
+                <!-- Kleines Bild für Overlay A -->
+                <img src="img/BootL.png" alt="Bild A">
+                A
+              </div>
+              <div class="right" id="right-overlaySMB">
+                <!-- Kleines Bild für Overlay B -->
+                <img src="img/BootR.png" alt="Bild B">
+                B
+              </div>
+            </div>
+          </div>
+
+          <!-- Reihe 3 -->
+          <div class="image-container image7" id="image7">
+              <img src="img/MKH.png" alt="Bild 7" class="main-image">
+              <div class="overlay">
+                <div class="left" id="left-overlayMKH">
+                  <!-- Kleines Bild für Overlay A -->
+                  <img src="img/BootL.png" alt="Bild A">
+                  A
+                </div>
+                <div class="right" id="right-overlayMKH">
+                  <!-- Kleines Bild für Overlay B -->
+                  <img src="img/BootR.png" alt="Bild B">
+                  B
+                </div>
+              </div>
+          </div>
+          <div class="image-container image8" id="image8">
+              <img src="img/wal.png" alt="Bild 8" class="main-image">
+          </div>
+        </div>
+
+        <!-- SVG zum Zeichnen der Linien -->
+        <svg id="lines" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+          <!-- Linien werden hier dynamisch hinzugefügt -->
+        </svg>
+
+        <!-- Popup für A/B -->
+        <div class="popup-overlay" id="popup">
+          <div class="popup-content">
+            <p id="popText">Das ist ein Popup!</p>
+            <button class="close-btn" id="close">Schließen</button>
+          </div>
+        </div>
 
 
-        
+
       </div>
+      <script type="text/javascript" src="/js/info/schatzinsel.js"></script>
+
+      <p>
+        Bilder und Idee stammen von <a href="https://www.csunplugged.org/de/resources/treasure-island/"
+        target="_blank" rel="noopener noreferrer">hier </a>
+      </p>
     </section>
     <!-- <section>
 
@@ -109,7 +247,7 @@
     <a href="/misc/impressum.html">Impressum</a>
     <div class="lastModified" align="center">
       Zuletzt geändert:<br />
-      11. September 2024
+      29. September 2024
       <!-- <span id="lastModifiedDate"></span> -->
     </div>
     <a href="/misc/datenschutz.html">Datenschutz</a>
