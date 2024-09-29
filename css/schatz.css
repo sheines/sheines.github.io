@@ -8,7 +8,7 @@
 .multi-column li {
     width: calc(25% - 10px); /* 3 Spalten mit Abstand */
     margin: 5px; /* Abstand zwischen den Listenelementen */
-    background-color: var(--bg-header); /* Hintergrundfarbe für die Listenelemente */
+    background-color: var(--bg-header) ; /* Hintergrundfarbe für die Listenelemente */
     padding: 10px; /* Innenabstand */
     box-sizing: border-box; /* Box-Modell berücksichtigen */
     border-radius: 7px;

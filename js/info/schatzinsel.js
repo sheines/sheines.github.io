@@ -158,7 +158,7 @@ rightOverlayMKH.addEventListener('click', () => {
         //   drawLine(image7, image5);
         previousImage = 5;
     }
-    else {
+    else { 
         popText.innerHTML = "Du bist doch gar nicht auf dem <span style='font-weight: 700'> Musketenhügel</span>.";
     }
 });
