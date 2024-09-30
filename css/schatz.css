@@ -49,6 +49,19 @@
     background-color: rgba(0, 0, 255, 0.15); /* Blauer Bereich */
   }
 
+  .overlay div.left:hover {
+    transform: scale(1.05);
+    border-style: solid;
+    border-width: 1px;
+    border-color: green;
+  }
+  .overlay div.right:hover {
+    transform: scale(1.05);
+    border-style: solid;
+    border-width: 1px;
+    border-color: lightblue;
+  }
+
   /* Bilder in der linken und rechten Overlay-Hälfte */
   .overlay img {
     height: 100%; /* Beibehaltung des Seitenverhältnisses */
