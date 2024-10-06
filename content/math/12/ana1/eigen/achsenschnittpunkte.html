@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" initial-scale="1.0" />
+  <meta name="author" content="Sebastian Hitziger" />
+  <meta name="robot" content="noindex" />
+  <title>HITZ | Fkt-Eigensch. | Achsenschnittpunkte </title>
+  <link rel="stylesheet" type="text/css" href="/css/colors.css" />
+  <link rel="stylesheet" type="text/css" href="/css/gridNoTimeline.css" />
+  <link rel="stylesheet" type="text/css" href="/css/navbar.css" />
+  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="/css/courses.css" />
+  <script type="text/javascript" src="jquery-3.3.1.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+
+<body>
+  <header>
+    <div class="nav">
+      <input type="checkbox" id="nav-check" />
+      <div class="nav-header">
+        <div class="nav-title">
+          <a href="/">Hr. Hitzigers Unterricht</a>
+        </div>
+      </div>
+      <div class="nav-btn">
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+
+      <div class="nav-links">
+        <a href="/content/math/">Mathematik</a>
+        <a href="/content/math/12/">Klasse 12</a>
+        <a href="/content/math/12/ana1/">Analysis I</a>
+        <a href="/content/math/12/ana1/eigen/">Funktionseigenschaften</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section>
+      <h2>Achsenschnittpunkte</h2>
+      <div class="ziele">
+        <p>
+          Nachfolgend soll erklärt werden, welche Arten von Symmetrie es gibt und wie diese bei Polynomen bestimmt wird.
+        </p>
+        <p>
+          <a href="#aufgaben">Direkt zu den Aufgaben</a>
+        </p>
+      </div>
+
+
+
+      <div class="theorie">
+
+        <div class="definition">
+          <h4>Schnittpunkte mit den Achsen</h4>
+          <p>
+            Wenn eine Funktion eine der beiden Achsen schneidet, ist jeweils andere Koordinate immer null.
+          </p>
+          <h5>Schnittpunkt mit \(y\)-Achse</h5>
+          <p>
+            Um den Schnittpunkt mit der \(y\)-Achse zu berechnen, muss lediglich \(x=0\) in die Funktion eingesetzt werden. 
+          </p>
+          <p>
+            Es gilt dann: \(S_y(0\,|\,f(0))\)
+          </p>
+          <p>  
+            Eine Funktion hat maximal einen Schnittpunkt mit der \(y\)-Achse.
+          </p>
+          <h5>Schnittpunkte mit der \(x\)-Achse</h5>
+          <p>
+            Um die Schnittpunkte einer Funktion mit der \(x\)-Achse zu berechnen, müssen <i>alle</i> Nullstellen der Funktion
+            bestimmt werden. Es wird also \(y=0\) gesetzt.
+          </p>
+          <p></p>
+            Es gilt dann: \(S_x(x_0\,|\,0)\)
+          </p>
+          <p>
+            Eine Funktion kann
+            <ul>
+              <li>keine Schnittpunkte mit der \(x\)-Achse haben (z.B. die Exponentialfunktion),</li>
+              <li>einen oder mehr Schnittpunkte haben (z.B. lineare, quadratische und andere Polynomfunktionen),</li>
+              <li>unendlich viele Schnittpunkte haben (z.B. Sinusfunktion).</li>
+            </ul>
+          </p>
+          <h6>Allgemeine Regeln für Nullstellen</h6>
+          <p>
+            <ul>
+              <li>Bei verschachtelten Funktionen: von außen nach innen arbeiten,</li>
+              <li>Ein Produkt ist null, wenn <i>ein</i> Faktor null ist,</li>
+              <li>Ein Bruch ist null, wenn der Zähler null ist (Definitionslücken beachten!),</li>
+              <li>Bei Polynomen nur sinnvolle Lösungen probieren und dann Polynomdivision nutzen.</li>
+            </ul>
+          </p>
+          <p>
+            Die Berechnung von Nullstellen ist unter anderem hier zu finden:
+            <ul>
+              <li><a href="/content/math/11/linfkt/begriffe" target="_blank" rel="noopener noreferrer">Lineare Funktionen</a></li>
+              <li><a href="/content/math/11/potfkt/wdlhquadfkt.html" target="_blank" rel="noopener noreferrer">Quadratische Funktionen (NF)</a> oder
+                <a href="/content/math/11/potfkt/darstellung_streckung.html" target="_blank" rel="noopener noreferrer">Quadratische Funktionen (AF)</a></li>
+              <li><a href="/content/math/11/ganzrat/biquadrat.html" target="_blank" rel="noopener noreferrer">Biquadratische Funktionen</a></li>
+              <li><a href="/content/math/11/ganzrat/nullstellen.html" target="_blank" rel="noopener noreferrer">Beliebige Polynome</a></li>
+            </ul>
+          </p>
+        </div>
+        <h6>Beispiel 1: \(y\)-Achse</h6>
+        <p>
+          Es soll der Schnittpunkt mit der \(y\)-Achse der Funktion \(f(x)=2x^3-3x+5\) bestimmt werden:
+          <ul class="custom-marker more-spacing">
+            <li> \(\color{green}x=0\) einsetzen: \(f({\color{green}0})=2\cdot {\color{green}0}^3 - 3 \cdot  {\color{green}0}+5=\color{orange}5 \)
+            </li>
+            <li>Schnittpunkt angeben: \(S_y(0\,|\,{\color{orange}5})\)</li>
+          </ul>
+        </p>
+        <h6>Beispiel 2: \(x\)-Achse</h6>
+        <p>
+          Es soll der Schnittpunkt mit der \(x\)-Achse der Funktion \(f(x)=4x+24\) bestimmt werden.
+          <ul class="custom-marker more-spacing">
+            <li>Funktion gleich null setzen: \(0=4x+24\) </li>
+            <li>Nach \(x\) umstellen:
+              \begin{align*}
+                0&=4x+24 \qquad |-24 \\
+                -24&=4x \qquad \qquad\ | :4\\
+                x&=\color{red}-6
+              \end{align*}
+            </li>
+            <li>Schnittpunkt angeben: \(S_x({\color{red}-6}\,|\,0)\)</li>
+          </ul>
+        </p>
+        
+
+        
+      </div>
+    </section>
+    <!-- <section>
+      <div class="videos" style="margin-bottom: 15px;">
+        <iframe width="360" height="202" src="https://www.youtube.com/embed/MoYOfFcK3m4"
+          title="Definitionensbereich - Rationale Funktion" frameborder="0" allow="web-share" allowfullscreen></iframe>
+      </div>
+    </section> -->
+    <section class="aufgaben" id="aufgaben">
+
+      <!-- <p>
+            Die Nutzung von <a href="https://geogebra.org/calculator" target="_blank"
+              rel="noopener noreferrer">Geogebra</a> ist empfohlen.
+          </p>
+          <details class="openClose" style="border-color: lightblue; margin-top: 10px;">
+            <summary class="nonumber" data-open="Funktionen einklappen" data-close="Funktionen ausklappen">
+            </summary>
+            <ol class="custom-marker parens-around lower-alpha more-spacing">
+              <li>\(f(x)=a\)</li>
+
+            </ol>
+          </details> -->
+
+      <h3>Aufgaben zu Achsenschnittpunkten</h3>
+      <ol class="custom-marker point-after decimal more-spacing">
+        <li>Bestimme die Achsenschnittpunkte der folgenden Funktionen! <a href="#a1">Lösungen</a>
+          <details class="openClose" style="border-color: lightblue; margin-top: 10px;">
+            <summary class="nonumber" data-open="Funktionen einklappen" data-close="Funktionen ausklappen">
+            </summary>
+            <ol class="custom-marker parens-around lower-alpha">
+              <li>\(\displaystyle a(x)=2^{2x}\)</li>
+              <li>\(\displaystyle b(x)=(x^2+x-6)\cdot 2^x\)</li>
+              <li>\(\displaystyle c(x)=(x-3)(x+4)(2-x)\)</li>
+              <li>\(\displaystyle d(x)=(x-1)(x+3)^2(x+1)\)</li>
+              <li>\(\displaystyle e(x)=(x+1)(2-x)(1+x^2)\)</li>
+              <li>\(\displaystyle f(x)=x\cdot 2^{2x}\)</li>
+              <li>\(\displaystyle g(x)=(x^2-4)\cdot 2^{2x}\)</li>
+              <li>\(\displaystyle h(x)=1-2^{4x-2}\)</li>
+              <li>\(\displaystyle i(x)=2^{3x+6}+1\)</li>
+              <li>\(\displaystyle j(x)=2^{x^2-3}-2\)</li>
+              <li>\(\displaystyle k(x)=2^{x}+2^{-x}\)</li>
+              <li>\(\displaystyle l(x)=\left(2^{x}+2^{-x}\right)^2\)</li>
+              <li>\(\displaystyle m(x)=\dfrac{1}{2x-4}\)</li>
+              <li>\(\displaystyle n(x)=\dfrac{2}{x-3}+1\)</li>
+              <li>\(\displaystyle o(x)=\dfrac{x^3}{(x-1)^2}+7x\)</li>
+              <li>\(\displaystyle p(x)=\dfrac{2^x-4}{2^{2x}-5}\)</li>
+              <li>\(\displaystyle q(x)=\dfrac{\sqrt{x^2-4}\cdot (x^2-9)}{x^2+x-6}\)</li>
+              <li>\(\displaystyle r(x)=\ln\left(x^2-3\right)\)</li>
+              <li>\(\displaystyle s(x)=\ln\left(\dfrac{x+2}{x^2}\right)\)</li>
+              <li>\(\displaystyle t(x)=(1-x)\cdot\ln\left(1-\frac 1x\right)\)</li>
+              <li>\(\displaystyle u(x)=\dfrac{1}{2-\ln\left(x^2-1\right)}\)</li>
+              <li>\(\displaystyle v(x)=\left(\frac2x\right)^2\cdot\left(1+2\ln\frac x2\right)\)</li>
+              <li>\(\displaystyle w(x)=(3-|x|)(x+1)\)</li>
+              <li>\(\displaystyle x(x)=3\cdot(x^2-4)\cdot(|x|+1)\)</li>
+              <li>\(\displaystyle y(x)=\left|x^2-4\right|\cdot\left(\left|4x+2\right|^2-4\right)\)</li>
+              <!-- <li>\(\displaystyle z(x)=2^{2x}\)</li> -->
+            </ol>
+          </details>
+
+        </li>
+      </ol>
+
+
+
+    </section>
+
+    <section class="loesungen">
+      <h3>Lösungen zu Achsenschnittpunkten</h3>
+
+      <details id="a1">
+        <summary>Achsenschnittpunkte</summary>
+
+        <ol class="custom-marker parens-around lower-alpha" >
+          <li>Punktsymmetrie</li>
+
+        </ol>
+      </details>
+
+
+      <!-- <details id="a2">
+        <summary>Buch Seite 44 Nummer 3</summary>
+
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>\(\)</li>
+
+        </ol>
+
+      </details> -->
+    </section>
+
+    <section id="meme">
+      <div class="images">
+        <img src="/img/nullStelle_meme.webp" style="object-fit: scale-down; max-width: 300px" />
+      </div>
+      <div class="centered">
+        <a href="https://kekememes.de/picture/grafen-in-der-geschichte-graphen-in-der-mathematik-nullstellen-berechnen-p04B72Ca8?s=cl"
+          target="_blank" rel="noopener noreferrer">
+          <h6>Original von pureDoctordeutsche_2020</h6>
+        </a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <a href="/misc/impressum.html">Impressum</a>
+    <div class="lastModified" align="center">
+      Zuletzt geändert:<br />
+      22. September 2024
+      <!-- <span id="lastModifiedDate"></span> -->
+    </div>
+    <a href="/misc/datenschutz.html">Datenschutz</a>
+  </footer>
+</body>
