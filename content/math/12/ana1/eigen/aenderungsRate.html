@@ -192,10 +192,11 @@
         <div class="definition">
           <h4>Lokale Änderungsrate</h4>
           <p>
-            ...
-            <!-- <ul class="custom-marker more-spacing">
-              <li>..</li>
-            </ul> -->
+            Die lokale Änderungsrate gibt die Steigung der Funktion \(f\) an einer bestimmten Stelle \(x_0\) an. 
+            Es handelt sich dabei um die Ableitung \(f'\) der Funktion \(f\) an der Stelle \(x_0\).
+          </p>
+          <p>
+            Dazu muss der Abstand der beiden Sekantenpunkte gegen null gehen. Die Sekante wird dabei zur Tangente.
           </p>
           <div class="centered" style="max-height: 325px;">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="-12 -6 26 11">
@@ -282,7 +283,91 @@
             </svg>
             <script type="text/javascript" src="/js/math/lokaleAenderungsRate.js"></script>
           </div>
+          <p>
+            Die lokale Änderungsrate berechnet sich ähnlich der mittleren Änderungsrate. 
+            Nun muss allerdings der <b>Differentialquotient</b> berechnet werden:
+            \begin{align*}
+            {f'(x_0)}=\lim_{x\rightarrow x_0}\frac{f(x)-f(x_0)}{x-x_0}=\lim_{h\rightarrow 0}\frac{f(x_0+h)-f(x_0)}{h}
+            \end{align*}
+            Ob zum Lösen des Grenzwertes die \(h\)-Methode (rechts) oder die Termumformung (links) genutzt wird, ist egal.
+          </p>
         </div>
+        <h6>Beispiel 1:</h6>
+        <p>
+          Der Anstieg der Funktion \(f(x)=x^2-5x+1\) an der Stelle \(x_0=3\) soll bestimmt werden.
+          <ul class="custom-marker more-spacing">
+            <li>
+              Der Anstieg/Steigung meint die lokale Änderungsrate \(f'\).
+            </li>
+            <li>
+              Die zu berechnende Stelle \(x_0\) ist mit \(\color{red}x_0=3\) gegeben.
+            </li>
+            <li>
+              Das heißt:
+              <ul>
+                <li>\(f(x_0)=f({\color{red}3})={\color{red}3}^2-5\cdot{\color{red}3}+1=\color{green}-5\)</li>
+                <li>\(f(x_0+h)=f({\color{red}3}+h)=({\color{red}3}+h)^2-5\cdot({\color{red}3}+h)+1\) <br>
+                  \(\qquad\qquad =9+6h+h^2-15-5h+1=\color{magenta}h^2+h-5\)
+                </li>
+              </ul>
+            </li>
+            <li>
+              Grenzwert berechnen (wie immer: ausführlicher als nötig):
+              \begin{align*}
+                f'({\color{red}3})&=\lim_{h\rightarrow 0}\frac{f(x_0+h)-f(x_0)}{h} \\
+                f'({\color{red}3})&=\lim_{h\rightarrow 0}\frac{{\color{magenta}h^2+h-5}-({\color{green}-5})}{h} \\
+                f'({\color{red}3})&=\lim_{h\rightarrow 0}\frac{h^2+h}{h} \\
+                f'({\color{red}3})&=\lim_{h\rightarrow 0}\frac{\cancel{h}\cdot (h+1)}{\cancel{h}}\\
+                f'({\color{red}3})&=\lim_{\color{orange}h\rightarrow 0}h+1\qquad \color{orange}h\rightarrow 0 \\
+                f'({\color{red}3})&={\color{orange}0}+1 \\
+                f'({\color{red}3})&=\color{cyan}1
+              \end{align*}
+            </li>
+            <li>
+              Der Anstieg der Funktion \(f(x)=x^2-5x+1\) an der Stelle \(x_0=3\) ist \(f'(3)=\color{cyan}1\).
+            </li>
+          </ul>
+        </p>
+        <h6>Beispiel 2:</h6>
+        <p>
+          Der Steigung der Tangente der Funktion \(f(x)=x^4-3x^2+2\) an der Stelle \(x_0=-2\) soll bestimmt werden.
+          <ul class="custom-marker more-spacing">
+            <li>
+              Der Anstieg/Steigung meint die lokale Änderungsrate \(f'\).
+            </li>
+            <li>
+              Die zu berechnende Stelle \(x_0\) ist mit \(\color{red}x_0=-2\) gegeben.
+            </li>
+            <li>
+              Das heißt:
+              <ul>
+                <li>\(f(x_0)=f({\color{red}-2})=({\color{red}-2})^4-3\cdot({\color{red}-2})^2+2=\color{green}6\)</li>
+                <li>\(f(x_0+h)=f({\color{red}-2}+h)=f(h\,{\color{red}-2})=(h\,{\color{red}-2})^4-3\cdot (h\,{\color{red}-2})^2+2\) <br>
+                  \(\qquad\qquad =h^4-8h^3+24h^2-32h+16-3\cdot(h^2-4h+4)+2\) <br>
+                  \(\qquad\qquad =h^4-8h^3+24h^2-32h+16-3h^2+12h-12+2 \) <br>
+                  \(\qquad\qquad=\color{magenta}h^4 - 8 h^3 + 21 h^2 - 20 h + 6\)
+                </li>
+                <li>Binomische Formeln höheren Grades sind im Tafelwerk unter 
+                  &bdquo;Pascalsches (Zahlen)dreieck&rdquo; zu finden. </li>
+              </ul>
+            </li>
+            <li>
+              Grenzwert berechnen:
+              \begin{align*}
+                f'({\color{red}3})&=\lim_{h\rightarrow 0}\frac{f(x_0+h)-f(x_0)}{h} \\
+                f'({\color{red}3})&=\lim_{h\rightarrow 0}\frac{{\color{magenta}h^4-8h^3+21h^2-20h+6}-{\color{green}6}}{h} \\
+                f'({\color{red}3})&=\lim_{h\rightarrow 0}\frac{h^4-8h^3+21h^2-20h}{h} \\
+                f'({\color{red}3})&=\lim_{h\rightarrow 0}\frac{\cancel{h}\cdot (h^3-8h^2+21h-20)}{\cancel{h}}\\
+                f'({\color{red}3})&=\lim_{\color{orange}h\rightarrow 0}h^3-8h^2+21h-20\qquad \color{orange}h\rightarrow 0 \\
+                f'({\color{red}3})&={\color{orange}0}^3-8\cdot{\color{orange}0}^2+21\cdot{\color{orange}0}-20 \\
+                f'({\color{red}3})&=\color{cyan}-20
+              \end{align*}
+            </li>
+            <li>
+              Der Anstieg der Funktion \(f(x)=x^4-3x^2+2\) an der Stelle \(x_0=-2\) ist \(f'(-2)=\color{cyan}-20\).
+            </li>
+          </ul>
+        </p>
       </div>
     </section>
     <!-- <section>
@@ -304,6 +389,14 @@
         <li>Grenzwerte:
           <ol class="custom-marker point-after decimal" style="counter-set: list 2;">
             <li>Wiederhole die Berechnung von Grenzwerten! </li> <!-- <a href="#a3">Lösungen</a> -->
+          </ol>
+        </li>
+        <li>Lokale Änderungsrate:
+          <ol class="custom-marker point-after decimal" style="counter-set: list 3;">
+            <li>Buch, Seite 90 Übung 1 <a href="#a4">Lösungen</a></li>
+            <li>Buch, Seite 91 Übung 2 und 3 <a href="#a5">Lösungen</a></li>
+            <li>Buch, Seite 92 Übung 4 <a href="#a6">Lösungen</a></li>
+            <li>Buch, Seite 95 Übung 10 und 13 <a href="#a7">Lösungen</a></li>
           </ol>
         </li>
       </ul>
@@ -366,7 +459,7 @@
     <a href="/misc/impressum.html">Impressum</a>
     <div class="lastModified" align="center">
       Zuletzt geändert:<br />
-      8. Oktober 2024
+      28. Oktober 2024
       <!-- <span id="lastModifiedDate"></span> -->
     </div>
     <a href="/misc/datenschutz.html">Datenschutz</a>

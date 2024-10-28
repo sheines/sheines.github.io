@@ -6,7 +6,7 @@ const svgPoint2 = document.getElementById('point2');
 const connectingLine = document.getElementById('connectingLine');
 
 const initialDistance = Math.sqrt((point1.x - point2.x) * (point1.x - point2.x) + (point1.y - point2.y) * (point1.y - point2.y));
-const stepSize = 0.01; // Geschwindigkeit der Bewegung
+const stepSize = 0.02; // Geschwindigkeit der Bewegung
 let step = stepSize;
 
 function movePoint() {
