@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" initial-scale="1.0" />
+  <meta name="author" content="Sebastian Hitziger" />
+  <meta name="robot" content="noindex" />
+  <title>HITZ | Fkt-Eigensch. | Ableitung I </title>
+  <link rel="stylesheet" type="text/css" href="/css/colors.css" />
+  <link rel="stylesheet" type="text/css" href="/css/gridNoTimeline.css" />
+  <link rel="stylesheet" type="text/css" href="/css/navbar.css" />
+  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="/css/courses.css" />
+  <script type="text/javascript" src="jquery-3.3.1.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+
+
+<body>
+  <header>
+    <div class="nav">
+      <input type="checkbox" id="nav-check" />
+      <div class="nav-header">
+        <div class="nav-title">
+          <a href="/">Hr. Hitzigers Unterricht</a>
+        </div>
+      </div>
+      <div class="nav-btn">
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+
+      <div class="nav-links">
+        <a href="/content/math/">Mathematik</a>
+        <a href="/content/math/12/">Klasse 12</a>
+        <a href="/content/math/12/ana1/">Analysis I</a>
+        <a href="/content/math/12/ana1/eigen/">Funktionseigenschaften</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section>
+      <h2>Ableitung I</h2>
+      <div class="ziele">
+        <p>
+          Nachfolgend soll die Bedeutung der Ableitung veranschaulicht und selbige graphisch bestimmt werden.
+        </p>
+        <p>
+          <a href="#aufgaben">Direkt zu den Aufgaben</a>
+        </p>
+      </div>
+
+
+
+      <div class="theorie">
+
+        <div class="definition">
+          <h4>Ableitungsfunktion</h4>
+          <p>
+            ...
+          </p>
+          <div class="centered" style="max-height: 325px;">
+
+            <!-- Oberes SVG: Darstellung von f(x) mit animiertem Punkt und Tangente -->
+            <svg id="functionSvg" xmlns="http://www.w3.org/2000/svg" viewBox="-12 -6 26 13">
+
+              <!-- X-Achse -->
+              <line x1="-10" y1="0" x2="10" y2="0" stroke="#a7a7a7" stroke-width="0.05" />
+              <polygon points="10.5,0 9.8,-0.15 9.8,0.15" fill="#a7a7a7" />
+              <text x="10.7" y="0.7" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">x</text>
+
+              <!-- Y-Achse -->
+              <line x1="0" y1="5" x2="0" y2="-5" stroke="#a7a7a7" stroke-width="0.05" />
+              <polygon points="0,-5.5 -0.15,-4.8 0.15,-4.8" fill="#a7a7a7" />
+              <text x="-0.8" y="-5.3" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">y</text>
+
+            </svg>
+          </div>
+
+          <div class="centered" style="max-height: 325px;">
+            <!-- Unteres SVG: Darstellung der Ableitung f'(x), die sich aufbaut -->
+            <svg id="derivativeSvg" xmlns="http://www.w3.org/2000/svg" viewBox="-12 -6 26 13">
+
+              <!-- X-Achse -->
+              <line x1="-10" y1="0" x2="10" y2="0" stroke="#a7a7a7" stroke-width="0.05" />
+              <polygon points="10.5,0 9.8,-0.15 9.8,0.15" fill="#a7a7a7" />
+              <text x="10.7" y="0.7" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">x</text>
+
+              <!-- Y-Achse -->
+              <line x1="0" y1="5" x2="0" y2="-5" stroke="#a7a7a7" stroke-width="0.05" />
+              <polygon points="0,-5.5 -0.15,-4.8 0.15,-4.8" fill="#a7a7a7" />
+              <text x="-0.8" y="-5.3" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">y</text>
+
+            </svg>
+
+
+            <script type="text/javascript" src="/js/math/ableitungsAnimation.js"></script>
+          </div>
+
+        </div>
+
+        <h6>Beispiel:</h6>
+
+
+
+      </div>
+    </section>
+    <!-- <section>
+            <div class="videos">
+                <iframe width="360" height="202" src="https://www.youtube.com/embed/19goPRnthCE"
+                    title="Abstand Punkt - Punkt" frameborder="0" allow="web-share" allowfullscreen></iframe>
+
+            </div>
+        </section> -->
+    <section class="aufgaben" id="aufgaben">
+      <h3>Aufgaben zu Ableitungen</h3>
+      <ul class="more-spacing">
+        <li>Mittlere Änderungsrate:
+          <ol class="custom-marker point-after decimal">
+            <li>Buch, Seite 82 Übung 1 <a href="#a1">Lösungen</a></li>
+            <li>Buch, Seite 83 Übung 2 <a href="#a2">Lösungen</a></li>
+          </ol>
+        </li>
+        <li>Grenzwerte:
+          <ol class="custom-marker point-after decimal" style="counter-set: list 2;">
+            <li>Wiederhole die Berechnung von Grenzwerten! </li> <!-- <a href="#a3">Lösungen</a> -->
+          </ol>
+        </li>
+        <li>Lokale Änderungsrate:
+          <ol class="custom-marker point-after decimal" style="counter-set: list 3;">
+            <li>Buch, Seite 90 Übung 1 <a href="#a4">Lösungen</a></li>
+            <li>Buch, Seite 91 Übung 2 und 3 <a href="#a5">Lösungen</a></li>
+            <li>Buch, Seite 92 Übung 4 <a href="#a6">Lösungen</a></li>
+            <li>Buch, Seite 95 Übung 10 und 13 <a href="#a7">Lösungen</a></li>
+          </ol>
+        </li>
+      </ul>
+
+    </section>
+
+    <section class="loesungen">
+      <h3>Lösungen zu Änderungsraten</h3>
+
+      <details id="a1">
+        <summary>Seite 82 Übung 1</summary>
+        Skizze fehlt hier aus Platzgründen: Wertetabelle anlegen, Graph zeichnen, Intervallanfang und -ende auf Graph
+        markieren und gerade verbinden.
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>\(\tfrac{\Delta f}{\Delta x}=\frac{4}{2}=2\)</li>
+          <li>\(\tfrac{\Delta f}{\Delta x}=\frac{-1,5}{6}=-\tfrac14\)</li>
+          <li>\(\tfrac{\Delta f}{\Delta x}=\frac{2}{1}=2\)</li>
+          <li>\(\tfrac{\Delta f}{\Delta x}=\frac{6}{2}=3\)</li>
+        </ol>
+      </details>
+      <details id="a2">
+        <summary>Seite 83 Übung 2</summary>
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>Parabel zeichnen: schneidet \(x\)-Achse in \(x=0\) und \(x=2\), \(y\)-Achse in \(y=0\)</li>
+          <li>
+            <ul>
+              <li>Intervall \([-2; 0]\): \(\tfrac{\Delta f}{\Delta x}=-4\)</li>
+              <li>Intervall \([0; 3]\): \(\tfrac{\Delta f}{\Delta x}=1\)</li>
+            </ul>
+          </li>
+          <li>
+            <ul>
+              <li>Intervall \([-1; 3]\): \(\tfrac{\Delta f}{\Delta x}=0\)</li>
+              <li>Die Funktion ändert sich zwar im genannten Intervall, jedoch hat sie am Intervallanfang den gleichen
+                Wert wie am Ende.
+                Die mittlere Steigung ist deshalb null.
+              </li>
+            </ul>
+          </li>
+          <li>
+            <ul>
+              <li>\(\tfrac{\Delta f}{\Delta x}=1\): z.B. \([1; 2]\)</li>
+              <li>\(\tfrac{\Delta f}{\Delta x}=2\): z.B. \([1; 3]\)</li>
+            </ul>
+          </li>
+        </ol>
+      </details>
+
+
+
+
+
+    </section>
+
+    <section id="meme">
+      <div class="images">
+        <img src="/img/aenderung_meme.jpg" style="object-fit: scale-down; max-width: 300px" />
+      </div>
+      <div class="centered">
+        <a href="https://www.reddit.com/r/mathmemes/comments/d5zvzq/puff_puff_positive/#lightbox" target="_blank"
+          rel="noopener noreferrer">
+          <h6>Original von dankmemesbechildless</h6>
+        </a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <a href="/misc/impressum.html">Impressum</a>
+    <div class="lastModified" align="center">
+      Zuletzt geändert:<br />
+      29. Oktober 2024
+      <!-- <span id="lastModifiedDate"></span> -->
+    </div>
+    <a href="/misc/datenschutz.html">Datenschutz</a>
+  </footer>
+</body>
