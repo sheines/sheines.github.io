@@ -117,15 +117,12 @@ function AnimationPP() {
         delay: 9500,
     });
 
+    setTimeout(resetPP, 13500);
 }
 
 
-
-// Attach click event listener to the SVG element
-const svgElement = document.getElementById('abstandPunkt_svg');
-
-svgElement.addEventListener('click', () => {
-
+function resetPP() {
+    
     // Animation rückwärts
 
     // Abstand animieren
@@ -188,4 +185,4 @@ svgElement.addEventListener('click', () => {
     });
     
     setTimeout(AnimationPP, 2000);
-});
+}

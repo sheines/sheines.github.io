@@ -82,15 +82,18 @@ function AnimationGG() {
         delay: 9000,
     });
 
+    setTimeout(resetGG, 13000);
 }
 
 
 
-// Attach click event listener to the SVG element
-const svgElementGG = document.getElementById('abstandGeradeGerade_svg');
+// // Attach click event listener to the SVG element
+// const svgElementGG = document.getElementById('abstandGeradeGerade_svg');
 
-svgElementGG.addEventListener('click', () => {
+// svgElementGG.addEventListener('click', () => {
 
+function resetGG() {
+    
     // Animation rückwärts
 
     // Punkt/Gerade animieren
@@ -138,4 +141,5 @@ svgElementGG.addEventListener('click', () => {
     });
     
     setTimeout(AnimationGG, 2000);
-});
+// });
+}

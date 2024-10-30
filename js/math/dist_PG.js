@@ -69,15 +69,10 @@ function AnimationPG() {
         delay: 8000,
     });
 
+    setTimeout(resetPG, 12000);
 }
 
-
-
-// Attach click event listener to the SVG element
-const svgElementPG = document.getElementById('abstandPunktGerade_svg');
-
-svgElementPG.addEventListener('click', () => {
-
+function resetPG() {
     // Animation rückwärts
 
     // Punkt/Gerade animieren
@@ -120,4 +115,4 @@ svgElementPG.addEventListener('click', () => {
     });
     
     setTimeout(AnimationPG, 2000);
-});
+}
