@@ -10,7 +10,7 @@ function f(x) {
 // Numerische Ableitung von f(x)
 function fPrime(x) {
     const dx = 0.005;
-    return (f(x + dx) - f(x)) / dx;
+    return (f(x + dx) - f(x - dx)) / (2*dx);
 }
 
 function plotFunction(svg, func, color, id) {
@@ -54,6 +54,7 @@ const slopeVertical = document.createElementNS("http://www.w3.org/2000/svg", "li
 slopeVertical.setAttribute("stroke", "magenta");  // Magenta
 slopeVertical.setAttribute("stroke-width", "0.08");
 
+
 // Animation variables
 let x = -10;
 let derivativePathData = `M -10 ${fPrime(-10)}`;
@@ -76,7 +77,8 @@ function removeElements() {
 
 // Animate function with constant tangent length and sync derivative path
 function animate() {
-    if (x == -10) addElements();
+    if (x == -10) 
+        addElements();
 
     x += dt;
     if (x > 10) {
