@@ -1,0 +1,28 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: 130px minmax(200px,1200px) 130px;
+    grid-template-rows: min-content 1fr min-content;
+    grid-template-areas: 
+        "header header header"
+        "nav main aside"
+        "footer footer footer";
+    max-width: 1500px; /* Maximalbreite des Grids */
+    width: 100%; /* Breite auf 100% setzen */
+    row-gap: 5px;
+}
+
+@media screen and (max-width: 500px) { 
+    .wrapper { 
+      grid-template-rows: min-content min-content 1fr min-content;  
+      grid-template-columns: 1fr;
+      grid-template-areas:  
+        "header" 
+        "aside" 
+        "main" 
+        "footer"; 
+    } 
+    nav{
+        display: none;
+    }
+}
+

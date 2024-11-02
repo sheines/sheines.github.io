@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    color: #a7a7a8;
+    padding: 0px;
+
+}
+body {
+    display: flex; /* Flexbox für den Body */
+    justify-content: center; /* Zentrierung */
+    background-color: #232323;
+    margin: 0px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: large;
+}
+header, nav, main, aside, footer {
+    padding: 5px
+}
+header {
+    grid-area: header;
+    background-color: #004c5c;
+    color: darkgoldenrod;
+    font-size:x-large;
+    padding-left: 15px;
+}
+nav {
+    grid-area: nav;
+}
+main {
+    grid-area: main;
+    max-width: 1200px;
+}
+aside {
+    grid-area: aside;
+    display: flex;
+    justify-content: center;
+}
+footer {
+    grid-area: footer;
+    display: flex;
+    justify-content: center;
+}
