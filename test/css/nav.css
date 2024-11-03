@@ -1,0 +1,88 @@
+/* (PART A) TREE MENU WRAPPER */
+.tree {
+    margin: 1em;
+}
+
+/* (PART B) GROUPS */
+.tree,
+.tree ul {
+    list-style: none;
+    line-height: 1.2;
+    margin: 0;
+    padding-left: 20px;
+}
+
+.tree li {
+    position: relative;
+    padding: 0 0 1em 1em;
+}
+
+.tree ul li {
+    padding: 1em 0 0 1em;
+}
+
+.tree>li:last-child {
+    padding-bottom: 0;
+}
+
+/* Labels - ohne Hintergrund */
+.tree label {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    padding-left: 5px;
+}
+
+label.tree_label:hover {
+    color: var(--global-text-light);
+    background-color: var(--global-background-light);
+    border-radius: 5px;
+}
+
+/* Checkbox Functionality */
+.tree input[type="checkbox"] {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+}
+
+.tree input[type="checkbox"] ~ ul {
+    display: none;
+  }
+  
+  .tree input[type="checkbox"]:checked ~ ul {
+    display: block;
+  }
+
+/* Verbindungslinien für alle Elemente */
+.tree li::before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: -0.5em;
+    display: block;
+    width: 0;
+    border-left: 1px solid #777;
+    content: "";
+}
+
+.tree label::after {
+    position: absolute;
+    top: 0;
+    left: -1.5em;
+    display: block;
+    height: 0.5em;
+    width: 1em;
+    border-bottom: 1px solid #777;
+    border-left: 1px solid #777;
+    border-radius: 0 0 0 0.3em;
+    content: '';
+}
+
+.tree li:last-child::before {
+    height: 1em;
+    bottom: auto;
+}
+
+.tree>li:last-child::before {
+    display: none;
+}

@@ -1,0 +1,13 @@
+.sdt {
+    color: var(--header-background);
+    font-weight: 800;
+    font-size: larger;
+}
+.autor {
+    color: var(--global-text);
+    font-weight: 100;
+} 
+.text {
+    color: var(--fg-header);
+    font-size: larger;
+}

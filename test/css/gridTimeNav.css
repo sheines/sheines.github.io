@@ -1,6 +1,7 @@
 .wrapper {
     display: grid;
-    grid-template-columns: 130px minmax(200px,1200px) 130px;
+    justify-content: space-around;
+    grid-template-columns: 1fr 3fr 1fr;
     grid-template-rows: min-content 1fr min-content;
     grid-template-areas: 
         "header header header"

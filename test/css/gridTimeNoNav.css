@@ -1,0 +1,30 @@
+.wrapper {
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: 1fr 5fr 1fr;
+    grid-template-rows: min-content 1fr min-content;
+    grid-template-areas: 
+        "header header header"
+        "nav main aside"
+        "footer footer footer";
+    row-gap: 5px;
+}
+nav{
+    display: none;
+}
+
+@media screen and (max-width: 500px) { 
+    .wrapper { 
+      grid-template-rows: min-content min-content 1fr min-content;  
+      grid-template-columns: 1fr;
+      grid-template-areas:  
+        "header" 
+        "aside" 
+        "main" 
+        "footer"; 
+    } 
+    nav{
+        display: none;
+    }
+}
+
