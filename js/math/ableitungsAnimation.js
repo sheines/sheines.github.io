@@ -1,21 +1,21 @@
 const functionSvg = document.getElementById("functionSvg");
 const derivativeSvg = document.getElementById("derivativeSvg");
 
-const dt = 0.05;
+const dt = 0.025;
 
 function f(x) {
     return -3 * Math.pow(4, -Math.pow(x, 2) / 8);
 }
 
 // Numerische Ableitung von f(x)
-function fPrime(x) {
+function fPrime(x, func) {
     const dx = 0.005;
-    return (f(x + dx) - f(x - dx)) / (2*dx);
+    return (func(x + dx) - func(x - dx)) / (2*dx);
 }
 
-function plotFunction(svg, func, color, id) {
-    let pathData = `M -10 ${func(-10)}`;
-    for (let x = -10 + dt; x <= 10; x += dt) {
+function plotFunction(svg, func, color, id, clip = false, start = -10, end = 10) {
+    let pathData = `M ${start} ${func(start)}`;
+    for (let x = start + dt; x <= end; x += dt) {
         pathData += ` L ${x} ${func(x)}`;
     }
     const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
@@ -24,6 +24,10 @@ function plotFunction(svg, func, color, id) {
     path.setAttribute("stroke", color);
     path.setAttribute("stroke-width", "0.1");
     path.setAttribute("id", id);
+
+    if (clip)
+        path.setAttribute("clip-path", "url(#clip-area)");
+
     svg.appendChild(path);
 }
 
@@ -57,7 +61,7 @@ slopeVertical.setAttribute("stroke-width", "0.08");
 
 // Animation variables
 let x = -10;
-let derivativePathData = `M -10 ${fPrime(-10)}`;
+let derivativePathData = `M -10 ${fPrime(-10, f)}`;
 
 // Add elements
 function addElements() {
@@ -83,14 +87,14 @@ function animate() {
     x += dt;
     if (x > 10) {
         x = -10;
-        derivativePathData = `M -10 ${fPrime(-10)}`;
+        derivativePathData = `M -10 ${fPrime(-10, f)}`;
         removeElements();
         setTimeout(() => requestAnimationFrame(animate), 3000);
         return;
     }
 
     const y = f(x);
-    const slope = fPrime(x);
+    const slope = fPrime(x, f);
     const tangentLength = 1.5;  // Fixed length for the tangent line
 
     movingPoint.setAttribute("cx", x);
@@ -121,7 +125,7 @@ function animate() {
     tangent.setAttribute("x2", x + tangentDx);
     tangent.setAttribute("y2", y + tangentDy);
 
-    derivativePathData += ` L ${x} ${fPrime(x)}`;
+    derivativePathData += ` L ${x} ${fPrime(x, f)}`;
     derivativePath.setAttribute("d", derivativePathData);
 
     requestAnimationFrame(animate);

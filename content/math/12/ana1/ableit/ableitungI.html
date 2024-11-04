@@ -113,22 +113,22 @@
           <table class="wechseltabelle" style="width: max-content; white-space: nowrap;">
             <!-- Haken: &#10004; Kreuz: &#x2718; -->
             <tr>
-              <th> Besonderheit der Ableitung \(f'\) </th>
+              <th style="color: magenta"> Besonderheit der Ableitung \(f'\) </th>
               <th> Bedeutung für Funktion \(f\) </th>
             </tr>
-            <tr>
+            <tr style="background-color: rgba(0, 128, 0, 0.305); color: rgb(0, 210, 0)">
               <td>Positive Werte</td>
               <td>Funktion steigt</td>
             </tr>
-            <tr>
+            <tr  style="background-color: rgba(128, 0, 0, 0.305); color: red">
               <td>Negative Werte</td>
               <td>Funktion fällt</td>
             </tr>
-            <tr>
+            <tr style="color: cyan">
               <td>Nullstelle</td>
               <td>Hoch- oder Tiefpunkt</td>
             </tr>
-            <tr>
+            <tr style="color: orange">
               <td>Hoch- oder Tiefpunkt</td>
               <td>Wendepunkt</td>
             </tr>
@@ -137,12 +137,124 @@
         </div>
 
         <!-- Mit f(x) = 1/50 (x+8)(x-2)(x-7)+2 -->
-        
-        <h6>Beispiel:</h6>
+        <div class="course-container" style="gap: 10px; flex-grow: 1; margin-bottom: 20px;">
+          <div style="flex: 1; min-width: 350px;">
+            <div class="centered" style="max-height: 450px;">
+
+              <!-- Oberes SVG: Darstellung von f(x) mit animiertem Punkt und Tangente -->
+              <svg id="bsp1Svg" xmlns="http://www.w3.org/2000/svg" viewBox="-12 -6 26 21">
+
+                <defs>
+                  <clipPath id="clip-area">
+                    <!-- Der clip-path-Bereich, zum Beispiel ein Rechteck -->
+                    <rect x="-10" y="-5" width="20" height="10" />
+                  </clipPath>
+                </defs>
+
+                <!-- X-Achse -->
+                <line x1="-10" y1="0" x2="10" y2="0" stroke="#a7a7a7" stroke-width="0.05" />
+                <polygon points="10.5,0 9.8,-0.15 9.8,0.15" fill="#a7a7a7" />
+                <text x="10.7" y="0.7" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">x</text>
+
+                <!-- Y-Achse -->
+                <line x1="0" y1="5" x2="0" y2="-5" stroke="#a7a7a7" stroke-width="0.05" />
+                <polygon points="0,-5.5 -0.15,-4.8 0.15,-4.8" fill="#a7a7a7" />
+                <text x="-0.8" y="-4.3" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">y</text>
+
+                <text x="-9" y="-1" font-family="serif" font-size="0.9" font-style="italic"
+                  fill="darkgoldenrod">f</text>
+
+                <!--unteres svg -->
+                <g id="bsp1AblSvg" transform="translate(0 11)">
+
+                  <defs>
+                    <clipPath id="clip-area">
+                      <!-- Der clip-path-Bereich, zum Beispiel ein Rechteck -->
+                      <rect x="-10" y="-5" width="20" height="10" />
+                    </clipPath>
+                  </defs>
+
+                  <!-- X-Achse -->
+                  <line x1="-10" y1="0" x2="10" y2="0" stroke="#a7a7a7" stroke-width="0.05" />
+                  <polygon points="10.5,0 9.8,-0.15 9.8,0.15" fill="#a7a7a7" />
+                  <text x="10.7" y="0.7" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">x</text>
+
+                  <!-- Y-Achse -->
+                  <line x1="0" y1="5" x2="0" y2="-5" stroke="#a7a7a7" stroke-width="0.05" />
+                  <polygon points="0,-5.5 -0.15,-4.8 0.15,-4.8" fill="#a7a7a7" />
+                  <text x="-0.8" y="-4.3" font-family="serif" font-size="0.9" font-style="italic"
+                    fill="#a8a7a7">y</text>
+
+                  <text x="-9" y="-1" font-family="serif" font-size="0.9" font-style="italic" fill="magenta">f'</text>
+                </g>
+              </svg>
+            </div>
+
+            <script type="text/javascript" src="/js/math/ableitungsBsp1Animation.js"></script>
+          </div>
+
+          <!-- Rechtes Bild -->
+
+          <div style="flex: 1; min-width: 350px;">
+            <div class="centered" style="max-height: 450px;">
+
+              <!-- Oberes SVG: Darstellung von f(x) mit animiertem Punkt und Tangente -->
+              <svg id="bsp2Svg" xmlns="http://www.w3.org/2000/svg" viewBox="-12 -6 26 21">
+
+                <defs>
+                  <clipPath id="clip-area">
+                    <!-- Der clip-path-Bereich, zum Beispiel ein Rechteck -->
+                    <rect x="-10" y="-5" width="20" height="10" />
+                  </clipPath>
+                </defs>
+
+                <!-- X-Achse -->
+                <line x1="-10" y1="0" x2="10" y2="0" stroke="#a7a7a7" stroke-width="0.05" />
+                <polygon points="10.5,0 9.8,-0.15 9.8,0.15" fill="#a7a7a7" />
+                <text x="10.7" y="0.7" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">x</text>
+
+                <!-- Y-Achse -->
+                <line x1="0" y1="5" x2="0" y2="-5" stroke="#a7a7a7" stroke-width="0.05" />
+                <polygon points="0,-5.5 -0.15,-4.8 0.15,-4.8" fill="#a7a7a7" />
+                <text x="-0.8" y="-4.3" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">y</text>
+
+                <text x="-9" y="-1" font-family="serif" font-size="0.9" font-style="italic"
+                  fill="darkgoldenrod">f</text>
+
+                <!--unteres svg -->
+                <g id="bsp2AblSvg" transform="translate(0 11)">
+                  <defs>
+                    <clipPath id="clip-area">
+                      <!-- Der clip-path-Bereich, zum Beispiel ein Rechteck -->
+                      <rect x="-10" y="-5" width="20" height="10" />
+                    </clipPath>
+                  </defs>
+
+                  <!-- X-Achse -->
+                  <line x1="-10" y1="0" x2="10" y2="0" stroke="#a7a7a7" stroke-width="0.05" />
+                  <polygon points="10.5,0 9.8,-0.15 9.8,0.15" fill="#a7a7a7" />
+                  <text x="10.7" y="0.7" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">x</text>
+
+                  <!-- Y-Achse -->
+                  <line x1="0" y1="5" x2="0" y2="-5" stroke="#a7a7a7" stroke-width="0.05" />
+                  <polygon points="0,-5.5 -0.15,-4.8 0.15,-4.8" fill="#a7a7a7" />
+                  <text x="-0.8" y="-4.3" font-family="serif" font-size="0.9" font-style="italic"
+                    fill="#a8a7a7">y</text>
+
+                  <text x="-9" y="-1" font-family="serif" font-size="0.9" font-style="italic" fill="magenta">f'</text>
+                </g>
+              </svg>
+            </div>
+
+            <script type="text/javascript" src="/js/math/ableitungsBsp2Animation.js"></script>
+          </div>
+        </div>
+
+          <h6>Beispiel:</h6>
 
 
 
-      </div>
+        </div>
     </section>
     <!-- <section>
             <div class="videos">
