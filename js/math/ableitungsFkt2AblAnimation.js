@@ -49,13 +49,8 @@ function getLine(x, color, func, ablfunc, isZero = true) {
 
 // Plot f1(x) and f1' in DarkGoldenRod and initialize the derivative animation path
 plotFunction(fkt2Abl, f3, "darkgoldenrod", "functionPath");
-// plotFunction(fkt2AblAbl, f3Prime, "gray", "functionPath");
 
 // Ableitungsgraph
-// const ablPath = document.createElementNS("http://www.w3.org/2000/svg", "path");
-// ablPath.setAttribute("fill", "none");
-// ablPath.setAttribute("stroke", "magenta");
-// ablPath.setAttribute("stroke-width", "0.1");
 const ablPath = plotFunction(fkt2AblAbl, f3Prime, "magenta", "functionPath", false);
 const ablPathLength = ablPath.getTotalLength();
 fkt2AblAbl.appendChild(ablPath);
