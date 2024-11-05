@@ -13,7 +13,7 @@ function fPrime(x, func) {
     return (func(x + dx) - func(x - dx)) / (2*dx);
 }
 
-function plotFunction(svg, func, color, id, clip = false, start = -10, end = 10) {
+function plotFunction(svg, func, color, id, clip = false, start = -10, end = 10, add = true) {
     let pathData = `M ${start} ${func(start)}`;
     for (let x = start + dt; x <= end; x += dt) {
         pathData += ` L ${x} ${func(x)}`;
@@ -28,7 +28,10 @@ function plotFunction(svg, func, color, id, clip = false, start = -10, end = 10)
     if (clip)
         path.setAttribute("clip-path", "url(#clip-area)");
 
-    svg.appendChild(path);
+    if (add)
+        svg.appendChild(path);
+
+    return path;
 }
 
 // Plot f(x) in DarkGoldenRod and initialize the derivative animation path

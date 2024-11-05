@@ -120,7 +120,7 @@
               <td>Positive Werte</td>
               <td>Funktion steigt</td>
             </tr>
-            <tr  style="background-color: rgba(128, 0, 0, 0.305); color: red">
+            <tr style="background-color: rgba(128, 0, 0, 0.305); color: red">
               <td>Negative Werte</td>
               <td>Funktion fällt</td>
             </tr>
@@ -246,15 +246,15 @@
                   <text x="-9" y="-1" font-family="serif" font-size="0.9" font-style="italic" fill="magenta">f'</text>
                 </g>
               </svg>
-            </div>  
+            </div>
           </div>
           <script type="text/javascript" src="/js/math/ableitungsBspAnimation.js"></script>
         </div>
 
-        
+
         <div class="definition">
           <h4>Ableitung skizzieren</h4>
-          <p>Um die Ableitungsfunktion zu skizzieren, gehe wie folgt vor:</p>
+          <p>Um die Ableitungsfunktion aus der Funktion zu skizzieren, gehe wie folgt vor:</p>
           <ol class="more-spacing">
             <li>Übertrage Hoch- und Tiefpunkte in Nullstellen.</li>
             <li>Ausgehend von der Lage sind Wendepunkte nun:
@@ -263,7 +263,7 @@
                 <li>Links-Rechts-Wendepunkt ⟶ Hochpunkt</li>
               </ul>
             </li>
-            <li>Entscheide anhand des Steigungsverhaltens am linken Ende der Funktion, ob der Startpunkt der 
+            <li>Entscheide anhand des Steigungsverhaltens am linken Ende der Funktion, ob der Startpunkt der
               Ableitung \(f'\) positiv (\(f\) steigend), negativ (\(f\) fallend) oder null (\(f\) konstant) ist.
             </li>
             <li>Wiederhole die Überlegung für das rechte Ende der Funktion.</li>
@@ -272,8 +272,81 @@
         </div>
 
         <h6>Beispiel:</h6>
+        <div class="centered" style="max-height: 550px;">
 
+          <!-- Oberes SVG: Darstellung von f(x) mit animiertem Punkt und Tangente -->
+          <svg id="fkt2Abl" xmlns="http://www.w3.org/2000/svg" viewBox="-12 -6 26 21">
+
+            <defs>
+              <clipPath id="clip-area">
+                <!-- Der clip-path-Bereich, zum Beispiel ein Rechteck -->
+                <rect x="-10" y="-5" width="20" height="10" />
+              </clipPath>
+            </defs>
+
+            <!-- X-Achse -->
+            <line x1="-10" y1="0" x2="10" y2="0" stroke="#a7a7a7" stroke-width="0.05" />
+            <polygon points="10.5,0 9.8,-0.15 9.8,0.15" fill="#a7a7a7" />
+            <text x="10.7" y="0.7" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">x</text>
+
+            <!-- Y-Achse -->
+            <line x1="0" y1="5" x2="0" y2="-5" stroke="#a7a7a7" stroke-width="0.05" />
+            <polygon points="0,-5.5 -0.15,-4.8 0.15,-4.8" fill="#a7a7a7" />
+            <text x="-0.8" y="-4.3" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">y</text>
+
+            <text x="-9" y="-1" font-family="serif" font-size="0.9" font-style="italic" fill="darkgoldenrod">f</text>
+
+            <!--unteres svg -->
+            <g id="fkt2AblAbl" transform="translate(0 11)">
+              <defs>
+                <clipPath id="clip-area">
+                  <!-- Der clip-path-Bereich, zum Beispiel ein Rechteck -->
+                  <rect x="-10" y="-5" width="20" height="10" />
+                </clipPath>
+              </defs>
+
+              <!-- X-Achse -->
+              <line x1="-10" y1="0" x2="10" y2="0" stroke="#a7a7a7" stroke-width="0.05" />
+              <polygon points="10.5,0 9.8,-0.15 9.8,0.15" fill="#a7a7a7" />
+              <text x="10.7" y="0.7" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">x</text>
+
+              <!-- Y-Achse -->
+              <line x1="0" y1="5" x2="0" y2="-5" stroke="#a7a7a7" stroke-width="0.05" />
+              <polygon points="0,-5.5 -0.15,-4.8 0.15,-4.8" fill="#a7a7a7" />
+              <text x="-0.8" y="-4.3" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">y</text>
+
+              <text x="-9" y="-1" font-family="serif" font-size="0.9" font-style="italic" fill="magenta">f'</text>
+            </g>
+          </svg>
+          <script type="text/javascript" src="/js/math/ableitungsFkt2AblAnimation.js"></script>
         </div>
+
+        <div class="definition">
+          <h4>Funktion skizzieren</h4>
+          <p>Um die Funktion aus der Ableitungsfunktion zu skizzieren, gehe wie folgt vor:</p>
+          <ol class="more-spacing">
+            <li>Aus Nullstellen werden Hoch- und Tiefpunkte:
+              <li> Von \(-\) zu \(+\) ⟶ Tiefpunkt</li>
+              <li> Von \(+\) zu \(-\) ⟶ Hochpunkt</li>
+              Dabei ist es natürlich egal, in welcher Höhe diese Punkte liegen. Allerdings sollte ein Hochpunkt höher 
+              als ein Tiefpunkt liegen.
+            </li>
+            <li> Je nach Lage des linken Endes der Ableitungsfunktion:
+              <ul>
+                <li>ist die Ableitungsfunktion negativ, muss die Funktion zu Beginn fallen. ⟶ Der Start ist <i>oberhalb</i> des nächsten Punktes.</li>
+                <li>ist die Ableitungsfunktion positiv, muss die Funktion zu Beginn steigen. ⟶ Der Start ist <i>unterhalb</i> des nächsten Punktes.</li>
+              </ul>
+            </li>
+            <li>Wiederhole die Überlegung für das rechte Ende der Funktion.
+              <ul>
+                <li>ist die Ableitungsfunktion negativ, muss die Funktion am Ende fallen. ⟶ Das Ende ist <i>unterhalb</i> des letzten Punktes.</li>
+                <li>ist die Ableitungsfunktion positiv, muss die Funktion am Ende steigen. ⟶ Das Ende ist <i>oberhalb</i> des letzten Punktes.</li>
+              </ul>
+            </li>
+            <li>Verbinde nun die Punkte miteinander.</li>
+          </ol>
+        </div>
+      </div>
     </section>
     <!-- <section>
             <div class="videos">
@@ -284,34 +357,27 @@
         </section> -->
     <section class="aufgaben" id="aufgaben">
       <h3>Aufgaben zu Ableitungen</h3>
-      <ul class="more-spacing">
-        <li>Mittlere Änderungsrate:
-          <ol class="custom-marker point-after decimal">
-            <li>Buch, Seite 82 Übung 1 <a href="#a1">Lösungen</a></li>
-            <li>Buch, Seite 83 Übung 2 <a href="#a2">Lösungen</a></li>
+      <ol class="custom-marker point-after decimal">
+        <li>Skizziere die Verläufe auf den Übungsblättern! (Gibt's im Unterricht)
+          <ol class="custom-marker parens-around lower-alpha more-spacing">
+            <li>Links ist die Funktion dargestellt: Skizziere den Verlauf der Ableitung!</li>
+            <li>Rechts ist die Ableitungsfunktion dargestellt: Skizziere den Verlauf der Funktion!</li>
           </ol>
+           <!-- <a href="#a1">Lösungen</a> -->
+          Übungsblätter: <a href="/tex/ana1/ableit/UE_Ableitung.pdf">Hier klicken</a>
+
         </li>
-        <li>Grenzwerte:
-          <ol class="custom-marker point-after decimal" style="counter-set: list 2;">
-            <li>Wiederhole die Berechnung von Grenzwerten! </li> <!-- <a href="#a3">Lösungen</a> -->
-          </ol>
-        </li>
-        <li>Lokale Änderungsrate:
-          <ol class="custom-marker point-after decimal" style="counter-set: list 3;">
-            <li>Buch, Seite 90 Übung 1 <a href="#a4">Lösungen</a></li>
-            <li>Buch, Seite 91 Übung 2 und 3 <a href="#a5">Lösungen</a></li>
-            <li>Buch, Seite 92 Übung 4 <a href="#a6">Lösungen</a></li>
-            <li>Buch, Seite 95 Übung 10 und 13 <a href="#a7">Lösungen</a></li>
-          </ol>
-        </li>
-      </ul>
+      </ol>
 
     </section>
 
     <section class="loesungen">
-      <h3>Lösungen zu Änderungsraten</h3>
+      <h3>Lösungen zu Ableitungen</h3>
 
-      <details id="a1">
+      <p>
+        Werden im Unterricht besprochen.
+      </p>
+      <!-- <details id="a1">
         <summary>Seite 82 Übung 1</summary>
         Skizze fehlt hier aus Platzgründen: Wertetabelle anlegen, Graph zeichnen, Intervallanfang und -ende auf Graph
         markieren und gerade verbinden.
@@ -321,34 +387,8 @@
           <li>\(\tfrac{\Delta f}{\Delta x}=\frac{2}{1}=2\)</li>
           <li>\(\tfrac{\Delta f}{\Delta x}=\frac{6}{2}=3\)</li>
         </ol>
-      </details>
-      <details id="a2">
-        <summary>Seite 83 Übung 2</summary>
-        <ol class="custom-marker parens-around lower-alpha more-spacing">
-          <li>Parabel zeichnen: schneidet \(x\)-Achse in \(x=0\) und \(x=2\), \(y\)-Achse in \(y=0\)</li>
-          <li>
-            <ul>
-              <li>Intervall \([-2; 0]\): \(\tfrac{\Delta f}{\Delta x}=-4\)</li>
-              <li>Intervall \([0; 3]\): \(\tfrac{\Delta f}{\Delta x}=1\)</li>
-            </ul>
-          </li>
-          <li>
-            <ul>
-              <li>Intervall \([-1; 3]\): \(\tfrac{\Delta f}{\Delta x}=0\)</li>
-              <li>Die Funktion ändert sich zwar im genannten Intervall, jedoch hat sie am Intervallanfang den gleichen
-                Wert wie am Ende.
-                Die mittlere Steigung ist deshalb null.
-              </li>
-            </ul>
-          </li>
-          <li>
-            <ul>
-              <li>\(\tfrac{\Delta f}{\Delta x}=1\): z.B. \([1; 2]\)</li>
-              <li>\(\tfrac{\Delta f}{\Delta x}=2\): z.B. \([1; 3]\)</li>
-            </ul>
-          </li>
-        </ol>
-      </details>
+      </details> -->
+      
 
 
 
@@ -358,12 +398,12 @@
 
     <section id="meme">
       <div class="images">
-        <img src="/img/aenderung_meme.jpg" style="object-fit: scale-down; max-width: 300px" />
+        <img src="/img/inflation_meme.png" style="object-fit: scale-down; max-width: 300px" />
       </div>
       <div class="centered">
-        <a href="https://www.reddit.com/r/mathmemes/comments/d5zvzq/puff_puff_positive/#lightbox" target="_blank"
+        <a href="https://x.com/FundasyInvestor/status/1824075705178533914/photo/1" target="_blank"
           rel="noopener noreferrer">
-          <h6>Original von dankmemesbechildless</h6>
+          <h6>Original von Nick Timiraos</h6>
         </a>
       </div>
     </section>
@@ -372,7 +412,7 @@
     <a href="/misc/impressum.html">Impressum</a>
     <div class="lastModified" align="center">
       Zuletzt geändert:<br />
-      30. Oktober 2024
+      5. November 2024
       <!-- <span id="lastModifiedDate"></span> -->
     </div>
     <a href="/misc/datenschutz.html">Datenschutz</a>

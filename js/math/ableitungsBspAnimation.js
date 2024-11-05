@@ -181,7 +181,7 @@ if (inflection2.length > 0) {
 
 
 
-function highlightBackground(svgId, color, startX, endX) {
+function highlightBackground(svgId, color, startX, endX, add = true) {
     // Hole das SVG-Element
     const svg = document.getElementById(svgId);
 
@@ -199,10 +199,13 @@ function highlightBackground(svgId, color, startX, endX) {
     rect.setAttribute("clip-path", "url(#clip-area)");
 
     // Füge das Rechteck in das SVG ein
-    svg.insertBefore(rect, svg.firstChild);
+    if (add)
+        svg.insertBefore(rect, svg.firstChild);
+    
+    return rect;
 }
 
-function highlightAreaUnderCurve(svgId, func, color, start, end) {
+function highlightAreaUnderCurve(svgId, func, color, start, end, add = true) {
     const svg = document.getElementById(svgId);
 
     // Berechne die y-Werte für die Funktion
@@ -222,7 +225,10 @@ function highlightAreaUnderCurve(svgId, func, color, start, end) {
     polygon.setAttribute("opacity", "0.25"); // optional: transparenter Hintergrund
 
     // Füge das Polygon als erstes Kind des SVGs hinzu
-    svg.insertBefore(polygon, svg.firstChild);
+    if (add)
+        svg.insertBefore(polygon, svg.firstChild);
+
+    return polygon;
 }
 
 for (i = 0; i < extrema1.length - 1; ++i) {
