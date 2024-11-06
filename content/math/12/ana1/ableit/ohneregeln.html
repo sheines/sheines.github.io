@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" initial-scale="1.0" />
+  <meta name="author" content="Sebastian Hitziger" />
+  <meta name="robot" content="noindex" />
+  <title>HITZ | Fkt-Eigensch. | Ableitung I </title>
+  <link rel="stylesheet" type="text/css" href="/css/colors.css" />
+  <link rel="stylesheet" type="text/css" href="/css/gridNoTimeline.css" />
+  <link rel="stylesheet" type="text/css" href="/css/navbar.css" />
+  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="/css/courses.css" />
+  <script type="text/javascript" src="jquery-3.3.1.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+
+
+<body>
+  <header>
+    <div class="nav">
+      <input type="checkbox" id="nav-check" />
+      <div class="nav-header">
+        <div class="nav-title">
+          <a href="/">Hr. Hitzigers Unterricht</a>
+        </div>
+      </div>
+      <div class="nav-btn">
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+
+      <div class="nav-links">
+        <a href="/content/math/">Mathematik</a>
+        <a href="/content/math/12/">Klasse 12</a>
+        <a href="/content/math/12/ana1/">Analysis I</a>
+        <a href="/content/math/12/ana1/ableit/">Differentialrechnung</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section>
+      <h2>Ableitung I &ndash; Berechnung ohne Ableitungsregeln</h2>
+      <div class="ziele">
+        <p>
+          Nachfolgend soll gezeigt werden, wie die Ableitungsfunktion einer Funktion rechnerisch bestimmt werden kann.
+        </p>
+        <p>
+          <a href="#aufgaben">Direkt zu den Aufgaben</a>
+        </p>
+      </div>
+
+
+
+      <div class="theorie">
+
+        <div class="definition">
+          <h4>Ableitungsfunktion</h4>
+          <p>
+            Ordnet man <i>jeder</i> Stelle \(x\) die dort anliegende Steigung \(f'(x)\) zu,
+            so erhält man eine neue Funktion \(\color{magenta}f'\), die man als <b>Ableitungsfunktion</b> von
+            \(\color{darkgoldenrod}f\) bezeichnet.
+          </p>
+          <p>
+            An der Ableitungsfunktion kann man erkennen, in welchen Bereichen die Funktion \(f\) <i>steigt</i>, bzw.
+            <i>fällt</i>.
+            Ist \(f'\) positiv, so steigt \(f\). Ist \(f'\) dagegen negativ, fällt \(f\).
+          </p>
+          <div class="centered" style="max-height: 350px;">
+
+            <!-- Oberes SVG: Darstellung von f(x) mit animiertem Punkt und Tangente -->
+            <svg id="functionSvg" xmlns="http://www.w3.org/2000/svg" viewBox="-12 -5 26 12.5">
+
+              <!-- X-Achse -->
+              <line x1="-10" y1="0" x2="10" y2="0" stroke="#a7a7a7" stroke-width="0.05" />
+              <polygon points="10.5,0 9.8,-0.15 9.8,0.15" fill="#a7a7a7" />
+              <text x="10.7" y="0.7" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">x</text>
+
+              <!-- Y-Achse -->
+              <line x1="0" y1="1.5" x2="0" y2="-4" stroke="#a7a7a7" stroke-width="0.05" />
+              <polygon points="0,-4.5 -0.15,-3.8 0.15,-3.8" fill="#a7a7a7" />
+              <text x="-0.8" y="-4.3" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">y</text>
+
+              <text x="-9" y="-1" font-family="serif" font-size="0.9" font-style="italic" fill="darkgoldenrod">f</text>
+
+              <!--unteres svg -->
+              <g id="derivativeSvg" transform="translate(0 5)">
+                <!-- X-Achse -->
+                <line x1="-10" y1="0" x2="10" y2="0" stroke="#a7a7a7" stroke-width="0.05" />
+                <polygon points="10.5,0 9.8,-0.15 9.8,0.15" fill="#a7a7a7" />
+                <text x="10.7" y="0.7" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">x</text>
+
+                <!-- Y-Achse -->
+                <line x1="0" y1="2" x2="0" y2="-2" stroke="#a7a7a7" stroke-width="0.05" />
+                <polygon points="0,-2.5 -0.15,-1.8 0.15,-1.8" fill="#a7a7a7" />
+                <text x="-0.8" y="-2.3" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">y</text>
+
+                <text x="-9" y="-1" font-family="serif" font-size="0.9" font-style="italic" fill="magenta">f'</text>
+              </g>
+            </svg>
+          </div>
+          <script type="text/javascript" src="/js/math/ableitungsAnimation.js"></script>
+          <h4>Vorgehen</h4>
+          <p>
+            Um die Ableitungsfunktion \(f'\) einer beliebigen Funktion zu, muss &ndash; mit der \(h\)-Methode &ndash;
+            anstelle
+            einer Stelle \(x_0\), die gesamte Funtion \(f(x)\) eingesetzt werden.
+          </p>
+          <p>
+            Die Ableitungsfunktion heißt dann \(f'(x)\). Es gilt also:
+            \begin{align*}
+            f'(x)&=\lim_{h\rightarrow 0}\frac{f(x+h)-f(x)}{h}
+            \end{align*}
+            Es ist natürlich ebenfalls möglich die Ableitungsfunktion mithilfe der Termumformung zu ermitteln.
+          </p>
+        </div>
+        <h6>Beispiel 1:</h6>
+        <p>
+          Es soll die Ableitungsfunktion von \(f(x)=\color{salmon}x^3\) bestimmt werden:
+        <ul>
+          <li>Vorüberlegungen:
+            <ul>
+              <li>\(f({\color{green}x+h})={\color{salmon}({\color{green}x+h})^3}\)<br>\(\qquad=\color{teal}x^3+3hx^2+3h^2x+h^3\)</li>
+              <li>\(f(x)=\color{salmon}x^3\)</li>
+            </ul>
+            Binomische Formeln höheren Grades sind im Tafelwerk unter 
+                  &bdquo;Pascalsches (Zahlen)dreieck&rdquo; zu finden.
+          </li>
+          <li>Differentialquotient aufstellen und Grenzwert bestimmen:
+            $$\begin{align*}
+            f'(x)&=\lim_{h\rightarrow 0}\frac{f(x+h)-f(x)}{h} \\
+            f'(x)&=\lim_{h\rightarrow 0}\frac{{\color{teal}x^3+3hx^2+3h^2x+h^3}-\color{salmon}x^3}{h} \\
+            f'(x)&=\lim_{h\rightarrow 0}\frac{3hx^2+3h^2x+h^3}{h} \\
+            f'(x)&=\lim_{h\rightarrow 0}\frac{\cancel h\cdot(3x^2+3hx+h^2)}{\cancel h} \\
+            f'(x)&=\lim_{\color{orange}h\rightarrow 0} 3x^2+3hx+h^2 \qquad {\color{orange}h\rightarrow 0} \\
+            f'(x)&=3x^2+3\cdot{\color{orange}0}\cdot x+{\color{orange}0}^2=\color{cyan}3x^2
+            \end{align*}$$ </li>
+          <li>Die Ableitungsfunktion der Funktion \({\color{darkgoldenrod}f}(x)=\color{salmon}x^3\) lautet:
+            \({\color{magenta}f'}(x)=\color{cyan}3x^2\).</li>
+        </ul>
+        <h6>Beispiel 2:</h6>
+        <p>
+          Es soll die Ableitungsfunktion von \(f(x)=\color{salmon}x^2-2x\) bestimmt werden:
+        <ul>
+          <li>Vorüberlegungen:
+            <ul>
+              <li>\(f({\color{green}x+h})={\color{salmon}({\color{green}x+h})^2-2({\color{green}x+h})}\)<br>
+                \(\qquad=x^2+2hx+h^2-2(x+h)\)<br>
+                \(\qquad=\color{teal}x^2+2hx+h^2-2x-2h\)</li>
+              <li>\(f(x)=\color{salmon}x^2-2x\)</li>
+            </ul>
+          </li>
+          <li>Differentialquotient aufstellen und Grenzwert bestimmen:
+            \begin{align*}
+            f'(x)&=\lim_{h\rightarrow 0}\frac{f(x+h)-f(x)}{h} \\
+            f'(x)&=\lim_{h\rightarrow 0}\frac{{\color{teal}x^2+2hx+h^2-2x-2h}-({\color{salmon}x^2-2x})}{h} \\
+            f'(x)&=\lim_{h\rightarrow 0}\frac{2hx+h^2-2h}{h} \\
+            f'(x)&=\lim_{h\rightarrow 0}\frac{\cancel h\cdot(2x+h-2)}{\cancel h} \\
+            f'(x)&=\lim_{\color{orange}h\rightarrow 0} 2x+h-2 \qquad {\color{orange}h\rightarrow 0} \\
+            f'(x)&=2x+{\color{orange}0}\,-2=\color{cyan}2x-2
+            \end{align*} </li>
+          <li>Die Ableitungsfunktion der Funktion \({\color{darkgoldenrod}f}(x)=\color{salmon}x^2-2x\) lautet:
+            \({\color{magenta}f'}(x)=\color{cyan}2x-2\).</li>
+        </ul>
+        </p>
+
+
+
+
+
+
+
+      </div>
+    </section>
+    <!-- <section>
+            <div class="videos">
+                <iframe width="360" height="202" src="https://www.youtube.com/embed/19goPRnthCE"
+                    title="Abstand Punkt - Punkt" frameborder="0" allow="web-share" allowfullscreen></iframe>
+
+            </div>
+        </section> -->
+    <section class="aufgaben" id="aufgaben">
+      <h3>Aufgaben zu Ableitungen</h3>
+      <ol class="custom-marker point-after decimal">
+        <li>Löse im Buch auf Seite 100 und 101:
+          <ol class="custom-marker parens-around lower-alpha">
+            <li>Übung 6 <a href="#a1">Lösungen</a></li>
+            <li>Übung 8 <a href="#a2">Lösungen</a></li>
+            <li>Übung 9 <a href="#a6">Lösungen</a></li>
+            <li>Übung 7 <a href="#a7">Lösungen</a></li>
+          </ol>
+        </li>
+      </ol>
+
+    </section>
+
+    <section class="loesungen">
+      <h3>Lösungen zu Ableitungen</h3>
+
+      <details id="a1">
+        <summary>Übung 6</summary>
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>\(f'(x)=4x\)</li>
+          <li>\(f'(x)=2\)</li>
+          <li>\(f'(x)=0\)</li>
+          <li>\(f'(x)=-2x\)</li>
+          <li>\(f'(x)=2\)</li>
+          <li>\(f'(x)=2ax\)</li>
+        </ol>
+      </details>
+      <details id="a2">
+        <summary>Übung 8</summary>
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>\(f'(x)=2\)</li>
+          <li>\(f'(x)=2x-1\)</li>
+          <li>\(f'(x)=1-4x=-4x+1\)</li>
+          <li>\(f'(x)=2x-2\)</li>
+          <li>\(f'(x)=a\)</li>
+          <li>\(f'(x)=2ax+b\)</li>
+          <li>\(f'(x)=3x+1\)</li>
+          <li>\(f'(x)=3ax2\)</li>
+        </ol>
+      </details>
+      <details id="a3">
+        <summary>Übung 9</summary>
+        \(f'(x)=4x^3\)
+      </details>
+      <details id="a4">
+        <summary>Übung 7</summary>
+        <ul class="more-spacing">
+          <li>
+            Vorbetrachtung:
+            <ul>
+              <li>\(f(x+h)=\color{teal}\frac{1}{x+h}\)</li>
+          <li>\(f(x)=\color{salmon}\frac 1x\)</li>
+            </ul>
+          </li>  
+          <li>Grenzwert berechnen
+            \begin{align*}
+              f'(x)&=\lim_{h\rightarrow 0}\frac{{\color{teal}\frac{1}{x+h}}\,-\,{\color{salmon}\frac 1x}}{h} \\
+              f'(x)&=\lim_{h\rightarrow 0}\frac{{\color{teal}\frac{\color{salmon}x}{{\color{salmon}x}\cdot(x+h)}}\,-\,{\color{salmon}\frac{\color{teal}x+h}{{\color{teal}(x+h)}\cdot x}}}{h} \\
+              f'(x)&=\lim_{h\rightarrow 0}\frac{\frac{{\color{salmon}x}\,-\,({\color{teal}x+h})}{{\color{salmon}x}\,\cdot\,({\color{teal}x+h})}}{h} \\
+              f'(x)&=\lim_{h\rightarrow 0}\frac{\frac{-h}{x\,\cdot\, (x+h)}}{h} \\
+              f'(x)&=\lim_{h\rightarrow 0}\frac{-\cancel h}{\cancel h \cdot x\cdot (x+h)} \\
+              f'(x)&=\lim_{\color{orange}h\rightarrow 0}\frac{-1}{x\cdot (x+h)} \qquad \color{orange}h\rightarrow 0 \\
+              f'(x)&=\frac{-1}{x\,\cdot\, (x+{\color{orange}0})}=\color{cyan}-\frac{1}{x^2}
+            \end{align*}
+          </li>
+          <li>
+            Die Ableitungsfunktion der Funktion \(f(x)=\color{salmon}\frac 1x\) lautet: \(f'(x)=\color{cyan}-\frac{1}{x^2}\)
+          </li>
+        </ul>
+      </details>
+
+
+
+
+
+
+    </section>
+
+    <section id="meme">
+      <div class="images">
+        <img src="/img/derivative_notation_meme.png" style="object-fit: scale-down; max-width: 300px" />
+      </div>
+      <div class="centered">
+        <a href="https://www.instagram.com/mathematics_all/reel/C09LowwxnRW/?hl=de" target="_blank"
+          rel="noopener noreferrer">
+          <h6>Original von mathematics_all</h6>
+        </a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <a href="/misc/impressum.html">Impressum</a>
+    <div class="lastModified" align="center">
+      Zuletzt geändert:<br />
+      6. November 2024
+      <!-- <span id="lastModifiedDate"></span> -->
+    </div>
+    <a href="/misc/datenschutz.html">Datenschutz</a>
+  </footer>
+</body>
