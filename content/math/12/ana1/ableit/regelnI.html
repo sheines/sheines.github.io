@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" initial-scale="1.0" />
+  <meta name="author" content="Sebastian Hitziger" />
+  <meta name="robot" content="noindex" />
+  <title>HITZ | Fkt-Eigensch. | Ableitungsregeln I </title>
+  <link rel="stylesheet" type="text/css" href="/css/colors.css" />
+  <link rel="stylesheet" type="text/css" href="/css/gridNoTimeline.css" />
+  <link rel="stylesheet" type="text/css" href="/css/navbar.css" />
+  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="/css/courses.css" />
+  <script type="text/javascript" src="jquery-3.3.1.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+
+
+<body>
+  <header>
+    <div class="nav">
+      <input type="checkbox" id="nav-check" />
+      <div class="nav-header">
+        <div class="nav-title">
+          <a href="/">Hr. Hitzigers Unterricht</a>
+        </div>
+      </div>
+      <div class="nav-btn">
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+
+      <div class="nav-links">
+        <a href="/content/math/">Mathematik</a>
+        <a href="/content/math/12/">Klasse 12</a>
+        <a href="/content/math/12/ana1/">Analysis I</a>
+        <a href="/content/math/12/ana1/ableit/">Differentialrechnung</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section>
+      <h2>Ableitungsregeln I</h2>
+      <div class="ziele">
+        <p>
+          Nachfolgend soll der erste Teil an Ableitungsregeln gezeigt und erklärt werden.
+        </p>
+        <p>
+          <a href="#aufgaben">Direkt zu den Aufgaben</a>
+        </p>
+      </div>
+
+
+
+      <div class="theorie">
+
+        <div class="definition">
+          <h4>Potenzregel</h4>
+          <p>
+            Für Potenzfunktionen mit natürlichem Exponenten (\(n\in\mathbb R\)) gilt:
+            \begin{align*}
+            f(x)&=x^n &&\Rightarrow & f'(x)&=n\cdot x^{n-1} \\   
+            \end{align*}
+          </p>
+        </div>  
+        <h6>Beispiele:</h6>
+        <p>
+          Von den folgenden Potenzfunktionen wird die erste Ableitung bestimmt:
+          \begin{align*}
+            f(x)&=x^{\color{orange}7} &&\Rightarrow & f'(x)&={\color{orange} 7}\cdot x^{{\color{orange}7}-1}=7x^6 \\
+            g(x)&=x^{\color{magenta}45} &&\Rightarrow & g'(x)&={\color{magenta} 45}\cdot x^{{\color{magenta}45}-1}=45x^{44} \\
+            h(x)&=x=x^{\color{teal}1} &&\Rightarrow & h'(x)&={\color{teal} 1}\cdot x^{{\color{teal}1}-1}=1x^0=1
+          \end{align*}
+        </p>  
+        <div class="definition">
+          <h4>Konstantenregel</h4>
+          <p>
+            Für jede reelle Konstante \(c\) gilt:
+            \begin{align*}
+            f(x)&=c &&\Rightarrow & f'(x)&=0 \\   
+            \end{align*}
+          </p>
+        </div>
+        <h6>Beispiele:</h6>
+        <p>
+          Von den folgenden Konstanten wird die erste Ableitung bestimmt:
+          \begin{align*}
+            f(x)&=8 &&\Rightarrow & f'(x)&=0 \\
+            g(x)&=-22 &&\Rightarrow & g'(x)&=0 \\
+            h(x)&=\tfrac27 &&\Rightarrow & h'(x)&=0
+          \end{align*}
+        </p>
+        <div class="definition">
+          <h4>Summenregel</h4>
+          <p>
+            Die Ableitung einer Summe ist die Summe der Ableitungen:
+            \begin{align*}
+            f(x)=g(x)+h(x) \quad\Rightarrow \quad f'(x)=g'(x)+h'(x)\\   
+            \end{align*}
+          </p>
+        </div>
+        <h6>Beispiele:</h6>
+        <p>
+          Von den folgenden zusammengesetzten Funktionen wird die Ableitung bestimmt:
+          <ol class="more-spacing">
+            <li>Funktion: \(f(x)=x^8+x^5\)
+              <ul>
+                <li>Summanden:
+                  <ul>
+                    <li>\(g(x)=x^8\ \Rightarrow g'(x)=8x^7\)</li>
+                    <li>\(h(x)=x^5\ \Rightarrow h'(x)=5x^4\)</li>
+                  </ul>
+                </li>
+                <li>Ableitung: \(f'(x)=8x^7+5x^4\)</li>
+              </ul>
+            </li>
+            <li>Funktion: \(f(x)=x^2+x+9\)
+              <ul>
+                <li>Summanden:
+                  <ul>
+                    <li>\(g(x)=x^2\ \Rightarrow g'(x)=2x\)</li>
+                    <li>\(h(x)=x\ \Rightarrow h'(x)=1\)</li>
+                    <li>\(i(x)=9\ \Rightarrow i'(x)=0\)</li>
+                  </ul>
+                </li>
+                <li>Ableitung: \(f'(x)=2x+1\color{#484848}+0\)</li>
+              </ul>
+            </li>
+          </ol>
+        </p>
+        <div class="definition">
+          <h4>Faktorregel</h4>
+          <p>
+            Vorstehende reele Faktoren \(a\) werden einfach mitgenommen:
+            \begin{align*}
+            f(x)=a\cdot g(x) \quad\Rightarrow \quad f'(x)=a\cdot g'(x)\\   
+            \end{align*}
+          </p>
+        </div>
+        <h6>Beispiele:</h6>
+        <p>
+          Die nachfolgenden Funktionen werden abgeleitet:
+          \begin{align*}
+            f(x)&={\color{orange}7}x^3 &&\Rightarrow & f'(x)&={\color{orange} 7}\cdot 3x^2=21x^2 \\
+            g(x)&={\color{magenta}-4}x^5 &&\Rightarrow & g'(x)&={\color{magenta} -4}\cdot 5x^4=-20x^4 \\
+            h(x)&={\color{teal}\tfrac38}x &&\Rightarrow & h'(x)&={\color{teal}\tfrac38}\cdot 1x^0=\tfrac38
+          \end{align*}
+          Und ein Beispiel im Zusammenspiel mit der Summenregel:
+          <ul class="more-spacing">
+            <li>Funktion: \(f(x)=5x^4+3x^2-8x\)
+              <ul>
+                <li>Summanden:
+                  <ul>
+                    <li>\(g(x)=5x^4\ \Rightarrow g'(x)=5\cdot 4x^3=20x^3\)</li>
+                    <li>\(h(x)=3x^2\ \Rightarrow h'(x)=3\cdot 2x=6x\)</li>
+                    <li>\(i(x)=-8x\ \Rightarrow i'(x)=-8\cdot 1=-8\)</li>
+                  </ul>
+                </li>
+                <li>Ableitung: \(f'(x)=20x^3+6x-8\)</li>
+              </ul>
+            </li>
+          </ul>
+        </p>
+        
+
+    <!-- <section>
+            <div class="videos">
+                <iframe width="360" height="202" src="https://www.youtube.com/embed/19goPRnthCE"
+                    title="Abstand Punkt - Punkt" frameborder="0" allow="web-share" allowfullscreen></iframe>
+
+            </div>
+        </section> -->
+    <section class="aufgaben" id="aufgaben">
+      <h3>Aufgaben zu Ableitungen</h3>
+      <ol class="custom-marker point-after decimal">
+        <li>Potenzregel <a href="#a1">Lösungen</a>
+          <ul>
+            <li>Seite 102 Übung 1</li>
+            <li>Seite 102 Übung 3</li>
+          </ul>
+        </li>
+        <li>Summenregel <a href="#a2">Lösungen</a>
+          <ul>
+            <li>Seite 103 Übung 4</li>
+          </ul>
+        </li>
+        <li>Vermischt <a href="#a3">Lösungen</a>
+          <ul>
+            <li>Seite 104 Übung 5</li>
+            <li>Seite 104 Übung 6</li>
+          </ul>
+        </li>
+      </ol>
+
+    </section>
+
+    <section class="loesungen">
+      <h3>Lösungen zu Ableitungen</h3>
+
+      <!-- <details id="a1">
+        <summary>Seite 82 Übung 1</summary>
+        Skizze fehlt hier aus Platzgründen: Wertetabelle anlegen, Graph zeichnen, Intervallanfang und -ende auf Graph
+        markieren und gerade verbinden.
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>\(\tfrac{\Delta f}{\Delta x}=\frac{4}{2}=2\)</li>
+          <li>\(\tfrac{\Delta f}{\Delta x}=\frac{-1,5}{6}=-\tfrac14\)</li>
+          <li>\(\tfrac{\Delta f}{\Delta x}=\frac{2}{1}=2\)</li>
+          <li>\(\tfrac{\Delta f}{\Delta x}=\frac{6}{2}=3\)</li>
+        </ol>
+      </details> -->
+      
+
+
+
+
+
+    </section>
+
+    <section id="meme">
+      <div class="images">
+        <img src="/img/constant_rule-meme.jpg" style="object-fit: scale-down; max-width: 300px" />
+      </div>
+      <div class="centered">
+        <a href="https://www.facebook.com/permalink.php/?story_fbid=361024680381767&id=100094227136478" target="_blank"
+          rel="noopener noreferrer">
+          <h6>Original von Howie Hua</h6>
+        </a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <a href="/misc/impressum.html">Impressum</a>
+    <div class="lastModified" align="center">
+      Zuletzt geändert:<br />
+      11. November 2024
+      <!-- <span id="lastModifiedDate"></span> -->
+    </div>
+    <a href="/misc/datenschutz.html">Datenschutz</a>
+  </footer>
+</body>
