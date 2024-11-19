@@ -4,6 +4,7 @@ const bsp1AblSvg = document.getElementById("bsp1AblSvg");
 const bsp2Svg = document.getElementById("bsp2Svg");
 const bsp2AblSvg = document.getElementById("bsp2AblSvg");
 
+
 function f1(x) {
     return -1.0 / 50 * (x + 8) * (x - 2) * (x - 7) + 2;
 }
@@ -27,6 +28,8 @@ plotFunction(bsp1AblSvg, f1Prime, "magenta", "functionPath", true, -10, 10);
 
 plotFunction(bsp2Svg, f2, "darkgoldenrod", "functionPath", true);
 plotFunction(bsp2AblSvg, f2Prime, "magenta", "functionPath", true, -10, 10);
+
+
 
 
 // Definition der Extrempunkte
