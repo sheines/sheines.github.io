@@ -1,0 +1,5 @@
+# This file is used internally by FFMPEG.
+file 'file:F:/Dokumente/GitHub/shitziger.github.io/python/media/videos/potenzregel/1080p60/partial_movie_files/PowerRule/3977891868_87631078_223132457.mp4'
+file 'file:F:/Dokumente/GitHub/shitziger.github.io/python/media/videos/potenzregel/1080p60/partial_movie_files/PowerRule/2852726489_3890345977_1101543264.mp4'
+file 'file:F:/Dokumente/GitHub/shitziger.github.io/python/media/videos/potenzregel/1080p60/partial_movie_files/PowerRule/2852726489_2397571536_4065104036.mp4'
+file 'file:F:/Dokumente/GitHub/shitziger.github.io/python/media/videos/potenzregel/1080p60/partial_movie_files/PowerRule/2852726489_3890345977_3446167401.mp4'
