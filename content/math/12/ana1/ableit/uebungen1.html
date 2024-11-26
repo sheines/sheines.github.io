@@ -50,10 +50,10 @@
             <div class="ziele">
                 <p>
                     Nachfolgend sollen die in den vorherigen Kapitel erlernten Fähigkeiten vertieft und gefestigt
-                    werden..
+                    werden.
                 </p>
             </div>
-            <section id="aufgaben" class="aufgaben">
+            <section id="aufgaben" class="Grundlagen">
                 <h3>Station 1 &ndash; Grundlagen</h3>
 
                 <ol class="custom-marker point-after decimal">
@@ -77,7 +77,8 @@
                         </ol>
                     </li>
                 </ol>
-
+            </section>
+            <section id="aufgaben" class="Ableitung">
                 <h3>Station 2 &ndash; Ableitungen und Tangenten</h3>
 
                 <ol class="custom-marker point-after decimal">
@@ -119,7 +120,8 @@
                         </ol>
                     </li>
                 </ol>
-
+            </section>
+            <section id="aufgaben" class="Extrempunkte">
                 <h3>Station 3 &ndash; Extrem- und Wendepunkte</h3>
 
                 <ol class="custom-marker point-after decimal">
@@ -138,7 +140,8 @@
                         </ol>
                     </li>
                 </ol>
-
+            </section>
+            <section id="aufgaben" class="Anwendungen">
                 <h3>Station 4 &ndash; Übungs- und Anwendungsaufgaben</h3>
 
                 <ol class="custom-marker point-after decimal">
@@ -147,7 +150,7 @@
                         \(I=[-8;0]\)
                         modellhaft durch den Graphen der Funktion \(f(x)=-\tfrac{5}{256} x^3+\tfrac34 x+2\) beschrieben
                         werden.
-                        Der Punkt \(S(-8│f(-8) )\) ist der Startpunkt der Schanze und der Punkt $A(0│f(0) )$ der
+                        Der Punkt \(S(-8│f(-8) )\) ist der Startpunkt der Schanze und der Punkt $A(0│f(0))$ der
                         Absprungpunkt.
                         Es gilt: \(1\,\text{LE} = 1\,\text m\).
                         <div class="centered" style="max-height: 300px;">
@@ -266,11 +269,10 @@
                         </ol>
                         In einem bewaldeten Gebiet liegt ein See mit Sandstrand (s. Abb.).
                         Das geschwungene Seeufer kann durch den Graphen der Funktion \(f\) modelliert werden. <br>
-                        Dabei entspricht \(1 \text{LE}\) einem Kilometer.
+                        Dabei entspricht \(1\, \text{LE}\) einem Kilometer.
                         <div class="centered" style="max-height: 300px;">
                             <svg version='1.1' xmlns='http://www.w3.org/2000/svg'
-                                xmlns:xlink='http://www.w3.org/1999/xlink'
-                                viewBox='0 0 198.69 156.462'>
+                                xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 198.69 156.462'>
                                 <defs>
                                     <path id='g0-1'
                                         d='M3.3027-3.4444H5.1557C6.7035-3.4444 8.2186-4.578 8.2186-5.7988C8.2186-6.6381 7.4992-7.4447 6.0713-7.4447H2.5397C2.3326-7.4447 2.2127-7.4447 2.2127-7.2376C2.2127-7.1068 2.3108-7.1068 2.5288-7.1068C2.6705-7.1068 2.8667-7.0959 2.9975-7.085C3.1719-7.0632 3.2373-7.0305 3.2373-6.9106C3.2373-6.867 3.2264-6.8343 3.1937-6.7035L1.7331-.8502C1.6241-.4251 1.6023-.3379 .7412-.3379C.5559-.3379 .436-.3379 .436-.1308C.436 0 .5668 0 .5995 0C.9047 0 1.6786-.0327 1.9838-.0327C2.2127-.0327 2.4525-.0218 2.6814-.0218C2.9212-.0218 3.161 0 3.3899 0C3.4662 0 3.6079 0 3.6079-.218C3.6079-.3379 3.5098-.3379 3.3027-.3379C2.8994-.3379 2.5942-.3379 2.5942-.5341C2.5942-.5995 2.616-.654 2.6269-.7194L3.3027-3.4444ZM4.0875-6.6926C4.1856-7.0741 4.2074-7.1068 4.6761-7.1068H5.7225C6.6272-7.1068 7.2049-6.8125 7.2049-6.0604C7.2049-5.6353 6.9869-4.6979 6.5618-4.3055C6.0168-3.815 5.3628-3.7278 4.8832-3.7278H3.3463L4.0875-6.6926Z' />
@@ -342,7 +344,333 @@
                         </ol>
                     </li>
                 </ol>
+                <section class="loesungen">
+                    <h3>Lösungen zu Übungs- und Anwendungsaufgaben</h3>
+
+                    <details id="Anwendungen1">
+                        <summary>Sprungschanze</summary>
+                        <ol class="custom-marker parens-around lower-alpha more-spacing">
+                            <li>
+                                <strong>Steigungswinkel im Startpunkt \( S(-8\,|\, f(-8)) \):</strong>
+                                <p>
+                                    Die Steigung der Funktion ist die Ableitung \( f'(x) \).
+                                </p>
+                                <p>
+                                    Für \( f(x) = -\tfrac{5}{256}x^3 + \tfrac{3}{4}x + 2 \) gilt:
+                                    \[
+                                    f'(x) = -\tfrac{15}{256}x^2 + \tfrac{3}{4}.
+                                    \]
+                                    Im Punkt \( S \):
+                                    \begin{align*}
+                                    f'(-8) &= -\tfrac{15}{256}(-8)^2 + \tfrac{3}{4} \\
+                                    &= -\tfrac{15}{256} \cdot 64 + \tfrac{3}{4} = -\tfrac{960}{256} + \tfrac{3}{4} \\
+                                    &= -\tfrac{9}{4}
+                                    \end{align*}
+                                    Der Steigungswinkel \( \alpha \) berechnet sich durch:
+                                    \begin{align*}
+                                    \tan \alpha &= f'(-8)=-\tfrac{9}{4} \qquad |\text{arc} \\
+                                    \alpha' &\approx -75,96\,^\circ \quad\Rightarrow \alpha= 104,04\,^\circ
+                                    \end{align*}
+                                    <strong>Antwort:</strong> Der Steigungswinkel beträgt etwa \( 104,04\,^\circ \).
+                                </p>
+                            </li>
+                            <li>
+                                <strong>Mittlere Steigung der Schanze zwischen \( S \) und \( A \):</strong><br>
+                                Die mittlere Steigung ergibt sich aus:
+                                \[
+                                m = \frac{f(0) - f(-8)}{0 - (-8)}.
+                                \]
+                                Zunächst berechnen wir die Funktionswerte:
+                                \begin{align*}
+                                f(-8) &= -\tfrac{5}{256}(-8)^3 + \tfrac{3}{4}(-8) + 2 =6 \\
+                                f(0) &= -\tfrac{5}{256}(0)^3 + \tfrac{3}{4}(0) + 2 = 2.
+                                \end{align*}
+                                Somit:
+                                \begin{align*}
+                                m = \frac{2 - 6}{8} = -\tfrac{4}{8} = -0.5.
+                                \end{align*}
+                                <strong>Antwort:</strong> Die mittlere Steigung beträgt \(m= -0.5 \).<br>
+                                Veranschaulichung: Zeichne eine Linie von \( S \) nach \( A \).
+                            </li>
+                            <li>
+                                <strong>Tiefster Punkt der Schanze und Höhendifferenz:</strong><br>
+                                <p>
+                                    Der tiefste Punkt ist ein lokales Minimum, daher gilt \( f'(x) = 0 \).
+                                </p>
+                                <p>
+                                    Für \( f'(x) = -\tfrac{15}{256}x^2 + \tfrac{3}{4} \):
+                                    \begin{align*}
+                                    0 &= -\frac{15}{256}x^2 + \frac{3}{4}
+                                    \\ &\ldots \\
+                                    x_{1/2}&\approx\pm 3,578
+                                    \end{align*}
+                                    Für \( x = -3,577 \) (\(x=3,577\) liegt außerhalb des betrachteten Intervalls):
+                                    \[
+                                    f(-3,577) \approx -\tfrac{5}{256}(-3,578)^3 + \tfrac{3}{4}(-3,578) + 2 \approx
+                                    0,211.
+                                    \]
+                                    Die Höhendifferenz zwischen dem tiefsten Punkt \( T(-3,578\,|\, 0,211) \) und
+                                    dem höchsten Punkt der Schanze (Startpunkt \( S(-8\,|\, 6) \)):
+                                    \[
+                                    h = 6 - (0,211) = 5,789 \, \text{m}.
+                                    \]
+                                    <strong>Antwort:</strong> Der tiefste Punkt liegt bei etwa \( T(-3,578\,|\, 0,211)
+                                    \).
+                                    Die Höhendifferenz beträgt etwa \( 5,789 \,|\, \text{m} \).
+                                </p>
+
+                            </li>
+                        </ol>
+
+
+
+                    </details>
+                    <details id="Anwendungen2">
+                        <summary>Skigebiet</summary>
+                        <ol class="custom-marker parens-around lower-alpha more-spacing">
+                            <li>
+                                <strong>Obere und untere Anschlusspunkte \( O \) bzw. \( U \) als Extrempunkte von \( f
+                                    \):</strong><br>
+                                <p>
+                                    Extrempunkte liegen dort, wo die Ableitung \( f'(x) \) gleich null ist.
+                                </p>
+                                <p> Für \( f(x) = \frac{1}{2500}x^3 - \frac{3}{100}x^2 + 27 \) gilt:
+                                    \begin{align*}
+                                    f'(x) &= \tfrac{3}{2500}x^2 - \tfrac3{50}x.
+                                    \end{align*}
+                                    Also ist:
+                                    \begin{align*}
+                                    f'(x) &= 0 \\
+                                    x_1 &= 0 \\
+                                    x_2 &= 50
+                                    \end{align*}
+                                    Die Funktionswerte an diesen Stellen sind:
+                                    \begin{align*}
+                                    f(0) &= \tfrac{1}{2500}(0)^3 - \tfrac{3}{100}(0)^2 + 27 = 27, \\
+                                    f(50) &= 2.
+                                    \end{align*}
+                                    <strong>Antwort:</strong> Der obere Anschlusspunkt ist \( O(0\,|\, 27) \)
+                                    und der untere Anschlusspunkt ist \( U(50\,|\, 2) \).
+                                <p>
+                                    Dass es so ist, kann entweder mit der zweiten Ableitung gezeigt werden
+                                    (\(f''(0)=-\tfrac3{50}\) und \(f''(50)=\tfrac3{50}\)) oder
+                                    es ergibt sich aus dem Kontext: der Hochpunkt liegt höher als der Tiefpunkt.
+                                </p>
+                                </p>
+                            </li>
+                            <li>
+                                <strong>Horizontale Gesamtlänge \( L \), vertikale Höhendifferenz \( H \), und
+                                    durchschnittliche Steigung der Abfahrt:</strong><br>
+                                <p>
+                                    Die horizontale Länge ist die Differenz der \( x \)-Koordinaten:
+                                    \begin{align*}
+                                    L &= x_U - x_O = 50 - 0 = 50 \, \text{m}
+                                    \end{align*}
+                                    Die vertikale Höhendifferenz ist die Differenz der \( y \)-Koordinaten:
+                                    \begin{align*}
+                                    H &= y_O - y_U = 27 - 2 = 25 \, \text{m}
+                                    \end{align*}
+                                    Die durchschnittliche Steigung ist:
+                                    \begin{align*}
+                                    m &= \frac{H}{L} = \frac{25}{50} = 0.5
+                                    \end{align*}
+                                    <strong>Antwort:</strong> Horizontale Länge: \( L = 50 \, \text{m} \), vertikale
+                                    Höhendifferenz: \( H = 25 \, \text{m} \), durchschnittliche Steigung: \( m = 0.5 \).
+                                </p>
+
+                            </li>
+                            <li>
+                                <strong>Stelle mit der größten Steigung und Neigungswinkel \( \alpha \):</strong><br>
+                                <p>
+                                    Die größte Steigung (Maximum von \( f'(x) \)) liegt beim Extremwert der Ableitung,
+                                    also bei \( f''(x) = 0 \). Für:
+                                    \begin{align*}
+                                    f'(x) &= \tfrac{3}{2500}x^2 - \tfrac3{50}x \\
+                                    f''(x) &= \tfrac{3}{1250}x - \tfrac3{50}
+                                    \end{align*}
+                                    \( f''(x) = 0 \) setzen:
+                                    \begin{align*}
+                                    0 &= \tfrac{3}{1250}x - \tfrac3{50}\\
+                                    x&=25
+                                    \end{align*}
+                                    Die Steigung an dieser Stelle ist:
+                                    \begin{align*}
+                                    f'(25) &= \tfrac{3}{2500}\cdot25^2 - \tfrac3{50}\cdot 25=-\tfrac34
+                                    \end{align*}
+                                    Der Neigungswinkel \( \alpha \) berechnet sich durch:
+                                    \begin{align*}
+                                    \tan \alpha &= -\tfrac34 \quad |\text{arc} \\
+                                    \alpha&=-36,87\,^\circ
+                                    \end{align*}
+                                    <strong>Antwort:</strong> Die Abfahrt ist am steilsten bei \( x = 25 \) mit einer
+                                    Steigung von \( -\tfrac34 \) und einem Neigungswinkel von etwa \( 36,87\,^\circ \).
+                                </p>
+
+                            </li>
+                            <li>
+                                <strong>Höhe bei einem Anstieg von \(-0.63\):</strong><br>
+                                <p>
+                                    Ein Anstieg von \(-0,63\) bedeutet, dass \( f'(x) = -0,63 \):
+                                    \begin{align*}
+                                    f'(x) &= \tfrac{3}{2500}x^2 - \tfrac3{50}x = -0,63
+                                    \end{align*}
+                                    Dies ist eine quadratische Gleichung:
+                                    \begin{align*}
+                                    &\ldots \\
+                                    x_1&=15 \\
+                                    x_2&=35 \\
+                                    \end{align*}
+                                    Die Höhe ist der Funktionswert an \( x_2 = 35 \) (weil er ja von rechts kommt):
+                                    \begin{align*}
+                                    f(35) &= \tfrac{1}{2500}\cdot 35^3 - \tfrac{3}{100}\cdot 35^2 + 27
+                                    =\tfrac{37}{5}=7,4
+                                    \end{align*}
+                                    <strong>Antwort:</strong> Der Sportler befindet sich bei einer Höhe von etwa \( 7,4
+                                    \, \text{m} \).
+                                </p>
+                            </li>
+                        </ol>
+
+                    </details>
+                    <details id="Anwendungen3">
+                        <summary>Badesee</summary>
+                        <ol class="custom-marker parens-around lower-alpha more-spacing">
+
+                            <li><strong>Nullstellen von \(f\):</strong>
+                                <p>
+                                    Nullstellen mit \(f(x) = 0\) finden:
+                                    \begin{align*}
+                                    \tfrac{1}{2}x^3 - 3x^2 + \tfrac{9}{2}x &= 0 \\
+                                    x \cdot \left( \tfrac{1}{2}x^2 - 3x + \tfrac{9}{2} \right) &= 0.
+                                    \end{align*}
+                                    Daraus folgt: \(x_1 = 0\)
+                                    Verbleibende quadratische Gleichung lösen:
+                                    \begin{align*}
+                                    \tfrac{1}{2}x^2 - 3x + \tfrac{9}{2} &= 0\\
+                                    \ldots& \\
+                                    x_2&=3
+                                    \end{align*}
+                                    Die quadratische Gleichung hat nur eine Lösung.
+                                </p>
+                                <p>
+                                    <strong>Antwort:</strong> Die Nullstellen sind somit: \(x_1 = 0\) und \(x_2 = 3\)
+                                </p>
+                            </li>
+                            <li>
+                                <strong> Symmetrieeigenschaften des Graphen von \(f(x)\):</strong>
+                                <p>
+                                    Der Funktionsterm \(f(x) = \tfrac{1}{2}x^3 - 3x^2 + \tfrac{9}{2}x\) enthält Potenzen
+                                    von
+                                    \(x\), die sowohl ungerade (\(x^3, x\)) als auch gerade (\(x^2\)) sind. Dies führt
+                                    zu
+                                    folgenden Schlussfolgerungen:
+                                <ul class="more-spacing" style="margin-bottom: 5px;">
+                                    <li>Achsensymmetrie zur \(y\)-Achse: Dazu müsste \(f(-x) = f(x)\) gelten. Für
+                                        \(f(x)\)
+                                        ist dies nicht der Fall, da ungerade Potenzen das Vorzeichen wechseln.</li>
+                                    <li>Punktsymmetrie zum Ursprung: Dazu müsste \(f(-x) = -f(x)\) gelten. Auch dies
+                                        trifft
+                                        nicht zu, da der quadratische Term (\(x^2\)) sein Vorzeichen nicht ändert.</li>
+                                </ul>
+                                Daher ist der Graph von \(f\) weder achsensymmetrisch zur \(y\)-Achse noch
+                                punktsymmetrisch zum Ursprung.
+                                </p>
+                            </li>
+                            <li>
+                                <strong> Lokale Extrempunkte von \(f(x)\): </strong>
+                                <p>
+                                    Die Ableitungen der Funktion sind:
+                                    \begin{align*}
+                                    f'(x) &= \tfrac{3}{2}x^2 - 6x + \tfrac{9}{2} \\
+                                    f''(x) &= 3x - 6.
+                                    \end{align*}
+                                    Bei Extrempunkten gilt: \(f'(x) = 0\):
+                                    \begin{align*}
+                                    0 &= \tfrac{3}{2}x^2 - 6x + \tfrac{9}{2} \\
+                                    &\ldots \\
+                                    x_1&=1 \\
+                                    x_2 &=3
+                                    \end{align*}
+                                    Art der Extrema gibt's mit der zweiten Ableitung:
+                                    \begin{align*}
+                                    f''(1) &= 3 \cdot 1 - 6 = -3 \quad (\text{Maximum}) \\
+                                    f''(3) &= 3 \cdot 3 - 6 = 3 \quad (\text{Minimum})
+                                    \end{align*}
+                                    Zweite Koordinate berechnen:
+                                    \begin{align*}
+                                    f(1)&= \tfrac{1}{2}\cdot 1^3 - 3\cdot 1x^2 + \tfrac{9}{2}\cdot 1=2 \\
+                                    f(3)&= \tfrac{1}{2}\cdot 3^3 - 3\cdot 3x^2 + \tfrac{9}{2}\cdot 3=0
+                                    \end{align*}
+                                    <strong>Antwort:</strong> Die Extrema liegen bei \(H(1\,|\,2)\) und \(T(3\,|\,0)\).
+                                </p>
+                            </li>
+                            <li>
+                                <strong>Größte Ausdehnung des Sees:</strong>
+                                <p>
+                                    Der See erstreckt sich von Süden nach Norden über die maximale Differenz der
+                                    \(y\)-Werte:
+                                    \begin{align*}
+                                    \text{Nord-Süd-Ausdehnung} &= f(1) - f(3) = 2 - 0 = 2 \, \text{km}.
+                                    \end{align*}
+                                    Von Osten nach Westen liegt die Ausdehnung zwischen den Nullstellen:
+                                    \[
+                                    \text{Ost-West-Ausdehnung} = 3 - 0 = 3 \, \text{km}.
+                                    \]
+                                </p>
+                            </li>
+                            <li>
+                                <strong> Anstieg der Funktion \(f\) im Punkt \(P(1.5, f(1.5))\)</strong>
+                                <p>
+                                    Die Steigung im Punkt \(P\) ist die Ableitung \(f'(x)\) an der Stelle \(x = 1,5\):
+                                    \begin{align*}
+                                    f'(1,5) &= \tfrac{3}{2}\cdot 1,5^2 - 6 \cdot 1,5 + \tfrac{9}{2} \\
+                                    &=-\tfrac98
+                                    \end{align*}
+                                </p>
+                                <p>
+                                    <strong>Antwort:</strong> Im Punkt \(P\) hat die Funktion eine Steigung von
+                                    \(m=-\tfrac98\).
+                                </p>
+                            </li>
+                            <li>
+                                <strong> Eigenschaften von \(f\) im Punkt \(R\):</strong>
+                                <p>
+                                    Im Punkt \(R\), wo der zweite Zufahrtsweg ebenfalls
+                                    senkrecht auf das Ufer trifft und parallel zu \(g\) ist,
+                                    muss die Steigung ebenfalls \(m=-\tfrac98\) betragen.
+                                </p>
+                            </li>
+
+                            <li>
+                                <strong> Koordinaten von \(R\)</strong>
+                                <p>
+                                    Um \(x_R\) zu berechnen, wird \(f'(x) = -\tfrac98\) gesetzt:
+                                    \begin{align*}
+                                    \tfrac{3}{2}x^2 - 6x + \tfrac{9}{2} &= -\tfrac98
+                                    \end{align*}
+                                    Das ist eine quadratische Gleichung:
+                                    \begin{align*}
+                                        &\ldots \\
+                                        x_1&=\tfrac32 \quad \Rightarrow P\\
+                                        x_2&=\tfrac52 \quad \Rightarrow R
+                                    \end{align*}
+                                    Zweite Koordinate berechnen:
+                                    \begin{align*}
+                                        f(\tfrac52)&=\tfrac{1}{2}\cdot \left(\tfrac52\right)^3 - 3\cdot \left(\tfrac52\right)^2 + \tfrac{9}{2}\cdot \tfrac52=\tfrac{5}{16}
+                                    \end{align*}
+                                </p>
+                                <p>
+                                    <strong>Antwort:</strong> Der Punkt \(R\) hat die Koordinaten \(R\left(\tfrac52\,|\, \tfrac{5}{16}\right)\).
+                                </p>
+                            </li>
+
+                        </ol>
+                    </details>
+
+                </section>
             </section>
+
+
             <section class="loesungen">
                 <h3>Lösungen zu Übungs- und Anwendungsaufgaben</h3>
 
@@ -370,7 +698,7 @@
         <a href="/misc/impressum.html">Impressum</a>
         <div class="lastModified" align="center">
             Zuletzt geändert:<br>
-            30. November 2023
+            26. November 2024
             <!-- <span id="lastModifiedDate"></span> -->
         </div>
         <a href="/misc/datenschutz.html">Datenschutz</a>
