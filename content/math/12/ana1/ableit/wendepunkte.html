@@ -111,8 +111,7 @@
                 <path
                   d='M30.84325 39.78461C34.75707 35.03937 43.42556 33.41347 50.20449 36.15313C52.35852 37.0236 54.1488 38.2768 53.74442 37.78638'
                   stroke='aqua' fill='none' stroke-width='.79701' stroke-miterlimit='10' />
-                <path d='M55.392343 39.78461L54.354248 35.269113L53.74442 37.78638L51.157092 37.90578'
-                  fill='aqua' />
+                <path d='M55.392343 39.78461L54.354248 35.269113L53.74442 37.78638L51.157092 37.90578' fill='aqua' />
                 <path
                   d='M87.53687 47.06028C91.45069 51.80552 100.11918 53.43142 106.8981 50.69176C109.05214 49.8213 110.84243 48.56809 110.43805 49.05851'
                   stroke='aqua' fill='none' stroke-width='.79701' stroke-miterlimit='10' />
@@ -122,78 +121,82 @@
             </svg>
           </div>
           <p>
-            Die lokale Änderungsrate, bzw. die Ableitung der Funktion ist an diesen Stellen null.
-            \begin{align*}
-            f'(x_E)=0
-            \end{align*}
-            Diese Eigenschaft wird als <b>notwendige Bedingung</b> für lokale Extrema bezeichnet.
+            Wendepunkte liegen an den Stellen maximaler/minimaler Steigung (oder Gefälle), das heißt die erste Ableitung
+            hat hier einen Hoch- oder Tiefpunkt.
           </p>
-          
-          <h5>Art des Extremums</h5>
-          <p>Um zu bestimmen, ob es sich um einen Hoch- oder Tiefpunkt handelt, muss die zweite Ableitung berechnet
+          <p>
+            Für die Berechnung eines Wendepunktes gilt:
+            \begin{align*}
+            f''(x_W)&=0
+            \end{align*}
+          </p>
+
+          <h5>Art des Wendepunkts</h5>
+          <p>Um zu bestimmen, ob es sich um eine Links-Rechts- oder Rechts-Links-Wendestelle handelt, muss die dritte
+            Ableitung berechnet
             werden. Dann gilt:
           <ul class="more-spacing">
-            <li>Wenn \(f''(x_E) > 0\), dann ist es ein Tiefpunkt.</li>
-            <li>Wenn \(f''(x_E) < 0\), dann ist es ein Hochpunkt.</li>
-            <li>Wenn \(f''(x_E) = 0\), dann müssen andere Wege gefunden werden. Es ist dann <i>nicht</i> automatisch ein
-              Sattelpunkt. Hier kann beispielweise mit dem
-              Vorzeichenwechselkriterium gearbeitet werden.</li>
+            <li>Wenn \(f'''(x_W) > 0\), dann Rechts-Links-Wendestelle.</li>
+            <li>Wenn \(f''(x_W) < 0\), dann Links-Rechts-Wendestelle.</li>
+            <li>Wenn \(f''(x_W) = 0\), dann kann mit dem <strong>Vorzeichenwechselkriterium für Wendepunkte</strong>
+              gearbeitet werden.</li>
           </ul>
           Diese Kriterien werden als <b>hinreichende Kriterien</b> für lokale Extrema bezeichnet.
           </p>
           <h5>Vorgehen</h5>
           <ol class="more-spacing">
-            <li>Erste Ableitung bestimmen,</li>
-            <li>Nullstellen der ersten Ableitung bestimmen,</li>
-            <li>Zweite Ableitung bestimmen,</li>
-            <li>Art der Extrema bestimmen,</li>
-            <li>Nullstellen der ersten Ableitung in Ausgangsfunktion einsetzen und</li>
-            <li>Extrempunkte angeben.</li>
+            <li>Erste und zweite Ableitung bestimmen,</li>
+            <li>Nullstellen der zweiten Ableitung bestimmen,</li>
+            <li>Dritte Ableitung bestimmen,</li>
+            <li>Art der Wendepunkte bestimmen,</li>
+            <li>Nullstellen der zweiten Ableitung in Ausgangsfunktion einsetzen und</li>
+            <li>Wendepunkte angeben.</li>
           </ol>
         </div>
         <h6>Beispiel:</h6>
-        <p>Es sollen alle Extrempunkte der Funktion \(f(x)=\color{cyan}x^3-6x^2+9x\) bestimmt werden.
+        <p>Es sollen alle Extrempunkte der Funktion \(f(x)=\color{cyan}\tfrac14x^4-3x^3+12x^2-15x-3\) bestimmt werden.
         <ol class="more-spacing">
-          <li>Erste Ableitung:
+          <li>Erste und zweite Ableitung:
             \begin{align*}
-            \color{green}f'(x)&=\color{green}3x^2-12x+9\ \ \
+            \quad f'(x)&=x^3-9x^2+24x-15 \\
+            \color{green}f''(x)&=\color{green}3x^2-18x+24
             \end{align*}
           </li>
-          <li>Nullstellen von \(\color{green}f'\):
+          <li>Nullstellen von \(\color{green}f''\):
             \begin{align*}
-            0&={\color{green}3x^2-12x+9} \\
+            0&={\color{green}3x^2-18x+24} \\
             &\ldots \\
-            x_{E1}&={\color{salmon}1} \qquad x_{E2}={\color{orange}3}
+            x_{W1}&={\color{salmon}2} \qquad x_{W2}={\color{orange}4}
             \end{align*}
           </li>
-          <li>Zweite Ableitung (also die Ableitung der ersten Ableitung):
+          <li>Dritte Ableitung :
             \begin{align*}
-            \color{magenta}f''(x)&=\color{magenta}6x-12\qquad\quad\,
+            \color{magenta}f'''(x)&=\color{magenta}6x-18\qquad\quad\,
             \end{align*}
           </li>
-          <li>Art der Extrema: \(x_E\) in \(\color{magenta}f''\) einsetzen:
+          <li>Art der Wendepunkte: \(x_W\) in \(\color{magenta}f'''\) einsetzen:
             \begin{align*}
-            \color{magenta}f''({\color{salmon}1})&={\color{magenta}6\cdot {\color{salmon}1}-12}=-6
+            \color{magenta}f'''({\color{salmon}2})&={\color{magenta}6\cdot {\color{salmon}2}-18}=-6
             \end{align*}
-            Die zweite Ableitung von \(x_{E1}={\color{salmon}1}\) ist kleiner null, d.h. es handelt sich um einen
-            Hochpunkt.
+            Die dritte Ableitung von \(x_{W1}={\color{salmon}1}\) ist kleiner null, d.h. es handelt sich um eine
+            Links-Rechts-Wendestelle.
             \begin{align*}
-            \color{magenta}f''({\color{orange}3})&={\color{magenta}6\cdot {\color{orange}3}-12}=6\ \
+            \color{magenta}f''({\color{orange}4})&={\color{magenta}6\cdot {\color{orange}4}-18}=6\ \
             \end{align*}
-            Die zweite Ableitung von \(x_{E2}={\color{orange}3}\) ist größer null, d.h. es handelt sich um einen
-            Tiefpunkt.
+            Die zweite Ableitung von \(x_{W2}={\color{orange}4}\) ist größer null, d.h. es handelt sich um eine
+            Rechts-Links-Wendestelle.
           </li>
           <li>Koordinaten der Extrempunkte bestimmen: \(x_E\) in \(\color{cyan}f\) einsetzen:
             \begin{align*}
-            \color{cyan}f({\color{salmon}1})&={\color{cyan}{\color{salmon}1}^3-6\cdot {\color{salmon}1}^2+9\cdot
-            {\color{salmon}1}}=\color{red}4 \\
-            \color{cyan}f({\color{orange}3})&={\color{cyan}{\color{orange}3}^3-6\cdot {\color{orange}3}^2+9\cdot
-            {\color{orange}3}}=\color{teal}0
+            \color{cyan}f({\color{salmon}2})&={\color{cyan}\tfrac14\cdot {\color{salmon}2}^4-3\cdot
+            {\color{salmon}2}^3+12\cdot {\color{salmon}2}^2-15\cdot {\color{salmon}2}-3}=\color{red}-5 \\
+            \color{cyan}f({\color{orange}4})&={\color{cyan}\tfrac14\cdot {\color{orange}4}^4-3\cdot
+            {\color{orange}4}^3+12\cdot {\color{orange}4}^2-15\cdot {\color{orange}4}-3}=\color{teal}1
             \end{align*}
           </li>
           <li>Punkte angeben:
             \begin{align*}
-            H({\color{salmon}1}\,|\,{\color{red}4})& & &T({\color{orange}3}\,|\,{\color{teal}0})
+            W_1({\color{salmon}2}\,|\,{\color{red}-5})& & &W_2({\color{orange}4}\,|\,{\color{teal}1})
             \end{align*}
           </li>
         </ol>
@@ -213,9 +216,10 @@
       <section class="aufgaben" id="aufgaben">
         <h3>Aufgaben zu Extrempunkten</h3>
         <ol class="custom-marker point-after decimal">
-          <li>Seite 138 Übung 1 und 2 <a href="#a1">Lösungen</a> </li>
-          <li>Seite 141 Übung 3 und 4 <a href="#a2">Lösungen</a> </li>
-          <li>Seite 142 Übung 5 <a href="#a3">Lösungen</a> </li>
+          <li>Seite 145 Übung 1 <a href="#a1">Lösungen</a> </li>
+          <li>Seite 146 Übung 3 <a href="#a2">Lösungen</a> </li>
+          <li>Seite 147 Übung 4 <a href="#a3">Lösungen</a> </li>
+          <li>Seite 147 Übung 9 <a href="#a4">Lösungen</a> </li>
         </ol>
 
       </section>
@@ -224,229 +228,293 @@
         <h3>Lösungen zu Extrempunkten</h3>
 
         <details id="a1">
-          <summary>Seite 138</summary>
-
-          <details>
-            <summary class="nonumber">Übung 1</summary>
-            Die Art der Extremstelle ist nicht gefragt.
-            <ol class="custom-marker parens-around lower-alpha more-spacing">
-              <li> \(x=2\), Extremstelle (Tiefpunkt)
-              </li>
-              <li>\(x=0\), Extremstelle (Tiefpunkt)</li>
-              <li>\(x=-1\), Extremstelle (Hochpunkt)<br>\(x=1\), Extremstelle (Tiefpunkt)</li>
-            </ol>
-
-            <div class="centered" style="max-height: 350px;">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="-12 -6 26 13">
-                <!-- The viewBox is set to (-12, -6, 26, 13) which provides a coordinate space of width 38 and height 19 units.
-                     The center of the SVG is (0, 0). You can adjust this viewBox as needed. -->
-                <!-- Add grid lines -->
-                <defs>
-                  <pattern id="grid" width="1" height="1" patternUnits="userSpaceOnUse">
-                    <path d="M 1 0 L 0 0 0 1" fill="none" stroke="#333333" stroke-width="0.05" />
-                  </pattern>
-                </defs>
-                <rect x="-9.9" y="-5.5" width="19.8" height="11" fill="url(#grid)" />
-
-                <!-- Draw the x-axis line -->
-                <line x1="-10" y1="0" x2="10" y2="0" stroke="#a7a7a7" stroke-width="0.05" />
-
-                <!-- Draw the x-axis arrowhead -->
-                <polygon points="10.5,0 9.8,-0.15 9.8,0.15" fill="#a7a7a7" />
-
-                <!-- Draw the y-axis line -->
-                <line x1="0" y1="5" x2="0" y2="-5" stroke="#a7a7a7" stroke-width="0.05" />
-
-                <!-- Draw the y-axis arrowhead -->
-                <polygon points="0,-5.5 -0.15,-4.8 0.15,-4.8" fill="#a7a7a7" />
-
-                <!-- Add "x" at the end of the x-axis -->
-                <text x="10.7" y="0.7" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">x</text>
-
-                <!-- Add "y" at the end of the y-axis -->
-                <text x="-0.8" y="-5.3" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">y</text>
-
-
-                <!-- Add numbers to x-axis-->
-                <text x="1.9" y="0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">2</text>
-
-                <!-- Add numbers to y-axis-->
-                <text x="-0.75" y="-1.75" font-family="serif" font-size="0.7" fill="#a8a7a7">2</text>
-
-                <path d='M -2.88 -21.81 L -2.76 -20.66 -2.64 -19.53 -2.52 -18.43 -2.4 -17.36
-                -2.28 -16.32 -2.16 -15.31 -2.04 -14.32 -1.92 -13.37 -1.8 -12.44
-                -1.68 -11.54 -1.56 -10.67 -1.44 -9.83 -1.32 -9.02 -1.2 -8.24
-                -1.08 -7.49 -0.96 -6.76 -0.84 -6.07 -0.72 -5.4 -0.6 -4.76
-                -0.48 -4.15 -0.36 -3.57 -0.24 -3.02 -0.12 -2.49 0 -2
-                0.12 -1.53 0.24 -1.1 0.36 -0.69 0.48 -0.31 0.6 0.04
-                0.72 0.36 0.84 0.65 0.96 0.92 1.08 1.15 1.2 1.36
-                1.32 1.54 1.44 1.69 1.56 1.81 1.68 1.9 1.8 1.96
-                1.92 1.99 2.04 2 2.16 1.97 2.28 1.92 2.4 1.84
-                2.52 1.73 2.64 1.59 2.76 1.42 2.88 1.23 3 1' stroke='darkgoldenrod' fill='none' stroke-width='0.15' />
-
-                <text x="3" y="0.75" font-family="serif" font-size="0.9" font-style="italic"
-                  fill="darkgoldenrod">a</text>
-
-                <path d='M -2.84 -3.02 L -2.68 -2.8 -2.52 -2.59 -2.36 -2.39 -2.2 -2.21
-                -2.04 -2.04 -1.88 -1.88 -1.72 -1.74 -1.56 -1.61 -1.4 -1.49
-                -1.24 -1.38 -1.08 -1.29 -0.92 -1.21 -0.76 -1.14 -0.6 -1.09
-                -0.44 -1.05 -0.28 -1.02 -0.12 -1 0.04 -1 0.2 -1.01
-                0.36 -1.03 0.52 -1.07 0.68 -1.12 0.84 -1.18 1 -1.25
-                1.16 -1.34 1.32 -1.44 1.48 -1.55 1.64 -1.67 1.8 -1.81
-                1.96 -1.96 2.12 -2.12 2.28 -2.3 2.44 -2.49 2.6 -2.69
-                2.76 -2.9 2.92 -3.13 3.08 -3.37 3.24 -3.62 3.4 -3.89
-                3.56 -4.17 3.72 -4.46 3.88 -4.76 4.04 -5.08 4.2 -5.41
-                4.36 -5.75 4.52 -6.11 4.68 -6.48 4.84 -6.86 5 -7.25' stroke='magenta' fill='none'
-                  stroke-width='0.15' />
-
-                <text x="5" y="-5.25" font-family="serif" font-size="0.9" font-style="italic" fill="magenta">b</text>
-
-                <path d='M -1.9 1.16 L -1.8 0.43 -1.7 -0.19 -1.6 -0.7 -1.5 -1.13
-                -1.4 -1.46 -1.3 -1.7 -1.2 -1.87 -1.1 -1.97 -1 -2
-                -0.9 -1.97 -0.8 -1.89 -0.7 -1.76 -0.6 -1.58 -0.5 -1.38
-                -0.4 -1.14 -0.3 -0.87 -0.2 -0.59 -0.1 -0.3 0 0
-                0.1 0.3 0.2 0.59 0.3 0.87 0.4 1.14 0.5 1.38
-                0.6 1.58 0.7 1.76 0.8 1.89 0.9 1.97 1 2
-                1.1 1.97 1.2 1.87 1.3 1.7 1.4 1.46 1.5 1.13
-                1.6 0.7 1.7 0.19 1.8 -0.43 1.9 -1.16 2 -2' stroke='#007688' fill='none' stroke-width='0.15' />
-
-                <text x="2.5" y="-1.8" font-family="serif" font-size="0.9" font-style="italic" fill="#007688">c</text>
-
-              </svg>
-            </div>
-
-
-          </details>
-
-          <details>
-            <summary class="nonumber">Übung 2</summary>
-            <p>
-              Bei der ersten Stelle (links) mit waagerechter Tangente handelt es sich um einen Sattelpunkt, da sowohl
-              rechts als auch links vom Extrempunkte
-              die erste Ableitung größer null ist (die Funktion also steigend).
-            </p>
-            <p>
-              Bei der zweiten Stelle (rechts) mit waagerechter Tangente handelt es sich um ein Maximum, also einen
-              Hochpunkt, da hier die Ableitung rechts positiv
-              (also steigend) und links negativ (also fallend) ist.
-            </p>
-            <p>
-              Bei den Beschreibungen hier handelt es sich um das Vorzeichenwechselkriterium.
-            </p>
-          </details>
+          <summary>Wendepunkte</summary>
+          <ol class="custom-marker parens-around lower-alpha more-spacing">
+            <li>
+              <ul>
+                <li>\(f''(x)=6x-6\)</li>
+                <li>\(x_W=1\)</li>
+                <li>\(f'''(1)=6\)</li>
+                <li>RL: \(W(1\,|\,-2)\)</li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li>\(f''(x)=\tfrac25x^2-\tfrac85\)</li>
+                <li>\(x_{W1}=2, x_{W2}=-2\)</li>
+                <li>\(f'''(2)=\tfrac85, f'''(-2)=-\tfrac85\)</li>
+                <li>RL: \(W_1(2\,|\,-\tfrac83)\), LR: \(W_1(-2\,|\,-\tfrac83)\)</li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li>\(f'(x)=x+\tfrac{4}{x^2}\)</li>
+                <li>\(f''(x)=1-\tfrac{8}{x^3}\)</li>
+                <li>\(x_{W}=2\)</li>
+                <li>\(f'''(2)=\tfrac32\)</li>
+                <li>RL: \(W(2\,|\,0)\)</li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li>\(f'(x)=2x-\tfrac{1}{x^2}\)</li>
+                <li>\(f''(x)=2+\tfrac{2}{x^3}\)</li>
+                <li>\(x_{W}=-1\)</li>
+                <li>\(f'''(-1)=-6\)</li>
+                <li>LR: \(W(-1\,|\,0)\)</li>
+              </ul>
+            </li>
+          </ol>
+          Zeichnungen mit <a href="https://www.geogebra.org/calculator" target="_blank">Geogebra</a>
 
         </details>
 
         <details id="a2">
-          <summary>Seite 141</summary>
-
-          <details>
-            <summary class="nonumber">Übung 3</summary>
-            d) ist für uns aktuell nicht lösbar
-            <ol class="custom-marker parens-around lower-alpha more-spacing">
-              <li>
-                <ul>
-                  <li>\(f'(x)=\tfrac12x-1=0\)</li>
-                  <li>\(x_E=2\)</li>
-                  <li>\(f''(x)=\tfrac12\)</li>
-                  <li>\(f''(2)=\tfrac12>0\)</li>
-                  <li>\(T(2\,|\,0)\)</li>
-                </ul>
-              </li>
-              <li>
-                <ul>
-                  <li>\(f'(x)=3x^2-6x=0\)</li>
-                  <li>\(x_{E1}=0,\quad x_{E2}=2\)</li>
-                  <li>\(f''(x)=6x-6\)</li>
-                  <li>\(f''(0)=-6<0,\quad f''(2)=6>0\)</li>
-                  <li>\(H(0\,|\,0),\quad T(2\,|\,-4)\)</li>
-                </ul>
-              </li>
-              <li>
-                <ul>
-                  <li>\(f'(x)=ax^2-a^3=0\)</li>
-                  <li>\(x_{E}=\pm a\)</li>
-                  <li>\(f''(x)=2ax\)</li>
-                  <li>\(f''(-a)=-2a^2<0,\quad f''(a)=2a^2>0\)</li>
-                  <li>\(H(-a\,|\,\tfrac23a^4),\quad T(a\,|\,-\tfrac23a^4)\)</li>
-                </ul>
-              </li>
-            </ol>
-          </details>
-
-          <details>
-            <summary class="nonumber">Übung 4</summary>
-            c) und d) ist für uns aktuell nicht lösbar
-            <ol class="custom-marker parens-around lower-alpha more-spacing">
-              <li>
-                <ul>
-                  <li>\(f'(x)=1-x^3\)</li>
-                  <li>\(x_E=1\)</li>
-                  <li>Vorzeichenwechselkriterium: von \(+\) nach \(-\)</li>
-                  <li>\(H(1\,|\,\tfrac34)\)</li>
-                </ul>
-              </li>
-              <li>
-                <ul>
-                  <li>\(f'(x)=2ax-4a^2\)</li>
-                  <li>\(x_E=2a\)</li>
-                  <li>Vorzeichenwechselkriterium: von \(-\) nach \(+\)</li>
-                  <li>\(T(2a\,|\,-4a^3)\)</li>
-                </ul>
-              </li>
-            </ol>
-
-          </details>
-
+          <summary>Hochwasser</summary>
+          <ul class="custom-marker parens-around lower-alpha more-spacing">
+            <li>Wertetabelle und Graph, siehe <a href="https://www.geogebra.org/calculator" target="_blank">Geogebra</a>
+            </li>
+            <li>Maximaler Wasserstand \(\rightarrow\) Hochpunkt
+              <ul>
+                <li>Erste Ableitung: \(f'(t)=-\tfrac13t^2+\tfrac43t\)</li>
+                <li>Nullstellen der ersten Ableitung:
+                  \begin{align*}
+                  t_1&=0 & t_2&=4
+                  \end{align*}
+                </li>
+                <li>
+                  Art des Extremums: 2. Ableitung
+                  \begin{align*}
+                  f''(t)&=-\tfrac23t+\tfrac43 \\
+                  f''(0)&=\tfrac43 > 0 \\
+                  f''(4)&=-\tfrac43 < 0 \end{align*} Das Extremum bei \(t=4\) ist ein Hochpunkt. </li>
+                <li>Antwort: Nach vier Stunden war der höchste Wasserstand erreicht.</li>
+                <li>Maximale Wasserhöhe:
+                  \begin{align*}
+                  f(4)&=-\tfrac19\dot 4^3+\tfrac23\cdot 4^2+3 \\
+                  f(4)&=\tfrac{59}{9}\approx 6,56\,\text m
+                  \end{align*}
+                  Das Wasser stand am Maximum etwa \(6,5\) Meter hoch.
+                </li>
+              </ul>
+            <li>Stärkster Anstieg \(\rightarrow\) Wendepunkt
+              <ul>
+                <li>Zweite Ableitung: \(f'(t)=-\tfrac23t+\tfrac43\)</li>
+                <li>Nullstelle der ersten Ableitung:
+                  \begin{align*}
+                  t_1&=2
+                  \end{align*}
+                </li>
+                <li>Nach zwei Stunden steigt der Pegel am stärksten.</li>
+                <li>Steigung: 1. Ableitung
+                  \begin{align*}
+                  f'(2)&=-\tfrac13t^2+\tfrac43t \\
+                  f'(2)&=\tfrac43\approx1,33\,\tfrac{\text m}{\text s}
+                  \end{align*}
+                  Das Wasser stieg da mit ca. \(1,3\) Metern pro Stunde.
+                </li>
+              </ul>
+            </li>
+            <li>Ausgangslage: Wasserstand zum Zeitpunkt \(t=0\):
+              \begin{align*}
+              f(0)&=-\tfrac19\cdot 0^3+\tfrac23\cdot 0^2+3 \\
+              f(0)&=3
+              \end{align*}
+              Der Wasserstand lag zu Beginn der Messung bei \(3\) Metern.
+              \begin{align*}
+              3&=f(x) \\
+              3&=-\tfrac19t^3+\tfrac23t^2+3 \\
+              &\ldots \\
+              t_1&=0 \\
+              t_2&=6
+              \end{align*}
+              Nach sechs Stunden lag der Wasserstand wieder auf dem Niveau wie zu Beginn der Messung.
+            </li>
+          </ul>
         </details>
 
-        <details>
-          <summary>Seite 142</summary>
-          Übung 5:
+        <details id="a3">
+          <summary>Stellen Prüfen</summary>
+          Ableitungen ermitteln, Stelle \(x\) einsetzen und schauen, ob null herauskommt.
           <ol class="custom-marker parens-around lower-alpha more-spacing">
             <li>
               <ul>
-                <li>\(f'(x)=-x^2-2x+3\)</li>
-                <li>\(x_{E1}=1,\quad x_{E2}=-3\)</li>
-                <li>\(f''(x)=-2x-2\)</li>
-                <li>\(H(1\,|\,\tfrac53),\quad T(-3\,|\,-9)\)</li>
+                <li>1. Ableitung: \(f'(x)=2x\)</li>
+                <li>2. Ableitung: \(f''(x)=2\)</li>
+                <li>3. Ableitung: \(f'''(x)=0\)</li>
+                <li>\(x=0\):
+                  <ul>
+                    <li>\(f'(0)=0\ \Rightarrow\) Extrempunkt ?</li>
+                    <li>\(f''(0)=2 > 0\ \Rightarrow\) Tiefpunkt</li>
+                    <li>\(f'''(0)=0 \ \Rightarrow\) &ndash;&ndash;&ndash;&ndash;</li>
+                  </ul>
+                </li>
               </ul>
             </li>
             <li>
               <ul>
-                <li>\(f'(x)=-x^3-4x\)</li>
-                <li>\(x_{E1}=0\)</li>
-                <li>\(f''(x)=-3x^2-4\)</li>
-                <li>\(H(0\,|\,2)\)</li>
+                <li>1. Ableitung: \(f'(x)=3x^2\)</li>
+                <li>2. Ableitung: \(f''(x)=6x\)</li>
+                <li>3. Ableitung: \(f'''(x)=6\)</li>
+                <li>\(x=0\):
+                  <ul>
+                    <li>\(f'(0)=0\ \Rightarrow\) Extrempunkt ?</li>
+                    <li>\(f''(0)=0\ \Rightarrow\) Wendepunkt ?</li>
+                    <li>\(f'''(0)=6 > 0\ \Rightarrow\) RL-Wende- und Sattelpunkt</li>
+                  </ul>
+                </li>
+
               </ul>
             </li>
             <li>
               <ul>
-                <li>\(f'(x)=-x^2\)</li>
-                <li>\(x_{E1}=0\)</li>
-                <li>\(f''(x)=-2x\)</li>
-                <li>\(S(0\,|\,3)\)</li>
+                <li>1. Ableitung: \(f'(x)=4x^3\)</li>
+                <li>2. Ableitung: \(f''(x)=12x^2\)</li>
+                <li>3. Ableitung: \(f'''(x)=24x\)</li>
+                <li>\(x=0\):
+                  <ul>
+                    <li>\(f'(0)=0\ \Rightarrow\) Extrempunkt ?</li>
+                    <li>\(f''(0)=0 \ \Rightarrow\) Wendepunkt ?</li>
+                    <li>\(f'''(0)=0 \ \Rightarrow\) &ndash;&ndash;&ndash;&ndash;</li>
+                    <li>\(f''''(0)=24 > 0\ \Rightarrow\) Tiefpunkt (und kein Wendepunkt)</li>
+                  </ul>
+                </li>
               </ul>
             </li>
-            <li>\(H(-\sqrt3\,|\,\sqrt3+1),\quad T(\sqrt3\,|\,1-\sqrt3)\)</li>
-            <li>\(T(0\,|\,-2)\)</li>
-            <li>\(T(-\sqrt5\,|\,4,5),\quad H(0\,|\,-2),\quad T(\sqrt5\,|\,-4,5)\)</li>
+            <li>
+              <ul>
+                <li>1. Ableitung: \(f'(x)=6x^2-12x\)</li>
+                <li>2. Ableitung: \(f''(x)=12x-12\)</li>
+                <li>3. Ableitung: \(f'''(x)=12\)</li>
+                <li>\(x=1\):
+                  <ul>
+                    <li>\(f'(1)=-6\ \Rightarrow\) &ndash;&ndash;&ndash;&ndash;</li>
+                    <li>\(f''(1)=0\ \Rightarrow\) Wendepunkt ?</li>
+                    <li>\(f'''(1)=12 > 0\ \Rightarrow\) RL-Wendepunkt</li>
+                  </ul>
+                </li>
+                <li>\(x=2\):
+                  <ul>
+                    <li>\(f'(2)=0\ \Rightarrow\) Extrempunkt ?</li>
+                    <li>\(f''(2)=12 > 0\ \Rightarrow\) Tiefpunkt</li>
+                    <li>\(f'''(2)=12\ \Rightarrow\) &ndash;&ndash;&ndash;&ndash;</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li>1. Ableitung: \(f'(x)=12-3x^2\)</li>
+                <li>2. Ableitung: \(f''(x)=-6x\)</li>
+                <li>3. Ableitung: \(f'''(x)=-6\)</li>
+                <li>\(x=0\):
+                  <ul>
+                    <li>\(f'(0)=12\ \Rightarrow\) &ndash;&ndash;&ndash;&ndash;</li>
+                    <li>\(f''(0)=0 \ \Rightarrow\) Wendepunkt ?</li>
+                    <li>\(f'''(0)=-6 < 0 \ \Rightarrow\) LR-Wendepunkt</li>
+                  </ul>
+                </li>
+                <li>\(x=2\):
+                  <ul>
+                    <li>\(f'(2)=0\ \Rightarrow\) Extrempunkt ?</li>
+                    <li>\(f''(2)=-12 < 0 \ \Rightarrow\) Hochpunkt</li>
+                    <li>\(f'''(2)=-6 \ \Rightarrow\) &ndash;&ndash;&ndash;&ndash;</li>
+                  </ul>
+                </li>
+                <li>\(x=-2\):
+                  <ul>
+                    <li>\(f'(-2)=0\ \Rightarrow\) Extrempunkt ?</li>
+                    <li>\(f''(-2)=12 < 0 \ \Rightarrow\) Tiefpunkt</li>
+                    <li>\(f'''(-2)=-6 \ \Rightarrow\) &ndash;&ndash;&ndash;&ndash;</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li>1. Ableitung: \(f'(x)=\tfrac13x^3-4x\)</li>
+                <li>2. Ableitung: \(f''(x)=x^2-4\)</li>
+                <li>3. Ableitung: \(f'''(x)=2x\)</li>
+                <li>\(x=0\):
+                  <ul>
+                    <li>\(f'(0)=0\ \Rightarrow\) Extrempunkt ?</li>
+                    <li>\(f''(0)=-4 < 0 \ \Rightarrow\) Hochpunkt</li>
+                    <li>\(f'''(0)=0 \ \Rightarrow\) &ndash;&ndash;&ndash;&ndash;</li>
+                  </ul>
+                </li>
+                <li>\(x=2\):
+                  <ul>
+                    <li>\(f'(2)=-\tfrac{16}{3}\ \Rightarrow\) &ndash;&ndash;&ndash;&ndash;</li>
+                    <li>\(f''(2)=0 \ \Rightarrow\) Wendepunkt ?</li>
+                    <li>\(f'''(2)=4 \ \Rightarrow\) RL-Wendepunkt</li>
+                  </ul>
+                </li>
+                <li>\(x=\sqrt{12}\):
+                  <ul>
+                    <li>\(f'(\sqrt{12})=0\ \Rightarrow\) Extrempunkt ?</li>
+                    <li>\(f''(\sqrt{12})=8 > 0 \ \Rightarrow\) Tiefpunkt</li>
+                    <li>\(f'''(\sqrt{12})=2\cdot\sqrt{12} \ \Rightarrow\) &ndash;&ndash;&ndash;&ndash;</li>
+                  </ul>
+                </li>
+                <li>\(x=-\sqrt{12}\):
+                  <ul>
+                    <li>\(f'(\sqrt{12})=0\ \Rightarrow\) Extrempunkt ?</li>
+                    <li>\(f''(\sqrt{12})=8 > 0 \ \Rightarrow\) Tiefpunkt</li>
+                    <li>\(f'''(\sqrt{12})=-2\cdot\sqrt{12} \ \Rightarrow\) &ndash;&ndash;&ndash;&ndash;</li>
+                  </ul>
+                </li>
+            </li>
           </ol>
-          Graphen mit <a href="https://www.geogebra.org/calculator" target="_blank">Geogebra</a>.
         </details>
-
-
-
+        <details id="a4">
+          <summary>Motorroller</summary>
+          <ol class="custom-marker parens-around lower-alpha more-spacing">
+            <li>Maximum \(\rightarrow\) Hochpunkt:
+              \begin{align*}
+                r'(t)&=30t-3t^2=0 \\
+                  &\ldots \\
+                  t_1&=0 \\
+                  t_2&=10
+              \end{align*}
+              Art der Extrema:
+              \begin{align*}
+                r''(t)&=30-6t \\
+                r''(0)&=30 > 0 \\
+                r''(10)&=-30 < 0
+              \end{align*}
+              Zum Zeitpunkt \(t=10\) gibt es einen Hochpunkt.
+              <p>
+                Antwort: Nach zehn Wochen erreichen die Absatzzahlen ihr Maximum.
+              </p>
+            </li>
+            <li>
+              Stärkste Steigung \(\rightarrow\) Wendepunkt:
+              \begin{align*}
+                r''(t)&=30-6t=0 \\
+                  &\ldots \\
+                  t&=5 
+              \end{align*}
+              Am Ende der fünften Woche steigt der Absatz am stärksten.
+            </li>
+            <li>
+              Mittlere Absatzsteigerung \(\rightarrow\) Mittlere Änderungsrate:
+              \begin{align*}
+                m&=\frac{r(10)-r(0)}{10-0} \\
+                &=\frac{500-0}{10}\\
+                m&=50
+              \end{align*}
+              In den ersten zehn Wochen liegt die mittlere Absatzsteigerung bei 
+              \(50\,\frac{\text{Roller pro Woche}}{\text{Woche}}=50\,\frac{\text{Roller}}{\text{Woche}^2}\).
+            </li>
       </section>
 
       <section id="meme">
         <div class="images">
-          <img src="/img/minmax_meme.webp" style="object-fit: scale-down; max-width: 300px" />
+          <img src="/img/inflection_meme.webp" style="object-fit: scale-down; max-width: 300px" />
         </div>
         <div class="centered">
-          <a href="https://www.reddit.com/r/APStudents/comments/a0k5bz/pois_out_here_breaking_stereotypes/#lightbox"
-            target="_blank" rel="noopener noreferrer">
-            <h6>Original von PraVin26 </h6>
+          <a href="https://9gag.com/gag/aqjrDqv" target="_blank" rel="noopener noreferrer">
+            <h6>Original von onemightylada </h6>
           </a>
         </div>
       </section>
@@ -455,7 +523,7 @@
     <a href="/misc/impressum.html">Impressum</a>
     <div class="lastModified" align="center">
       Zuletzt geändert:<br />
-      20. November 2024
+      2. Dezember 2024
       <!-- <span id="lastModifiedDate"></span> -->
     </div>
     <a href="/misc/datenschutz.html">Datenschutz</a>
