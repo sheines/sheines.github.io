@@ -53,978 +53,454 @@
                     werden.
                 </p>
             </div>
-            <section id="Grundlagen" class="aufgaben">
-                <h3>Station 1 &ndash; Grundlagen</h3>
+        </section>
 
-                <ol class="custom-marker point-after decimal">
-                    <li>Entscheide, ob die folgenden Funktionen eine der im Unterricht
-                        behandelten Symmetrie besitzen!
-                        <ol class="custom-marker parens-around lower-alpha more-spacing">
-                            <li>\(a(x)=x^4+5x^2-2\)</li>
-                            <li>\(b(x)=2x^6-4x^4+2x^3\)</li>
-                            <li>\(c(x)=8x-2\)</li>
-                            <li>\(d(x)=4x^5-3x^3+x\)</li>
-                            <li>\(e(x)=2x^8-3\)</li>
-                        </ol>
+        <section class="theorie">
+            <div class="definition">
+                <h3>Erweiterte Potenzregel</h3>
+                <p>
+                    Die bereits bekannte Potenzregel (\(x^n \rightarrow n\cdot x^{n-1}\)) gilt auch für ganzzahlige oder 
+                    gebrochene Exponenten \(n\).
+                </p>
+                <p>
+                    So können rationale Funktionen durch negative Exponenten dargestellt werden:
+                    \begin{align*}
+                        f(x)&=\frac{1}{x^n}=x^{-n}
+                    \end{align*}
+                    und Wurzelfunktionen aller Art durch gebrochene Exponenten:
+                    \begin{align*}
+                        f(x)&=\sqrt[n]{x}=x^{^{\frac1n}}
+                    \end{align*}
+                    Das ganze ist natürlich beliebig kombinierbar:
+                    \begin{align*}
+                        f(x)&=\frac{1}{\sqrt[7]{x^5}}=x^{^{-\frac57}}
+                    \end{align*}
+                </p>
+            </div>
+            <h6>Beispiel 1:</h6>
+            <p>
+                Es soll die Ableitung der Funktion \(f(x)=\dfrac{1}{x^7}\) bestimmt werden:
+                \begin{align*}
+                        f(x)&=\frac{1}{x^\color{green}7}=x^{\color{green} - \color{green}7} \\
+                        f'(x)&={\color{green}-\color{green}7}x^{{\color{green} - \color{green}7} - 1} \\
+                        f'(x)&=-{\color{magenta}7}x^{\color{orange}-\color{orange}8}=-\frac{{\color{magenta}7}}{x^{\color{orange}8}}
+                \end{align*}
+                Die Zwischenschritte dürfen natürlich auch im Kopf erledigt werden.
+            </p>
+            <h6>Beispiel 2:</h6>
+            <p>
+                Es soll die Ableitung der Funktion \(f(x)=\sqrt[4]{x}\) bestimmt werden:
+                \begin{align*}
+                        f(x)&=\sqrt[\color{green}4]{x}=x^{^{\frac{1}{\color{green}4}}} \\
+                        f'(x)&=\tfrac{1}{\color{green}4}x^{^{\frac{1}{\color{green}4}-1}}\\
+                        f'(x)&=\tfrac{\color{magenta}1}{\color{salmon}4}x^{^{-\frac{3}{4}}} \\
+                        f'(x)&=\frac{\color{magenta}1}{{\color{salmon}4}x^{^{\frac{\color{orange}3}{\color{cyan}4}}}} \\
+                        f'(x)&=\frac{1}{4\sqrt[\color{cyan}4]{x^{\color{orange}3}}}
+                \end{align*}
+            </p>
+        </section>
+
+        <section class="aufgaben" id="aufgaben">
+            <ol class="more-spacing">
+                <li>Buch, Seite 147 Übung 6 und 7</li>
+                <li>Buch, Seite 147 Übung 8</li>
+                <li>Buch, Seite 149 Übung 1 und 2</li>
+                <li>Buch, Seite 151 Übung 5</li>
+                <li>Buch, Seite 152 Übung 8 und 9</li>
+                <li>Buch, Seite 153 Übung 10 und 11</li>
+            </ol>
+        </section>
+
+
+        <section class="loesungen">
+            <h3>Lösungen zu Übungs- und Anwendungsaufgaben</h3>
+
+            <details id="a1">
+                <summary>Ableitungen und Funktionen</summary>
+
+                <details>
+                    <summary class="nonumber">Übung 6</summary>
+                    <ul class="more-spacing">
+                        <li>Bild 1: \(f=\text{I}\), \(f'=\text{II}\)</li>
+                        <li>Bild 2: \(f=\text{II}\), \(f'=\text{I}\)</li>
+                        <li>Bild 3: \(f=\text{II}\), \(f'=\text{I}\)</li>
+                        <li>Bild 4: \(f=\text{I}\), \(f'=\text{II}\)</li>
+                    </ul>
+                </details>
+
+                <details>
+                    <summary class="nonumber">Übung 7</summary>
+                    <ol class="custom-marker parens-around lower-alpha more-spacing">
+                        <li>\(f\) hat die Form einer nach oben geöffneten Parabel</li>
+                        <li>\(f\) hat die Form einer kubischen Funktion, wobei im Koordinatenursprung ein Tiefpunkt ist. 
+                            Die Funktion endet rechts mit einem Hochpunkt. Mittig dazwischen liegt eine Wendepunkt.
+                        </li>
+                    </ol>
+                    Beide Funktionen starten im Koordinatenursprung.
+                </details>
+            </details>
+
+            <details id="a2">
+                <summary>Rationale Funktionen</summary>
+                <ol class="custom-marker parens-around lower-alpha more-spacing">
+                    <li>
+                    Funktion \(f\):
+                    <ul>
+                        <li>Nullstellen: keine</li>
+                        <li>Extrema:
+                            \begin{align*}
+                                f'(x)&=\tfrac14-\frac{1}{x^2} \quad\Rightarrow x=\pm 2\\
+                                f''(x)&=\frac{2}{x^3} \\
+                                f''(2)&=\tfrac14 \quad \rightarrow T(2\,|\,1)\\
+                                f''(-2)&=-\tfrac14 \quad \rightarrow H(2\,|\,1)
+                            \end{align*}
+                        </li>
+                        <li>Wendepunkte: keine</li>
+                        <li>Unendlichkeitsverhalten: \(f\rightarrow\infty\) mit \(x\rightarrow \infty\)<br>
+                            \(f\rightarrow -\infty\) mit \(x\rightarrow -\infty\)</li>
+                        <li>Skizze mit <a href="https://www.geogebra.org/claculator" target="_blank">Geogebra</a></li>
+                    </ul>
+                    Funktion \(g\):
+                    <ul>
+                        <li>Nullstellen: \(x_1=0, x_{2/3}=\pm\sqrt{2}\)</li>
+                        <li>Extrema:
+                            \begin{align*}
+                                gf'(x)&=4x^3-4x \quad\Rightarrow x=0, x=\pm 1\\
+                                g''(x)&=12x^2-4 \\
+                                g''(0)&=-4 \quad \rightarrow H(0\,|\,0)\\
+                                g''(\pm1)&=8 \quad \rightarrow T(\pm1\,|\,-1)\\
+                            \end{align*}
+                        </li>
+                        <li>Wendepunkte: \(x=\pm\sqrt{\tfrac13}\)<br>
+                            \(W(\pm\sqrt{\tfrac13}\,|\,-\tfrac59)\)</li>
+                        <li>Unendlichkeitsverhalten: \(g\rightarrow\infty\) mit \(x\rightarrow \infty\)<br>
+                            \(g\rightarrow \infty\) mit \(x\rightarrow -\infty\)</li>
+                        <li>Skizze mit <a href="https://www.geogebra.org/claculator" target="_blank">Geogebra</a></li>
+                    </ul>
                     </li>
-                    <li>Bestimme die Achsenschnittpunkte der folgenden Funktionen!
-                        <ol class="custom-marker parens-around lower-alpha more-spacing">
-                            <li>\(a(x)=2x^2+8x\)</li>
-                            <li>\(b(x)=4x^3-2x^2\)</li>
-                            <li>\(c(x)=x^3+5x^2+4x\)</li>
-                            <li>\(d(x)=\tfrac13x^3-x^2-6x\)</li>
-                            <li>\(e(x)=x^5 + 4 x^4 - 11 x^3 - 62 x^2 - 80 x - 32\)</li>
-                        </ol>
+                    <li>
+                        Ableitungen:
+                        \begin{align*}
+                            f'(x)&=3ax^2+2bx+c \\
+                            f''(x)&=6ax+2b \\
+                            f'''(x)=6a
+                        \end{align*}
+                        \(f''(x)\) ist eine lineare Funktion, welche immer genau eine Nullstelle hat (\(x_W=-\tfrac{b}{3a}\)). 
+                        Da \(a\neq0\) gilt, wird die dritte Ableitung niemals null, sodass für \(a > 0\) immer genau ein RL-Wendepunkt
+                        und für \(a < 0\) immer genau ein LR-Wendepunkt zu finden ist.
                     </li>
                 </ol>
-                <section class="loesungen">
-                    <h3>Lösungen zu Station 1</h3>
+            </details>
 
-                    <details id="Grundlagen1">
-                        <summary>Symmetrie</summary>
-                        <ol class="custom-marker parens-around lower-alpha more-spacing">
-                            <li>
-                                <p>
-                                    Eine Funktion ist achsensymmetrisch zur \(y\)-Achse, wenn gilt:
-                                    \[
-                                    f(-x) = f(x)
-                                    \]
-                                    Für \(a(x)\) gilt:
-                                    \begin{align*}
-                                    a(-x) &= (-x)^4 + 5(-x)^2 - 2 \\
-                                    & = x^4 + 5x^2 - 2 \\
-                                    & = a(x)
-                                    \end{align*}
-                                    Da \(a(-x) = a(x)\), ist die Funktion achsensymmetrisch zur \(y\)-Achse.
-                                </p>
-                                <strong>ODER:</strong>
-                                <p>
-                                    Die Funktion \(a\) enthält nur gerade Potenzen (\(x^6, x^4\) und \(x^0\)). D.h. sie
-                                    ist achsensymmetrisch zur \(y\)-Achse.
-                                </p>
-                            </li>
-                            <li>keine Symmetrie</li>
-                            <li>keine Symmetrie</li>
-                            <li>\(d(-x)=-d(x)\): Punktsymmetrie zum Koordinatenursprung</li>
-                            <li>\(e(-x) = e(x)\): Achsensymmetrie zur \(y\)-Achse</li>
-                        </ol>
-                    </details>
+            <details id="a3">
+                <summary>Seite 149</summary>
 
-                    <details id="Grundlagen2">
-                        <summary>Achsenschnittpunkte</summary>
-                        <ol class="custom-marker parens-around lower-alpha more-spacing">
-                            <li>
-                                <ul class="more-spacing">
-                                    <li>\(x\)-Achse: Nullstellen berechnen
-                                        \begin{align*}
-                                        0&= 2x^2 + 8x
-                                        & \ldots \\
-                                        x_1&=0 \\
-                                        x_2&=-4
-                                        \end{align*}
-                                        Das ergibt die Schnittpunkte: \(S_{x_1}(0\,|\,0)\) und \(S_{x_2}(-4\,|\,0)\)
-                                    </li>
-                                    <li>\(y\)-Achse: \(x=0\) einsetzen
-                                        \begin{align*}
-                                        y&=2\cdot 0^2+8\cdot 0 \\
-                                        y&=0
-                                        \end{align*}
-                                        Das ergibt den Schnittpunkt \(S_y(0\,|\,0)\) (der auch \(S_{x_1}\) ist)
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <ul class="more-spacing">
-                                    <li>\(x\)-Achse: \(S_{x_1}(0\,|\,0)\) und \(S_{x_2}(\tfrac12\,|\,0)\)
-                                    </li>
-                                    <li>\(y\)-Achse: \(S_y(0\,|\,0)\) (der auch \(S_{x_1}\) ist)
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <ul class="more-spacing">
-                                    <li>\(x\)-Achse: \(S_{x_1}(0\,|\,0)\), \(S_{x_2}(-1\,|\,0)\) und
-                                        \(S_{x_3}(-4\,|\,0)\)
-                                    </li>
-                                    <li>\(y\)-Achse: \(S_y(0\,|\,0)\) (der auch \(S_{x_1}\) ist)
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <ul class="more-spacing">
-                                    <li>\(x\)-Achse: \(S_{x_1}(0\,|\,0)\), \(S_{x_2}(-3\,|\,0)\) und
-                                        \(S_{x_3}(6\,|\,0)\)
-                                    </li>
-                                    <li>\(y\)-Achse: \(S_y(0\,|\,0)\) (der auch \(S_{x_1}\) ist)
-                                    </li>
-                                </ul>
-                            </li>
-                            <li>
-                                <ul class="more-spacing">
-                                    <li>\(x\)-Achse: \(S_{x_1}(-1\,|\,0)\) (Doppelnullstelle), \(S_{x_2}(-2\,|\,0)\),
-                                        \(S_{x_3}(-4\,|\,0)\) und \(S_{x_4}(4\,|\,0)\)
-                                    </li>
-                                    <li>\(y\)-Achse: \(S_y(0\,|\,-32)\)
-                                    </li>
-                                </ul>
-                            </li>
-                        </ol>
-                    </details>
-                </section>
-                <section id="Ableitung" class="aufgaben">
-                    <h3>Station 2 &ndash; Ableitungen und Tangenten</h3>
-
-                    <ol class="custom-marker point-after decimal">
-                        <li>Bestimme die erste und zweite Ableitung der folgenden Funktionen!
-                            <ol class="custom-marker parens-around lower-alpha more-spacing">
-                                <li>\(a(x)=4x^4-x^3+7x^2-3\)</li>
-                                <li>\(b(x)=6x^5-2x^4+x^2\)</li>
-                                <li>\(c(x)=0,01x^6+x^9-x\)</li>
-                                <li>\(d(x)=-2x^{10}+\tfrac12x^5-0,3x^2+15,27\)</li>
-                                <li>\(e(x)=9x^3+x^{1\,000\,000}\)</li>
-                            </ol>
+                <details>
+                    <summary class="nonumber">Silvesterrakete</summary>
+                    <ol class="custom-marker parens-around lower-alpha more-spacing">
+                        <li>Hochpunkt gesucht:
+                            \begin{align*}
+                                h'(t)&=-10t+80 \\
+                                h'(t)&=0\quad \Rightarrow t=8 \\
+                                h''(t)&=-10
+                            \end{align*}
+                            Das heißt nach acht Sekunden erreicht die Rakete mit 320 m ihre maximale Höhe.
                         </li>
-                        <li>Berechne, an welchen Stellen die gegebenen Funktionen den angegebenen Anstieg besitzen!
-                            <ol class="custom-marker parens-around lower-alpha more-spacing">
-                                <li>\(a(x)=2x^2-4x\qquad m=4\)</li>
-                                <li>\(b(x)=\tfrac13x^3-2x^2+3x\qquad m=3\)</li>
-                            </ol>
-                        </li>
-                        <li>Berechne den Steigungswinkel an der gegebenen Stelle!
-                            <ol class="custom-marker parens-around lower-alpha more-spacing">
-                                <li>\(a(x)=2x^2-4x\qquad x=-2\)</li>
-                                <li>\(b(x)=\tfrac13x^3-2x^2+3x\qquad x=0\)</li>
-                            </ol>
-                        </li>
-                        <li>Berechne die Tangente an der gegebenen Stelle/Punkt
-                            <ol class="custom-marker parens-around lower-alpha more-spacing">
-                                <li>\(a(x)=x^3+x\qquad P(1\,|\,2)\)</li>
-                                <li>\(b(x)=-2x^2+9x\qquad x_t=2\)</li>
-                                <li>\(c(x)=2x^3-3x^2\qquad P(-1\,|\,-5)\)</li>
-                                <li>\(d(x)=2x+8\qquad x_t=-7\)</li>
-                            </ol>
-                        </li>
-                        <li>Berechne die Normale an der gegebenen Stelle/Punkt
-                            <ol class="custom-marker parens-around lower-alpha more-spacing">
-                                <li>\(a(x)=x^3+x\qquad P(1\,|\,2)\)</li>
-                                <li>\(b(x)=-2x^2+9x\qquad x_n=2\)</li>
-                                <li>\(c(x)=2x^3-3x^2\qquad P(-1\,|\,-5)\)</li>
-                                <li>\(d(x)=2x+8\qquad x_n=-7\)</li>
-                            </ol>
+                        <li>
+                            Die Geschwindigkeit ist die erste Ableitung des Weges:
+                            \begin{align*}
+                                v(t)&=h'(t)\\
+                                v(0)&=h'(0)=80
+                            \end{align*}
+                            Die Rakete erreicht beim Start eine Geschwindigkeit von 
+                            \(80\,\tfrac{\text m}{\text s}=288\,\tfrac{\text{km}}{\text h}\).
+                            <p>
+                                Die maximale Höhe beträgt 320 Meter. Die Hälfte mit \(h(x)\) gleichsetzen:
+                                \begin{align*}
+                                    160&=-5t^2+80t \\
+                                        &\ldots \\
+                                    t_1&=8-\sqrt{32}\approx 2,34 \\
+                                    t_1&=8+\sqrt{32}\approx 13,66
+                                \end{align*}
+                                Bei Aufstieg erreicht die Rakete nach \(2,34\) Sekunden die halbe Höhe. Sie ist dann etwa 
+                                \(56,7\,\tfrac{\text m}{\text s}\) schnell. Nach insgesamt \(13,66\) Sekunden erreicht die Rakete beim
+                                Abstieg erneut die halbe Höhe. Sie ist dann etwa 
+                                \(-56,7\,\tfrac{\text m}{\text s}\) (abwärts) schnell.
+                            </p>
                         </li>
                     </ol>
+                </details>
 
-                </section>
-                <section class="loesungen">
-                    <h3>Lösungen zu Station 2</h3>
-
-                    <details id="Ableitung1">
-                        <summary>Ableitungen</summary>
-                        <ol class="custom-marker parens-around lower-alpha more-spacing">
-                            <li>
-                                \begin{align*}
-                                a'(x) &= 16x^3 - 3x^2 + 14x \\
-                                a''(x) &= 48x^2 - 6x + 14
-                                \end{align*}
-                            </li>
-                            <li>
-                                \begin{align*}
-                                b'(x) &= 30x^4 - 8x^3 + 2x \\
-                                b''(x) &= 120x^3 - 24x^2 + 2
-                                \end{align*}
-                            </li>
-                            <li>
-                                \begin{align*}
-                                c'(x) &= \tfrac{3}{50}x^5 + 9x^8 - 1 \\
-                                c''(x) &= \tfrac{3}{10}x^4 + 72x^7
-                                \end{align*}
-                            </li>
-                            <li>
-                                \begin{align*}
-                                d'(x) &= -20x^9 + \tfrac52x^4 - \tfrac35x \\
-                                d''(x) &= -180x^8 + 10x^3 - \tfrac35
-                                \end{align*}
-                            </li>
-                            <li>
-                                \begin{align*}
-                                e'(x) &= 27x^2 + 1\,000\,000x^{999\,999} \\
-                                e''(x) &= 54x + 999\,999\,000\,000x^{999\,998}
-                                \end{align*}
-                            </li>
-                        </ol>
-                    </details>
-                    <details id="Ableitung2">
-                        <summary>Steigungsort finden</summary>
-                        <ol class="custom-marker parens-around lower-alpha more-spacing">
-                            <li>Um die Stellen zu bestimmen, an denen die gegebene Funktion den Anstieg \(m = 4\)
-                                besitzt, wird zuerst die Ableitung benötigt:
-                                \[
-                                a'(x) = 4x - 4
-                                \]
-                                Setze \(a'(x) = 4\):
-                                \begin{align*}
-                                4x - 4 &= 4 \\
-                                    &\ldots \\
-                                    x&=2
-                                \end{align*}
-                                Die Funktion \(a\) besitzt  an der Stelle \(x = 2\) einen Anstieg von \(m = 4\).
-                            </li>
-                            <li>Die Funktion \(b\) besitzt an den Stellen \(x_1 = 0\) und \(x_2=4\) einen Anstieg von \(m = 3\).</li>
-                        </ol>
-                    </details>
-                    <details id="Ableitung3">
-                        <summary>Steigungswinkel</summary>
-                        <ol class="custom-marker parens-around lower-alpha more-spacing">
-                            <li>Um den Steigungswinkel zu berechnen, muss zuerst die Steigung bei \(x=-2\) bestimmt werden. Das geschieht über die erste Ableitung:
-                                \[
-                                a'(x) = 4x - 4.
-                                \]
-                                Nun wird \(x=-2\) eingesetzt:
-                                \begin{align*}
-                                    a'(-2)&=4\cdot (-2) -4 \\
-                                    a'(-2)&=-12 = m_a
-                                \end{align*}
-                                Für den Steigungswinkel gilt folgender Zusammenhang:
-                                \begin{align*}
-                                    \tan \alpha&=m_a \\
-                                    \tan \alpha&=-12 \qquad |\text{arc}\\
-                                    \alpha'&=-85,24\,^\circ
-                                \end{align*}
-                                Da der Steigungswinkel negativ ist, brauchen wir noch den Ergänzungswinkel (siehe <a href="/content/math/11/linfkt/steigungswinkel.html" target="_blank">hier</a>):
-                                \[
-                                \alpha=180-85,24=94,76\,^\circ
-                                \]
-                                Der Steigungswinkel von \(a\) bei \(x=-2\) beträgt \(94,76\,^\circ\).
-                            </li>
-                            <li>\(\alpha=71,57\,^\circ\)</li>  
-                        </ol>
-                    </details>
-                    <details id="Ableitung4">
-                        <summary>Tangente</summary>
-                        <ol class="custom-marker parens-around lower-alpha more-spacing">
-                            <li>Für die Tangentengleichung gilt:
-                                \[t_a(x)=mx+n\]
-                                Wobei \(m\) der Anstieg von \(a\) im Punkt \(P\) ist.
-                                \begin{align*}
-                                    a'(x)&=3x^2 + 1\\
-                                    a'(1)&=3\cdot 1^2+1\\
-                                    m&=4
-                                \end{align*}
-                                \(m\) und \(P\) in \(t_a\) einsetzen:
-                                \begin{align*}
-                                2&=4\cdot 1 +n \\
-                                 &\ldots \\
-                                n&=-2
-                                \end{align*}
-                                Die Tangentengleichung lautet: \(t_a(x)=4x-2\)
-                            </li>
-                            <li>\(t_b=x+8\)</li>
-                            <li>\(t_c=12x+7\)</li>
-                            <li>\(t_d=2x+8\)</li>
-                        </ol>
-                    </details>
-                    <details id="Ableitung5">
-                        <summary>Normale</summary>
-                        <ol class="custom-marker parens-around lower-alpha more-spacing">
-                            <li>
-                                Für die Normalengleichung gilt:
-                                \[n_a(x)=mx+n\]
-                                Wobei \(m\) orthogonal zum Anstieg von \(a\) im Punkt \(P\) ist.
-                                \begin{align*}
-                                    a'(x)&=3x^2 + 1\\
-                                    a'(1)&=3\cdot 1^2+1=4\\
-                                    m&=-\frac14=-\tfrac14
-                                \end{align*}
-                                \(m\) und \(P\) in \(n_a\) einsetzen:
-                                \begin{align*}
-                                2&=-\tfrac14\cdot 1 +n \\
-                                 &\ldots \\
-                                n&=\tfrac94
-                                \end{align*}
-                                Die Normalengleichung lautet: \(n_a(x)=-\tfrac14x-\tfrac94\)
-                            </li>  
-                            <li>\(n_b(x)=-x+12\)</li>
-                            <li>\(n_c(x)=-\tfrac{1}{12}x-\tfrac{61}{12}\)</li>
-                            <li>\(n_d(x)=-\tfrac12x-\tfrac{19}{2}\)</li>
-                        </ol>
-                    </details>
-
-                </section>
-
-                <section id="Extrempunkte" class="aufgaben">
-                    <h3>Station 3 &ndash; Extrem- und Wendepunkte</h3>
-
-                    <ol class="custom-marker point-after decimal">
-                        <li>Berechne die Art und Lage aller Extrempunkte der gegebenen Funktionen!
-                            <ol class="custom-marker parens-around lower-alpha more-spacing">
-                                <li>\(a(x)=\tfrac13x^3-x^2-8x-4\)</li>
-                                <li>\(b(x)=3x^2-3x+2\)</li>
-                                <li>\(c(x)=x^3+2x^2-x\)</li>
-                                <li>\(d(x)=-x^3+9x^2+3x\)</li>
-                            </ol>
+                <details>
+                    <summary class="nonumber">Extremstellen</summary>
+                    Es ist nur nach Extremstellen gefragt, nicht nach den Punkten.
+                    <ol class="custom-marker parens-around lower-alpha more-spacing">
+                        <li>\begin{align*}
+                                f'(x)&=2-\tfrac12x^2\\
+                                &\ldots \\
+                                x&=\pm2\\
+                                f''(x)&=-x \\
+                                f''(2)&=-2 \quad\ \rightarrow H\\
+                                f''(-2)&=2 \quad\quad \rightarrow T
+                            \end{align*}
                         </li>
-                        <li>Berechne die Art und Lage aller Wendepunkte der folgenden Funktionen!
-                            <ol class="custom-marker parens-around lower-alpha more-spacing">
-                                <li>\(a(x)=\tfrac13x^3-\tfrac23x^2+2x+1\)</li>
-                                <li>\(b(x)=x^4-2x^2+4x-2\)</li>
-                            </ol>
+                        <li>\begin{align*}
+                            f'(x)&=\tfrac23-\tfrac{3}{2\sqrt x}\\
+                            &\ldots \\
+                            x&=\tfrac{81}{16}\\
+                            f''(x)&=\tfrac{3}{4\sqrt{x^3}}=\tfrac34x^{^{-\tfrac32}} \\
+                            f''(\tfrac{81}{16})&=\tfrac{16}{243} \quad \rightarrow T\
+                        \end{align*}
+                    </li>
+                    <li>\begin{align*}
+                        f'(x)&=9a^2x^2-x^4\\
+                        &\ldots \\
+                        x&=0\\
+                        x&=\pm3a \\
+                        f''(x)&=18a^2x-4x^3 \\
+                        f''(0)&=0 \quad\ \rightarrow S\\
+                        f''(3a)&=54a^3 > 0 \quad\quad \rightarrow T \\
+                        f''(-3a)&=-54a^3 < 0 \quad\quad \rightarrow H \\
+                    \end{align*}
+                    \(S\) (Sattelpunkt) mit Vorzeichenwechselkriterium (\(+\rightarrow +\)). Da \(a>0\) gilt, ist \(54a^3\) 
+                    immer positiv, bzw. \(-54a^3\) immer negativ.
+                </li>
+                    </ol>
+                </details>
+
+            </details>
+
+            <details id="a4">
+                <summary>Ebola</summary>
+                <ul class="custom-marker parens-around lower-alpha more-spacing">
+                    <li>
+                    Ableitungen:
+                    \begin{align*}
+                        e'(t)&=-\tfrac{3}{400}t^2+\tfrac{6}{25}t\\
+                        e''(t)&=-\tfrac{3}{200}t+\tfrac{6}{25}
+                    \end{align*}
+                    </li>
+                    <li>
+                        Maximum:
+                        \begin{align*}
+                            e'(t)&=0 \\
+                            &\ldots \\
+                            t_1&=0\\
+                            t_2&=32 \\
+                            e''(0)&=\tfrac{6}{25}\quad \quad \rightarrow T \\
+                            e''(32)&=-\tfrac{6}{25} \quad \ \rightarrow H
+                        \end{align*}
+                        Nach 32 Monaten (2 Jahre und 8 Monate) erreicht der Krankenstand sein Maximum.
+                    </li>
+                    <li>
+                        Größter Anstieg (Wendestelle):
+                        \begin{align*}
+                        e''(t)&=0 \\
+                        &\ldots \\
+                        t&=16
+                    \end{align*}
+                    Nach sechzehn Monaten steigt die Krankenrate am stärksten mit \(e'(16)=1,92\) also 1920 Personen pro Monat.
+                    </li>
+                    <li>Erlöschen der Epidemie (Nullstellen):
+                        \begin{align*}
+                        e(t)&=0 \\
+                        &\ldots \\
+                        t_1&=0 \\
+                        t_2&=48
+                    \end{align*}
+                    Die Epidemie sollte nach 48 Monaten erlöschen.
+                    </li>
+                    <li>Zeichnen mit <a href="https://www.geogebra.org/claculator" target="_blank">Geogebra</a></li>
+                </ol>
+            </details>
+
+            <details id="a5">
+                <summary>Seite 152</summary>
+
+                <details>
+                    <summary class="nonumber">Höhenmesser</summary>
+                    <ol class="custom-marker parens-around lower-alpha more-spacing">
+                        <li>\(h(3)=335,2\,\text{m}\)
+                        </li>
+                        <li>Minimum finden:
+                            \begin{align*}
+                                h'(t)&=\tfrac95t^2-18t=0\\
+                                &\ldots \\
+                                t_1&=0 \\
+                                t_2&=10 \\
+                                h''(t)&=\tfrac{18}{5}t-18\\
+                                h''(0)&=-18\quad \rightarrow H \\
+                                h''(10)&=18\quad \rightarrow T
+                            \end{align*}
+                            Nach zehn Minuten hat der Ballon seine geringste Flughöhe erreicht.
+                        </li>
+                        <li>Stärkste Sinkrate (Wendepunkt):
+                            \begin{align*}
+                                h''(t)&=0 \\
+                                &\ldots \\
+                                t&=5
+                            \end{align*}
+                            Nach fünf Minuten Flugzeit verringert sich die Flughöhe mit \(h'(5)=-45\,\tfrac{\text m}{\text{min}}\) am stärksten.<br>
+                            Am Intervallende (\(t=15\)) steigt der Ballon am stärksten (\(h'(15)=135\,\tfrac{\text m}{\text{min}}\)).
                         </li>
                     </ol>
-                </section>
-                <section class="loesungen">
-                    <h3>Lösungen zu Station 3</h3>
+                </details>
 
-                    <details id="Ableitung1">
-                        <summary>Extrempunkte</summary>
-                        <ol class="custom-marker parens-around lower-alpha more-spacing">
-                            <li>Die Extrempunkte werden durch die Nullstellen der ersten Ableitung ermittelt.
-                                \begin{align*}
-                                a'(x) &= x^2 - 2x - 8 \\
-                                0&=x^2 - 2x - 8 \\
-                                & \ldots \\
-                                x_1&=-2 \\
-                                x_2&=4
-                                \end{align*}
-                                Für die Art der Extrema wird die zweite Ableitung benötigt:
-                                \begin{align*}
-                                a''(x) &= 2x - 2 \\
-                                a''(-2)&=2\cdot (-2) -2\\
-                                    & =-6 &\Rightarrow&\,\text{Hochpunkt} \\
-                                a''(4)&=2\cdot (4) -2\\
-                                    & =6 &\Rightarrow&\,\text{Tiefpunkt} 
-                                \end{align*}
-                                Koordinaten berechnen:
-                                \begin{align*}
-                                    a(-2)&=\ldots=\tfrac{16}{3} \\
-                                    a(4)&=\ldots=-\tfrac{91}{3}
-                                \end{align*}
-                                Die Funktion \(a\) hat zwei Extrema: einen Hochpunkt bei \(H(-2\,|\,\tfrac{16}{3})\) und einen Tiefpunkt bei \(T(4\,|\,-\tfrac{91}{3})\).
-                            </li>
-                            <li>Ein Tiefpunkt: \(T(\tfrac12\,|\,\tfrac54)\)</li>
-                            <li>Hochpunkt: \(H\left(\tfrac{-2-\sqrt 7}{3}\,\bigg|\,\tfrac{34+14\sqrt 7}{27}\right)\approx H(-1,55\,|\,2,63)\) <br>
-                                Tiefpunkt: \(T\left(\tfrac{-2+\sqrt 7}{3}\,\bigg|\,\tfrac{34-14\sqrt 7}{27}\right)\approx H(0,22\,|\,-0,11)\)</li>
-                                <li>Hochpunkt: \(H\left(6,16\,|\,126,25\right)\) <br>
-                                    Tiefpunkt: \(T\left(-0,16\,|\,-0,25\right)\)</li>
-                        </ol>
-                    </details>
-
-                    <details id="Ableitung1">
-                        <summary>Wendeunkte</summary>
-                            <ol class="custom-marker parens-around lower-alpha more-spacing">
-                                <li>Wendepunkte sind Nullstellen der zweiten Ableitung:
-                                    \begin{align*}
-                                        a'(x)&=x^2-\tfrac43x+2 \\
-                                        a''(x)&=2x-\tfrac43 \\
-                                        0&=2x-\tfrac43 \\
-                                        &\ldots \\
-                                        x&=\tfrac23
-                                    \end{align*}
-                                    Art des Wendepunkts mithilfe der dritten Ableitung:
-                                    \begin{align*}
-                                        a'''(x)&=2 \\
-                                        a'''(\tfrac23)&=2 > 0
-                                    \end{align*}
-                                    Es handelt sich also um eine Rechts-Links-Wendestelle.
-                                    <p>
-                                        Koordinaten berechnen:
-                                        \[a(\tfrac23)=\ldots=\tfrac{173}{81}]
-                                    </p>
-                                    Die Funktion \(a\) hat einen Wendepunkt, welcher von einer Rechts- auf eine Linkskrümmung wechselt, bei \(W(\tfrac23\,|\,\tfrac{173}{81})\).
-                                </li>
-                                <li>Links-Rechts: \(W_1\(-0,58\,|\,-4,86)\) <br>
-                                    Rechts-Links: \(W_2\(0,58\,|\,-0,25)\)</li>
-                            </ol>
-                    </details>
-                
-                <section id="Anwendungen" class="aufgaben">
-                    <h3>Station 4 &ndash; Übungs- und Anwendungsaufgaben</h3>
-
-                    <ol class="custom-marker point-after decimal">
-                        <li> Für den professionellen Einsatz von BMX-Fahrrädern wird auf horizontalem Untergrund eine
-                            Sprungschanze installiert. Im Längsschnitt der Schanze kann deren Profillinie im Intervall
-                            \(I=[-8;0]\)
-                            modellhaft durch den Graphen der Funktion \(f(x)=-\tfrac{5}{256} x^3+\tfrac34 x+2\)
-                            beschrieben
-                            werden.
-                            Der Punkt \(S(-8│f(-8) )\) ist der Startpunkt der Schanze und der Punkt \(A(0│f(0))\) der
-                            Absprungpunkt.
-                            Es gilt: \(1\,\text{LE} = 1\,\text m\).
-                            <div class="centered" style="max-height: 300px;">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="-10 -8 14 10"
-                                    style="background-color: #232323">
-                                    <!-- The viewBox is set to (-12, -6, 26, 13) which provides a coordinate space of width 38 and height 19 units.
-                                     The center of the SVG is (0, 0). You can adjust this viewBox as needed. -->
-                                    <!-- Add grid lines -->
-                                    <defs>
-                                        <pattern id="grid" width="1" height="1" patternUnits="userSpaceOnUse">
-                                            <path d="M 1 0 L 0 0 0 1" fill="none" stroke="#333333"
-                                                stroke-width="0.05" />
-                                        </pattern>
-                                    </defs>
-                                    <rect x="-9.9" y="-7.5" width="13.8" height="9" fill="url(#grid)" />
-
-                                    <!-- Draw the x-axis line -->
-                                    <line x1="-10" y1="0" x2="3" y2="0" stroke="#a7a7a7" stroke-width="0.05" />
-
-                                    <!-- Draw the x-axis arrowhead -->
-                                    <polygon points="3.5,0 2.8,-0.15 2.8,0.15" fill="#a7a7a7" />
-
-                                    <!-- Draw the y-axis line -->
-                                    <line x1="0" y1="1" x2="0" y2="-7" stroke="#a7a7a7" stroke-width="0.05" />
-
-                                    <!-- Draw the y-axis arrowhead -->
-                                    <polygon points="0,-7.5 -0.15,-6.8 0.15,-6.8" fill="#a7a7a7" />
-
-                                    <!-- Add "x" at the end of the x-axis -->
-                                    <text x="3.7" y="0.7" font-family="serif" font-size="0.9" font-style="italic"
-                                        fill="#a8a7a7">x</text>
-
-                                    <!-- Add "y" at the end of the y-axis -->
-                                    <text x="-0.8" y="-7.3" font-family="serif" font-size="0.9" font-style="italic"
-                                        fill="#a8a7a7">y</text>
-
-
-                                    <!-- Add numbers to x-axis-->
-                                    <text x="1.9" y="0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">2</text>
-
-                                    <!-- Add numbers to y-axis-->
-                                    <text x="-0.75" y="-1.75" font-family="serif" font-size="0.7"
-                                        fill="#a8a7a7">2</text>
-
-                                    <path fill="none" stroke="darkgoldenrod" stroke-width="0.1" d="M -8 -6 L -7.9 -5.7 -7.8 -5.42 -7.7 -5.14 -7.6 -4.87 -7.5 -4.61
-                                -7.4 -4.36 -7.3 -4.12 -7.2 -3.89 -7.1 -3.67 -7 -3.45
-                                -6.9 -3.24 -6.8 -3.04 -6.7 -2.85 -6.6 -2.67 -6.5 -2.49
-                                -6.4 -2.32 -6.3 -2.16 -6.2 -2 -6.1 -1.86 -6 -1.72
-                                -5.9 -1.59 -5.8 -1.46 -5.7 -1.34 -5.6 -1.23 -5.5 -1.12
-                                -5.4 -1.03 -5.3 -0.93 -5.2 -0.85 -5.1 -0.77 -5 -0.69
-                                -4.9 -0.62 -4.8 -0.56 -4.7 -0.5 -4.6 -0.45 -4.5 -0.4
-                                -4.4 -0.36 -4.3 -0.33 -4.2 -0.3 -4.1 -0.27 -4 -0.25
-                                -3.9 -0.23 -3.8 -0.22 -3.7 -0.21 -3.6 -0.21 -3.5 -0.21
-                                -3.4 -0.22 -3.3 -0.23 -3.2 -0.24 -3.1 -0.26 -3 -0.28
-                                -2.9 -0.3 -2.8 -0.33 -2.7 -0.36 -2.6 -0.39 -2.5 -0.43
-                                -2.4 -0.47 -2.3 -0.51 -2.2 -0.56 -2.1 -0.61 -2 -0.66
-                                -1.9 -0.71 -1.8 -0.76 -1.7 -0.82 -1.6 -0.88 -1.5 -0.94
-                                -1.4 -1 -1.3 -1.07 -1.2 -1.13 -1.1 -1.2 -1 -1.27
-                                -0.9 -1.34 -0.8 -1.41 -0.7 -1.48 -0.6 -1.55 -0.5 -1.63
-                                -0.4 -1.7 -0.3 -1.78 -0.2 -1.85 -0.1 -1.93 0 -2" />
-
-                                    <text x="-8.5" y="-4.3" font-family="serif" font-size="0.9" font-style="italic"
-                                        fill="darkgoldenrod">f</text>
-
-                                    <circle cx="-8" cy="-6" r="0.2" fill="#0077a5" />
-                                    <text x="-7.5" y="-5.9" font-family="serif" font-size="0.9" font-style="italic"
-                                        fill="#0077a5">S</text>
-
-                                    <circle cx="0" cy="-2" r="0.2" fill="#0077a5" />
-                                    <text x="0.5" y="-1.9" font-family="serif" font-size="0.9" font-style="italic"
-                                        fill="#0077a5">A</text>
-
-                                </svg>
-                            </div>
-                            <ol class="custom-marker parens-around lower-alpha more-spacing">
-                                <li>Bestimmen Sie die Größe des Steigungswinkels im Startpunkt \(S\)!</li>
-                                <li>Veranschaulichen Sie am Graphen die mittlere Steigung der Schanze
-                                    zwischen dem Startpunkt \(S\) und dem Absprungpunkt \(A\)! Berechnen Sie diese
-                                    Steigung!
-                                </li>
-                                <li>Berechnen Sie die Koordinaten des Punkts, der im Modell den tiefsten Punkt der
-                                    Schanze
-                                    darstellt! Bestimmen Sie rechnerisch die Höhendifferenz zwischen diesem Punkt
-                                    und dem höchsten Punkt der Schanze!</li>
-                            </ol>
+                <details>
+                    <summary class="nonumber">Kosten und Gewinn</summary>
+                    Es ist nur nach Extremstellen gefragt, nicht nach den Punkten.
+                    <ol class="custom-marker parens-around lower-alpha more-spacing">
+                        <li>Zeichnen mit <a href="https://www.geogebra.org/claculator" target="_blank">Geogebra</a></li>
+                        <li>\(K(500)=47\,000\): Eine Uhr kostet dann 94 €.</li>
+                        <li>Extrema:
+                            \begin{align*}
+                                K'(x)&=0,003x^2-1,8x+150=0 \\
+                                &\ldots \\
+                                x_1&=100 \\
+                                x_2&=500 \\
+                                K''(x)&=0,006x-1,8 \\
+                                K''(100)&=-1,2 \quad H(100\,|\,79\,000) \\
+                                K''(500)&=1,2 \quad T(500\,|\,47\,000)
+                            \end{align*}
                         </li>
-                        <li>In einem Skigebiet soll ein Hügel zum Üben für Anfänger aufgeschüttet werden.
-                            Die Profilkurve \(f\) soll durch die Funktionsgleichung \(f(x)=\tfrac{1}{2500}
-                            x^3-\tfrac{3}{100} x^2+27\)
-                            modelliert werden (blaue Kurve in der Abbildung). \(1\,\text{LE}\) entspricht \(1\,\text
-                            m\).<br>
-                            Unten und oben schließen waagerechte Streckenteile ohne Knick glatt an die Profilkurve an
-                            (rote
-                            Linien).
-                            <div class="centered">
-                                <a href="/img/Ma1175.png" target="_blank" rel="noopener noreferrer">
-                                    <img src="/img/Ma1175.png" width="300px" /><br>
-                                    Quelle: Bigalke/Köhler, Mathematik Jahrgangsstufe 11, 2007
-                                </a>
-                            </div>
-
-                            <ol class="custom-marker parens-around lower-alpha more-spacing">
-                                <li>Bestimmen Sie den oberen und den unteren Anschlusspunkt \(O\) bzw. \(U\) als
-                                    Extrempunkte von \(f\)!</li>
-                                <li>Berechnen Sie die horizontale Gesamtlänge \(L\),
-                                    die vertikale Höhendifferenz \(H\) und die durchschnittliche Steigung der Abfahrt!
-                                </li>
-                                <li>Bestimmen Sie die Stelle der Abfahrt, an der diese am steilsten ist!
-                                    Berechnen Sie den Neigungswinkel \(\alpha\), den der Hang an dieser Stelle hat!</li>
-                                <li>Ein Sportler erklimmt den Hügel zu Fuß. Ermitteln Sie, in welcher Höhe über dem
-                                    Boden (\(y=0\)) er sich befindet, wenn er eine Stelle mit einem Anstieg von
-                                    \(-0,63\)
-                                    erreicht hat!</li>
-                            </ol>
+                        <li>
+                            Wendepunkte:
+                            \begin{align*}
+                                K''(x)&=0 \\
+                                &ldots \\
+                                x&=300 \\
+                                K'''(x)&=0,006 \quad RL-W \\
+                                W&(300\,|\,63\,000)
+                            \end{align*}
                         </li>
-                        <li>Gegeben ist die Funktion \(f(x)=\tfrac12 x^3-3x^2+\tfrac92 x\).
-                            <ol class="custom-marker parens-around lower-alpha more-spacing">
-                                <li>Berechnen Sie die Nullstellen von \(f\)!</li>
-                                <li>Begründen Sie anhand des Funktionsterms, weshalb der Graph von \(f\) nicht
-                                    achsensymmetrisch zur \(y\)-Achse sein kann und auch nicht punktsymmetrisch zum
-                                    Ursprung!</li>
-                                <li>Berechnen Sie die Lage und die Art der lokalen Extrempunkte von \(f\)!</li>
-                            </ol>
-                            In einem bewaldeten Gebiet liegt ein See mit Sandstrand (s. Abb.).
-                            Das geschwungene Seeufer kann durch den Graphen der Funktion \(f\) modelliert werden. <br>
-                            Dabei entspricht \(1\, \text{LE}\) einem Kilometer.
-                            <div class="centered" style="max-height: 300px;">
-                                <svg version='1.1' xmlns='http://www.w3.org/2000/svg'
-                                    xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 0 198.69 156.462'>
-                                    <defs>
-                                        <path id='g0-1'
-                                            d='M3.3027-3.4444H5.1557C6.7035-3.4444 8.2186-4.578 8.2186-5.7988C8.2186-6.6381 7.4992-7.4447 6.0713-7.4447H2.5397C2.3326-7.4447 2.2127-7.4447 2.2127-7.2376C2.2127-7.1068 2.3108-7.1068 2.5288-7.1068C2.6705-7.1068 2.8667-7.0959 2.9975-7.085C3.1719-7.0632 3.2373-7.0305 3.2373-6.9106C3.2373-6.867 3.2264-6.8343 3.1937-6.7035L1.7331-.8502C1.6241-.4251 1.6023-.3379 .7412-.3379C.5559-.3379 .436-.3379 .436-.1308C.436 0 .5668 0 .5995 0C.9047 0 1.6786-.0327 1.9838-.0327C2.2127-.0327 2.4525-.0218 2.6814-.0218C2.9212-.0218 3.161 0 3.3899 0C3.4662 0 3.6079 0 3.6079-.218C3.6079-.3379 3.5098-.3379 3.3027-.3379C2.8994-.3379 2.5942-.3379 2.5942-.5341C2.5942-.5995 2.616-.654 2.6269-.7194L3.3027-3.4444ZM4.0875-6.6926C4.1856-7.0741 4.2074-7.1068 4.6761-7.1068H5.7225C6.6272-7.1068 7.2049-6.8125 7.2049-6.0604C7.2049-5.6353 6.9869-4.6979 6.5618-4.3055C6.0168-3.815 5.3628-3.7278 4.8832-3.7278H3.3463L4.0875-6.6926Z' />
-                                        <path id='g0-2'
-                                            d='M4.0003-4.36H4.9377C5.1557-4.36 5.2647-4.36 5.2647-4.578C5.2647-4.6979 5.1557-4.6979 4.9704-4.6979H4.0657L4.2946-5.9405C4.3382-6.1694 4.4908-6.9433 4.5562-7.0741C4.6543-7.2812 4.8396-7.4447 5.0685-7.4447C5.1121-7.4447 5.3955-7.4447 5.6026-7.2485C5.123-7.2049 5.014-6.8234 5.014-6.6599C5.014-6.4092 5.2102-6.2784 5.4173-6.2784C5.7007-6.2784 6.0168-6.5182 6.0168-6.9324C6.0168-7.4338 5.5154-7.6845 5.0685-7.6845C4.6979-7.6845 4.0112-7.4883 3.6842-6.4092C3.6188-6.1803 3.5861-6.0713 3.3245-4.6979H2.5724C2.3653-4.6979 2.2454-4.6979 2.2454-4.4908C2.2454-4.36 2.3435-4.36 2.5506-4.36H3.27L2.4525-.0545C2.2563 1.0028 2.071 1.9947 1.5042 1.9947C1.4606 1.9947 1.1881 1.9947 .981 1.7985C1.4824 1.7658 1.5805 1.3734 1.5805 1.2099C1.5805 .9592 1.3843 .8284 1.1772 .8284C.8938 .8284 .5777 1.0682 .5777 1.4824C.5777 1.9729 1.0573 2.2345 1.5042 2.2345C2.1037 2.2345 2.5397 1.5914 2.7359 1.1772C3.0847 .4905 3.3354-.8284 3.3463-.9047L4.0003-4.36Z' />
-                                        <path id='g0-3'
-                                            d='M5.1339-4.1093C5.1448-4.1747 5.1666-4.2292 5.1666-4.3055C5.1666-4.4908 5.0358-4.5998 4.8505-4.5998C4.7415-4.5998 4.4472-4.5235 4.4036-4.1311C4.2074-4.5344 3.8259-4.8178 3.3899-4.8178C2.1473-4.8178 .7957-3.2918 .7957-1.7222C.7957-.6431 1.4606 0 2.2454 0C2.8885 0 3.4008-.5123 3.5098-.6322L3.5207-.6213C3.2918 .3488 3.161 .7957 3.161 .8175C3.1174 .9156 2.7468 1.9947 1.5914 1.9947C1.3843 1.9947 1.0246 1.9838 .7194 1.8857C1.0464 1.7876 1.1663 1.5042 1.1663 1.3189C1.1663 1.1445 1.0464 .9374 .7521 .9374C.5123 .9374 .1635 1.1336 .1635 1.5696C.1635 2.0165 .5668 2.2345 1.6132 2.2345C2.9757 2.2345 3.7605 1.3843 3.924 .7303L5.1339-4.1093ZM3.7169-1.3952C3.6515-1.1118 3.4008-.8393 3.161-.6322C2.9321-.436 2.5942-.2398 2.2781-.2398C1.7331-.2398 1.5696-.8066 1.5696-1.2426C1.5696-1.7658 1.8857-3.052 2.18-3.6079C2.4743-4.142 2.943-4.578 3.4008-4.578C4.1202-4.578 4.2728-3.6951 4.2728-3.6406S4.251-3.5207 4.2401-3.4771L3.7169-1.3952Z' />
-                                        <path id='g0-4'
-                                            d='M3.6406-3.2918C3.706-3.5752 3.9567-4.578 4.7197-4.578C4.7742-4.578 5.0358-4.578 5.2647-4.4363C4.9595-4.3818 4.7415-4.1093 4.7415-3.8477C4.7415-3.6733 4.8614-3.4662 5.1557-3.4662C5.3955-3.4662 5.7443-3.6624 5.7443-4.0984C5.7443-4.6652 5.1012-4.8178 4.7306-4.8178C4.0984-4.8178 3.7169-4.2401 3.5861-3.9894C3.3136-4.7088 2.725-4.8178 2.4089-4.8178C1.2753-4.8178 .654-3.4117 .654-3.1392C.654-3.0302 .763-3.0302 .7848-3.0302C.872-3.0302 .9047-3.052 .9265-3.1501C1.2971-4.3055 2.0165-4.578 2.3871-4.578C2.5942-4.578 2.9757-4.4799 2.9757-3.8477C2.9757-3.5098 2.7904-2.7795 2.3871-1.2535C2.2127-.5777 1.8312-.1199 1.3516-.1199C1.2862-.1199 1.0355-.1199 .8066-.2616C1.0791-.3161 1.3189-.545 1.3189-.8502C1.3189-1.1445 1.0791-1.2317 .9156-1.2317C.5886-1.2317 .3161-.9483 .3161-.5995C.3161-.0981 .8611 .1199 1.3407 .1199C2.0601 .1199 2.4525-.6431 2.4852-.7085C2.616-.3052 3.0084 .1199 3.6624 .1199C4.7851 .1199 5.4064-1.2862 5.4064-1.5587C5.4064-1.6677 5.3083-1.6677 5.2756-1.6677C5.1775-1.6677 5.1557-1.6241 5.1339-1.5478C4.7742-.3815 4.033-.1199 3.6842-.1199C3.2591-.1199 3.0847-.4687 3.0847-.8393C3.0847-1.0791 3.1501-1.3189 3.27-1.7985L3.6406-3.2918Z' />
-                                        <path id='g0-5'
-                                            d='M5.2974-4.1529C5.341-4.3055 5.341-4.3273 5.341-4.4036C5.341-4.5998 5.1884-4.6979 5.0249-4.6979C4.9159-4.6979 4.7415-4.6325 4.6434-4.469C4.6216-4.4145 4.5344-4.0766 4.4908-3.8804C4.4145-3.597 4.3382-3.3027 4.2728-3.0084L3.7823-1.0464C3.7387-.8829 3.27-.1199 2.5506-.1199C1.9947-.1199 1.8748-.5995 1.8748-1.0028C1.8748-1.5042 2.0601-2.18 2.4307-3.1392C2.6051-3.5861 2.6487-3.706 2.6487-3.924C2.6487-4.4145 2.2999-4.8178 1.7549-4.8178C.7194-4.8178 .3161-3.2373 .3161-3.1392C.3161-3.0302 .4251-3.0302 .4469-3.0302C.5559-3.0302 .5668-3.052 .6213-3.2264C.9156-4.251 1.3516-4.578 1.7222-4.578C1.8094-4.578 1.9947-4.578 1.9947-4.2292C1.9947-3.9567 1.8857-3.6733 1.8094-3.4662C1.3734-2.3108 1.1772-1.6895 1.1772-1.1772C1.1772-.2071 1.8639 .1199 2.507 .1199C2.9321 .1199 3.3027-.0654 3.6079-.3706C3.4662 .1962 3.3354 .7303 2.8994 1.308C2.616 1.6786 2.2018 1.9947 1.7004 1.9947C1.5478 1.9947 1.0573 1.962 .872 1.5369C1.0464 1.5369 1.1881 1.5369 1.3407 1.4061C1.4497 1.308 1.5587 1.1663 1.5587 .9592C1.5587 .6213 1.2644 .5777 1.1554 .5777C.9047 .5777 .545 .7521 .545 1.2862C.545 1.8312 1.0246 2.2345 1.7004 2.2345C2.8231 2.2345 3.9458 1.2426 4.251 .0109L5.2974-4.1529Z' />
-                                    </defs>
-                                    <g id='page1'>
-                                        <path
-                                            d='M21.858 134.604C21.858 134.604 22.7885 130.46969 23.14586 128.92566C23.50323 127.38162 24.07637 124.95614 24.43374 123.47569C24.7911 121.99524 25.36427 119.67347 25.72163 118.25537C26.07901 116.83729 26.65213 114.61145 27.0095 113.25503C27.36687 111.89862 27.94002 109.7749 28.29738 108.47915C28.65475 107.18339 29.22792 105.15252 29.58528 103.91609C29.94264 102.67967 30.51578 100.7458 30.87315 99.56779C31.23051 98.3898 31.80366 96.54629 32.16102 95.42582C32.5184 94.30535 33.09155 92.5556 33.44893 91.4921C33.80629 90.42863 34.37942 88.76886 34.73678 87.76081C35.09416 86.75276 35.6673 85.18034 36.02467 84.22676C36.38203 83.27319 36.9552 81.78782 37.31256 80.888C37.66994 79.98817 38.24309 78.58827 38.60045 77.74128C38.95782 76.89428 39.53094 75.57878 39.88832 74.78337C40.24568 73.98796 40.81885 72.75332 41.1762 72.00843C41.53358 71.26352 42.10672 70.10963 42.4641 69.4145C42.82146 68.71937 43.39459 67.64479 43.75195 66.99835C44.10933 66.3519 44.6825 65.35403 45.03985 64.7554C45.39722 64.15678 45.97037 63.23558 46.32774 62.68377C46.6851 62.13197 47.25824 61.2843 47.6156 60.77821C47.97297 60.27212 48.54613 59.49763 48.9035 59.03619C49.26086 58.57475 49.83401 57.86993 50.19137 57.45243C50.54875 57.03492 51.1219 56.40176 51.47928 56.02702C51.83664 55.65228 52.40977 55.08453 52.76713 54.75146C53.12451 54.4184 53.69766 53.91835 54.05502 53.62643C54.4124 53.3345 54.98555 52.8995 55.34292 52.64737C55.70029 52.39523 56.27342 52.02246 56.63078 51.80911C56.98816 51.59576 57.5613 51.28505 57.91867 51.10969C58.27603 50.93434 58.8492 50.68379 59.20656 50.54524C59.56393 50.40672 60.13707 50.21373 60.49443 50.1112C60.85179 50.00868 61.42494 49.87374 61.78232 49.80624C62.13968 49.73875 62.71284 49.65815 63.0702 49.62458C63.42758 49.59101 64.0007 49.56495 64.35808 49.56425C64.71544 49.56353 65.28859 49.58825 65.64595 49.61938C66.00332 49.65051 66.57648 49.72647 66.93385 49.78874C67.29121 49.85102 67.86436 49.97593 68.22172 50.06837C68.5791 50.16082 69.15224 50.33363 69.5096 50.45507C69.86697 50.57649 70.44012 50.79408 70.7975 50.9436C71.15486 51.0931 71.72801 51.3563 72.08537 51.53274C72.44275 51.70915 73.01587 52.01274 73.37324 52.21527C73.7306 52.41781 74.30377 52.76452 74.66113 52.99253C75.0185 53.22053 75.59164 53.60676 75.94902 53.8587C76.30638 54.11065 76.87951 54.53353 77.23689 54.80853C77.59425 55.08354 78.16742 55.54356 78.52478 55.84082C78.88215 56.13804 79.45529 56.6326 79.81267 56.95091C80.17003 57.2692 80.7432 57.79654 81.10055 58.13499C81.45793 58.47346 82.03105 59.0327 82.38843 59.39042C82.74579 59.74817 83.31894 60.33725 83.6763 60.71334C84.03367 61.08943 84.60684 61.70794 84.9642 62.10113C85.32158 62.49432 85.8947 63.13772 86.25207 63.54731C86.60943 63.9569 87.18258 64.6284 87.53995 65.0532S88.47047 66.17012 88.82785 66.60905C89.18521 67.04798 89.75834 67.76445 90.1157 68.21681C90.47308 68.66914 91.04622 69.40454 91.4036 69.8693C91.76095 70.33407 92.33412 71.09048 92.6915 71.56657C93.04886 72.04269 93.62199 72.81457 93.97935 73.30085C94.33673 73.78712 94.90986 74.5757 95.26724 75.07144C95.6246 75.56717 96.19777 76.36955 96.55513 76.87382C96.9125 77.37812 97.48564 78.19429 97.84302 78.70605C98.20038 79.21782 98.77351 80.04434 99.13087 80.5623C99.48825 81.08027 100.06141 81.91581 100.41878 82.43928S101.34929 83.80714 101.70666 84.3351C102.06402 84.86306 102.63716 85.71316 102.99452 86.24455C103.3519 86.77592 103.92505 87.6312 104.28242 88.16502C104.63978 88.69883 105.21293 89.55664 105.5703 90.09198C105.92767 90.62733 106.50079 91.4875 106.85817 92.02346C107.21553 92.55943 107.7887 93.41952 108.14607 93.95497C108.50343 94.4904 109.07658 95.34866 109.43394 95.88256C109.79132 96.41647 110.36447 97.27139 110.72185 97.80302C111.0792 98.33468 111.65234 99.1862 112.0097 99.71441C112.36708 100.24266 112.94021 101.08668 113.29759 101.61024C113.65495 102.1338 114.22812 102.96954 114.58548 103.48788C114.94285 104.0062 115.51599 104.83404 115.87335 105.34607C116.23073 105.85812 116.80386 106.67356 117.16124 107.17831C117.5186 107.68306 118.09176 108.48759 118.44913 108.98394C118.8065 109.4803 119.37962 110.26881 119.737 110.75582C120.09436 111.24282 120.66751 112.01724 121.02487 112.49398C121.38225 112.97073 121.9554 113.72644 122.31277 114.19192C122.67013 114.65739 123.24327 115.39573 123.60065 115.84896C123.958 116.3022 124.53116 117.01872 124.88852 117.45864C125.2459 117.89856 125.81904 118.594 126.17642 119.01968C126.53378 119.44537 127.10693 120.11647 127.4643 120.52685C127.82167 120.93724 128.39479 121.58331 128.75217 121.9776C129.10953 122.37188 129.68269 122.99136 130.04005 123.36862C130.39743 123.7459 130.97058 124.33775 131.32794 124.69674C131.6853 125.05572 132.25844 125.61636 132.61581 125.95607C132.97317 126.29579 133.54634 126.82577 133.9037 127.14534C134.26108 127.4649 134.83421 127.96084 135.19159 128.25933C135.54895 128.55783 136.12208 129.02034 136.47944 129.29678C136.83682 129.57322 137.40997 129.99833 137.76735 130.25181C138.12471 130.50529 138.69786 130.89447 139.05524 131.12382C139.4126 131.35318 139.98576 131.70083 140.34312 131.905C140.7005 132.10914 141.27362 132.4171 141.631 132.59532C141.98836 132.77356 142.5615 133.0385 142.91887 133.18963C143.27624 133.34077 143.8494 133.56144 144.20677 133.68467C144.56413 133.80789 145.13727 133.98358 145.49463 134.07783C145.852 134.17207 146.42515 134.29989 146.78251 134.36396C147.13988 134.42805 147.71304 134.5064 148.07042 134.53979C148.42778 134.57318 149.35827 134.60463 149.35827 134.60463'
-                                            fill='#0077a8' opacity="0.3" />
-                                        <path
-                                            d='M21.858 134.604C21.858 134.604 22.7885 130.46969 23.14586 128.92566C23.50323 127.38162 24.07637 124.95614 24.43374 123.47569C24.7911 121.99524 25.36427 119.67347 25.72163 118.25537C26.07901 116.83729 26.65213 114.61145 27.0095 113.25503C27.36687 111.89862 27.94002 109.7749 28.29738 108.47915C28.65475 107.18339 29.22792 105.15252 29.58528 103.91609C29.94264 102.67967 30.51578 100.7458 30.87315 99.56779C31.23051 98.3898 31.80366 96.54629 32.16102 95.42582C32.5184 94.30535 33.09155 92.5556 33.44893 91.4921C33.80629 90.42863 34.37942 88.76886 34.73678 87.76081C35.09416 86.75276 35.6673 85.18034 36.02467 84.22676C36.38203 83.27319 36.9552 81.78782 37.31256 80.888C37.66994 79.98817 38.24309 78.58827 38.60045 77.74128C38.95782 76.89428 39.53094 75.57878 39.88832 74.78337C40.24568 73.98796 40.81885 72.75332 41.1762 72.00843C41.53358 71.26352 42.10672 70.10963 42.4641 69.4145C42.82146 68.71937 43.39459 67.64479 43.75195 66.99835C44.10933 66.3519 44.6825 65.35403 45.03985 64.7554C45.39722 64.15678 45.97037 63.23558 46.32774 62.68377C46.6851 62.13197 47.25824 61.2843 47.6156 60.77821C47.97297 60.27212 48.54613 59.49763 48.9035 59.03619C49.26086 58.57475 49.83401 57.86993 50.19137 57.45243C50.54875 57.03492 51.1219 56.40176 51.47928 56.02702C51.83664 55.65228 52.40977 55.08453 52.76713 54.75146C53.12451 54.4184 53.69766 53.91835 54.05502 53.62643C54.4124 53.3345 54.98555 52.8995 55.34292 52.64737C55.70029 52.39523 56.27342 52.02246 56.63078 51.80911C56.98816 51.59576 57.5613 51.28505 57.91867 51.10969C58.27603 50.93434 58.8492 50.68379 59.20656 50.54524C59.56393 50.40672 60.13707 50.21373 60.49443 50.1112C60.85179 50.00868 61.42494 49.87374 61.78232 49.80624C62.13968 49.73875 62.71284 49.65815 63.0702 49.62458C63.42758 49.59101 64.0007 49.56495 64.35808 49.56425C64.71544 49.56353 65.28859 49.58825 65.64595 49.61938C66.00332 49.65051 66.57648 49.72647 66.93385 49.78874C67.29121 49.85102 67.86436 49.97593 68.22172 50.06837C68.5791 50.16082 69.15224 50.33363 69.5096 50.45507C69.86697 50.57649 70.44012 50.79408 70.7975 50.9436C71.15486 51.0931 71.72801 51.3563 72.08537 51.53274C72.44275 51.70915 73.01587 52.01274 73.37324 52.21527C73.7306 52.41781 74.30377 52.76452 74.66113 52.99253C75.0185 53.22053 75.59164 53.60676 75.94902 53.8587C76.30638 54.11065 76.87951 54.53353 77.23689 54.80853C77.59425 55.08354 78.16742 55.54356 78.52478 55.84082C78.88215 56.13804 79.45529 56.6326 79.81267 56.95091C80.17003 57.2692 80.7432 57.79654 81.10055 58.13499C81.45793 58.47346 82.03105 59.0327 82.38843 59.39042C82.74579 59.74817 83.31894 60.33725 83.6763 60.71334C84.03367 61.08943 84.60684 61.70794 84.9642 62.10113C85.32158 62.49432 85.8947 63.13772 86.25207 63.54731C86.60943 63.9569 87.18258 64.6284 87.53995 65.0532S88.47047 66.17012 88.82785 66.60905C89.18521 67.04798 89.75834 67.76445 90.1157 68.21681C90.47308 68.66914 91.04622 69.40454 91.4036 69.8693C91.76095 70.33407 92.33412 71.09048 92.6915 71.56657C93.04886 72.04269 93.62199 72.81457 93.97935 73.30085C94.33673 73.78712 94.90986 74.5757 95.26724 75.07144C95.6246 75.56717 96.19777 76.36955 96.55513 76.87382C96.9125 77.37812 97.48564 78.19429 97.84302 78.70605C98.20038 79.21782 98.77351 80.04434 99.13087 80.5623C99.48825 81.08027 100.06141 81.91581 100.41878 82.43928S101.34929 83.80714 101.70666 84.3351C102.06402 84.86306 102.63716 85.71316 102.99452 86.24455C103.3519 86.77592 103.92505 87.6312 104.28242 88.16502C104.63978 88.69883 105.21293 89.55664 105.5703 90.09198C105.92767 90.62733 106.50079 91.4875 106.85817 92.02346C107.21553 92.55943 107.7887 93.41952 108.14607 93.95497C108.50343 94.4904 109.07658 95.34866 109.43394 95.88256C109.79132 96.41647 110.36447 97.27139 110.72185 97.80302C111.0792 98.33468 111.65234 99.1862 112.0097 99.71441C112.36708 100.24266 112.94021 101.08668 113.29759 101.61024C113.65495 102.1338 114.22812 102.96954 114.58548 103.48788C114.94285 104.0062 115.51599 104.83404 115.87335 105.34607C116.23073 105.85812 116.80386 106.67356 117.16124 107.17831C117.5186 107.68306 118.09176 108.48759 118.44913 108.98394C118.8065 109.4803 119.37962 110.26881 119.737 110.75582C120.09436 111.24282 120.66751 112.01724 121.02487 112.49398C121.38225 112.97073 121.9554 113.72644 122.31277 114.19192C122.67013 114.65739 123.24327 115.39573 123.60065 115.84896C123.958 116.3022 124.53116 117.01872 124.88852 117.45864C125.2459 117.89856 125.81904 118.594 126.17642 119.01968C126.53378 119.44537 127.10693 120.11647 127.4643 120.52685C127.82167 120.93724 128.39479 121.58331 128.75217 121.9776C129.10953 122.37188 129.68269 122.99136 130.04005 123.36862C130.39743 123.7459 130.97058 124.33775 131.32794 124.69674C131.6853 125.05572 132.25844 125.61636 132.61581 125.95607C132.97317 126.29579 133.54634 126.82577 133.9037 127.14534C134.26108 127.4649 134.83421 127.96084 135.19159 128.25933C135.54895 128.55783 136.12208 129.02034 136.47944 129.29678C136.83682 129.57322 137.40997 129.99833 137.76735 130.25181C138.12471 130.50529 138.69786 130.89447 139.05524 131.12382C139.4126 131.35318 139.98576 131.70083 140.34312 131.905C140.7005 132.10914 141.27362 132.4171 141.631 132.59532C141.98836 132.77356 142.5615 133.0385 142.91887 133.18963C143.27624 133.34077 143.8494 133.56144 144.20677 133.68467C144.56413 133.80789 145.13727 133.98358 145.49463 134.07783C145.852 134.17207 146.42515 134.29989 146.78251 134.36396C147.13988 134.42805 147.71304 134.5064 148.07042 134.53979C148.42778 134.57318 149.35827 134.60463 149.35827 134.60463'
-                                            stroke='#0077a8' fill='none' stroke-width='1.59404'
-                                            stroke-miterlimit='10' />
-                                        <g fill='#0077a8' transform='matrix(.999166 0 0 .999166 0 156.462)'>
-                                            <use x='153.660714' y='-28.387301' xlink:href='#g0-2' />
-                                        </g>
-                                        <path d='M85.6383 62.85118L149.41861 6.15777' stroke='darkgoldenrod' fill='none'
-                                            stroke-width='1.19553' stroke-miterlimit='10' />
-                                        <g fill='darkgoldenrod' transform='matrix(.999166 0 0 .999166 .000015 156.462)'>
-                                            <use x='153.52183' y='-141.253073' xlink:href='#g0-3' />
-                                        </g>
-                                        <path
-                                            d='M87.76442 62.85118C87.76442 61.67694 86.81253 60.72505 85.6383 60.72505C84.46408 60.72505 83.51219 61.67694 83.51219 62.85118C83.51219 64.0254 84.46408 64.97729 85.6383 64.97729C86.81253 64.97729 87.76442 64.0254 87.76442 62.85118Z'
-                                            fill='magenta' />
-                                        <path
-                                            d='M87.76442 62.85118C87.76442 61.67694 86.81253 60.72505 85.6383 60.72505C84.46408 60.72505 83.51219 61.67694 83.51219 62.85118C83.51219 64.0254 84.46408 64.97729 85.6383 64.97729C86.81253 64.97729 87.76442 64.0254 87.76442 62.85118Z'
-                                            stroke='magenta' fill='none' stroke-width='.3985' stroke-miterlimit='10' />
-                                        <g fill='magenta' transform='matrix(.999166 0 0 .999166 0 156.462)'>
-                                            <use x='73.22187' y='-82.251331' xlink:href='#g0-1' />
-                                        </g>
-                                        <path d='M.59791 134.604H181.47798' stroke='#a8a7a7' fill='none'
-                                            stroke-width='1.19553' stroke-miterlimit='10' />
-                                        <path d='M189.1833 134.604L181.77685 132.79416V134.604V136.41384Z'
-                                            fill='#a8a7a7' />
-                                        <path d='M189.1833 134.604L181.77685 132.79416V134.604V136.41384Z'
-                                            stroke='#a8a7a7' fill='none' stroke-width='1.19553'
-                                            stroke-miterlimit='10' />
-                                        <g fill='#a8a7a7' transform='matrix(.999166 0 0 .999166 0 156.462)'>
-                                            <use x='188.661494' y='-12.916217' xlink:href='#g0-4' />
-                                        </g>
-                                        <path d='M21.858 155.86409V17.50425' stroke='#a8a7a7' fill='none'
-                                            stroke-width='1.19553' stroke-miterlimit='10' />
-                                        <path d='M21.858 9.798932L20.04816 17.205382H21.858H23.66784Z' fill='#a8a7a7' />
-                                        <path d='M21.858 9.798932L20.04816 17.205382H21.858H23.66784Z' stroke='#a8a7a7'
-                                            fill='none' stroke-width='1.19553' stroke-miterlimit='10' />
-                                        <g fill='#a8a7a7' transform='matrix(.999166 0 0 .999166 0 156.462)'>
-                                            <use x='11.874087' y='-148.005436' xlink:href='#g0-5' />
-                                        </g>
-                                    </g>
-                                </svg>
-                            </div>
-                            <ol class="custom-marker parens-around lower-alpha more-spacing"
-                                style="counter-set: list 3;">
-                                <li>Geben Sie die größte Ausdehnung des Sees von Süden nach Norden und von Osten nach
-                                    Westen
-                                    an.</li>
-                            </ol>
-                            Am nordöstlichen Seeufer gibt es einen Zufahrtsweg \(g\), der exakt senkrecht auf das
-                            Seeufer stößt, und zwar im Punkt \(P\) der \(1,5\,\text{km}\) östlich der \(y\)-Achse liegt.
-                            Ein zweiter Zufahrtsweg soll exakt parallel zum ersten Weg verlaufen und ebenfalls senkrecht
-                            auf das Seeufer stoßen, und zwar im Punkt \(R\) (nicht im Bild).
-                            <ol class="custom-marker parens-around lower-alpha more-spacing"
-                                style="counter-set: list 4;">
-                                <li>Berechnen Sie den Anstieg der Funktion \(f\) im Punkt \(P\)!</li>
-                                <li>Beschreiben Sie, welche Eigenschaft die Funktion \(f\) im Punkt \(R\) besitzen muss,
-                                    in welchem der zweite Zufahrtsweg das Ufer erreicht!</li>
-                                <li>Berechnen Sie die Koordinaten des Punktes \(R\)!</li>
-                            </ol>
+                        <li>
+                            Produktionskosten mit Verkaufspreis gleichsetzen:
+                            \begin{align*}
+                                K(x)&=E(x) \\
+                                &\ldots \\
+                                x_1&\approx 370\\
+                                x_2&\approx 780
+                            \end{align*}
+                            Zwischen 370 und 780 prodizierten und verkauften Uhren pro Tag liegen sie Verkaufskosten über den 
+                            Produktionskosten.
+                        </li>
+                        <li>Gewinn ist Verkauf minus Produktionskosten
+                            \begin{align*}
+                                G(x)&=K(x)-E(x) \\
+                                G(x)&=-0,001x^3-0,9x-72\,000 \\
+                                G'(x)&=-0,003x^2+1,8x=0 \\
+                                &\ldots \\
+                                x&=600 \\
+                                G''(x)&=-0,006x+1,8\\
+                                G''(600)&=-1,8 \quad\rightarrow H
+                            \end{align*}
+                            Bei 600 Stück ist der Gewinn am größten.
                         </li>
                     </ol>
-                    <section class="loesungen">
-                        <h3>Lösungen zu Station 4</h3>
+                </details>
 
-                        <details id="Anwendungen1">
-                            <summary>Sprungschanze</summary>
-                            <ol class="custom-marker parens-around lower-alpha more-spacing">
-                                <li>
-                                    <strong>Steigungswinkel im Startpunkt \( S(-8\,|\, f(-8)) \):</strong>
-                                    <p>
-                                        Die Steigung der Funktion ist die Ableitung \( f'(x) \).
-                                    </p>
-                                    <p>
-                                        Für \( f(x) = -\tfrac{5}{256}x^3 + \tfrac{3}{4}x + 2 \) gilt:
-                                        \[
-                                        f'(x) = -\tfrac{15}{256}x^2 + \tfrac{3}{4}.
-                                        \]
-                                        Im Punkt \( S \):
-                                        \begin{align*}
-                                        f'(-8) &= -\tfrac{15}{256}(-8)^2 + \tfrac{3}{4} \\
-                                        &= -\tfrac{15}{256} \cdot 64 + \tfrac{3}{4}     \\
-                                        &= -3
-                                        \end{align*}
-                                        Der Steigungswinkel \( \alpha \) berechnet sich durch:
-                                        \begin{align*}
-                                        \tan \alpha &= f'(-8)=-3 \qquad |\text{arc} \\
-                                        \alpha' &\approx -71,57\,^\circ \quad\Rightarrow \alpha= 108,43\,^\circ
-                                        \end{align*}
-                                        <strong>Antwort:</strong> Der Steigungswinkel beträgt etwa \( 108,43\,^\circ \).
-                                    </p>
-                                </li>
-                                <li>
-                                    <strong>Mittlere Steigung der Schanze zwischen \( S \) und \( A \):</strong><br>
-                                    Die mittlere Steigung ergibt sich aus:
-                                    \[
-                                    m = \frac{f(0) - f(-8)}{0 - (-8)}.
-                                    \]
-                                    Zunächst berechnen wir die Funktionswerte:
-                                    \begin{align*}
-                                    f(-8) &= -\tfrac{5}{256}(-8)^3 + \tfrac{3}{4}(-8) + 2 =6 \\
-                                    f(0) &= -\tfrac{5}{256}(0)^3 + \tfrac{3}{4}(0) + 2 = 2.
-                                    \end{align*}
-                                    Somit:
-                                    \begin{align*}
-                                    m = \frac{2 - 6}{8} = -\tfrac{4}{8} = -0.5.
-                                    \end{align*}
-                                    <strong>Antwort:</strong> Die mittlere Steigung beträgt \(m= -0.5 \).<br>
-                                    Veranschaulichung: Zeichne eine Linie von \( S \) nach \( A \).
-                                </li>
-                                <li>
-                                    <strong>Tiefster Punkt der Schanze und Höhendifferenz:</strong><br>
-                                    <p>
-                                        Der tiefste Punkt ist ein lokales Minimum, daher gilt \( f'(x) = 0 \).
-                                    </p>
-                                    <p>
-                                        Für \( f'(x) = -\tfrac{15}{256}x^2 + \tfrac{3}{4} \):
-                                        \begin{align*}
-                                        0 &= -\frac{15}{256}x^2 + \frac{3}{4}
-                                        \\ &\ldots \\
-                                        x_{1/2}&\approx\pm 3,578
-                                        \end{align*}
-                                        Für \( x = -3,577 \) (\(x=3,577\) liegt außerhalb des betrachteten Intervalls):
-                                        \[
-                                        f(-3,577) \approx -\tfrac{5}{256}(-3,578)^3 + \tfrac{3}{4}(-3,578) + 2 \approx
-                                        0,211.
-                                        \]
-                                        Die Höhendifferenz zwischen dem tiefsten Punkt \( T(-3,578\,|\, 0,211) \) und
-                                        dem höchsten Punkt der Schanze (Startpunkt \( S(-8\,|\, 6) \)):
-                                        \[
-                                        h = 6 - (0,211) = 5,789 \, \text{m}.
-                                        \]
-                                        <strong>Antwort:</strong> Der tiefste Punkt liegt bei etwa \( T(-3,578\,|\,
-                                        0,211)
-                                        \).
-                                        Die Höhendifferenz beträgt etwa \( 5,789 \,|\, \text{m} \).
-                                    </p>
+            </details>
 
-                                </li>
-                            </ol>
+            <details id="a5">
+                <summary>Seite 153</summary>
 
+                <details>
+                    <summary class="nonumber">Funktionsuntersuchung</summary>
+                    <ol class="custom-marker parens-around lower-alpha more-spacing">
+                        <li>Es kommen nur Potenzterme mit geradem Exponenten im Funktionsterm vor.
+                        </li>
+                        <li>\(x=\pm 1\)</li>
+                        <li><ul>
+                            <li>\(f(x)=x^4+2x^2-3\)</li>
+                            <li>\(f'(x)=4x^3+4x\)</li>
+                            <li>\(f'(x)=0\rightarrow x=0\)</li>
+                            <li>Mit \(x < 0\) gilt \(f'(x) < 0\), d.h. sie ist für \(x < 0\) streng monoton fallend</li>
+                            <li>Mit \(x > 0\) gilt \(f'(x) > 0\), d.h. sie ist für \(x > 0\) streng monoton steigend</li>
+                        </ul></li>
+                        <li><ul>
+                            <li>\(f(1)=0\)</li>
+                            <li>\(f'(1)=8\)</li>
+                            <li>\(t_1(x)=8x-8\)</li>
+                        </ul></li>
+                        <li>
+                            <ul>
+                                <li>\(p(0)=c=-4\)</li>
+                                <li>\(p(1)=a\cdot 1^2-4=0 \Rightarrow a=4\)</li>
+                                <li>\(p(x)=4x^2-4\)</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </details>
 
+                <details>
+                    <summary class="nonumber">Ski-Cross-Parcours</summary>
+                    Es ist nur nach Extremstellen gefragt, nicht nach den Punkten.
+                    <ol class="custom-marker parens-around lower-alpha more-spacing">
+                        <li>
+                            <ul>
+                                <li>\(A(-10\,|\,2,5)\)</li>
+                                <li>\(f'(x)=-\tfrac{3}{100}x^2+\tfrac34=0\)</li>
+                                <li>\(x=\pm5\)</li>
+                                <li>\(B(-5\,|\,-2,5\)</li>
+                                <li>Der Höhenunterschied beträgt \(2,5-(-2,5)=5\,\text m\)</li>
+                            </ul>
+                        </li>
+                        <li>
+                            \(m=\dfrac{2,5-(-2,5)}{-10-(-5)}=-1\)
+                        </li>
+                        <li>
+                            \(f'(0)=\tfrac34\Rightarrow \alpha=36,9\,^\circ\)
+                        </li>
+                        <li>Ohne Knick heißt, beide Funktionen haben am Treffpunkt die gleiche Steigung.
+                            <ul>
+                                <li>\(g'(x)=\tfrac{9}{400}x^2-\tfrac3{10}x+\tfrac34\)</li>
+                                <li>\(g'(0)=\tfrac34=f'(0)\)</li>
+                                <li>Ja, sie treffen sich ohne Knick.</li>
+                            </ul>
+                            Waagerecht in \(C(10\,|\,0)\):
+                            <ul>
+                                <li>\(g'(10)=0\)</li>
+                                <li>Ja, \(g\) ist bei \(x=10\) waagerecht</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Die Steigung von \(g\) ist im Ursprung maximal, da sie zum Hochpunkt hin bis auf 0 abnimmt
+                            (Rechtskrümmung) und danach negativ ist.
+                        </li>
+                        <li>
+                            <ul>
+                                <li>\(g''(x)=\tfrac9{200}x-\tfrac3{10}=0\)</li>
+                                <li>\(x=\tfrac{20}{3}\)</li>
+                                <li>\(W(\tfrac{20}{3}\,|\, \tfrac59\)</li>
+                            </ul>
+                        </li>
+                        <li>
+                            Die Bahn ist von \(A\) bis zum Ursprung linksgekrümmt, dann ist sie bis zum Wendepunkt \(W\)
+                            rechtsgekrümmt, danach bis zum Ende bei \(x = 10\) wieder linksgekrümmt.
+                        </li>
+                    </ol>
+                </details>
 
-                        </details>
-                        <details id="Anwendungen2">
-                            <summary>Skigebiet</summary>
-                            <ol class="custom-marker parens-around lower-alpha more-spacing">
-                                <li>
-                                    <strong>Obere und untere Anschlusspunkte \( O \) bzw. \( U \) als Extrempunkte von
-                                        \( f
-                                        \):</strong><br>
-                                    <p>
-                                        Extrempunkte liegen dort, wo die Ableitung \( f'(x) \) gleich null ist.
-                                    </p>
-                                    <p> Für \( f(x) = \frac{1}{2500}x^3 - \frac{3}{100}x^2 + 27 \) gilt:
-                                        \begin{align*}
-                                        f'(x) &= \tfrac{3}{2500}x^2 - \tfrac3{50}x.
-                                        \end{align*}
-                                        Also ist:
-                                        \begin{align*}
-                                        f'(x) &= 0 \\
-                                        &\ldots \\
-                                        x_1 &= 0 \\
-                                        x_2 &= 50
-                                        \end{align*}
-                                        Die Funktionswerte an diesen Stellen sind:
-                                        \begin{align*}
-                                        f(0) &= \tfrac{1}{2500}(0)^3 - \tfrac{3}{100}(0)^2 + 27 = 27, \\
-                                        f(50) &= 2.
-                                        \end{align*}
-                                        <strong>Antwort:</strong> Der obere Anschlusspunkt ist \( O(0\,|\, 27) \)
-                                        und der untere Anschlusspunkt ist \( U(50\,|\, 2) \).
-                                    <p>
-                                        Dass es so ist, kann entweder mit der zweiten Ableitung gezeigt werden
-                                        (\(f''(0)=-\tfrac3{50}\) und \(f''(50)=\tfrac3{50}\)) oder
-                                        es ergibt sich aus dem Kontext: der Hochpunkt liegt höher als der Tiefpunkt.
-                                    </p>
-                                    </p>
-                                </li>
-                                <li>
-                                    <strong>Horizontale Gesamtlänge \( L \), vertikale Höhendifferenz \( H \), und
-                                        durchschnittliche Steigung der Abfahrt:</strong><br>
-                                    <p>
-                                        Die horizontale Länge ist die Differenz der \( x \)-Koordinaten:
-                                        \begin{align*}
-                                        L &= x_U - x_O = 50 - 0 = 50 \, \text{m}
-                                        \end{align*}
-                                        Die vertikale Höhendifferenz ist die Differenz der \( y \)-Koordinaten:
-                                        \begin{align*}
-                                        H &= y_O - y_U = 27 - 2 = 25 \, \text{m}
-                                        \end{align*}
-                                        Die durchschnittliche Steigung ist:
-                                        \begin{align*}
-                                        m &= \frac{H}{L} = \frac{25}{50} = 0.5
-                                        \end{align*}
-                                        <strong>Antwort:</strong> Horizontale Länge: \( L = 50 \, \text{m} \), vertikale
-                                        Höhendifferenz: \( H = 25 \, \text{m} \), durchschnittliche Steigung: \( m = 0.5
-                                        \).
-                                    </p>
-
-                                </li>
-                                <li>
-                                    <strong>Stelle mit der größten Steigung und Neigungswinkel \( \alpha
-                                        \):</strong><br>
-                                    <p>
-                                        Die größte Steigung (Maximum von \( f'(x) \)) liegt beim Extremwert der
-                                        Ableitung,
-                                        also bei \( f''(x) = 0 \). Für:
-                                        \begin{align*}
-                                        f'(x) &= \tfrac{3}{2500}x^2 - \tfrac3{50}x \\
-                                        f''(x) &= \tfrac{3}{1250}x - \tfrac3{50}
-                                        \end{align*}
-                                        \( f''(x) = 0 \) setzen:
-                                        \begin{align*}
-                                        0 &= \tfrac{3}{1250}x - \tfrac3{50}\\
-                                        x&=25
-                                        \end{align*}
-                                        Die Steigung an dieser Stelle ist:
-                                        \begin{align*}
-                                        f'(25) &= \tfrac{3}{2500}\cdot25^2 - \tfrac3{50}\cdot 25=-\tfrac34
-                                        \end{align*}
-                                        Der Neigungswinkel \( \alpha \) berechnet sich durch:
-                                        \begin{align*}
-                                        \tan \alpha &= -\tfrac34 \quad |\text{arc} \\
-                                        \alpha&=-36,87\,^\circ
-                                        \end{align*}
-                                        <strong>Antwort:</strong> Die Abfahrt ist am steilsten bei \( x = 25 \) mit
-                                        einer
-                                        Steigung von \( -\tfrac34 \) und einem Neigungswinkel von etwa \( 36,87\,^\circ
-                                        \).
-                                    </p>
-
-                                </li>
-                                <li>
-                                    <strong>Höhe bei einem Anstieg von \(-0.63\):</strong><br>
-                                    <p>
-                                        Ein Anstieg von \(-0,63\) bedeutet, dass \( f'(x) = -0,63 \):
-                                        \begin{align*}
-                                        f'(x) &= \tfrac{3}{2500}x^2 - \tfrac3{50}x = -0,63
-                                        \end{align*}
-                                        Dies ist eine quadratische Gleichung:
-                                        \begin{align*}
-                                        &\ldots \\
-                                        x_1&=15 \\
-                                        x_2&=35 \\
-                                        \end{align*}
-                                        Die Höhe ist der Funktionswert an \( x_2 = 35 \) (weil er ja von rechts kommt):
-                                        \begin{align*}
-                                        f(35) &= \tfrac{1}{2500}\cdot 35^3 - \tfrac{3}{100}\cdot 35^2 + 27
-                                        =\tfrac{37}{5}=7,4
-                                        \end{align*}
-                                        <strong>Antwort:</strong> Der Sportler befindet sich bei einer Höhe von etwa \(
-                                        7,4
-                                        \, \text{m} \).
-                                    </p>
-                                </li>
-                            </ol>
-
-                        </details>
-                        <details id="Anwendungen3">
-                            <summary>Badesee</summary>
-                            <ol class="custom-marker parens-around lower-alpha more-spacing">
-
-                                <li><strong>Nullstellen von \(f\):</strong>
-                                    <p>
-                                        Nullstellen mit \(f(x) = 0\) finden:
-                                        \begin{align*}
-                                        \tfrac{1}{2}x^3 - 3x^2 + \tfrac{9}{2}x &= 0 \\
-                                        x \cdot \left( \tfrac{1}{2}x^2 - 3x + \tfrac{9}{2} \right) &= 0.
-                                        \end{align*}
-                                        Daraus folgt: \(x_1 = 0\)
-                                        Verbleibende quadratische Gleichung lösen:
-                                        \begin{align*}
-                                        \tfrac{1}{2}x^2 - 3x + \tfrac{9}{2} &= 0\\
-                                        \ldots& \\
-                                        x_2&=3
-                                        \end{align*}
-                                        Die quadratische Gleichung hat nur eine Lösung.
-                                    </p>
-                                    <p>
-                                        <strong>Antwort:</strong> Die Nullstellen sind somit: \(x_1 = 0\) und \(x_2 =
-                                        3\)
-                                    </p>
-                                </li>
-                                <li>
-                                    <strong> Symmetrieeigenschaften des Graphen von \(f(x)\):</strong>
-                                    <p>
-                                        Der Funktionsterm \(f(x) = \tfrac{1}{2}x^3 - 3x^2 + \tfrac{9}{2}x\) enthält
-                                        Potenzen
-                                        von
-                                        \(x\), die sowohl ungerade (\(x^3, x\)) als auch gerade (\(x^2\)) sind. Dies
-                                        führt
-                                        zu
-                                        folgenden Schlussfolgerungen:
-                                    <ul class="more-spacing" style="margin-bottom: 5px;">
-                                        <li>Achsensymmetrie zur \(y\)-Achse: Dazu müsste \(f(-x) = f(x)\) gelten. Für
-                                            \(f(x)\)
-                                            ist dies nicht der Fall, da ungerade Potenzen das Vorzeichen wechseln.</li>
-                                        <li>Punktsymmetrie zum Ursprung: Dazu müsste \(f(-x) = -f(x)\) gelten. Auch dies
-                                            trifft
-                                            nicht zu, da der quadratische Term (\(x^2\)) sein Vorzeichen nicht ändert.
-                                        </li>
-                                    </ul>
-                                    Daher ist der Graph von \(f\) weder achsensymmetrisch zur \(y\)-Achse noch
-                                    punktsymmetrisch zum Ursprung.
-                                    </p>
-                                </li>
-                                <li>
-                                    <strong> Lokale Extrempunkte von \(f(x)\): </strong>
-                                    <p>
-                                        Die Ableitungen der Funktion sind:
-                                        \begin{align*}
-                                        f'(x) &= \tfrac{3}{2}x^2 - 6x + \tfrac{9}{2} \\
-                                        f''(x) &= 3x - 6.
-                                        \end{align*}
-                                        Bei Extrempunkten gilt: \(f'(x) = 0\):
-                                        \begin{align*}
-                                        0 &= \tfrac{3}{2}x^2 - 6x + \tfrac{9}{2} \\
-                                        &\ldots \\
-                                        x_1&=1 \\
-                                        x_2 &=3
-                                        \end{align*}
-                                        Art der Extrema gibt's mit der zweiten Ableitung:
-                                        \begin{align*}
-                                        f''(1) &= 3 \cdot 1 - 6 = -3 \quad (\text{Maximum}) \\
-                                        f''(3) &= 3 \cdot 3 - 6 = 3 \quad (\text{Minimum})
-                                        \end{align*}
-                                        Zweite Koordinate berechnen:
-                                        \begin{align*}
-                                        f(1)&= \tfrac{1}{2}\cdot 1^3 - 3\cdot 1x^2 + \tfrac{9}{2}\cdot 1=2 \\
-                                        f(3)&= \tfrac{1}{2}\cdot 3^3 - 3\cdot 3x^2 + \tfrac{9}{2}\cdot 3=0
-                                        \end{align*}
-                                        <strong>Antwort:</strong> Die Extrema liegen bei \(H(1\,|\,2)\) und
-                                        \(T(3\,|\,0)\).
-                                    </p>
-                                </li>
-                                <li>
-                                    <strong>Größte Ausdehnung des Sees:</strong>
-                                    <p>
-                                        Der See erstreckt sich von Süden nach Norden über die maximale Differenz der
-                                        \(y\)-Werte:
-                                        \begin{align*}
-                                        \text{Nord-Süd-Ausdehnung} &= f(1) - f(3) = 2 - 0 = 2 \, \text{km}.
-                                        \end{align*}
-                                        Von Osten nach Westen liegt die Ausdehnung zwischen den Nullstellen:
-                                        \[
-                                        \text{Ost-West-Ausdehnung} = 3 - 0 = 3 \, \text{km}.
-                                        \]
-                                    </p>
-                                </li>
-                                <li>
-                                    <strong> Anstieg der Funktion \(f\) im Punkt \(P(1,5\,|\, f(1,5))\)</strong>
-                                    <p>
-                                        Die Steigung im Punkt \(P\) ist die Ableitung \(f'(x)\) an der Stelle \(x =
-                                        1,5\):
-                                        \begin{align*}
-                                        f'(1,5) &= \tfrac{3}{2}\cdot 1,5^2 - 6 \cdot 1,5 + \tfrac{9}{2} \\
-                                        &=-\tfrac98
-                                        \end{align*}
-                                    </p>
-                                    <p>
-                                        <strong>Antwort:</strong> Im Punkt \(P\) hat die Funktion eine Steigung von
-                                        \(m=-\tfrac98\).
-                                    </p>
-                                </li>
-                                <li>
-                                    <strong> Eigenschaften von \(f\) im Punkt \(R\):</strong>
-                                    <p>
-                                        Im Punkt \(R\), wo der zweite Zufahrtsweg ebenfalls
-                                        senkrecht auf das Ufer trifft und parallel zu \(g\) ist,
-                                        muss die Steigung ebenfalls \(m=-\tfrac98\) betragen.
-                                    </p>
-                                </li>
-
-                                <li>
-                                    <strong> Koordinaten von \(R\)</strong>
-                                    <p>
-                                        Um \(x_R\) zu berechnen, wird \(f'(x) = -\tfrac98\) gesetzt:
-                                        \begin{align*}
-                                        \tfrac{3}{2}x^2 - 6x + \tfrac{9}{2} &= -\tfrac98
-                                        \end{align*}
-                                        Das ist eine quadratische Gleichung:
-                                        \begin{align*}
-                                        &\ldots \\
-                                        x_1&=\tfrac32 \quad \Rightarrow P\\
-                                        x_2&=\tfrac52 \quad \Rightarrow R
-                                        \end{align*}
-                                        Zweite Koordinate berechnen:
-                                        \begin{align*}
-                                        f(\tfrac52)&=\tfrac{1}{2}\cdot \left(\tfrac52\right)^3 - 3\cdot
-                                        \left(\tfrac52\right)^2 + \tfrac{9}{2}\cdot \tfrac52=\tfrac{5}{16}
-                                        \end{align*}
-                                    </p>
-                                    <p>
-                                        <strong>Antwort:</strong> Der Punkt \(R\) hat die Koordinaten
-                                        \(R\left(\tfrac52\,|\, \tfrac{5}{16}\right)\).
-                                    </p>
-                                </li>
-
-                            </ol>
-                        </details>
-
-                    </section>
-                </section>
+            </details>
 
 
-                <!-- <section class="loesungen">
-                    <h3>Lösungen zu Übungs- und Anwendungsaufgaben</h3>
-
-                    <details id="a1">
-                        <summary>...</summary>
-
-
-
-                    </details>
-
-
-                </section> -->
-                <section id="meme">
-                    <div class="images">
-                        <img src="/img/uebe-meme.jpg" style="object-fit:scale-down; max-width: 300px;">
-                    </div>
-                    <div class="centered">
-                        <!-- <a href="https://mrkylebrown.weebly.com/1-slope--rate-of-change.html"> -->
-                        <h6>Original leider nicht mehr auffindbar</h6>
-                        <!-- </a> -->
-                    </div>
-                </section>
+        </section>
+        <section id="meme">
+            <div class="images">
+                <img src="/img/uebe-meme.jpg" style="object-fit:scale-down; max-width: 300px;">
+            </div>
+            <div class="centered">
+                <!-- <a href="https://mrkylebrown.weebly.com/1-slope--rate-of-change.html"> -->
+                <h6>Original leider nicht mehr auffindbar</h6>
+                <!-- </a> -->
+            </div>
+        </section>
     </main>
     <footer>
         <a href="/misc/impressum.html">Impressum</a>
         <div class="lastModified" align="center">
             Zuletzt geändert:<br>
-            27. November 2024
+            4. Dezember 2024
             <!-- <span id="lastModifiedDate"></span> -->
         </div>
         <a href="/misc/datenschutz.html">Datenschutz</a>
