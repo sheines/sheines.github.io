@@ -228,13 +228,126 @@
         <h3>Lösungen zu Extremalproblemen</h3>
 
         <details id="a1">
-          <summary>...</summary>
-          <ol class="custom-marker parens-around lower-alpha more-spacing">
-            <li>
-              
+          <summary>Zahlenrätsel</summary>
+          <ul class=" more-spacing">
+            <li>Zielgröße: Produkt \(P\) der beiden Zahlen (maximieren)</li>
+            <li>Hauptbedingung: Das Produkt \(P(a,b)=a\cdot b^2\)</li>
+            <li>Nebenbedingung: Die Summe: \(a+b=60\)</li>
+            <li>Zielfunktion:
+              <ul>
+                <li>Nebenbedingung nach \(a\) umstellen: \(a=60-b\)</li>
+                <li>Nebenbedingung in Hauptbedingung einsetzen: \(P(b)=(60-b)\cdot b^2\)</li>
+                <li>Zu Zielfunktion zusammenfassen: \(P(b)=60b^2-b^3\)</li>
+              </ul>
             </li>
-          </ol>
-          <!-- Zeichnungen mit <a href="https://www.geogebra.org/calculator" target="_blank">Geogebra</a> -->
+            <li>Optimum ermitteln:
+              <ul>
+                <li>1. Ableitung: \(P'(b)=120b-3b^2=0\)</li>
+                <li>Lösungen: \(b_1=0, b_2=40\)</li>
+                <li>2. Ableitung: \(P''(b)=120-6b\)
+                  <ul>
+                    <li>\(P''(0)=120\): Minimum</li>
+                    <li>\(P''(40)=-120\): Maximum</li>
+                  </ul>
+                </li>
+                <li>Anderen Summand ermitteln: \(a=20\)</li>
+              </ul>
+            </li>
+            <li>Antwort: Das Produkt wird maximal, wenn der erste Summand 20 und der zeite Summand 40 ist.</li>
+          </ul>
+
+        </details>
+
+        <details id="a2">
+          <summary>Rechteck unter Gerade</summary>
+          <ul class=" more-spacing">
+            <li>Zielgröße: Position des Punkte \(P\), damit Fläche \(A\) maximal wird</li>
+            <li>Hauptbedingung: Fläche des Rechtecks \(A(x,y)=x\cdot y\)</li>
+            <li>Nebenbedingung: Punkt auf Gerade: \(y=3-\frac x2\)</li>
+            <li>Zielfunktion:
+              <ul>
+                <li>Nebenbedingung ist bereits nach \(y\) umgestellt: \(y=3-\frac x2\)</li>
+                <li>Nebenbedingung in Hauptbedingung einsetzen: \(A(x)=x\cdot (3-\frac x2)\)</li>
+                <li>Zu Zielfunktion zusammenfassen: \(A(x)=3x-\frac{x^2}{2}\)</li>
+              </ul>
+            </li>
+            <li>Optimum ermitteln:
+              <ul>
+                <li>1. Ableitung: \(A'(x)=3-x=0\)</li>
+                <li>Lösung: \(x=3\)</li>
+                <li>2. Ableitung: \(A''(x)=-1\)
+                  <ul>
+                    <li>\(A''(3)=-1\): Maximum</li>
+                  </ul>
+                </li>
+                <li>Andere Koordinate ermitteln: \(y=1,5\)</li>
+              </ul>
+            </li>
+            <li>Antwort: Die Koordinaten des Punktes, welcher das größte Rechteck erzeugt, lauten \(P(3\,|\,1,5)\).</li>
+          </ul>
+
+        </details>
+
+        <details id="a3">
+          <summary>Tunnelquerschnitt</summary>
+          <ul class=" more-spacing">
+            <li>Zielgröße: Fläche des Tunnelquerschnitts \(A\) (maximieren) </li>
+            <li>Hauptbedingung: Querschnittsfläche des Tunnels \(A(r,h)=A_{\text{Rechteck}}+A_{\text{Halbkreis}}\)\(=2r\cdot h+\frac\pi2\cdot r^2\)</li>
+            <li>Nebenbedingung: Umfang (ohne Boden): \(20=u_\text{Rechteckrand}+u_\text{Halbkreis}\)\(=2h+\pi\cdot r\)</li>
+            <li>Zielfunktion:
+              <ul>
+                <li>Nebenbedingung nach \(h\) umstellen: \(h=10-\frac\pi2\cdot r\)</li>
+                <li>Nebenbedingung in Hauptbedingung einsetzen: \(A(r)=2\cdot (10-\frac\pi2\cdot r)\cdot r+\frac\pi2\cdot r^2\)</li>
+                <li>Zu Zielfunktion zusammenfassen: \(A(r)=20r-\frac\pi2\cdot r^2\)</li>
+              </ul>
+            </li>
+            <li>Optimum ermitteln:
+              <ul>
+                <li>1. Ableitung: \(A'(r)=20-\pi\cdot r=0\)</li>
+                <li>Lösung: \(r=\frac{20}{\pi}\approx6,37\)</li>
+                <li>2. Ableitung: \(A''(r)=-\pi\)
+                  <ul>
+                    <li>\(A''(\frac{20}{\pi})=-\frac\pi2\): Maximum</li>
+                  </ul>
+                </li>
+                <li>Höhe ermitteln: \(h=5\)</li>
+                <li>Querschnittsfläche: \(A\approx47,75\)</li>
+              </ul>
+            </li>
+            <li>Antwort: Der Tunnel kann eine maximale Querschnittsfläche von \(47,75\,\text m^2\) haben.</li>
+            <li>Nimmt man den Boden beim Umfang mit dazu, erhält man eine maximale Fläche von ca. \(28\,\text m^2\).</li>
+          </ul>
+
+        </details>
+
+        <details id="a4">
+          <summary>Flughafenfeuerwehr</summary>
+          <ul class=" more-spacing">
+            <li>Zielgröße: Punkt \(P\) bei dem die Fläche des Dreiecks \(A\) maximal wird </li>
+            <li>Hauptbedingung: Fläche des Dreiecks \(A(x,y)=\tfrac12\cdot(12-x)\cdot (5-y)\)</li>
+            <li>Nebenbedingung: Punkt auf Grapg: \(y=\tfrac{1}{12}x^2-x+5\)</li>
+            <li>Zielfunktion:
+              <ul>
+                <li>Nebenbedingung ist bereits nach \(y\) umgestellt: \(y=\tfrac{1}{12}x^2-x+5\)</li>
+                <li>Nebenbedingung in Hauptbedingung einsetzen: \(A(x)=\tfrac12\cdot(12-x)\cdot \left(5-\left(\tfrac{1}{12}x^2-x+5\right)\right)\)</li>
+                <li>Zu Zielfunktion zusammenfassen: \(A(x)=\tfrac{1}{24}x^3-x^2+6x\)</li>
+              </ul>
+            </li>
+            <li>Optimum ermitteln:
+              <ul>
+                <li>1. Ableitung: \(A'(x)=\tfrac18x^2-2x+6=0\)</li>
+                <li>Lösungen: \(x_1=4, x_2=12\)</li>
+                <li>2. Ableitung: \(A''(x)=\tfrac14x-2\)
+                  <ul>
+                    <li>\(A''(4)=-1\): Maximum</li>
+                    <li>\(A''(12)=1\): Minimum</li>
+                  </ul>
+                </li>
+                <li>Andere Koordinate ermitteln: \(y=\tfrac73\)</li>
+              </ul>
+            </li>
+            <li>Antwort: Im Punkt \(P(4\,|\,\tfrac73)\) wird die Fläche der Feuerwehr am größten.</li>
+          </ul>
 
         </details>
 
