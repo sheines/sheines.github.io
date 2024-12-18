@@ -11,6 +11,7 @@
   <link rel="stylesheet" type="text/css" href="/css/navbar.css" />
   <link rel="stylesheet" type="text/css" href="/css/styles.css" />
   <link rel="stylesheet" type="text/css" href="/css/courses.css" />
+  <link rel="stylesheet" type="text/css" href="/css/box.css" />
   <script type="text/javascript" src="jquery-3.3.1.js"></script>
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -114,7 +115,7 @@
       </div>
       <h6>Zum Einführungsbeispiel:</h6>
       <p>
-        Die <span style="color: darkgoldenrod">Hauptbedingung</span> ergibt sich aus der zu optimierende Größe, 
+        Die <span style="color: darkgoldenrod">Hauptbedingung</span> ergibt sich aus der zu optimierende Größe,
         der <span style="color: darkgoldenrod">Zielgröße</span>, in diesem Fall die Fläche \(A\) des Rechtecks:
         \begin{align*}
         A(a,b)&=a\cdot b
@@ -122,14 +123,15 @@
         \(A(a,b)\), weil die Fläche \(A\) von \(a\) und \(b\) abhängt.
       </p>
       <p>
-        Die <span style="color: darkgoldenrod">Nebenbedingung(en)</span> sind bekannte Abhängigkeiten oder Einschränkungen. Im Beispiel ist das Seil \(800\,\text
+        Die <span style="color: darkgoldenrod">Nebenbedingung(en)</span> sind bekannte Abhängigkeiten oder
+        Einschränkungen. Im Beispiel ist das Seil \(800\,\text
         m\) lang.
       <div class="centered" style="max-height: 200px;">
         <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'
           viewBox='0 -70.532 142.928 70.532'>
           <g id='page1'>
             <g transform='matrix(1 0 0 -1 0 0)'>
-              <path d='M30.92969 55.085939V12.5664H115.9687V55.085939' fill='#ffff80' opacity="0.4"/>
+              <path d='M30.92969 55.085939V12.5664H115.9687V55.085939' fill='#ffff80' opacity="0.4" />
               <path d='M30.92969 55.085939V12.5664H115.9687V55.085939' stroke='#bf8040' fill='none'
                 stroke-width='1.19553' />
               <path
@@ -156,220 +158,361 @@
       </div>
       Der Umfang des Geländes (ohne Meer) ergibt sich aus:
       \begin{align*}
-        u&=b+a+b\quad \Rightarrow \quad 800=a+2b
+      u&=b+a+b\quad \Rightarrow \quad 800=a+2b
       \end{align*}
       </p>
       <p>
         Um das Extremalproblem zu lösen, muss nun die Nebenbedinung in die Hauptbedingung eingesetzt werden.
       </p>
       <p>
-        Nebenbedingung nach \(a\) umstellen (weil am einfachsten): 
+        Nebenbedingung nach \(a\) umstellen (weil am einfachsten):
         \begin{align*}
-          a&=800-2b
+        a&=800-2b
         \end{align*}
         Nebenbedingung in Hauptbedingung einsetzten (ergibt die <span style="color: darkgoldenrod">Zielfunktion</span>):
         \begin{align*}
-          A(b)&=(800-2b)\cdot b\\
-          A(b)&=800b-2b^2
+        A(b)&=(800-2b)\cdot b\\
+        A(b)&=800b-2b^2
         \end{align*}
-        Das Optimum ist bei der maximalen Fläche erreicht. Es ist also ein Maximum gesucht. Dazu muss die Ableitung null sein:
+        Das Optimum ist bei der maximalen Fläche erreicht. Es ist also ein Maximum gesucht. Dazu muss die Ableitung null
+        sein:
         \begin{align*}
-          A'(b)&=800-4b \\
-          0&=800-4b \\
-          &\ldots\\
-          b&=200
+        A'(b)&=800-4b \\
+        0&=800-4b \\
+        &\ldots\\
+        b&=200
         \end{align*}
         Um zu prüfen, ob es sich tatsächlich um ein Maximum handelt, muss die zweite Ableitung von \(b\) negativ sein:
         \begin{align*}
-          A''(b)&=-4 \\
-          A''(200)&=-4
+        A''(b)&=-4 \\
+        A''(200)&=-4
         \end{align*}
         Ja, das Ergebnis \(b=200\,\text m\) ist ein Maximum.
       </p>
       <p>
         Nun muss noch die andere Seite, Seite \(a\), berechnet werden. Das geht mit der (umgestellten) Nebenbedingung:
         \begin{align*}
-          a&=800-2b \\
-          a&=800-2\cdot 200 \\
-          a&=400
+        a&=800-2b \\
+        a&=800-2\cdot 200 \\
+        a&=400
         \end{align*}
         Mit den beiden Seiten kann nun auch die maximale Fläche berechnet werden (Hauptbedingung):
         \begin{align*}
-          A(a,b)&=a\cdot b\\
-          A(400, 200)&=400\cdot 200\\
-          A&=80\,000
+        A(a,b)&=a\cdot b\\
+        A(400, 200)&=400\cdot 200\\
+        A&=80\,000
         \end{align*}
       </p>
       <p>
-        Antwort: Die Fläche des Rechtecks wird bei einer Länge von \(400\,\text m\) und einer Breite von \(200\,\text m\)
+        Antwort: Die Fläche des Rechtecks wird bei einer Länge von \(400\,\text m\) und einer Breite von \(200\,\text
+        m\)
         mit \(80\,000\,\text m^2\) maximal.
       </p>
+      <h6>Beispiel 2:</h6>
+      <p>
+        Von einem quadratischen Stück Pappe mit einer Seitenlänge von \(10\,\text{cm}\)
+        werden an den Ecken Quadrate abgeschnitten. Wie ist die Seitenlänge dieser
+        Quadrate zu wählen, damit der Rest eine (oben offene) Schachtel mit möglichst
+        großem Rauminhalt ergibt?
+      </p>
+      <div class="centered" style="margin-top: 20px;">
+        <div class="boxcontainer">
+          <div class="background"></div>
+          <div class="floor"></div>
+          <div class="side1"></div>
+          <div class="side2"></div>
+          <div class="side3"></div>
+          <div class="side4"></div>
+        </div>
 
+        <script type="text/javascript" src="/js/math/boxAnimation.js"></script>
+      </div>
+      <ul class="more-spacing">
+        <li>Zielgröße: Das Volumen \(V\)</li>
+        <li>Hauptbedingung: Volumen des Quaders: \(V=a\cdot b\cdot c\)</li>
+        <li>Nebenbedingungen: Folgende Variablen werden vergeben:
+          <div class="centered" style="max-height: 300px;">
+            <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'
+              viewBox='0 -166.467 169.144 166.467'>
+              <g id='page1'>
+                <g transform='matrix(1 0 0 -1 0 0)'>
+                  <path d='M42.0547 154.101556H127.094' stroke='magenta' fill='none' stroke-width='1.59404' />
+                  <path d='M42.0547 125.7539H127.094' stroke='magenta' fill='none' stroke-width='1.59404'
+                    stroke-miterlimit='10' />
+                  <path d='M42.0547 40.711H127.094' stroke='magenta' fill='none' stroke-width='1.59404'
+                    stroke-miterlimit='10' />
+                  <path d='M42.0547 12.367H127.094' stroke='magenta' fill='none' stroke-width='1.59404'
+                    stroke-miterlimit='10' />
+                  <path d='M13.707031 125.7539V40.711' stroke='#ff8000' fill='none' stroke-width='1.59404'
+                    stroke-miterlimit='10' />
+                  <path d='M42.0547 125.7539V40.711' stroke='#ff8000' fill='none' stroke-width='1.59404'
+                    stroke-miterlimit='10' />
+                  <path d='M127.094 125.7539V40.711' stroke='#ff8000' fill='none' stroke-width='1.59404'
+                    stroke-miterlimit='10' />
+                  <path d='M155.441 125.7539V40.711' stroke='#ff8000' fill='none' stroke-width='1.59404'
+                    stroke-miterlimit='10' />
+                  <path d='M42.0547 154.101556V125.7539' stroke='cyan' fill='none' stroke-width='1.59404'
+                    stroke-miterlimit='10' />
+                  <path
+                    d='M37.21645 141.72206C37.04207 141.72206 36.88926 141.72206 36.73645 141.56925C36.56207 141.40582 36.5402 141.22019 36.5402 141.14394C36.5402 140.88238 36.73645 140.76238 36.94395 140.76238C37.25988 140.76238 37.55457 141.02394 37.55457 141.46019C37.55457 141.99456 37.04207 142.398 36.2677 142.398C34.79551 142.398 33.345196 140.83863 33.345196 139.30113C33.345196 138.319565 33.9777 137.458002 35.11176 137.458002C36.67113 137.458002 37.58707 138.61394 37.58707 138.74488C37.58707 138.81019 37.52176 138.88675 37.45645 138.88675C37.40176 138.88675 37.37988 138.86488 37.31457 138.77769C36.45301 137.698002 35.26426 137.698002 35.13363 137.698002C34.44645 137.698002 34.15207 138.232377 34.15207 138.88675C34.15207 139.33363 34.3702 140.39144 34.74082 141.06769C35.07895 141.68925 35.67895 142.158 36.27863 142.158C36.64926 142.158 37.06363 142.01644 37.21645 141.72206Z'
+                    fill='cyan' />
+                  <path d='M42.0547 40.711V12.367' stroke='cyan' fill='none' stroke-width='1.59404'
+                    stroke-miterlimit='10' />
+                  <path d='M127.094 154.101556V125.7539' stroke='cyan' fill='none' stroke-width='1.59404'
+                    stroke-miterlimit='10' />
+                  <path
+                    d='M135.84341 141.72206C135.66903 141.72206 135.51622 141.72206 135.36341 141.56925C135.18903 141.40582 135.16716 141.22019 135.16716 141.14394C135.16716 140.88238 135.36341 140.76238 135.57091 140.76238C135.88684 140.76238 136.18153 141.02394 136.18153 141.46019C136.18153 141.99456 135.66903 142.398 134.89466 142.398C133.42247 142.398 131.972156 140.83863 131.972156 139.30113C131.972156 138.319565 132.60466 137.458002 133.73872 137.458002C135.29809 137.458002 136.21403 138.61394 136.21403 138.74488C136.21403 138.81019 136.14872 138.88675 136.08341 138.88675C136.02872 138.88675 136.00684 138.86488 135.94153 138.77769C135.07997 137.698002 133.89122 137.698002 133.76059 137.698002C133.07341 137.698002 132.77903 138.232377 132.77903 138.88675C132.77903 139.33363 132.99716 140.39144 133.36778 141.06769C133.70591 141.68925 134.30591 142.158 134.90559 142.158C135.27622 142.158 135.69059 142.01644 135.84341 141.72206Z'
+                    fill='cyan' />
+                  <path d='M127.094 40.711V12.367' stroke='cyan' fill='none' stroke-width='1.59404'
+                    stroke-miterlimit='10' />
+                  <path d='M13.707031 125.7539H42.0547' stroke='cyan' fill='none' stroke-width='1.59404'
+                    stroke-miterlimit='10' />
+                  <path d='M13.707031 40.711H42.0547' stroke='cyan' fill='none' stroke-width='1.59404'
+                    stroke-miterlimit='10' />
+                  <path
+                    d='M29.83745 35.7281C29.66307 35.7281 29.51026 35.7281 29.35745 35.57529C29.18307 35.41185 29.1612 35.22623 29.1612 35.14998C29.1612 34.88841 29.35745 34.76841 29.56495 34.76841C29.88089 34.76841 30.17557 35.02998 30.17557 35.46623C30.17557 36.0006 29.66307 36.40404 28.8887 36.40404C27.41651 36.40404 25.966198 34.84466 25.966198 33.30716C25.966198 32.325601 26.5987 31.464039 27.73276 31.464039C29.29214 31.464039 30.20807 32.61998 30.20807 32.75091C30.20807 32.81623 30.14276 32.89279 30.07745 32.89279C30.02276 32.89279 30.00089 32.87091 29.93557 32.78373C29.07401 31.704039 27.88526 31.704039 27.75464 31.704039C27.06745 31.704039 26.77307 32.238414 26.77307 32.89279C26.77307 33.33966 26.9912 34.39748 27.36182 35.07373C27.69995 35.69529 28.29995 36.16404 28.89964 36.16404C29.27026 36.16404 29.68464 36.02248 29.83745 35.7281Z'
+                    fill='cyan' />
+                  <path d='M127.094 125.7539H155.441' stroke='cyan' fill='none' stroke-width='1.59404'
+                    stroke-miterlimit='10' />
+                  <path d='M127.094 40.711H155.441' stroke='cyan' fill='none' stroke-width='1.59404'
+                    stroke-miterlimit='10' />
+                  <path
+                    d='M143.22346 35.7281C143.04909 35.7281 142.89628 35.7281 142.74346 35.57529C142.56909 35.41185 142.54721 35.22623 142.54721 35.14998C142.54721 34.88841 142.74346 34.76841 142.95096 34.76841C143.2669 34.76841 143.56159 35.02998 143.56159 35.46623C143.56159 36.0006 143.04909 36.40404 142.27471 36.40404C140.80253 36.40404 139.352213 34.84466 139.352213 33.30716C139.352213 32.325601 139.98471 31.464039 141.11877 31.464039C142.67815 31.464039 143.59409 32.61998 143.59409 32.75091C143.59409 32.81623 143.52878 32.89279 143.46346 32.89279C143.40878 32.89279 143.3869 32.87091 143.32159 32.78373C142.46003 31.704039 141.27128 31.704039 141.14065 31.704039C140.45346 31.704039 140.15909 32.238414 140.15909 32.89279C140.15909 33.33966 140.37721 34.39748 140.74784 35.07373C141.08596 35.69529 141.68596 36.16404 142.28565 36.16404C142.65628 36.16404 143.07065 36.02248 143.22346 35.7281Z'
+                    fill='cyan' />
+                  <path
+                    d='M28.40418 161.22841C28.46981 161.51185 28.72043 162.51497 29.48387 162.51497C29.53856 162.51497 29.80012 162.51497 30.02918 162.37341C29.72387 162.31872 29.50574 162.04622 29.50574 161.78435C29.50574 161.60997 29.62574 161.40278 29.92012 161.40278C30.16012 161.40278 30.50887 161.59903 30.50887 162.03528C30.50887 162.60247 29.86543 162.75497 29.49481 162.75497C28.86231 162.75497 28.48074 162.17716 28.34981 161.92622C28.07699 162.64591 27.48824 162.75497 27.17199 162.75497C26.03793 162.75497 25.416369 161.34841 25.416369 161.0756C25.416369 160.96653 25.525432 160.96653 25.547307 160.96653C25.634494 160.96653 25.666994 160.98841 25.688869 161.08653C26.05981 162.24247 26.77949 162.51497 27.15012 162.51497C27.35731 162.51497 27.73918 162.41685 27.73918 161.78435C27.73918 161.44653 27.55356 160.71591 27.15012 159.18903C26.97574 158.513097 26.59418 158.054972 26.11418 158.054972C26.04887 158.054972 25.79793 158.054972 25.568869 158.196847C25.84168 158.251222 26.08137 158.480284 26.08137 158.785597C26.08137 159.07997 25.84168 159.16716 25.677932 159.16716C25.350744 159.16716 25.078244 158.883722 25.078244 158.534659C25.078244 158.033097 25.623557 157.814972 26.10324 157.814972C26.82293 157.814972 27.21574 158.578409 27.24824 158.643722C27.37918 158.240284 27.77168 157.814972 28.42606 157.814972C29.54918 157.814972 30.17106 159.22185 30.17106 159.49435C30.17106 159.60341 30.07262 159.60341 30.04012 159.60341C29.94199 159.60341 29.92012 159.55997 29.89824 159.48341C29.53856 158.316534 28.79699 158.054972 28.44793 158.054972C28.02262 158.054972 27.84824 158.404034 27.84824 158.774659C27.84824 159.01466 27.91356 159.25435 28.03356 159.73435L28.40418 161.22841Z'
+                    fill='#a8a7a7' />
+                  <path
+                    d='M7.2782 140.87144C7.34383 141.15488 7.59445 142.158 8.35789 142.158C8.41258 142.158 8.67414 142.158 8.9032 142.01644C8.59789 141.96175 8.37976 141.68925 8.37976 141.42738C8.37976 141.253 8.49976 141.04581 8.79414 141.04581C9.03414 141.04581 9.38289 141.24206 9.38289 141.67832C9.38289 142.2455 8.73945 142.398 8.36883 142.398C7.73633 142.398 7.35476 141.82019 7.22383 141.56925C6.95101 142.28894 6.36226 142.398 6.04601 142.398C4.91195 142.398 4.290389 140.99144 4.290389 140.71863C4.290389 140.60956 4.399452 140.60956 4.421327 140.60956C4.508514 140.60956 4.541014 140.63144 4.562889 140.72956C4.93383 141.8855 5.65351 142.158 6.02414 142.158C6.23133 142.158 6.6132 142.05988 6.6132 141.42738C6.6132 141.08956 6.42758 140.35894 6.02414 138.83206C5.84976 138.156127 5.4682 137.698002 4.9882 137.698002C4.92289 137.698002 4.67195 137.698002 4.442889 137.839877C4.7157 137.894252 4.95539 138.123315 4.95539 138.428627C4.95539 138.723 4.7157 138.81019 4.551952 138.81019C4.224764 138.81019 3.952264 138.526752 3.952264 138.17769C3.952264 137.676127 4.497577 137.458002 4.97726 137.458002C5.69695 137.458002 6.08976 138.22144 6.12226 138.286752C6.2532 137.883315 6.6457 137.458002 7.30008 137.458002C8.4232 137.458002 9.04508 138.86488 9.04508 139.13738C9.04508 139.24644 8.94664 139.24644 8.91414 139.24644C8.81601 139.24644 8.79414 139.203 8.77226 139.12644C8.41258 137.959565 7.67101 137.698002 7.32195 137.698002C6.89664 137.698002 6.72226 138.047065 6.72226 138.41769C6.72226 138.65769 6.78758 138.89738 6.90758 139.37738L7.2782 140.87144Z'
+                    fill='#a8a7a7' />
+                  <path
+                    d='M141.7902 161.22841C141.85582 161.51185 142.10645 162.51497 142.86988 162.51497C142.92457 162.51497 143.18613 162.51497 143.4152 162.37341C143.10988 162.31872 142.89176 162.04622 142.89176 161.78435C142.89176 161.60997 143.01176 161.40278 143.30613 161.40278C143.54613 161.40278 143.89488 161.59903 143.89488 162.03528C143.89488 162.60247 143.25145 162.75497 142.88082 162.75497C142.24832 162.75497 141.86676 162.17716 141.73582 161.92622C141.46301 162.64591 140.87426 162.75497 140.55801 162.75497C139.42395 162.75497 138.802384 161.34841 138.802384 161.0756C138.802384 160.96653 138.911446 160.96653 138.933321 160.96653C139.020509 160.96653 139.053009 160.98841 139.074884 161.08653C139.44582 162.24247 140.16551 162.51497 140.53613 162.51497C140.74332 162.51497 141.1252 162.41685 141.1252 161.78435C141.1252 161.44653 140.93957 160.71591 140.53613 159.18903C140.36176 158.513097 139.9802 158.054972 139.5002 158.054972C139.43488 158.054972 139.18395 158.054972 138.954884 158.196847C139.2277 158.251222 139.46738 158.480284 139.46738 158.785597C139.46738 159.07997 139.2277 159.16716 139.063946 159.16716C138.736759 159.16716 138.464259 158.883722 138.464259 158.534659C138.464259 158.033097 139.009571 157.814972 139.48926 157.814972C140.20895 157.814972 140.60176 158.578409 140.63426 158.643722C140.7652 158.240284 141.1577 157.814972 141.81207 157.814972C142.9352 157.814972 143.55707 159.22185 143.55707 159.49435C143.55707 159.60341 143.45863 159.60341 143.42613 159.60341C143.32801 159.60341 143.30613 159.55997 143.28426 159.48341C142.92457 158.316534 142.18301 158.054972 141.83395 158.054972C141.40863 158.054972 141.23426 158.404034 141.23426 158.774659C141.23426 159.01466 141.29957 159.25435 141.41957 159.73435L141.7902 161.22841Z'
+                    fill='#a8a7a7' />
+                  <path
+                    d='M162.9152 140.87144C162.98082 141.15488 163.23145 142.158 163.99488 142.158C164.04957 142.158 164.31113 142.158 164.5402 142.01644C164.23488 141.96175 164.01676 141.68925 164.01676 141.42738C164.01676 141.253 164.13676 141.04581 164.43113 141.04581C164.67113 141.04581 165.01988 141.24206 165.01988 141.67832C165.01988 142.2455 164.37645 142.398 164.00582 142.398C163.37332 142.398 162.99176 141.82019 162.86082 141.56925C162.58801 142.28894 161.99926 142.398 161.68301 142.398C160.54895 142.398 159.927384 140.99144 159.927384 140.71863C159.927384 140.60956 160.036446 140.60956 160.058321 140.60956C160.145509 140.60956 160.178009 140.63144 160.199884 140.72956C160.57082 141.8855 161.29051 142.158 161.66113 142.158C161.86832 142.158 162.2502 142.05988 162.2502 141.42738C162.2502 141.08956 162.06457 140.35894 161.66113 138.83206C161.48676 138.156127 161.1052 137.698002 160.6252 137.698002C160.55988 137.698002 160.30895 137.698002 160.079884 137.839877C160.3527 137.894252 160.59238 138.123315 160.59238 138.428627C160.59238 138.723 160.3527 138.81019 160.188946 138.81019C159.861759 138.81019 159.589259 138.526752 159.589259 138.17769C159.589259 137.676127 160.134571 137.458002 160.61426 137.458002C161.33395 137.458002 161.72676 138.22144 161.75926 138.286752C161.8902 137.883315 162.2827 137.458002 162.93707 137.458002C164.0602 137.458002 164.68207 138.86488 164.68207 139.13738C164.68207 139.24644 164.58363 139.24644 164.55113 139.24644C164.45301 139.24644 164.43113 139.203 164.40926 139.12644C164.04957 137.959565 163.30801 137.698002 162.95895 137.698002C162.53363 137.698002 162.35926 138.047065 162.35926 138.41769C162.35926 138.65769 162.42457 138.89738 162.54457 139.37738L162.9152 140.87144Z'
+                    fill='#a8a7a7' />
+                  <path d='M13.707031 154.101556H155.441V12.367H13.707031Z' stroke='#a8a7a7' fill='none'
+                    stroke-width='.79701' stroke-miterlimit='10' stroke-dasharray='2.98883 2.98883' />
+                  <path
+                    d='M85.75647 162.25616C85.56022 162.6596 85.24397 162.95398 84.75334 162.95398C83.47741 162.95398 82.12522 161.35085 82.12522 159.75898C82.12522 158.733664 82.72491 158.013976 83.57553 158.013976C83.79366 158.013976 84.33897 158.057726 84.99334 158.831789C85.08053 158.373976 85.46209 158.013976 85.98553 158.013976C86.36709 158.013976 86.61803 158.264914 86.79241 158.613664C86.97803 159.006476 87.11959 159.67148 87.11959 159.69335C87.11959 159.80241 87.02147 159.80241 86.98897 159.80241C86.87991 159.80241 86.86897 159.75898 86.83616 159.60616C86.65084 158.897414 86.45459 158.253976 86.00741 158.253976C85.71303 158.253976 85.68022 158.537414 85.68022 158.755539C85.68022 158.995539 85.70209 159.082726 85.82209 159.56241C85.9421 160.02054 85.96366 160.1296 86.06178 160.54398L86.45459 162.07085C86.53085 162.37616 86.53085 162.39773 86.53085 162.44148C86.53085 162.62679 86.39991 162.73585 86.21459 162.73585C85.95272 162.73585 85.78928 162.49585 85.75647 162.25616ZM85.04772 159.43179C84.99334 159.23554 84.99334 159.21366 84.82959 159.028039C84.34991 158.428351 83.90272 158.253976 83.59741 158.253976C83.05209 158.253976 82.89928 158.853664 82.89928 159.27898C82.89928 159.82429 83.24834 161.16554 83.49928 161.6671C83.83741 162.31054 84.32803 162.71398 84.76428 162.71398C85.47303 162.71398 85.62584 161.81991 85.62584 161.7546C85.62584 161.68898 85.60397 161.62366 85.59303 161.56898L85.04772 159.43179Z'
+                    fill='magenta' />
+                  <path
+                    d='M162.07924 86.89411C162.07924 86.90505 162.07924 87.01411 161.93768 87.01411C161.68674 87.01411 160.89081 86.92692 160.60706 86.90505C160.51987 86.89411 160.399868 86.88317 160.399868 86.68692C160.399868 86.55599 160.49799 86.55599 160.66174 86.55599C161.18518 86.55599 161.20706 86.47974 161.20706 86.37067C161.20706 86.29442 161.10862 85.92349 161.05424 85.69474L160.159868 82.13942C160.029243 81.59442 159.985493 81.41974 159.985493 81.03817C159.985493 80.002236 160.56362 79.325986 161.37049 79.325986C162.65737 79.325986 163.99862 80.95099 163.99862 82.5213C163.99862 83.51349 163.42049 84.26599 162.54831 84.26599C162.04674 84.26599 161.59956 83.94974 161.27237 83.61161L162.07924 86.89411ZM161.05424 82.77192C161.11956 83.01192 161.11956 83.0338 161.21768 83.1538C161.75206 83.86255 162.24299 84.02599 162.52643 84.02599C162.91893 84.02599 163.21331 83.69911 163.21331 83.00099C163.21331 82.35755 162.85362 81.10349 162.65737 80.68911C162.29737 79.958486 161.79581 79.565986 161.37049 79.565986C160.99956 79.565986 160.63987 79.860361 160.63987 80.66724C160.63987 80.87442 160.63987 81.08161 160.81424 81.7688L161.05424 82.77192Z'
+                    fill='#ff8000' />
+                  <path
+                    d='M85.75647 7.7582C85.56022 8.16164 85.24397 8.45601 84.75334 8.45601C83.47741 8.45601 82.12522 6.85289 82.12522 5.26101C82.12522 4.235702 82.72491 3.516014 83.57553 3.516014C83.79366 3.516014 84.33897 3.559764 84.99334 4.333827C85.08053 3.876014 85.46209 3.516014 85.98553 3.516014C86.36709 3.516014 86.61803 3.766952 86.79241 4.115702C86.97803 4.508514 87.11959 5.17351 87.11959 5.19539C87.11959 5.30445 87.02147 5.30445 86.98897 5.30445C86.87991 5.30445 86.86897 5.26101 86.83616 5.1082C86.65084 4.399452 86.45459 3.756014 86.00741 3.756014C85.71303 3.756014 85.68022 4.039452 85.68022 4.257577C85.68022 4.497577 85.70209 4.584764 85.82209 5.06445C85.9421 5.52258 85.96366 5.63164 86.06178 6.04601L86.45459 7.57289C86.53085 7.8782 86.53085 7.89976 86.53085 7.94351C86.53085 8.12883 86.39991 8.23789 86.21459 8.23789C85.95272 8.23789 85.78928 7.99789 85.75647 7.7582ZM85.04772 4.93383C84.99334 4.73758 84.99334 4.7157 84.82959 4.530077C84.34991 3.930389 83.90272 3.756014 83.59741 3.756014C83.05209 3.756014 82.89928 4.355702 82.89928 4.78101C82.89928 5.32633 83.24834 6.66758 83.49928 7.16914C83.83741 7.81258 84.32803 8.21601 84.76428 8.21601C85.47303 8.21601 85.62584 7.32195 85.62584 7.25664C85.62584 7.19101 85.60397 7.1257 85.59303 7.07101L85.04772 4.93383Z'
+                    fill='magenta' />
+                  <path
+                    d='M7.59622 86.89411C7.59622 86.90505 7.59622 87.01411 7.45465 87.01411C7.20372 87.01411 6.40778 86.92692 6.12403 86.90505C6.03684 86.89411 5.916841 86.88317 5.916841 86.68692C5.916841 86.55599 6.01497 86.55599 6.17872 86.55599C6.70215 86.55599 6.72403 86.47974 6.72403 86.37067C6.72403 86.29442 6.62559 85.92349 6.57122 85.69474L5.676841 82.13942C5.546216 81.59442 5.502466 81.41974 5.502466 81.03817C5.502466 80.002236 6.08059 79.325986 6.88747 79.325986C8.17434 79.325986 9.51559 80.95099 9.51559 82.5213C9.51559 83.51349 8.93747 84.26599 8.06528 84.26599C7.56372 84.26599 7.11653 83.94974 6.78934 83.61161L7.59622 86.89411ZM6.57122 82.77192C6.63653 83.01192 6.63653 83.0338 6.73465 83.1538C7.26903 83.86255 7.75997 84.02599 8.0434 84.02599C8.4359 84.02599 8.73028 83.69911 8.73028 83.00099C8.73028 82.35755 8.37059 81.10349 8.17434 80.68911C7.81434 79.958486 7.31278 79.565986 6.88747 79.565986C6.51653 79.565986 6.15684 79.860361 6.15684 80.66724C6.15684 80.87442 6.15684 81.08161 6.33122 81.7688L6.57122 82.77192Z'
+                    fill='#ff8000' />
+                </g>
+              </g>
+            </svg>
+          </div>
+          Zur Erinnerung: Das Quadrat hat eine Seitenlänge von \(10\,\text{cm}\).
+          <ul>
+            <li>Seite \({\color{magenta}a}=10-2x\)</li>
+            <li>Seite \({\color{orange}b}=10-2x\)</li>
+            <li>Seite \({\color{cyan}c}=x\)</li>
+          </ul>
+        </li>
+        <li>Zielfunktion:
+          <ul>
+            <li>Nebenbedingungen in Hauptbedingung einsetzen und zusammenfassen:
+              \begin{align*}
+                V(a,b,c)&={\color{magenta}a}\cdot {\color{orange}b}\cdot {\color{cyan}c} \\
+                V(x)&=(10-2x)\cdot (10-2x)\cdot x \\
+                V(x)&=100x-40x^2+4x^3
+              \end{align*}
+            </li>
+          </ul>
+        </li>
+        <li>
+          Optimum berechnen:
+          \begin{align*}
+            V'(x)&=100-80x+12x^2 \\
+            0&=12x^2-80x+100\\
+            &\ldots \\
+            x_1&=\tfrac53 \\
+            x_2&=5 \\
+            V''(x)&=24x-80 \\
+            V''(\tfrac53)&=-40 < 0 \\
+            V''(5)&=40 > 0
+          \end{align*}
+          Die Box hat das größte Volumen, wenn an allen Seiten \(\tfrac53\approx1,67\,\text{cm}\) abgeschnitten werden, nämlich ca. \(74\,\text{cm}^3\).
+        </li>
+      </ul>
+    </section>
 
-      <!-- <section>
+    <!-- <section>
             <div class="videos">
                 <iframe width="360" height="202" src="https://www.youtube.com/embed/7HLIxsrAMKQ"
                     title="Wendepunkte bestimmen" frameborder="0" allow="web-share" allowfullscreen></iframe>
 
             </div>
         </section> -->
-      <section class="aufgaben" id="aufgaben">
-        <h3>Aufgaben zu Extremalproblemen</h3>
-        <ol class="custom-marker point-after decimal">
-          <li>Seite 170 Übung 1 <a href="#a1">Lösungen</a> </li>
-          <li>Seite 170 Übung 2 <a href="#a2">Lösungen</a> </li>
-          <li>Seite 170 Übung 3 <a href="#a3">Lösungen</a> </li>
-          <li>Seite 171 Übung 4 <a href="#a4">Lösungen</a> </li>
-        </ol>
+    <section class="aufgaben" id="aufgaben">
+      <h3>Aufgaben zu Extremalproblemen</h3>
+      <ol class="custom-marker point-after decimal">
+        <li>Seite 170 Übung 1 <a href="#a1">Lösungen</a> </li>
+        <li>Seite 170 Übung 2 <a href="#a2">Lösungen</a> </li>
+        <li>Seite 170 Übung 3 <a href="#a3">Lösungen</a> </li>
+        <li>Seite 171 Übung 4 <a href="#a4">Lösungen</a> </li>
+      </ol>
+      Weitere Aufgabe und Lösungen gibt es <a href="https://dk4ek.de/dokuwiki/lib/exe/fetch.php/extrem.pdf" target="_blank">hier</a> (externes PDF von Wolfgang Kippels).
+    </section>
 
-      </section>
+    <section class="loesungen">
+      <h3>Lösungen zu Extremalproblemen</h3>
 
-      <section class="loesungen">
-        <h3>Lösungen zu Extremalproblemen</h3>
+      <details id="a1">
+        <summary>Zahlenrätsel</summary>
+        <ul class=" more-spacing">
+          <li>Zielgröße: Produkt \(P\) der beiden Zahlen (maximieren)</li>
+          <li>Hauptbedingung: Das Produkt \(P(a,b)=a\cdot b^2\)</li>
+          <li>Nebenbedingung: Die Summe: \(a+b=60\)</li>
+          <li>Zielfunktion:
+            <ul>
+              <li>Nebenbedingung nach \(a\) umstellen: \(a=60-b\)</li>
+              <li>Nebenbedingung in Hauptbedingung einsetzen: \(P(b)=(60-b)\cdot b^2\)</li>
+              <li>Zu Zielfunktion zusammenfassen: \(P(b)=60b^2-b^3\)</li>
+            </ul>
+          </li>
+          <li>Optimum ermitteln:
+            <ul>
+              <li>1. Ableitung: \(P'(b)=120b-3b^2=0\)</li>
+              <li>Lösungen: \(b_1=0, b_2=40\)</li>
+              <li>2. Ableitung: \(P''(b)=120-6b\)
+                <ul>
+                  <li>\(P''(0)=120\): Minimum</li>
+                  <li>\(P''(40)=-120\): Maximum</li>
+                </ul>
+              </li>
+              <li>Anderen Summand ermitteln: \(a=20\)</li>
+            </ul>
+          </li>
+          <li>Antwort: Das Produkt wird maximal, wenn der erste Summand 20 und der zweite Summand 40 ist.</li>
+        </ul>
 
-        <details id="a1">
-          <summary>Zahlenrätsel</summary>
-          <ul class=" more-spacing">
-            <li>Zielgröße: Produkt \(P\) der beiden Zahlen (maximieren)</li>
-            <li>Hauptbedingung: Das Produkt \(P(a,b)=a\cdot b^2\)</li>
-            <li>Nebenbedingung: Die Summe: \(a+b=60\)</li>
-            <li>Zielfunktion:
-              <ul>
-                <li>Nebenbedingung nach \(a\) umstellen: \(a=60-b\)</li>
-                <li>Nebenbedingung in Hauptbedingung einsetzen: \(P(b)=(60-b)\cdot b^2\)</li>
-                <li>Zu Zielfunktion zusammenfassen: \(P(b)=60b^2-b^3\)</li>
-              </ul>
-            </li>
-            <li>Optimum ermitteln:
-              <ul>
-                <li>1. Ableitung: \(P'(b)=120b-3b^2=0\)</li>
-                <li>Lösungen: \(b_1=0, b_2=40\)</li>
-                <li>2. Ableitung: \(P''(b)=120-6b\)
-                  <ul>
-                    <li>\(P''(0)=120\): Minimum</li>
-                    <li>\(P''(40)=-120\): Maximum</li>
-                  </ul>
-                </li>
-                <li>Anderen Summand ermitteln: \(a=20\)</li>
-              </ul>
-            </li>
-            <li>Antwort: Das Produkt wird maximal, wenn der erste Summand 20 und der zweite Summand 40 ist.</li>
-          </ul>
+      </details>
 
-        </details>
+      <details id="a2">
+        <summary>Rechteck unter Gerade</summary>
+        <ul class=" more-spacing">
+          <li>Zielgröße: Position des Punkte \(P\), damit Fläche \(A\) maximal wird</li>
+          <li>Hauptbedingung: Fläche des Rechtecks \(A(x,y)=x\cdot y\)</li>
+          <li>Nebenbedingung: Punkt auf Gerade: \(y=3-\frac x2\)</li>
+          <li>Zielfunktion:
+            <ul>
+              <li>Nebenbedingung ist bereits nach \(y\) umgestellt: \(y=3-\frac x2\)</li>
+              <li>Nebenbedingung in Hauptbedingung einsetzen: \(A(x)=x\cdot (3-\frac x2)\)</li>
+              <li>Zu Zielfunktion zusammenfassen: \(A(x)=3x-\frac{x^2}{2}\)</li>
+            </ul>
+          </li>
+          <li>Optimum ermitteln:
+            <ul>
+              <li>1. Ableitung: \(A'(x)=3-x=0\)</li>
+              <li>Lösung: \(x=3\)</li>
+              <li>2. Ableitung: \(A''(x)=-1\)
+                <ul>
+                  <li>\(A''(3)=-1\): Maximum</li>
+                </ul>
+              </li>
+              <li>Andere Koordinate ermitteln: \(y=1,5\)</li>
+            </ul>
+          </li>
+          <li>Antwort: Die Koordinaten des Punktes, welcher das größte Rechteck erzeugt, lauten \(P(3\,|\,1,5)\).</li>
+        </ul>
 
-        <details id="a2">
-          <summary>Rechteck unter Gerade</summary>
-          <ul class=" more-spacing">
-            <li>Zielgröße: Position des Punkte \(P\), damit Fläche \(A\) maximal wird</li>
-            <li>Hauptbedingung: Fläche des Rechtecks \(A(x,y)=x\cdot y\)</li>
-            <li>Nebenbedingung: Punkt auf Gerade: \(y=3-\frac x2\)</li>
-            <li>Zielfunktion:
-              <ul>
-                <li>Nebenbedingung ist bereits nach \(y\) umgestellt: \(y=3-\frac x2\)</li>
-                <li>Nebenbedingung in Hauptbedingung einsetzen: \(A(x)=x\cdot (3-\frac x2)\)</li>
-                <li>Zu Zielfunktion zusammenfassen: \(A(x)=3x-\frac{x^2}{2}\)</li>
-              </ul>
-            </li>
-            <li>Optimum ermitteln:
-              <ul>
-                <li>1. Ableitung: \(A'(x)=3-x=0\)</li>
-                <li>Lösung: \(x=3\)</li>
-                <li>2. Ableitung: \(A''(x)=-1\)
-                  <ul>
-                    <li>\(A''(3)=-1\): Maximum</li>
-                  </ul>
-                </li>
-                <li>Andere Koordinate ermitteln: \(y=1,5\)</li>
-              </ul>
-            </li>
-            <li>Antwort: Die Koordinaten des Punktes, welcher das größte Rechteck erzeugt, lauten \(P(3\,|\,1,5)\).</li>
-          </ul>
+      </details>
 
-        </details>
+      <details id="a3">
+        <summary>Tunnelquerschnitt</summary>
+        <ul class=" more-spacing">
+          <li>Zielgröße: Fläche des Tunnelquerschnitts \(A\) (maximieren) </li>
+          <li>Hauptbedingung: Querschnittsfläche des Tunnels
+            \(A(r,h)=A_{\text{Rechteck}}+A_{\text{Halbkreis}}\)\(=2r\cdot h+\frac\pi2\cdot r^2\)</li>
+          <li>Nebenbedingung: Umfang (ohne Boden): \(20=u_\text{Rechteckrand}+u_\text{Halbkreis}\)\(=2h+\pi\cdot r\)
+          </li>
+          <li>Zielfunktion:
+            <ul>
+              <li>Nebenbedingung nach \(h\) umstellen: \(h=10-\frac\pi2\cdot r\)</li>
+              <li>Nebenbedingung in Hauptbedingung einsetzen: \(A(r)=2\cdot (10-\frac\pi2\cdot r)\cdot r+\frac\pi2\cdot
+                r^2\)</li>
+              <li>Zu Zielfunktion zusammenfassen: \(A(r)=20r-\frac\pi2\cdot r^2\)</li>
+            </ul>
+          </li>
+          <li>Optimum ermitteln:
+            <ul>
+              <li>1. Ableitung: \(A'(r)=20-\pi\cdot r=0\)</li>
+              <li>Lösung: \(r=\frac{20}{\pi}\approx6,37\)</li>
+              <li>2. Ableitung: \(A''(r)=-\pi\)
+                <ul>
+                  <li>\(A''(\frac{20}{\pi})=-\frac\pi2\): Maximum</li>
+                </ul>
+              </li>
+              <li>Höhe ermitteln: \(h=5\)</li>
+              <li>Querschnittsfläche: \(A\approx47,75\)</li>
+            </ul>
+          </li>
+          <li>Antwort: Der Tunnel kann eine maximale Querschnittsfläche von \(47,75\,\text m^2\) haben.</li>
+          <li>Nimmt man den Boden beim Umfang mit dazu, erhält man eine maximale Fläche von ca. \(28\,\text m^2\).</li>
+        </ul>
 
-        <details id="a3">
-          <summary>Tunnelquerschnitt</summary>
-          <ul class=" more-spacing">
-            <li>Zielgröße: Fläche des Tunnelquerschnitts \(A\) (maximieren) </li>
-            <li>Hauptbedingung: Querschnittsfläche des Tunnels \(A(r,h)=A_{\text{Rechteck}}+A_{\text{Halbkreis}}\)\(=2r\cdot h+\frac\pi2\cdot r^2\)</li>
-            <li>Nebenbedingung: Umfang (ohne Boden): \(20=u_\text{Rechteckrand}+u_\text{Halbkreis}\)\(=2h+\pi\cdot r\)</li>
-            <li>Zielfunktion:
-              <ul>
-                <li>Nebenbedingung nach \(h\) umstellen: \(h=10-\frac\pi2\cdot r\)</li>
-                <li>Nebenbedingung in Hauptbedingung einsetzen: \(A(r)=2\cdot (10-\frac\pi2\cdot r)\cdot r+\frac\pi2\cdot r^2\)</li>
-                <li>Zu Zielfunktion zusammenfassen: \(A(r)=20r-\frac\pi2\cdot r^2\)</li>
-              </ul>
-            </li>
-            <li>Optimum ermitteln:
-              <ul>
-                <li>1. Ableitung: \(A'(r)=20-\pi\cdot r=0\)</li>
-                <li>Lösung: \(r=\frac{20}{\pi}\approx6,37\)</li>
-                <li>2. Ableitung: \(A''(r)=-\pi\)
-                  <ul>
-                    <li>\(A''(\frac{20}{\pi})=-\frac\pi2\): Maximum</li>
-                  </ul>
-                </li>
-                <li>Höhe ermitteln: \(h=5\)</li>
-                <li>Querschnittsfläche: \(A\approx47,75\)</li>
-              </ul>
-            </li>
-            <li>Antwort: Der Tunnel kann eine maximale Querschnittsfläche von \(47,75\,\text m^2\) haben.</li>
-            <li>Nimmt man den Boden beim Umfang mit dazu, erhält man eine maximale Fläche von ca. \(28\,\text m^2\).</li>
-          </ul>
+      </details>
 
-        </details>
+      <details id="a4">
+        <summary>Flughafenfeuerwehr</summary>
+        <ul class=" more-spacing">
+          <li>Zielgröße: Punkt \(P\) bei dem die Fläche des Dreiecks \(A\) maximal wird </li>
+          <li>Hauptbedingung: Fläche des Dreiecks \(A(x,y)=\tfrac12\cdot(12-x)\cdot (5-y)\)</li>
+          <li>Nebenbedingung: Punkt auf Grapg: \(y=\tfrac{1}{12}x^2-x+5\)</li>
+          <li>Zielfunktion:
+            <ul>
+              <li>Nebenbedingung ist bereits nach \(y\) umgestellt: \(y=\tfrac{1}{12}x^2-x+5\)</li>
+              <li>Nebenbedingung in Hauptbedingung einsetzen: \(A(x)=\tfrac12\cdot(12-x)\cdot
+                \left(5-\left(\tfrac{1}{12}x^2-x+5\right)\right)\)</li>
+              <li>Zu Zielfunktion zusammenfassen: \(A(x)=\tfrac{1}{24}x^3-x^2+6x\)</li>
+            </ul>
+          </li>
+          <li>Optimum ermitteln:
+            <ul>
+              <li>1. Ableitung: \(A'(x)=\tfrac18x^2-2x+6=0\)</li>
+              <li>Lösungen: \(x_1=4, x_2=12\)</li>
+              <li>2. Ableitung: \(A''(x)=\tfrac14x-2\)
+                <ul>
+                  <li>\(A''(4)=-1\): Maximum</li>
+                  <li>\(A''(12)=1\): Minimum</li>
+                </ul>
+              </li>
+              <li>Andere Koordinate ermitteln: \(y=\tfrac73\)</li>
+            </ul>
+          </li>
+          <li>Antwort: Im Punkt \(P(4\,|\,\tfrac73)\) wird die Fläche der Feuerwehr am größten.</li>
+        </ul>
 
-        <details id="a4">
-          <summary>Flughafenfeuerwehr</summary>
-          <ul class=" more-spacing">
-            <li>Zielgröße: Punkt \(P\) bei dem die Fläche des Dreiecks \(A\) maximal wird </li>
-            <li>Hauptbedingung: Fläche des Dreiecks \(A(x,y)=\tfrac12\cdot(12-x)\cdot (5-y)\)</li>
-            <li>Nebenbedingung: Punkt auf Grapg: \(y=\tfrac{1}{12}x^2-x+5\)</li>
-            <li>Zielfunktion:
-              <ul>
-                <li>Nebenbedingung ist bereits nach \(y\) umgestellt: \(y=\tfrac{1}{12}x^2-x+5\)</li>
-                <li>Nebenbedingung in Hauptbedingung einsetzen: \(A(x)=\tfrac12\cdot(12-x)\cdot \left(5-\left(\tfrac{1}{12}x^2-x+5\right)\right)\)</li>
-                <li>Zu Zielfunktion zusammenfassen: \(A(x)=\tfrac{1}{24}x^3-x^2+6x\)</li>
-              </ul>
-            </li>
-            <li>Optimum ermitteln:
-              <ul>
-                <li>1. Ableitung: \(A'(x)=\tfrac18x^2-2x+6=0\)</li>
-                <li>Lösungen: \(x_1=4, x_2=12\)</li>
-                <li>2. Ableitung: \(A''(x)=\tfrac14x-2\)
-                  <ul>
-                    <li>\(A''(4)=-1\): Maximum</li>
-                    <li>\(A''(12)=1\): Minimum</li>
-                  </ul>
-                </li>
-                <li>Andere Koordinate ermitteln: \(y=\tfrac73\)</li>
-              </ul>
-            </li>
-            <li>Antwort: Im Punkt \(P(4\,|\,\tfrac73)\) wird die Fläche der Feuerwehr am größten.</li>
-          </ul>
+      </details>
 
-        </details>
 
-        
-      </section>
+    </section>
 
-      <section id="meme">
-        <div class="images">
-          <img src="/img/nolearn_meme.jpg" style="object-fit: scale-down; max-width: 300px" />
-        </div>
-        <div class="centered">
-          <a href="https://www.facebook.com/memeextremeofficial/posts/1093516385475157/" target="_blank" rel="noopener noreferrer">
-            <h6>Original von Meme Extreme </h6>
-          </a>
-        </div>
-      </section>
+    <section id="meme">
+      <div class="images">
+        <img src="/img/nolearn_meme.jpg" style="object-fit: scale-down; max-width: 300px" />
+      </div>
+      <div class="centered">
+        <a href="https://www.facebook.com/memeextremeofficial/posts/1093516385475157/" target="_blank"
+          rel="noopener noreferrer">
+          <h6>Original von Meme Extreme </h6>
+        </a>
+      </div>
+    </section>
   </main>
   <footer>
     <a href="/misc/impressum.html">Impressum</a>
     <div class="lastModified" align="center">
       Zuletzt geändert:<br />
-      10. Dezember 2024
+      18. Dezember 2024
       <!-- <span id="lastModifiedDate"></span> -->
     </div>
     <a href="/misc/datenschutz.html">Datenschutz</a>
