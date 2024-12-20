@@ -1,0 +1,41 @@
+/* Flugzeug-Container */
+.airplane-container {
+    position: fixed;
+    top: 10%; /* Höhe des Fluges */
+    right: -300px; /* Startposition außerhalb des Bildschirms */
+    animation: fly-across 8s linear infinite; /* Flugbewegung über den Bildschirm */
+    /* display: flex; Halte Flugzeug und Banner in einer Zeile */
+    /* align-items: center; Vertikale Ausrichtung */
+}
+
+/* Flugzeug */
+.airplane {
+    z-index: 2; /* Flugzeug im Vordergrund */
+    animation: sine-wave 13s ease-in-out infinite; /* Sinusbewegung */
+    height: 70px;
+}
+
+/* Flugzeugbewegung von rechts nach links */
+@keyframes fly-across {
+    from {
+        right: -300px; /* Startposition außerhalb des rechten Randes */
+    }
+    to {
+        right: 100vw; /* Bewegt sich komplett aus dem linken Rand */
+    }
+}
+
+/* Sinusförmige Bewegung für das Flugzeug */
+@keyframes sine-wave {
+    0%, 100% {
+        transform: translateY(0); /* Ausgangsposition */
+    }
+    25% {
+        transform: translateY(-20px); /* Aufwärtsbewegung */
+    }
+    75% {
+        transform: translateY(70px); /* Abwärtsbewegung */
+    }
+}
+
+

@@ -1,42 +1,46 @@
 <!DOCTYPE html>
+
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" initial-scale=1.0/>
-    <meta name="author" content="Sebastian Hitziger"/>
-    <meta name="robot" content="noindex"/>
+    <meta name="viewport" content="width=device-width" initial-scale=1.0 />
+    <meta name="author" content="Sebastian Hitziger" />
+    <meta name="robot" content="noindex" />
     <title> Hr. Hitzigers Unterricht </title>
     <link rel="stylesheet" type="text/css" href="/css/colors.css" />
     <link rel="stylesheet" type="text/css" href="/css/grids.css" />
     <link rel="stylesheet" type="text/css" href="/css/navbar.css" />
     <link rel="stylesheet" type="text/css" href="/css/styles.css" />
-    <link rel="stylesheet" type="text/css" href="/css/timeline.css" />  
+    <link rel="stylesheet" type="text/css" href="/css/timeline.css" />
     <link rel="stylesheet" type="text/css" href="/css/book.css" />
-    <link rel="stylesheet" type="text/css" href="/css/banner.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/banner.css" />
+    <link rel="stylesheet" type="text/css" href="/css/airplane.css" />
+
 </head>
+
 <body>
     <header>
         <div class="nav">
             <input type="checkbox" id="nav-check">
             <div class="nav-header">
-              <div class="nav-title">
-                <a href="/">Hr. Hitzigers Unterricht</a>
-              </div>       
+                <div class="nav-title">
+                    <a href="/">Hr. Hitzigers Unterricht</a>
+                </div>
             </div>
             <div class="nav-btn">
-              <label for="nav-check">
-                <span></span>
-                <span></span>
-                <span></span>
-              </label>
+                <label for="nav-check">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
             </div>
-            
+
             <div class="nav-links">
-              <a href="/content/math/">Mathematik</a>
-              <a href="/content/info/">Informatik</a>
-              <a href="/content/phy/">Physik</a>
+                <a href="/content/math/">Mathematik</a>
+                <a href="/content/info/">Informatik</a>
+                <a href="/content/phy/">Physik</a>
             </div>
         </div>
-      </header>
+    </header>
 
     <aside>
         <div class="timeline-header" onclick="toggleTimelineVisibility()">
@@ -68,30 +72,99 @@
                         Klasse 11: <a href="/content/math/11/fkt/">Funktionen allgemein</a>
                     </div>
                 </li>
-                
-                <!-- <li class="info">
-                    <div class="date"> 1. September</div>
-                    <div class="title">
-                        Klasse 11: <a href="/content/math/11/fkt/">Funktionen allgemein</a>
-                    </div>
-                </li>
-                <li class="physik">
-                    <div class="date"> 1. September</div>
-                    <div class="title">
-                        Klasse 11: <a href="/content/math/11/fkt/">Funktionen allgemein</a>
-                    </div>
-                </li> -->
             </ul>
-            </div>  
+        </div>
     </aside>
     <main>
         <marquee style="margin: 10px;">
             <div class="text">
-                <span class="sdt">Spruch des Tages:</span> 
-                <a href="/misc/sprueche.html">Das sind dann neun Zweitel.</a> 
+                <span class="sdt">Spruch des Tages:</span>
+                <a href="/misc/sprueche.html">Das sind dann neun Zweitel.</a>
                 <span class="autor">&ndash; T.S. (12)</span>
             </div>
         </marquee>
+        <section class="flugzeug">
+            <div class="airplane-container">
+                <svg class="airplane" version="1.0" viewBox="0 0 508.5 265" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="m224.1 86c0.6-1.2 0.1-2.8-1.2-3.5s-2.9-0.3-3.5 1c-0.5 1-0.2 2.3 0.6 3.1l-7.4 14.1 1.3 0.7 7.5-14.1c1.1 0.1 2.2-0.3 2.7-1.3z"
+                        fill="#514040" />
+                    <path
+                        d="m277.2 85.5c0-10.1-5.5-19.6-12.1-18.3-4 0.8-8.9 3.5-8.9 13.7 0 0-0.7 23 5.8 23h3.1c6.7-0.1 12.1-8.3 12.1-18.4z"
+                        fill="#514040" />
+                    <rect transform="matrix(.9278 -.3732 .3732 .9278 -64.101 77.32)" x="163.4" y="170.7" width="8.5"
+                        height="67" fill="#7F7F7F" />
+                    <path
+                        d="m454.2 27.7c-21.1 0-40.1 21.9-42.6 47.6l-136.6-0.8v7.2c0 5.2-4 9.4-9.1 9.9l-42.6 0.6c-5.6 0-10.1-4.5-10.1-10l-0.5-6.9-119-0.6v117.3s84.8-5.6 220.6-39.9c168.1-42.5 176.8-54 178.1-91 0.7-18.4-17.1-33.4-38.2-33.4z"
+                        fill="#7C0000" />
+                    <path
+                        d="m42 121.7c0-4.8-9.4-8.7-21-8.7-1.8 0-3.6 0.1-5.3 0.3 1.9-8.7 20.2-93.7-0.2-94.9-20.8-1.3-2 86.4-0.2 95-8.9 1-15.4 4.4-15.4 8.3 0 4 6.5 7.3 15.4 8.3-1.9 8.6-20.6 96.2 0.2 95 20.4-1.2 2.1-86.3 0.2-94.9 1.7 0.2 3.4 0.3 5.3 0.3 11.6 0 21-3.9 21-8.7z"
+                        fill="#474242" />
+                    <path
+                        d="m18.7 121.7c0 11.2 9.1 20.3 20.3 20.3h15c11.2 0 20.3-9.1 20.3-20.3s-9.1-20.3-20.3-20.3h-15c-11.2 0-20.3 9.1-20.3 20.3z"
+                        fill="#C10000" />
+                    <path d="M93.7,75H72.8C51.9,75,49,72.9,49,93.8v75.3c0,20.9,1.9,22.8,22.8,22.8h21.8V75z"
+                        fill="#A39F9F" />
+                    <g fill="#595959">
+                        <path
+                            d="m90.3 83.2c0 2.3-1.9 4.2-4.2 4.2s-4.2-1.9-4.2-4.2 1.9-4.2 4.2-4.2c2.4 0 4.2 1.9 4.2 4.2z" />
+                        <path
+                            d="m90.3 94.2c0 2.3-1.9 4.2-4.2 4.2s-4.2-1.9-4.2-4.2 1.9-4.2 4.2-4.2c2.4 0 4.2 1.9 4.2 4.2z" />
+                        <path
+                            d="m90.3 105.2c0 2.3-1.9 4.2-4.2 4.2s-4.2-1.9-4.2-4.2 1.9-4.2 4.2-4.2c2.4 0 4.2 1.9 4.2 4.2z" />
+                        <path
+                            d="m90.3 116.2c0 2.3-1.9 4.2-4.2 4.2s-4.2-1.9-4.2-4.2 1.9-4.2 4.2-4.2c2.4 0 4.2 1.9 4.2 4.2z" />
+                        <path
+                            d="m90.3 127.2c0 2.3-1.9 4.2-4.2 4.2s-4.2-1.9-4.2-4.2 1.9-4.2 4.2-4.2c2.4 0 4.2 1.9 4.2 4.2z" />
+                        <path
+                            d="m90.3 139.2c0 2.3-1.9 4.2-4.2 4.2s-4.2-1.9-4.2-4.2 1.9-4.2 4.2-4.2c2.4 0 4.2 1.9 4.2 4.2z" />
+                        <path
+                            d="m90.3 150.2c0 2.3-1.9 4.2-4.2 4.2s-4.2-1.9-4.2-4.2 1.9-4.2 4.2-4.2c2.4 0 4.2 1.9 4.2 4.2z" />
+                        <path
+                            d="m90.3 161.2c0 2.3-1.9 4.2-4.2 4.2s-4.2-1.9-4.2-4.2 1.9-4.2 4.2-4.2c2.4 0 4.2 1.9 4.2 4.2z" />
+                        <path
+                            d="m90.3 172.2c0 2.3-1.9 4.2-4.2 4.2s-4.2-1.9-4.2-4.2 1.9-4.2 4.2-4.2c2.4 0 4.2 1.9 4.2 4.2z" />
+                        <path
+                            d="m90.3 183.2c0 2.3-1.9 4.2-4.2 4.2s-4.2-1.9-4.2-4.2 1.9-4.2 4.2-4.2c2.4 0 4.2 1.9 4.2 4.2z" />
+                    </g>
+                    <g fill="#C4C4C4">
+                        <path
+                            d="m342.3 82.2c0 2.3-1.9 4.2-4.2 4.2s-4.2-1.9-4.2-4.2 1.9-4.2 4.2-4.2c2.4 0 4.2 1.9 4.2 4.2z" />
+                        <path
+                            d="m342.3 93.2c0 2.3-1.9 4.2-4.2 4.2s-4.2-1.9-4.2-4.2 1.9-4.2 4.2-4.2c2.4 0 4.2 1.9 4.2 4.2z" />
+                        <path
+                            d="m342.3 104.2c0 2.3-1.9 4.2-4.2 4.2s-4.2-1.9-4.2-4.2 1.9-4.2 4.2-4.2c2.4 0 4.2 1.9 4.2 4.2z" />
+                        <path
+                            d="m342.3 115.2c0 2.3-1.9 4.2-4.2 4.2s-4.2-1.9-4.2-4.2 1.9-4.2 4.2-4.2c2.4 0 4.2 1.9 4.2 4.2z" />
+                        <path
+                            d="m342.3 126.2c0 2.3-1.9 4.2-4.2 4.2s-4.2-1.9-4.2-4.2 1.9-4.2 4.2-4.2c2.4 0 4.2 1.9 4.2 4.2z" />
+                        <path
+                            d="m342.3 138.2c0 2.3-1.9 4.2-4.2 4.2s-4.2-1.9-4.2-4.2 1.9-4.2 4.2-4.2c2.4 0 4.2 1.9 4.2 4.2z" />
+                    </g>
+                    <path
+                        d="m213 75.1c2.5-3.9 13.2-10 2.5-28-23.4-4.2-43.5 13.6-43.5 27.7 0 0 5.8 1.3 11.5 5.6 11.5 8.8 29.5 2.2 29.5 2.3v-7.6z"
+                        fill="#B5B4B4" />
+                    <path d="m508.2 98.7c-10.6 1.7-35.4-0.7-60.2-0.7s-42 2.4-42-2.3 0.4-8.7 25.3-8.7 81.6 11 76.9 11.7z"
+                        fill="#C60000" />
+                    <rect transform="matrix(.9278 -.3732 .3732 .9278 -17.552 48.735)" x="112.9" y="11.4" width="8.5"
+                        height="116.6" fill="#7F7F7F" />
+                    <rect transform="matrix(.9278 -.3732 .3732 .9278 -12.655 71.519)" x="174.2" y="6.5" width="8.5"
+                        height="123.8" fill="#7F7F7F" />
+                    <path
+                        d="m288.7 138.8c-19.2 3-64-1.2-109-1.2s-76 4.3-76-4.2 0.7-15.8 45.8-15.8c45-0.1 147.7 19.8 139.2 21.2z"
+                        fill="#C60000" />
+                    <path
+                        d="m239.5 21.2c-19.2 3-64-1.2-109-1.2s-76 4.3-76-4.2 0.7-15.8 45.7-15.8c45.1 0 147.8 19.9 139.3 21.2z"
+                        fill="#C60000" />
+                    <circle cx="177" cy="240.2" r="24.8" />
+                    <circle cx="177" cy="240.2" r="15.5" fill="#7F7F7F" />
+                    <path d="m232.2 243.3c-9.9 4.9-32.9-2.1-56.1-2.1s-39.1 7.1-39.1-7 0.4-26 23.6-26 76 32.9 71.6 35.1z"
+                        fill="#C60000" />
+                    <text transform="matrix(1.189 0 0 1 439.08 74.202)" fill="#AAAAAA" font-family="'StencilStd'"
+                        font-size="38.668px">H</text>
+                </svg>
+            </div>
+        </section>
         <section class="teaser">
             <div class="book">
                 <span class="page turn"></span>
@@ -108,56 +181,56 @@
         <section>
             <h2>Was genau soll hier passieren?</h2>
             <p>
-                Mithilfe dieser Übersichten und Anleitungen kannst du dir die 
-                verschiedenen Themen selbstständig beibringen. Selbstständig 
+                Mithilfe dieser Übersichten und Anleitungen kannst du dir die
+                verschiedenen Themen selbstständig beibringen. Selbstständig
                 heißt SELBST und STÄNDIG.
             </p>
         </section>
         <section>
             <h3>Das Konzept</h3>
             <p>
-                Der Unterricht im klassischen Sinne hört hier auf. Du kannst dein 
-                eigenes Tempo bestimmen und dir deine eigenen Partner suchen. 
-                Sollte die Lehrkraft mal nicht da sein, hast du nun immer das Material, 
-                um selbstständig weiter zu arbeiten. 
+                Der Unterricht im klassischen Sinne hört hier auf. Du kannst dein
+                eigenes Tempo bestimmen und dir deine eigenen Partner suchen.
+                Sollte die Lehrkraft mal nicht da sein, hast du nun immer das Material,
+                um selbstständig weiter zu arbeiten.
             </p>
             <p>
-                Die Lehrkraft soll dir dabei als Berater zur Seite stehen. 
-                Wenn du Fragen hast oder auf Probleme stößt, die du weder allein 
-                noch im Team lösen kannst, dann frage nach! Für jedes Kapitel 
-                dieser Reihe ist angegeben, wie du vorgehen solltest. Die 
-                Vorüberlegungen sollen dir helfen Wissen zu reaktivieren oder 
-                Wissenslücken zu schließen. Wenn du dich an die vorgegebenen 
+                Die Lehrkraft soll dir dabei als Berater zur Seite stehen.
+                Wenn du Fragen hast oder auf Probleme stößt, die du weder allein
+                noch im Team lösen kannst, dann frage nach! Für jedes Kapitel
+                dieser Reihe ist angegeben, wie du vorgehen solltest. Die
+                Vorüberlegungen sollen dir helfen Wissen zu reaktivieren oder
+                Wissenslücken zu schließen. Wenn du dich an die vorgegebenen
                 Vorgehensweisen hälst, sollte es keine Probleme geben.
             </p>
             <p>
-                Heißt das jetzt, dass die Lehrkraft gar nichts mehr machen muss? Nein. 
-                Die Lehrkraft wird dir weiterhin mit Rat und Tat zur Seite stehen. 
-                Allerdings ist alles bereits so vorbereitet, dass du dich 
-                intensiv und selbstständig mit einem Thema beschäftigen kannst. Dadurch 
-                bleibt es besser in deinem Gedächtnis. Du lernst effektiver die Inhalte, 
-                verbesserst dein eigenes Zeitmanagement und analysieren deine eigenen 
+                Heißt das jetzt, dass die Lehrkraft gar nichts mehr machen muss? Nein.
+                Die Lehrkraft wird dir weiterhin mit Rat und Tat zur Seite stehen.
+                Allerdings ist alles bereits so vorbereitet, dass du dich
+                intensiv und selbstständig mit einem Thema beschäftigen kannst. Dadurch
+                bleibt es besser in deinem Gedächtnis. Du lernst effektiver die Inhalte,
+                verbesserst dein eigenes Zeitmanagement und analysieren deine eigenen
                 Fähig- und Fertigkeiten.
             </p>
             <p>
-                Mehr Informationen zum Konzept &bdquo;Flipped Classroom&ldquo; 
-                gibt's 
-                <a href="https://de.wikipedia.org/wiki/Umgedrehter_Unterricht" 
-                    target="_blank" rel="noopener noreferrer">
+                Mehr Informationen zum Konzept &bdquo;Flipped Classroom&ldquo;
+                gibt's
+                <a href="https://de.wikipedia.org/wiki/Umgedrehter_Unterricht" target="_blank"
+                    rel="noopener noreferrer">
                     hier</a>.
             </p>
         </section>
     </main>
     <footer>
-          <a href="/misc/impressum.html">Impressum</a>
-          <div class="lastModified" align="center"> 
-            Zuletzt geändert:<br> 
+        <a href="/misc/impressum.html">Impressum</a>
+        <div class="lastModified" align="center">
+            Zuletzt geändert:<br>
             23. Juli 2023
             <!-- <span id="lastModifiedDate"></span> -->
         </div>
-          <a href="/misc/datenschutz.html">Datenschutz</a>
+        <a href="/misc/datenschutz.html">Datenschutz</a>
     </footer>
-    
-      <!-- <script src="/js/math/lastModified.js"></script> -->
-  <script src="/js/toggleTimelineVisibility.js"></script>
+
+    <!-- <script src="/js/math/lastModified.js"></script> -->
+    <script src="/js/toggleTimelineVisibility.js"></script>
 </body>
