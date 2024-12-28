@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" initial-scale="1.0" />
+  <meta name="author" content="Sebastian Hitziger" />
+  <meta name="robot" content="noindex" />
+  <title>HITZ | Fkt-Eigensch. | Rekonstruktion </title>
+  <link rel="stylesheet" type="text/css" href="/css/colors.css" />
+  <link rel="stylesheet" type="text/css" href="/css/gridNoTimeline.css" />
+  <link rel="stylesheet" type="text/css" href="/css/navbar.css" />
+  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="/css/courses.css" />
+  <link rel="stylesheet" type="text/css" href="/css/box.css" />
+  <script type="text/javascript" src="jquery-3.3.1.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+
+
+<body>
+  <header>
+    <div class="nav">
+      <input type="checkbox" id="nav-check" />
+      <div class="nav-header">
+        <div class="nav-title">
+          <a href="/">Hr. Hitzigers Unterricht</a>
+        </div>
+      </div>
+      <div class="nav-btn">
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+
+      <div class="nav-links">
+        <a href="/content/math/">Mathematik</a>
+        <a href="/content/math/12/">Klasse 12</a>
+        <a href="/content/math/12/ana1/">Analysis I</a>
+        <a href="/content/math/12/ana1/ableit/">Differentialrechnung</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section>
+      <h2>Rekonstruktion von Funktionen</h2>
+      <div class="ziele">
+        <p>
+          Nachfolgend soll gezeigt werden, wie man Funktionen anhand von verschiedenen Eigenschaften rekonstruiert.
+        </p>
+        <p>
+          <a href="#aufgaben">Direkt zu den Aufgaben</a>
+        </p>
+      </div>
+
+
+
+      <div class="theorie">
+
+        <div class="definition">
+          <h4>Rekonstruktion</h4>
+          <p>
+            Das Rekonstruieren von Funktionen wird auch Steckbriefaufgabe genannt.
+          </p>
+        </div>
+        <div class="course-container" style="gap: 10px; flex-grow: 1; margin-bottom: 20px;">
+          <div style="flex: 1; min-width: 250px;">
+            <h4>Folgende Eigenschaften sind bekannt:</h4>
+            <p>
+            <ul class="more-spacing">
+              <li>Quadratische Funktion</li>
+              <li>Nullstelle bei \(\color{magenta}x=4\)</li>
+              <li>Minimum bei \(\color{orange}x=2\)</li>
+              <li>Verläuft durch \(\color{green}P(3\,|\,-1,5)\)</li>
+            </ul>
+            Wie lautet die Gleichung der unbekannten Funktion?
+            </p>
+          </div>
+          <div style="flex: 1; min-width: 250px;">
+            <div class="centered" style="max-height: 200px;">
+              <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'
+                viewBox='0 -170.876 171.272 170.876'>
+                <g id='page1'>
+                  <g transform='matrix(1 0 0 -1 0 0)'>
+                    <path d='M.5977 71.265626H166.016' stroke='#a8a7a7' fill='none' stroke-width='.79701' />
+                    <path
+                      d='M170.68012 71.265626C169.29731 71.523438 167.05122 72.30078 165.49653 73.20703V69.32422C167.05122 70.23047 169.29731 71.007813 170.68012 71.265626'
+                      fill='#a8a7a7' />
+                    <path d='M28.945312 .3984V165.8164' stroke='#a8a7a7' fill='none' stroke-width='.79701'
+                      stroke-miterlimit='10' />
+                    <path
+                      d='M28.945312 170.48012C28.683594 169.09731 27.90625 166.85122 27 165.29653H30.88672C29.98047 166.85122 29.203125 169.09731 28.945312 170.48012'
+                      fill='#a8a7a7' />
+                    <path
+                      d='M.5977 142.1328C.5977 142.1328 1.4219 139.668 1.7383 138.7305S2.5625 136.3008 2.8789 135.375S3.7031 132.9766 4.0234 132.0664C4.3398 131.1523 4.8477 129.7031 5.1641 128.8008C5.4805 127.9023 5.9883 126.4727 6.3047 125.5859C6.6211 124.6992 7.1289 123.2852 7.4453 122.4141C7.7617 121.5391 8.2695 120.1484 8.5859 119.2852C8.9023 118.4258 9.4141 117.0547 9.7305 116.207C10.0469 115.3594 10.5547 114.0078 10.8711 113.1719C11.1875 112.3398 11.6953 111.0078 12.0117 110.1875C12.3281 109.3633 12.8359 108.0547 13.1523 107.2461C13.4687 106.4336 13.9766 105.1445 14.293 104.3477C14.6133 103.5508 15.1211 102.2813 15.4375 101.5C15.7539 100.7148 16.2617 99.4648 16.5781 98.6953C16.8945 97.9219 17.4023 96.6953 17.7187 95.9375C18.0352 95.1797 18.543 93.9727 18.8594 93.2266C19.17578 92.4805 19.68359 91.293 20.00391 90.5586C20.32031 89.8242 20.82812 88.6602 21.14453 87.9375C21.46094 87.2188 21.96875 86.0742 22.28516 85.3633C22.60156 84.6563 23.10937 83.5313 23.42578 82.8359C23.74219 82.1406 24.25 81.03516 24.56641 80.35547C24.88672 79.67188 25.39453 78.58984 25.71094 77.91797C26.02734 77.25 26.53516 76.18359 26.85156 75.52734C27.16797 74.87109 27.67578 73.82813 27.992187 73.18359C28.308594 72.53906 28.816406 71.515626 29.132812 70.886719C29.449219 70.25391 29.95703 69.25391 30.27344 68.63281C30.59375 68.01563 31.10156 67.03125 31.41797 66.42578C31.73437 65.82031 32.24219 64.85938 32.55859 64.26563C32.875 63.67188 33.38281 62.73438 33.69922 62.15234C34.01562 61.57031 34.52344 60.6523 34.83984 60.082C35.15625 59.5156 35.66406 58.6172 35.98437 58.0625C36.30078 57.5078 36.80859 56.625 37.125 56.0859C37.44141 55.543 37.94922 54.6836 38.26562 54.1523C38.58203 53.625 39.0898 52.7852 39.4062 52.2695C39.7227 51.7539 40.2305 50.9336 40.5469 50.4297C40.8672 49.9258 41.375 49.1289 41.6914 48.6367C42.0078 48.1484 42.5156 47.3711 42.832 46.8906C43.1484 46.4141 43.6562 45.6563 43.9727 45.1914C44.2891 44.7266 44.7969 43.9883 45.1133 43.5352C45.4297 43.082 45.9375 42.3672 46.2578 41.9258C46.5742 41.4883 47.082 40.793 47.3984 40.3633C47.7148 39.9375 48.2227 39.2617 48.5391 38.8477C48.8555 38.4336 49.3633 37.7773 49.6797 37.375C49.9961 36.9766 50.5039 36.3398 50.8203 35.9531C51.1367 35.5625 51.6445 34.9492 51.9648 34.5742C52.2812 34.1953 52.7891 33.6016 53.1055 33.2383S53.9297 32.3047 54.2461 31.9531C54.5625 31.6016 55.0703 31.0508 55.3867 30.7109C55.7031 30.375 56.2109 29.8398 56.5273 29.5156C56.8477 29.1914 57.3555 28.6797 57.6719 28.3672S58.4961 27.5625 58.8125 27.2656C59.1289 26.9648 59.6367 26.4922 59.9531 26.207C60.2695 25.9219 60.7773 25.4688 61.0937 25.1953C61.4102 24.9219 61.918 24.4922 62.2383 24.2305C62.5547 23.9688 63.0625 23.5586 63.3789 23.3125C63.6953 23.0625 64.2031 22.6719 64.5195 22.4375S65.3437 21.832 65.6602 21.6094C65.9766 21.3867 66.4844 21.0391 66.8008 20.8281C67.1172 20.6172 67.6289 20.2891 67.9453 20.0938C68.2617 19.8945 68.7695 19.5898 69.0859 19.4023C69.4023 19.2188 69.9102 18.9336 70.2266 18.7617S71.0508 18.3203 71.3672 18.1641C71.6836 18.0039 72.1914 17.7578 72.5078 17.6094C72.8281 17.4648 73.3359 17.2383 73.6523 17.1055S74.4766 16.7656 74.793 16.6445S75.6172 16.3398 75.9336 16.2305C76.25 16.125 76.7578 15.9609 77.0742 15.8633C77.3906 15.7695 77.8984 15.625 78.2187 15.543C78.5352 15.4609 79.043 15.3359 79.3594 15.2656S80.1836 15.0938 80.5 15.0352C80.8164 14.9805 81.3242 14.8984 81.6406 14.8516C81.957 14.8086 82.4648 14.7461 82.7812 14.7148C83.0977 14.6836 83.6094 14.6406 83.9258 14.6211S84.75 14.582 85.0664 14.5781C85.3828 14.5703 85.8906 14.5703 86.207 14.5781C86.5234 14.582 87.0312 14.6055 87.3477 14.6211C87.6641 14.6406 88.1719 14.6836 88.4883 14.7148C88.8086 14.7461 89.3164 14.8086 89.6328 14.8516C89.9492 14.8984 90.457 14.9805 90.7734 15.0352C91.0898 15.0938 91.5977 15.1953 91.9141 15.2656S92.7383 15.457 93.0547 15.543C93.3711 15.625 93.8789 15.7695 94.1992 15.8633C94.5156 15.9609 95.0234 16.1211 95.3398 16.2305C95.6562 16.3398 96.1641 16.5234 96.4805 16.6445S97.3047 16.9688 97.6211 17.1055C97.9375 17.2383 98.4453 17.4648 98.7617 17.6094C99.082 17.7578 99.5898 18 99.9062 18.1602C100.2227 18.3203 100.7305 18.5859 101.0469 18.7578S101.8711 19.2188 102.1875 19.4023C102.5039 19.5859 103.0117 19.8945 103.3281 20.0938C103.6445 20.2891 104.1523 20.6172 104.4727 20.8281C104.7891 21.0391 105.2969 21.3867 105.6133 21.6094C105.9297 21.832 106.4375 22.1992 106.7539 22.4336C107.0703 22.6719 107.5781 23.0625 107.8945 23.3086C108.2109 23.5586 108.7187 23.9648 109.0352 24.2266C109.3516 24.4883 109.8633 24.918 110.1797 25.1953C110.4961 25.4688 111.0039 25.918 111.3203 26.2031C111.6367 26.4922 112.1445 26.9609 112.4609 27.2617S113.2852 28.0508 113.6016 28.3633S114.4258 29.1875 114.7422 29.5156C115.0625 29.8398 115.5703 30.3711 115.8867 30.707C116.2031 31.0469 116.7109 31.5977 117.0273 31.9492C117.3437 32.3008 117.8516 32.875 118.168 33.2383S118.9922 34.1953 119.3086 34.5703S120.1328 35.5586 120.4531 35.9492C120.7695 36.3359 121.2773 36.9727 121.5937 37.375C121.9102 37.7773 122.418 38.4297 122.7344 38.8438C123.0508 39.2578 123.5586 39.9336 123.875 40.3633C124.1914 40.7891 124.6992 41.4844 125.0156 41.9219C125.332 42.3633 125.8437 43.082 126.1602 43.5313C126.4766 43.9844 126.9844 44.7227 127.3008 45.1875S128.125 46.4102 128.4414 46.8867C128.7578 47.3672 129.266 48.1445 129.582 48.6328C129.898 49.125 130.406 49.9219 130.723 50.4258C131.043 50.9297 131.551 51.75 131.867 52.2656C132.184 52.7813 132.691 53.6211 133.008 54.1523C133.324 54.6797 133.832 55.5391 134.148 56.082C134.465 56.6211 134.973 57.5039 135.289 58.0586S136.113 59.5117 136.434 60.0781C136.75 60.6484 137.258 61.56641 137.574 62.14844C137.891 62.73047 138.398 63.66797 138.715 64.26172C139.031 64.85547 139.539 65.81641 139.855 66.42188C140.172 67.02734 140.68 68.00781 140.996 68.62891C141.316 69.24609 141.824 70.25 142.141 70.882813C142.457 71.511719 142.965 72.53516 143.281 73.17969C143.598 73.82422 144.105 74.86719 144.422 75.52344C144.738 76.17969 145.246 77.24219 145.562 77.91406C145.879 78.58203 146.387 79.66797 146.703 80.35156C147.023 81.03125 147.531 82.1367 147.848 82.832C148.164 83.5273 148.672 84.6523 148.988 85.3594C149.305 86.0664 149.812 87.2109 150.129 87.9336C150.445 88.6523 150.953 89.8203 151.27 90.5547C151.586 91.2891 152.094 92.4727 152.414 93.2188C152.73 93.9648 153.238 95.1719 153.555 95.9336C153.871 96.6914 154.379 97.918 154.695 98.6875C155.012 99.4609 155.52 100.707 155.836 101.4922C156.152 102.2773 156.66 103.543 156.977 104.3438C157.297 105.1406 157.805 106.4297 158.121 107.2383S158.945 109.3555 159.262 110.1797C159.578 111.0039 160.086 112.332 160.402 113.168C160.719 114.0039 161.227 115.3516 161.543 116.1992C161.859 117.0469 162.367 118.4219 162.687 119.2813C163.004 120.1406 163.512 121.5313 163.828 122.4063C164.145 123.2813 164.652 124.6914 164.969 125.5781C165.285 126.4648 165.793 127.8945 166.109 128.793C166.426 129.6953 166.934 131.1484 167.25 132.0586C167.566 132.9727 168.078 134.4414 168.395 135.3672C168.711 136.293 169.219 137.7852 169.535 138.7227C169.852 139.6602 170.676 142.125 170.676 142.125'
+                      stroke='#007688' fill='none' stroke-width='1.59553' stroke-miterlimit='10' />
+                    <path
+                      d='M144.457 71.265626C144.457 72.4375 143.504 73.39063 142.332 73.39063C141.156 73.39063 140.207 72.4375 140.207 71.265626C140.207 70.08984 141.156 69.14063 142.332 69.14063C143.504 69.14063 144.457 70.08984 144.457 71.265626Z'
+                      stroke='magenta' fill='magenta' stroke-width='1.5985' stroke-miterlimit='10' />
+                    <path d='M85.6367 .3984V170.4805' stroke='orange' fill='none' stroke-width='1.49701'
+                      stroke-miterlimit='10' />
+                    <path
+                      d='M116.1094 28.7461C116.1094 29.918 115.1602 30.8711 113.9844 30.8711S111.8594 29.918 111.8594 28.7461C111.8594 27.5703 112.8086 26.6172 113.9844 26.6172S116.1094 27.5703 116.1094 28.7461Z'
+                      stroke='green' fill='green' stroke-width='1.59985' stroke-miterlimit='10' />
+
+                  </g>
+                </g>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="definition">
+          <p>
+            Verschiedene Aussagen, z.B. die Funktion verläuft durch den Punkt \(P(3\,|\,7)\), können in Gleichungen
+            umgewandelt werden. Aus diesen Gleichungen entsteht dann ein lineares Gleichungssystem, welches zu lösen
+            ist.
+          </p>
+          <p>
+            Manche Eigenschaften können zu mehr als einer Gleichung führen.
+          </p>
+          <p>
+          <h5>Eigenschaften mit Punkten:</h5>
+          <ul class="more-spacing">
+            <li>Funktion geht durch Punkt \(P({\color{magenta}x}\,|\,{\color{cyan}y})\):<br>
+              \(\qquad\qquad{\color{cyan}y}=f({\color{magenta}x})\)</li>
+            <li>Funktion hat Hoch-/Tiefpunkt \(E({\color{magenta}x}\,|\,{\color{cyan}y})\):<br>
+              \(\qquad\qquad{\color{cyan}y}=f({\color{magenta}x})\)<br>
+              \(\qquad\qquad0=f'({\color{magenta}x})\)</li>
+            <li>Funktion hat Sattelpunkt \(S({\color{magenta}x}\,|\,{\color{cyan}y})\):<br>
+              \(\qquad\qquad{\color{cyan}y}=f({\color{magenta}x})\)<br>
+              \(\qquad\qquad0=f'({\color{magenta}x})\)<br>
+              \(\qquad\qquad0=f''({\color{magenta}x})\)</li>
+            <li>Funktion hat Wendepunkt \(W({\color{magenta}x}\,|\,{\color{cyan}y})\):<br>
+              \(\qquad\qquad{\color{cyan}y}=f({\color{magenta}x})\)<br>
+              \(\qquad\qquad0=f''({\color{magenta}x})\)</li>
+          </ul>
+          <h5>Eigenschaften mit Stellen:</h5>
+          <ul class="more-spacing">
+            <li>Funktion hat bei \({\color{magenta}x}\) eine Nullstelle:<br>
+              \(\qquad\qquad0=f({\color{magenta}x})\)</li>
+            <li>Funktion hat bei \({\color{magenta}x}\) eine Extremstelle:<br>
+              \(\qquad\qquad0=f'({\color{magenta}x})\)</li>
+            <li>Funktion hat bei \({\color{magenta}x}\) ein Maximum/Minimum:<br>
+              \(\qquad\qquad0=f'({\color{magenta}x})\)</li>
+            <li>Funktion hat bei \({\color{magenta}x}\) eine Wendestelle:<br>
+              \(\qquad\qquad0=f''({\color{magenta}x})\)</li>
+            <li>Funktion hat bei \({\color{magenta}x}\) die Steigung \(\color{orange}m\):<br>
+              \(\qquad\qquad{\color{orange}m}=f'({\color{magenta}x})\)</li>
+            <li>Funktion schneidet \(x\)-Achse bei \({\color{magenta}x}\):<br>
+              \(\qquad\qquad0=f({\color{magenta}x})\)</li>
+            <li>Funktion schneidet \(y\)-Achse bei \({\color{cyan}y}\):<br>
+              \(\qquad\qquad{\color{cyan}y}=f(0)\)</li>
+          </ul>
+          <h5>Eigenschaften mit Symmetrie:</h5>
+          <ul class="more-spacing">
+            <li>Funktion ist achsensymmetrisch: <br>
+              \(\qquad\,\)Alle Parameter mit ungeradem Exponenten sind null.</li>
+            <li>Funktion ist punktsymmetrisch: <br>
+              \(\qquad\,\)Alle Parameter mit geradem Exponenten sind null.</li>
+          </ul>
+          </p>
+        </div>
+
+
+        <h6>Beispiel von oben:</h6>
+        <p>
+          Folgende Eigenschaften der Funktion sind bekannt:
+        <ol class="more-spacing">
+          <li>Quadratische Funktion</li>
+          <li>Nullstelle bei \(\color{magenta}x=4\)</li>
+          <li>Minimum bei \(\color{orange}x=2\)</li>
+          <li>Verläuft durch \(\color{green}P(3\,|\,-1,5)\)</li>
+        </ol>
+        Das führt zu folgenden Gleichungen:
+        <ol class="more-spacing" start="2">
+          <li>\(0=f({\color{magenta}4})\)</li>
+          <li>\(0=f'({\color{orange}2})\)</li>
+          <li>\({\color{green}-1,5}=f({\color{green}3})\)</li>
+        </ol>
+        Es ist bekannt, dass die Funktion eine Quadratische ist. Dementsprechend lautet die allgemeine Form:
+        \(f(x)=ax^2+bx+c\)
+        und die erste Ableitung \(f'(x)=2ax+b\).<br>
+        Dies kann nun in die drei Gleichungen eingesetzt werden:
+        <ol class="more-spacing" start="2">
+          <li>\(0=a\cdot {\color{magenta}4}^2 + b\cdot {\color{magenta}4} +c\)</li>
+          <li>\(0=2a\cdot {\color{orange}2} + b\)</li>
+          <li>\({\color{green}-1,5}=a\cdot {\color{green}3}^2 + b\cdot {\color{green}3} +c\)</li>
+        </ol>
+        Die Gleichungen können nun noch zusammengefasst werden:
+        <ol class="more-spacing" start="2">
+          <li>\(0=16a+4b+c\)</li>
+          <li>\(0=4a + b\)</li>
+          <li>\(-1,5=9a+3b+c\)</li>
+        </ol>
+        Zusammen ergibt das folgendes lineares Gleichungssystem:
+        \[
+        \begin{alignat*}{3}
+        \text{I} &\quad& 0&=16a+4b+c \\
+        \text{II} &\quad& 0&=4a + b \\
+        \text{III} &\quad& -1,5&=9a+3b+c
+        \end{alignat*}
+        \]
+        Dieses kann nun mit der bevorzugten Methode (Additionsverfahren, Gleichsetzungsverfahren, Einsetzungsverfahren) gelöst 
+        werden.
+        </p>
+        <p>
+          Man erhält dann
+          \begin{align*}
+            a&=\tfrac12 & b&=-2 & c&=0
+          \end{align*}
+          was die Gleichung
+          \begin{align*}
+            f(x)&=\tfrac12x^2-2x
+          \end{align*}
+          ergibt.
+        </p>
+      </div>
+    </section>
+
+    <!-- <section>
+            <div class="videos">
+                <iframe width="360" height="202" src="https://www.youtube.com/embed/7HLIxsrAMKQ"
+                    title="Wendepunkte bestimmen" frameborder="0" allow="web-share" allowfullscreen></iframe>
+
+            </div>
+        </section> -->
+    <section class="aufgaben" id="aufgaben">
+      <h3>Aufgaben zu Rekonstruktionen</h3>
+      <ol class="custom-marker point-after decimal">
+        <li>... <a href="#a1">Lösungen</a> </li>
+      </ol>
+    </section>
+
+    <section class="loesungen">
+      <h3>Lösungen zu Rekonstruktionen</h3>
+
+      <details id="a1">
+        <summary>...</summary>
+        <ul class=" more-spacing">
+          <li>...</li>
+        </ul>
+
+      </details>
+
+
+    </section>
+
+    <section id="meme">
+      <div class="images">
+        <img src="/img/nolearn_meme.jpg" style="object-fit: scale-down; max-width: 300px" />
+      </div>
+      <div class="centemagenta">
+        <a href="https://www.facebook.com/memeextremeofficial/posts/1093516385475157/" target="_blank"
+          rel="noopener noreferrer">
+          <h6>Original von Meme Extreme </h6>
+        </a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <a href="/misc/impressum.html">Impressum</a>
+    <div class="lastModified" align="center">
+      Zuletzt geändert:<br />
+      18. Dezember 2024
+      <!-- <span id="lastModifiedDate"></span> -->
+    </div>
+    <a href="/misc/datenschutz.html">Datenschutz</a>
+  </footer>
+</body>
