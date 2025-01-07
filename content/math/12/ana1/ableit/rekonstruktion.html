@@ -204,17 +204,18 @@
         \text{III} &\quad& -1,5&=9a+3b+c
         \end{alignat*}
         \]
-        Dieses kann nun mit der bevorzugten Methode (Additionsverfahren, Gleichsetzungsverfahren, Einsetzungsverfahren) gelöst 
+        Dieses kann nun mit der bevorzugten Methode (Additionsverfahren, Gleichsetzungsverfahren, Einsetzungsverfahren)
+        gelöst
         werden.
         </p>
         <p>
           Man erhält dann
           \begin{align*}
-            a&=\tfrac12 & b&=-2 & c&=0
+          a&=\tfrac12 & b&=-2 & c&=0
           \end{align*}
           was die Gleichung
           \begin{align*}
-            f(x)&=\tfrac12x^2-2x
+          f(x)&=\tfrac12x^2-2x
           \end{align*}
           ergibt.
         </p>
@@ -231,7 +232,10 @@
     <section class="aufgaben" id="aufgaben">
       <h3>Aufgaben zu Rekonstruktionen</h3>
       <ol class="custom-marker point-after decimal">
-        <li>... <a href="#a1">Lösungen</a> </li>
+        <li>Buch, Seite 187 Übung 2 <a href="#a1">Lösungen</a> </li>
+        <li>Buch, Seite 187 Übung 3 <a href="#a2">Lösungen</a> </li>
+        <li>Buch, Seite 187 Übung 5 bis 8 <a href="#a3">Lösungen</a> </li>
+        <li>Buch, Seite 187 Übung 4 (für Schnelle) <a href="#a4">Lösungen</a> </li>
       </ol>
     </section>
 
@@ -239,11 +243,425 @@
       <h3>Lösungen zu Rekonstruktionen</h3>
 
       <details id="a1">
-        <summary>...</summary>
+        <summary>Übung 2</summary>
         <ul class=" more-spacing">
-          <li>...</li>
+          <li>Funktion dritten Grades:
+            <ul>
+              <li>Funktion: \(f(x)=ax^3+bx^2+cx+d\)</li>
+              <li>1. Ableitung: \(f'(x)=3ax^2+2bx+c\)</li>
+              <li>2. Ableitung: \(f''(x)=6ax+2b\)</li>
+            </ul>
+          </li>
+          <li>Gegeben ist (aus Graph ablesen):
+            <ul>
+              <li>Tiefpunkt (und Nullstelle) bei \(T(-1\,|\,0)\)</li>
+              <li>Wendepunkt bei \(W(-2\,|\,2)\)</li>
+              <li>\(y\)-Achsen-Schnittpunkt \(y=4\)
+                <ul>
+                  <li>Daraus folgt direkt: \(\color{magenta}d=4\), <br>da \(4=f(0)=a\cdot 0^3+b\cdot 0^2+c\cdot 0+d=d\)
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>Gleichungen aufstellen
+            <ul>
+              <li>Aus Tiefpunkt \(T(-1\,|\,0)\) folgt:
+                <ul>
+                  <li>\(0=f(-1)\)</li>
+                  <li>\(0=a\cdot(-1)^3+b\cdot(-1)^2+c\cdot(-1)+\color{magenta}4\)</li>
+                  <li>\(0=-a+b-c+4\)</li>
+                  <hr style="width: 50%; text-align: left; margin-left: -20px;">
+                  <li>\(0=f'(-1)\)</li>
+                  <li>\(0=3a\cdot(-1)^2+2b\cdot(-1)+c\)</li>
+                  <li>\(0=3a-2b+c\)</li>
+                </ul>
+              </li>
+              <li>Aus Wendepunkt \(W(-2\,|\,2)\) folgt:
+                <ul>
+                  <li>\(2=f(-2)\)</li>
+                  <li>\(2=a\cdot(-2)^3+b\cdot(-2)^2+c\cdot(-2)+\color{magenta}4\)</li>
+                  <li>\(2=-8a+4b-2c+4\)</li>
+                  <hr style="width: 50%; text-align: left; margin-left: -20px;">
+                  <li>\(0=f''(-2)\)</li>
+                  <li>\(0=6a\cdot(-2)+2b\)</li>
+                  <li>\(0=-12a+2b\)</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>Gleichungssystem lösen:
+            \[
+            \begin{alignat*}{3}
+            \text{I} &\quad& 0&=-a+b-c+4 \\
+            \text{II} &\quad& 0&=3a-2b+c \\
+            \text{III} &\quad& 2&=-8a+4b-2c+4 \\
+            \text{IV} &\quad& 0&=-12a+2b
+            \end{alignat*}
+            \]
+            Das ergibt die Lösungen:
+            \begin{align*}
+            a&=1 & b&=6 & c&=9 & d&=4
+            \end{align*}
+            Und die Funktionsgleichung:
+            \begin{align*}
+            f(x)&=x^3+6x^2+9x+4
+            \end{align*}
+          </li>
         </ul>
 
+      </details>
+
+      <details id="a2">
+        <summary>Übung 3</summary>
+        <ul class=" more-spacing">
+          <li>Funktion zweiten Grades:
+            <ul>
+              <li>Funktion: \(f(x)=ax^2+bx+c\)</li>
+              <li>1. Ableitung: \(f'(x)=2ax+b\)</li>
+            </ul>
+          </li>
+          <li>Gegeben ist:
+            <ul>
+              <li>Extremum bei \(x=1\)</li>
+              <li>Nullstelle bei \(x=4\)</li>
+              <li>Steigung \(m=3\) bei \(x=4\)</li>
+            </ul>
+          </li>
+          <li>Gleichungen aufstellen
+            <ul>
+              <li>Aus Extremum bei \(x=1\) folgt:
+                <ul>
+                  <li>\(0=f'(1)\)</li>
+                  <li>\(0=2a\cdot1+b\)</li>
+                  <li>\(0=2a+b\)</li>
+                </ul>
+              </li>
+              <li>Aus Nullstelle bei \(x=4\) folgt:
+                <ul>
+                  <li>\(0=f(4)\)</li>
+                  <li>\(0=a\cdot4^2+b\cdot4+c\)</li>
+                  <li>\(0=16a+4b+c\)</li>
+                </ul>
+              </li>
+              <li>Aus Steigung \(m=3\) bei \(x=4\) folgt:
+                <ul>
+                  <li>\(3=f'(4)\)</li>
+                  <li>\(3=2a\cdot 4+b\)</li>
+                  <li>\(3=8a+b\)</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>Gleichungssystem lösen:
+            \[
+            \begin{alignat*}{3}
+            \text{I} &\quad& 0&=2a+b \\
+            \text{II} &\quad& 0&=16a+4b+c \\
+            \text{III} &\quad& 3&=8a+b
+            \end{alignat*}
+            \]
+            Das ergibt die Lösungen:
+            \begin{align*}
+            a&=\tfrac12 & b&=-1 & c&=-4
+            \end{align*}
+            Und die Funktionsgleichung:
+            \begin{align*}
+            f(x)&=\tfrac12x^2-x-4
+            \end{align*}
+          </li>
+        </ul>
+
+      </details>
+
+      <details id="a3">
+        <summary>Übung 5 bis 8</summary>
+
+        <details>
+          <summary class="nonumber">Übung 5</summary>
+
+          <ul class=" more-spacing">
+            <li>Funktion vierten Grades:
+              <ul>
+                <li>Funktion: \(f(x)=ax^4+bx^3+cx^2+dx+e\)</li>
+                <li>1. Ableitung: \(f'(x)=4ax^3+3bx^2+2cx+d\)</li>
+              </ul>
+            </li>
+            <li>Gegeben ist:
+              <ul>
+                <li>Achsensymmetrie
+                  <ul>
+                    <li>Daraus folgt direkt: \(\color{magenta}b=0\) und \(\color{magenta}d=0\), <br>
+                      da achsensymmetrische Funktionen nur gerade Exponenten haben</li>
+                  </ul>
+                </li>
+                <li>Durch bei \(P(0\,|\,2)\)
+                  <ul>
+                    <li>Das liegt auf der \(y\)-Achse</li>
+                    <li>Daraus folgt direkt: \(\color{orange}e=2\), <br>da \(2=f(0)=a\cdot 0^4+b\cdot 0^3+c\cdot
+                      0^2+d\cdot 0+e=e\)
+                    </li>
+                  </ul>
+                </li>
+                <li>Extremum und Nullstelle bei \(x=2\)</li>
+              </ul>
+            </li>
+            <li>Gleichungen aufstellen
+              <ul>
+                <li>Aus Extremum und Nullstelle bei \(x=2\) folgt:
+                  <ul>
+                    <li>\(0=f'(2)\)</li>
+                    <li>\(0=4a\cdot 2^3+3\cdot{\color{magenta}0}\cdot 2^2+2c\cdot 2+\color{magenta}0\)</li>
+                    <li>\(0=32a+4c\)</li>
+                    <hr style="width: 50%; text-align: left; margin-left: -20px;">
+                    <li>\(0=f(2)\)</li>
+                    <li>\(0=a\cdot 2^4+{\color{magenta}0}\cdot 2^3+c\cdot 2^2+{\color{magenta}0}\cdot
+                      2+\color{orange}2\)</li>
+                    <li>\(0=16a+4c+2\)</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>Gleichungssystem lösen:
+              \[
+              \begin{alignat*}{3}
+              \text{I} &\quad& 0&=32a+4c \\
+              \text{II} &\quad& 0&=16a+4c+2
+              \end{alignat*}
+              \]
+              Das ergibt die Lösungen:
+              \begin{align*}
+              a&=\tfrac18 & b&=0 & c&=-1 & d&=0 & e&=2
+              \end{align*}
+              Und die Funktionsgleichung:
+              \begin{align*}
+              f(x)&=\tfrac18x^4-x^2+2
+              \end{align*}
+            </li>
+          </ul>
+        </details>
+
+        <details>
+          <summary class="nonumber">Übung 6</summary>
+
+          <ul class=" more-spacing">
+            <li>Funktion dritten Grades:
+              <ul>
+                <li>Funktion: \(f(x)=ax^3+bx^2+cx+d\)</li>
+                <li>1. Ableitung: \(f'(x)=3ax^2+2bx+c\)</li>
+              </ul>
+            </li>
+            <li>Gegeben ist:
+              <ul>
+                <li>Extremum bei \(P(2\,|\,4)\)</li>
+                <li>Extremum bei Ursprung ( \(O(0\,|\,0)\) )
+              </ul>
+            </li>
+            <li>Gleichungen aufstellen: \(\ldots\)
+            </li>
+            <li>Gleichungssystem lösen: \(\ldots\)
+              <p>
+                Funktionsgleichung:
+                \begin{align*}
+                f(x)&=-x^3+3x^2
+                \end{align*}
+              </p>
+
+            </li>
+          </ul>
+        </details>
+
+        <details>
+          <summary class="nonumber">Übung 7</summary>
+          <ol class="custom-marker parens-around lower-alpha more-spacing">
+            <li>
+              <ul class=" more-spacing">
+                <li>Funktion zweiten Grades:
+                  <ul>
+                    <li>Funktion: \(f(x)=ax^2+bx+c\)</li>
+                    <li>1. Ableitung: \(f'(x)=2ax+b\)</li>
+                  </ul>
+                </li>
+                <li>Gegeben ist:
+                  <ul>
+                    <li>Extremum bei \(x=1\)</li>
+                    <li>Achsenschnittpunkte bei \(P(0\,|\,-3)\) und \(Q(5\,|\,0)\)
+                  </ul>
+                </li>
+                <li>Gleichungen aufstellen: \(\ldots\)
+                </li>
+                <li>Gleichungssystem lösen: \(\ldots\)
+                  <p>
+                    Funktionsgleichung:
+                    \begin{align*}
+                    f(x)&=\tfrac15x^2-\tfrac25x-3
+                    \end{align*}
+                  </p>
+
+                </li>
+              </ul>
+            </li>
+            <li>
+              <ul class=" more-spacing">
+                <li>Funktion vierten Grades:
+                  <ul>
+                    <li>Funktion: \(f(x)=ax^4+bx^3+cx^2+dx+e\)</li>
+                    <li>1. Ableitung: \(f'(x)=4ax^3+3bx^2+2cx+d\)</li>
+                    <li>2. Ableitung: \(f''(x)=12ax^2+6bx+2c\)</li>
+                  </ul>
+                </li>
+                <li>Gegeben ist:
+                  <ul>
+                    <li>Sattelpunkt in Ursprung (\(O(0\,|\,0)\))</li>
+                    <li>Tiefpunkt bei \(P(-2\,|\,-6)\)
+                  </ul>
+                </li>
+                <li>Gleichungen aufstellen: \(\ldots\)
+                </li>
+                <li>Gleichungssystem lösen: \(\ldots\)
+                  <p>
+                    Funktionsgleichung:
+                    \begin{align*}
+                    f(x)&=\tfrac98x^4+3x^3
+                    \end{align*}
+                  </p>
+
+                </li>
+              </ul>
+            </li>
+          </ol>
+        </details>
+
+        <details>
+          <summary class="nonumber">Übung 8</summary>
+          <ol class="custom-marker parens-around lower-alpha more-spacing">
+            <li>
+              <ul class=" more-spacing">
+                <li>Funktion zweiten Grades (Parabel):
+                  <ul>
+                    <li>Funktion: \(f(x)=ax^2+bx+c\)</li>
+                    <li>1. Ableitung: \(f'(x)=2ax+b\)</li>
+                  </ul>
+                </li>
+                <li>Gegeben ist:
+                  <ul>
+                    <li>Tiefpunkt und Nullstelle bei \(T(3\,|\,0)\)</li>
+                    <li>Achsenschnittpunkte bei \(P(0\,|\,2)\)
+                  </ul>
+                </li>
+                <li>Gleichungen aufstellen: \(\ldots\)
+                </li>
+                <li>Gleichungssystem lösen: \(\ldots\)
+                  <p>
+                    Funktionsgleichung (links Scheitelpunktform, rechts allgemeine Form):
+                    \begin{align*}
+                    f(x)&=\tfrac29(x-3)^2=\tfra29x^2-\tfrac43x+2
+                    \end{align*}
+                  </p>
+
+                </li>
+              </ul>
+            </li>
+            <li>
+              <ul class=" more-spacing">
+                <li>Funktion dritten Grades:
+                  <ul>
+                    <li>Funktion: \(f(x)=ax^3+bx^2+cx+d\)</li>
+                    <li>1. Ableitung: \(f'(x)=3ax^2+2bx+c\)</li>
+                    <li>2. Ableitung: \(f''(x)=6ax+2b\)</li>
+                  </ul>
+                </li>
+                <li>Gegeben ist:
+                  <ul>
+                    <li>Sattelpunkt in \(S(1\,|\,-2)\)</li>
+                    <li>Nullstelle bei \(x=2\)
+                  </ul>
+                </li>
+                <li>Gleichungen aufstellen: \(\ldots\)
+                </li>
+                <li>Gleichungssystem lösen: \(\ldots\)
+                  <p>
+                    Funktionsgleichung:
+                    \begin{align*}
+                    f(x)&=2x^3-6x^2+6x-4
+                    \end{align*}
+                  </p>
+
+                </li>
+              </ul>
+            </li>
+          </ol>
+        </details>
+        
+
+      </details>
+
+      <details>
+        <summary>Übung 4</summary>
+
+        <ul class=" more-spacing">
+          <li>Funktion dritten Grades:
+            <ul>
+              <li>Funktion: \(f(x)=ax^3+bx^2+cx+d\)</li>
+              <li>1. Ableitung: \(f'(x)=3ax^2+2bx+c\)</li>
+            </ul>
+          </li>
+          <li>Gegeben ist:
+            <ul>
+              <li>Punktsymmetrie
+                <ul>
+                  <li>Daraus folgt direkt: \(\color{magenta}b=0\) und \(\color{magenta}d=0\), <br>
+                    da punktsymmetrische Funktionen nur ungerade Exponenten haben</li>
+                </ul>
+              </li>
+              <li>Verläuft durch Ursprung
+                <ul>
+                  <li>Daraus folgt direkt (erneut): \(\color{magenta}d=0\), <br>da \(0=f(0)=a\cdot 0^3+b\cdot 0^2+c\cdot 0+d=d\)
+                  </li>
+                </ul>
+              </li>
+              <li>Schneidet \(g(x)\) im Ursprung (\(O(0\,|\,0)\)), also \(x=0\) senkrecht</li>
+              <li>Schneidet \(g(x)\) bei \(x=1\)</li>
+            </ul>
+          </li>
+          <li>Gleichungen aufstellen
+            <ul>
+              <li>Aus Senkrecht schneiden bei \(x=0\) folgt:
+                <ul>
+                  <li>\(f'(0)=-\dfrac{1}{g'(0)}\) (Orthogonaler Anstieg)</li>
+                  <li>\(g'(x)=\tfrac12(12x^2+1)\)</li>
+                  <li>\(g'(0)=\tfrac12(12\cdot 0^2+1)=\tfrac12\)</li>
+                  <li>\(f'(0)=-\dfrac{1}{\frac12}=-2\)</li>
+                  <li>\(-2=3a\cdot 0^2+2\cdot{\color{magenta}0}\cdot 0+c\)</li>
+                  <li>\(\color{orange}-2=c\)</li>
+                </ul>
+              </li>
+              <li>Aus schneiden bei \(x=1\) folgt:
+                <ul>
+                  <li>\(f(1)=g(1)\)</li>
+                  <li>\(g(1)=\tfrac12(4\cdot 1^3+1)=\tfrac52\)</li>
+                  <li>\(\tfrac52=a\cdot 1^3+{\color{magenta}0}\cdot 1^2\,{\color{orange}-2}\,\cdot 1+{\color{magenta}0}\)</li>
+                  <li>\(\tfrac52=a-2\)</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>Gleichungssystem lösen:
+            \[
+            \begin{alignat*}{3}
+            \text{I} &\quad& \tfrac52&=a-2 \\
+            \end{alignat*}
+            \]
+            Das ergibt die Lösungen:
+            \begin{align*}
+            a&=\tfrac92 & b&=0 & c&=-2 & d&=0
+            \end{align*}
+            Und die Funktionsgleichung:
+            \begin{align*}
+            f(x)&=\tfrac92x^3-2x
+            \end{align*}
+          </li>
+        </ul>
       </details>
 
 
@@ -251,12 +669,12 @@
 
     <section id="meme">
       <div class="images">
-        <img src="/img/nolearn_meme.jpg" style="object-fit: scale-down; max-width: 300px" />
+        <img src="/img/rekonst_meme.jpg" style="object-fit: scale-down; max-width: 300px" />
       </div>
       <div class="centemagenta">
-        <a href="https://www.facebook.com/memeextremeofficial/posts/1093516385475157/" target="_blank"
+        <a href="https://i.ytimg.com/vi/ci8_MzyBxno/maxresdefault.jpg" target="_blank"
           rel="noopener noreferrer">
-          <h6>Original von Meme Extreme </h6>
+          <h6>Original von Dirk Blotevogel</h6>
         </a>
       </div>
     </section>
@@ -265,7 +683,7 @@
     <a href="/misc/impressum.html">Impressum</a>
     <div class="lastModified" align="center">
       Zuletzt geändert:<br />
-      18. Dezember 2024
+      7. Januar 2025
       <!-- <span id="lastModifiedDate"></span> -->
     </div>
     <a href="/misc/datenschutz.html">Datenschutz</a>
