@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" initial-scale="1.0" />
+  <meta name="author" content="Sebastian Hitziger" />
+  <meta name="robot" content="noindex" />
+  <title>HITZ | Fkt-Eigensch. | Ableitungsregeln I </title>
+  <link rel="stylesheet" type="text/css" href="/css/colors.css" />
+  <link rel="stylesheet" type="text/css" href="/css/gridNoTimeline.css" />
+  <link rel="stylesheet" type="text/css" href="/css/navbar.css" />
+  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="/css/courses.css" />
+  <script type="text/javascript" src="jquery-3.3.1.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+
+
+<body>
+  <header>
+    <div class="nav">
+      <input type="checkbox" id="nav-check" />
+      <div class="nav-header">
+        <div class="nav-title">
+          <a href="/">Hr. Hitzigers Unterricht</a>
+        </div>
+      </div>
+      <div class="nav-btn">
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+
+      <div class="nav-links">
+        <a href="/content/math/">Mathematik</a>
+        <a href="/content/math/12/">Klasse 12</a>
+        <a href="/content/math/12/ana1/">Analysis I</a>
+        <a href="/content/math/12/ana1/ableit/">Differentialrechnung</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section>
+      <h2>Ableitungsregeln I</h2>
+      <div class="ziele">
+        <p>
+          Nachfolgend soll der zweite Teil an Ableitungsregeln gezeigt und erklärt werden.
+        </p>
+        <p>
+          <a href="#aufgaben">Direkt zu den Aufgaben</a>
+        </p>
+      </div>
+
+
+
+      <div class="theorie">
+        <p>
+          Die in <a href="/content/math/12/ana1/ableit/regelnI.html">Teil I</a> gezeigten Regeln
+          gelten natürlich weiterhin.
+        </p>
+        <p>
+          Das waren:
+        <ul class="more-spacing">
+          <li>Die Potenzregel</li>
+          <li>Die Summenregel</li>
+          <li>Die Faktorregel</li>
+          <li>Die Konstantenregel</li>
+        </ul>
+        </p>
+
+
+        <div class="definition">
+          <h4>Regeln weiterer Funktionen:</h4>
+          <ul class="more-spacing">
+            <li>Exponentialregel:
+              \begin{align*}
+              f(x)&=a^x \quad\Rightarrow f'(x)=\ln a\cdot a^x
+              \end{align*}
+              Mit dem Sonderfall:
+              \begin{align*}
+              f(x)&=\text e^x \quad\Rightarrow f'(x)=\text e^x
+              \end{align*}
+              wobei \(\text e\) die Euler'sche Zahl ist (\(\approx 2,72\)).
+            </li>
+            <li>Sinusregel:
+              \begin{align*}
+              f(x)&=\sin x \quad\Rightarrow f'(x)=\cos x
+              \end{align*}
+            </li>
+            <li>Kosinusregel:
+              \begin{align*}
+              f(x)&=\cos x \quad\Rightarrow f'(x)=-\sin x
+              \end{align*}
+            </li>
+            <li>Logarithmusregel (nur für \(\ln x\)):
+              \begin{align*}
+              f(x)&=\ln x \quad\Rightarrow f'(x)=\frac1x
+              \end{align*}
+            </li>
+          </ul>
+        </div>
+        <h6>Beispiele:</h6>
+        <p>
+          Von den folgenden Exponentialfunktionen wird die erste Ableitung bestimmt:
+          \begin{align*}
+          f(x)&={\color{orange}7}^x \ \ \Rightarrow f'(x)=\ln {\color{orange} 7}\cdot {\color{orange}7}^x \\
+          g(x)&={\color{magenta}45}^x \Rightarrow g'(x)=\ln {\color{magenta} 45}\cdot {\color{magenta}45}^x \\
+          h(x)&={\color{teal}\text e}^x \ \ \Rightarrow h'(x)=\ln {\color{teal}\text e}\cdot {\color{teal}\text
+          e}^x={\color{teal}\text e}^x
+          \end{align*}
+        </p>
+        <div class="definition">
+          <h4>Produktregel</h4>
+          <p>
+            Für das Produkt zweier Funktionen gilt:
+            \begin{align*}
+            f(x)&=g(x)\cdot h(x)\quad \Rightarrow f'(x)=g'(x)\cdot h(x) + g(x)\cdot h'(x) \\
+            \end{align*}
+          </p>
+        </div>
+        <h6>Beispiel 1:</h6>
+        <p>
+          Von der folgenden Funktion wird die erste Ableitung bestimmt:
+          \begin{align*}
+          f(x)&=({\color{magenta}x^3-5x})\cdot ({\color{green}3x+5}) \\[0.75em]
+          g(x)&={\color{magenta}x^3-5x} \quad\Rightarrow g'(x)={\color{orange}3x^2-5} \\
+          h(x)&={\color{green}3x+5} \, \ \quad\Rightarrow h'(x)={\color{cyan}3} \\[0.75em]
+          f'(x)&=({\color{orange}3x^2-5})\cdot ({\color{green}3x+5}) + ({\color{magenta}x^3-5x})\cdot ({\color{cyan}3})
+          \\
+          f'(x)&=9x^3+15x^2-15x-25+3x^3-15x \\
+          f'(x)&=12x^3+15x^2-30x-25
+          \end{align*}
+        </p>
+        <h6>Beispiel 2:</h6>
+        <p>
+          Von der folgenden Funktion wird die erste Ableitung bestimmt:
+          \begin{align*}
+          f(x)&={\color{magenta}\text e^x}\cdot ({\color{green}5x^2-4x+2}) \\[0.75em]
+          g(x)&={\color{magenta}\text e^x}\quad\quad\quad\quad\quad \quad\Rightarrow g'(x)={\color{orange}\text e^x} \\
+          h(x)&={\color{green}5x^2-4x+2} \, \ \quad\Rightarrow h'(x)={\color{cyan}10x-4} \\[0.75em]
+          f'(x)&={\color{orange}\text e^x}\cdot ({\color{green}5x^2-4x+2}) + {\color{magenta}\text e^x}\cdot
+          ({\color{cyan}10x-4}) \\
+          f'(x)&=\text e^x\cdot(5x^2-4x+2+10x-4) \\
+          f'(x)&=\text e^x\cdot(5x^2+6x-2)
+          \end{align*}
+        </p>
+        <div class="definition">
+          <h4>Quotientenregel</h4>
+          <p>
+            Für den Quotient zweier Funktionen gilt:
+            \begin{align*}
+            f(x)&=\frac{g(x)}{h(x)}\quad \Rightarrow f'(x)=\frac{g'(x)\cdot h(x) - g(x)\cdot h'(x)}{\left(h(x)\right)^2}
+            \\
+            \end{align*}
+            Die Quotientenregel wird hier der vollständigkeithalber aufgeführt.
+            Sie spielt in der schriftlichen (Grundkurs) Abiturprüfung keine Rolle.
+          </p>
+        </div>
+        <h6>Beispiel:</h6>
+        <p>
+          Von der folgenden Funktion wird die erste Ableitung bestimmt:
+          \begin{align*}
+          f(x)&=\frac{\color{magenta}x^3-5x}{\color{green}3x+5} \\[0.75em]
+          g(x)&={\color{magenta}x^3-5x} \quad\Rightarrow g'(x)={\color{orange}3x^2-5} \\
+          h(x)&={\color{green}3x+5} \, \ \quad\Rightarrow h'(x)={\color{cyan}3} \\[0.75em]
+          f'(x)&=\frac{({\color{orange}3x^2-5})\cdot ({\color{green}3x+5}) - ({\color{magenta}x^3-5x})\cdot
+          ({\color{cyan}3})}{({\color{green}3x+5})^2} \\
+          f'(x)&=\frac{9x^3+15x^2-15x-25-(3x^3-15x)}{(3x+5)^2} \\
+          f'(x)&=\frac{6x^3+15x^2-25}{9x^2+30x+25}
+          \end{align*}
+        </p>
+        <div class="definition">
+          <h4>Kettenregel</h4>
+          <p>
+            Für verschachtelte Funktionen gilt:
+            \begin{align*}
+            f(x)&=g(h(x))\quad \Rightarrow f'(x)=h'(x)\cdot g'\left(h(x)\right) \\
+            \end{align*}
+            Wie bei biquadratischen Funktionen sollte die innere Funktion (hier \(h(x)\))
+            substituiert werden.
+          </p>
+        </div>
+        <h6>Beispiel 1:</h6>
+        <p>
+          Von der folgenden Funktion wird die erste Ableitung bestimmt:
+          \begin{align*}
+          f(x)&={\color{magenta}\text e}^{\color{green}x^2-6} \\[0.75em]
+          g(h)&={\color{magenta}\text e^{\color{green}h}} \quad\Rightarrow g'(h)={\color{orange}\text
+          e^{\color{green}h}} \\
+          h(x)&={\color{green}x^2-6} \, \ \quad\Rightarrow h'(x)={\color{cyan}2x} \\[0.75em]
+          f'(x)&={\color{cyan}2x}\cdot {\color{orange}\text e^{\color{green}h}} \\
+          f'(x)&=2x\cdot \text e^{\color{green}x^2-6} \\
+          f'(x)&=2x\cdot \text e^{x^2-6}
+          \end{align*}
+        </p>
+        <h6>Beispiel 2:</h6>
+        <p>
+          Von der folgenden Funktion wird die erste Ableitung bestimmt:
+          \begin{align*}
+          f(x)&={\color{magenta}5\cdot\sin({\color{green}4x^3-3x})} \\[0.75em]
+          g(h)&={\color{magenta}5\cdot\sin({\color{green}h})} \quad\Rightarrow
+          g'(h)={\color{orange}5\cdot\cos({\color{green}h})} \\
+          h(x)&={\color{green}4x^3-3x} \, \ \quad\Rightarrow h'(x)={\color{cyan}12x^2-3} \\[0.75em]
+          f'(x)&=({\color{cyan}12x^2-3})\cdot {\color{orange}5\cdot\cos({\color{green}h})} \\
+          f'(x)&=(60x^2-15)\cdot\cos({\color{green}4x^3-3x}) \\
+          f'(x)&=(60x^2-15)\cdot\cos({4x^3-3x})
+          \end{align*}
+        </p>
+        <h6>Beispiel 3:</h6>
+        <p>
+          Von der folgenden Funktion wird die erste Ableitung bestimmt:
+          \begin{align*}
+          f(x)&={\color{magenta}3({\color{green}5x-7})^4+2} \\[0.75em]
+          g(h)&={\color{magenta}3{\color{green}h}^4+2} \quad\Rightarrow g'(h)={\color{orange}12\cdot{\color{green}h}^3}
+          \\
+          h(x)&={\color{green}5x-7} \, \ \quad\Rightarrow h'(x)={\color{cyan}5} \\[0.75em]
+          f'(x)&={\color{cyan}5}\cdot {\color{orange}12\cdot{\color{green}h}^3} \\
+          f'(x)&=60\cdot({\color{green}5x-7})^3 \\
+          f'(x)&=60({5x-7})^3
+          \end{align*}
+        </p>
+      </div>
+    </section>
+
+
+    <!-- <section>
+            <div class="videos">
+                <iframe width="360" height="202" src="https://www.youtube.com/embed/19goPRnthCE"
+                    title="Abstand Punkt - Punkt" frameborder="0" allow="web-share" allowfullscreen></iframe>
+
+            </div>
+        </section> -->
+    <section class="aufgaben" id="aufgaben">
+      <h3>Aufgaben zu Ableitungen</h3>
+      <ol class="custom-marker point-after decimal">
+        <li>Bestimme die Ableitung der folgenden Funktionen! <a href="#a1">Lösungen</a>
+          <ul>
+            <li>...</li>
+          </ul>
+        </li>
+      </ol>
+
+    </section>
+
+    <section class="loesungen">
+      <h3>Lösungen zu Ableitungen</h3>
+
+      <details id="a1">
+        <summary>Ableitungen</summary>
+
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>...</li>
+        </ol>
+      </details>
+
+
+
+
+
+
+    </section>
+
+    <section id="meme">
+      <div class="images">
+        <img src="/img/e_meme.webp" style="object-fit: scale-down; max-width: 300px" />
+      </div>
+      <div class="centered">
+        <a href="https://preview.redd.it/t86lxgk1p5j61.jpg?width=1080&crop=smart&auto=webp&s=4e75d27401ced6c697af375166bbc3aac9048612" target="_blank"
+          rel="noopener noreferrer">
+          <h6>Original von Friendly_Dependent31 </h6>
+        </a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <a href="/misc/impressum.html">Impressum</a>
+    <div class="lastModified" align="center">
+      Zuletzt geändert:<br />
+      14. Januar 2025
+      <!-- <span id="lastModifiedDate"></span> -->
+    </div>
+    <a href="/misc/datenschutz.html">Datenschutz</a>
+  </footer>
+</body>
