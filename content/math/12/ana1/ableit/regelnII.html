@@ -238,9 +238,27 @@
       <h3>Aufgaben zu Ableitungen</h3>
       <ol class="custom-marker point-after decimal">
         <li>Bestimme die Ableitung der folgenden Funktionen! <a href="#a1">Lösungen</a>
-          <ul>
-            <li>...</li>
-          </ul>
+          <details class="openClose" style="border-color: lightblue; margin-top: 10px;">
+            <summary class="nonumber" data-open="Funktionen einklappen" data-close="Funktionen ausklappen">
+            </summary>
+            <ol class="custom-marker parens-around lower-alpha more-spacing">
+              <li>\(a(x)=6^x\)</li>
+              <li>\(b(x)=3\cdot 8^x\)</li>
+              <li>\(c(x)=2\cdot x^2-\sin x\)</li>
+              <li>\(d(x)=4\cos x+2^x-x^5\)</li>
+              <li>\(e(x)=x^2\cdot x^6\)</li>
+              <li>\(f(x)=5^x\cdot (2x^2-4x+3)\)</li>
+              <li>\(g(x)=\dfrac{4}{x^4}\)</li>
+              <li>\(h(x)=\dfrac{x^2-5x+2}{\text e^x}\)</li>
+              <li>\(i(x)=3^{4x}\)</li>
+              <li>\(j(x)=\text e^{3x^2-5x}\)</li>
+              <li>\(k(x)=\sin\left(5x^3+\text e^{4x}\right)\)</li>
+              <li>\(l(x)=\ln\left(3x^2-4x\right)\)</li>
+              <li>\(m(x)=\sqrt{x^2-4x+2}\)</li>
+              <li>\(n(x)=\sqrt{\dfrac{x^2+6}{\text e^{\sin x}}}\)</li>
+            </ol>
+          </details>
+          </details>
         </li>
       </ol>
 
@@ -251,16 +269,81 @@
 
       <details id="a1">
         <summary>Ableitungen</summary>
-
         <ol class="custom-marker parens-around lower-alpha more-spacing">
-          <li>...</li>
+          <li>\(a'(x)=\ln 6 \cdot 6^x\)</li>
+          <li>\(b'(x)=3\ln8\cdot 8^x\)</li>
+          <li>\(c'(x)=4-\cos x\)</li>
+          <li>\(d'(x)=-4\sin x+\ln2\cdot2^x-5x^4\)</li>
+          <li>\(e'(x)=2x\cdot x^6+x^2\cdot6x^5=\)\(2x^7+6x^7=8x^7\)</li>
+          <li>\(f'(x)=\ln5\cdot 5^x\cdot (2x^2-4x+3)+5^x\cdot(4x-4)=\)\(5^x\cdot\left(\ln5\cdot(2x^2-4x+3)+4x-4\right)\)
+          </li>
+          <li>\(g'(x)=\dfrac{0\cdot x^4-4\cdot 4x^3}{(x^4)^2}=\) \(\dfrac{-16x^3}{x^8}=-\dfrac{16}{x^5}\)</li>
+          <li>\(h'(x)=\dfrac{(2x-5)\cdot\text e^x-(x^2-5x+2)\cdot\text e^x}{\left(\text e^x\right)^2}=\) 
+            \(\dfrac{\text e^x\cdot (2x-5-(x^2-5x+2))}{\left(\text e^x\right)^2}=\) 
+            \(\dfrac{-x^2+7x-3}{\text e^x}\)</li>
+          <li>\(i'(x)=3^{4x}=4\cdot \ln3\cdot3^{4x}=4\ln3\cdot 3^{4x}\)</li>
+          <li>\(j'(x)=(6x-5)\cdot\text e^{3x^2-5x}\)</li>
+          <li>\(k'(x)=(15x^2+4\text e^x)\cdot\cos\left(5x^3+\text e^{4x}\right)\)</li>
+          <li>\(l'(x)=\left(6x-4\right)\cdot \dfrac{1}{3x^2-4x}=\dfrac{6x-4}{3x^2-4x}\)</li>
+          <li>\(m(x)=(2x-4)\cdot \dfrac{1}{2\cdot\sqrt{x^2-4x+2}}=\)\(\dfrac{2x-4}{2\cdot\sqrt{x^2-4x+2}}=\)
+            \(\dfrac{x-2}{\sqrt{x^2-4x+2}}\)</li>
+          <li>\(n(x)=\color{magenta}\sqrt{\color{salmon}\dfrac{x^2+6}{\text e^{\sin x}}}\)
+            <ul class="more-spacing">
+              <li>1. Kettenregel: \(n(x)=f(g(x))\)
+                <ul>
+                  <li>\(f(g)=\color{magenta}\sqrt{\color{salmon}g}\)</li>
+                  <li>\(g(x)=\color{salmon}\dfrac{\color{green}x^2+6}{\color{cyan}\text e^{\sin x}}\)
+                </ul>
+              </li>
+              <li>2. Quotientenregel: \(g(x)=\frac{h(x)}{i(x)}\)
+                <ul>
+                  <li>\(h(x)=\color{green}x^2+6\)</li>
+                  <li>\(i(x)=\color{cyan}\text e^{\sin x}\)
+                </ul>
+              </li>
+              <li>3. Kettenregel: \(i(x)=j(k(x))\)
+                <ul>
+                  <li>\(j(k)=\color{cyan}\text e^{\color{orange} k}\)</li>
+                  <li>\(k(x)=\color{orange}\sin x\)</li>
+                </ul>
+              </li>
+            </ul>
+            Das ergibt folgende Ableitungen:
+            <ul>
+              <li>\(f'(g)=\color{lightblue}\frac{1}{2\sqrt{g}}\)</li>
+              <li>\(h'(x)=\color{red}2x\)</li>
+              <li>\(j'(k)=\color{yellow}\text e^k\)</li>
+              <li>\(k'(x)=\color{gray}\cos x\)</li>
+            </ul>
+            Das bedeutet für die Funktion \(n\):
+            \begin{align*}
+              n'(x)&=g'(x)\cdot f'(g)\\
+              n'(x)&=\frac{h'(x)\cdot i(x)-h(x)\cdot i'(x)}{\left(i(x)\right)^2}\cdot f'(g) \\
+              n'(x)&=\frac{h'(x)\cdot i(x)-h(x)\cdot k'(x)\cdot j'(k)}{\left(i(x)\right)^2}\cdot f'(g)
+            \end{align*}
+            Und mit eingesetzten Funktionen:
+            \begin{align*}
+              n'(x)&=\frac{{\color{red}2x}\cdot {\color{cyan}\text e^{\sin x}}-
+              {(\color{green}x^2+6)}\cdot {\color{gray}\cos x}\cdot {\color{yellow}\text e^k}}
+              {\left({\color{cyan}\text e^{\sin x}}\right)^2}\cdot \color{lightblue}\frac{1}{2\sqrt{g}}\\
+              n'(x)&=\frac{{\color{red}2x}\cdot {\color{cyan}\text e^{\sin x}}-
+              {(\color{green}x^2+6)}\cdot {\color{gray}\cos x}\cdot {\color{yellow}\text e^{\color{orange}\sin x}}}
+              {\left({\color{cyan}\text e^{\sin x}}\right)^2}\cdot \color{lightblue}\frac{1}{2\sqrt{\color{salmon}\dfrac{x^2+6}{\text e^{\sin x}}}}
+            \end{align*}
+            Das kann man noch vereinfachen:
+            \begin{align*}
+              n'(x)&=\frac{{\color{red}2x}-
+              {(\color{green}x^2+6)}\cdot {\color{gray}\cos x}}
+              {{\color{lightblue}2}{\color{cyan}\text e^{\sin x}}}\cdot \color{lightblue}\sqrt{\color{salmon}\dfrac{\text e^{\sin x}}{x^2+6}} \\
+              n'(x)&=\frac{2x-
+              (x^2+6)\cdot \cos x}{2}\cdot \sqrt{\dfrac{1}{(\text e^{\sin x})^2}\cdot\dfrac{\text e^{\sin x}}{x^2+6}} \\
+              n'(x)&=\frac{2x-
+                (x^2+6)\cdot \cos x}{2}\cdot \sqrt{\dfrac{1}{\text e^{\sin x}}\cdot\dfrac{1}{x^2+6}} \\
+              n'(x)&=\frac{2x-
+                  (x^2+6)\cdot \cos x}{2\sqrt{\text e^{\sin x}\cdot(x^2+6)}} \\
+            \end{align*}
+          </li>
         </ol>
-      </details>
-
-
-
-
-
 
     </section>
 
@@ -269,8 +352,8 @@
         <img src="/img/e_meme.webp" style="object-fit: scale-down; max-width: 300px" />
       </div>
       <div class="centered">
-        <a href="https://preview.redd.it/t86lxgk1p5j61.jpg?width=1080&crop=smart&auto=webp&s=4e75d27401ced6c697af375166bbc3aac9048612" target="_blank"
-          rel="noopener noreferrer">
+        <a href="https://preview.redd.it/t86lxgk1p5j61.jpg?width=1080&crop=smart&auto=webp&s=4e75d27401ced6c697af375166bbc3aac9048612"
+          target="_blank" rel="noopener noreferrer">
           <h6>Original von Friendly_Dependent31 </h6>
         </a>
       </div>
