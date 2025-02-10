@@ -362,7 +362,7 @@
       <ol class="custom-marker point-after decimal">
         <li>Buch Seite 231 Übung 8 <a href="#a1">Lösungen</a> </li>
         <li>Buch Seite 231 Übung 9 <a href="#a2">Lösungen</a> </li>
-        <li>Buch Seite 233 Übung 10 <a href="#a3">Lösungen</a> </li>
+        <li>Buch Seite 233 Übung 10 (Druckfehler bei c): für \(-1\leq x \leq 4\)) <a href="#a3">Lösungen</a> </li>
         <li>Führe eine vollständige Kurvendiskussion für die Funktion \(f(x)=\text e^{-\tfrac12 x}\cdot\left(x^2+x-2\right)\) durch! <a href="#a4">Lösungen</a></li>
       </ol>
 
@@ -373,16 +373,544 @@
       <h3>Lösungen zu Kurvenuntersuchungen</h3>
 
       <details id="a1">
-        <summary>...</summary>
+        <summary>Kurvenuntersuchung I</summary>
         <ol class="custom-marker parens-around lower-alpha more-spacing">
-          <li>...
+          <li>Nullstellen und Unendlichkeitsverhalten
+            <ul>
+              <li>Nullstellen: Ein Produkt ist null, wenn ein Faktor null ist.
+                <ul>
+                  <li>\(4x=0\qquad \Rightarrow x = 0\)</li>
+                  <li>\(\text e^{-0,5x}=0 \ \) &#x21AF; Die Exponentialfunktion hat keine Nullstellen.</li>
+                </ul>
+                Die Funktion \(f\) hat eine Nullstelle bei \(x=0\).
+              </li>
+              <li>Unendlichkeitsverhalten: Mit Tabelle
+                <ul>
+                  <li>\(x\rightarrow +\infty\):
+                    <div class="centered" style="margin: 5px;">
+                      <div class="table-wrapper">
+                        <table class="wechseltabelle">
+                          <tr>
+                            <th>\(x\)</th>
+                            <td>\(10\)</td>
+                            <td>\(100\)</td>
+                            <td>\(1\,000\)</td>
+                            <td>\(10\,000\)</td>
+                          </tr>
+                          <tr>
+                            <th>\(f(x)\)</th>
+                            <td>\(0,27\) </td>
+                            <td>\(7,71\cdot 10^{-20}\)</td>
+                            <td>\(\approx 0\)</td>
+                            <td>\(\approx 0\)</td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                    Der Wert nähert sich immer weiter der Zahl null an:
+                    <ul>
+                      <li>Für \(x\rightarrow +\infty\) gilt \(f(x)=0\)</li>
+                    </ul>
+                  </li>
+                  <li>\(x\rightarrow -\infty\):
+                    <div class="centered" style="margin: 5px;">
+                      <div class="table-wrapper">
+                        <table class="wechseltabelle">
+                          <tr>
+                            <th>\(x\)</th>
+                            <td>\(-10\)</td>
+                            <td>\(-100\)</td>
+                            <td>\(-1\,000\)</td>
+                            <td>\(-10\,000\)</td>
+                          </tr>
+                          <tr>
+                            <th>\(f(x)\)</th>
+                            <td>\(-5\,936,5\) </td>
+                            <td>\(-2,07\cdot 10^{24}\)</td>
+                            <td>z.kl.f.Tr.</td>
+                            <td>z.kl.f.Tr.</td>
+                          </tr>
+                        </table>
+                      </div>
+                    </div>
+                    Der Wert wird immer kleiner:
+                    <ul>
+                      <li>Für \(x\rightarrow -\infty\) gilt \(f(x)\rightarrow -\infty\)</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
           </li>
+          <li>Extremal- und Wendepunkte:
+            <ul>
+              <li>Ableitungen:
+                <ul>
+                  <li>1. Ableitung: \(f'(x)=\text e^{-0,5x}\cdot(4-2x)\)</li>
+                  <li>2. Ableitung: \(f''(x)=\text e^{-0,5x}\cdot(x-4)\)</li>
+                  <li>3. Ableitung: \(f'''(x)=\text e^{-0,5x}\cdot(3-\tfrac12x)\)</li>
+                </ul>
+              </li>
+              <li>Extrempunkte: \(f'(x)=0\)
+                <ul>
+                  <li>Ein Produkt ist null, wenn ein Faktor null ist:
+                  <ul>
+                    <li>\(\text e^{-0,5x}=0 \ \) &#x21AF; Die Exponentialfunktion hat keine Nullstellen.</li>
+                    <li>\(4-2x=0\qquad\Rightarrow x = 2\)</li>
+                  </ul>
+                  Die Funktion hat eine Extremstelle bei \(x=2\).</li>
+                  <li> Art und Lage:<br>
+                    \(f''(2)=\text e^{-0,5\cdot 2}\cdot(2-4)=-\tfrac2{\text e}\approx -0,74 < 0 \quad \rightarrow\) Hochpunkt <br>
+                    \(f(2)=4\cdot 2\cdot \text e^{-0,5\cdot 2}=\tfrac8{\text e}\approx 2,94\)
+                  </li>
+                  <li>Der Hochpunkt hat die Koordinaten \(H(2\,|\,2,94)\).</li>
+                </ul>
+              </li>
+              <li>Wendepunkte: \(f''(x)=0\)
+                <ul>
+                  <li>Ein Produkt ist null, wenn ein Faktor null ist:
+                    <ul>
+                      <li>\(\text e^{-0,5x}=0 \ \) &#x21AF; Die Exponentialfunktion hat keine Nullstellen.</li>
+                      <li>\(x-4=0\qquad\Rightarrow x = 4\)</li>
+                    </ul>
+                    Die Funktion hat eine Extremstelle bei \(x=4\).</li>
+                    <li> Art und Lage:<br>
+                      \(f'''(4)=\text e^{-0,5\cdot 4}\cdot(3-\tfrac12\cdot 4)=\tfrac1{\text e}\approx 0,37 > 0 \quad \rightarrow\) RL-Wendepunkt <br>
+                      \(f(4)=4\cdot 4\cdot \text e^{-0,5\cdot 4}=\tfrac{16}{\text e^2}\approx 2,17\)
+                    </li>
+                    <li>Der Wendepunkt hat die Koordinaten \(W(4\,|\,2,17)\).</li>
+                </ul>
+              </li>
+              <li>
+                Monotonieverhalten:
+                <ul>
+                  <li>Die Funktion ist für alle reellen Zahlen definiert.</li>
+                  <li>Die Funktion hat einen Hochpunkt bei \(x=2\).</li>
+                  <ul>
+                    <li>Für \(-\infty < x \leq 2\): monoton steigend</li>
+                    <li>Für \(2 \leq x < \infty\): monoton fallend</li>
+                  </ul>
+                </ul>
+                Krümmungsverhalten:
+                <ul>
+                  <li>Die Funktion ist für alle reellen Zahlen definiert.</li>
+                  <li>Die Funktion hat einen rechts-links-Wendepunkt bei \(x=4\).</li>
+                  <ul>
+                    <li>Für \(-\infty < x \leq 4\): rechtsgekrümmt</li>
+                    <li>Für \(4 \leq x < \infty\): linksgekrümmt</li>
+                  </ul>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>Wendetangente: Tangente im Wendepunkt
+            <ul>
+              <li>Grundgleichung: \(t(x)=mx+n\)</li>
+              <li>\(m\) ist Steigung in Wendepunkt:
+                <ul>
+                  <li>\(f'(4)=\text e^{-0,5\cdot 4}\cdot(4-2\cdot 4)=-\tfrac{4}{\text e^2}\approx-0,54\)</li>
+                </ul>
+              </li>
+              <li>\(n\) mit Wendepunkt \(W\) berechnen:
+                <ul>
+                  <li>\(\tfrac{16}{\text e^2}=-\tfrac{4}{\text e^2}\cdot 4 +n\)<br>
+                      \(\tfrac{16}{\text e^2}=-\tfrac{16}{\text e^2} +n\qquad |+ \tfrac{16}{\text e^2}\)<br>
+                      \(\ \ n=\tfrac{32}{\text e^2}\approx 4,33\)
+                  </li>
+                </ul>
+              </li>
+              <li>Die Gleichung der Wendetangente lautet: \(t(x)=-\tfrac{4}{\text e^2}\cdot x + \tfrac{32}{\text e^2}\approx -0,54x+4,33\)</li>
+            </ul>
+          </li>
+          <li>Zeichnung:
+            <div class="centered" style="margin: 5px;">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="-12 -6 26 13" style="background-color: #232323">
+                <!-- The viewBox is set to (-12, -6, 26, 13) which provides a coordinate space of width 38 and height 19 units.
+                     The center of the SVG is (0, 0). You can adjust this viewBox as needed. -->
+                <!-- Add grid lines -->
+                <defs>
+                  <pattern id="grid" width="1" height="1" patternUnits="userSpaceOnUse">
+                    <path d="M 1 0 L 0 0 0 1" fill="none" stroke="#333333" stroke-width="0.05" />
+                  </pattern>
+                </defs>
+                <rect x="-9.9" y="-5.5" width="19.8" height="11" fill="url(#grid)" />
 
+                <!-- Draw the x-axis line -->
+                <line x1="-10" y1="0" x2="10" y2="0" stroke="#a7a7a7" stroke-width="0.05" />
+
+                <!-- Draw the x-axis arrowhead -->
+                <polygon points="10.5,0 9.8,-0.15 9.8,0.15" fill="#a7a7a7" />
+
+                <!-- Draw the y-axis line -->
+                <line x1="0" y1="5" x2="0" y2="-5" stroke="#a7a7a7" stroke-width="0.05" />
+
+                <!-- Draw the y-axis arrowhead -->
+                <polygon points="0,-5.5 -0.15,-4.8 0.15,-4.8" fill="#a7a7a7" />
+
+                <!-- Add "x" at the end of the x-axis -->
+                <text x="10.7" y="0.7" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">x</text>
+
+                <!-- Add "y" at the end of the y-axis -->
+                <text x="-0.8" y="-5.3" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">y</text>
+
+
+                <!-- Add numbers to x-axis-->
+                <text x="0.9" y="0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">1</text>
+
+                <!-- Add numbers to y-axis-->
+                <text x="-0.75" y="-0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">1</text>
+
+                <path d="M -0.9 5.65 L -0.8 4.77 -0.7 3.97 -0.6 3.24 -0.5 2.57
+                -0.4 1.95 -0.3 1.39 -0.2 0.88 -0.1 0.42 0 0
+                0.1 -0.38 0.2 -0.72 0.3 -1.03 0.4 -1.31 0.5 -1.56
+                0.6 -1.78 0.7 -1.97 0.8 -2.15 0.9 -2.3 1 -2.43
+                1.1 -2.54 1.2 -2.63 1.3 -2.71 1.4 -2.78 1.5 -2.83
+                1.6 -2.88 1.7 -2.91 1.8 -2.93 1.9 -2.94 2 -2.94
+                2.1 -2.94 2.2 -2.93 2.3 -2.91 2.4 -2.89 2.5 -2.87
+                2.6 -2.83 2.7 -2.8 2.8 -2.76 2.9 -2.72 3 -2.68
+                3.1 -2.63 3.2 -2.58 3.3 -2.54 3.4 -2.48 3.5 -2.43
+                3.6 -2.38 3.7 -2.33 3.8 -2.27 3.9 -2.22 4 -2.17
+                4.1 -2.11 4.2 -2.06 4.3 -2 4.4 -1.95 4.5 -1.9
+                4.6 -1.84 4.7 -1.79 4.8 -1.74 4.9 -1.69 5 -1.64
+                5.1 -1.59 5.2 -1.54 5.3 -1.5 5.4 -1.45 5.5 -1.41
+                5.6 -1.36 5.7 -1.32 5.8 -1.28 5.9 -1.24 6 -1.19
+                6.1 -1.16 6.2 -1.12 6.3 -1.08 6.4 -1.04 6.5 -1.01
+                6.6 -0.97 6.7 -0.94 6.8 -0.91 6.9 -0.88 7 -0.85
+                7.1 -0.82 7.2 -0.79 7.3 -0.76 7.4 -0.73 7.5 -0.71
+                7.6 -0.68 7.7 -0.66 7.8 -0.63 7.9 -0.61 8 -0.59" fill="none" stroke="darkgoldenrod" stroke-width="0.1" />
+
+                <!-- Add "y" at the end of the y-axis -->
+                <text x="8.3" y="-0.5" font-family="serif" font-size="0.9" font-style="italic"
+                  fill="darkgoldenrod">f</text>
+                
+                  <path d="M -0.9 -4.82 L -0.8 -4.76 -0.7 -4.71 -0.6 -4.66 -0.5 -4.6
+                  -0.4 -4.55 -0.3 -4.49 -0.2 -4.44 -0.1 -4.38 0 -4.33
+                  0.1 -4.28 0.2 -4.22 0.3 -4.17 0.4 -4.11 0.5 -4.06
+                  0.6 -4.01 0.7 -3.95 0.8 -3.9 0.9 -3.84 1 -3.79
+                  1.1 -3.74 1.2 -3.68 1.3 -3.63 1.4 -3.57 1.5 -3.52
+                  1.6 -3.46 1.7 -3.41 1.8 -3.36 1.9 -3.3 2 -3.25
+                  2.1 -3.19 2.2 -3.14 2.3 -3.09 2.4 -3.03 2.5 -2.98
+                  2.6 -2.92 2.7 -2.87 2.8 -2.81 2.9 -2.76 3 -2.71
+                  3.1 -2.65 3.2 -2.6 3.3 -2.54 3.4 -2.49 3.5 -2.44
+                  3.6 -2.38 3.7 -2.33 3.8 -2.27 3.9 -2.22 4 -2.17
+                  4.1 -2.11 4.2 -2.06 4.3 -2 4.4 -1.95 4.5 -1.89
+                  4.6 -1.84 4.7 -1.79 4.8 -1.73 4.9 -1.68 5 -1.62
+                  5.1 -1.57 5.2 -1.52 5.3 -1.46 5.4 -1.41 5.5 -1.35
+                  5.6 -1.3 5.7 -1.25 5.8 -1.19 5.9 -1.14 6 -1.08
+                  6.1 -1.03 6.2 -0.97 6.3 -0.92 6.4 -0.87 6.5 -0.81
+                  6.6 -0.76 6.7 -0.7 6.8 -0.65 6.9 -0.6 7 -0.54
+                  7.1 -0.49 7.2 -0.43 7.3 -0.38 7.4 -0.32 7.5 -0.27
+                  7.6 -0.22 7.7 -0.16 7.8 -0.11 7.9 -0.05 8 0" fill="none" stroke="var(--shadow-bg)" stroke-width="0.065" />
+
+                <!-- Add "y" at the end of the y-axis -->
+                <text x="8.3" y="0.5" font-family="serif" font-size="0.9" font-style="italic"
+                  fill="var(--shadow-bg)">t</text>
+
+              </svg>
+            </div>
+          </li>
         </ol>
       </details>
+      <details id="a2">
+        <summary>Kurvenuntersuchung II</summary>
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>
+            Ableitungen:
+            <ul>
+              <li>1. Ableitung: \(f'(x)=\tfrac15\cdot\left(\text e^x+ \text e^{-x}\right)\)</li>
+              <li>2. Ableitung: \(f''(x)=\tfrac15\cdot\left(\text e^x- \text e^{-x}\right)\)</li>
+              <li>3. Ableitung: \(f'''(x)=\tfrac15\cdot\left(\text e^x+ \text e^{-x}\right)\)</li>
+            </ul>
+          </li>
+          <li>
+            <ul>
+              <li>Nullstellen: \(x=0\)</li>
+              <li>Extrema: keine</li>
+              <li>Wendepunkte: RL \(W(0\,|\,0)\)</li>
+            </ul>
+          </li>
+          <li>\(f(-x)\) einsetzen und zusammenfassen:
+            \begin{align*}
+              f(-x)&=\tfrac15\cdot\left(\text e^{-x}- \text e^{-(-x)}\right)\\
+              f(-x)&=\tfrac15\cdot\left(\text e^{-x}- \text e^{x}\right) \\
+              f(-x)&=\tfrac15\cdot\left(-\text e^{x}+ \text e^{-x}\right) \\
+              f(-x)&=-\tfrac15\cdot\left(\text e^{x}- \text e^{-x}\right) \\
+              f(-x)&=-f(x)
+            \end{align*}
+          </li>
+          <li>Zeichnung:
+            <div class="centered" style="margin: 5px;">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="-12 -6 26 13" style="background-color: #232323">
+                <!-- The viewBox is set to (-12, -6, 26, 13) which provides a coordinate space of width 38 and height 19 units.
+                     The center of the SVG is (0, 0). You can adjust this viewBox as needed. -->
+                <!-- Add grid lines -->
+                <defs>
+                  <pattern id="grid" width="1" height="1" patternUnits="userSpaceOnUse">
+                    <path d="M 1 0 L 0 0 0 1" fill="none" stroke="#333333" stroke-width="0.05" />
+                  </pattern>
+                </defs>
+                <rect x="-9.9" y="-5.5" width="19.8" height="11" fill="url(#grid)" />
+
+                <!-- Draw the x-axis line -->
+                <line x1="-10" y1="0" x2="10" y2="0" stroke="#a7a7a7" stroke-width="0.05" />
+
+                <!-- Draw the x-axis arrowhead -->
+                <polygon points="10.5,0 9.8,-0.15 9.8,0.15" fill="#a7a7a7" />
+
+                <!-- Draw the y-axis line -->
+                <line x1="0" y1="5" x2="0" y2="-5" stroke="#a7a7a7" stroke-width="0.05" />
+
+                <!-- Draw the y-axis arrowhead -->
+                <polygon points="0,-5.5 -0.15,-4.8 0.15,-4.8" fill="#a7a7a7" />
+
+                <!-- Add "x" at the end of the x-axis -->
+                <text x="10.7" y="0.7" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">x</text>
+
+                <!-- Add "y" at the end of the y-axis -->
+                <text x="-0.8" y="-5.3" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">y</text>
 
 
+                <!-- Add numbers to x-axis-->
+                <text x="0.9" y="0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">1</text>
 
+                <!-- Add numbers to y-axis-->
+                <text x="-0.75" y="-0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">1</text>
+
+                <path d="M -3.2 4.9 L -3.1 4.43 -3 4.01
+                -2.9 3.62 -2.8 3.28 -2.7 2.96 -2.6 2.68 -2.5 2.42
+                -2.4 2.19 -2.3 1.97 -2.2 1.78 -2.1 1.61 -2 1.45
+                -1.9 1.31 -1.8 1.18 -1.7 1.06 -1.6 0.95 -1.5 0.85
+                -1.4 0.76 -1.3 0.68 -1.2 0.6 -1.1 0.53 -1 0.47
+                -0.9 0.41 -0.8 0.36 -0.7 0.3 -0.6 0.25 -0.5 0.21
+                -0.4 0.16 -0.3 0.12 -0.2 0.08 -0.1 0.04 0 0
+                0.1 -0.04 0.2 -0.08 0.3 -0.12 0.4 -0.16 0.5 -0.21
+                0.6 -0.25 0.7 -0.3 0.8 -0.36 0.9 -0.41 1 -0.47
+                1.1 -0.53 1.2 -0.6 1.3 -0.68 1.4 -0.76 1.5 -0.85
+                1.6 -0.95 1.7 -1.06 1.8 -1.18 1.9 -1.31 2 -1.45
+                2.1 -1.61 2.2 -1.78 2.3 -1.97 2.4 -2.19 2.5 -2.42
+                2.6 -2.68 2.7 -2.96 2.8 -3.28 2.9 -3.62 3 -4.01
+                3.1 -4.43 3.2 -4.9" fill="none" stroke="darkgoldenrod" stroke-width="0.1" />
+
+                <!-- Add "y" at the end of the y-axis -->
+                <text x="3.5" y="-4.5" font-family="serif" font-size="0.9" font-style="italic"
+                  fill="darkgoldenrod">f</text>
+              
+
+              </svg>
+            </div>
+
+          </li>
+          <li>
+            Normale durch den (Koordinaten-)Ursprung:
+            <ul>
+              <li>Grundgleichung: \(n(x)=mx+n\)</li>
+              <li>\(n=0\), da durch den Koordinatenursprung verlaufend</li>
+              <li>\(m=-\frac{1}{f'(0)=-\frac{1}{\frac25}}=-\frac52\)</li>
+              <li>Normalengleichung: \(n(x)=-\frac52 x\)</li>
+            </ul>
+          </li>
+        </ol>
+      </details>
+      <details id="a3">
+        <summary>Kurvenuntersuchung III</summary>
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>
+            Ableitungen:
+            <ul>
+              <li>1. Ableitung: \(f'(x)=\text e^{-x}\cdot (x-2)\)</li>
+              <li>2. Ableitung: \(f''(x)=\text e^{-x}\cdot (3-x)\)</li>
+              <li>3. Ableitung: \(f'''(x)=\text e^{-x}\cdot (x-4)\)</li>
+            </ul>
+            Eigenschaften:
+            <ul>
+              <li>Nullstellen: \(x=1\)</li>
+              <li>Extrema: \(x=2), Hochpunkt \(H(2\,|\,-0,14)\)</li>
+              <li>Wendepunkte: \(x=3\), LR \(W(3\,|\,-0,27)\)</li>
+            </ul>
+          </li>
+          <li>Unendlichkeitsverhalten:
+            <ul>
+              <li>Für \(x\rightarrow +\infty\) gilt \(f(x)=0\)</li>
+              <li>Für \(x\rightarrow -\infty\) gilt \(f(x)\rightarrow \infty\)</li>
+            </ul>
+          </li>
+          <li>Zeichnung:
+            <div class="centered" style="margin: 5px;">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="-12 -6 26 13" style="background-color: #232323">
+                <!-- The viewBox is set to (-12, -6, 26, 13) which provides a coordinate space of width 38 and height 19 units.
+                     The center of the SVG is (0, 0). You can adjust this viewBox as needed. -->
+                <!-- Add grid lines -->
+                <defs>
+                  <pattern id="grid" width="1" height="1" patternUnits="userSpaceOnUse">
+                    <path d="M 1 0 L 0 0 0 1" fill="none" stroke="#333333" stroke-width="0.05" />
+                  </pattern>
+                </defs>
+                <rect x="-9.9" y="-5.5" width="19.8" height="11" fill="url(#grid)" />
+
+                <!-- Draw the x-axis line -->
+                <line x1="-10" y1="0" x2="10" y2="0" stroke="#a7a7a7" stroke-width="0.05" />
+
+                <!-- Draw the x-axis arrowhead -->
+                <polygon points="10.5,0 9.8,-0.15 9.8,0.15" fill="#a7a7a7" />
+
+                <!-- Draw the y-axis line -->
+                <line x1="0" y1="5" x2="0" y2="-5" stroke="#a7a7a7" stroke-width="0.05" />
+
+                <!-- Draw the y-axis arrowhead -->
+                <polygon points="0,-5.5 -0.15,-4.8 0.15,-4.8" fill="#a7a7a7" />
+
+                <!-- Add "x" at the end of the x-axis -->
+                <text x="10.7" y="0.7" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">x</text>
+
+                <!-- Add "y" at the end of the y-axis -->
+                <text x="-0.8" y="-5.3" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">y</text>
+
+
+                <!-- Add numbers to x-axis-->
+                <text x="0.9" y="0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">1</text>
+
+                <!-- Add numbers to y-axis-->
+                <text x="-0.75" y="-0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">1</text>
+
+                <path d="M -0.9 -4.67 L -0.8 -4.01 -0.7 -3.42 -0.6 -2.92 -0.5 -2.47
+                -0.4 -2.09 -0.3 -1.75 -0.2 -1.47 -0.1 -1.22 0 -1
+                0.1 -0.81 0.2 -0.65 0.3 -0.52 0.4 -0.4 0.5 -0.3
+                0.6 -0.22 0.7 -0.15 0.8 -0.09 0.9 -0.04 1 0
+                1.1 0.03 1.2 0.06 1.3 0.08 1.4 0.1 1.5 0.11
+                1.6 0.12 1.7 0.13 1.8 0.13 1.9 0.13 2 0.14
+                2.1 0.13 2.2 0.13 2.3 0.13 2.4 0.13 2.5 0.12
+                2.6 0.12 2.7 0.11 2.8 0.11 2.9 0.1 3 0.1
+                3.1 0.09 3.2 0.09 3.3 0.08 3.4 0.08 3.5 0.08
+                3.6 0.07 3.7 0.07 3.8 0.06 3.9 0.06 4 0.05" fill="none" stroke="darkgoldenrod" stroke-width="0.1" />
+
+                <!-- Add "y" at the end of the y-axis -->
+                <text x="4.5" y="-0.5" font-family="serif" font-size="0.9" font-style="italic"
+                  fill="darkgoldenrod">f</text>
+              
+
+              </svg>
+            </div>
+          </li>
+          <li>Wendetangente: \(t(x)=\frac{1}{\text e^3}\cdot x-\frac{5}{\text e^3}\approx 0,05x-0,25\)</li>
+        </ol>
+      </details>
+      <details id="a1">
+        <summary>Kurvendiskussion</summary>
+        <ul class="custom-marker parens-around lower-alpha more-spacing">
+          <li>Definitionsbereich: \(D=\{x\in \mathbb R\}\)</li>
+          <li>Ableitungen:
+            <ul>
+              <li>1. Ableitung: \(f'(x)=-\tfrac12\text e^{-\tfrac12x}\cdot (x^2-3x-4)\)</li>
+              <li>2. Ableitung: \(f''(x)=\tfrac14\text e^{-\tfrac12x}\cdot (x^2-7x+2)\)</li>
+              <li>3. Ableitung: \(f'''(x)=-\tfrac18\text e^{-\tfrac12x}\cdot (x^2-11x+16)\)</li>
+            </ul>
+          </li>
+          <li>
+            Nullstellen: \(x_1=-2\), \(x_2=1\)<br>
+            \(y\)-Achse: \(y=-2\)
+          </li>
+          <li>Extrema: 
+            <ul>
+              <li>Tiefpunkt: \(T(-1\,|\,-3,30)\)</li>
+              <li>Hochpunkt: \(H(4\,|\,2,44)\)</li>
+            </ul>
+          </li>
+          <li>Wendepunkte:
+            <ul>
+              <li>LR-Wendepunkt: \(W_1(0,30\,|\,-1,39)\)</li>
+              <li>RL-Wendepunkt: \(W_2(6,70\,|\,1,74)\)</li>
+            </ul>
+          </li>
+          <li>Monotonieverhalten:
+            <ul>
+              <li>Für \(-\infty < x \leq -1\): monoton fallend</li>
+              <li>Für \(-1 \leq x \leq 4\): monoton steigend</li>
+              <li>Für \(4 \leq x < \infty\): monoton fallend</li>
+            </ul>
+          </li>
+          <li>Unendlichkeitsverhalten:
+            <ul>
+              <li>Für \(x\rightarrow +\infty\) gilt \(f(x)=0\)</li>
+              <li>Für \(x\rightarrow -\infty\) gilt \(f(x)\rightarrow \infty\)</li>
+            </ul>
+          </li>
+          <li>Wertebereich: \(W=\{y\in\mathbb R\,|\, y\geq -3,30\}\)</li>
+          <li>Symmetrie: Keine</li>
+          <li>Zeichnung:
+            <div class="centered" style="margin: 5px;">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="-12 -6 26 13" style="background-color: #232323">
+                <!-- The viewBox is set to (-12, -6, 26, 13) which provides a coordinate space of width 38 and height 19 units.
+                     The center of the SVG is (0, 0). You can adjust this viewBox as needed. -->
+                <!-- Add grid lines -->
+                <defs>
+                  <pattern id="grid" width="1" height="1" patternUnits="userSpaceOnUse">
+                    <path d="M 1 0 L 0 0 0 1" fill="none" stroke="#333333" stroke-width="0.05" />
+                  </pattern>
+                </defs>
+                <rect x="-9.9" y="-5.5" width="19.8" height="11" fill="url(#grid)" />
+
+                <!-- Draw the x-axis line -->
+                <line x1="-10" y1="0" x2="10" y2="0" stroke="#a7a7a7" stroke-width="0.05" />
+
+                <!-- Draw the x-axis arrowhead -->
+                <polygon points="10.5,0 9.8,-0.15 9.8,0.15" fill="#a7a7a7" />
+
+                <!-- Draw the y-axis line -->
+                <line x1="0" y1="5" x2="0" y2="-5" stroke="#a7a7a7" stroke-width="0.05" />
+
+                <!-- Draw the y-axis arrowhead -->
+                <polygon points="0,-5.5 -0.15,-4.8 0.15,-4.8" fill="#a7a7a7" />
+
+                <!-- Add "x" at the end of the x-axis -->
+                <text x="10.7" y="0.7" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">x</text>
+
+                <!-- Add "y" at the end of the y-axis -->
+                <text x="-0.8" y="-5.3" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">y</text>
+
+
+                <!-- Add numbers to x-axis-->
+                <text x="0.9" y="0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">1</text>
+
+                <!-- Add numbers to y-axis-->
+                <text x="-0.75" y="-0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">1</text>
+
+                <path d="M -2.4 -4.52 L -2.3 -3.13 -2.2 -1.92 -2.1 -0.89 -2 0
+                -1.9 0.75 -1.8 1.38 -1.7 1.9 -1.6 2.31 -1.5 2.65
+                -1.4 2.9 -1.3 3.08 -1.2 3.21 -1.1 3.28 -1 3.3
+                -0.9 3.28 -0.8 3.22 -0.7 3.14 -0.6 3.02 -0.5 2.89
+                -0.4 2.74 -0.3 2.57 -0.2 2.39 -0.1 2.2 0 2
+                0.1 1.8 0.2 1.59 0.3 1.39 0.4 1.18 0.5 0.97
+                0.6 0.77 0.7 0.57 0.8 0.38 0.9 0.18 1 0
+                1.1 -0.18 1.2 -0.35 1.3 -0.52 1.4 -0.68 1.5 -0.83
+                1.6 -0.97 1.7 -1.11 1.8 -1.24 1.9 -1.36 2 -1.47
+                2.1 -1.58 2.2 -1.68 2.3 -1.77 2.4 -1.86 2.5 -1.93
+                2.6 -2.01 2.7 -2.07 2.8 -2.13 2.9 -2.18 3 -2.23
+                3.1 -2.27 3.2 -2.31 3.3 -2.34 3.4 -2.37 3.5 -2.39
+                3.6 -2.41 3.7 -2.42 3.8 -2.43 3.9 -2.43 4 -2.44
+                4.1 -2.43 4.2 -2.43 4.3 -2.42 4.4 -2.41 4.5 -2.4
+                4.6 -2.38 4.7 -2.36 4.8 -2.34 4.9 -2.32 5 -2.3
+                5.1 -2.27 5.2 -2.25 5.3 -2.22 5.4 -2.19 5.5 -2.16
+                5.6 -2.13 5.7 -2.09 5.8 -2.06 5.9 -2.03 6 -1.99
+                6.1 -1.96 6.2 -1.92 6.3 -1.89 6.4 -1.85 6.5 -1.81
+                6.6 -1.78 6.7 -1.74 6.8 -1.7 6.9 -1.67 7 -1.63
+                7.1 -1.59 7.2 -1.56 7.3 -1.52 7.4 -1.49 7.5 -1.45
+                7.6 -1.42 7.7 -1.38 7.8 -1.35 7.9 -1.32 8 -1.28
+                8.1 -1.25 8.2 -1.22 8.3 -1.19 8.4 -1.15 8.5 -1.12
+                8.6 -1.09 8.7 -1.06 8.8 -1.03 8.9 -1.01 9 -0.98
+                9.1 -0.95 9.2 -0.92 9.3 -0.9 9.4 -0.87 9.5 -0.85
+                9.6 -0.82 9.7 -0.8 9.8 -0.77 9.9 -0.75 10 -0.73" fill="none" stroke="darkgoldenrod" stroke-width="0.1" />
+
+                <!-- Add "y" at the end of the y-axis -->
+                <text x="10.25" y="-0.6" font-family="serif" font-size="0.9" font-style="italic"
+                  fill="darkgoldenrod">f</text>
+              
+
+              </svg>
+            </div>
+          </li>
+        </ul>
+      </details>
+      
     </section>
 
     <section id="meme">
@@ -401,7 +929,7 @@
     <a href="/misc/impressum.html">Impressum</a>
     <div class="lastModified" align="center">
       Zuletzt geändert:<br />
-      9. Februar 2025
+      10. Februar 2025
       <!-- <span id="lastModifiedDate"></span> -->
     </div>
     <a href="/misc/datenschutz.html">Datenschutz</a>
