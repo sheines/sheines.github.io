@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" initial-scale="1.0" />
+  <meta name="author" content="Sebastian Hitziger" />
+  <meta name="robot" content="noindex" />
+  <title>HITZ | Fkt-Eigensch. | Unendlichkeitsverhalten I </title>
+  <link rel="stylesheet" type="text/css" href="/css/colors.css" />
+  <link rel="stylesheet" type="text/css" href="/css/gridNoTimeline.css" />
+  <link rel="stylesheet" type="text/css" href="/css/navbar.css" />
+  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="/css/courses.css" />
+  <script type="text/javascript" src="jquery-3.3.1.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+
+
+<body>
+  <header>
+    <div class="nav">
+      <input type="checkbox" id="nav-check" />
+      <div class="nav-header">
+        <div class="nav-title">
+          <a href="/">Hr. Hitzigers Unterricht</a>
+        </div>
+      </div>
+      <div class="nav-btn">
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+
+      <div class="nav-links">
+        <a href="/content/math/">Mathematik</a>
+        <a href="/content/math/12/">Klasse 12</a>
+        <a href="/content/math/12/ana1/">Analysis I</a>
+        <a href="/content/math/12/ana1/ableit/">Differentialrechnung</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section>
+      <h2>Unendlichkeitsverhalten I</h2>
+      <div class="ziele">
+        <p>
+          Nachfolgend soll gezeigt werden, wie das Unendlichkeitsverhalten von (Ganz-)Rationalen
+          Funktionen bestimmt wird.
+        </p>
+        <p>
+          <a href="#aufgaben">Direkt zu den Aufgaben</a>
+        </p>
+      </div>
+
+
+
+      <div class="theorie">
+
+        <div class="definition">
+          <h4>Unendlichkeitsverhalten</h4>
+          <p>
+            In der Kurvendiskussion interessiert man sich sehr oft
+            für bestimmte Grenzwerte. Dafür untersucht man, was bei
+            Funktionen passiert, wenn unendlich große Werte oder
+            unendlich kleine Werte eingesetzt würden. Dies kann man
+            zum Beispiel durch logische Überlegungen oder das
+            Einsetzten großer oder kleiner Zahlen sowie
+            mathematischer Regeln erreichen.
+          </p>
+          <p>
+            Es wird also der folgende Grenzwert bestimmt werden:
+            \begin{align*}
+            \lim_{x\rightarrow \pm\infty} f(x)
+            \end{align*}
+          </p>
+          <p>
+            Es gibt mehrere Wege das Verhalten im Unendlichen zu bestimmen:
+          <ul>
+            <li>Testeinsetzung</li>
+            <li>Termvereinfachung</li>
+          </ul>
+          </p>
+        </div>
+        <h6>Beispiel Testeinsetzung:</h6>
+        <p>
+          Zur Testeinsetzung wir eine Wertetabelle erstellt,
+          welche immer größere/kleinere Werte
+          (z.B. \(\pm 1, \pm 10, \pm 100, \pm 1\,000\) etc.) enthält.
+        </p>
+        <p>
+        <ul>
+          <li>Bestimme das Unendlichkeitsverhalten der Funktion \(f(x)=x^3-2x+5\):
+            <div class="centered" style="margin: 5px;">
+              <div class="table-wrapper">
+                <table class="wechseltabelle">
+                  <tr>
+                    <th>\(x\)</th>
+                    <td>\(10\)</td>
+                    <td>\(100\)</td>
+                    <td>\(1\,000\)</td>
+                  </tr>
+                  <tr>
+                    <th>\(f(x)\)</th>
+                    <td>\(985\) </td>
+                    <td>\(999\,805\)</td>
+                    <td>\(999\,998\,005\)</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            Der Wert wird immer größer. Es ist davon auszugehen, dass er es
+            auch weiterhin tun wird.
+            <div class="centered" style="margin: 5px;">
+              <div class="table-wrapper">
+                <table class="wechseltabelle">
+                  <tr>
+                    <th>\(x\)</th>
+                    <td>\(-10\)</td>
+                    <td>\(-100\)</td>
+                    <td>\(-1\,000\)</td>
+                  </tr>
+                  <tr>
+                    <th>\(f(x)\)</th>
+                    <td>\(-975\) </td>
+                    <td>\(-999\,795\)</td>
+                    <td>\(-999\,997\,995\)</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            Der Wert wird immer kleiner. Es ist davon auszugehen, dass er es
+            auch weiterhin tun wird.
+            </p>
+            <p>
+              Aus den Tabellen kann nun entnommen werden:
+            <ul>
+              <li>\(\lim_\limits{x\rightarrow +\infty} f(x)\rightarrow \infty\)</li>
+              <li>\(\lim_\limits{x\rightarrow -\infty} f(x)\rightarrow -\infty\)</li>
+            </ul>
+            </p>
+          </li>
+          <li>
+            Bestimme das Unendlichkeitsverhalten der Funktion \(g(x)=\dfrac{2x-1}{x}\):
+            <div class="centered" style="margin: 5px;">
+              <div class="table-wrapper">
+                <table class="wechseltabelle">
+                  <tr>
+                    <th>\(x\)</th>
+                    <td>\(10\)</td>
+                    <td>\(100\)</td>
+                    <td>\(1\,000\)</td>
+                  </tr>
+                  <tr>
+                    <th>\(g(x)\)</th>
+                    <td>\(1,9\) </td>
+                    <td>\(1,99\)</td>
+                    <td>\(1,999\)</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            Der Wert hähert sich immer weiter der Zahl zwei an. Es ist davon auszugehen, dass er es
+            auch weiterhin tun wird.
+            <div class="centered" style="margin: 5px;">
+              <div class="table-wrapper">
+                <table class="wechseltabelle">
+                  <tr>
+                    <th>\(x\)</th>
+                    <td>\(-10\)</td>
+                    <td>\(-100\)</td>
+                    <td>\(-1\,000\)</td>
+                  </tr>
+                  <tr>
+                    <th>\(g(x)\)</th>
+                    <td>\(2,1\) </td>
+                    <td>\(2,01\)</td>
+                    <td>\(2,001\)</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            Der Wert hähert sich immer weiter der Zahl zwei an. Es ist davon auszugehen, dass er es
+            auch weiterhin tun wird.
+            </p>
+            <p>
+              Aus den Tabellen kann nun entnommen werden:
+            <ul>
+              <li>\(\lim_\limits{x\rightarrow +\infty} g(x)=2\)</li>
+              <li>\(\lim_\limits{x\rightarrow -\infty} g(x)=2\)</li>
+            </ul>
+            </p>
+          </li>
+        </ul>
+        <div class="definition">
+          <h4>Termvereinfachung</h4>
+          <p>
+            Im Gegensatz zur Wertetabelle werden bei Termvereinfachungen bekannte Eigenschaften
+            der Funktionen genutzt.
+          </p>
+          <p>
+            Vorgehen:
+          <ol>
+            <li> Grenzwert aufstellen </li>
+            <li> Term so vereinfachen/zerlegen, dass bekannte
+              Grenzwerte gebildet werden können (z.B. höchste Potenz
+              ausklammern) </li>
+            <li> Bei ganzrationalen Funktionen reicht die Betrachtung des
+              Teiltermes mit der höchsten Potenz.</li>
+          </ol>
+          </p>
+          <p>
+            Es gilt:
+          <ul class="more-spacing">
+            <li>\(\displaystyle \lim_{x\rightarrow \pm \infty} x^{\text{gerade und positiv}}\rightarrow +\infty \)</li>
+            <li>\(\displaystyle \lim_{x\rightarrow \pm \infty} x^{\text{ungerade und positiv}}\rightarrow \pm\infty \)
+            </li>
+            <li>\(\displaystyle \lim_{x\rightarrow \pm \infty} \frac{a}{x^n} = 0 \)</li>
+            <li>\(\displaystyle \lim_{x\rightarrow \pm \infty} a = a \)</li>
+          </ul>
+
+          </p>
+        </div>
+        <h6>Beispiel 1:</h6>
+        <p>
+          Bestimme das Unendlichkeitsverhalten der Funktion \(f(x)=x^3-2x+5\):
+        </p>
+        <p>
+          Es muss also der Grenzwert \(\lim_\limits{x\rightarrow \pm \infty} x^3-2x+5\) bestimmt
+        </p>
+        <p>Dazu werden folgende Überlegungen angestellt:
+          <ul>
+            <li>Es handelt sich bei \(f\) um eine ganzrationale Funktion.</li>
+            <li>Es muss demnach nur der Teilterm mit der höchsten Potenz betrachtet werden, hier \(x^3\).</li>
+            <li>\(x^3\) hat einen positiven und ungeraden Exponenten. Der Grapg strebt also gegen \(\pm\infty\).</li>
+            <li>Der Koeffizient von \(x^3\) ist \(1\), das heißt er verändert das Verhalten nicht.</li>
+          </ul>
+          Daraus kann geschlussfolgert werden:
+          <ul>
+            <li>\(\lim_\limits{x\rightarrow +\infty} f(x)\rightarrow +\infty\)</li>
+            <li>\(\lim_\limits{x\rightarrow -\infty} f(x)\rightarrow -\infty\)</li>
+          </ul>
+        </p>
+        <h6>Beispiel 1:</h6>
+        <p>
+          Bestimme das Unendlichkeitsverhalten der Funktion \(g(x)=\dfrac{2x-1}{x}\):
+        </p>
+        <p>
+          Es muss also der Grenzwert \(\lim_\limits{x\rightarrow \pm \infty} \dfrac{2x-1}{x}\) bestimmt
+        </p>
+        <p>Dazu werden folgende Überlegungen angestellt:
+          <ul>
+            <li>Es handelt sich bei \(g\) um eine gebrochenrationale Funktion.</li>
+            <li>Es sollte also im Zähler und Nenner jeweils der Term mit dem größten Exponenten, 
+              hier \(x^{\color{#454545} 1}\), ausgeklammert werden:<br>
+              \(=\lim_\limits{x\rightarrow \pm \infty} \dfrac{x\cdot \left(2-\frac1x\right)}{x}\)<br>
+              Da \(x\) gegen \(\pm\infty\) steben soll, kann \(x\) einfach gekürzt werden:<br>
+              \(=\lim_\limits{x\rightarrow \pm \infty} \dfrac{2-\frac1x}{1}\)
+            </li>
+            <li>Für den verbleibenden Teilterm mit \(x\) gilt: eins durch unendlich ist gleich 0.<br>
+              \(=\lim_\limits{x\rightarrow \pm \infty} \dfrac{2-\cancelto{0}{\frac1x}}{1} =\lim_\limits{x\rightarrow \pm \infty}\frac{2-0}{1}=2\)
+            </li>
+            <li>Der Term enthält nun kein \(x\) mehr.</li>
+          </ul>
+          Daraus kann geschlussfolgert werden:
+          <ul>
+            <li>\(\lim_\limits{x\rightarrow +\infty} g(x)=2\)</li>
+            <li>\(\lim_\limits{x\rightarrow -\infty} g(x)=2\)</li>
+          </ul>
+        </p>
+      </div>
+
+
+      <!-- <section>
+            <div class="videos">
+                <iframe width="360" height="202" src="https://www.youtube.com/embed/7HLIxsrAMKQ"
+                    title="Wendepunkte bestimmen" frameborder="0" allow="web-share" allowfullscreen></iframe>
+
+            </div>
+        </section> -->
+      <section class="aufgaben" id="aufgaben">
+        <h3>Aufgaben zum Unendlichkeitsverhalten</h3>
+        <ol class="custom-marker point-after decimal">
+          <li>
+            Bestimme das Unendlichkeitsverhalten der folgenden Funktionen! <a href="#a1">Lösungen</a>
+          <details class="openClose" style="border-color: lightblue; margin-top: 10px;">
+            <summary class="nonumber" data-open="Funktionen einklappen" data-close="Funktionen ausklappen">
+            </summary>
+            <ol class="custom-marker parens-around lower-alpha more-spacing">
+              <li>\(a(x)=3x^2-7x\)</li>
+              <li>\(b(x)=-2x^3+2x^2\)</li>
+              <li>\(c(x)=\dfrac{x^3+x}{x^4-5}\)</li>
+              <li>\(d(x)=\dfrac{x^3+1}{x^2+1}\)</li>
+              <li>\(e(x)=\dfrac{2x^2-3}{5x^2+1}\)</li>
+              <li>\(f(x)=\sqrt{\dfrac{4x}{x-2}}\)</li>
+              <li>\(g(x)=\dfrac{x^3-5x^2}{x^3-3x^2}\)</li>
+              <li>\(h(x)=\dfrac{2x^2-4}{1-x^2}\)</li>
+              <li>\(i(x)=\dfrac{5-x}{3+x}\)</li>
+              <li>\(j(x)=\dfrac{x^2-3x+2}{3x^2-5x}\)</li>
+              <li>\(k(x)=\dfrac{1}{x+\frac 1x}\)</li>
+            </ol>
+          </details>
+          </li>
+          <li>Seite 76/77 Übung 1 bis 3<a href="#a2">Lösungen</a> </li>
+        </ol>
+
+      </section>
+
+      <section class="loesungen">
+        <h3>Lösungen zum Unendlichkeitsverhalten</h3>
+
+        <details id="a1">
+          <summary>Wendepunkte</summary>
+          <ol class="custom-marker parens-around lower-alpha more-spacing">
+            <li>
+              
+            </li>
+          </ol>
+
+        </details>
+
+       
+      </section>
+
+      <section id="meme">
+        <div class="images">
+          <img src="/img/unendlich_meme1.webp" style="object-fit: scale-down; max-width: 300px" />
+        </div>
+        <div class="centered">
+          <a href="https://www.reddit.com/r/memes/comments/wddtmy/the_real_infinity_saga/#lightbox" target="_blank" rel="noopener noreferrer">
+            <h6>Original von scott5free </h6>
+          </a>
+        </div>
+      </section>
+  </main>
+  <footer>
+    <a href="/misc/impressum.html">Impressum</a>
+    <div class="lastModified" align="center">
+      Zuletzt geändert:<br />
+      16. Februar 2025
+      <!-- <span id="lastModifiedDate"></span> -->
+    </div>
+    <a href="/misc/datenschutz.html">Datenschutz</a>
+  </footer>
+</body>
