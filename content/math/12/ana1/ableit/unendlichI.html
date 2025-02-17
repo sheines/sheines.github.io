@@ -102,12 +102,14 @@
                     <td>\(10\)</td>
                     <td>\(100\)</td>
                     <td>\(1\,000\)</td>
+                    <td>\(\rightarrow \infty\)</td>
                   </tr>
                   <tr>
                     <th>\(f(x)\)</th>
                     <td>\(985\) </td>
                     <td>\(999\,805\)</td>
                     <td>\(999\,998\,005\)</td>
+                    <td>\(\rightarrow \infty\)</td>
                   </tr>
                 </table>
               </div>
@@ -122,12 +124,14 @@
                     <td>\(-10\)</td>
                     <td>\(-100\)</td>
                     <td>\(-1\,000\)</td>
+                    <td>\(\rightarrow -\infty\)</td>
                   </tr>
                   <tr>
                     <th>\(f(x)\)</th>
                     <td>\(-975\) </td>
                     <td>\(-999\,795\)</td>
                     <td>\(-999\,997\,995\)</td>
+                    <td>\(\rightarrow -\infty\)</td>
                   </tr>
                 </table>
               </div>
@@ -153,12 +157,14 @@
                     <td>\(10\)</td>
                     <td>\(100\)</td>
                     <td>\(1\,000\)</td>
+                    <td>\(\rightarrow \infty\)</td>
                   </tr>
                   <tr>
                     <th>\(g(x)\)</th>
                     <td>\(1,9\) </td>
                     <td>\(1,99\)</td>
                     <td>\(1,999\)</td>
+                    <td>\(\rightarrow 2\)</td>
                   </tr>
                 </table>
               </div>
@@ -173,12 +179,14 @@
                     <td>\(-10\)</td>
                     <td>\(-100\)</td>
                     <td>\(-1\,000\)</td>
+                    <td>\(\rightarrow -\infty\)</td>
                   </tr>
                   <tr>
                     <th>\(g(x)\)</th>
                     <td>\(2,1\) </td>
                     <td>\(2,01\)</td>
                     <td>\(2,001\)</td>
+                    <td>\(\rightarrow 2\)</td>
                   </tr>
                 </table>
               </div>
@@ -229,13 +237,13 @@
           Bestimme das Unendlichkeitsverhalten der Funktion \(f(x)=x^3-2x+5\):
         </p>
         <p>
-          Es muss also der Grenzwert \(\lim_\limits{x\rightarrow \pm \infty} x^3-2x+5\) bestimmt
+          Es muss also der Grenzwert \(\lim_\limits{x\rightarrow \pm \infty} x^3-2x+5\) bestimmt werden.
         </p>
         <p>Dazu werden folgende Überlegungen angestellt:
           <ul>
             <li>Es handelt sich bei \(f\) um eine ganzrationale Funktion.</li>
             <li>Es muss demnach nur der Teilterm mit der höchsten Potenz betrachtet werden, hier \(x^3\).</li>
-            <li>\(x^3\) hat einen positiven und ungeraden Exponenten. Der Grapg strebt also gegen \(\pm\infty\).</li>
+            <li>\(x^3\) hat einen positiven und ungeraden Exponenten. Der Graph strebt also gegen \(\pm\infty\).</li>
             <li>Der Koeffizient von \(x^3\) ist \(1\), das heißt er verändert das Verhalten nicht.</li>
           </ul>
           Daraus kann geschlussfolgert werden:
@@ -249,7 +257,7 @@
           Bestimme das Unendlichkeitsverhalten der Funktion \(g(x)=\dfrac{2x-1}{x}\):
         </p>
         <p>
-          Es muss also der Grenzwert \(\lim_\limits{x\rightarrow \pm \infty} \dfrac{2x-1}{x}\) bestimmt
+          Es muss also der Grenzwert \(\lim_\limits{x\rightarrow \pm \infty} \dfrac{2x-1}{x}\) bestimmt werden.
         </p>
         <p>Dazu werden folgende Überlegungen angestellt:
           <ul>
@@ -313,16 +321,149 @@
         <h3>Lösungen zum Unendlichkeitsverhalten</h3>
 
         <details id="a1">
-          <summary>Wendepunkte</summary>
+          <summary>Unendlichkeitsverhalten I</summary>
           <ol class="custom-marker parens-around lower-alpha more-spacing">
-            <li>
-              
+            Es wird jeweils der entscheidende Term, bzw. das gekürzte Endergebnis angegeben.
+            <li>\(3x^2\)
+              <ul>
+                <li>\(\lim_\limits{x\rightarrow +\infty} a(x)\rightarrow +\infty\)</li>
+                <li>\(\lim_\limits{x\rightarrow -\infty} a(x)\rightarrow +\infty\)</li>
+              </ul>    
+            </li>
+            <li>\(-2x^3\)
+              <ul>
+                <li>\(\lim_\limits{x\rightarrow +\infty} b(x)\rightarrow -\infty\)</li>
+                <li>\(\lim_\limits{x\rightarrow -\infty} b(x)\rightarrow +\infty\)</li>
+              </ul>
+            </li>
+            <li>\(\displaystyle\frac{\cancel{x^3}(1+\cancelto{0}{\frac{1}{x^2}})}{x^\cancel{4}(1-\cancelto{0}{\frac{5}{x^4}})}\Rightarrow \frac1x\)
+              <ul>
+                <li>\(\lim_\limits{x\rightarrow +\infty} c(x)=0\)</li>
+                <li>\(\lim_\limits{x\rightarrow -\infty} c(x)=0\)</li>
+              </ul>
+            </li>
+            <li>\(\displaystyle\frac{x^\cancel 3 (1+\cancelto{0}{\frac{1}{x^3}})}{\cancel{x^2}(1+\cancelto{0}{\frac{1}{x^2}})}\Rightarrow x\)
+              <ul>
+                <li>\(\lim_\limits{x\rightarrow +\infty} d(x)\rightarrow +\infty\)</li>
+                <li>\(\lim_\limits{x\rightarrow -\infty} d(x)\rightarrow -\infty\)</li>
+              </ul>
+            </li>
+            <li>\(\displaystyle\frac{\cancel{x^2}(2-\cancelto{0}{\frac{3}{x^2}})}{\cancel{x^2}(5+\cancelto{0}{\frac{1}{x^2}})}\Rightarrow \tfrac25\)
+              <ul>
+                <li>\(\lim_\limits{x\rightarrow +\infty} e(x)=\tfrac25\)</li>
+                <li>\(\lim_\limits{x\rightarrow -\infty} e(x)=\tfrac25\)</li>
+              </ul>
+            </li>
+            <li>\(\displaystyle\sqrt{\frac{\cancel x \cdot 4}{\cancel x (1-\cancelto{0}{\frac{2}{x}})}}\Rightarrow\sqrt{4}\Rightarrow 2\)
+              <ul>
+                <li>\(\lim_\limits{x\rightarrow +\infty} f(x)=2\)</li>
+                <li>\(\lim_\limits{x\rightarrow -\infty} f(x)=2\)</li>
+              </ul>
+            </li>
+            <li>\(x^3\) in Zähler und Nenner ausgeklammert
+              <ul>
+                <li>\(\lim_\limits{x\rightarrow +\infty} g(x)=1\)</li>
+                <li>\(\lim_\limits{x\rightarrow -\infty} g(x)=1\)</li>
+              </ul>
+            </li>
+            <li>\(x^2\) in Zähler und Nenner ausgeklammert
+              <ul>
+                <li>\(\lim_\limits{x\rightarrow +\infty} h(x)=-2\)</li>
+                <li>\(\lim_\limits{x\rightarrow -\infty} h(x)=-2\)</li>
+              </ul>
+            </li>
+            <li>\(x\) in Zähler und Nenner ausgeklammert
+              <ul>
+                <li>\(\lim_\limits{x\rightarrow +\infty} i(x)=-1\)</li>
+                <li>\(\lim_\limits{x\rightarrow -\infty} i(x)=-1\)</li>
+              </ul>
+            </li>
+            <li>\(x^2\) in Zähler und Nenner ausgeklammert
+              <ul>
+                <li>\(\lim_\limits{x\rightarrow +\infty} j(x)=\tfrac13\)</li>
+                <li>\(\lim_\limits{x\rightarrow -\infty} j(x)=\tfrac13\)</li>
+              </ul>
+            </li>
+            <li>Der zweite Summand des Nenners strebt gegen null, der erste gegen unendlich. Unendlich plus null ist unendlich. 
+              Eins durch unendlich ist gleich 0.
+              <ul>
+                <li>\(\lim_\limits{x\rightarrow +\infty} k(x)=0\)</li>
+                <li>\(\lim_\limits{x\rightarrow -\infty} k(x)=0\)</li>
+              </ul>
             </li>
           </ol>
 
         </details>
-
-       
+        <details id="a2">
+          <summary>Übung 1: Testeinsetzungen</summary>
+          <ol class="custom-marker parens-around lower-alpha more-spacing">
+            <li>\(\lim_\limits{x\rightarrow -\infty} f(x)=2\)
+              <div class="centered" style="margin: 5px;">
+                <div class="table-wrapper">
+                  <table class="wechseltabelle">
+                    <tr>
+                      <th>\(x\)</th>
+                      <td>\(-10\)</td>
+                      <td>\(-100\)</td>
+                      <td>\(-1\,000\)</td>
+                      <td>\(\rightarrow -\infty\)</td>
+                    </tr>
+                    <tr>
+                      <th>\(g(x)\)</th>
+                      <td>\(1,9\) </td>
+                      <td>\(1,99\)</td>
+                      <td>\(1,999\)</td>
+                      <td>\(\rightarrow 2\)</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              
+            </li>
+            <li>\(\lim_\limits{x\rightarrow \infty} f(x)=0\)
+              <div class="centered" style="margin: 5px;">
+                <div class="table-wrapper">
+                  <table class="wechseltabelle">
+                    <tr>
+                      <th>\(x\)</th>
+                      <td>\(10\)</td>
+                      <td>\(100\)</td>
+                      <td>\(1\,000\)</td>
+                      <td>\(\rightarrow \infty\)</td>
+                    </tr>
+                    <tr>
+                      <th>\(g(x)\)</th>
+                      <td>\(0,11\) </td>
+                      <td>\(0,0101\)</td>
+                      <td>\(0,001\,001\)</td>
+                      <td>\(\rightarrow 0\)</td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+              
+            </li>
+          </ol>
+        </details>
+        <details id="a2">
+          <summary>Übung 2: Termumformung</summary>
+          <ol class="custom-marker parens-around lower-alpha more-spacing">
+            <li>\(\lim_\limits{x\rightarrow \pm\infty} f(x)=4\)</li>
+            <li>\(\lim_\limits{x\rightarrow \pm\infty} f(x)=3\)</li>
+            <li>\(\lim_\limits{x\rightarrow \pm\infty} f(x)=1\)</li>
+            <li>\(\lim_\limits{x\rightarrow \pm\infty} f(x)=\tfrac13\)</li>
+            <li>\(\lim_\limits{x\rightarrow \pm\infty} f(x)=-1\)</li>
+            <li>\(\lim_\limits{x\rightarrow \pm\infty} f(x)=1\)</li>
+          </ol>
+        </details>
+        <details id="a3">
+          <summary>Übung 3: Klimaanlange</summary>
+          <ol class="custom-marker parens-around lower-alpha more-spacing">
+            <li>\(t=0\) einsetzen: \(T=20\,^\circ\text C\)</li>
+            <li>\(t=60\) einsetzen: \(T=41,2\,^\circ\text C\)</li>
+            <li>Grenzwert \(t\rightarrow \infty\): \(\lim_\limits{t\rightarrow \infty} T(t)=50\,^\circ\text C\)</li>
+          </ol>
+        </details>
       </section>
 
       <section id="meme">
