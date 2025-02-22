@@ -49,22 +49,24 @@
             <h2>Abituraufgaben</h2>
             <div class="ziele">
                 <p>
-                    Nachfolgend werden einige Abituraufgaben zum Thema der Differentialrechnung aufgezeigt. Alle Aufgaben 
+                    Nachfolgend werden einige Abituraufgaben zum Thema der Differentialrechnung aufgezeigt. Alle
+                    Aufgaben
                     sollten mit dem bekannten Wissen aus der Differenzialrechnung und der 11. Klasse lösbar sein.
                 </p>
                 <p>
-                    Da die Abituraufgaben der Analysis im Allgemeinen Differenzial- und Integralrechnungsaufgaben enthalten, 
-                    sind nicht immer alle Aufgaben vollständig. 
+                    Da die Abituraufgaben der Analysis im Allgemeinen Differenzial- und Integralrechnungsaufgaben
+                    enthalten,
+                    sind nicht immer alle Aufgaben vollständig.
                 </p>
                 <p>
                     Die Aufgaben sind weder nach Datum noch nach Schwierigkeit sortiert.
                 </p>
                 <p>
                     Die Aufgabentypen sind zweigeteilt:
-                    <ul>
-                        <li><a href="#hmf">Aufgaben <i>ohne</i> Hilfsmittel</a></li>
-                        <li><a href="#rt">Aufgaben <i>mit</i> Hilfsmitteln</a></li>
-                    </ul>
+                <ul>
+                    <li><a href="#hmf">Aufgaben <i>ohne</i> Hilfsmittel</a></li>
+                    <li><a href="#rt">Aufgaben <i>mit</i> Hilfsmitteln</a></li>
+                </ul>
                 </p>
             </div>
         </section>
@@ -72,27 +74,620 @@
         <section class="aufgaben" id="hmf">
             <h3>Aufgaben aus dem Hilfsmittelfreien Teil</h3>
             <ol class="more-spacing">
-                <li>Die Abbildung zeigt den Graphen der Funktion \(f\) mit \(f(x)=x\cdot \text e^{-x}\) 
-                    und \(x\in\mathbb R\). Betrachtet werden die Dreiecke mit den Eckpunkten 
-                    \(O(0\,|\,0)\), \( P(a\,|\,0)\) und \(Q(a\,|\,f(a))\) mit \(x\in\mathbb R^+\).
-                    <div class="centered" style="max-height: 200px;">
+                <li>
+                    <p>
+                        Die Abbildung zeigt den Graphen der Funktion \(f\) mit \(f(x)=x\cdot \text e^{-x}\)
+                        und \(x\in\mathbb R\). Betrachtet werden die Dreiecke mit den Eckpunkten
+                        \(O(0\,|\,0)\), \( P(a\,|\,0)\) und \(Q(a\,|\,f(a))\) mit \(x\in\mathbb R^+\).
+                    </p>
 
+                    <div class="centered" style="max-height: 200px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="-2 -2.5 8 3.5" style="background-color: #232323; ">
+                            <!-- The viewBox is set to (-12, -6, 26, 13) which provides a coordinate space of width 38 and height 19 units.
+                                 The center of the SVG is (0, 0). You can adjust this viewBox as needed. -->
+                            <!-- Add grid lines -->
+                            <!-- <defs>
+                                <pattern id="grid" width="1" height="1" patternUnits="userSpaceOnUse">
+                                    <path d="M 1 0 L 0 0 0 1" fill="none" stroke="#333333" stroke-width="05" />
+                                </pattern>
+                            </defs>
+                            <rect x="-9.9" y="-5.5" width="19.8" height="11" fill="url(#grid)" /> -->
+
+                            <!-- Draw the x-axis line -->
+                            <line x1="-2" y1="0" x2="4" y2="0" stroke="#a7a7a7" stroke-width="0.05" />
+
+                            <!-- Draw the x-axis arrowhead -->
+                            <polygon points="4.5,0 3.8,-0.15 3.8,0.15" fill="#a7a7a7" />
+
+                            <!-- Draw the y-axis line -->
+                            <line x1="0" y1="1" x2="0" y2="-2" stroke="#a7a7a7" stroke-width="0.05" />
+
+                            <!-- Draw the y-axis arrowhead -->
+                            <polygon points="0,-2.5 -0.15,-1.8 0.15,-1.8" fill="#a7a7a7" />
+
+                            <!-- Add "x" at the end of the x-axis -->
+                            <text x="4.3" y="0.7" font-family="serif" font-size="0.5" font-style="italic"
+                                fill="#a8a7a7">x</text>
+
+                            <!-- Add "y" at the end of the y-axis -->
+                            <text x="-0.8" y="-2.0" font-family="serif" font-size="0.5" font-style="italic"
+                                fill="#a8a7a7">y</text>
+
+
+                            <!-- Add numbers to x-axis-->
+                            <!-- <text x="1.9" y="75" font-family="serif" font-size="7" fill="#a8a7a7">2</text> -->
+
+                            <!-- Add numbers to y-axis-->
+                            <!-- <text x="-75" y="-1.75" font-family="serif" font-size="7" fill="#a8a7a7">2</text> -->
+
+                            <path d="M -1.9 25.41 L -1.8 21.78 -1.7 18.61 -1.6 15.85 -1.5 13.45
+                            -1.4 11.35 -1.3 9.54 -1.2 7.97 -1.1 6.61 -1 5.44
+                            -0.9 4.43 -0.8 3.56 -0.7 2.82 -0.6 2.19 -0.5 1.65
+                            -0.4 1.19 -0.3 0.81 -0.2 0.49 -0.1 0.22 0 0
+                            0.1 -0.18 0.2 -0.33 0.3 -0.44 0.4 -0.54 0.5 -0.61
+                            0.6 -0.66 0.7 -0.7 0.8 -0.72 0.9 -0.73 1 -0.74
+                            1.1 -0.73 1.2 -0.72 1.3 -0.71 1.4 -0.69 1.5 -0.67
+                            1.6 -0.65 1.7 -0.62 1.8 -0.6 1.9 -0.57 2 -0.54
+                            2.1 -0.51 2.2 -0.49 2.3 -0.46 2.4 -0.44 2.5 -0.41
+                            2.6 -0.39 2.7 -0.36 2.8 -0.34 2.9 -0.32 3 -0.3
+                            3.1 -0.28 3.2 -0.26 3.3 -0.24 3.4 -0.23 3.5 -0.21
+                            3.6 -0.2 3.7 -0.18 3.8 -0.17 3.9 -0.16 4 -0.15
+                            4.1 -0.14 4.2 -0.13 4.3 -0.12" fill="none" stroke="darkgoldenrod" stroke-width="0.05" />
+
+                        </svg>
                     </div>
+                    <ol class="custom-marker parens-around lower-alpha more-spacing">
+                        <li>Begründen Sie, dass der Flächeninhalt jedes dieser Dreiecke mit dem Term \(\frac12 a^2\cdot\text e^{-a}\) 
+                            bestimmt werden kann!</li>
+                        <li>Unter den betrachteten Dreiecken hat eines den größten Flächeninhalt. 
+                            Bestimmen Sie den zugehörigen Wert von \(a\)!</li>
+                    </ol>
+                    <details class="loesungen">
+                        <summary class="nonumber">Lösung</summary>
+                        <ol class="custom-marker parens-around lower-alpha more-spacing">
+                            <li>Für die Fläche eines Dreiecks gilt: \(A=\tfrac12 gh\). Dabei ist \(g\) die Grundseite und \(h\) die Höhe des Dreiecks.
+                                <p>
+                                    Da das Dreieck die Eckpunkt \(O(0\,|\,0)\), \( P(a\,|\,0)\) und \(Q(a\,|\,f(a))\) hat, kann die Grundseite mit 
+                                \(\overline{OP}\) angenommen werden, die genau \(a\) lang ist. Die Höhe ist dann \(\overline{PQ}\), 
+                                welche \(f(a) = a\cdot \text e^{-a} \) lang ist.
+                                </p>        
+                                <p>
+                                    Damit ergibt sich:<br>
+                                    \(A=\tfrac12\cdot a\cdot a\cdot \text e^{-a}=\frac12 a^2\cdot\text e^{-a}\)
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Die Fläche des Dreiecks hängt von \(a\) ab. Die Formel lautet dann \(A(a)=\frac12 a^2\cdot\text e^{-a}\). 
+                                </p>
+                                <p>
+                                    Für die größte Fläche brauchen wir das Maximum. Beim Maximum ist die erste Ableitung null:
+                                </p>
+                                <p>
+                                    \(A'(a)=\tfrac12\text e^{-a}\cdot(2a-a^2)=0\)
+                                </p>
+                                <p>
+                                    Das gibt die Lösungen \(a=0\) und \(a=-2\)
+                                </p>
+                                <p>
+                                    Um zu entscheiden, welche davon das Maximum ist, wird die zweite Ableitung benötigt:
+                                </p>
+                                <p>
+                                    \(A''(a)=\tfrac12\text e^{-a}\cdot(a^2-4a+2)\)
+                                </p>
+                                <p>
+                                    Einsetzen ergibt, dass das Maximum bei \(a=2\) liegt.
+                                </p>
+                                <p>Alternativ könnte man auch die beiden Flächen \(A(0)\) und \(A(2)\) bestimmen und vergleichen.</p>
+                            </li>
+                        </ol>
+                    </details>
+                </li>
+            </ol>
+            <ol class="more-spacing" start="2">
+                <li>
+                    <p>
+                        Eine Funktion \(f\) ist durch ihre Gleichung \(f(x)=x^3-8x^2+12x\) gegeben.
+                    </p>
+                    <ol class="custom-marker parens-around lower-alpha more-spacing">
+                        <li>Berechnen Sie die Nullstellen der Funktion \(f\)!</li>
+                        <li>Bestimmen Sie die Gleichung der Tangente \(t\) am Graphen von \(f\) im Punkt \(P(1\,|\,f(1))\)!</li>
+                    </ol>
+                    <details class="loesungen">
+                        <summary class="nonumber">Lösung</summary>
+                        <ol class="custom-marker parens-around lower-alpha more-spacing">
+                            <li>
+                                <p>Die erste Nullstelle kann man ablesen (es gibt kein absolutes Glied): \(x_1=0\)</p>
+                                <p>Durch Abspaltung der ersten Nullstellen verbleibt: \(0=x^2-8x+12\)</p>
+                                <p>Durch Lösen mit der \(p\)-\(q\)-Formel erhält man: \(x_2=2\) und \(x_3=6\). </p>
+                            </li>
+                            <li>
+                                <p>Erste Ableitung bestimmen: \(f'(x)=3x^2-16x+12\)</p>
+                                <p>Steigung der Tangente: \(m=f'(1)=3\cdot 1^2-16\cdot 1+12=-1\)</p>
+                                <p>\(y\)-Koordinate des Punktes \(P\): \(y=f(1)=1^3-8\cdot 1^2+12\cdot 1=5\)</p>
+                                <p>Punkt und Steigung in \(t(x)=mx+n\) einsetzen: \(5=-1\cdot 1+n\)</p>
+                                <p>Ergibt \(n=6\)</p>
+                                <p>Gleichung der Tangente: \(t(x)=-x+6\)</p>
+                            </li>
+                        </ol>
+                    </details>
+                </li>
+            </ol>
+            <ol class="more-spacing" start="3">
+                <li>
+                    <p>
+                        Abgebildet ist der Graph einer Funktion \(f\).
+                    </p>
+                    <div class="centered" style="max-width: 900px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="-1.8 -6 25.5 9"  style="background-color: #232323">
+                            <!-- The viewBox is set to (-12, -6, 26, 13) which provides a coordinate space of width 38 and height 19 units.
+                                 The center of the SVG is (0, 0). You can adjust this viewBox as needed. -->
+                            <!-- Add grid lines -->
+                            <defs>
+                              <pattern id="grid" width="1" height="1" patternUnits="userSpaceOnUse">
+                                <path d="M 1 0 L 0 0 0 1" fill="none" stroke="#333333" stroke-width="0.05" />
+                              </pattern>
+                            </defs>
+                            <rect x="-0.9" y="-5.9" width="23.8" height="9.8" fill="url(#grid)" />
+                          
+                            <!-- Draw the x-axis line -->
+                            <line x1="-1" y1="0" x2="23" y2="0" stroke="#a7a7a7" stroke-width="0.05" />
+                          
+                            <!-- Draw the x-axis arrowhead -->
+                            <polygon points="23.5,0 22.8,-0.15 22.8,0.15" fill="#a7a7a7" />
+                          
+                            <!-- Draw the y-axis line -->
+                            <line x1="0" y1="5" x2="0" y2="-5" stroke="#a7a7a7" stroke-width="0.05" />
+                          
+                            <!-- Draw the y-axis arrowhead -->
+                            <polygon points="0,-5.5 -0.15,-4.8 0.15,-4.8" fill="#a7a7a7" />
+                          
+                              <!-- Add "x" at the end of the x-axis -->
+                            <text x="23.0" y="0.7" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">x</text>
+                          
+                            <!-- Add "y" at the end of the y-axis -->
+                            <text x="-0.8" y="-5.3" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">y</text>
+                          
+                          
+                            <!-- Add numbers to x-axis-->
+                            <text x="1.55" y="0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">0,2</text>
+                            <text x="3.55" y="0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">0,4</text>
+                            <text x="5.55" y="0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">0,6</text>
+                            <text x="7.55" y="0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">0,8</text>
+                            <text x="9.55" y="0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">1,0</text>
+
+                            <text x="11.55" y="0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">1,2</text>
+                            <text x="13.55" y="0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">1,4</text>
+                            <text x="15.55" y="0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">1,6</text>
+                            <text x="17.55" y="0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">1,8</text>
+                            <text x="19.55" y="0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">2,0</text>
+
+                            <text x="21.55" y="0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">2,2</text>
+                              
+                            <!-- Add numbers to y-axis-->
+                            <text x="-1.25" y="-1.75" font-family="serif" font-size="0.7" fill="#a8a7a7">0,1</text>
+                            <text x="-1.25" y="-3.75" font-family="serif" font-size="0.7" fill="#a8a7a7">0,2</text>
+                            <text x="-1.8" y="2.25" font-family="serif" font-size="0.7" fill="#a8a7a7">− 0,1</text>
+                          
+
+                            <path d="M -0.9 -11.53 L -0.81 -10.44 -0.71 -9.42 -0.62 -8.46 -0.52 -7.56
+                            -0.42 -6.72 -0.33 -5.94 -0.23 -5.21 -0.14 -4.53 -0.04 -3.9
+                            0.06 -3.31 0.15 -2.78 0.25 -2.28 0.34 -1.82 0.44 -1.4
+                            0.54 -1.02 0.63 -0.68 0.73 -0.37 0.82 -0.09 0.92 0.16
+                            1.02 0.39 1.11 0.58 1.21 0.75 1.3 0.89 1.4 1.02
+                            1.5 1.12 1.59 1.2 1.69 1.26 1.78 1.3 1.88 1.33
+                            1.98 1.34 2.07 1.34 2.17 1.32 2.26 1.29 2.36 1.25
+                            2.46 1.2 2.55 1.13 2.65 1.06 2.74 0.99 2.84 0.9
+                            2.94 0.81 3.03 0.71 3.13 0.6 3.22 0.49 3.32 0.38
+                            3.42 0.26 3.51 0.14 3.61 0.02 3.7 -0.1 3.8 -0.23
+                            3.9 -0.35 3.99 -0.48 4.09 -0.61 4.18 -0.74 4.28 -0.86
+                            4.38 -0.99 4.47 -1.12 4.57 -1.24 4.66 -1.36 4.76 -1.49
+                            4.86 -1.6 4.95 -1.72 5.05 -1.84 5.14 -1.95 5.24 -2.06
+                            5.34 -2.16 5.43 -2.27 5.53 -2.37 5.62 -2.47 5.72 -2.56
+                            5.82 -2.65 5.91 -2.74 6.01 -2.82 6.1 -2.91 6.2 -2.98
+                            6.3 -3.06 6.39 -3.13 6.49 -3.2 6.58 -3.26 6.68 -3.32
+                            6.78 -3.38 6.87 -3.44 6.97 -3.49 7.06 -3.54 7.16 -3.58
+                            7.26 -3.62 7.35 -3.66 7.45 -3.7 7.54 -3.73 7.64 -3.77
+                            7.74 -3.8 7.83 -3.82 7.93 -3.85 8.02 -3.87 8.12 -3.89
+                            8.22 -3.91 8.31 -3.92 8.41 -3.94 8.5 -3.95 8.6 -3.96
+                            8.7 -3.97 8.79 -3.98 8.89 -3.98 8.98 -3.99 9.08 -4
+                            9.18 -4 9.27 -4 9.37 -4 9.46 -4.01 9.56 -4.01
+                            9.66 -4.01 9.75 -4.01 9.85 -4.01 9.94 -4.01 10.04 -4.01
+                            10.14 -4.01 10.23 -4.01 10.33 -4.01 10.42 -4.01 10.52 -4.01
+                            10.62 -4.01 10.71 -4.01 10.81 -4.02 10.9 -4.02 11 -4.02
+                            11.1 -4.03 11.19 -4.03 11.29 -4.04 11.38 -4.04 11.48 -4.05
+                            11.58 -4.06 11.67 -4.07 11.77 -4.08 11.86 -4.09 11.96 -4.1
+                            12.06 -4.11 12.15 -4.13 12.25 -4.14 12.34 -4.16 12.44 -4.17
+                            12.54 -4.19 12.63 -4.21 12.73 -4.22 12.82 -4.24 12.92 -4.26
+                            13.02 -4.28 13.11 -4.3 13.21 -4.33 13.3 -4.35 13.4 -4.37
+                            13.5 -4.39 13.59 -4.42 13.69 -4.44 13.78 -4.46 13.88 -4.49
+                            13.98 -4.51 14.07 -4.53 14.17 -4.56 14.26 -4.58 14.36 -4.61
+                            14.46 -4.63 14.55 -4.65 14.65 -4.67 14.74 -4.69 14.84 -4.71
+                            14.94 -4.73 15.03 -4.75 15.13 -4.77 15.22 -4.79 15.32 -4.81
+                            15.42 -4.82 15.51 -4.83 15.61 -4.85 15.7 -4.86 15.8 -4.87
+                            15.9 -4.87 15.99 -4.88 16.09 -4.88 16.18 -4.89 16.28 -4.89
+                            16.38 -4.89 16.47 -4.89 16.57 -4.88 16.66 -4.87 16.76 -4.87
+                            16.86 -4.86 16.95 -4.84 17.05 -4.83 17.14 -4.81 17.24 -4.8
+                            17.34 -4.78 17.43 -4.75 17.53 -4.73 17.62 -4.71 17.72 -4.68
+                            17.82 -4.65 17.91 -4.62 18.01 -4.59 18.1 -4.56 18.2 -4.52
+                            18.3 -4.49 18.39 -4.46 18.49 -4.42 18.58 -4.38 18.68 -4.35
+                            18.78 -4.31 18.87 -4.28 18.97 -4.24 19.06 -4.21 19.16 -4.18
+                            19.26 -4.15 19.35 -4.12 19.45 -4.09 19.54 -4.07 19.64 -4.05
+                            19.74 -4.04 19.83 -4.02 19.93 -4.02 20.02 -4.02 20.12 -4.02
+                            20.22 -4.03 20.31 -4.05 20.41 -4.08 20.5 -4.11 20.6 -4.15
+                            20.7 -4.21 20.79 -4.27 20.89 -4.35 20.98 -4.44 21.08 -4.54
+                            21.18 -4.66 21.27 -4.79 21.37 -4.94 21.46 -5.1 21.56 -5.29
+                            21.66 -5.49 21.75 -5.72 21.85 -5.96 21.94 -6.23 22.04 -6.53
+                            22.14 -6.85 22.23 -7.2 22.33 -7.58 22.42 -7.98 22.52 -8.42
+                            22.62 -8.9 22.71 -9.4 22.81 -9.95 22.9 -10.53 23 -11.16" fill="none" stroke="darkgoldenrod" stroke-width="0.075" />
+                          </svg>
+                    </div>
+                    <ol class="custom-marker parens-around lower-alpha more-spacing">
+                        <li>Geben Sie je einen Wert für \(a\) und \(b\) an, so dass gilt:
+                            <ol type="I" style="margin-top: 5px;">
+                                <li>\(f'(0,2)=a\)</li>
+                                <li>\(f''(b)=0\)</li>
+                            </ol>
+                        </li>
+                        <li>
+                            Markieren Sie einen Punkt \(P(x_P\,|\,y_P)\) auf dem Funktionsgraphen von \(f\), 
+                            für den gilt: \(f''(x_P)=0\) und \(f'(x_P)< 0\).
+                            <p>
+                                Begründen Sie, warum der von Ihnen gewählte Punkt \(P\) die beiden Bedingungen erfüllt!
+                            </p>
+
+                        </li>
+                    </ol>
+                    <details class="loesungen">
+                        <summary class="nonumber">Lösung</summary>
+                        <ol class="custom-marker parens-around lower-alpha more-spacing">
+                            <li>
+                                <ol type="I" style="margin-top: 5px;">
+                                    <li>\(a=0\), Weil \(f\) bei \(x=0,2\) einen Tiefpunkt hat.</li>
+                                    <li>\(b=1\), weil \(f\) bei \(x=1\) einen Wendepunkt hat. <br>
+                                        Weitere Lösungen von Wendepunkten sind ebenfalls korrekt.</li>
+                                </ol>
+                            </li>
+                            <li>\(P\) hat ca. die Koorinaten \((1,85\,|\,0,22)\) (eingezeichnet!):
+                                <ul>
+                                    <li>Die erste Bedingung sagt, dass \(P\) ein Wendepunkt ist.</li>
+                                    <li>Die zweite Bedingung sagt, dass \(f\) bei \(P\) fallend sein muss.</li>
+                                </ul>
+                                Diese Bedingungen treffen nur für diesen einen Punkt zu.
+                            </li>
+                        </ol>
+                    </details>
+                </li>
+            </ol>
+
+            <ol class="more-spacing" start="4">
+                <li>
+                    <p>
+                        Gegeben ist die in \(\mathbb R\) definierte Funktion \(f\) mit \(f(x)=x^3-4x\).
+                    </p>
+                    <ol class="custom-marker parens-around lower-alpha more-spacing">
+                        <li><p>
+                            Begründen Sie, dass der Graph von \(f\) symmetrisch bezüglich des Koordinatenur-
+                            sprungs ist!
+                        </p></li>
+                    </ol>
+                    <details class="loesungen">
+                        <summary class="nonumber">Lösung</summary>
+                        <ol class="custom-marker parens-around lower-alpha more-spacing">
+                            <li>
+                                Das Polynom \(f\) enthält ausschließlich Potenzen mit ungeraden Exponenten.
+                            </li>
+                        </ol>
+                    </details>
+                </li>
+            </ol>
+
+            <ol class="more-spacing" start="5">
+                <li>
+                    <p>
+                        Gegeben sind die in \(\mathbb R\) definierten Funktionen \(g\) mit \(g(x)=2\cdot\text e^x-2\)
+                        und \(h\) mit \(h(x)=\text e^x +1\).
+                    </p>    
+                    <p>
+                        Die Abbildung zeigt ihre Graphen.
+                    </p>
+                    <div class="centered" style="max-height: 300px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="-4.9 -6 7.5 8"  style="background-color: #232323">
+                            <!-- The viewBox is set to (-12, -6, 26, 13) which provides a coordinate space of width 38 and height 19 units.
+                                 The center of the SVG is (0, 0). You can adjust this viewBox as needed. -->
+                            <!-- Add grid lines -->
+                            <defs>
+                              <pattern id="grid" width="1" height="1" patternUnits="userSpaceOnUse">
+                                <path d="M 1 0 L 0 0 0 1" fill="none" stroke="#333333" stroke-width="0.05" />
+                              </pattern>
+                            </defs>
+                            <rect x="-4.9" y="-5.9" width="7.8" height="7.8" fill="url(#grid)" />
+                          
+                            <!-- Draw the x-axis line -->
+                            <line x1="-5" y1="0" x2="3" y2="0" stroke="#a7a7a7" stroke-width="0.05" />
+                          
+                            <!-- Draw the x-axis arrowhead -->
+                            <polygon points="3.5,0 2.8,-0.15 2.8,0.15" fill="#a7a7a7" />
+                          
+                            <!-- Draw the y-axis line -->
+                            <line x1="0" y1="2" x2="0" y2="-5" stroke="#a7a7a7" stroke-width="0.05" />
+                          
+                            <!-- Draw the y-axis arrowhead -->
+                            <polygon points="0,-5.5 -0.15,-4.8 0.15,-4.8" fill="#a7a7a7" />
+                          
+                              <!-- Add "x" at the end of the x-axis -->
+                            <text x="3.0" y="0.85" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">x</text>
+                          
+                            <!-- Add "y" at the end of the y-axis -->
+                            <text x="-0.8" y="-5.3" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">y</text>
+                          
+                          
+                            <!-- Add numbers to x-axis-->
+                            <text x="0.85" y="0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">1</text>
+                            <text x="-1.25" y="0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">−1</text>
+        
+                              
+                            <!-- Add numbers to y-axis-->
+                            <text x="-0.75" y="-0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">1</text>
+
+
+                          
+
+                            <path d="M -3.88 1.96 L -3.76 1.95 -3.64 1.95 -3.52 1.94 -3.4 1.93
+                            -3.28 1.92 -3.16 1.92 -3.04 1.9 -2.92 1.89 -2.8 1.88
+                            -2.68 1.86 -2.56 1.85 -2.44 1.83 -2.32 1.8 -2.2 1.78
+                            -2.08 1.75 -1.96 1.72 -1.84 1.68 -1.72 1.64 -1.6 1.6
+                            -1.48 1.54 -1.36 1.49 -1.24 1.42 -1.12 1.35 -1 1.26
+                            -0.88 1.17 -0.76 1.06 -0.64 0.95 -0.52 0.81 -0.4 0.66
+                            -0.28 0.49 -0.16 0.3 -0.04 0.08 0.08 -0.17 0.2 -0.44
+                            0.32 -0.75 0.44 -1.11 0.56 -1.5 0.68 -1.95 0.8 -2.45
+                            0.92 -3.02 1.04 -3.66 1.16 -4.38 1.28 -5.19 1.4 -6.11
+                            1.52 -7.14 1.64 -8.31 1.76 -9.62 1.88 -11.11 2 -12.78" fill="none" stroke="darkgoldenrod" stroke-width="0.075" />
+
+                            <text x="0.5" y="-5" font-family="serif" font-size="0.9" font-style="italic" fill="darkgoldenrod">g</text>
+
+                            <path d="M -4.86 -1.01 L -4.72 -1.01 -4.58 -1.01 -4.44 -1.01 -4.3 -1.01
+                            -4.16 -1.02 -4.02 -1.02 -3.88 -1.02 -3.74 -1.02 -3.6 -1.03
+                            -3.46 -1.03 -3.32 -1.04 -3.18 -1.04 -3.04 -1.05 -2.9 -1.06
+                            -2.76 -1.06 -2.62 -1.07 -2.48 -1.08 -2.34 -1.1 -2.2 -1.11
+                            -2.06 -1.13 -1.92 -1.15 -1.78 -1.17 -1.64 -1.19 -1.5 -1.22
+                            -1.36 -1.26 -1.22 -1.3 -1.08 -1.34 -0.94 -1.39 -0.8 -1.45
+                            -0.66 -1.52 -0.52 -1.59 -0.38 -1.68 -0.24 -1.79 -0.1 -1.9
+                            0.04 -2.04 0.18 -2.2 0.32 -2.38 0.46 -2.58 0.6 -2.82
+                            0.74 -3.1 0.88 -3.41 1.02 -3.77 1.16 -4.19 1.3 -4.67
+                            1.44 -5.22 1.58 -5.85 1.72 -6.58 1.86 -7.42 2 -8.39" fill="none" stroke="magenta" stroke-width="0.075" />
+
+                            <text x="1.9" y="-5" font-family="serif" font-size="0.9" font-style="italic" fill="magenta">h</text>
+                          </svg>
+                            
+                    </div>
+                    <ol class="custom-marker parens-around lower-alpha more-spacing">
+                        <li>
+                            <p>
+                                Die erste Ableitungsfunktion von \(g\) wird mit \(g'\) bezeichnet.
+                            </p>
+                            <p>
+                                Berechnen Sie \(g'(0)\) und veranschaulichen Sie in der Abbildung, wie man diesen Wert 
+                                grafisch ermitteln kann!
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Beurteilen Sie die folgende Aussage:
+                            </p>
+                            <cite>
+                                Es gibt eine Verschiebung in \(y\)-Richtung, durch die der Graph von \(h\) aus dem Graphen 
+                                von \(g\) erzeugt werden kann.
+                            </cite>
+                        </li>
+                    </ol>
+                    <details class="loesungen">
+                        <summary class="nonumber">Lösung</summary>
+                        <ol class="custom-marker parens-around lower-alpha more-spacing">
+                            <li>
+                                <p>
+                                    Ableitung von \(g\): \(g'(x)=2\cdot \text e^x\)
+                                </p>
+                                <p>
+                                    Ableitung bei \(x=0\): \(g'(0)=2\cdot \text e^0=2\)
+                                </p>
+                                <p>
+                                    Graphisch könnte man die Ableitung durch Zeichnen der Tangente am Graphen von \(g\) bei \(x=0\) zeichnet
+                                    und an dieser ein Steigungsdreieck konstruiert. (<i>Tatsächlich zeichnen!</i>)
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    Die Aussage ist falsch.
+                                </p>
+                                <p>
+                                    Beide Graphen haben bei \(x=0\) verschiedene Steigungen. Dementsprechend kann man sie nicht deckend aufeinander schieben.
+                                </p>
+                            </li>
+                        </ol>
+                    </details>
+                </li>
+            </ol>
+
+            <ol class="more-spacing" start="6">
+                <li>
+                    <p>
+                        Gegeben ist die in \(\mathbb R\) definierte Funktion \(f\) mit \(f(x)=\tfrac12x^2\).
+                    </p>
+                    <p>
+                        Die Abbildung zeigt den Graphen von \(f\) sowie die Tangente \(t\) an den Graphen von \(f\) 
+                        im Punkt \((4\,|\,f(4))\).
+                    </p>
+                    <div class="centered" style="max-height: 300px;">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="-6 -7 15 13"  style="background-color: #232323">
+                            <!-- The viewBox is set to (-12, -6, 26, 13) which provides a coordinate space of width 38 and height 19 units.
+                                 The center of the SVG is (0, 0). You can adjust this viewBox as needed. -->
+                            <!-- Add grid lines -->
+                            <defs>
+                              <pattern id="grid" width="1" height="1" patternUnits="userSpaceOnUse">
+                                <path d="M 1 0 L 0 0 0 1" fill="none" stroke="#333333" stroke-width="0.05" />
+                              </pattern>
+                            </defs>
+                            <rect x="-5.9" y="-6.9" width="14.8" height="12.8" fill="url(#grid)" />
+                          
+                            <!-- Draw the x-axis line -->
+                            <line x1="-6" y1="0" x2="8" y2="0" stroke="#a7a7a7" stroke-width="0.05" />
+                          
+                            <!-- Draw the x-axis arrowhead -->
+                            <polygon points="8.5,0 7.8,-0.15 7.8,0.15" fill="#a7a7a7" />
+                          
+                            <!-- Draw the y-axis line -->
+                            <line x1="0" y1="-6" x2="0" y2="6" stroke="#a7a7a7" stroke-width="0.05" />
+                          
+                            <!-- Draw the y-axis arrowhead -->
+                            <polygon points="0,-6.5 -0.15,-5.8 0.15,-5.8" fill="#a7a7a7" />
+                          
+                              <!-- Add "x" at the end of the x-axis -->
+                            <text x="8.0" y="0.85" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">x</text>
+                          
+                            <!-- Add "y" at the end of the y-axis -->
+                            <text x="-0.8" y="-6.3" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">y</text>
+                          
+                          
+                            <!-- Add numbers to x-axis-->
+                            <text x="0.85" y="0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">1</text>
+        
+                              
+                            <!-- Add numbers to y-axis-->
+                            <text x="-0.7" y="-0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">2</text>
+
+                            <path d="M -5.83 -8.48 L -5.65 -7.98 -5.48 -7.49 -5.3 -7.02 -5.13 -6.57
+                            -4.95 -6.13 -4.78 -5.7 -4.6 -5.29 -4.43 -4.9 -4.25 -4.52
+                            -4.08 -4.15 -3.9 -3.8 -3.73 -3.47 -3.55 -3.15 -3.38 -2.85
+                            -3.2 -2.56 -3.03 -2.29 -2.85 -2.03 -2.68 -1.79 -2.5 -1.56
+                            -2.33 -1.35 -2.15 -1.16 -1.98 -0.98 -1.8 -0.81 -1.63 -0.66
+                            -1.45 -0.53 -1.28 -0.41 -1.1 -0.3 -0.93 -0.21 -0.75 -0.14
+                            -0.58 -0.08 -0.4 -0.04 -0.23 -0.01 -0.05 0 0.13 0
+                            0.3 -0.02 0.48 -0.06 0.65 -0.11 0.83 -0.17 1 -0.25
+                            1.18 -0.35 1.35 -0.46 1.53 -0.58 1.7 -0.72 1.88 -0.88
+                            2.05 -1.05 2.23 -1.24 2.4 -1.44 2.58 -1.66 2.75 -1.89
+                            2.93 -2.14 3.1 -2.4 3.28 -2.68 3.45 -2.98 3.63 -3.29
+                            3.8 -3.61 3.98 -3.95 4.15 -4.31 4.33 -4.68 4.5 -5.06
+                            4.68 -5.46 4.85 -5.88 5.03 -6.31 5.2 -6.76 5.38 -7.22
+                            5.55 -7.7 5.73 -8.19 5.9 -8.7 6.08 -9.23 6.25 -9.77
+                            6.43 -10.32 6.6 -10.89 6.78 -11.48 6.95 -12.08 7.13 -12.69
+                            7.3 -13.32 7.48 -13.97 7.65 -14.63 7.83 -15.31 8 -16" fill="none" stroke="darkgoldenrod" stroke-width="0.075" />
+
+                            <text x="4.5" y="-6.2" font-family="serif" font-size="0.9" font-style="italic" fill="darkgoldenrod">f</text>
+
+                            <path d="M -1 6 L 2 0 5 -6 8 -12" fill="none" stroke="magenta" stroke-width="0.075" />
+
+                            <text x="5.9" y="-6" font-family="serif" font-size="0.9" font-style="italic" fill="magenta">t</text>
+                            <circle cx="4" cy="-4" r="0.15" fill="magenta"/>
+                          </svg>
+                    </div>
+                    
+                    <ol class="custom-marker parens-around lower-alpha more-spacing">
+                        <li>
+                            Geben Sie anhand der Abbildung eine Gleichung der Tangente \(t\) an!
+                        </li>
+                        <li>
+                            Weisen Sie nach, dass für jeden Wert \(u\in\mathbb R\) die Tangente an den Graphen von \(f\) 
+                            im Punkt \((u\,|\,f(u))\) die \(y\)-Achse im Punkt \((0\,|\,-f(u))\)schneidet!
+                        </li>
+                    </ol>
+
+                    <details class="loesungen">
+                        <summary class="nonumber">Lösung</summary>
+                        <ol class="custom-marker parens-around lower-alpha more-spacing">
+                            <li>
+                                <p>Ableitung \(f'\): \(f'(x)=x\)</p>
+                                <p>Steigung bei \(x=4\): \(m=f'(4)=4\)</p>
+                                <p>\(y\)-Koordinate des Punktes: \(y=f(4)=\tfrac12\cdot 4^2=8\)</p>
+                                <p>Allgemeine Tangentengleichung: \(t(x)=mx+n\)</p>
+                                <p>Bekannte Größen einsetzen: \(8=4\cdot 4+n\)</p>
+                                <p>Ergibt: \(n=-8\)</p>
+                                <p>Tangentengleichung: \(t(x)=4x-8\)</p>
+                            </li>
+                            <li>
+                                <p>
+                                    Vorgehen wie a), aber mit \(u\).
+                                </p>
+                                <p>Steigung bei \(x=u\): \(m=f'(u)=u\)</p>
+                                <p>\(y\)-Koordinate des Punktes: \(y=f(u)=\tfrac12\cdot u^2\)</p>
+                                <p>Allgemeine Tangentengleichung: \(t(x)=mx+n\)</p>
+                                <p>Bekannte Größen einsetzen: \(\tfrac12\cdot u^2=u\cdot u+n\)</p>
+                                <p>Ergibt: \(n=-\tfrac12\cdot u^2\)</p>
+                                <p>Da \(n\) der \(y\)-Achsenabschnitt ist, bedeutet das, dass alle Tangenten die \(y\)-Achse bei 
+                                    \(y=-\tfrac12\cdot u^2\) schneiden.</p>
+                            </li>
+                        </ol>
+                    </details>
+                </li>
+            </ol>
+
+            <ol class="more-spacing" start="7">
+                <li>
+                    <p>
+                        Gegeben sind die Funktion \(f : x  \mapsto \sqrt{x}\) mit Definitionsmenge \(\mathbb R^+_0\) und die 
+                        Gerade \(g\) mit der Gleichung \(y = \tfrac14x\).
+                    </p>
+                    <p>
+                        Betrachtet wird das Intervall, das von den \(x\)-Koordinaten der beiden Schnittpunkte des Graphen von \(f\) 
+                        und der Gerade \(g\) begrenzt wird. In diesem Intervall gibt es eine Stelle, an der die lokale 
+                        Änderungsrate von \(f\) mit der mittleren Änderungsrate von \(f\) in diesem Intervall übereinstimmt.
+                    </p>
+                    <p>
+                        Bestimmen Sie diese Stelle!
+                    </p>
+                    <!-- <ol class="custom-marker parens-around lower-alpha more-spacing">
+                        <li></li>
+                    </ol> -->
+                    <details class="loesungen">
+                        <summary class="nonumber">Lösung</summary>
+                        <!-- <ol class="custom-marker parens-around lower-alpha more-spacing">
+                            <li>
+                    
+                            </li>
+                        </ol> -->
+                        <p>
+                            Die mittere Änderungsrate von \(f\) ist gleich der Steigung von \(g\) (weil Gerade): \(m=\tfrac14\)
+                        </p>
+                        <p>
+                            Das Intervall (für die Rechnung aber nicht nötig) ergibt sich aus den Schnittpunkten der beiden Funktionen: \(f(x)=g(x)\)
+                        </p>
+                        <p>
+                            \(\sqrt{x}=\tfrac14x\quad |()^2\) <br>
+                            \(\ \ \ x=\tfrac{1}{16}x^2\)
+                        </p>
+                        <p>Ergibt: \(x_1=0\) und \(x_2=16\)</p>
+                        <p>Die lokale Änderungsrate ist die erste Ableitung von \(f\): \(f'(x)=\dfrac{1}{2\sqrt{x}}\) </p>
+                        <p>Mittlere Änderungsrate mit Lokaler gleichsetzen: \(\dfrac{1}{2\sqrt{x}}=\tfrac14\)</p>
+                        <p>Ergibt \(x=4\)</p>
+                        <p>Bei \(x=\) hat \(f\) die gleich lokale Steigung wie \(g\).</p>
+                    </details>
+                </li>
+            </ol>
+
+            <!-- <ol class="more-spacing" start="3">
+                <li>
+                    <p>
+
+                    </p>
+
                     <ol class="custom-marker parens-around lower-alpha more-spacing">
                         <li></li>
                     </ol>
                     <details class="loesungen">
                         <summary class="nonumber">Lösung</summary>
                         <ol class="custom-marker parens-around lower-alpha more-spacing">
-                            <li></li>
+                            <li>
+                    
+                            </li>
                         </ol>
                     </details>
                 </li>
-            </ol>
+            </ol> -->
         </section>
 
+
         <section class="aufgaben" id="rt">
-            
+
         </section>
 
 
@@ -102,8 +697,8 @@
             </div>
             <div class="centered">
                 <a href="https://imgflip.com/i/3fdeio">
-                <h6>Original  von JacksonPuntney</h6>
-                <!-- </a> -->
+                    <h6>Original von JacksonPuntney</h6>
+                    <!-- </a> -->
             </div>
         </section>
     </main>
