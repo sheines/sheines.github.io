@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" initial-scale="1.0" />
+  <meta name="author" content="Sebastian Hitziger" />
+  <meta name="robot" content="noindex" />
+  <title>HITZ | Fkt-Eigensch. | Anschauung </title>
+  <link rel="stylesheet" type="text/css" href="/css/colors.css" />
+  <link rel="stylesheet" type="text/css" href="/css/gridNoTimeline.css" />
+  <link rel="stylesheet" type="text/css" href="/css/navbar.css" />
+  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="/css/courses.css" />
+  <script type="text/javascript" src="jquery-3.3.1.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+
+
+<body>
+  <header>
+    <div class="nav">
+      <input type="checkbox" id="nav-check" />
+      <div class="nav-header">
+        <div class="nav-title">
+          <a href="/">Hr. Hitzigers Unterricht</a>
+        </div>
+      </div>
+      <div class="nav-btn">
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+
+      <div class="nav-links">
+        <a href="/content/math/">Mathematik</a>
+        <a href="/content/math/12/">Klasse 12</a>
+        <a href="/content/math/12/ana1/">Analysis I</a>
+        <a href="/content/math/12/ana1/integr/">Integralrechnung</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section>
+      <h2>Ableitung I &ndash; Anschauung</h2>
+      <div class="ziele">
+        <p>
+          Nachfolgend soll die Bedeutung eines Integrals veranschaulicht und näherungsweise bestimmt werden.
+        </p>
+        <p>
+          <a href="#aufgaben">Direkt zu den Aufgaben</a>
+        </p>
+      </div>
+
+
+
+      <div class="theorie">
+
+        <div class="definition">
+          <h4>Das Integral</h4>
+          <p>
+            Die Integralrechnung beschreibt Verfahren zur Ermittlung der Fläche, welche
+            eine Funktion in einem bestimmten Bereich (Intervall) mit der \(x\)-Achse einschließt.
+          </p>
+          <p>
+            Anschaulich beschreibt beispielweise die Fläche unter einem Geschwindigkeitsprofil die zurückgelegte
+            Strecke.
+          </p>
+          <div class="centered" style="max-height: 350px;">
+
+            <!-- Oberes SVG: Darstellung von f(x) mit animiertem Punkt und Tangente -->
+            <svg id="functionSvg" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -5 14 7.5">
+
+              <!-- X-Achse -->
+              <line x1="-1" y1="0" x2="10" y2="0" stroke="#a7a7a7" stroke-width="0.05" />
+              <polygon points="10.5,0 9.8,-0.15 9.8,0.15" fill="#a7a7a7" />
+              <text x="10.7" y="0.7" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">x</text>
+
+              <!-- Y-Achse -->
+              <line x1="0" y1="1.5" x2="0" y2="-4" stroke="#a7a7a7" stroke-width="0.05" />
+              <polygon points="0,-4.5 -0.15,-3.8 0.15,-3.8" fill="#a7a7a7" />
+              <text x="-0.8" y="-4.3" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">y</text>
+
+
+            </svg>
+          </div>
+
+
+        </div>
+      </div>
+      <h3>Ansatz zum Lösen des Problems</h3>
+      <p>
+        Bereits Archimedes hat sich vor ca. 2000 Jahren mit der Fläche unter
+        einer Parabel beschäftigt und das Problem auch gelöst.
+      </p>
+      <p>
+        Es soll die Fläche unter einer Normalparabel im Intervall von 0 bis 1 bestimmt werden.
+      <div class="centered" style="max-height: 350px;">
+
+        <!-- Oberes SVG: Darstellung von f(x) mit animiertem Punkt und Tangente -->
+        <svg id="riemann1Svg" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -5 6.5 5.75">
+
+          <!-- X-Achse -->
+          <line x1="-1" y1="0" x2="5" y2="0" stroke="#a7a7a7" stroke-width="0.05" />
+          <polygon points="5.5,0 4.8,-0.15 4.8,0.15" fill="#a7a7a7" />
+          <text x="5.5" y="0.7" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">x</text>
+          <text x="-0.45" y="0.5" font-family="serif" font-size="0.5" fill="#a8a7a7">0</text>
+          <text x="3.875" y="0.5" font-family="serif" font-size="0.5" fill="#a8a7a7">1</text>
+
+          <!-- Y-Achse -->
+          <line x1="0" y1="1.5" x2="0" y2="-4" stroke="#a7a7a7" stroke-width="0.05" />
+          <polygon points="0,-4.5 -0.15,-3.8 0.15,-3.8" fill="#a7a7a7" />
+          <text x="-0.8" y="-4.3" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">y</text>
+
+
+        </svg>
+      </div>
+      </p>
+      <p>
+        Dazu hat er die Fläche in eine bekannte Formen wie Rechtecke zerlegt.
+      <div class="course-container" style="gap: 10px; flex-grow: 1; margin-bottom: 20px;">
+        <div style="flex: 1; min-width: 250px;">
+          <div class="centered" style="max-height: 300px;">
+            <!-- Oberes SVG: Darstellung von f(x) mit animiertem Punkt und Tangente -->
+            <svg id="riemann2Svg" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -5 6.5 5.75">
+
+              <!-- X-Achse -->
+              <line x1="-1" y1="0" x2="5" y2="0" stroke="#a7a7a7" stroke-width="0.05" />
+              <polygon points="5.5,0 4.8,-0.15 4.8,0.15" fill="#a7a7a7" />
+              <text x="5.5" y="0.7" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">x</text>
+              <text x="-0.45" y="0.5" font-family="serif" font-size="0.5" fill="#a8a7a7">0</text>
+              <text x="3.875" y="0.5" font-family="serif" font-size="0.5" fill="#a8a7a7">1</text>
+              <text x="0.785" y="0.35" font-family="serif" font-size="0.25" fill="#a8a7a7">0,25</text>
+              <text x="1.85" y="0.35" font-family="serif" font-size="0.25" fill="#a8a7a7">0,5</text>
+              <text x="2.785" y="0.35" font-family="serif" font-size="0.25" fill="#a8a7a7">0,75</text>
+
+              <!-- Y-Achse -->
+              <line x1="0" y1="1.5" x2="0" y2="-4" stroke="#a7a7a7" stroke-width="0.05" />
+              <polygon points="0,-4.5 -0.15,-3.8 0.15,-3.8" fill="#a7a7a7" />
+              <text x="-0.8" y="-4.3" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">y</text>
+
+
+            </svg>
+          </div>
+          <div class="centered">
+            <h4>Untersumme \(U_4\)</h4>
+          </div>
+
+        </div>
+        <div style="flex: 1; min-width: 250px;">
+          <div class="centered" style="max-height: 300px;">
+            <!-- Oberes SVG: Darstellung von f(x) mit animiertem Punkt und Tangente -->
+            <svg id="riemann3Svg" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -5 6.5 5.75">
+
+              <!-- X-Achse -->
+              <line x1="-1" y1="0" x2="5" y2="0" stroke="#a7a7a7" stroke-width="0.05" />
+              <polygon points="5.5,0 4.8,-0.15 4.8,0.15" fill="#a7a7a7" />
+              <text x="5.5" y="0.7" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">x</text>
+              <text x="-0.45" y="0.5" font-family="serif" font-size="0.5" fill="#a8a7a7">0</text>
+              <text x="3.875" y="0.5" font-family="serif" font-size="0.5" fill="#a8a7a7">1</text>
+              <text x="0.785" y="0.35" font-family="serif" font-size="0.25" fill="#a8a7a7">0,25</text>
+              <text x="1.85" y="0.35" font-family="serif" font-size="0.25" fill="#a8a7a7">0,5</text>
+              <text x="2.785" y="0.35" font-family="serif" font-size="0.25" fill="#a8a7a7">0,75</text>
+
+              <!-- Y-Achse -->
+              <line x1="0" y1="1.5" x2="0" y2="-4" stroke="#a7a7a7" stroke-width="0.05" />
+              <polygon points="0,-4.5 -0.15,-3.8 0.15,-3.8" fill="#a7a7a7" />
+              <text x="-0.8" y="-4.3" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">y</text>
+
+
+            </svg>
+          </div>
+          <div class="centered">
+            <h4>Obersumme \(O_4\)</h4>
+          </div>
+        </div>
+      </div>
+      Deren Flächen können nun relativ einfach berechnet werden:
+      <ul>
+        <li>Funktion: \(f(x)=x^2\)</li>
+        <li>Fläche eines Rechtecks: \(A=a\cdot b\)</li>
+        <li>Breite \(a\) eines Rechtecks: \(a=\color{green}\tfrac14\) (Intervallspanne : Anzahl der Rechtecke)</li>
+        <li>Höhe \(b\) der Rechtecke: (\(x\) ist der Startpunkt des Rechtecks)
+          <ul>
+            <li>Untersumme: \(b=f(x)\)</li>
+            <li>Obersumme: \(b=f(x+{\color{green}\tfrac14})\)</li>
+          </ul>
+        </li>
+        <li>
+          Berechnung:
+          <ul class="more-spacing">
+            <li>Untersumme:
+              <ul>
+                <li>\(U_4={\color{green}\tfrac14}\cdot f(0) + {\color{green}\tfrac14}\cdot f(\tfrac14)
+                  + {\color{green}\tfrac14}\cdot f(\tfrac24) + {\color{green}\tfrac14}\cdot f(\tfrac34)\)</li>
+                <li>
+                  \(U_4={\color{green}\tfrac14}\cdot\left({\color{orange}0}^2+\left(\tfrac14\right)^2+\left(\tfrac24\right)^2+\left(\tfrac{\color{magenta}3}4\right)^2\right)\)
+                </li>
+                <li>
+                  \(U_4=\displaystyle{\color{green}\tfrac14}\cdot\sum_{i=\color{orange}0}^{\color{magenta}3} \left(\frac
+                  i4\right)^2\)
+                </li>
+                <li>
+                  \(U_4=0,218\,75\,\text{FE}\)
+                </li>
+              </ul>
+            </li>
+            <li>Obersumme:
+              <ul>
+                <li>\(O_4={\tfrac14}\cdot f(0+\tfrac14) + {\tfrac14}\cdot f(\tfrac14+\tfrac14)
+                  + {\tfrac14}\cdot f(\tfrac24+\tfrac14) + {\tfrac14}\cdot f(\tfrac34+\tfrac14)\)</li>
+                <li>\(O_4={\color{green}\tfrac14}\cdot f(\tfrac14) + {\color{green}\tfrac14}\cdot f(\tfrac24)
+                  + {\color{green}\tfrac14}\cdot f(\tfrac34) + {\color{green}\tfrac14}\cdot f(\tfrac44)\)</li>
+                <li>
+                  \(O_4={\color{green}\tfrac14}\cdot\left(\left(\tfrac{\color{orange}1}4\right)^2+\left(\tfrac24\right)^2+\left(\tfrac34\right)^2+\left(\tfrac{\color{magenta}4}4\right)^2\right)\)
+                </li>
+                <li>
+                  \(O_4=\displaystyle{\color{green}\tfrac14}\cdot\sum_{i=\color{orange}1}^{\color{magenta}4} \left(\frac
+                  i4\right)^2\)
+                </li>
+                <li>
+                  \(O_4=0,468\,75\,\text{FE}\)
+                </li>
+              </ul>
+            </li>
+            <li>Die reale Fläche liegt irgendwo zwischen der Untersumme \(U_4\) und der Obersumme \(O_4\):<br>
+              \(\quad U_4< A< O_4\) </li>
+          </ul>
+        </li>
+      </ul>
+      Da ohne Zeichnung nicht immer klar ist, welche Summe die Ober- und welche die Untersumme ist, werden wir davon
+      ausgehen, dass die Untersumme die rechtseitige und die Obersumme die
+      linksseitige Summe ist. Spätestens am Ergebnis ist es aber erkennbar.
+      </p>
+      <p>
+        Diese Summen nennt man auch <b style="color: darkgoldenrod;">Riemannsummen</b>.
+      </p>
+      <h3>Verbesserung der Genauigkeit</h3>
+      <p>
+        Die weiter oben berechneten Ober- und Untersummen liegen etwa \(0,25\,\text{FE}\) auseinander.
+      <div class="centered" style="max-height: 300px;">
+        <!-- Oberes SVG: Darstellung von f(x) mit animiertem Punkt und Tangente -->
+        <svg id="riemann4Svg" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -5 6.5 5.75">
+
+          <!-- X-Achse -->
+          <line x1="-1" y1="0" x2="5" y2="0" stroke="#a7a7a7" stroke-width="0.05" />
+          <polygon points="5.5,0 4.8,-0.15 4.8,0.15" fill="#a7a7a7" />
+          <text x="5.5" y="0.7" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">x</text>
+          <text x="-0.45" y="0.5" font-family="serif" font-size="0.5" fill="#a8a7a7">0</text>
+          <text x="3.875" y="0.5" font-family="serif" font-size="0.5" fill="#a8a7a7">1</text>
+          <text x="0.785" y="0.35" font-family="serif" font-size="0.25" fill="#a8a7a7">0,25</text>
+          <text x="1.85" y="0.35" font-family="serif" font-size="0.25" fill="#a8a7a7">0,5</text>
+          <text x="2.785" y="0.35" font-family="serif" font-size="0.25" fill="#a8a7a7">0,75</text>
+
+          <!-- Y-Achse -->
+          <line x1="0" y1="1.5" x2="0" y2="-4" stroke="#a7a7a7" stroke-width="0.05" />
+          <polygon points="0,-4.5 -0.15,-3.8 0.15,-3.8" fill="#a7a7a7" />
+          <text x="-0.8" y="-4.3" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">y</text>
+
+
+        </svg>
+      </div>
+      Die Genauigkeit kann jedoch mit der Anzahl der Rechtecke erhöht werden:
+      <div class="course-container" style="gap: 10px; flex-grow: 1; margin-bottom: 20px;">
+        <div style="flex: 1; min-width: 250px;">
+          <div class="centered" style="max-height: 300px;">
+            <!-- Oberes SVG: Darstellung von f(x) mit animiertem Punkt und Tangente -->
+            <svg id="riemann5Svg" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -5 6.5 5.75">
+
+              <!-- X-Achse -->
+              <line x1="-1" y1="0" x2="5" y2="0" stroke="#a7a7a7" stroke-width="0.05" />
+              <polygon points="5.5,0 4.8,-0.15 4.8,0.15" fill="#a7a7a7" />
+              <text x="5.5" y="0.7" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">x</text>
+              <text x="-0.45" y="0.5" font-family="serif" font-size="0.5" fill="#a8a7a7">0</text>
+              <text x="3.875" y="0.5" font-family="serif" font-size="0.5" fill="#a8a7a7">1</text>
+              <text x="0.785" y="0.35" font-family="serif" font-size="0.25" fill="#a8a7a7">0,25</text>
+              <text x="1.85" y="0.35" font-family="serif" font-size="0.25" fill="#a8a7a7">0,5</text>
+              <text x="2.785" y="0.35" font-family="serif" font-size="0.25" fill="#a8a7a7">0,75</text>
+
+              <!-- Y-Achse -->
+              <line x1="0" y1="1.5" x2="0" y2="-4" stroke="#a7a7a7" stroke-width="0.05" />
+              <polygon points="0,-4.5 -0.15,-3.8 0.15,-3.8" fill="#a7a7a7" />
+              <text x="-0.8" y="-4.3" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">y</text>
+
+              <text x="1.2" y="-4.3" font-family="serif" font-size="0.55" fill="#a8a7a7" id="unterArea">1 FE</text>
+
+
+            </svg>
+          </div>
+          <div class="centered">
+            <h4>Obersumme <span style="font-family: 'Times New Roman', Times, serif; font-style: italic;">U</span><sub id="unterLabel" style="font-family: 'Times New Roman', Times, serif;">4</sup></h4>
+          </div>
+
+        </div>
+        <div style="flex: 1; min-width: 250px;">
+          <div class="centered" style="max-height: 300px;">
+            <!-- Oberes SVG: Darstellung von f(x) mit animiertem Punkt und Tangente -->
+            <svg id="riemann6Svg" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -5 6.5 5.75">
+
+              <!-- X-Achse -->
+              <line x1="-1" y1="0" x2="5" y2="0" stroke="#a7a7a7" stroke-width="0.05" />
+              <polygon points="5.5,0 4.8,-0.15 4.8,0.15" fill="#a7a7a7" />
+              <text x="5.5" y="0.7" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">x</text>
+              <text x="-0.45" y="0.5" font-family="serif" font-size="0.5" fill="#a8a7a7">0</text>
+              <text x="3.875" y="0.5" font-family="serif" font-size="0.5" fill="#a8a7a7">1</text>
+              <text x="0.785" y="0.35" font-family="serif" font-size="0.25" fill="#a8a7a7">0,25</text>
+              <text x="1.85" y="0.35" font-family="serif" font-size="0.25" fill="#a8a7a7">0,5</text>
+              <text x="2.785" y="0.35" font-family="serif" font-size="0.25" fill="#a8a7a7">0,75</text>
+
+              <!-- Y-Achse -->
+              <line x1="0" y1="1.5" x2="0" y2="-4" stroke="#a7a7a7" stroke-width="0.05" />
+              <polygon points="0,-4.5 -0.15,-3.8 0.15,-3.8" fill="#a7a7a7" />
+              <text x="-0.8" y="-4.3" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">y</text>
+
+              <text x="1.2" y="-4.3" font-family="serif" font-size="0.55" fill="#a8a7a7" id="oberArea">1 FE</text>
+
+
+            </svg>
+          </div>
+          <div class="centered">
+            <h4>Obersumme <span style="font-family: 'Times New Roman', Times, serif; font-style: italic;">O</span><sub id="oberLabel" style="font-family: 'Times New Roman', Times, serif;">4</sup></h4>
+          </div>
+        </div>
+      </div>
+      Das händisch zu rechnen ist dann aber doch etwas zu aufwändig.
+      </p>
+
+      <script type="text/javascript" src="/js/math/integralAnimation.js"></script>
+    </section>
+    <!-- <section>
+            <div class="videos">
+                <iframe width="360" height="202" src="https://www.youtube.com/embed/19goPRnthCE"
+                    title="Abstand Punkt - Punkt" frameborder="0" allow="web-share" allowfullscreen></iframe>
+
+            </div>
+        </section> -->
+    <section class="aufgaben" id="aufgaben">
+      <h3>Aufgaben zu Intregralen</h3>
+      <ol class="custom-marker point-after decimal">
+        <li> Buch Seite 285 Übung 1 <a href="#a1">Lösungen</a></li>
+        <li> Buch Seite 287 Übung 2 <a href="#a2">Lösungen</a></li>
+        <li> Buch Seite 287 Übung 3 <a href="#a3">Lösungen</a></li>
+      </ol>
+
+    </section>
+
+    <section class="loesungen">
+      <h3>Lösungen zu Integralen</h3>
+
+      <p>
+        ...
+      </p>
+      <!-- <details id="a1">
+        <summary>Seite 82 Übung 1</summary>
+        Skizze fehlt hier aus Platzgründen: Wertetabelle anlegen, Graph zeichnen, Intervallanfang und -ende auf Graph
+        markieren und gerade verbinden.
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>\(\tfrac{\Delta f}{\Delta x}=\frac{4}{2}=2\)</li>
+          <li>\(\tfrac{\Delta f}{\Delta x}=\frac{-1,5}{6}=-\tfrac14\)</li>
+          <li>\(\tfrac{\Delta f}{\Delta x}=\frac{2}{1}=2\)</li>
+          <li>\(\tfrac{\Delta f}{\Delta x}=\frac{6}{2}=3\)</li>
+        </ol>
+      </details> -->
+
+
+
+
+
+
+    </section>
+
+    <section id="meme">
+      <div class="images">
+        <img src="/img/inflation_meme.png" style="object-fit: scale-down; max-width: 300px" />
+      </div>
+      <div class="centered">
+        <a href="https://x.com/FundasyInvestor/status/1824075705178533914/photo/1" target="_blank"
+          rel="noopener noreferrer">
+          <h6>Original von Nick Timiraos</h6>
+        </a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <a href="/misc/impressum.html">Impressum</a>
+    <div class="lastModified" align="center">
+      Zuletzt geändert:<br />
+      5. November 2024
+      <!-- <span id="lastModifiedDate"></span> -->
+    </div>
+    <a href="/misc/datenschutz.html">Datenschutz</a>
+  </footer>
+</body>
