@@ -291,7 +291,8 @@
             </svg>
           </div>
           <div class="centered">
-            <h4>Obersumme <span style="font-family: 'Times New Roman', Times, serif; font-style: italic;">U</span><sub id="unterLabel" style="font-family: 'Times New Roman', Times, serif;">4</sup></h4>
+            <h4>Obersumme <span style="font-family: 'Times New Roman', Times, serif; font-style: italic;">U</span><sub
+                id="unterLabel" style="font-family: 'Times New Roman', Times, serif;">4</sup></h4>
           </div>
 
         </div>
@@ -321,14 +322,14 @@
             </svg>
           </div>
           <div class="centered">
-            <h4>Obersumme <span style="font-family: 'Times New Roman', Times, serif; font-style: italic;">O</span><sub id="oberLabel" style="font-family: 'Times New Roman', Times, serif;">4</sup></h4>
+            <h4>Obersumme <span style="font-family: 'Times New Roman', Times, serif; font-style: italic;">O</span><sub
+                id="oberLabel" style="font-family: 'Times New Roman', Times, serif;">4</sup></h4>
           </div>
         </div>
       </div>
       Das händisch zu rechnen ist dann aber doch etwas zu aufwändig.
       </p>
 
-      <script type="text/javascript" src="/js/math/integralAnimation.js"></script>
     </section>
     <!-- <section>
             <div class="videos">
@@ -350,28 +351,270 @@
     <section class="loesungen">
       <h3>Lösungen zu Integralen</h3>
 
-      <p>
-        ...
-      </p>
-      <!-- <details id="a1">
-        <summary>Seite 82 Übung 1</summary>
-        Skizze fehlt hier aus Platzgründen: Wertetabelle anlegen, Graph zeichnen, Intervallanfang und -ende auf Graph
-        markieren und gerade verbinden.
+      <details id="a1">
+        <summary>Übung 1</summary>
+
         <ol class="custom-marker parens-around lower-alpha more-spacing">
-          <li>\(\tfrac{\Delta f}{\Delta x}=\frac{4}{2}=2\)</li>
-          <li>\(\tfrac{\Delta f}{\Delta x}=\frac{-1,5}{6}=-\tfrac14\)</li>
-          <li>\(\tfrac{\Delta f}{\Delta x}=\frac{2}{1}=2\)</li>
-          <li>\(\tfrac{\Delta f}{\Delta x}=\frac{6}{2}=3\)</li>
+          <li>Untersumme \(U_5\) bedeutet fünf Rechtecke. Da die Funktion fallend ist, ist die Untersumme rechtsseitig.
+            <div class="centered" style="max-height: 300px;">
+              <!-- Oberes SVG: Darstellung von f(x) mit animiertem Punkt und Tangente -->
+              <svg id="riemann7Svg" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -5 7.5 5.75">
+
+                <!-- X-Achse -->
+                <line x1="-1" y1="0" x2="6" y2="0" stroke="#a7a7a7" stroke-width="0.05" />
+                <polygon points="6.5,0 5.8,-0.15 5.8,0.15" fill="#a7a7a7" />
+                <text x="5.5" y="0.7" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">x</text>
+                <text x="-0.45" y="0.5" font-family="serif" font-size="0.5" fill="#a8a7a7">0</text>
+                <text x="3.875" y="0.5" font-family="serif" font-size="0.5" fill="#a8a7a7">1</text>
+
+                <!-- Y-Achse -->
+                <line x1="0" y1="1.5" x2="0" y2="-4" stroke="#a7a7a7" stroke-width="0.05" />
+                <polygon points="0,-4.5 -0.15,-3.8 0.15,-3.8" fill="#a7a7a7" />
+                <text x="-0.8" y="-4.3" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">y</text>
+
+                <text x="1.2" y="-4.3" font-family="serif" font-size="0.55" fill="#a8a7a7" id="oberArea">1 FE</text>
+
+
+              </svg>
+            </div>
+
+          </li>
+          <li>Obersumme \(O_5\) bedeutet fünf Rechtecke. Da die Funktion fallend ist, ist die Obersumme linksseitig.
+            <div class="centered" style="max-height: 300px;">
+              <!-- Oberes SVG: Darstellung von f(x) mit animiertem Punkt und Tangente -->
+              <svg id="riemann8Svg" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -5 7.5 5.75">
+
+                <!-- X-Achse -->
+                <line x1="-1" y1="0" x2="6" y2="0" stroke="#a7a7a7" stroke-width="0.05" />
+                <polygon points="6.5,0 5.8,-0.15 5.8,0.15" fill="#a7a7a7" />
+                <text x="5.5" y="0.7" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">x</text>
+                <text x="-0.45" y="0.5" font-family="serif" font-size="0.5" fill="#a8a7a7">0</text>
+                <text x="3.875" y="0.5" font-family="serif" font-size="0.5" fill="#a8a7a7">1</text>
+
+                <!-- Y-Achse -->
+                <line x1="0" y1="1.5" x2="0" y2="-4" stroke="#a7a7a7" stroke-width="0.05" />
+                <polygon points="0,-4.5 -0.15,-3.8 0.15,-3.8" fill="#a7a7a7" />
+                <text x="-0.8" y="-4.3" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">y</text>
+
+                <text x="1.2" y="-4.3" font-family="serif" font-size="0.55" fill="#a8a7a7" id="oberArea">1 FE</text>
+
+
+              </svg>
+            </div>
+
+          </li>
+          <li>
+            <ul>
+              <li>Funktion: \(f(x)=2-x^2\)</li>
+              <li>Fläche eines Rechtecks: \(A=a\cdot b\)</li>
+              <li>Breite \(a\) eines Rechtecks: \(a=\tfrac15\) (Intervallspanne : Anzahl der Rechtecke)
+              </li>
+              <li>Höhe \(b\) der Rechtecke: (\(x\) ist der Startpunkt des Rechtecks)
+                <ul>
+                  <li>Untersumme: \(b=f(x+\tfrac15)\)</li>
+                  <li>Obersumme: \(b=f(x)\)</li>
+                </ul>
+              </li>
+              <li>
+                Berechnung:
+                <ul>
+                  <li>Untersumme:
+                    <ul>
+                      <li>\(U_5=\tfrac15\cdot f(0+\tfrac15) + \tfrac15\cdot f(\tfrac15+\tfrac15)
+                        + \tfrac15\cdot f(\tfrac25+\tfrac15)+ \tfrac15\cdot f(\tfrac35+\tfrac15)
+                        + \tfrac15\cdot f(\tfrac45+\tfrac15) \)</li>
+                      <li>\(U_5=\tfrac15\cdot\left( f(\tfrac15) + f(\tfrac25)
+                        + f(\tfrac35)+ f(\tfrac45)+ f(\tfrac55)\right) \)</li>
+                      <li>\(U_5=\displaystyle\tfrac15\cdot\sum_{i=1}^{5} f(\tfrac i5)\)</li>
+                      <li>\(U_5=\displaystyle\tfrac15\cdot\sum_{i=1}^{5} \left(2-\left(\frac i5\right)^2\right)\)</li>
+                      <li>\(U_5=1,56\,\text{FE}\)</li>
+                    </ul>
+                  </li>
+                  <li>Obersumme:
+                    <ul>
+                      <li>\(O_5=\tfrac15\cdot f(0) + \tfrac15\cdot f(\tfrac15)
+                        + \tfrac15\cdot f(\tfrac25)+ \tfrac15\cdot f(\tfrac35)
+                        + \tfrac15\cdot f(\tfrac45) \)</li>
+                      <li>\(O_5=\tfrac15\cdot\left(f(0) + f(\tfrac15) + f(\tfrac25)
+                        + f(\tfrac35)+ f(\tfrac45)\right) \)</li>
+                      <li>\(O_5=\displaystyle\tfrac15\cdot\sum_{i=0}^{4} f(\tfrac i5)\)</li>
+                      <li>\(O_5=\displaystyle\tfrac15\cdot\sum_{i=0}^{4} \left(2-\left(\frac i5\right)^2\right)\)</li>
+                      <li>\(O_5=1,76\,\text{FE}\)</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>\(m=\dfrac{1,56+1,76}{2}=1,66\,\text{FE}\)</li>
+
         </ol>
-      </details> -->
+      </details>
+
+      <details id="a2">
+        <summary>Übung 2</summary>
+
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>Untersumme \(U_4\) bedeutet vier Rechtecke.
+            <div class="centered" style="max-height: 300px;">
+              <!-- Oberes SVG: Darstellung von f(x) mit animiertem Punkt und Tangente -->
+              <svg id="riemann9Svg" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -5 9.5 5.75">
+
+                <!-- X-Achse -->
+                <line x1="-1" y1="0" x2="8" y2="0" stroke="#a7a7a7" stroke-width="0.05" />
+                <polygon points="8.5,0 7.8,-0.15 7.8,0.15" fill="#a7a7a7" />
+                <text x="8.5" y="0.7" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">x</text>
+                <text x="-0.45" y="0.5" font-family="serif" font-size="0.5" fill="#a8a7a7">0</text>
+                <text x="3.875" y="0.5" font-family="serif" font-size="0.5" fill="#a8a7a7">1</text>
+
+                <!-- Y-Achse -->
+                <line x1="0" y1="1.5" x2="0" y2="-4" stroke="#a7a7a7" stroke-width="0.05" />
+                <polygon points="0,-4.5 -0.15,-3.8 0.15,-3.8" fill="#a7a7a7" />
+                <text x="-0.8" y="-4.3" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">y</text>
+
+                <text x="1.2" y="-4.3" font-family="serif" font-size="0.55" fill="#a8a7a7" id="oberArea">1 FE</text>
 
 
+              </svg>
+            </div>
+
+          </li>
+          <li>Obersumme \(O_4\) bedeutet vier Rechtecke.
+            <div class="centered" style="max-height: 300px;">
+              <!-- Oberes SVG: Darstellung von f(x) mit animiertem Punkt und Tangente -->
+              <svg id="riemann10Svg" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -5 9.5 5.75">
+
+                <!-- X-Achse -->
+                <line x1="-1" y1="0" x2="8" y2="0" stroke="#a7a7a7" stroke-width="0.05" />
+                <polygon points="8.5,0 7.8,-0.15 7.8,0.15" fill="#a7a7a7" />
+                <text x="8.5" y="0.7" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">x</text>
+                <text x="-0.45" y="0.5" font-family="serif" font-size="0.5" fill="#a8a7a7">0</text>
+                <text x="3.875" y="0.5" font-family="serif" font-size="0.5" fill="#a8a7a7">1</text>
+
+                <!-- Y-Achse -->
+                <line x1="0" y1="1.5" x2="0" y2="-4" stroke="#a7a7a7" stroke-width="0.05" />
+                <polygon points="0,-4.5 -0.15,-3.8 0.15,-3.8" fill="#a7a7a7" />
+                <text x="-0.8" y="-4.3" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">y</text>
+
+                <text x="1.2" y="-4.3" font-family="serif" font-size="0.55" fill="#a8a7a7" id="oberArea">1 FE</text>
 
 
+              </svg>
+            </div>
 
+          </li>
+          <li>
+            <ul>
+              <li>Funktion: \(f(x)=(x-1)^3+1\)</li>
+              <li>Fläche eines Rechtecks: \(A=a\cdot b\)</li>
+              <li>Breite \(a\) eines Rechtecks: \(a=\tfrac{2-0}{4}=\tfrac12\) (Intervallspanne : Anzahl der Rechtecke)
+              </li>
+              <li>Höhe \(b\) der Rechtecke: (\(x\) ist der Startpunkt des Rechtecks)
+                <ul>
+                  <li>Untersumme: \(b=f(x)\)</li>
+                  <li>Obersumme: \(b=f(x+\tfrac12)\)</li>
+                </ul>
+              </li>
+              <li>
+                Berechnung:
+                <ul>
+                  <li>Untersumme:
+                    <ul>
+                      <li>\(U_4=\tfrac12\cdot f(0) + \tfrac12\cdot f(\tfrac12)
+                        + \tfrac12\cdot f(\tfrac22)+ \tfrac12\cdot f(\tfrac32) \)</li>
+                      <li>\(U_4=\tfrac12\cdot\left( f(0) + f(\tfrac12)
+                        + f(\tfrac22)+ f(\tfrac32)\right) \)</li>
+                      <li>\(U_4=\displaystyle\tfrac12\cdot\sum_{i=0}^{3} f(\tfrac i2)\)</li>
+                      <li>\(U_4=\displaystyle\tfrac15\cdot\sum_{i=1}^{5} \left(\left(\frac i2-1\right)^3+1\right)\)</li>
+                      <li>\(U_4=2\,\text{FE}\)</li>
+                    </ul>
+                  </li>
+                  <li>Obersumme:
+                    <ul>
+                      <li>\(O_4=\tfrac12\cdot f(\tfrac12)
+                        + \tfrac12\cdot f(\tfrac22)+ \tfrac12\cdot f(\tfrac32) + \tfrac12\cdot f(\tfrac42) \)</li>
+                      <li>\(O_4=\tfrac12\cdot\left(f(\tfrac12)
+                        + f(\tfrac22)+ f(\tfrac32) + f(\tfrac42)\right) \)</li>
+                      <li>\(O_4=\displaystyle\tfrac12\cdot\sum_{i=1}^{4} f(\tfrac i2)\)</li>
+                      <li>\(O_4=\displaystyle\tfrac12\cdot\sum_{i=1}^{4} \left(\left(\frac i2-1\right)^3+1\right)\)</li>
+                      <li>\(O_4=2,5\,\text{FE}\)</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>\(m=\dfrac{2+2,5}{2}=12,25\,\text{FE}\)</li>
 
+        </ol>
+      </details>
+      <details id="a3">
+        <summary>Übung 3</summary>
+        <div class="table-wrapper centered">
+          <table class="wechseltabelle" style="width: max-content; white-space: nowrap;">
+              <!-- Haken: &#10004; Kreuz: &#x2718; -->
+              <tr>
+                  <th>Aufgabe</th>
+                  <th>\(U_4\)</th>
+                  <th>\(O_4\)</th>
+                  <th>\(U_8\)</th>
+                  <th>\(O_8\)</th>
+              </tr>
+              <tr>
+                  <td>a)</td>
+                  <td>\(\frac{11}{8}\,\text{FE}\)</td>
+                  <td>\(\frac{13}{8}\,\text{FE}\)</td>
+                  <td>\(\frac{23}{16}\,\text{FE}\)</td>
+                  <td>\(\frac{25}{16}\,\text{FE}\)</td>
+              </tr>
+              <tr>
+                <td>b)</td>
+                <td>\(\frac{3}{2}\,\text{FE}\)</td>
+                <td>\(\frac{5}{2}\,\text{FE}\)</td>
+                <td>\(\frac{7}{4}\,\text{FE}\)</td>
+                <td>\(\frac{9}{4}\,\text{FE}\)</td>
+            </tr>
+            <tr>
+              <td>c)</td>
+              <td>\(\frac{7}{64}\,\text{FE}\)</td>
+              <td>\(\frac{15}{64}\,\text{FE}\)</td>
+              <td>\(\frac{35}{256}\,\text{FE}\)</td>
+              <td>\(\frac{51}{256}\,\text{FE}\)</td>
+          </tr>
+          <tr>
+            <td>d)</td>
+            <td>\(\frac{63}{32}\,\text{FE}\)</td>
+            <td>\(\frac{87}{32}\,\text{FE}\)</td>
+            <td>\(\frac{275}{128}\,\text{FE}\)</td>
+            <td>\(\frac{323}{128}\,\text{FE}\)</td>
+        </tr>
+        <tr>
+          <td>e)</td>
+          <td>\(\frac{11}{2}\,\text{FE}\)</td>
+          <td>\(\frac{19}{2}\,\text{FE}\)</td>
+          <td>\(\frac{51}{8}\,\text{FE}\)</td>
+          <td>\(\frac{67}{8}\,\text{FE}\)</td>
+      </tr>
+      <tr>
+        <td>f)</td>
+        <td>\(\frac{49}{16}\,\text{FE}\)</td>
+        <td>\(\frac{177}{16}\,\text{FE}\)</td>
+        <td>\(\frac{1169}{256}\,\text{FE}\)</td>
+        <td>\(\frac{2193}{256}\,\text{FE}\)</td>
+    </tr>
+
+          </table>
+      </div>
+      <p>
+        Bis auf b) sind alle Untersummen linksseitig und alle Obersummen rechtsseitig.
+      </p>
+        <p>
+          Die Summe \(U_4\) bei d) lautet: \(U_4=\tfrac14\cdot\displaystyle\sum_{i=0}^{3}\left(1+\frac{i}{4}\right)^2\)
+        </p>
+      </details>
     </section>
 
+    <script type="text/javascript" src="/js/math/integralAnimation.js"></script>
     <section id="meme">
       <div class="images">
         <img src="/img/riemann_meme.jpg" style="object-fit: scale-down; max-width: 300px" />
@@ -388,7 +631,7 @@
     <a href="/misc/impressum.html">Impressum</a>
     <div class="lastModified" align="center">
       Zuletzt geändert:<br />
-      5. November 2024
+      3. März 2025
       <!-- <span id="lastModifiedDate"></span> -->
     </div>
     <a href="/misc/datenschutz.html">Datenschutz</a>

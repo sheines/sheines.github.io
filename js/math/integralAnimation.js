@@ -5,6 +5,7 @@ const riemann3Svg = document.getElementById("riemann3Svg");
 const riemann4Svg = document.getElementById("riemann4Svg");
 const riemann5Svg = document.getElementById("riemann5Svg");
 const riemann6Svg = document.getElementById("riemann6Svg");
+const riemann7Svg = document.getElementById("riemann7Svg");
 
 const oberLabel = document.getElementById("oberLabel");
 const unterLabel = document.getElementById("unterLabel");
@@ -23,6 +24,11 @@ function f(x) {
 function p(x) {
     x *= 0.25;
     return 4. * x * x;
+}
+
+function a1(x) {
+    x*=0.3525;
+    return 1.75*(2 - x*x);
 }
 
 
@@ -278,4 +284,11 @@ plotFunction(p, riemann5Svg, "Aqua", 0, 4.25);
 
 animateRiemannSum(p, riemann6Svg, "Blue", "Lightblue", 0, 4, rectCountArray, "right", true, 0.20);
 plotFunction(p, riemann6Svg, "Aqua", 0, 4.25);
+
+plotRiemannSum(a1, riemann7Svg, "Darkgoldenrod", "Yellow", 0, 4, 5, "right", true);
+plotFunction(a1, riemann7Svg, "Aqua", 0, 4);
+
+plotRiemannSum(a1, riemann8Svg, "Blue", "Lightblue", 0, 4, 5, "left", true);
+plotFunction(a1, riemann8Svg, "Aqua", 0, 4);
+
 
