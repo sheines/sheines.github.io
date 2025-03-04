@@ -23,7 +23,7 @@ function f(x) {
 
 function p(x) {
     x *= 0.25;
-    return 4. * x * x;
+    return 4. * x * x + 0.01;
 }
 
 function a1(x) {
@@ -33,7 +33,7 @@ function a1(x) {
 
 function a2(x) {
     x*=0.25;
-    return 2*((x-1)*(x-1)*(x-1)+1);
+    return 2*((x-1)*(x-1)*(x-1)+1) + 0.01;
 }
 
 
