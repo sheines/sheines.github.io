@@ -27,8 +27,13 @@ function p(x) {
 }
 
 function a1(x) {
-    x*=0.3525;
+    x*=0.25;
     return 1.75*(2 - x*x);
+}
+
+function a2(x) {
+    x*=0.25;
+    return 2*((x-1)*(x-1)*(x-1)+1);
 }
 
 
@@ -286,9 +291,16 @@ animateRiemannSum(p, riemann6Svg, "Blue", "Lightblue", 0, 4, rectCountArray, "ri
 plotFunction(p, riemann6Svg, "Aqua", 0, 4.25);
 
 plotRiemannSum(a1, riemann7Svg, "Darkgoldenrod", "Yellow", 0, 4, 5, "right", true);
+plotFunction(a1, riemann7Svg, "Gray", 0, 5.75);
 plotFunction(a1, riemann7Svg, "Aqua", 0, 4);
 
 plotRiemannSum(a1, riemann8Svg, "Blue", "Lightblue", 0, 4, 5, "left", true);
+plotFunction(a1, riemann8Svg, "Gray", 0, 5.75);
 plotFunction(a1, riemann8Svg, "Aqua", 0, 4);
 
 
+plotRiemannSum(a2, riemann9Svg, "Darkgoldenrod", "Yellow", 0, 8, 4, "left", true);
+plotFunction(a2, riemann9Svg, "Aqua", 0, 8);
+
+plotRiemannSum(a2, riemann10Svg,  "Blue", "Lightblue", 0, 8, 4, "right", true);
+plotFunction(a2, riemann10Svg, "Aqua", 0, 8);
