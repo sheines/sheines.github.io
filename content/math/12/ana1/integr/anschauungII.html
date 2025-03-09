@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" initial-scale="1.0" />
+  <meta name="author" content="Sebastian Hitziger" />
+  <meta name="robot" content="noindex" />
+  <title>HITZ | Fkt-Eigensch. | Anschauung II </title>
+  <link rel="stylesheet" type="text/css" href="/css/colors.css" />
+  <link rel="stylesheet" type="text/css" href="/css/gridNoTimeline.css" />
+  <link rel="stylesheet" type="text/css" href="/css/navbar.css" />
+  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="/css/courses.css" />
+  <script type="text/javascript" src="jquery-3.3.1.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+
+
+<body>
+  <header>
+    <div class="nav">
+      <input type="checkbox" id="nav-check" />
+      <div class="nav-header">
+        <div class="nav-title">
+          <a href="/">Hr. Hitzigers Unterricht</a>
+        </div>
+      </div>
+      <div class="nav-btn">
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+
+      <div class="nav-links">
+        <a href="/content/math/">Mathematik</a>
+        <a href="/content/math/12/">Klasse 12</a>
+        <a href="/content/math/12/ana1/">Analysis I</a>
+        <a href="/content/math/12/ana1/integr/">Integralrechnung</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section>
+      <h2>Integral &ndash; Anschauung II</h2>
+      <div class="ziele">
+        <p>
+          Nachfolgend soll die Bedeutung eines Integrals veranschaulicht und mit dem Grenzwert exakt bestimmt werden.
+        </p>
+        <p>
+          <a href="#aufgaben">Direkt zu den Aufgaben</a>
+        </p>
+      </div>
+
+
+
+      <div class="theorie">
+
+        <div class="definition">
+          <h4>Das Integral II</h4>
+          <p>
+            Bereits in der letzten Stunde wurde festgestellt, dass mit der Anzahl der Rechtecke auch die Genauigkeit steigt.
+          </p>
+          <div class="course-container" style="gap: 10px; flex-grow: 1; margin-bottom: 20px;">
+            <div style="flex: 1; min-width: 250px;">
+              <div class="centered" style="max-height: 300px;">
+                <!-- Oberes SVG: Darstellung von f(x) mit animiertem Punkt und Tangente -->
+                <svg id="riemannUSvg" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -5 6.5 5.75">
+    
+                  <!-- X-Achse -->
+                  <line x1="-1" y1="0" x2="5" y2="0" stroke="#a7a7a7" stroke-width="0.05" />
+                  <polygon points="5.5,0 4.8,-0.15 4.8,0.15" fill="#a7a7a7" />
+                  <text x="5.5" y="0.7" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">x</text>
+                  <text x="-0.45" y="0.5" font-family="serif" font-size="0.5" fill="#a8a7a7">0</text>
+                  <text x="3.875" y="0.5" font-family="serif" font-size="0.5" fill="#a8a7a7">1</text>
+                  <text x="0.785" y="0.35" font-family="serif" font-size="0.25" fill="#a8a7a7">0,25</text>
+                  <text x="1.85" y="0.35" font-family="serif" font-size="0.25" fill="#a8a7a7">0,5</text>
+                  <text x="2.785" y="0.35" font-family="serif" font-size="0.25" fill="#a8a7a7">0,75</text>
+    
+                  <!-- Y-Achse -->
+                  <line x1="0" y1="1.5" x2="0" y2="-4" stroke="#a7a7a7" stroke-width="0.05" />
+                  <polygon points="0,-4.5 -0.15,-3.8 0.15,-3.8" fill="#a7a7a7" />
+                  <text x="-0.8" y="-4.3" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">y</text>
+    
+                  <text x="1.2" y="-4.3" font-family="serif" font-size="0.55" fill="#a8a7a7" id="unterArea">1 FE</text>
+    
+    
+                </svg>
+              </div>
+              <div class="centered">
+                <h4>Untersumme <span style="font-family: 'Times New Roman', Times, serif; font-style: italic;">U</span><sub
+                    id="unterLabel" style="font-family: 'Times New Roman', Times, serif;">4</sup></h4>
+              </div>
+    
+            </div>
+            <div style="flex: 1; min-width: 250px;">
+              <div class="centered" style="max-height: 300px;">
+                <!-- Oberes SVG: Darstellung von f(x) mit animiertem Punkt und Tangente -->
+                <svg id="riemannOSvg" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -5 6.5 5.75">
+    
+                  <!-- X-Achse -->
+                  <line x1="-1" y1="0" x2="5" y2="0" stroke="#a7a7a7" stroke-width="0.05" />
+                  <polygon points="5.5,0 4.8,-0.15 4.8,0.15" fill="#a7a7a7" />
+                  <text x="5.5" y="0.7" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">x</text>
+                  <text x="-0.45" y="0.5" font-family="serif" font-size="0.5" fill="#a8a7a7">0</text>
+                  <text x="3.875" y="0.5" font-family="serif" font-size="0.5" fill="#a8a7a7">1</text>
+                  <text x="0.785" y="0.35" font-family="serif" font-size="0.25" fill="#a8a7a7">0,25</text>
+                  <text x="1.85" y="0.35" font-family="serif" font-size="0.25" fill="#a8a7a7">0,5</text>
+                  <text x="2.785" y="0.35" font-family="serif" font-size="0.25" fill="#a8a7a7">0,75</text>
+    
+                  <!-- Y-Achse -->
+                  <line x1="0" y1="1.5" x2="0" y2="-4" stroke="#a7a7a7" stroke-width="0.05" />
+                  <polygon points="0,-4.5 -0.15,-3.8 0.15,-3.8" fill="#a7a7a7" />
+                  <text x="-0.8" y="-4.3" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">y</text>
+    
+                  <text x="1.2" y="-4.3" font-family="serif" font-size="0.55" fill="#a8a7a7" id="oberArea">1 FE</text>
+    
+    
+                </svg>
+              </div>
+              <div class="centered">
+                <h4>Obersumme <span style="font-family: 'Times New Roman', Times, serif; font-style: italic;">O</span><sub
+                    id="oberLabel" style="font-family: 'Times New Roman', Times, serif;">4</sup></h4>
+              </div>
+            </div>
+          </div>
+
+          <p>Es wird nun also die Obersumme \(O_n\) mit \(n\rightarrow\infty\) gesucht.</p>
+          <p>
+            Durch die dann unendlich kleinen Rechtecke muss nicht mehr zwischen Ober- und Untersumme unterschieden werden.
+          </p>
+        </div>
+      </div>
+      <h6>Beispiel:</h6>
+      <p>
+        Bisher galt: Bestimme \(O_{\color{red}4}\) der Funktion \(\color{cyan}f({\color{salmon}x})={\color{salmon}x}^2\) im Intervall \(I=[{\color{orange}0}; {\color{magenta}2}]\):
+        <ul>
+          <li>Intervalllänge: \(a=\frac{{\color{magenta}2}\,-\,{\color{orange}0}}{{\color{red}4}}={\color{green}\tfrac12}\)</li>
+          <li>Obersumme: \(\displaystyle O_{\color{red}4}={\color{green}\tfrac12}\cdot\sum_{i=1}^{{\color{red}4}} {\color{cyan}f({\color{salmon}{\color{orange}0}+i\cdot{\color{green}\tfrac12}})}
+                ={\color{green}\tfrac12}\cdot\sum_{i=1}^{{\color{red}4}} \color{cyan}\left({\color{salmon}i\cdot{\color{green}\tfrac12}}\right)^2\)</li>
+        </ul>
+        Nun wird aber nicht mehr mit vier Rechtecken, sondern mit beliebig (\({\color{red}n}\)) vielen gerechnet (gleiche Funktion):
+        <ul>
+          <li>Intervalllänge: \(a=\frac{{\color{magenta}2}\,-\,{\color{orange}0}}{{\color{red}n}}={\color{green}\tfrac{2}{{\color{red}n}}}\)</li>
+          <li>Obersumme: \(\displaystyle O_{\color{red}n}={\color{green}\tfrac{2}{{\color{red}n}}}\cdot\sum_{i=1}^{{\color{red}n}} {\color{cyan}f({\color{salmon}{\color{orange}0}+i\cdot{\color{green}\tfrac{2}{{\color{red}n}}}})}
+                ={\color{green}\tfrac{2}{{\color{red}n}}}\cdot\sum_{i=1}^{{\color{red}n}} \color{cyan}\left({\color{salmon}i\cdot{\color{green}\tfrac{2}{{\color{red}n}}}}\right)^2\)</li>
+        </ul>
+        Für die maximale Genauigkeit sollen es nun unendlich viele Rechtecke sein:
+        <ul>
+          <li>Obersumme: \(\displaystyle O_{\color{red}n}=\lim_{{\color{red}n}\rightarrow\infty}{\color{green}\tfrac{2}{{\color{red}n}}}\cdot\sum_{i=1}^{{\color{red}n}} \color{cyan}\left({\color{salmon}i\cdot{\color{green}\tfrac{2}{{\color{red}n}}}}\right)^2\)</li>
+        </ul>
+        Da jeder Summand \({\color{green}\tfrac{2}{{\color{red}n}}}\) (im Quadrat) enthält, kann es ausgeklammert werden:
+        <ul>
+          <li>Obersumme: \(\displaystyle O_{\color{red}n}=\lim_{{\color{red}n}\rightarrow\infty}{\color{green}\tfrac{2}{{\color{red}n}}}\cdot\left({\color{green}\tfrac{2}{{\color{red}n}}}\right)^2\cdot\sum_{i=1}^{{\color{red}n}} {\color{cyan}{\color{salmon}i}^2}
+                              = \lim_{{\color{red}n}\rightarrow\infty}{\tfrac{8}{{\color{red}n}^3}}\cdot\sum_{i=1}^{{\color{red}n}} \color{cyan}{\color{salmon}i}^2 \)</li>
+        </ul>
+        Die verbleibende Summe ist eine geometrische Reihe, deren Lösung nachschlagbar ist: \(\displaystyle\sum_{i=1}^n=\tfrac16\cdot n\cdot (n+1)\cdot (2n+1)\). Diese kann eingesetzt werden:
+        <ul>
+          <li>Obersumme: \(\displaystyle O_{\color{red}n}= \lim_{{\color{red}n}\rightarrow\infty}{\tfrac{8}{{\color{red}n}^3}}\cdot\tfrac16\cdot {\color{red}n}\cdot ({\color{red}n}+1)\cdot (2{\color{red}n}+1) \)</li>
+        </ul>
+        Wenn man diese Summe etwas umschreibt,
+        <ul>
+          <li>Obersumme: \(\displaystyle O_{\color{red}n}= \lim_{{\color{red}n}\rightarrow\infty}8\cdot\tfrac16\cdot\frac{{\color{red}n}}{{\color{red}n}}\cdot\frac{{\color{red}n}+1}{{\color{red}n}}\cdot\frac{2{\color{red}n}+1}{{\color{red}n}}  \)</li>
+        </ul>
+        kann sie mit den bekannten Regeln des Unendlichkeitsverhaltens bestimmt werden:
+        <ul>
+          <li>Obersumme: \(\displaystyle O_{\color{red}n}= \lim_{{\color{red}n}\rightarrow\infty}8\cdot\tfrac16\cdot1\cdot1\cdot2=\tfrac83\,\text{FE}  \)</li>
+        </ul>
+      </p>
+
+    </section>
+    <!-- <section>
+            <div class="videos">
+                <iframe width="360" height="202" src="https://www.youtube.com/embed/19goPRnthCE"
+                    title="Abstand Punkt - Punkt" frameborder="0" allow="web-share" allowfullscreen></iframe>
+
+            </div>
+        </section> -->
+    <section class="aufgaben" id="aufgaben">
+      <h3>Aufgaben zu Intregralen</h3>
+      <ol class="custom-marker point-after decimal">
+        <li> Buch Seite 285 Übung 1 <a href="#a1">Lösungen</a></li>
+        <li> Buch Seite 287 Übung 2 <a href="#a2">Lösungen</a></li>
+        <li> Buch Seite 287 Übung 3 <a href="#a3">Lösungen</a></li>
+      </ol>
+
+    </section>
+
+    <section class="loesungen">
+      <h3>Lösungen zu Integralen</h3>
+
+      <details id="a1">
+        <summary>Übung 1</summary>
+
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>
+          </li>
+
+        </ol>
+      </details>
+
+      
+      
+    </section>
+
+    <script type="text/javascript" src="/js/math/integralAnimationII.js"></script>
+    <section id="meme">
+      <div class="images">
+        <img src="/img/riemann_meme.jpg" style="object-fit: scale-down; max-width: 300px" />
+      </div>
+      <div class="centered">
+        <a href="https://www.reddit.com/r/mathmemes/comments/o7w5mp/integration_race/#lightbox" target="_blank"
+          rel="noopener noreferrer">
+          <h6>Original von Analemmath</h6>
+        </a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <a href="/misc/impressum.html">Impressum</a>
+    <div class="lastModified" align="center">
+      Zuletzt geändert:<br />
+      3. März 2025
+      <!-- <span id="lastModifiedDate"></span> -->
+    </div>
+    <a href="/misc/datenschutz.html">Datenschutz</a>
+  </footer>
+</body>
