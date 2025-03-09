@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" initial-scale="1.0" />
+  <meta name="author" content="Sebastian Hitziger" />
+  <meta name="robot" content="noindex" />
+  <title>HITZ | Fkt-Eigensch. | Flächenfunktion I </title>
+  <link rel="stylesheet" type="text/css" href="/css/colors.css" />
+  <link rel="stylesheet" type="text/css" href="/css/gridNoTimeline.css" />
+  <link rel="stylesheet" type="text/css" href="/css/navbar.css" />
+  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="/css/courses.css" />
+  <script type="text/javascript" src="jquery-3.3.1.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+
+
+<body>
+  <header>
+    <div class="nav">
+      <input type="checkbox" id="nav-check" />
+      <div class="nav-header">
+        <div class="nav-title">
+          <a href="/">Hr. Hitzigers Unterricht</a>
+        </div>
+      </div>
+      <div class="nav-btn">
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+
+      <div class="nav-links">
+        <a href="/content/math/">Mathematik</a>
+        <a href="/content/math/12/">Klasse 12</a>
+        <a href="/content/math/12/ana1/">Analysis I</a>
+        <a href="/content/math/12/ana1/integr/">Integralrechnung</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section>
+      <h2>Flächenfunktion I</h2>
+      <div class="ziele">
+        <p>
+          Nachfolgend soll die Flächenfunktion für beliebig lange Intervalle bestimmt werden.
+        </p>
+        <p>
+          <a href="#aufgaben">Direkt zu den Aufgaben</a>
+        </p>
+      </div>
+
+
+
+      <div class="theorie">
+
+        <div class="definition">
+          <h4>Flächenfunktion I</h4>
+          <p>
+            Nachdem wir letzte Stunde die Ober- und Untersumme mit beliebiger Genauigkeit (\(n\rightarrow\infty\)) 
+            bestimmt haben, soll nun die Ober-/Untersumme für beliebige Intervalle bestimmt werden. 
+            Der Einfachheithalber sei die untere Grenze (vorerst) immer 0.
+          </p>
+              <div class="centered" style="max-height: 300px;">
+                <!-- Oberes SVG: Darstellung von f(x) mit animiertem Punkt und Tangente -->
+                <svg id="integralSvg" xmlns="http://www.w3.org/2000/svg" viewBox="-1 -5 6.5 5.75">
+    
+                  <!-- X-Achse -->
+                  <line x1="-1" y1="0" x2="5" y2="0" stroke="#a7a7a7" stroke-width="0.05" />
+                  <polygon points="5.5,0 4.8,-0.15 4.8,0.15" fill="#a7a7a7" />
+                  <text x="5.5" y="0.7" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">x</text>
+    
+                  <!-- Y-Achse -->
+                  <line x1="0" y1="1.5" x2="0" y2="-4" stroke="#a7a7a7" stroke-width="0.05" />
+                  <polygon points="0,-4.5 -0.15,-3.8 0.15,-3.8" fill="#a7a7a7" />
+                  <text x="-0.8" y="-4.3" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">y</text>  
+    
+                </svg>
+              </div>
+              <p>
+                Die Flächenfunktion \(A_0({\color{Lime}x})\), \(0\) für den Startpunkt bei \(x=0\), gibt an, wie groß die Fläche für das Intervallende \({\color{Lime}x}\) ist.
+              </p>
+        </div>
+        
+      </div>
+      <h6>Beispiel:</h6>
+      <p>
+        Es soll nun für die Funktion \(\color{cyan}f({\color{salmon}x})={\color{salmon}x}^2\) die Flächenfunktion im Intervall \(I=[{\color{orange}0}; {\color{magenta}x}]\) 
+        bestimmt werden.
+      </p>
+      <p>
+        Bisher galt für die Obersumme \(O_{\color{red}n}\):
+        <ul>
+          <li>Intervalllänge: \(a=\frac{{\color{magenta}x}\,-\,{\color{orange}0}}{{\color{red}n}}=\tfrac{\color{magenta}x}{\color{red}n}\) </li>
+          <li>Obersumme: \(\displaystyle O_{\color{red}n}=\tfrac{\color{magenta}x}{\color{red}n}\cdot\sum_{i=1}^{{\color{red}n}} {\color{cyan}f({\color{salmon}{\color{orange}0}+i\cdot\tfrac{\color{magenta}x}{\color{red}n}})}
+            =\tfrac{\color{magenta}x}{\color{red}n}\cdot\sum_{i=1}^{{\color{red}n}} \color{cyan}\left({\color{salmon}i\cdot\tfrac{\color{magenta}x}{\color{red}n}}\right)^2\)</li>
+        </ul>
+        Da jeder Summand \(\tfrac{\color{magenta}x}{\color{red}n}\) (im Quadrat) enthält, kann es ausgeklammert werden:
+        <ul>
+          <li>Obersumme: \(\displaystyle O_{\color{red}n}=\tfrac{\color{magenta}x}{\color{red}n}\cdot\left(\tfrac{\color{magenta}x}{\color{red}n}\right)^2\cdot\sum_{i=1}^{{\color{red}n}} {\color{cyan}{\color{salmon}i}^2}
+                              = \tfrac{{\color{magenta}x}^3}{{\color{red}n}^3}\cdot\sum_{i=1}^{{\color{red}n}} \color{cyan}{\color{salmon}i}^2 \)</li>
+        </ul>
+        Die verbleibende Summe ist eine geometrische Reihe, deren Lösung nachschlagbar ist: \(\displaystyle\sum_{i=1}^n=\tfrac16\cdot n\cdot (n+1)\cdot (2n+1)\). Diese kann eingesetzt werden:
+        <ul>
+          <li>Obersumme: \(\displaystyle O_{\color{red}n}= {\tfrac{{\color{magenta}x}^3}{{\color{red}n}^3}}\cdot\tfrac16\cdot {\color{red}n}\cdot ({\color{red}n}+1)\cdot (2{\color{red}n}+1) \)</li>
+        </ul>
+        Mit dieser Gleichung kann nun mit beliebiger Genauigkeit \(\color{red}n\) für beliebige Intervallenden \(\color{magenta}x\) die Obersumme berechnet werden.
+        </p>
+        <p>
+          Wir wollen für die Flächenfunktion \(A_0\) das exakte Ergebnis. Es muss also der Grenzwert für \({\color{red}n}\rightarrow\infty\) bestimmt werden:
+          <ul>
+            <li>Flächenfunktion: \(\displaystyle A_0({\color{magenta}x})=\lim_{{\color{red}n}\rightarrow\infty} {\color{magenta}x}^3\cdot \tfrac16\cdot \frac{\color{red}n}{\color{red}n}\cdot \frac{{\color{red}n}+1}{\color{red}n}\cdot \frac{2{\color{red}n}+1}{\color{red}n} \)</li>
+          </ul>
+          Dieser Grenzwert kann mit den bekannten Regeln des Unendlichkeitsverhaltens bestimmt werden:
+          <ul>
+            <li>Flächenfunktion: \(\displaystyle A_0({\color{magenta}x})={\color{magenta}x}^3\cdot \tfrac16\cdot 1\cdot 1\cdot 2=\tfrac13{\color{magenta}x}^3 \)</li>
+          </ul>
+          Die Fläche eines beliebigen Intervalls kann nun mit der <b>Flächenfunktion</b> \(A_0({\color{magenta}x})=\tfrac13{\color{magenta}x}^3\) bestimmt werden. 
+          Bspw. im Intervalle \([0; 4]\): \(A_0(4)=\frac13\cdot 4^3=21,33\,\text{FE}\).
+        
+      </p>
+
+    </section>
+    <!-- <section>
+            <div class="videos">
+                <iframe width="360" height="202" src="https://www.youtube.com/embed/19goPRnthCE"
+                    title="Abstand Punkt - Punkt" frameborder="0" allow="web-share" allowfullscreen></iframe>
+
+            </div>
+        </section> -->
+    <section class="aufgaben" id="aufgaben">
+      <h3>Aufgaben zu Intregralen</h3>
+      <ol class="custom-marker point-after decimal">
+        <li> Buch Seite 288 Übung 1 <a href="#a1">Lösungen</a></li>
+        <li> Buch Seite 288 Übung 2 <a href="#a2">Lösungen</a></li>
+        <li> Buch Seite 289 Übung 3 <a href="#a3">Lösungen</a></li>
+      </ol>
+
+    </section>
+
+    <section class="loesungen">
+      <h3>Lösungen zu Integralen</h3>
+
+      <details id="a1">
+        <summary>Übung 4</summary>
+
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>
+          </li>
+
+        </ol>
+      </details>
+
+      
+      
+    </section>
+
+    <script type="text/javascript" src="/js/math/integralAnimationIII.js"></script>
+    <section id="meme">
+      <div class="images">
+        <img src="/img/riemann_meme3.jpg" style="object-fit: scale-down; max-width: 300px" />
+      </div>
+      <div class="centered">
+        <a href="https://www.facebook.com/photo.php?fbid=1417772478395871&id=431915773648218&set=a.456677864505342" target="_blank"
+          rel="noopener noreferrer">
+          <h6>Original von CNU Math Department</h6>
+        </a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <a href="/misc/impressum.html">Impressum</a>
+    <div class="lastModified" align="center">
+      Zuletzt geändert:<br />
+      3. März 2025
+      <!-- <span id="lastModifiedDate"></span> -->
+    </div>
+    <a href="/misc/datenschutz.html">Datenschutz</a>
+  </footer>
+</body>
