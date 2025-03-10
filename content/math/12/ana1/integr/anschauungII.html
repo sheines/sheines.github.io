@@ -134,7 +134,7 @@
           </p>
         </div>
       </div>
-      <h6>Beispiel:</h6>
+      <h6>Beispiel 1:</h6>
       <p>
         Bisher galt: Bestimme \(O_{\color{red}4}\) der Funktion \(\color{cyan}f({\color{salmon}x})={\color{salmon}x}^2\) im Intervall \(I=[{\color{orange}0}; {\color{magenta}2}]\):
         <ul>
@@ -157,7 +157,7 @@
           <li>Obersumme: \(\displaystyle O_{\color{red}n}=\lim_{{\color{red}n}\rightarrow\infty}{\color{green}\tfrac{2}{{\color{red}n}}}\cdot\left({\color{green}\tfrac{2}{{\color{red}n}}}\right)^2\cdot\sum_{i=1}^{{\color{red}n}} {\color{cyan}{\color{salmon}i}^2}
                               = \lim_{{\color{red}n}\rightarrow\infty}{\tfrac{8}{{\color{red}n}^3}}\cdot\sum_{i=1}^{{\color{red}n}} \color{cyan}{\color{salmon}i}^2 \)</li>
         </ul>
-        Die verbleibende Summe ist eine geometrische Reihe, deren Lösung nachschlagbar ist: \(\displaystyle\sum_{i=1}^n=\tfrac16\cdot n\cdot (n+1)\cdot (2n+1)\). Diese kann eingesetzt werden:
+        Die verbleibende Summe ist eine Potenzsumme, deren Lösung nachschlagbar ist (siehe unten): \(\displaystyle\sum_{i=1}^n=\tfrac16\cdot n\cdot (n+1)\cdot (2n+1)\). Diese kann eingesetzt werden:
         <ul>
           <li>Obersumme: \(\displaystyle O_{\color{red}n}= \lim_{{\color{red}n}\rightarrow\infty}{\tfrac{8}{{\color{red}n}^3}}\cdot\tfrac16\cdot {\color{red}n}\cdot ({\color{red}n}+1)\cdot (2{\color{red}n}+1) \)</li>
         </ul>
@@ -171,7 +171,81 @@
         </ul>
         Das heißt: die exakte Fläche unter einer Normalparabel im Intervall von null bis zwei beträgt \(\tfrac83\) Flächeneinheiten.
       </p>
+      <h6>Beispiel 2:</h6>
+      <p>
+        Es soll die exakte Fläche unter der Funktion \(\color{cyan}f({\color{salmon}x})=6-2{\color{salmon}x}\) im Intervall \(I=[{\color{orange}0}; {\color{magenta}3}]\)
+        bestimmt werden.
+        <ul>
+          <li>Intervalllänge: \(a=\frac{{\color{magenta}3}\,-\,{\color{orange}0}}{\color{red}n}={\color{green}\tfrac{3}{\color{red}n}}\)</li>
+          <li>Obersumme: \(\displaystyle O_{\color{red}n}={\color{green}\tfrac{3}{\color{red}n}} \cdot \sum_{i=1}^{\color{red}n}{\color{cyan}f\left({\color{salmon} {\color{orange}0}+i\cdot{\color{green}\tfrac{3}{\color{red}n}} }\right)}=  
+            {\color{green}\tfrac{3}{\color{red}n}} \cdot \sum_{i=1}^{\color{red}n}{\color{cyan}\left(6-2\cdot {\color{salmon}\left( {\color{orange}0}+i\cdot{\color{green}\tfrac{3}{\color{red}n}}\right) }\right)} \)</li>
+        </ul>
+        Etwas vereinfacht:
+        <ul>
+          <li>Obersumme: \(\displaystyle O_{\color{red}n}={\color{green}\tfrac{3}{\color{red}n}} \cdot \sum_{i=1}^{\color{red}n}{\color{cyan}\left(6-2\cdot {\color{salmon}\left( i\cdot{\color{green}\tfrac{3}{\color{red}n}}\right) }\right)} \)</li>
+        </ul>
+        Da die Summe selbst eine Summe, bzw. hier Differenz, enthält, kann diese aufgeteilt werden:
+        <ul>
+          <li>Obersumme: \(\displaystyle O_{\color{red}n}={\color{green}\tfrac{3}{\color{red}n}} \cdot \sum_{i=1}^{\color{red}n}{\color{cyan}6} 
+                        -{\color{green}\tfrac{3}{\color{red}n}} \cdot \sum_{i=1}^{\color{red}n}{\color{cyan}\left(2\cdot {\color{salmon}\left( i\cdot{\color{green}\tfrac{3}{\color{red}n}}\right) }\right)} \)</li>
+        </ul>
+        In der zweiten Summe enthält jeder Summand sowohl den Faktor \(\color{cyan}2\) als auch den Faktor \(\color{green}\tfrac{3}{\color{red}n}\), sodass
+        diese ausgeklammert werden können:
+        <ul>
+          <li>Obersumme: \(\displaystyle O_{\color{red}n}={\color{green}\tfrac{3}{\color{red}n}} \cdot \sum_{i=1}^{\color{red}n}{\color{cyan}6} 
+                        -{\color{cyan}2}\cdot{\color{green}\tfrac{3}{\color{red}n}}\cdot{\color{green}\tfrac{3}{\color{red}n}} \cdot \sum_{i=1}^{\color{red}n} {\color{salmon} i } \)</li>
+        </ul>
+        Bei beiden Summen handelt es sich nun um Potenzsummen, deren Lösungen nachschlagbar (siehe unten) sind:
+        <ul>
+          <li>Obersumme: \(\displaystyle O_{\color{red}n}={\tfrac{3}{\color{red}n}} \cdot {\color{red}n} \cdot 6 
+                        -{2}\cdot\tfrac{3^2}{{\color{red}n}^2 } \cdot \tfrac12\cdot {\color{red}n} \cdot ({\color{red}n} +1) \)</li>
+        </ul>
+        Für das Exakte Ergebnis wird nun der Grenzwert \({\color{red}n} \rightarrow \infty\) benötigt:
+        <ul>
+          <li>Obersumme: \(\displaystyle O_{\color{red}n}=\lim_{{\color{red}n}\rightarrow\infty}{\tfrac{3}{\color{red}n}} \cdot {\color{red}n} \cdot 6 
+                        -{2}\cdot\tfrac{3^2}{{\color{red}n}^2 } \cdot \tfrac12\cdot {\color{red}n} \cdot ({\color{red}n} +1) \)</li>
+        </ul>
+        Und etwas umgeschrieben:
+        <ul>
+          <li>Obersumme: \(\displaystyle O_{\color{red}n}=\lim_{{\color{red}n}\rightarrow\infty} 18\cdot \frac{{\color{red}n}}{{\color{red}n}}-
+                          9\cdot \frac{\color{red}n}{\color{red}n}\cdot\frac{{\color{red}n}+1}{{\color{red}n}} \)</li>
+        </ul>
+        Mit den aus dem Unendlichkeitsverhaltens bekannten Regeln kann das nun gelöst werden:
+        <ul>
+          <li>Obersumme: \(\displaystyle O_{\color{red}n}=\lim_{{\color{red}n}\rightarrow\infty} 18\cdot 1-
+                          9\cdot 1\cdot1 =9\,\text{FE} \)</li>
+        </ul>
+        Das heißt die exakte Fläche unter der Funktion \(f(x)=6-2x\) im Intervall von null bis drei beträgt neun Flächeneinheiten.
+      </p>
 
+      <div class="definition">
+        <h3>Potenzsummen</h3>
+        <p>
+          Die folgenden Summen von Potenzen und deren Vereinfachungen sind nützlich:
+          <ul class="more-spacing">
+            <li>Konstant: \(a+a+a+\ldots+a\)
+              <ul>
+                <li>\(\displaystyle\sum_{i=1}^n a = n\cdot a\)</li>
+              </ul>
+            </li>
+            <li>Linear: \(1+2+3+\ldots+n\)
+              <ul>
+                <li>\(\displaystyle\sum_{i=1}^n i = \tfrac12\cdot n\cdot (n+1)\)</li>
+              </ul>
+            </li>
+            <li>Quadratisch: \(1^2+2^2+3^2+\ldots+n^2\)
+              <ul>
+                <li>\(\displaystyle\sum_{i=1}^n i^2 = \tfrac16\cdot n\cdot (n+1)\cdot (2n+1)\)</li>
+              </ul>
+            </li>
+            <li>Kubisch: \(1^3+2^3+3^3+\ldots+n^3\)
+              <ul>
+                <li>\(\displaystyle\sum_{i=1}^n i^3 = \tfrac14\cdot n^2\cdot (n+1)^2\)</li>
+              </ul>
+            </li>
+          </ul>
+        </p>
+      </div>
     </section>
     <!-- <section>
             <div class="videos">
@@ -183,8 +257,9 @@
     <section class="aufgaben" id="aufgaben">
       <h3>Aufgaben zu Intregralen</h3>
       <ol class="custom-marker point-after decimal">
-        <li> Buch Seite 287 Übung 4 <a href="#a1">Lösungen</a></li>
+        <li> Buch Seite 287 Übung 4 (Nur Obersummen) <a href="#a1">Lösungen</a></li>
         <li> Buch Seite 287 Übung 5 <a href="#a2">Lösungen</a></li>
+        <li> Buch Seite 287 Übung 4 (Nur Untersummen) <a href="#a3">Lösungen</a></li>
       </ol>
 
     </section>
@@ -193,12 +268,60 @@
       <h3>Lösungen zu Integralen</h3>
 
       <details id="a1">
-        <summary>Übung 4</summary>
-
+        <summary>Übung 4 (Obersummen)</summary>
+        Das \(0\,+\) für den Startwert in der Klammer wird in den Lösungen immer weggelassen.
         <ol class="custom-marker parens-around lower-alpha more-spacing">
-          <li>
+          <li>\(O_n=\tfrac1n\cdot\sum\limits_{i=1}^n \left(i\cdot \tfrac1n\right) + \tfrac1n\cdot\sum\limits_{i=1}^n 1=\tfrac12\cdot\frac nn\cdot \frac{n+1}{n} + 1\cdot \frac nn\) <br>
+              \(\lim\limits_{n\rightarrow\infty}O_n=1,5\,\text{FE}\)
           </li>
+          <li>\(O_n=\tfrac2n\cdot\sum\limits_{i=1}^n 2 - \tfrac2n\cdot\sum\limits_{i=1}^n \left(i\cdot \tfrac2n\right) =4\cdot \frac nn-2\cdot\frac nn \cdot\frac{n+1}{n}\) <br>
+            \(\lim\limits_{n\rightarrow\infty}O_n=2\,\text{FE}\)
+        </li>
+        <li>\(O_n=\tfrac{10}n\cdot\sum\limits_{i=1}^n \left(i\cdot \tfrac{10}n\right)^2 =\tfrac{1000}{6}\cdot\frac nn\cdot \frac{n+1}{n}\cdot\frac{2n+1}{n}\) <br>
+          \(\lim\limits_{n\rightarrow\infty}O_n=\tfrac{1000}{3}\approx333,33\,\text{FE}\)
+      </li>
+      <li>\(O_n=\tfrac1n\cdot\sum\limits_{i=1}^n \left(2\cdot \left(i\cdot \tfrac1n\right)^2\right) + \tfrac1n\cdot\sum\limits_{i=1}^n \left(i\cdot \tfrac1n\right)=\tfrac13\cdot\tfrac nn\cdot\tfrac{n+1}{n}\cdot\tfrac{2n+1}{n}+\tfrac12\cdot\frac nn\cdot \frac{n+1}{n}\) <br>
+        \(\lim\limits_{n\rightarrow\infty}O_n=\tfrac76\approx1,17\,\text{FE}\)
+    </li>
+        </ol>
+      </details>
 
+      <details id="a2">
+        <summary>Übung 5</summary>
+        Das \(0\,+\) für den Startwert in der Klammer wird in den Lösungen immer weggelassen.
+        <ul class="custom-marker parens-around lower-alpha more-spacing">
+          <li>Obersumme: 
+            <ul>
+              <li>\(O_n=\tfrac 1n\cdot\sum\limits_{i=0}^n \left(i\cdot \tfrac1n\right)^3=\tfrac1n\cdot\tfrac{1^3}{n^3}\sum\limits_{i=0}^n i^3=\tfrac14\cdot\frac{n^2}{n^2}\cdot\tfrac{(n+1)^2}{n^2}\)</li>
+              <li>\(\lim\limits_{n\rightarrow\infty}O_n=\tfrac14=0,25\,\text{FE}\)</li>
+            </ul>
+          </li>
+        </ul>
+      </details>
+
+      <details id="a1">
+        <summary>Übung 4 (Untersummen)</summary>
+        Das \(0\,+\) für den Startwert in der Klammer wird in den Lösungen immer weggelassen.
+        <p>
+          Da die Summen bereits bei \(0\) beginnen, enden sie bereits bei \(n-1\). Entsprechend muss auch \(n-1\) für \(n\)
+          in den Potenzsummen eingesetzt werden.
+        </p>
+        <p>
+          Außer natürlich wenn die Summe nur eine Zahl aber kein \(i\) enthält, da diese ja trotzdem \(n\)-mal addiert wird.
+        </p>
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>\(U_n=\tfrac1n\cdot\sum\limits_{i=0}^{n-1} \left(i\cdot \tfrac1n\right) + \tfrac1n\cdot\sum\limits_{i=0}^{n-1} 1=\tfrac12\cdot\frac {n-1}n\cdot \frac{n}{n} + 1\cdot \frac nn\) <br>
+              \(\lim\limits_{n\rightarrow\infty}U_n=1,5\,\text{FE}\)
+          </li>
+          <li>\(U_n=\tfrac2n\cdot\sum\limits_{i=0}^{n-1} 2 - \tfrac2n\cdot\sum\limits_{i=0}^{n-1} \left(i\cdot \tfrac2n\right) =4\cdot \frac nn-2\cdot\frac {n-1}n \cdot\frac{n}{n}\) <br>
+            \(\lim\limits_{n\rightarrow\infty}U_n=2\,\text{FE}\)
+        </li>
+        <li>\(U_n=\tfrac{10}n\cdot\sum\limits_{i=0}^{n-1} \left(i\cdot \tfrac{10}n\right)^2 =\tfrac{1000}{6}\cdot\frac {n-1}n\cdot \frac{n}{n}\cdot\frac{2n-1}{n}\) <br>
+          \(\lim\limits_{n\rightarrow\infty}U_n=\tfrac{1000}{3}\approx333,33\,\text{FE}\)
+      </li>
+      <li>\(U_n=\tfrac1n\cdot\sum\limits_{i=0}^{n-1} \left(2\cdot \left(i\cdot \tfrac1n\right)^2\right) + \tfrac1n\cdot\sum\limits_{i=0}^{n-1} \left(i\cdot \tfrac1n\right)=\tfrac13\cdot\tfrac {n-1}n\cdot\tfrac{n}{n}\cdot\tfrac{2n-1}{n}+\tfrac12\cdot\frac {n-1}n\cdot \frac{n}{n}\) <br>
+        \(\lim\limits_{n\rightarrow\infty}U_n=\tfrac76\approx1,17\,\text{FE}\)
+    </li>
         </ol>
       </details>
 
