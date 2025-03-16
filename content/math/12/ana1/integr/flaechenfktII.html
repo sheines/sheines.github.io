@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" initial-scale="1.0" />
+  <meta name="author" content="Sebastian Hitziger" />
+  <meta name="robot" content="noindex" />
+  <title>HITZ | Fkt-Eigensch. | Flächenfunktion II </title>
+  <link rel="stylesheet" type="text/css" href="/css/colors.css" />
+  <link rel="stylesheet" type="text/css" href="/css/gridNoTimeline.css" />
+  <link rel="stylesheet" type="text/css" href="/css/navbar.css" />
+  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="/css/courses.css" />
+  <script type="text/javascript" src="jquery-3.3.1.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+
+
+<body>
+  <header>
+    <div class="nav">
+      <input type="checkbox" id="nav-check" />
+      <div class="nav-header">
+        <div class="nav-title">
+          <a href="/">Hr. Hitzigers Unterricht</a>
+        </div>
+      </div>
+      <div class="nav-btn">
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+
+      <div class="nav-links">
+        <a href="/content/math/">Mathematik</a>
+        <a href="/content/math/12/">Klasse 12</a>
+        <a href="/content/math/12/ana1/">Analysis I</a>
+        <a href="/content/math/12/ana1/integr/">Integralrechnung</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section>
+      <h2>Flächenfunktion II</h2>
+      <div class="ziele">
+        <p>
+          Nachfolgend soll die Flächenfunktion für beliebig lange Intervalle bestimmt werden, jedoch ohne einen
+          Grenzwert zu benutzen.
+        </p>
+        <p>
+          <a href="#aufgaben">Direkt zu den Aufgaben</a>
+        </p>
+      </div>
+
+
+
+      <div class="theorie">
+
+        <div class="definition">
+          <h4>Flächenfunktion II</h4>
+          <p>
+            In der letzten Stunde wurden die Flächenfunktionen mithilfe des Grenzwertes bestimmt.
+          </p>
+          <p>
+            Wenn man sich jedoch die Flächenfunktionen der ersten Potenzfunktionen anschaut, ist da durchaus ein Muster
+            erkennbar:
+          <div class="centered">
+            <table class="wechseltabelle" style="width: max-content; margin-bottom: 10px;">
+              <!-- Haken: &#10004; Kreuz: &#x2718; -->
+              <tr>
+
+                <th>Name</th>
+                <th>Funktionsgl. \(f(x)\)</th>
+                <th>Flächenfkt. \(A_0(x)\)</th>
+              </tr>
+              <tr>
+                <td>Konst.F.</td>
+                <td>\(f(x)=1\)</td>
+                <td>\(A_0(x)=x\)</td>
+              </tr>
+              <tr>
+                <td>Lin. F.</td>
+                <td>\(f(x)=x\)</td>
+                <td>\(A_0(x)=\frac12x^2\)</td>
+              </tr>
+              <tr>
+                <td>Quad. F.</td>
+                <td>\(f(x)=x^2\)</td>
+                <td>\(A_0(x)=\frac13x^3\)</td>
+              </tr>
+              <tr>
+                <td>Kub. F.</td>
+                <td>\(f(x)=x^3\)</td>
+                <td>\(A_0(x)=\frac14x^4\)</td>
+              </tr>
+
+            </table>
+          </div>
+        Daraus können zwei Dinge gefolgert werden:
+        <ul>
+          <li>Die Funktion ist die Ableitung der Flächenfunktion.</li>
+          <li>Für die Flächenfunktion gibt es ebenfalls Regeln, um sie ohne Grenzwert bestimmen zu können.</li>
+        </ul>
+        </p>
+          <h5 style="color: darkgoldenrod;">Hauptsatz der Flächenfunktion</h5>
+        <p>
+          Ist \(f\) eine nicht negative, stetige (durchziehbare) Funktion und \(A_0\) die
+          Flächenfunktion von \(f\) zur unteren Grenze \(0\). Dann gilt:
+          \begin{align*}
+            A_0'&=f(x)
+          \end{align*}
+        </p>
+        <h5 style="color: darkgoldenrod;">Potenzregel der Integralrechnung</h5>
+        <p>
+          Die Flächenfunktion eines Polynoms \(f(x)=x^n\) kann folgendermaßen beschrieben werden:
+          \begin{align*}
+            f(x)&=x^n\quad\Rightarrow\quad A_0(x)=\tfrac1nx^{n+1}
+          \end{align*}
+          Die Faktor- und Summenregel der Differentialrechnung gilt auch in der Integralrechnung.
+        </p>
+
+
+      </div>
+
+      </div>
+      <h6>Beispiel:</h6>
+      <p>
+        Es soll die Flächenfunktion \(A_0\) der Funktion \(f(x)=2x^2+3x-4\) bestimmt werden.
+      </p>
+        <p>
+          <ul class="more-spacing">
+            <li>Funktion zerlegen:
+              <ul>
+                <li>\(f_1(x)=2\cdot {\color{green}x^2}\)</li>
+                <li>\(f_2(x)=3\cdot {\color{magenta}x}\)</li>
+                <li>\(f_3(x)=-4\cdot {\color{orange}1}\)</li>
+              </ul>
+            </li>
+            <li>Flächenfunktionen der Teilfunktionen bestimmen:
+              <ul>
+                <li>\(A_{0_1}(x)=2\cdot {\color{green}\frac13x^3}\)</li>
+                <li>\(A_{0_2}(x)=3\cdot {\color{magenta}\frac12x^2}\)</li>
+                <li>\(A_{0_3}(x)=-4\cdot {\color{orange}x}\)</li>
+              </ul>
+            </li>
+            <li>Flächenfunktion zusammenfügen:
+              <ul>
+                <li>\(A_0(x)=2\cdot {\color{green}\frac13x^3}+3\cdot {\color{magenta}\frac12x^2}-4\cdot {\color{orange}x}\)</li>
+              </ul>
+            </li>
+            <li>Flächenfunktion zusammenfassen:
+              <ul>
+                <li>\(A_0(x)=\frac23x^3+\frac32x^2-4x\)</li>
+              </ul>
+            </li>
+          </ul>
+          Wie so oft, darf vieles davon im Kopf passieren.
+        </p>
+
+    </section>
+    <!-- <section>
+            <div class="videos">
+                <iframe width="360" height="202" src="https://www.youtube.com/embed/19goPRnthCE"
+                    title="Abstand Punkt - Punkt" frameborder="0" allow="web-share" allowfullscreen></iframe>
+
+            </div>
+        </section> -->
+    <section class="aufgaben" id="aufgaben">
+      <h3>Aufgaben zu Intregralen</h3>
+      <ol class="custom-marker point-after decimal">
+        <li> Buch Seite 290 Übung 4 <a href="#a1">Lösungen</a></li>
+        <li> Buch Seite 293 Übung 7 <a href="#a2">Lösungen</a></li>
+        <li> Buch Seite 293 Übung 6 <a href="#a3">Lösungen</a></li>
+        <li> Buch Seite 293 Übung 8 <a href="#a4">Lösungen</a></li>
+        <li> Buch Seite 293 Übung 9 <a href="#a5">Lösungen</a></li>
+        <li> Buch Seite 293 Übung 10 <a href="#a6">Lösungen</a></li>
+      </ol>
+
+    </section>
+
+    <section class="loesungen">
+      <h3>Lösungen zu Integralen</h3>
+
+      <details id="a1">
+        <summary>Übung 4</summary>
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>
+          </li>       
+        </ol>
+      </details>
+
+      
+
+
+    </section>
+
+    <script type="text/javascript" src="/js/math/integralAnimationIII.js"></script>
+    <section id="meme">
+      <div class="images">
+        <img src="/img/ddxint_meme.jpg" style="object-fit: scale-down; max-width: 300px" />
+      </div>
+      <div class="centered">
+        <a href="https://www.tandfonline.com/cms/asset/c87c0ae7-d07e-4c79-9597-515a4f5d908c/tmes_a_2328818_f0006_oc.jpg"
+          target="_blank" rel="noopener noreferrer">
+          <h6>Original von Tatjana Sidekerskienė</h6>
+        </a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <a href="/misc/impressum.html">Impressum</a>
+    <div class="lastModified" align="center">
+      Zuletzt geändert:<br />
+      16. März 2025
+      <!-- <span id="lastModifiedDate"></span> -->
+    </div>
+    <a href="/misc/datenschutz.html">Datenschutz</a>
+  </footer>
+</body>
