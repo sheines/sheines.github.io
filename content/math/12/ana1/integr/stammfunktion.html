@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" initial-scale="1.0" />
+  <meta name="author" content="Sebastian Hitziger" />
+  <meta name="robot" content="noindex" />
+  <title>HITZ | Fkt-Eigensch. | Stammfunktion </title>
+  <link rel="stylesheet" type="text/css" href="/css/colors.css" />
+  <link rel="stylesheet" type="text/css" href="/css/gridNoTimeline.css" />
+  <link rel="stylesheet" type="text/css" href="/css/navbar.css" />
+  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="/css/courses.css" />
+  <link rel="stylesheet" type="text/css" href="/css/slideshow.css" />
+  <script type="text/javascript" src="jquery-3.3.1.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+
+
+<body>
+  <header>
+    <div class="nav">
+      <input type="checkbox" id="nav-check" />
+      <div class="nav-header">
+        <div class="nav-title">
+          <a href="/">Hr. Hitzigers Unterricht</a>
+        </div>
+      </div>
+      <div class="nav-btn">
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+
+      <div class="nav-links">
+        <a href="/content/math/">Mathematik</a>
+        <a href="/content/math/12/">Klasse 12</a>
+        <a href="/content/math/12/ana1/">Analysis I</a>
+        <a href="/content/math/12/ana1/integr/">Integralrechnung</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section>
+      <h2>Stammfunktion</h2>
+      <div class="ziele">
+        <p>
+          Nachfolgend soll die Stammfunktion von Polynomen bestimmt werden.
+        </p>
+        <p>
+          <a href="#aufgaben">Direkt zu den Aufgaben</a>
+        </p>
+      </div>
+
+
+
+      <div class="theorie">
+
+        <p>
+          Für die Funktion \(f(x)=2x^2+1\) ist die Flächenfunktion \(A_0(x)=\frac23x^3+x\) bekannt.
+        </p>
+        <p>
+          Was passiert, wenn nicht $A_0$, sondern $A_5$ oder $A_{-2}$ betrachtet wird?
+        <ul class="more-spacing">
+          <li>\(A_0(x)=\frac23x^3+x\)</li>
+          <li>\(A_5=A_0(x)-A_0(5)=\frac23x^3+x-\frac{265}{3}\)</li>
+          <li>\(A_{-2}=A_0(x)-A_0(-2)=\frac23x^3+x+\frac{22}{3}\)</li>
+        </ul>
+        Was fällt auf?
+        </p>
+
+        <div class="definition">
+          <h4>Stammfunktion</h4>
+          <p>
+            Jede Flächenfunktion \(A\) heißt Stammfunktion \(F\) der Funktion \(f\).
+          </p>
+          <p>
+            Es gilt: \(\,\qquad F'(x)=f(x)\)
+          </p>
+          <h5 style="color: darkgoldenrod;">Integralschreibweise</h5>
+          <p>
+            Aus der Summenschreibweise
+
+            \vspace*{-0.6cm}
+            \begin{align*}
+            A_0(x)&=\lim_{n\rightarrow\infty} \tfrac xn \sum_{i=1}^n f(i\cdot \tfrac xn)
+            \end{align*}
+            wird die Integralschreibweise
+            \begin{align*}
+            F(x)&=\int f(x)\, \text d x
+            \end{align*}
+            Die Menge aller Stammfunktionen heißt <b>unbestimmtes Integral</b>.
+          </p>
+          <h6 style="color: darkgoldenrod;">Begriffe</h5>
+            <p>
+              \begin{align*}
+              {\color{cyan}\int 2x+1 \text d x}&={\color{lime}\tfrac23x^3+x}+{\color{red}C}
+              \end{align*}
+            <ul>
+              <li style="color: cyan;">
+                Unbestimmtes Integral
+              </li>
+              <li style="color: lime;">
+                Flächenfunktion \(A_0\)
+              </li>
+              <li style="color: red;">
+                Integrationskonstante (!)
+              </li>
+            </ul>
+            </p>
+
+            <div class="centered">
+              <div class="slideshow-container" style="max-height: 250px;">
+                <img class="slide" src="/img/plusC/meme1.png" alt="Bild 1">
+                <img class="slide" src="/img/plusC/meme2.jpg" alt="Bild 2">
+                <img class="slide" src="/img/plusC/meme3.jpg" alt="Bild 3">
+                <img class="slide" src="/img/plusC/meme4.jpg" alt="Bild 4">
+                <img class="slide" src="/img/plusC/meme5.jpg" alt="Bild 5">
+                <img class="slide" src="/img/plusC/meme6.png" alt="Bild 6">
+                <img class="slide" src="/img/plusC/meme7.png" alt="Bild 7">
+                <img class="slide" src="/img/plusC/meme8.jpg" alt="Bild 8">
+                <img class="slide" src="/img/plusC/meme9.png" alt="Bild 9">
+                <img class="slide" src="/img/plusC/meme10.jpg" alt="Bild 10">
+                <img class="slide" src="/img/plusC/meme11.jpg" alt="Bild 11">
+                <img class="slide" src="/img/plusC/meme12.jpg" alt="Bild 12">
+              </div>
+              <script type="text/javascript" src="/js/slideshow.js"></script>
+            </div>
+
+        </div>
+
+      </div>
+      <h6>Beispiel:</h6>
+      <p>
+        Es soll die Stammfunktion \(F\) der Funktion \(f(x)=2x^2+3x-4\) bestimmt werden.
+      </p>
+      <p>
+      <ul class="more-spacing">
+        <li>Integralschreibweise
+          <ul>
+            <li>\(F(x)=\displaystyle \int 2x^2+3x-4\, \text d x \)</li>
+          </ul>
+        </li>
+        <li>Potenzregel anwenden:
+          <ul>
+            <li>\(F(x)=\tfrac23x^3+\tfrac32x^2-4x\)</li>
+          </ul>
+        </li>
+        <li>Integrationskonstante nicht vergessen:
+          <ul>
+            <li>\(F(x)=\tfrac23x^3+\tfrac32x^2-4x+C\)</li>
+          </ul>
+        </li>
+      </ul>
+      </p>
+      <h2>Integrationsregeln</h2>
+      <div class="definition">
+        <h4>Potenzregel</h4>
+        <p>
+          Für Potenzfunktionen mit reellem Exponenten (\(n\in\mathbb R\)) gilt:
+          \begin{align*}
+          f(x)&=x^n &&\Rightarrow & F(x)&=\tfrac{1}{n+1}x^{n+1}+C \\
+          \end{align*}
+          Dieser Zusammenhang gilt nicht, wenn \(n=-1\).
+        </p>
+      </div>
+      <h6>Beispiele:</h6>
+      <p>
+        Von den folgenden Potenzfunktionen wird die Stammfunktion bestimmt:
+        \begin{align*}
+        f(x)&=x^{\color{orange}7} &&\Rightarrow & F(x)&=\tfrac{1}{{\color{orange} 7}+1}\cdot
+        x^{{\color{orange}7}+1}+C=\tfrac18x^8+C \\
+        g(x)&=x^{\color{magenta}45} &&\Rightarrow & G(x)&=\tfrac{1}{{\color{magenta} 45}+1}\cdot
+        x^{{\color{magenta}45}+1}+C=\tfrac1{46}x^{46}+C
+        \end{align*}
+      </p>
+      <div class="definition">
+        <h4>Faktorregel</h4>
+        <p>
+          Vorstehende reele Faktoren \(a\) werden einfach mitgenommen:
+          \begin{align*}
+          f(x)=a\cdot g(x) \quad\Rightarrow \quad F(x)=a\cdot G(x)\\
+          \end{align*}
+        </p>
+      </div>
+      <h6>Beispiele:</h6>
+      <p>
+        Die nachfolgenden Funktionen werden integriert:
+        \begin{align*}
+        f(x)&={\color{orange}7}x^3 &&\Rightarrow & F(x)&={\color{orange} 7}\cdot \tfrac14x^4+C=\tfrac74x^4+C \\
+        g(x)&={\color{magenta}-12}x^5 &&\Rightarrow & G(x)&={\color{magenta} -12}\cdot \tfrac16x^6+C=-2x^6+C
+        \end{align*}
+      </p>
+      <div class="definition">
+        <h4>Summenregel</h4>
+        <p>
+          Die Ableitung einer Summe ist die Summe der Ableitungen:
+          \begin{align*}
+          f(x)=g(x)+h(x) \quad\Rightarrow \quad f'(x)=g'(x)+h'(x)\\
+          \end{align*}
+        </p>
+      </div>
+      <h6>Beispiele:</h6>
+      <p>
+        Von den folgenden zusammengesetzten Funktionen wird die Stammfunktion bestimmt:
+      <ol class="more-spacing">
+        <li>Funktion: \(f(x)=3x^8+x^5\)
+          <ul>
+            <li>Summanden:
+              <ul>
+                <li>\(g(x)=3x^8\ \Rightarrow G(x)=\tfrac13x^9\)</li>
+                <li>\(h(x)=x^5\ \Rightarrow H(x)=\tfrac16x^6\)</li>
+              </ul>
+            </li>
+            <li>Stammfunktion: \(F(x)=\tfrac13x^9+\tfrac16x^6+C\)</li>
+          </ul>
+        </li>
+        <li>Funktion: \(f(x)=x^2+4x+9\)
+          <ul>
+            <li>Summanden:
+              <ul>
+                <li>\(g(x)=x^2\ \Rightarrow G(x)=\tfrac13x^3\)</li>
+                <li>\(h(x)=4x\ \Rightarrow H(x)=2x^2\)</li>
+                <li>\(i(x)=9\ \Rightarrow I(x)=9x\)</li>
+              </ul>
+            </li>
+            <li>Stammfunktion: \(F(x)=\tfrac13x^3+2x^2+9x+C\)</li>
+          </ul>
+        </li>
+      </ol>
+      </p>
+      <div class="definition">
+        <h4>Regeln weiterer Funktionen:</h4>
+        <ul class="more-spacing">
+          <li>Exponentialregel:
+            \begin{align*}
+            f(x)&=a^x \quad\Rightarrow F(x)=\frac{1}{\ln a}\cdot a^x+C
+            \end{align*}
+            Mit dem Sonderfall:
+            \begin{align*}
+            f(x)&=\text e^x \quad\Rightarrow F(x)=\text e^x
+            \end{align*}
+            wobei \(\text e\) die Euler'sche Zahl ist (\(\approx 2,72\)).
+          </li>
+          <li>Sinusregel:
+            \begin{align*}
+            f(x)&=\sin x \quad\Rightarrow F(x)=-\cos x +C
+            \end{align*}
+          </li>
+          <li>Kosinusregel:
+            \begin{align*}
+            f(x)&=\cos x \quad\Rightarrow F(x)=\sin x+C
+            \end{align*}
+          </li>
+          <li>Logarithmusregel (nur für \(\ln x\)):
+            \begin{align*}
+            f(x)&=\ln x \quad\Rightarrow F(x)=x\cdot \ln x-x+C
+            \end{align*}
+          </li>
+          <li>Logarithmische Integration:
+            \begin{align*}
+            f(x)&=\\frac1x \quad\Rightarrow F(x)=\ln |x| +C
+            \end{align*}
+            Hier gilt nicht die Potenzregel, auch wenn es sich um eine Potenzfunktion handelt.
+          </li>
+        </ul>
+      </div>
+      <h6>Beispiele:</h6>
+      <p>
+        Von den folgenden Exponentialfunktionen wird die erste Ableitung bestimmt:
+        \begin{align*}
+        f(x)&={\color{orange}7}^x \ \ \Rightarrow F(x)=\tfrac{1}{\ln {\color{orange} 7}}\cdot {\color{orange}7}^x+C \\
+        g(x)&={\color{teal}\text e}^x \ \ \Rightarrow G(x)={\color{teal}\text e}^x+C \\
+        h(x)&=4\cdot \cos(x)\ \ \Rightarrow H(x)=4\cdot\sin(x)
+        \end{align*}
+      </p>
+
+      <div class="definition">
+        <h4>Lineare Kettenregel</h4>
+        <p>
+          Handelt es sich bei \(f\) um eine verkettete Funktion mit linearer innerer Funktion gilt
+          \begin{align*}
+          f(x)=g(ax+b) \quad\Rightarrow \quad F(x)=\tfrac1a\cdot G(ax+b)\\
+          \end{align*}
+        </p>
+      </div>
+      <h6>Beispiele:</h6>
+      <p>
+        Die nachfolgenden Funktionen werden integriert:
+      <ol class="more-spacing">
+        <li>Funktion: \(f(x)=(2x-4)^3\)
+          <ul>
+            <li>Funktionen:
+              <ul>
+                <li>Innere Funktion: \(z=2x-4\ \Rightarrow a=2\)</li>
+                <li>Äußere Funktion: \(g(z)=z^3 \ \Rightarrow G(z)=\tfrac14z^4+C\)</li>
+              </ul>
+            </li>
+            <li>Stammfunktion: \(F(x)=\tfrac12\cdot\tfrac14(2x-4)^4+C=\tfrac18(2x-4)^4+C\)</li>
+          </ul>
+        </li>
+        <li>Funktion: \(f(x)=\text e^{4x+2}\)
+          <ul>
+            <li>Funktionen:
+              <ul>
+                <li>Innere Funktion: \(z=4x+2\ \Rightarrow a=4\)</li>
+                <li>Äußere Funktion: \(g(z)=\text e^z \ \Rightarrow G(z)=\text e^z+C\)</li>
+              </ul>
+            </li>
+            <li>Stammfunktion: \(F(x)=\tfrac14\cdot\text e^{4x+2}+C\)</li>
+          </ul>
+        </li>
+        <li>Funktion: \(f(x)=3\cdot\sin(x-7)\)
+          <ul>
+            <li>Funktionen:
+              <ul>
+                <li>Innere Funktion: \(z=x-7\ \Rightarrow a=1\)</li>
+                <li>Äußere Funktion: \(g(z)=3\dot\sin z \ \Rightarrow G(z)=-3\cdot \cos z+C\)</li>
+              </ul>
+            </li>
+            <li>Stammfunktion: \(F(x)=-3\cdot\cos(x-7)+C\)</li>
+          </ul>
+        </li>
+      </ol>
+      </p>
+      <p>
+        Weitere Beispiele im Buch auf Seite 298.
+      </p>
+    </section>
+    <!-- <section>
+            <div class="videos">
+                <iframe width="360" height="202" src="https://www.youtube.com/embed/19goPRnthCE"
+                    title="Abstand Punkt - Punkt" frameborder="0" allow="web-share" allowfullscreen></iframe>
+
+            </div>
+        </section> -->
+    <section class="aufgaben" id="aufgaben">
+      <h3>Aufgaben zu Intregralen</h3>
+      <ol class="custom-marker point-after decimal">
+        <li> Buch Seite 298 Übung 2 <a href="#a1">Lösungen</a></li>
+        <li> Buch Seite 299 Übung 2 <a href="#a2">Lösungen</a></li>
+        <li> Buch Seite 299 Übung 3 <a href="#a3">Lösungen</a></li>
+        <li> Buch Seite 299 Übung 4 <a href="#a4">Lösungen</a></li>
+        <li> Buch Seite 299 Übung 5 <a href="#a5">Lösungen</a></li>
+        <li> Buch Seite 299 Übung 6 <a href="#a6">Lösungen</a></li>
+      </ol>
+
+    </section>
+
+    <section class="loesungen">
+      <h3>Lösungen zu Integralen</h3>
+
+      <details id="a1">
+        <summary>Übung 2</summary>
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>\(\)</li>
+        </ol>
+      </details>
+
+
+    </section>
+
+    <script type="text/javascript" src="/js/math/integralAnimationIII.js"></script>
+    <section id="meme">
+      <div class="images">
+        <img src="/img/integral_meme.png" style="object-fit: scale-down; max-width: 300px" />
+      </div>
+      <div class="centered">
+        <a href="https://www.facebook.com/memeformathematicians/photos/d41d8cd9/910293231318905/?_rdr"
+          target="_blank" rel="noopener noreferrer">
+          <h6>Original von Meme for mathematicians</h6>
+        </a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <a href="/misc/impressum.html">Impressum</a>
+    <div class="lastModified" align="center">
+      Zuletzt geändert:<br />
+      23. März 2025
+      <!-- <span id="lastModifiedDate"></span> -->
+    </div>
+    <a href="/misc/datenschutz.html">Datenschutz</a>
+  </footer>
+</body>
