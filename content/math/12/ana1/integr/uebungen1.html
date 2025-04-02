@@ -60,27 +60,186 @@
         </section>
 
         <section class="aufgaben" id="aufgaben">
-            <ol class="more-spacing">
-                <li></li>
-            </ol>
+            Ein ausführliches Beispiel findet sich im Buch auf Seite 321.
+            <ul class="more-spacing">
+                <li>Seite 323 Übungen 17 bis 20</li>
+            </ul>
         </section>
 
 
         <section class="loesungen">
             <h3>Lösungen zu Übungs- und Anwendungsaufgaben</h3>
 
-            <details id="a1">
-                <summary>Ableitungen und Funktionen</summary>
-
-                <details>
-                    <summary class="nonumber">Übung 7</summary>
-                    <ol class="custom-marker parens-around lower-alpha more-spacing">
-                        <li></li>
-                    </ol>
-                </details>
+            <details>
+                <summary class="nonumber">Übung 17: Kanalquerschnitt</summary>
+                <ul class="custom-marker parens-around lower-alpha more-spacing">
+                    <li>Der Kanal ist \(20\,\text m\) breit (im Text gegeben).</li>
+                    <li>Gemeint war die Tiefe des Kanals (da der Koordinatenursprung am Boden des Kanals liegt,
+                        muss hier die obere Kante eingesetzt werden):
+                        \(f(10)=\tfrac{3}{100}\cdot\left(-\tfrac13\cdot 10^3+5\cdot 10^2\right)=5\)
+                        <p>
+                            Der Kanal ist \(5\,\text m\) tief.
+                        </p>
+                        </li>
+                    <li>Querschnittsfläche:
+                        <ul>
+                            <li>Der Kanal ist achsensymmetrisch, d.h. die Fläche von \(0\) bis \(10\) muss verdoppelt
+                                werden.</li>
+                            <li>Berechnung des Integrals (die braune Fläche im Buch, der Boden):
+                                <ul>
+                                    <li>\(\displaystyle A_\text
+                                        B=2\cdot\int_0^{10}\left(\tfrac{3}{100}\cdot\left(-\tfrac13\cdot x^3+5\cdot
+                                        x^2\right)\right)\,\text d x\)</li>
+                                    <li>\(\displaystyle A_\text B=2\cdot\left[\tfrac{3}{100}\cdot\left(-\tfrac1{12}\cdot x^4+\tfrac53\cdot
+                                        x^3\right) \right]_0^{10}\)</li>
+                                    <li>\(\displaystyle A_\text B=2\cdot\left(F(10)-F(0)\right)\)</li>
+                                    <li>\(\displaystyle A_\text B=2\cdot\left(25-0\right)\)</li>
+                                    <li>\(\displaystyle A_\text B=50\,\text m^2\)</li>
+                                </ul>
+                            </li>
+                            <li>
+                                Berechnung der Wasserquerschnittsfläche (die blaue Fläche im Buch):
+                                <ul>
+                                    <li>Da die braune Fläche bekannt ist, muss nur noch die Differenz aus dem großen Rechteck (das gesamte Bild) und der Sandfläche gebildet werden.</li>
+                                    <li>\(A_\text{Rechteck}=5\cdot 20=100\,\text m^2\) (Tiefe mal Breite)</li>
+                                    <li>\(A_\text W=100-50=50\,\text m^2\)</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        Der Kanal hat eine Querschnittsfläche von \(50\,\text m^2\).
+                    </li>
+                </ul>
             </details>
 
+            <details>
+                <summary class="nonumber">Übung 18: Fassadenanstrich</summary>
+                <ul class="custom-marker parens-around lower-alpha more-spacing">
+                    <li>
+                        Die Fassage wird in zwei Teile aufgeteilt:
+                        <ul>
+                            <li>Rechteck ohne Torbogen :<br>
+                                \(A_1=8\cdot 10=80\,\text m^2\)
+                            </li>
+                            <li>Hiervon muss nun die Fläche des Torbogens abgezogen werden:
+                                <ul>
+                                    <li>Parabelförmiger Bogen (Scheitelpunktform bspw.): \(b(x)=a(x-d)^2+e\)</li>
+                                    <li>Koordinatensystem (beliebig wählbar) mittig am Boden des Bogens.</li>
+                                    <li>Scheitelpunkt: \(S(0\,|\,4,8)\)</li>
+                                    <li>Scheitelpunktform: \(b(x)=a(x-0)^2+4,8=ax^2+34,8\)</li>
+                                    <li>Weiterer Punkt (rechter Bodenpunkt des Bogens): \(P(2\,|\,0)\)</li>
+                                    <li>Punkt einsetzen, \(a\) berechnen: \(0=a\cdot 2^2+4,8\,\Rightarrow a=-1,2\)</li>
+                                    <li>Funktionsgleichung des Bogens: \(b(x)=-1,2x^2+4,8\)</li>
+                                </ul>
+                                Fläche des Bogens:
+                                <ul>
+                                    <li>\(\displaystyle: A_\text B=\int_{-2}^2\left(-1,2x^2+4,8\right)\,\text d x\)</li>
+                                    <li>\(\displaystyle: A_\text B=\left[-0,4x^3+4,8x\right]_{-2}^2\)</li>
+                                    <li>\(\displaystyle: A_\text B=B(2)-B(-2)\)</li>
+                                    <li>\(\displaystyle: A_\text B=6,4-(-6,4)=12,8\,\text m^2\)</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        Gesamtfläche der Fassade: \(A=80-12,8=67,2\,\text m^2\)
+                    </li>
+                    <li>Der Malermeister kalkuliert für das Angebot: \(67,2\,\text m^2\cdot 25\,\tfrac{€}{\text m^2}=1\,680\,€\)</li>
+                </ul>
+            </details>
 
+            <details>
+                <summary class="nonumber">Übung 19: Grundstücksfläche</summary>
+                <ol class="custom-marker parens-around lower-alpha more-spacing">
+                    <li>Es gibt mehrere Methoden die Funktionsgleichung zu bestimmen, siehe bspw. <a href="/content/math/12/ana1/ableit/rekonstruktion.html" target="_blank">hier</a>.
+                        <p>
+                            Die, nennen wir sie Scheitelpunktform der quadratischen Funktion, gilt auch für höhere Potenzen. 
+                            Nur handelt es sich dann bei ungeraden Potenzen um Sattelpunkte.
+                            <ul>
+                                <li>Sattelpunktform: \(g(x)=a(x-d)^3+e\)</li>
+                                <li>Der Sattelpunkt liegt bei \(S(2\,|\,3)\)</li>
+                                <li>Sattelpunktform mit Sattelpunkt: \(g(x)=a(x-2)^3+3\)</li>
+                                <li>Weiterer Punkt: \(P_1(0\,|\,6)\) oder \(P_2(4\,|\,0)\)</li>
+                                <li>\(a\) mit \(P_1\) in \(g\) berechnen: \(6=a(0-2)^3+3\,\Rightarrow a=-\tfrac38\)</li>
+                            </ul>
+                            Gleichung der Grenzlinie: \(g(x)=-\tfrac38\cdot(x-2)^3+3\)<br>
+                            Wenn mit allgemeiner Form gerechnet wurde: \(g(x)=-\tfrac38x^3+\tfrac94x^2-\tfrac92x^2+6\)
+                        </p>
+                    </li>
+                    <li>
+                        Fläche ist Integral von \(0\) bis \(4\)
+                        <ul>
+                            <li>\(\displaystyle A=\int_0^4 \left(-\tfrac38\cdot(x-2)^3+3\right)\,\text d x\)</li>
+                            <li>\(\displaystyle A=\left[-\tfrac{3}{32}\cdot(x-2)^4+3x\right]_0^4\)</li>
+                            <li>\(\displaystyle A=G(4)-G(0)\)</li>
+                            <li>\(A=10,5-(-1,5)=12\,\text{km}^2\)</li>
+                        </ul>
+                        Das Grundstück hat eine Fläche von \(12\,\text{km}^2\).
+                    </li>
+                </ol>
+                Die Fläche in b) kann tatsächlich auch komplett ohne Integral berechnet werden: 
+                Das Flächenstück von 2 bis 4 könnte um 180 ° um den Sattelpunkt gedreht werden und damit 
+                den Bereich von 0 bis 2 zu einem Rechteck vervollständigen: Das Rechteck ist 6 km lang und 2 km lang. 
+                Ergibt eine Fläche von 12 Quadratkilometern.
+            </details>
+
+            <details>
+                <summary class="nonumber">Übung 19: Grundstücksfläche</summary>
+                <ol class="custom-marker parens-around lower-alpha more-spacing">
+                    <li>Es bietet sich auch hier die Scheitelpunktform an. Der Scheitelpunkt liegt bei \(S(5\,|\,1)\). Ein weiterer Punkt ist \(P(0\,|\,2)\).
+                        <ul>
+                            <li>Scheitelpunktform: \(s(x)=a(x-d)^2+e\)</li>
+                            <li>\(S\) einsetzen: \(s(x)=a(x-5)^2+1\)</li>
+                            <li>\(P\) einsetzen, \(a\) berechnen: \(2=a(0-5)^2+1)\,\Rightarrow a=\tfrac1{25}\)</li>
+                        </ul>
+                        Das ergibt die Funktionsgleichung: \(s(x)=\tfrac{1}{25}(x-5)^2+1\) <br>
+                        Wer mit der allgemeinen Form gerechnet hat, erhält: \(s(x)=\tfrac1{25}x^2-\tfrac25x+2\)
+                    </li>
+                    <li>
+                        Die Seile 1 und 9, 2 und 8, 3 und 7, sowie 4 und 6 sind jeweils gleich lang. (Symmetrie)
+                        <ul>
+                            <li>
+                                Seil 1 und 9: \(s(1)=\tfrac{1}{25}(1-5)^2+1=\tfrac{41}{25}=16,4\,\text m\)
+                            </li>
+                            <li>
+                                Seil 2 und 8: \(s(2)=\tfrac{1}{25}(2-5)^2+1=\tfrac{34}{25}=13,6\,\text m\)
+                            </li>
+                            <li>
+                                Seil 3 und 7: \(s(1)=\tfrac{1}{25}(3-5)^2+1=\tfrac{29}{25}=11,6\,\text m\)
+                            </li>
+                            <li>
+                                Seil 4 und 6: \(s(1)=\tfrac{1}{25}(4-5)^2+1=\tfrac{26}{25}=10,4\,\text m\)
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        Banner 1 und 4 (außen) sind gleich groß, genauso wie Banner 2 und 3 (innen).
+                        <ul>
+                            <li>Banner 1 und 4:
+                                <ul>
+                                    <li>\(\displaystyle A_1=\int_1^2 \left( \tfrac{1}{25}(x-5)^2+1 \right)\,\text d x\)</li>
+                                    <li>\(\displaystyle A_1=\left[\tfrac{1}{75}(x-5)^3+x \right]_1^2\) </li>
+                                    <li>\(\displaystyle A_1=S(2)-S(1)\)</li>
+                                    <li>\(\displaystyle A_1=\tfrac{41}{25}-\tfrac{11}{75}=\tfrac{112}{75}\approx 1,493\,\text{FE}\)</li>
+                                </ul>
+                            </li>
+                            <li>Banner 2 und 3:
+                                <ul>
+                                    <li>\(\displaystyle A_2=\int_3^4 \left( \tfrac{1}{25}(x-5)^2+1 \right)\,\text d x\)</li>
+                                    <li>\(\displaystyle A_2=\left[\tfrac{1}{75}(x-5)^3+x \right]_3^4\) </li>
+                                    <li>\(\displaystyle A_2=S(4)-S(3)\)</li>
+                                    <li>\(\displaystyle A_2=\tfrac{299}{75}-\tfrac{217}{75}=\tfrac{82}{75}\approx 1,093\,\text{FE}\)</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        Alle vier Banner zusammen ergeben:<br>
+                        \(A=A_1+A_2+A_3+A_4=1,493+1,093+1,093+1,493=\tfrac{388}{75}\approx5,173\,\text{FE}\)
+                        <p>
+                            Da eine Längeneinheit (LE) gleich zehn Meter sind, sind eine Flächeneinheit gleich einhundert (10 mal 10) Quadratmeter.
+                        </p>
+                        <p>
+                            Die vier Werbebanner haben eine Gesamtfläche von \(517,3\,\text m^2\).
+                        </p>
+                    </li>
+                </ol>
+            </details>
 
 
         </section>
@@ -99,7 +258,7 @@
         <a href="/misc/impressum.html">Impressum</a>
         <div class="lastModified" align="center">
             Zuletzt geändert:<br>
-            4. Dezember 2024
+            2. April 2025
             <!-- <span id="lastModifiedDate"></span> -->
         </div>
         <a href="/misc/datenschutz.html">Datenschutz</a>
