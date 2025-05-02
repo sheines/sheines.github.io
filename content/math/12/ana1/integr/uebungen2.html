@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" initial-scale=1.0 />
+    <meta name="author" content="Sebastian Hitziger" />
+    <meta name="robot" content="noindex" />
+    <title> HITZ | Analysis I | Übungen II</title>
+    <link rel="stylesheet" type="text/css" href="/css/colors.css" />
+    <link rel="stylesheet" type="text/css" href="/css/gridNoTimeline.css" />
+    <link rel="stylesheet" type="text/css" href="/css/navbar.css" />
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="/css/courses.css" />
+    <!-- <script type="text/javascript" src="jquery-3.3.1.js"></script> -->
+    <!-- <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script> -->
+    <!-- <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script> -->
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+</head>
+
+<body>
+    <header>
+        <div class="nav">
+            <input type="checkbox" id="nav-check">
+            <div class="nav-header">
+                <div class="nav-title">
+                    <a href="/">Hr. Hitzigers Unterricht</a>
+                </div>
+            </div>
+            <div class="nav-btn">
+                <label for="nav-check">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+
+            <div class="nav-links">
+                <a href="/content/math/">Mathematik</a>
+                <a href="/content/math/12/">Klasse 12</a>
+                <a href="/content/math/12/ana1/">Analysis I</a>
+                <a href="/content/math/12/ana1/integr/">Integralrechnung</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section>
+            <h2>Übungs- und Anwendungsaufgaben II</h2>
+            <div class="ziele">
+                <p>
+                    Nachfolgend sollen die in den vorherigen Kapitel erlernten Fähigkeiten vertieft und gefestigt
+                    werden.
+                </p>
+            </div>
+        </section>
+
+        <section class="theorie">
+
+        </section>
+
+        <section class="aufgaben" id="aufgaben">
+            <!-- Ein ausführliches Beispiel findet sich im Buch auf Seite 321. -->
+            <ul class="more-spacing">
+                <li>Seite 331 Übungen 16 bis 19</li>
+                <li>Seite 332 Übungen 20 bis 23</li>
+            </ul>
+        </section>
+
+
+        <section class="loesungen">
+            <h3>Lösungen zu Übungs- und Anwendungsaufgaben</h3>
+
+            <details>
+                <summary class="nonumber">Übung 16: Gebäudefront</summary>
+                <ol class="custom-marker parens-around lower-alpha more-spacing">
+                    <li><ul>
+                        <li>Obere Parabel \(o\): 
+                            <ul>
+                                <li>Scheitelpunkt \(S(0\,|\,4)\)</li>
+                                <li>Weiterer Punkt \(P(6\,|\,0)\)</li>
+                                <li>Gleichung: \(o(x)=-\frac{1}{9}x^2+4\)</li>
+                            </ul>
+                        </li>
+                        <li>Untere Parabel \(u\): 
+                            <ul>
+                                <li>Scheitelpunkt \(S(0\,|\,-5)\)</li>
+                                <li>Weiterer Punkt \(P(6\,|\,0)\)</li>
+                                <li>Gleichung: \(u(x)=\frac{5}{36}x^2-5\)</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    </li>
+                    <li>Fläche zwischen den Funktionen:
+                        <ul>
+                            <li>Differenzfunktion: \(o(x)-u(x)=-\frac14x^2+9\)</li>
+                            <li>Integral: \(A=\displaystyle \int_{-6}^6 \left(-\tfrac14x^2+9\right)\,\text dx\)</li>
+                            <li>Fläche: \(A=72\,\text m^2\)</li>
+                        </ul>
+                    </li>
+                </ol>
+            </details>
+
+            <details>
+                <summary class="nonumber">Übung 17: Grundstücksgröße</summary>
+                <ol class="custom-marker parens-around lower-alpha more-spacing">
+                    <li><ul>
+                        <li>Lineare Funktion: \(y=mx+n\)</li>
+                        <li>Schneidet \(y\)-Achse bei 10: \(n=10\) </li>
+                        <li>Steigung: \(m=-1\) (geht von \((0\,|\,10)\) zu \((10\,|\,0)\))</li>
+                        <li>Geradengleichung: \(f(x)=-x+10\)</li>
+                    </ul>
+                    </li>
+                    <li>Fläche zwischen den Funktionen:
+                        <ul>
+                            <li>Differenzfunktion: \(f(x)-g(x)=-0,005x^3+0,5x+10\)</li>
+                            <li>Integral: \(A=\displaystyle \int_{-10}^{10} \left(-0,005x^3+0,5x+10\right)\,\text dx\)</li>
+                            <li>Fläche: \(A=200\,\text m^2\)</li>
+                        </ul>
+                        Alternativ: der Fluss ist punktsymmetrisch, der rechte Teil unter der \(x\)-Achse füllt genau den 
+                        Teil aus, der links zur Achse fehlt. Das ergibt ein rechtwinkliges Dreieck \(A=\tfrac12\cdot 20\cdot20=200\).
+                        <p>
+                            Noch einfacher wird es, wenn man dann noch den Teil links oberhalb von \(y=10\) nach rechts klappt. 
+                            Dann entsteht ein Rechteck: \(A=20\cdot 10=200\).
+                        </p>
+                    </li>
+                </ol>
+            </details>
+
+            <details>
+                <summary class="nonumber">Übung 18: Fischlogo</summary>
+                <ol class="custom-marker parens-around lower-alpha more-spacing">
+                    <li><ul>
+                        <li>Obere Parabel \(f\): 
+                            <ul>
+                                <li>Scheitelpunkt \(S(0\,|\,2)\)</li>
+                                <li>Weiterer Punkt \(P(4\,|\,0)\)</li>
+                                <li>Gleichung: \(f(x)=-\frac{1}{8}x^2+2\)</li>
+                            </ul>
+                        </li>
+                        <li>Untere Parabel \(g\): 
+                            <ul>
+                                <li>Scheitelpunkt \(S(0\,|\,-3)\)</li>
+                                <li>Weiterer Punkt \(P(4\,|\,0)\)</li>
+                                <li>Gleichung: \(g(x)=\frac{3}{16}x^2-3\)</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    </li>
+                    <li>Fläche zwischen den Funktionen ():
+                        <ul>
+                            <li>Bereich 1: \(I=[-4; 4]\)
+                                <ul>
+                                    <li>Differenzfunktion: \(f(x)-g(x)=-\tfrac{5}{16}x^2+5\)</li>
+                                    <li>Integral: \(A_1=\displaystyle \int_{-4}^4 \left(-\tfrac{5}{16}x^2+5\right)\,\text dx\)</li>
+                                    <li>Fläche: \(A_1=\tfrac{80}{3}\,\text{dm}^2\)</li>
+                                </ul>
+                            </li>
+                            <li>Bereich 2: \(I=[-5; -4]\)
+                                <ul>
+                                    <li>Differenzfunktion (g ist jetzt oben): \(g(x)-f(x)=\tfrac{5}{16}x^2-5\)</li>
+                                    <li>Integral: \(A_2=\displaystyle \int_{-5}^{-4} \left(\tfrac{5}{16}x^2-5\right)\,\text dx\)</li>
+                                    <li>Fläche: \(A_2=\tfrac{65}{48}\,\text{dm}^2\)</li>
+                                </ul>
+                            </li>
+                            <li>Gesamtfläche: \(A=\tfrac{80}{3}+\tfrac{65}{48}=\tfrac{1345}{48}\approx28,02\,\text{dm}^2\)</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul>
+                            <li>Gesamtfläche des Fensters: \(A_\text G=5\cdot 9=45\,\text{dm}^2\)</li>
+                            <li>Fläche ohne Logo (frei): \(A_\text F=45-28,02=16,98\,\text{dm}^2\)</li>
+                            <li>Lichteinfall: \(\displaystyle L=\frac{16,98\cdot 100 + 28,02\cdot 50}{45}=68,87\,\%\)</li>
+                        </ul>
+                        Der Lichteinfall fällt <i>auf</i> ca. 69 Prozent, also <i>um</i> ca. 31 Prozent.
+                    </li>
+                    <li>\(25\,\text{cm}=2,5\,\text{dm}\)
+                        <ul>
+                            <li>Die Differenzfunktion gibt die Höhe des Fisches an:</li>
+                            <li>Bereich 1: \(I=[-4; 4]\)
+                                <ul>
+                                    <li>Differenzfunktion: \(f(x)-g(x)=-\tfrac{5}{16}x^2+5\)</li>
+                                    <li>Ansatz: \(2,5 \leq -\tfrac{5}{16}x^2+5\)</li>
+                                    <li>Ergebnis: \(x=\pm\sqrt8\)</li>
+                                    <li>Im Bereich von ca. \(-2,83\) bis \(2,83\) ist das Logo größer als 25 Zentimeter.</li>
+                                </ul>
+                            </li>
+                            <li>Bereich 2: \(I=[-5; -4]\)
+                                <ul>
+                                    <li>Differenzfunktion (g ist jetzt oben): \(g(x)-f(x)=\tfrac{5}{16}x^2-5\)</li>
+                                    <li>Ansatz: \(2,5 \leq \tfrac{5}{16}x^2-5\)</li>
+                                    <li>Ergebnis: \(x=\pm\sqrt{24}\)</li>
+                                    <li>Der Bereich von \(-5\) bis ca. \(-4,9\) (es ist nur so viel vom Fischschwanz definiert), also der letzte Zentimeter, ist das 
+                                        Logo ebenfalls größer als 25 Zentimeter.
+                                    </li>
+                            </li>
+                        </ul>
+                    </li>
+                </ol>
+            </details>
+
+
+        </section>
+        <section id="meme">
+            <div class="images">
+                <img src="/img/uebe-meme.jpg" style="object-fit:scale-down; max-width: 300px;">
+            </div>
+            <div class="centered">
+                <!-- <a href="https://mrkylebrown.weebly.com/1-slope--rate-of-change.html"> -->
+                <h6>Original leider nicht mehr auffindbar</h6>
+                <!-- </a> -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <a href="/misc/impressum.html">Impressum</a>
+        <div class="lastModified" align="center">
+            Zuletzt geändert:<br>
+            2. April 2025
+            <!-- <span id="lastModifiedDate"></span> -->
+        </div>
+        <a href="/misc/datenschutz.html">Datenschutz</a>
+    </footer>
+</body>
