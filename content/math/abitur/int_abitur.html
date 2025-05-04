@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" initial-scale=1.0 />
+    <meta name="author" content="Sebastian Hitziger" />
+    <meta name="robot" content="noindex" />
+    <title> HITZ | Analysis I | Abituraufgaben</title>
+    <link rel="stylesheet" type="text/css" href="/css/colors.css" />
+    <link rel="stylesheet" type="text/css" href="/css/gridNoTimeline.css" />
+    <link rel="stylesheet" type="text/css" href="/css/navbar.css" />
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="/css/courses.css" />
+    <!-- <script type="text/javascript" src="jquery-3.3.1.js"></script> -->
+    <!-- <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script> -->
+    <!-- <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script> -->
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+</head>
+
+<body>
+    <header>
+        <div class="nav">
+            <input type="checkbox" id="nav-check">
+            <div class="nav-header">
+                <div class="nav-title">
+                    <a href="/">Hr. Hitzigers Unterricht</a>
+                </div>
+            </div>
+            <div class="nav-btn">
+                <label for="nav-check">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+
+            <div class="nav-links">
+                <a href="/content/math/">Mathematik</a>
+                <a href="/content/math/12/">Klasse 12</a>
+                <a href="/content/math/12/ana1/">Analysis I</a>
+                <a href="/content/math/12/ana1/integr/">Integralrecrechnung</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section>
+            <h2>Abituraufgaben</h2>
+            <div class="ziele">
+                <p>
+                    Nachfolgend werden einige Abituraufgaben zum Thema der Integralrechnung aufgezeigt. Alle
+                    Aufgaben
+                    sollten mit dem bekannten Wissen aus der Integralrechnung lösbar sein.
+                </p>
+                <p>
+                    Da die Abituraufgaben der Analysis im Allgemeinen Differenzial- und Integralrechnungsaufgaben
+                    enthalten,
+                    sind nicht immer alle Aufgaben vollständig.
+                </p>
+                <p>
+                    Die Aufgaben sind weder nach Datum noch nach Schwierigkeit sortiert.
+                </p>
+                <p>
+                    Die Aufgabentypen sind zweigeteilt:
+                <ul>
+                    <li><a href="#hmf">Aufgaben <i>ohne</i> Hilfsmittel</a></li>
+                    <li><a href="#rt">Aufgaben <i>mit</i> Hilfsmitteln</a></li>
+                </ul>
+                </p>
+            </div>
+        </section>
+
+        <section class="aufgaben" id="hmf">
+            <h3>Aufgaben aus dem Hilfsmittelfreien Teil</h3>
+            <ol class="more-spacing" start="1">
+                <li>
+                    <p>
+                        Gegeben ist die in \(\mathbb R\) definierte Funktion \(f\) mit \(f(x)=x^2\). 
+                        Bestimmen Sie diejenige reelle Zahl \(m\) mit \(m < 0\), für die der Graph von \(f\) 
+                        und die Gerade mit der Gleichung \(y=mx\) eine Fläche mit dem Inhalt 36 einschließen.
+                    </p>
+                    <!-- <ol class="custom-marker parens-around lower-alpha more-spacing">
+                        <li>...</li>
+                    </ol> -->
+                    <details class="loesungen">
+                        <summary class="nonumber">Lösung</summary>
+                        <ul class="custom-marker parens-around lower-alpha more-spacing">
+                            <li>
+                                Einschließen heißt, dass die Schnittstellen (nur \(x\)) benötigt werden.
+                                <ul>
+                                    <li>Schnittstelle 2 ist \(x_2=0\), da beide Funktionen durch den Koordinatenursprung verlaufen.
+                                        <p>
+                                            (Stelle 2, da die Gerade fallend ist)
+                                        </p>
+                                    </li>
+                                    <li>
+                                        Weitere Schnittstellen:
+                                        <ul>
+                                            <li>\(x^2=mx\qquad |:x\) (Lösung \(x=0\) ist bereits bekannt</li>
+                                            <li>\( x_1=m\)</li>
+                                        </ul>
+                                    </li>
+                                    <li>Dass heißt, es gibt zwei Schnittstellen: \(x_1=m\) und \(x_2=0\)</li>
+                                </ul>
+                            </li>
+                            <li>
+                                Fläche mit Integral bestimmen:
+                                <ul>
+                                    <li>Differenzfunktion: \(g(x)-f(x)=mx-x^2\)</li>
+                                    <li>Integral: \(A=\displaystyle\int_{m}^{0} \left(mx-x^2\right)\,\text dx\)</li>
+                                    <li>Stammfunktion: \(A=\left[\tfrac 12mx^2-\tfrac13x^3\right]_m^0\)</li>
+                                    <li>Ergebnis: \(A=0-\left(\tfrac 12m\cdot m^2-\tfrac13\cdot m^3\right)=-\tfrac16m^3\)</li>
+                                </ul>
+                            </li>
+                            <li>\(m\) berechnen:
+                                <ul>
+                                    <li>Die Fläche soll 36 betragen.
+                                        <ul>
+                                            <li>\(\ \,\, \qquad\,A=-\tfrac16m^3\)</li>
+                                            <li>\(\ \,\, \qquad 36=-\tfrac16m^3\qquad |\cdot (-6)\)</li>
+                                            <li>\(\ \, -6\cdot 36=m^3\)</li>
+                                            <li>\(-6\cdot6\cdot6=m\cdot m\cdot m\)</li>
+                                            <li>\(\qquad\ \ \ \, m=-6\)</li>
+                                        </ul>
+                                        Der Twist mit dem Ausschreiben der Potenzen erleichtert das Berechnen, da kaum einer eine dritte 
+                                        Wurzel im Kopf berechnet.
+                                    </li>
+
+                                </ul>
+                            </li>
+                        </ul>
+                    </details>
+                </li>
+            </ol>
+            
+
+            <!-- <ol class="more-spacing" start="3">
+                <li>
+                    <p>
+
+                    </p>
+
+                    <ol class="custom-marker parens-around lower-alpha more-spacing">
+                        <li></li>
+                    </ol>
+                    <details class="loesungen">
+                        <summary class="nonumber">Lösung</summary>
+                        <ol class="custom-marker parens-around lower-alpha more-spacing">
+                            <li>
+                    
+                            </li>
+                        </ol>
+                    </details>
+                </li>
+            </ol> -->
+        </section>
+
+
+        <section class="aufgaben" id="rt">
+            <h3>Aufgaben aus dem Rechenteil</h3>
+
+            <ol class="more-spacing" start="1">
+                <li>
+                    <p>
+                        ...
+                    </p>
+
+                    <ol class="custom-marker parens-around lower-alpha more-spacing">
+                        <li>...</li>
+                    </ol>
+                    <details class="loesungen">
+                        <summary class="nonumber">Lösung</summary>
+                        <ol class="custom-marker parens-around lower-alpha more-spacing">
+                            <li>
+                                ...
+                            </li>
+                        </ol>
+                    </details>
+                </li>
+            </ol>
+
+
+            <!-- <ol class="more-spacing" start="3">
+                <li>
+                    <p>
+
+                    </p>
+
+                    <ol class="custom-marker parens-around lower-alpha more-spacing">
+                        <li></li>
+                    </ol>
+                    <details class="loesungen">
+                        <summary class="nonumber">Lösung</summary>
+                        <ol class="custom-marker parens-around lower-alpha more-spacing">
+                            <li>
+                    
+                            </li>
+                        </ol>
+                    </details>
+                </li>
+            </ol> -->
+        </section>
+
+
+        <section id="meme">
+            <div class="images">
+                <img src="/img/abi_meme.jpg" style="object-fit:scale-down; max-width: 300px;">
+            </div>
+            <div class="centered">
+                <a href="https://imgflip.com/i/3fdeio">
+                    <h6>Original von JacksonPuntney</h6>
+                    <!-- </a> -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <a href="/misc/impressum.html">Impressum</a>
+        <div class="lastModified" align="center">
+            Zuletzt geändert:<br>
+            4. Mai 2025
+            <!-- <span id="lastModifiedDate"></span> -->
+        </div>
+        <a href="/misc/datenschutz.html">Datenschutz</a>
+    </footer>
+</body>
