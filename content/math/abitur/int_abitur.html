@@ -76,72 +76,76 @@
             <ol class="more-spacing" start="1">
                 <li>
                     <p>
-                        Gegeben ist die in \(\mathbb R\) definierte Funktion \(f\) mit \(f(x)=x^2\). 
-                        Bestimmen Sie diejenige reelle Zahl \(m\) mit \(m < 0\), für die der Graph von \(f\) 
-                        und die Gerade mit der Gleichung \(y=mx\) eine Fläche mit dem Inhalt 36 einschließen.
-                    </p>
-                    <!-- <ol class="custom-marker parens-around lower-alpha more-spacing">
+                        Gegeben ist die in \(\mathbb R\) definierte Funktion \(f\) mit \(f(x)=x^2\).
+                        Bestimmen Sie diejenige reelle Zahl \(m\) mit \(m < 0\), für die der Graph von \(f\) und die
+                            Gerade mit der Gleichung \(y=mx\) eine Fläche mit dem Inhalt 36 einschließen. </p>
+                            <!-- <ol class="custom-marker parens-around lower-alpha more-spacing">
                         <li>...</li>
                     </ol> -->
-                    <details class="loesungen">
-                        <summary class="nonumber">Lösung</summary>
-                        <ul class="custom-marker parens-around lower-alpha more-spacing">
-                            <li>
-                                Einschließen heißt, dass die Schnittstellen (nur \(x\)) benötigt werden.
-                                <ul>
-                                    <li>Schnittstelle 2 ist \(x_2=0\), da beide Funktionen durch den Koordinatenursprung verlaufen.
-                                        <p>
-                                            (Stelle 2, da die Gerade fallend ist)
-                                        </p>
+                            <details class="loesungen">
+                                <summary class="nonumber">Lösung</summary>
+                                <ul class="custom-marker parens-around lower-alpha more-spacing">
+                                    <li>
+                                        Einschließen heißt, dass die Schnittstellen (nur \(x\)) benötigt werden.
+                                        <ul>
+                                            <li>Schnittstelle 2 ist \(x_2=0\), da beide Funktionen durch den
+                                                Koordinatenursprung verlaufen.
+                                                <p>
+                                                    (Stelle 2, da die Gerade fallend ist)
+                                                </p>
+                                            </li>
+                                            <li>
+                                                Weitere Schnittstellen:
+                                                <ul>
+                                                    <li>\(x^2=mx\qquad |:x\) (Lösung \(x=0\) ist bereits bekannt</li>
+                                                    <li>\( x_1=m\)</li>
+                                                </ul>
+                                            </li>
+                                            <li>Dass heißt, es gibt zwei Schnittstellen: \(x_1=m\) und \(x_2=0\)</li>
+                                        </ul>
                                     </li>
                                     <li>
-                                        Weitere Schnittstellen:
+                                        Fläche mit Integral bestimmen:
                                         <ul>
-                                            <li>\(x^2=mx\qquad |:x\) (Lösung \(x=0\) ist bereits bekannt</li>
-                                            <li>\( x_1=m\)</li>
+                                            <li>Differenzfunktion: \(g(x)-f(x)=mx-x^2\)</li>
+                                            <li>Integral: \(A=\displaystyle\int_{m}^{0} \left(mx-x^2\right)\,\text dx\)
+                                            </li>
+                                            <li>Stammfunktion: \(A=\left[\tfrac 12mx^2-\tfrac13x^3\right]_m^0\)</li>
+                                            <li>Ergebnis: \(A=0-\left(\tfrac 12m\cdot m^2-\tfrac13\cdot
+                                                m^3\right)=-\tfrac16m^3\)</li>
                                         </ul>
                                     </li>
-                                    <li>Dass heißt, es gibt zwei Schnittstellen: \(x_1=m\) und \(x_2=0\)</li>
-                                </ul>
-                            </li>
-                            <li>
-                                Fläche mit Integral bestimmen:
-                                <ul>
-                                    <li>Differenzfunktion: \(g(x)-f(x)=mx-x^2\)</li>
-                                    <li>Integral: \(A=\displaystyle\int_{m}^{0} \left(mx-x^2\right)\,\text dx\)</li>
-                                    <li>Stammfunktion: \(A=\left[\tfrac 12mx^2-\tfrac13x^3\right]_m^0\)</li>
-                                    <li>Ergebnis: \(A=0-\left(\tfrac 12m\cdot m^2-\tfrac13\cdot m^3\right)=-\tfrac16m^3\)</li>
-                                </ul>
-                            </li>
-                            <li>\(m\) berechnen:
-                                <ul>
-                                    <li>Die Fläche soll 36 betragen.
+                                    <li>\(m\) berechnen:
                                         <ul>
-                                            <li>\(\ \,\, \qquad\,A=-\tfrac16m^3\)</li>
-                                            <li>\(\ \,\, \qquad 36=-\tfrac16m^3\qquad |\cdot (-6)\)</li>
-                                            <li>\(\ \, -6\cdot 36=m^3\)</li>
-                                            <li>\(-6\cdot6\cdot6=m\cdot m\cdot m\)</li>
-                                            <li>\(\qquad\ \ \ \, m=-6\)</li>
-                                        </ul>
-                                        Der Twist mit dem Ausschreiben der Potenzen erleichtert das Berechnen, da kaum einer eine dritte 
-                                        Wurzel im Kopf berechnet.
-                                    </li>
+                                            <li>Die Fläche soll 36 betragen.
+                                                <ul>
+                                                    <li>\(\ \,\, \qquad\,A=-\tfrac16m^3\)</li>
+                                                    <li>\(\ \,\, \qquad 36=-\tfrac16m^3\qquad |\cdot (-6)\)</li>
+                                                    <li>\(\ \, -6\cdot 36=m^3\)</li>
+                                                    <li>\(-6\cdot6\cdot6=m\cdot m\cdot m\)</li>
+                                                    <li>\(\qquad\ \ \ \, m=-6\)</li>
+                                                </ul>
+                                                Der Twist mit dem Ausschreiben der Potenzen erleichtert das Berechnen,
+                                                da kaum einer eine dritte
+                                                Wurzel im Kopf berechnet.
+                                            </li>
 
+                                        </ul>
+                                    </li>
                                 </ul>
-                            </li>
-                        </ul>
-                    </details>
+                            </details>
                 </li>
             </ol>
-            
+
             <ol class="more-spacing" start="2">
                 <li>
                     <p>
                         Gegeben ist die in \(\mathbb{R}\) definierte Funktion \(f\) mit \(f(x)=x^3-4 x\).
                     </p>
 
-                    <p>Der Graph von \(f\) und die \(x\)-Achse schließen eine Fläche ein, die aus zwei Flächenstücken besteht. 
-                            Berechne den Inhalt dieser Fläche! </p>
+                    <p>Der Graph von \(f\) und die \(x\)-Achse schließen eine Fläche ein, die aus zwei Flächenstücken
+                        besteht.
+                        Berechne den Inhalt dieser Fläche! </p>
                     <p>
                         Aus vorheriger Teilaufgabe ist bekannt, dass \(f\) punktsymmetrisch.
                     </p>
@@ -154,12 +158,13 @@
                                     x^3-4x&=&0 \\[2.5pt]
                                     x\cdot(x^2-4)&=&0
                                     \end{array}\)</p>
-                                    <p>
-                                        Ergibt \(x_1=0\) und \(x_{2/3}=\pm2\)
-                                    </p>
+                                <p>
+                                    Ergibt \(x_1=0\) und \(x_{2/3}=\pm2\)
+                                </p>
                             </li>
                             <li>Da die Funktion punktsymmetrisch ist, reicht die Berechnung der Fläche zwischen
-                                \(x_1=0\) und \(x_2=2\) (Die Berechnung von im Intervall \(I=[-2; 2]\) würde eine Fläche von null ergeben.):
+                                \(x_1=0\) und \(x_2=2\) (Die Berechnung von im Intervall \(I=[-2; 2]\) würde eine Fläche
+                                von null ergeben.):
                                 <p>
                                     \(\begin{array}[t]{rll}
                                     A&=&2\cdot\displaystyle\int_{0}^{2}f(x)\;\mathrm dx \\[5pt]
@@ -170,7 +175,7 @@
                                 </p>
                                 <p>
                                     Die Fläche ist negativ, weil der berechnete Teil unterhalb der \(x\)-Achse liegt.
-                                </p>      
+                                </p>
                             </li>
                             <li>Die beiden Flächenstücke haben einen Inhalt von \(8\,\text{FE}\).</li>
                         </ul>
@@ -181,7 +186,9 @@
             <ol class="more-spacing" start="3">
                 <li>
                     <p>
-                        Die Abbildung zeigt den Graphen einer in \(\mathbb{R}\) definierten Funktion \(f\) für die gilt: \(f(x) \rightarrow 0\) für \(x \rightarrow \infty\) und \(f(x) \rightarrow 1\) für \(x \rightarrow-\infty\). 
+                        Die Abbildung zeigt den Graphen einer in \(\mathbb{R}\) definierten Funktion \(f\) für die gilt:
+                        \(f(x) \rightarrow 0\) für \(x \rightarrow \infty\) und \(f(x) \rightarrow 1\) für \(x
+                        \rightarrow-\infty\).
                     </p>
                     <div class="centered">
                         <img src="/img/fkt_abi_1.png" style="object-fit:scale-down; max-width: 300px;">
@@ -202,7 +209,8 @@
                         <summary class="nonumber">Lösung</summary>
                         <ol class="custom-marker parens-around lower-alpha more-spacing">
                             <li>
-                                In der Abbildung ist erkennbar, dass der Graph von \(f\) und die \(x\)-Achse im Intervall \([0;2]\) ungefähr 3 Kästchen einschließen. Daraus folgt:
+                                In der Abbildung ist erkennbar, dass der Graph von \(f\) und die \(x\)-Achse im
+                                Intervall \([0;2]\) ungefähr 3 Kästchen einschließen. Daraus folgt:
                                 <p>
                                     \(\displaystyle\int_{0}^{2}f(x)\;\mathrm dx \approx 3\)
                                 </p>
@@ -221,29 +229,31 @@
             <ol class="more-spacing" start="4">
                 <li>
                     <p>
-                        Die Abbildung zeigt den Graphen einer Funktion \(f.\) Die Punkte \(A,\) \(B,\) \(C\) und \(D\) liegen auf dem Graphen von \(f\).
+                        Die Abbildung zeigt den Graphen einer Funktion \(f.\) Die Punkte \(A,\) \(B,\) \(C\) und \(D\)
+                        liegen auf dem Graphen von \(f\).
                     </p>
                     <div class="centered">
                         <img src="/img/fkt_abi_2.png" style="object-fit:scale-down; max-width: 300px;">
                     </div>
 
                     <p>
-                        Entscheide, ob die folgende Aussage wahr ist: 
-                        <ul>
-                            <li>Für die bestimmten Integrale \(I_1=\displaystyle\int_{x_A}^{x_C}f(x)\;\mathrm dx\) und \(I_2=\displaystyle\int_{x_C}^{x_D}f(x)\;\mathrm dx\) gilt: \(I_1\lt I_2\).</li>
-                        </ul>
-                        Begründe deine Entscheidung!
+                        Entscheide, ob die folgende Aussage wahr ist:
+                    <ul>
+                        <li>Für die bestimmten Integrale \(I_1=\displaystyle\int_{x_A}^{x_C}f(x)\;\mathrm dx\) und
+                            \(I_2=\displaystyle\int_{x_C}^{x_D}f(x)\;\mathrm dx\) gilt: \(I_1\lt I_2\).</li>
+                    </ul>
+                    Begründe deine Entscheidung!
                     </p>
                     <details class="loesungen">
                         <summary class="nonumber">Lösung</summary>
                         <p>Die Aussage ist falsch.</p>
                         <p>
-                        Im Intervall von \(x_A\) bis \(x_C\) ist \(f(x)\geq0\) und 
-                        damit das Integral \(I_1\geq0\). Im Intervall von \(x_C\) bis \(x_D\) 
-                        verläuft der Graph von \(f\) größtenteils unterhalb der \(x\)-Achse, 
-                        sodass die eingeschlossene Fläche überwiegend unter der \(x\)-Achse liegt. 
-                        Damit ist der Wert des Integrals \(I_2\lt 0\) und die Aussage 
-                        \(I_1\lt I_2\) ist falsch. 
+                            Im Intervall von \(x_A\) bis \(x_C\) ist \(f(x)\geq0\) und
+                            damit das Integral \(I_1\geq0\). Im Intervall von \(x_C\) bis \(x_D\)
+                            verläuft der Graph von \(f\) größtenteils unterhalb der \(x\)-Achse,
+                            sodass die eingeschlossene Fläche überwiegend unter der \(x\)-Achse liegt.
+                            Damit ist der Wert des Integrals \(I_2\lt 0\) und die Aussage
+                            \(I_1\lt I_2\) ist falsch.
                         </p>
                     </details>
                 </li>
@@ -278,33 +288,369 @@
             <ol class="more-spacing" start="1">
                 <li>
                     <p>
-                        Gegeben ist die in \(\mathbb{R}\) definierte Funktion \(f\) mit 
-                        \(f(x)=(x-2) \cdot \mathrm e^{-\frac{1}{2} x+3}\). 
+                        Gegeben ist die in \(\mathbb{R}\) definierte Funktion \(f\) mit
+                        \(f(x)=(x-2) \cdot \mathrm e^{-\frac{1}{2} x+3}\).
                         Der Graph von \(f\) wird mit \(G_f\) bezeichnet.
                     </p>
                     <p>
                         Bekannte Informationen aus vorherigen Teilaufgaben:
-                        <ul>
-                            <li>\(f\) hat genau eine Nullstelle.</li>
-                            <li>\(f\) hat genau einen Hochpunkt (\(H(4\mid  f(4))\)).</li>
-                            <li>\(f\) hat genau einen Wendepunkt (\(W(6 \mid  4)\)).</li>
-                        </ul>
+                    <ul>
+                        <li>\(f\) hat genau eine Nullstelle.</li>
+                        <li>\(f\) hat genau einen Hochpunkt (\(H(4\mid f(4))\)).</li>
+                        <li>\(f\) hat genau einen Wendepunkt (\(W(6 \mid 4)\)).</li>
+                    </ul>
                     </p>
+                    <p>
+                        Die Form eines Schrankknaufs kann beschrieben werden als Körper,
+                        der durch Rotation von \(G_f\) um die \(x\)-Achse entsteht.
+                        In der Abbildung wird die Querschnittsfläche eines Schrankknaufs
+                        dargestellt. Ein Teil der Profillinien des Querschnitts wird
+                        für \(2 \leq x \leq 11\) modellhaft durch die Graphen der
+                        Funktionen \(f\) und \(g\) beschrieben, wobei der Graph von \(g\) durch
+                        Spiegelung des Graphen von \(f\) an der \(x\)-Achse entsteht.
+                        Es gilt: \(1\;\mathrm{LE}=0,5\;\mathrm{cm}\).
+                    </p>
+                    <div class="centered">
+                        <img src="/img/fkt_abi_3.png" style="object-fit:scale-down; max-width: 300px;">
+                    </div>
 
                     <ol class="custom-marker parens-around lower-alpha more-spacing">
-                        <li>...</li>
+                        <li>Gib eine Funktionsgleichung von \(g\) an.
+                            <p>
+                                Bestimme den Durchmesser des Sockels des Schrankknaufs in \(\text{mm}.\)
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                Der Schrankknauf soll aus einem Holzquader gefertigt werden.
+                                Ein Kubikzentimeter der verwendeten Holzart hat eine Masse
+                                von \(0,86\;\text{g}\).
+                            </p>
+                            <p>Gib die Maße an, die dieser Holzquader mindestens haben muss!
+                            </p>
+                            <p>
+                                Berechne die Masse des Holzquaders!
+                            </p>
+                        </li>
+                        <li>
+                            Bestimme die Größe der Querschnittsfläche eines Schrankknaufs in \(\text{cm}^2\)!
+                        </li>
                     </ol>
+
+
                     <details class="loesungen">
                         <summary class="nonumber">Lösung</summary>
                         <ol class="custom-marker parens-around lower-alpha more-spacing">
                             <li>
-                                ...
+                                <p> Funktionsgleichung:
+                                </p>
+                                <p>
+                                    \(g(x)=-f(x)=-(x-2) \cdot \mathrm e^{-\frac{1}{2} x+3}\)
+                                </p>
+                                <p>
+                                    Durchmesser:
+                                </p>
+                                <p>
+                                    \(\begin{array}[t]{rll}
+                                    f(11)&=&(11-2) \cdot \mathrm e^{-\frac{1}{2}\cdot11+3} \\[2.5pt]
+                                    &\approx&0,74
+                                    \end{array}\)
+                                </p>
+                                <p>
+                                    Für den Durchmesser \(d\) des Sockels folgt somit
+                                    \(d=2\cdot0,74=1,48\;\text{LE}.\) Da
+                                    \(1\;\text{LE}=0,5\;\text{cm}=5\;\text{mm}\) gilt,
+                                    folgt somit, dass der Durchmesser des Sockels
+                                    \(d=1,48\cdot5\approx7\;\text{mm}\) beträgt.
+                                </p>
+                            </li>
+                            <li>
+                                <p>Maße des Quaders:</p>
+                                <p>
+                                    Nach bekannte Angaben ist die \(y\)-Koordinate des Hochpunkts
+                                    von \(f\) gegeben durch \(y=2\mathrm e\). Die Tiefe und Höhe des
+                                    Quaders muss somit jeweils
+                                    \(2\mathrm e \cdot 2\cdot 0,5=2\mathrm e\;\text{cm}\) betragen.
+                                </p>
+                                <p>
+                                    Da der Querschnitt zwischen \(x=2\) und \(x=11\) liegt,
+                                    folgt für die benötigte Breite des Quaders
+                                    \((11-2)\cdot0,5=4,5\;\text{cm}.\)
+                                </p>
+                                <p>Masse des Quaders:</p>
+                                <p>
+                                    Für das Volumen \(V\) des Holzquaders folgt:
+                                </p>
+                                <p>
+                                    \(V=4,5\cdot2\mathrm e\cdot2\mathrm e\approx133\;\text{cm}^3\)
+                                </p>
+                                <p>
+                                    Damit folgt für die Masse \(m=0,86\cdot V\approx114,38\;\text{g}.\)
+                                </p>
+                            </li>
+                            <li>
+                                <p>
+                                    \(\begin{array}[t]{rll}
+                                    A&amp;=&amp;2\cdot\displaystyle\int_{2}^{11}f(x)\;\mathrm dx \\[2.5pt]
+                                    &amp;=&amp;2 \cdot\left[-2 x \cdot \mathrm e^{-\frac{1}{2} x+3}\right]_2^{11}
+                                    \\[2.5pt]
+                                    &amp;=&amp;2\cdot\left(\left(-2\cdot11 \cdot \mathrm
+                                    e^{-\frac{1}{2}\cdot11+3}\right)-\left(-2\cdot2 \cdot \mathrm
+                                    e^{-\frac{1}{2}\cdot2+3}\right)\right) \\[2.5pt]
+                                    &amp;\approx&amp;55,5\;\text{FE}
+                                    \end{array}\)
+                                </p>
+                                <p>
+                                    Die Größe der Querschnittsfläche eines Schrankknaufs in \(\text{cm}^2\) beträgt
+                                    somit ca. \(55,5\cdot0,5^2\approx13,89\;\text{cm}^2.\)
+                                </p>
                             </li>
                         </ol>
                     </details>
                 </li>
             </ol>
 
+            <ol class="more-spacing" start="2">
+                <li>
+                    <p>
+                        Gegeben ist die in \(\mathbb{R}\) definierte Funktion
+                        \(f\) mit \(f(x) \)\( =0,5 \cdot \)\( \left(x^2-4\right) \cdot \mathrm e^x\).
+                        Der Graph dieser Funktion wird mit \(G\) bezeichnet.
+                    </p>
+                    <p>
+                        Bekannte Informationen aus vorherigen Teilaufgaben:
+                    <ul>
+                        <li>\(f\) ist nicht symmetrisch zur \(y\)-Achse.</li>
+                        <li>\(f\) hat zwei Wendepunkte.</li>
+                    </ul>
+                    </p>
+                    <p>
+                        Ein Möbeldesigner hat sich auf die Herstellung kleiner Beistelltische
+                        spezialisiert.
+                        Die Abbildung zeigt modellhaft die Draufsicht einer symmetrischen Tischplatte.
+                        Zur Modellierung einer der vier Randlinien der Tischplatte wurde der
+                        im III. Quadranten verlaufende Teil des Graphen der Funktion \(f\) verwendet.
+                        Es gilt \(1 \text{ LE}=15 \text{ cm}\).
+                    </p>
+                    <div class="centered">
+                        <img src="/img/fkt_abi_4.png" style="object-fit:scale-down; max-width: 300px;">
+                    </div>
+
+                    <ol class="custom-marker parens-around lower-alpha more-spacing">
+                        <li>
+                            Im I. und IV. Quadranten werden die Randlinien der
+                            Tischplatte durch Teile der Graphen der Funktion \(g\) und \(h\)
+                            beschrieben. Gib die Funktionsgleichungen dieser Funktionen an!
+                        </li>
+                        <li>
+                            Der Beistelltisch hat eine Höhe von \(0,5\) Metern und soll in einem
+                            quaderförmigen Karton mit quadratischer Grundfläche ausgeliefert werden.
+                            <p>
+                                Bestimme das Mindestvolumen des Kartons in Litern!
+                            </p>
+                        </li>
+                        <li>Es gilt: \(\displaystyle \int (0,5 x^2 \cdot \mathrm e^x)\;\mathrm dx \)\( =(\tfrac12
+                            x^2-x+1)
+                            \cdot \mathrm e^x+C ; \)\( \,C \in \mathbb{R}\).
+                            <p>
+                                Ermittle mithilfe dieser Gleichung eine Stammfunktion von \(f\)!
+                            </p>
+                            <p>
+                                Berechne den Flächeninhalt der Tischplatte und gib diesen in Quadratzentimetern an!
+                            </p>
+                        </li>
+                    </ol>
+                    <details class="loesungen">
+                        <summary class="nonumber">Lösung</summary>
+                        <ol class="custom-marker parens-around lower-alpha more-spacing">
+                            <li>
+                                <ul>
+                                    <li>IV. Quadrant: \(h(x) \)\( =f(-x) \)\( =0,5 \cdot\left(x^2-4\right) \cdot \mathrm
+                                        e^{-x}\)</li>
+                                    <li>I. Quadrant: \(g(x) \)\( =-h(x) \)\( =-0,5 \cdot\left(x^2-4\right) \cdot \mathrm
+                                        e^{-x}\)</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <p>
+                                    Durch die auf den Koordinatenachsen liegenden Eckpunkten folgt
+                                    für die Seitenlänge der quadratischen Grundläche:
+                                </p>
+                                <p>
+                                    \(a \)\( = \sqrt{2^2+2^2} \)\( = \sqrt{8}\;\text{LE}\)
+                                </p>
+                                <p>
+                                    Da eine Längeneinheit 15 Zentimetern entspricht, folgt für das Volumen des
+                                    Quaders, welches \(50\;\text{cm}\) hoch ist:
+                                </p>
+                                <p>
+                                    \(V \)\( = \sqrt{8}^2\cdot 15^2\cdot 50 \)\( = 90\,000\;\text{cm}^3\)
+                                </p>
+                                <p>
+                                    Da \(1000\;\text{cm}^3=1\;\text{L}\) gilt, folgt, dass der Quader ein Mindestvolumen
+                                    von \(90\;\text{L}\) haben muss.
+                                </p>
+                            </li>
+                            <li>
+                                <ul>
+                                    <li>
+                                        Stammfunktion:
+                                        <p>
+                                            Ausmultiplizieren der Funktionsgleichung von \(f\) liefert \(f(x) \)\( =
+                                            \tfrac12x^2\cdot\mathrm e^x-2\cdot \mathrm e^x\). Mit der Gleichung aus der
+                                            Aufgabenstellung folgt:
+                                        </p>
+                                        <p>
+                                            \(\begin{array}[t]{rll}
+                                            F(x)&=&\displaystyle\int f(x)\;\mathrm dx \\[2.5pt]
+                                            &=&\displaystyle\int (0,5x^2\cdot\mathrm e^x-2\cdot \mathrm
+                                            e^x)\;\mathrm dx \\[2.5pt]
+                                            &=&\displaystyle\int (0,5 x^2 \cdot \mathrm e^x)\;\mathrm dx -
+                                            \displaystyle\int (2 \cdot \mathrm e^x)\;\mathrm dx \\[2.5pt]
+                                            &=& (\tfrac12 x^2-x+1) \cdot \mathrm e^x-2 \cdot \mathrm e^x + C \\[2.5pt]
+                                            F(x)&=& (\tfrac12 x^2-x-1) \cdot \mathrm e^x + C
+                                            \end{array}\)
+                                        </p>
+                                        <p>
+                                            Eine mögliche Stammfunktion von \(f\) ist somit
+                                            \(F(x) = (\tfrac12 x^2-x-1) \cdot \mathrm e^x \).
+                                        </p>
+                                    </li>
+                                    <li>
+                                        Flächeninhalt:
+                                        <p>
+                                            \(\begin{array}[t]{rll}
+                                            A&=&4\cdot\left\vert\displaystyle\int_{-2}^{0}(0,5x^2\cdot\mathrm e^x-2\cdot
+                                            \mathrm e^x)\;\mathrm dx\right\vert \\[5pt]
+                                            &=&4\cdot\left|\left[(\tfrac12 x^2-x-1) \cdot \mathrm
+                                            e^x\right]_{-2}^{0}\right| \\[5pt]
+                                            &\approx&4\cdot\vert-1,4\vert \\[5pt]
+                                            A&=&5,6\;\text{FE}
+                                            \end{array}\)
+                                        </p>
+                                        <p>
+                                            Somit hat die Tischplatte einen Flächeninhalt von ca. \(5,6\cdot 15^2 =
+                                            1\,260\;\text{cm}^2\).
+                                        </p>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </details>
+                </li>
+            </ol>
+
+            <ol class="more-spacing" start="3">
+                <li>
+                    <p>
+                        Gegeben ist die Funktion \(f\) durch \(f(x)=-\dfrac{1}{150}x^3+\dfrac{9}{100}x^2+\dfrac{5}{2}\)
+                        mit \(x \in \mathbb{R}\). Der Graph von \(f\) wird mit \(G\) bezeichnet.
+                    </p>
+                    <p>
+                        Bekannte Informationen aus vorherigen Teilaufgaben:
+                    <ul>
+                        <li>Die erste Ableitung lautet: \(f'(x)=-\tfrac1{50}\cdot\left(x^2-9x\right)\)</li>
+                        <li>\(f\) hat je einen
+                            <ul>
+                                <li>Hochpunkt: \(H(9\mid 4,93)\)</li>
+                                <li>Tiefpunkt: \(T(0\mid 2,5)\)</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    </p>
+                    <p>
+                        In der Abbildung ist eine Haltestelle A der Berliner Seilbahn
+                        in den „Gärten der Welt“ dargestellt. Die Randkurve des Daches
+                        lässt sich modellhaft durch den Graphen der Funktion \(f\)
+                        für \(0\leq x\leq 9\) beschreiben. Die Dicke des Daches kann
+                        vernachlässigt werden. Im verwendeten Koordinatensystem
+                        beschreibt die \(x\)-Achse die Horizontale.
+                        Es gilt: \(1 \,\text{LE}=1\,\text{m}\).
+                    </p>
+                    <div class="centered">
+                        <img src="/img/fkt_abi_5.png" style="object-fit:scale-down; max-width: 300px;">
+                    </div>
+
+                    <ol class="custom-marker parens-around lower-alpha more-spacing">
+                        <li>
+                            Senkrechte Pfeiler stützen das Dach. In den Punkten \(R(2,5\mid 0)\)
+                            und \(Q(7,5\mid 0)\) sind zwei dieser Pfeiler verankert. Der Durchmesser
+                            der Pfeiler wird vernachlässigt. Berechne den Längenunterschied der beiden
+                            Pfeiler!
+                        </li>
+                        <li>Begründe ohne Rechnung, dass alle Graphen der Stammfunktionen von \(f\)
+                            genau einen lokalen Extrempunkt besitzen!</li>
+                        <li>
+                            Es wird geplant, eine Windschutzscheibe aus Sicherheitsglas herzustellen.
+                            Diese wird vollständig begrenzt von der Randkurve des Daches,
+                            dem Erdboden und den Pfeilern aus Teilaufgabe a. Die Masse der
+                            Windschutzscheibe darf \(500\,\text{kg}\) nicht überschreiten.
+                            Ein Kubikmeter Sicherheitsglas hat eine Masse von \(2\,500\,\text{kg}\).
+                            <p>
+                                Berechne die maximale Dicke des Sicherheitsglases!
+                            </p>
+                        </li>
+                    </ol>
+                    <details class="loesungen">
+                        <summary class="nonumber">Lösung</summary>
+                        <ol class="custom-marker parens-around lower-alpha more-spacing">
+                            <li>
+                                <p>
+                                    \(f(7,5)-f(2,5)\)\( \approx 4,75-2,96 \approx 1,79\)
+                                </p>
+                                <p>
+                                    Der Längenunterschied beträgt ca. \(1,79 \text{m}.\)
+                                </p>
+                            </li>
+                            <li>
+                                \(f\) ist eine Funktion dritten Grades und der Graph besitzt 
+                                einen lokalen Hochpunkt und einen lokalen Tiefpunkt, 
+                                wobei beide \(y\)-Koordinaten positiv sind. Deshalb besitzt \(f\) genau 
+                                eine Nullstelle mit Vorzeichenwechsel und demzufolge hat \(F\) genau 
+                                eine Extremstelle. 
+                            </li>
+                            <li>
+                                <ul>
+                                    <li>Zunächst wird der Flächeninhalt der Fläche,
+                                        die die Randkurve des Daches mit dem Erdboden und den
+                                        Pfeilern einschließt, berechnet.
+                                        <p>
+                                            \(\begin{array}[t]{rll}
+                                            A&=&\displaystyle\int_{2,5}^{7,5}f(x)\;\mathrm dx \\[2.5pt]
+                                            &=&\left[-\dfrac{1}{600} x^{4}+\dfrac{3}{100} x^{3}+\dfrac{5}{2}
+                                            x\right]_{2,5}^{7,5} \\[2.5pt]
+                                            &=& \dfrac{3345}{128}-\dfrac{2555}{384} \\[2.5pt]
+                                            A&=&\dfrac{935}{48} \approx 19,48 \,\text{m}^2
+                                            \end{array}\)
+                                        </p>
+                                    </li>
+                                    <li>Aus Dichte und Masse kann das maximale Volumen berechnet werden:
+                                        <p>
+                                            \(\begin{array}[t]{rll}
+                                                V&=&\frac m{\rho} \\[2.5pt]
+                                                V&=&\frac{500}{2500} \\[2.5pt]
+                                                V&=&0,2\,\text{m}^3
+                                            \end{array}\)
+                                         </p>
+                                    </li>
+                                    <li>Mit Volumen und Grundfläche kann nun die Dicke berechnet werden (Prisma):
+                                        <p>
+                                            \(\begin{array}[t]{rll}
+                                                V&=&A\cdot h \\[2.5pt]
+                                                0,2&=&19,48\cdot h \\[2.5pt]
+                                                h&=&0,01\,\text{m}
+                                            \end{array}\)
+                                        </p>
+                                        <p>
+                                            Die maximale Dicke des Sicherheitsglases beträgt ca. \(1\; \text{cm}\).
+                                        </p>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </details>
+                </li>
+            </ol>
 
             <!-- <ol class="more-spacing" start="3">
                 <li>
@@ -343,7 +689,7 @@
         <a href="/misc/impressum.html">Impressum</a>
         <div class="lastModified" align="center">
             Zuletzt geändert:<br>
-            4. Mai 2025
+            5. Mai 2025
             <!-- <span id="lastModifiedDate"></span> -->
         </div>
         <a href="/misc/datenschutz.html">Datenschutz</a>
