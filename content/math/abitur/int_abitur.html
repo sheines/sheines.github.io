@@ -134,6 +134,121 @@
                 </li>
             </ol>
             
+            <ol class="more-spacing" start="2">
+                <li>
+                    <p>
+                        Gegeben ist die in \(\mathbb{R}\) definierte Funktion \(f\) mit \(f(x)=x^3-4 x\).
+                    </p>
+
+                    <p>Der Graph von \(f\) und die \(x\)-Achse schließen eine Fläche ein, die aus zwei Flächenstücken besteht. 
+                            Berechne den Inhalt dieser Fläche! </p>
+                    <p>
+                        Aus vorheriger Teilaufgabe ist bekannt, dass \(f\) punktsymmetrisch.
+                    </p>
+                    <details class="loesungen">
+                        <summary class="nonumber">Lösung</summary>
+                        <ul class="custom-marker parens-around lower-alpha more-spacing">
+                            <li>Nullstellen:
+                                <p>\(\begin{array}[t]{rll}
+                                    f(x)&=&0 \\[2.5pt]
+                                    x^3-4x&=&0 \\[2.5pt]
+                                    x\cdot(x^2-4)&=&0
+                                    \end{array}\)</p>
+                                    <p>
+                                        Ergibt \(x_1=0\) und \(x_{2/3}=\pm2\)
+                                    </p>
+                            </li>
+                            <li>Da die Funktion punktsymmetrisch ist, reicht die Berechnung der Fläche zwischen
+                                \(x_1=0\) und \(x_2=2\) (Die Berechnung von im Intervall \(I=[-2; 2]\) würde eine Fläche von null ergeben.):
+                                <p>
+                                    \(\begin{array}[t]{rll}
+                                    A&=&2\cdot\displaystyle\int_{0}^{2}f(x)\;\mathrm dx \\[5pt]
+                                    &=&2\cdot\left[\dfrac{1}{4} x^4-2 x^2\right]_{0}^2 \\[5pt]
+                                    &=&2\cdot((4-8)-0) \\[5pt]
+                                    A&=&-8
+                                    \end{array}\)
+                                </p>
+                                <p>
+                                    Die Fläche ist negativ, weil der berechnete Teil unterhalb der \(x\)-Achse liegt.
+                                </p>      
+                            </li>
+                            <li>Die beiden Flächenstücke haben einen Inhalt von \(8\,\text{FE}\).</li>
+                        </ul>
+                    </details>
+                </li>
+            </ol>
+
+            <ol class="more-spacing" start="3">
+                <li>
+                    <p>
+                        Die Abbildung zeigt den Graphen einer in \(\mathbb{R}\) definierten Funktion \(f\) für die gilt: \(f(x) \rightarrow 0\) für \(x \rightarrow \infty\) und \(f(x) \rightarrow 1\) für \(x \rightarrow-\infty\). 
+                    </p>
+                    <div class="centered">
+                        <img src="/img/fkt_abi_1.png" style="object-fit:scale-down; max-width: 300px;">
+                    </div>
+
+                    <ol class="custom-marker parens-around lower-alpha more-spacing">
+                        <li>
+                            Gib näherungsweise den Wert \(\displaystyle\int_{0}^{2}f(x)\;\mathrm dx\) an!
+                        </li>
+                        <li>
+                            Für eine Stammfunktion \(F\) von \(f\) gilt: \(F(0)=0\).
+                            <p>
+                                Skizziere den Verlauf des Graphen dieser Stammfunktion in der Abbildung!
+                            </p>
+                        </li>
+                    </ol>
+                    <details class="loesungen">
+                        <summary class="nonumber">Lösung</summary>
+                        <ol class="custom-marker parens-around lower-alpha more-spacing">
+                            <li>
+                                In der Abbildung ist erkennbar, dass der Graph von \(f\) und die \(x\)-Achse im Intervall \([0;2]\) ungefähr 3 Kästchen einschließen. Daraus folgt:
+                                <p>
+                                    \(\displaystyle\int_{0}^{2}f(x)\;\mathrm dx \approx 3\)
+                                </p>
+                            </li>
+                            <li>
+                                Wegen \(F(0)=0\) muss der Graph durch den Koordinatenursprung verlaufen.
+                                <div class="centered">
+                                    <img src="/img/fkt_abi_1_lsg.png" style="object-fit:scale-down; max-width: 300px;">
+                                </div>
+                            </li>
+                        </ol>
+                    </details>
+                </li>
+            </ol>
+
+            <ol class="more-spacing" start="4">
+                <li>
+                    <p>
+                        Die Abbildung zeigt den Graphen einer Funktion \(f.\) Die Punkte \(A,\) \(B,\) \(C\) und \(D\) liegen auf dem Graphen von \(f\).
+                    </p>
+                    <div class="centered">
+                        <img src="/img/fkt_abi_2.png" style="object-fit:scale-down; max-width: 300px;">
+                    </div>
+
+                    <p>
+                        Entscheide, ob die folgende Aussage wahr ist: 
+                        <ul>
+                            <li>Für die bestimmten Integrale \(I_1=\displaystyle\int_{x_A}^{x_C}f(x)\;\mathrm dx\) und \(I_2=\displaystyle\int_{x_C}^{x_D}f(x)\;\mathrm dx\) gilt: \(I_1\lt I_2\).</li>
+                        </ul>
+                        Begründe deine Entscheidung!
+                    </p>
+                    <details class="loesungen">
+                        <summary class="nonumber">Lösung</summary>
+                        <p>Die Aussage ist falsch.</p>
+                        <p>
+                        Im Intervall von \(x_A\) bis \(x_C\) ist \(f(x)\geq0\) und 
+                        damit das Integral \(I_1\geq0\). Im Intervall von \(x_C\) bis \(x_D\) 
+                        verläuft der Graph von \(f\) größtenteils unterhalb der \(x\)-Achse, 
+                        sodass die eingeschlossene Fläche überwiegend unter der \(x\)-Achse liegt. 
+                        Damit ist der Wert des Integrals \(I_2\lt 0\) und die Aussage 
+                        \(I_1\lt I_2\) ist falsch. 
+                        </p>
+                    </details>
+                </li>
+            </ol>
+
 
             <!-- <ol class="more-spacing" start="3">
                 <li>
@@ -163,7 +278,17 @@
             <ol class="more-spacing" start="1">
                 <li>
                     <p>
-                        ...
+                        Gegeben ist die in \(\mathbb{R}\) definierte Funktion \(f\) mit 
+                        \(f(x)=(x-2) \cdot \mathrm e^{-\frac{1}{2} x+3}\). 
+                        Der Graph von \(f\) wird mit \(G_f\) bezeichnet.
+                    </p>
+                    <p>
+                        Bekannte Informationen aus vorherigen Teilaufgaben:
+                        <ul>
+                            <li>\(f\) hat genau eine Nullstelle.</li>
+                            <li>\(f\) hat genau einen Hochpunkt (\(H(4\mid  f(4))\)).</li>
+                            <li>\(f\) hat genau einen Wendepunkt (\(W(6 \mid  4)\)).</li>
+                        </ul>
                     </p>
 
                     <ol class="custom-marker parens-around lower-alpha more-spacing">
