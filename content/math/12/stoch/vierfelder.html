@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" initial-scale="1.0" />
+  <meta name="author" content="Sebastian Hitziger" />
+  <meta name="robot" content="noindex" />
+  <title>HITZ | Stochastik | Vierfeldertafeln</title>
+  <link rel="stylesheet" type="text/css" href="/css/colors.css" />
+  <link rel="stylesheet" type="text/css" href="/css/gridNoTimeline.css" />
+  <link rel="stylesheet" type="text/css" href="/css/navbar.css" />
+  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="/css/courses.css" />
+  <link rel="stylesheet" type="text/css" href="/css/vierfelder.css" />
+  <script type="text/javascript" src="jquery-3.3.1.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="nav">
+      <input type="checkbox" id="nav-check" />
+      <div class="nav-header">
+        <div class="nav-title">
+          <a href="/">Hr. Hitzigers Unterricht</a>
+        </div>
+      </div>
+      <div class="nav-btn">
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+
+      <div class="nav-links">
+        <a href="/content/math/">Mathematik</a>
+        <a href="/content/math/12/">Klasse 12</a>
+        <a href="/content/math/12/statstoch/">Stochastik</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section>
+      <h2>Vierfeldertafeln</h2>
+      <div class="ziele">
+        <p>
+          Nachfolgend soll erklärt werden, was Vierfeldertafeln sind, was sie darstellen und wie man mit ihnen bedingte
+          Wahrscheinlichkeiten
+          berechnet.
+        </p>
+        <p>
+          <a href="#aufgaben">Direkt zu den Aufgaben</a>
+        </p>
+      </div>
+
+      <div class="theorie">
+        <div class="definition">
+          <h4>Vierfeldertafel</h4>
+          <p>
+            Vierfeldertafeln werden verwendet, um abhängige und unabhängige Größen übersichtlich miteinander zu
+            vergleichen.
+          </p>
+          <p>
+            Die folgende Vierfeldertafel stellt zwei Ereignisse \(A\) und \(B\) mit ihren Gegenereignissen \(\overline
+            A\) und \(\overline B\)
+            gegenüber.
+          </p>
+          <div class="centered">
+            <table class="vierfelder">
+              <tr>
+                <td></td>
+                <td>\(A\)</td>
+                <td>\(\overline A\)</td>
+                <td></td>
+              </tr>
+              <tr>
+                <td>\(B\)</td>
+                <td>\(\left|A \cap B\right|\)</td>
+                <td>\(\left|\overline A \cap B\right|\)</td>
+                <td>\(\left|B\right|\)</td>
+              </tr>
+              <tr>
+                <td>\(\overline B\)</td>
+                <td>\(\left|A \cap \overline B\right|\)</td>
+                <td>\(\left|\overline A \cap \overline B\right|\)</td>
+                <td>\(\left|\overline B\right|\)</td>
+              </tr>
+              <tr>
+                <td></td>
+                <td>\(\left|A\right|\)</td>
+                <td>\(\left|\overline A\right|\)</td>
+                <td>Summe</td>
+              </tr>
+            </table>
+          </div>
+          <p>
+            Dabei steht \(|A|\) für die Anzahl der Elemente in der Menge \(A\).
+          </p>
+
+          <h5>Berechnungen</h5>
+          <p>
+          <ul class="custom-marker point-after decimal more-spacing">
+            <li>Berechnung der Randwahrscheinlichkeiten:
+              <ul style="margin-top: 5px; list-style-type:none">
+                <li>\(\displaystyle p(A)=\frac{|A|}{\text{Summe}}\)</li>
+              </ul>
+            </li>
+            <li>Berechnung der bedingten Wahrscheinlichkeiten:
+              <ul style="margin-top: 5px; list-style-type:none">
+                <li>\(\displaystyle p_B(A)=\frac{|A\cap B|}{|B|}\)</li>
+              </ul>
+              <p>
+                Die Rechnung gibt die Wahrscheinlichkeit von \(A\) unter der Bedingung von \(B\) zurück. Das bedeutet:
+                Wie wahrscheinlich ist \(A\),
+                wenn \(B\) bereits eingetreten ist.
+              </p>
+            </li>
+          </ul>
+          </p>
+        </div>
+        <h6>Beispiel:</h6>
+        <p>
+          In einer Studie wurde bei \(1\,000\) Frauen ein Schwangerschaftstest durchgeführt.
+          39 dieser Frauen waren tatsächlich schwanger. Der Test war bei 40 der getesteten Frauen positiv und 955 der
+          nicht schwangeren Frauen hatten einen negativen Test.
+        </p>
+        <p>
+          Zuerst müssen Ereignisse festgelegt werden:
+        <ul>
+          <li>\(S\) steht für schwanger (\(\overline S\) entsprechend für nicht schwanger)</li>
+          <li>\(T\) steht für einen positiven Schwangerschaftstest (\(\overline T\) entsprechend für einen negativen
+            Test)</li>
+        </ul>
+        </p>
+        <p>
+          Mit diesem Wissen, wird nun die Tabelle Stück für Stück gefüllt:
+        <ul>
+          <li>Die Studie wurde mit 1000 Frauen durchgeführt: Die Summe liegt bei 1000.
+            <div style="margin-top: 8px; margin-left: 20px;">
+              <table class="vierfelder">
+                <tr>
+                  <td></td>
+                  <td>\(S\)</td>
+                  <td>\(\overline S\)</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>\(T\)</td>
+                  <td>\(\)</td>
+                  <td>\(\)</td>
+                  <td>\(\)</td>
+                </tr>
+                <tr>
+                  <td>\(\overline T\)</td>
+                  <td>\(\)</td>
+                  <td>\(\)</td>
+                  <td>\(\)</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>\(\)</td>
+                  <td>\(\)</td>
+                  <td>\(1\,000\)</td>
+                </tr>
+              </table>
+            </div>
+          </li>
+          <li>Es waren 39 Frauen tatsächlich schwanger. D.h. \(|S|=39\)
+            <div style="margin-top: 8px; margin-left: 20px;">
+              <table class="vierfelder">
+                <tr>
+                  <td></td>
+                  <td>\(S\)</td>
+                  <td>\(\overline S\)</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>\(T\)</td>
+                  <td>\(\)</td>
+                  <td>\(\)</td>
+                  <td>\(\)</td>
+                </tr>
+                <tr>
+                  <td>\(\overline T\)</td>
+                  <td>\(\)</td>
+                  <td>\(\)</td>
+                  <td>\(\)</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>\(39\)</td>
+                  <td>\(\)</td>
+                  <td>\(1\,000\)</td>
+                </tr>
+              </table>
+            </div>
+            Dementspechend waren 961 Frauen nicht schwanger (\(1\,000-39\)).
+            <div style="margin-top: 8px; margin-left: 20px;">
+              <table class="vierfelder">
+                <tr>
+                  <td></td>
+                  <td>\(S\)</td>
+                  <td>\(\overline S\)</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>\(T\)</td>
+                  <td>\(\)</td>
+                  <td>\(\)</td>
+                  <td>\(\)</td>
+                </tr>
+                <tr>
+                  <td>\(\overline T\)</td>
+                  <td>\(\)</td>
+                  <td>\(\)</td>
+                  <td>\(\)</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>\(39\)</td>
+                  <td>\(961\)</td>
+                  <td>\(1\,000\)</td>
+                </tr>
+              </table>
+            </div>
+          </li>
+          <li>Bei 40 Frauen war der Test positiv, d.h. \(|T|=40\)
+            <div style="margin-top: 8px; margin-left: 20px;">
+              <table class="vierfelder">
+                <tr>
+                  <td></td>
+                  <td>\(S\)</td>
+                  <td>\(\overline S\)</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>\(T\)</td>
+                  <td>\(\)</td>
+                  <td>\(\)</td>
+                  <td>\(40\)</td>
+                </tr>
+                <tr>
+                  <td>\(\overline T\)</td>
+                  <td>\(\)</td>
+                  <td>\(\)</td>
+                  <td>\(\)</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>\(39\)</td>
+                  <td>\(961\)</td>
+                  <td>\(1\,000\)</td>
+                </tr>
+              </table>
+            </div>
+            Dementspechend war der Test bei 960 Frauen negativ. (\(1\,000-40\)).
+            <div style="margin-top: 8px; margin-left: 20px;">
+              <table class="vierfelder">
+                <tr>
+                  <td></td>
+                  <td>\(S\)</td>
+                  <td>\(\overline S\)</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>\(T\)</td>
+                  <td>\(\)</td>
+                  <td>\(\)</td>
+                  <td>\(40\)</td>
+                </tr>
+                <tr>
+                  <td>\(\overline T\)</td>
+                  <td>\(\)</td>
+                  <td>\(\)</td>
+                  <td>\(960\)</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>\(39\)</td>
+                  <td>\(961\)</td>
+                  <td>\(1\,000\)</td>
+                </tr>
+              </table>
+            </div>
+          </li>
+          <li>955 der nicht schwangeren Frauen hatten einen negativen Test. D.h. \(\left|\overline S \cap \overline T\right|=955\) (nicht schwanger UND negativer Test).
+            <div style="margin-top: 8px; margin-left: 20px;">
+              <table class="vierfelder">
+                <tr>
+                  <td></td>
+                  <td>\(S\)</td>
+                  <td>\(\overline S\)</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>\(T\)</td>
+                  <td>\(\)</td>
+                  <td>\(\)</td>
+                  <td>\(40\)</td>
+                </tr>
+                <tr>
+                  <td>\(\overline T\)</td>
+                  <td>\(\)</td>
+                  <td>\(955\)</td>
+                  <td>\(960\)</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>\(39\)</td>
+                  <td>\(961\)</td>
+                  <td>\(1\,000\)</td>
+                </tr>
+              </table>
+            </div>
+          </li>
+          <li>
+            Diese Angaben reichen, um die restliche Tabelle zu füllen:
+            <ul>
+              <li>Es ist bekannt, dass 960 Test negativ waren und von diesen waren 955 nicht schwanger. Das heißt 5 schwangere Frauen haben einen negativen Test erhalten: \(\left|S \cap \overline T\right|=\color{green}5\)</li>
+              <li>Wenn von 39 Schwangeren <span style="color: green">fünf</span> einen negativen Test hatten, bleiben <span style="color: orange">34</span> positive Tests für die Schwangeren.</li>
+              <li>Wenn es 40 positive Test gab, davon aber nur <span style="color: orange">34</span> tatsächlich schwanger waren, müssen <span style="color: magenta">6</span> nicht schwangere Frauen einen positiven Test erhalten haben. </li>
+            </ul>
+            <div style="margin-top: 8px; margin-left: 20px;">
+              <table class="vierfelder">
+                <tr>
+                  <td></td>
+                  <td>\(S\)</td>
+                  <td>\(\overline S\)</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>\(T\)</td>
+                  <td>\(\color{orange}34\)</td>
+                  <td>\(\color{magenta}6\)</td>
+                  <td>\(40\)</td>
+                </tr>
+                <tr>
+                  <td>\(\overline T\)</td>
+                  <td>\(\color{green} 5\)</td>
+                  <td>\(955\)</td>
+                  <td>\(960\)</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>\(39\)</td>
+                  <td>\(961\)</td>
+                  <td>\(1\,000\)</td>
+                </tr>
+              </table>
+            </div>
+          </li>
+        </ul>
+        Mit dieser Tabelle können nun leicht weiterführende Fragen beantwortet werden:
+        <ol>
+          <li>Wie wahrscheinlich es ist, mit einem positiven Test tatsächlich schwanger zu sein!
+            <p>
+              Hier ist die bedingte Wahrscheinlichkeit \(p_T(S)\) gesucht: 
+              <ul style="list-style: none;">
+                <li>\(\displaystyle p_T(S)=\frac{p(T\cap S)}{p(T)}=\frac{34}{39}\approx 87,2\,\%\)</li>
+              </ul>
+            </p>
+          </li>
+          <li>Wie wahrscheinlich ist es trotz eines negativen Testergebnisses schwanger zu sein?
+            <p>
+              Hier ist die bedingte Wahrscheinlichkeit \(p_\overline T(S)\) gesucht: 
+              <ul style="list-style: none;">
+                <li>\(\displaystyle p_\overline T(S)=\frac{p(\overline T\cap S)}{p(\overline T)}=\frac{6}{961}\approx 0,6\,\%\)</li>
+              </ul>
+            </p>
+          </li>
+        </ol>
+        </p>
+      </div>
+    </section>
+    <!-- <section>
+            <div class="videos">
+                <iframe width="360" height="202" src="https://www.youtube.com/embed/19goPRnthCE"
+                    title="Abstand Punkt - Punkt" frameborder="0" allow="web-share" allowfullscreen></iframe>
+
+            </div>
+        </section> -->
+    <section id="aufgaben" class="aufgaben">
+      <h3>Aufgaben zu Vierfeldertafeln</h3>
+      <ol class="custom-marker point-after decimal more-spacing">
+        <li>484 Übung 1 <a href="#a1">Lösungen</a></li>
+        <li>485 Übung 2 <a href="#a2">Lösungen</a></li>
+        <li>486 Übung 4 bis 8 <a href="#a3">Lösungen</a></li>
+      </ol>
+      Wer Nummer 3 findet, darf sie gern machen.
+    </section>
+    <section class="loesungen">
+      <h3>Lösungen zu Vierfeldertafeln</h3>
+
+      <details id="a1">
+        <summary>...</summary>
+
+        <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
+          <li>...</li>
+        </ol>
+
+      </details>
+    </section>
+
+    <section id="meme">
+      <div class="images">
+        <img src="/img/baumdia_meme.webp" style="object-fit: scale-down; max-width: 300px" />
+      </div>
+      <div class="centered">
+        <a href="https://miro.medium.com/v2/resize:fit:640/format:webp/0*KQUBhmPmWeP8mHQz.jpeg">
+          <h6>Original von Manav</h6>
+        </a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <a href="/misc/impressum.html">Impressum</a>
+    <div class="lastModified" align="center">
+      Zuletzt geändert:<br />
+      18. Mai 2025
+      <!-- <span id="lastModifiedDate"></span> -->
+    </div>
+    <a href="/misc/datenschutz.html">Datenschutz</a>
+  </footer>
+</body>

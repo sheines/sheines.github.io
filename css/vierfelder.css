@@ -1,0 +1,64 @@
+.vierfelder {
+    border-collapse: collapse;
+}
+
+.vierfelder td {
+    border: none;
+    padding: 10px 15px;
+    text-align: center;
+}
+
+.vierfeldertafel tr:nth-child(2) td:nth-child(2)::before,
+.vierfeldertafel tr:nth-child(2) td:nth-child(3)::before,
+.vierfeldertafel tr:nth-child(3) td:nth-child(2)::before,
+.vierfeldertafel tr:nth-child(3) td:nth-child(3)::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.1);
+  mix-blend-mode: multiply;
+  z-index: -1;
+}
+
+/* Innen: Zellen mit vollem Rahmen */
+.vierfelder tr:nth-child(2) td:nth-child(2),
+.vierfelder tr:nth-child(2) td:nth-child(3),
+.vierfelder tr:nth-child(3) td:nth-child(2),
+.vierfelder tr:nth-child(3) td:nth-child(3) {
+    border: none;
+    border: 1px solid #a7a7a8;   
+    color: #a7a7a8;
+    z-index: 1; 
+}
+
+/* Obere Beschriftung A und B */
+.vierfelder tr:nth-child(1) td:nth-child(2),
+.vierfelder tr:nth-child(1) td:nth-child(3) {
+    border: none;
+    border-left: 1px dashed gray;
+    border-right: 1px dashed gray;
+}
+
+/* Linke Beschriftung C und D */
+.vierfelder tr:nth-child(2) td:nth-child(1),
+.vierfelder tr:nth-child(3) td:nth-child(1) {
+    border: none;
+    border-top: 1px dashed gray;
+    border-bottom: 1px dashed gray;
+}
+
+/* Rechte Beschriftung c und f */
+.vierfelder tr:nth-child(2) td:nth-child(4),
+.vierfelder tr:nth-child(3) td:nth-child(4) {
+    border: none;
+    border-top: 1px dashed gray;
+    border-bottom: 1px dashed gray;
+}
+
+/* Untere Beschriftung g und h */
+.vierfelder tr:nth-child(4) td:nth-child(2),
+.vierfelder tr:nth-child(4) td:nth-child(3) {
+    border: none;
+    border-left: 1px dashed gray;
+    border-right: 1px dashed gray;
+}
