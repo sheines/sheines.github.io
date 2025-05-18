@@ -39,7 +39,7 @@
 
 /* Rechte Beschriftung c und f */
 .vierfelder tr:nth-child(2) td:nth-child(4),
-.vierfelder tr:nth-child(3) td:nth-child(4) {
+.vierfelder tr:nth-child(3) td:nth-child(4) { 
     border: none;
     border-top: 1px dashed gray;
     border-bottom: 1px dashed gray;
