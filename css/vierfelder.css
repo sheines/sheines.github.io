@@ -43,7 +43,7 @@
     border: none;
     border-top: 1px dashed gray;
     border-bottom: 1px dashed gray;
-    background-color: rgba(67, 67, 0, 0.307);
+    background-color: rgba(67, 67, 0, 0.306);
 }
 
 /* Untere Beschriftung g und h */
@@ -52,5 +52,5 @@
     border: none;
     border-left: 1px dashed gray;
     border-right: 1px dashed gray;
-    background-color: rgba(67, 67, 0, 0.307);
+    background-color: rgba(67, 67, 0, 0.306);
 }
