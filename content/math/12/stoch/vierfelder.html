@@ -394,13 +394,303 @@
       <h3>Lösungen zu Vierfeldertafeln</h3>
 
       <details id="a1">
-        <summary>...</summary>
+        <summary>Lügendetektor</summary>
 
         <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
-          <li>...</li>
+          <li>Anschlagen, wenn gelogen wird: \(p_L(A)=\dfrac{p(A\cap L)}{p(L)}=\tfrac23\approx 66,7\,\%\)</li>
+          <li>Nicht anschlagen, wenn die Wahrheit gesagt wird: \(p_\overline L(\overline A)=\dfrac{p(\overline A\cap \overline L)}{p(\overline L)}=\tfrac7{15}\approx 46,7\,\%\)</li>
+          <li>
+            <ul>
+              <li>falsch positiv: \(p_\overline L(A)=\dfrac{p(A\cap \overline L)}{p(\overline L)}=\tfrac8{15}\approx 53,3\,\%\)</li>
+              <li>falsch negativ: \(p_L(\overline A)=\dfrac{p(\overline A\cap L)}{p(L)}=\tfrac13\approx 33,3\,\%\)</li>
+            </ul>
+          </li>
+          <li>
+            Erwartungswert ist zu berechnen (Anzahl der Art mal Wahrscheinlichkeit für falsch): 
+            <p>
+              \(\mu = 20\cdot \tfrac8{15} + 30 \cdot \tfrac13\approx 20,7 \)
+            </p>
+             <p>
+              Es ist mit ca. 21 Fehlern zu rechnen (ca. \(41\,\%\)).
+             </p>
+          </li>
         </ol>
 
       </details>
+
+      <details id="a2">
+        <summary>Go-Cart-Bahn</summary>
+
+        <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
+          <span class="geg">Gegebene Größen</span>
+          <li>
+            Vierfeldertafel (Die Tabelle darf natürlich auch gedreht sein.):
+            <div style="margin-top: 8px; margin-left: 20px;">
+              <table class="vierfelder">
+                <tr>
+                  <td></td>
+                  <td>\(E\)</td>
+                  <td>\(J\)</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>\(K\)</td>
+                  <td class="geg">\(10\)</td>
+                  <td>\(30\)</td>
+                  <td class="geg">\(40\)</td>
+                </tr>
+                <tr>
+                  <td>\(\overline K\)</td>
+                  <td>\(10\)</td>
+                  <td>\(50\)</td>
+                  <td>\(60\)</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td class="geg">\(20\)</td>
+                  <td>\(80\)</td>
+                  <td class="geg">\(100\)</td>
+                </tr>
+              </table>
+            </div>
+          </li>
+          <li>\(p_J(K)=\dfrac{30}{80}=\tfrac38= 37,5\,\%\)</li>
+        </ol>
+      </details>
+
+      <details id="a3">
+        <summary>Interventionsstudie</summary>
+
+        <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
+          <span class="geg">Gegebene Größen</span>
+          <li>
+            Vierfeldertafel:
+            <div style="margin-top: 8px; margin-left: 20px;">
+              <table class="vierfelder">
+                <tr>
+                  <td></td>
+                  <td>\(H\)</td>
+                  <td>\(\overline H\)</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>\(M\)</td>
+                  <td class="geg">\(50\)</td>
+                  <td>\(150\)</td>
+                  <td class="geg">\(200\)</td>
+                </tr>
+                <tr>
+                  <td>\(P\)</td>
+                  <td class="geg">\(10\)</td>
+                  <td>\(70\)</td>
+                  <td class="geg">\(80\)</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>\(60\)</td>
+                  <td>\(220\)</td>
+                  <td>\(280\)</td>
+                </tr>
+              </table>
+            </div>
+          </li>
+          <li><ul>
+            <li>Interventionsgruppe (Heilung mit Medikament): \(p_M(H)=\dfrac{50}{200}=\tfrac14=25\,\%\)</li>
+            <li>Placebogruppe (Heilung ohne Medikament): \(p_P(H)=\dfrac{10}{80}=\tfrac18=12,5\,\%\)</li>
+          </ul>
+          Mit Medikament war die Chance auf Heilung doppelt so hoch wie ohne.
+          </li>
+          <li>Placebo mit Heilung: \(p_H(P)=\dfrac{10}{60}=\tfrac16\approx 16,7\,\%\)</li>
+        </ol>
+      </details>
+
+      <details>
+        <summary>Französisch</summary>
+
+        <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
+          <span class="geg">Gegebene Größen</span>
+          <li>
+            Vierfeldertafel: \(F\).. Französisch sprechen, \(M\).. Männlich, \(W\).. Weiblich<br>
+            (Die Tabelle darf natürlich auch anders angeordnet sein.)
+            <div style="margin-top: 8px; margin-left: 20px;">
+              <table class="vierfelder">
+                <tr>
+                  <td></td>
+                  <td>\(M\)</td>
+                  <td>\(W\)</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>\(F\)</td>
+                  <td>\(10\)</td>
+                  <td class="geg">\(6\)</td>
+                  <td class="geg">\(16\)</td>
+                </tr>
+                <tr>
+                  <td>\(\overline F\)</td>
+                  <td>\(2\)</td>
+                  <td>\(12\)</td>
+                  <td>\(14\)</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>\(12\)</td>
+                  <td class="geg">\(18\)</td>
+                  <td class="geg">\(30\)</td>
+                </tr>
+              </table>
+            </div>
+          </li>
+          <li>Es sprechen 10 Jungen französisch.</li>
+          <li>\(p_W(F)=\dfrac{6}{18}=\tfrac13\approx 33,3\,\%\)</li>
+        </ol>
+      </details>
+
+      <details>
+        <summary>Safari</summary>
+
+        <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
+          <span class="geg">Gegebene Größen</span>
+          <li>
+            Vierfeldertafel: \(T\).. Tourist, \(E\).. Einheimisch, \(W\).. hat Wasservorrat<br>
+            (Die Tabelle darf natürlich auch anders angeordnet sein.)
+            <div style="margin-top: 8px; margin-left: 20px;">
+              <table class="vierfelder">
+                <tr>
+                  <td></td>
+                  <td>\(W\)</td>
+                  <td>\(\overline W\)</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>\(T\)</td>
+                  <td class="geg">\(30\)</td>
+                  <td>\(90\)</td>
+                  <td class="geg">\(120\)</td>
+                </tr>
+                <tr>
+                  <td>\(E\)</td>
+                  <td>\(70\)</td>
+                  <td class="geg">\(10\)</td>
+                  <td>\(80\)</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>\(100\)</td>
+                  <td>\(100\)</td>
+                  <td class="geg">\(200\)</td>
+                </tr>
+              </table>
+            </div>
+          </li>
+          <li>\(p_T(\overline W)=\dfrac{90}{120}=\tfrac34= 75\,\%\)</li>
+          <li>\(p_\overline W(E)=\dfrac{10}{100}=\tfrac1{10}= 10\,\%\)</li>
+        </ol>
+      </details>
+
+      <details>
+        <summary>Großfamilie</summary>
+
+        <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
+          <span class="geg">Gegebene Größen</span> 4FT war nicht gefordert.<br>
+            Vierfeldertafel: \(E\).. Erwachsener, \(K\).. EKind, \(I\).. spielt Instrument<br>
+            (Die Tabelle darf natürlich auch anders angeordnet sein.)
+            <div style="margin-top: 8px; margin-left: 20px; margin-bottom: 10px;">
+              <table class="vierfelder">
+                <tr>
+                  <td></td>
+                  <td>\(I\)</td>
+                  <td>\(\overline I\)</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>\(E\)</td>
+                  <td class="geg">\(200\)</td>
+                  <td>\(800\)</td>
+                  <td class="geg">\(1000\)</td>
+                </tr>
+                <tr>
+                  <td>\(K\)</td>
+                  <td class="geg">\(100\)</td>
+                  <td class="geg">\(80\)</td>
+                  <td>\(180\)</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>\(300\)</td>
+                  <td>\(880\)</td>
+                  <td>\(1180\)</td>
+                </tr>
+              </table>
+            </div>
+            Wenn 20 % der Erwachsenen ein Instrument spielen und das 200 sind, gibt es insgesamt 1000 Erwachsene.
+          <li><ul>
+            <li>Insgesamt: 1180 Personen</li>
+            <li>Erwachsen: 1000 Personen</li>
+            <li>Kind: 180 Personen</li>
+          </ul></li>
+          <li>\(p_I(K)=\dfrac{100}{300}=\tfrac13\approx 33,3\,\%\)</li>
+        </ol>
+      </details>
+
+      <details>
+        <summary>Laboruntersuchung</summary>
+
+        <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
+          <li>
+            Vierfeldertafel: 
+            <div style="margin-top: 8px; margin-left: 20px;">
+              <table class="vierfelder">
+                <tr>
+                  <td></td>
+                  <td>\(B\)</td>
+                  <td>\(\overline B\)</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>\(A\)</td>
+                  <td>\(56\)</td>
+                  <td>\(24\)</td>
+                  <td>\(80\)</td>
+                </tr>
+                <tr>
+                  <td>\(\overline A\)</td>
+                  <td>\(14\)</td>
+                  <td>\(6\)</td>
+                  <td>\(20\)</td>
+                </tr>
+                <tr>
+                  <td></td>
+                  <td>\(70\)</td>
+                  <td>\(30\)</td>
+                  <td>\(100\)</td>
+                </tr>
+              </table>
+            </div>
+          </li>
+          <li>Zwei Ereignisse sind unabhängig voneinander, wenn die bedingte Wahrscheinlichkeit der Ereignisse genauso groß ist wie deren 
+            Einzelwahrscheinlichkeit:
+            <ul>
+              <li>Erreger A:
+                <ul>
+                  <li>\(p(A)=\frac{80}{100}=\tfrac45=80\,\%\)</li>
+                  <li>\(p_B(A)=\frac{56}{70}=\tfrac45=80\,\%\)</li>
+                </ul>
+              </li>
+              <li>Erreger B:
+                <ul>
+                  <li>\(p(B)=\frac{70}{100}=\tfrac7{10}=70\,\%\)</li>
+                  <li>\(p_A(B)=\frac{56}{80}=\tfrac7{10}=70\,\%\)</li>
+                </ul>
+              </li>
+            </ul>
+            Die Wahrscheinlichkeiten sind gleich, das bedeutet, dass die Ereignisse \(A\) und \(B\) unabhängig voneinander sind.
+          </li>
+          (Es genügt die Rechnung für einen der beiden Erregen durchzuführen: Wenn \(A\) von \(B\) unabhängig ist, 
+          sollte \(B\) auch von \(A\) unabhängig sein.)
+        </ol>
+      </details>
+
     </section>
 
     <section id="meme">
@@ -418,7 +708,7 @@
     <a href="/misc/impressum.html">Impressum</a>
     <div class="lastModified" align="center">
       Zuletzt geändert:<br />
-      18. Mai 2025
+      19. Mai 2025
       <!-- <span id="lastModifiedDate"></span> -->
     </div>
     <a href="/misc/datenschutz.html">Datenschutz</a>
