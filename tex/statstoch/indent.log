@@ -1,14 +1,15 @@
-INFO:  latexindent.exe version 3.23.3, 2023-10-13, a script to indent .tex files
-       latexindent.exe lives here: C:/Program Files/texlive/2023/bin/windows/
-       Wed Nov 15 19:33:56 2023
-       Filename: f:\Dokumente\GitHub\shitziger.github.io\tex\statstoch\stat_mengen_cup.tex
+INFO:  ANSI Code Page: 1252
+INFO:  latexindent.exe version 3.24.4, 2024-07-18, a script to indent .tex files
+       latexindent.exe lives here: C:/Program Files/texlive/2024/bin/windows/
+       Fri May 30 16:13:53 2025
+       Filename: f:\Dokumente\GitHub\shitziger.github.io\tex\statstoch\stoch_baum8.tex
 INFO:  Processing switches:
-INFO:  Directory for backup files and indent.log:
+INFO:  Directory for backup files and log file indent.log:
        f:\Dokumente\GitHub\shitziger.github.io\tex\statstoch
 INFO:  YAML settings read: defaultSettings.yaml
-       Reading defaultSettings.yaml from C:/Program Files/texlive/2023/bin/windows/defaultSettings.yaml
-       Reading defaultSettings.yaml (2nd attempt) from C:/Program Files/texlive/2023/bin/windows/../../texmf-dist/scripts/latexindent/defaultSettings.yaml
-       and then, if necessary, C:/Program Files/texlive/2023/bin/windows/LatexIndent/defaultSettings.yaml
+       Reading defaultSettings.yaml from C:/Program Files/texlive/2024/bin/windows/defaultSettings.yaml
+       Reading defaultSettings.yaml (2nd attempt) from C:/Program Files/texlive/2024/bin/windows/../../texmf-dist/scripts/latexindent/defaultSettings.yaml
+       and then, if necessary, C:/Program Files/texlive/2024/bin/windows/LatexIndent/defaultSettings.yaml
 INFO:  YAML reading settings
        Home directory is C:\Users\sebas
        latexindent.pl didn't find indentconfig.yaml or .indentconfig.yaml
