@@ -438,7 +438,8 @@
           Jeder Spieler bekommt \(\color{red}\overset{k}{10}\) Karten.
         </p>
         <p>
-          Herz ist Trumpf. Wie groß ist die Wahrscheinlichkeit, dass ein Spieler \(\color{magenta}\overset{x}{3}\) Trumpfkarten
+          Herz ist Trumpf. Wie groß ist die Wahrscheinlichkeit, dass ein Spieler \(\color{magenta}\overset{x}{3}\)
+          Trumpfkarten
           erhält?
         </p>
         <p>
@@ -460,7 +461,8 @@
           </li>
           <li>Nenner: Alle Möglichkeiten
             <ul style="list-style-type: none; margin-top: 5px;">
-              <li>\(\displaystyle\binom{\color{lime}32}{\color{red}10}\): Zehn von 32 Spielkarten erhält ein Spieler</li>
+              <li>\(\displaystyle\binom{\color{lime}32}{\color{red}10}\): Zehn von 32 Spielkarten erhält ein Spieler
+              </li>
             </ul>
           </li>
         </ul>
@@ -488,14 +490,77 @@
       <details id="a1">
         <summary>Lotto</summary>
 
-        <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
-          <li></li>
-          
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>3 Richtige: \(\displaystyle P(3)=\frac{\binom63\cdot\binom{43}{3}}{\binom{49}{6}}=1,77\,\%\)</li>
+          <li>Mindestens 5 Richtige heißt fünf oder sechs Richtige: \(\displaystyle p(\text{min
+            5})=\frac{\binom65\cdot\binom{43}{1}}{\binom{49}{6}}+\frac{\binom66\cdot\binom{43}{0}}{\binom{49}{6}}\)
+            \(=0,0019\,\%\)</li>
         </ol>
+      </details>
+      <details>
+        <summary>Glühlampen</summary>
 
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>\(\displaystyle P=\frac{\binom63\cdot\binom42}{\binom{10}{5}}\) \(=\tfrac{120}{252}=47,62\,\%\)</li>
+          <li>\(\displaystyle
+            P=\frac{\binom63\cdot\binom42+\binom62\cdot\binom43+\binom61\cdot\binom44}{\binom{10}{5}}\)
+            \(=\tfrac{186}{252}=73,81\,\%\)</li>
+          <li>\(\displaystyle
+            P=\frac{\binom65\cdot\binom40+\binom64\cdot\binom41+\binom63\cdot\binom42}{\binom{10}{5}}\)
+            \(=\tfrac{186}{252}=73,81\,\%\)</li>
+        </ol>
+      </details>
+      <details id="a2">
+        <summary>Urne</summary>
+        <ul class="custom-marker parens-around lower-alpha more-spacing">
+          <li>Genau drei Rote: \(\displaystyle
+            P=\frac{\displaystyle\binom53\cdot\binom{15}{5}}{\displaystyle\binom{20}{8}}\approx23,84\,\%\)</li>
+          <li>
+            Mindestens vier Rote heißt vier Rote oder fünf Rote: \(\displaystyle
+            P=\frac{\displaystyle\binom54\cdot\binom{15}{4}}{\displaystyle\binom{20}{8}} +
+            \frac{\displaystyle\binom55\cdot\binom{15}{3}}{\displaystyle\binom{20}{8}}\) \(\approx5,78\,\%\)
+          </li>
+        </ul>
+      </details>
+      <details>
+        <summary>Transistoren</summary>
+        <ul class="custom-marker parens-around lower-alpha more-spacing">
+          <li>Zwei Defekte: \(\displaystyle
+            P=\frac{\displaystyle\binom{10}2\cdot\binom{90}{3}}{\displaystyle\binom{100}{5}}\approx7,02\,\%\)</li>
+          <li>
+            Mindestens drei Defekte heißt drei, vier oder fünf Defekte: \(\displaystyle
+            P=\frac{\displaystyle\binom{10}3\cdot\binom{90}{2}}{\displaystyle\binom{100}{5}}
+            + \frac{\displaystyle\binom{10}4\cdot\binom{90}{1}}{\displaystyle\binom{100}{5}}\)
+            \(+\frac{\displaystyle\binom{10}5\cdot\binom{90}{0}}{\displaystyle\binom{100}{5}}\) \(\approx0,66\,\%\)
+          </li>
+        </ul>
+      </details>
+      <details>
+        <summary>Batterien</summary>
+        <ul class="custom-marker parens-around lower-alpha more-spacing">
+          <li>Genau eine Defekte: \(\displaystyle
+            P=\frac{\displaystyle\binom{10}1\cdot\binom{70}{4}}{\displaystyle\binom{80}{5}}\approx38,14\,\%\)</li>
+          <li>Genau drei Defekte: \(\displaystyle
+            P=\frac{\displaystyle\binom{10}3\cdot\binom{70}{2}}{\displaystyle\binom{80}{5}}\approx1,21\,\%\)</li>
+          <li>Höchstens vier Defekte: \(\displaystyle
+            P=1-\frac{\displaystyle\binom{10}5\cdot\binom{70}{0}}{\displaystyle\binom{80}{5}}\approx99,999\,\%\)</li>
+          <li>Mindestens eine Defekte: \(\displaystyle
+            P=1-\frac{\displaystyle\binom{10}0\cdot\binom{70}{5}}{\displaystyle\binom{80}{5}}\approx49,65\,\%\)</li>
+        </ul>
       </details>
 
-      
+      <details id="a§">
+        <summary>Hobbygärtner</summary>
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>Zwei Rote: \(\displaystyle
+            P=\frac{\displaystyle\binom{10}2\cdot\binom{40}{3}}{\displaystyle\binom{50}{5}}\approx20,98\,\%\)</li>
+          <li>Mindestens drei Weiße: \(\displaystyle
+            P=\frac{\binom{10}2\cdot\binom{40}{3}+\binom{10}1\cdot\binom{40}{4}+\binom{10}0\cdot\binom{40}{5}}{\binom{50}{5}}\)
+            \(\approx95,17\,\%\)</li>
+        </ol>
+      </details>
+
+
 
     </section>
 
