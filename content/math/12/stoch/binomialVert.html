@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" initial-scale="1.0" />
+  <meta name="author" content="Sebastian Hitziger" />
+  <meta name="robot" content="noindex" />
+  <title>HITZ | Stochastik | Hypergeometrische Verteilung</title>
+  <link rel="stylesheet" type="text/css" href="/css/colors.css" />
+  <link rel="stylesheet" type="text/css" href="/css/gridNoTimeline.css" />
+  <link rel="stylesheet" type="text/css" href="/css/navbar.css" />
+  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="/css/courses.css" />
+  <link rel="stylesheet" type="text/css" href="/css/vierfelder.css" />
+  <script type="text/javascript" src="jquery-3.3.1.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+
+  <style>
+    .chart-container {
+      width: 300px;
+      margin: 2em 0;
+    }
+
+    svg {
+      width: 100%;
+      height: auto;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="nav">
+      <input type="checkbox" id="nav-check" />
+      <div class="nav-header">
+        <div class="nav-title">
+          <a href="/">Hr. Hitzigers Unterricht</a>
+        </div>
+      </div>
+      <div class="nav-btn">
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+
+      <div class="nav-links">
+        <a href="/content/math/">Mathematik</a>
+        <a href="/content/math/12/">Klasse 12</a>
+        <a href="/content/math/12/stoch/">Stochastik</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section>
+      <h2>Binomialverteilung</h2>
+      <div class="ziele">
+        <p>
+          Nachfolgend soll erklärt werden, was Binomialverteilungen sind, wo sie vorkommen und wie man mit
+          ihnen rechnet.
+        </p>
+        <p>
+          <a href="#aufgaben">Direkt zu den Aufgaben</a>
+        </p>
+      </div>
+
+      <div class="theorie">
+        <div class="definition">
+          <h4>Binomialverteilung</h4>
+          <p>
+            Wenn man die Wahrscheinlichkeiten einer Bernoullikette für \(k=0\) bis \(k=n\) gegenüberstellt,
+            erhält man eine Binomialverteilung.
+          </p>
+          <p>
+            Mit der bereits bekannten Formel \(P(k)=B(n; p; k)=\binom{n}{k}\cdot {p}^{k}\cdot (1-{p})^{{n}-k}\)
+            berechnet werden:
+          </p>
+          <p>
+            Für eine Bernoullikette mit \(n=6\) und \(p=0,35\) ergeben sich folgende Werte:
+          <div class="centered">
+            <table class="wechseltabelle cellCentered" style="margin-bottom: 10px;">
+              <!-- Haken: &#10004; Kreuz: &#x2718; -->
+              <tr>
+                <th style="background-color: #006977da">Anzahl \(k\)</th>
+                <td>\(0\)</td>
+                <td>\(1\)</td>
+                <td>\(2\)</td>
+                <td>\(3\)</td>
+                <td>\(4\)</td>
+                <td>\(5\)</td>
+                <td>\(6\)</td>
+              </tr>
+              <tr>
+                <th style="background-color: #006977da">Wahrsch. \(P(k)\)</th>
+                <td>\(0,075\)</td>
+                <td>\(0,244\)</td>
+                <td>\(0,328\)</td>
+                <td>\(0,235\)</td>
+                <td>\(0,095\)</td>
+                <td>\(0,020\)</td>
+                <td>\(0,002\)</td>
+
+              </tr>
+
+            </table>
+          </div>
+          Wird diese Verteilung in ein Diagramm übertragen
+          </p>
+          <div class="centered" style="max-height: 260px;">
+            <div class="binomial-chart" data-n="6" data-p="0.35" data-scale="1.5" data-plus="0"></div>
+          </div>
+          <p>
+            Das Bild zeigt eine solche Verteilung mit \(n=7\) und \(p=0,35\).
+          </p>
+          <p>
+
+          </p>
+
+        </div>
+        Heute geht es nur um das Arbeiten mit und erstellen dieser Verteilungen, weshalb es kein Beispiel gibt.
+
+      </div>
+    </section>
+    <!-- <section>
+            <div class="videos">
+                <iframe width="360" height="202" src="https://www.youtube.com/embed/19goPRnthCE"
+                    title="Abstand Punkt - Punkt" frameborder="0" allow="web-share" allowfullscreen></iframe>
+
+            </div>
+        </section> -->
+    <section id="aufgaben" class="aufgaben">
+      <h3>Aufgaben zur Binomialverteilungen</h3>
+      <ul class="custom-marker point-after decimal more-spacing">
+        <li>Untersuche die Eigenschaften der Binomialverteilung! <a href="#a1">Lösungen</a></li>
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>Wie verändert sich die Verteilung, wenn \(p\) verändert wird?</li>
+          <li>Wie verändert sich die Verteilung, wenn \(n\) verändert wird?</li>
+        </ol>
+        <p>
+          Nutze für diese Aufgabe Excel! Simuliere verschiedene Variante und leite daraus Merksätze her!
+        </p>
+        <p>
+          Der Wert \(B(n; p; k)\) kann in Excel mit <code>=BINOM.VERT(k; n; p; FALSCH)</code> berechnet werden.
+        </p>
+        <li>Seite 510 Übung 6 bis 10 <a href="#a2">Lösungen</a></li>
+      </ul>
+    </section>
+    <section class="loesungen">
+      <h3>Lösungen zur Binomialverteilungen</h3>
+
+      <details id="a1">
+        <summary>...</summary>
+
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>...</li>
+        </ol>
+      </details>
+
+
+
+
+    </section>
+
+    <script src="/js/math/binomial.js"></script>
+    <section id="meme">
+      <div class="images">
+        <img src="/img/binom_meme.jpg" style="object-fit: scale-down; max-width: 300px" />
+      </div>
+      <div class="centered">
+        <a href="https://www.spreadshirt.de/shop/design/funny+nerd+geek+gift+idea+binomial+distribution+thermobecher-D5c6ae6d8e447424a9512689c?sellable=74BRqQozVgumBgV2yDoE-773-39&view=D3">
+          <h6>Original von Pinosaurier</h6>
+        </a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <a href="/misc/impressum.html">Impressum</a>
+    <div class="lastModified" align="center">
+      Zuletzt geändert:<br />
+      14. Juni 2025
+      <!-- <span id="lastModifiedDate"></span> -->
+    </div>
+    <a href="/misc/datenschutz.html">Datenschutz</a>
+  </footer>
+</body>

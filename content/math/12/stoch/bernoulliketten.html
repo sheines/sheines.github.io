@@ -509,6 +509,14 @@
             \end{align*}\)
           </p>
           <p>
+            Um den Schreibaufwand zu reduzieren, wir folgende Kurzform eingeführt:
+          </p>
+          <p>
+            \(\begin{align*}
+            P({\color{magenta}k})=B({\color{lime}n}; {\color{cyan}p}; {\color{magenta}k})
+            \end{align*}\)
+          </p>
+          <p>
             Dabei stehen die einzelnen Parameter für:
             <ul class="more-spacing" style="list-style-type: none;">
               <li>\({\color{cyan}p}\) ist die Trefferwahrscheinlichkeit</li>
@@ -516,7 +524,7 @@
               <li>\({\color{magenta}k}\) ist die Anzahl der gesuchten Treffer</li>
             </ul>
           </p>
-
+          
         </div>
         <h6>Beispiel 1:</h6>
         <p>
@@ -528,7 +536,7 @@
         </p>
         <p>
           \(\begin{align*}
-          P({\color{magenta}4\times 6})=\binom{\color{lime}10}{\color{magenta}4}
+          P({\color{magenta}4\times 6})=B({\color{lime}10}; {\color{cyan}\tfrac16}; {\color{magenta}4})=\binom{\color{lime}10}{\color{magenta}4}
               \cdot{\color{cyan}\tfrac16}^{\color{magenta}4}\cdot (1-{\color{cyan}\tfrac16})^{{\color{lime}10}-{\color{magenta}4}} \approx 5,4\,\% 
           \end{align*}\)
         </p>
@@ -552,12 +560,17 @@
         <p>
           \(\begin{align*}
           P({\color{magenta}\text{min drei}})&=P({\color{orange}3})+P({\color{salmon}4})+P({\color{violet}5}) \\
+          P({\color{magenta}\text{min drei}})&=B({\color{lime}5}; {\color{cyan}0,7}; {\color{orange}3}) + B({\color{lime}5}; {\color{cyan}0,7}; {\color{salmon}4}) + B({\color{lime}5}; {\color{cyan}0,7}; {\color{violet}5})   \\
           P({\color{magenta}\text{min drei}})&=\binom{\color{lime}5}{\color{orange}3}\cdot{\color{cyan}0,7}^{\color{orange}3}\cdot (1-{\color{cyan}0,7})^{{\color{lime}5}-{\color{orange}3}} \\[0.5em]
           &\quad + \binom{\color{lime}5}{\color{salmon}4}\cdot{\color{cyan}0,7}^{\color{salmon}4}\cdot (1-{\color{cyan}0,7})^{{\color{lime}5}-{\color{salmon}4}} \\[0.5em]
           &\quad + \binom{\color{lime}5}{\color{violet}5}\cdot{\color{cyan}0,7}^{\color{violet}5}\cdot (1-{\color{cyan}0,7})^{{\color{lime}5}-{\color{violet}5}} \\[0.5em]
           &\approx{\color{orange}30,9\,\%} + {\color{salmon}36,0\,\%} + {\color{violet}16,8\,\%} \\
           P({\color{magenta}\text{min drei}})&\approx83,6\,\%
           \end{align*}\)
+        </p>
+        <p>
+          Der von der Schule empfohlene Taschenrechner bietet im Menü unter dem Punkt <i>Verteilungsfunktion</i> die Möglichkeit 
+          <i>Binomialdichten</i> auf schnellen Wege zu berechnen.
         </p>
       </div>
     </section>
@@ -607,7 +620,7 @@
     <a href="/misc/impressum.html">Impressum</a>
     <div class="lastModified" align="center">
       Zuletzt geändert:<br />
-      30. Mai 2025
+      14. Juni 2025
       <!-- <span id="lastModifiedDate"></span> -->
     </div>
     <a href="/misc/datenschutz.html">Datenschutz</a>
