@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.12.9)  30 MAY 2025 16:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.12.9)  16 JUN 2025 17:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -367,15 +367,15 @@ L3 programming layer <2024-11-02>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 15642 strings out of 473330
- 346535 string characters out of 5716662
- 742311 words of memory out of 5000000
- 38500 multiletter control sequences out of 15000+600000
+ 15643 strings out of 473330
+ 346554 string characters out of 5716662
+ 745443 words of memory out of 5000000
+ 38501 multiletter control sequences out of 15000+600000
  560808 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,7n,107p,474b,663s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,7n,107p,474b,696s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/Program Files/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><c:/Program Files/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><c:/Program Files/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><c:/Program Files/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on stoch_baum8.pdf (1 page, 35973 bytes).
+Output written on stoch_baum8.pdf (1 page, 36241 bytes).
 PDF statistics:
  31 PDF objects out of 1000 (max. 8388607)
  19 compressed objects within 1 object stream
