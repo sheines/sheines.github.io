@@ -505,7 +505,8 @@
           </p>
           <p>
             \(\begin{align*}
-            P({\color{magenta}k})=\binom{\color{lime}n}{\color{magenta}k}\cdot {\color{cyan}p}^{\color{magenta}k}\cdot (1-{\color{cyan}p})^{{\color{lime}n}-\color{magenta}k}
+            P({\color{magenta}X=k})=\binom{\color{lime}n}{\color{magenta}k}\cdot {\color{cyan}p}^{\color{magenta}k}\cdot
+            (1-{\color{cyan}p})^{{\color{lime}n}-\color{magenta}k}
             \end{align*}\)
           </p>
           <p>
@@ -513,36 +514,40 @@
           </p>
           <p>
             \(\begin{align*}
-            P({\color{magenta}k})=B({\color{lime}n}; {\color{cyan}p}; {\color{magenta}k})
+            P({\color{magenta}X=k})=B({\color{lime}n}; {\color{cyan}p}; {\color{magenta}k})
             \end{align*}\)
           </p>
           <p>
             Dabei stehen die einzelnen Parameter für:
-            <ul class="more-spacing" style="list-style-type: none;">
-              <li>\({\color{cyan}p}\) ist die Trefferwahrscheinlichkeit</li>
-              <li>\({\color{lime}n}\) ist die Anzahl der Wiederholungen</li>
-              <li>\({\color{magenta}k}\) ist die Anzahl der gesuchten Treffer</li>
-            </ul>
+          <ul class="more-spacing" style="list-style-type: none;">
+            <li>\({\color{cyan}p}\) ist die Trefferwahrscheinlichkeit</li>
+            <li>\({\color{lime}n}\) ist die Anzahl der Wiederholungen</li>
+            <li>\({\color{magenta}k}\) ist die Anzahl der gesuchten Treffer</li>
+          </ul>
           </p>
-          
+
         </div>
         <h6>Beispiel 1:</h6>
         <p>
           Ein Würfel wird \(\color{lime}\overset{n}{10}\) Mal geworfen und die Anzahl
-          der  \(\color{cyan}\overset{p=\frac16}{\text{Sechsen}}\) notiert.
+          der \(\color{cyan}\overset{p=\frac16}{\text{Sechsen}}\) notiert.
         </p>
         <p>
-          Wie hoch ist die Wahrscheinlichkeit, dass genau \(\color{magenta}\overset{k}{\text{vier}}\) Sechsen geworfen werden?
+          Wie hoch ist die Wahrscheinlichkeit, dass genau \(\color{magenta}\overset{k}{\text{vier}}\) Sechsen geworfen
+          werden?
         </p>
         <p>
           \(\begin{align*}
-          P({\color{magenta}4\times 6})=B({\color{lime}10}; {\color{cyan}\tfrac16}; {\color{magenta}4})=\binom{\color{lime}10}{\color{magenta}4}
-              \cdot{\color{cyan}\tfrac16}^{\color{magenta}4}\cdot (1-{\color{cyan}\tfrac16})^{{\color{lime}10}-{\color{magenta}4}} \approx 5,4\,\% 
+          P({\color{magenta}X=4})=B({\color{lime}10}; {\color{cyan}\tfrac16};
+          {\color{magenta}4})=\binom{\color{lime}10}{\color{magenta}4}
+          \cdot{\color{cyan}\tfrac16}^{\color{magenta}4}\cdot
+          (1-{\color{cyan}\tfrac16})^{{\color{lime}10}-{\color{magenta}4}} \approx 5,4\,\%
           \end{align*}\)
         </p>
         <p>
           Was bedeuten die einzelnen Termglieder?
         <ul class="more-spacing" style="list-style-type: none;"">
+            <li>\(X\): Anzahl der geworfenen Sechsen</li>
               <li>\(\displaystyle\binom{\color{lime}10}{\color{magenta}4}\): Anzahl der Möglichkeiten 4 aus 10 zu ziehen</li>
               <li>\(\quad{\color{cyan}\tfrac16}^{\color{magenta}4}\): Wahrscheinlichkeit für vier Sechsen</li>
               <li>\((1-{\color{cyan}\tfrac16})^{{\color{lime}10}-{\color{magenta}4}}=\left(\tfrac56\right)^6\): 
@@ -559,13 +564,13 @@
         <p>Wie groß ist die Wahrscheinlichkeit, dass sie mindestens drei Schüsse verwandeln?</p>
         <p>
           \(\begin{align*}
-          P({\color{magenta}\text{min drei}})&=P({\color{orange}3})+P({\color{salmon}4})+P({\color{violet}5}) \\
-          P({\color{magenta}\text{min drei}})&=B({\color{lime}5}; {\color{cyan}0,7}; {\color{orange}3}) + B({\color{lime}5}; {\color{cyan}0,7}; {\color{salmon}4}) + B({\color{lime}5}; {\color{cyan}0,7}; {\color{violet}5})   \\
-          P({\color{magenta}\text{min drei}})&=\binom{\color{lime}5}{\color{orange}3}\cdot{\color{cyan}0,7}^{\color{orange}3}\cdot (1-{\color{cyan}0,7})^{{\color{lime}5}-{\color{orange}3}} \\[0.5em]
+          P({\color{magenta}X\geq 3})&=P({\color{orange}X=3})+P({\color{salmon}X=4})+P({\color{violet}X=5}) \\
+          P({\color{magenta}X\geq 3})&=B({\color{lime}5}; {\color{cyan}0,7}; {\color{orange}3}) + B({\color{lime}5}; {\color{cyan}0,7}; {\color{salmon}4}) + B({\color{lime}5}; {\color{cyan}0,7}; {\color{violet}5})   \\
+          P({\color{magenta}X\geq 3})&=\binom{\color{lime}5}{\color{orange}3}\cdot{\color{cyan}0,7}^{\color{orange}3}\cdot (1-{\color{cyan}0,7})^{{\color{lime}5}-{\color{orange}3}} \\[0.5em]
           &\quad + \binom{\color{lime}5}{\color{salmon}4}\cdot{\color{cyan}0,7}^{\color{salmon}4}\cdot (1-{\color{cyan}0,7})^{{\color{lime}5}-{\color{salmon}4}} \\[0.5em]
           &\quad + \binom{\color{lime}5}{\color{violet}5}\cdot{\color{cyan}0,7}^{\color{violet}5}\cdot (1-{\color{cyan}0,7})^{{\color{lime}5}-{\color{violet}5}} \\[0.5em]
           &\approx{\color{orange}30,9\,\%} + {\color{salmon}36,0\,\%} + {\color{violet}16,8\,\%} \\
-          P({\color{magenta}\text{min drei}})&\approx83,6\,\%
+          P({\color{magenta}X\geq 3})&\approx83,6\,\%
           \end{align*}\)
         </p>
         <p>
@@ -575,12 +580,12 @@
       </div>
     </section>
     <!-- <section>
-            <div class="videos">
-                <iframe width="360" height="202" src="https://www.youtube.com/embed/19goPRnthCE"
-                    title="Abstand Punkt - Punkt" frameborder="0" allow="web-share" allowfullscreen></iframe>
+            <div class=" videos">
+          <iframe width="360" height="202" src="https://www.youtube.com/embed/19goPRnthCE" title="Abstand Punkt - Punkt"
+            frameborder="0" allow="web-share" allowfullscreen></iframe>
 
-            </div>
-        </section> -->
+      </div>
+    </section> -->
     <section id="aufgaben" class="aufgaben">
       <h3>Aufgaben zu Bernoulliketten</h3>
       <ul class="custom-marker point-after decimal more-spacing">
@@ -593,26 +598,27 @@
 
       <details id="a1">
         <summary>Vier rote Kugeln</summary>
-
+        \(X\): Anzahl der roten Kugeln
         <ul>
           <li>\(n=6\)</li>
           <li>\(k=4\)</li>
           <li>\(p=\frac23\)</li>
-          <li>\(P(4\times \text R)=B(6; \frac23; 4)\approx 32,9\,\%\)</li>
+          <li>\(P(X=4)=B(6; \frac23; 4)=\binom64\cdot \left(\frac23\right)^4\cdot\left(1-\tfrac23\right)^2\approx
+            32,9\,\%\)</li>
         </ul>
 
       </details>
 
       <details id="a1">
         <summary>Neugeborene Jungen</summary>
-
+        \(X\): Anzahl der Jungen in einer Familie
         <ul class="more-spacing">
           <li>Zwei Kinder:
             <ul>
               <li>\(n=2\)</li>
               <li>\(k=1\)</li>
               <li>\(p=0,514\)</li>
-              <li>\(P(1\times \text J)=B(2; 0,514; 1)\approx 49,96\,\%\)</li>
+              <li>\(P(X=1)=B(2; 0,514; 1)\approx 49,96\,\%\)</li>
             </ul>
           </li>
           <li>Vier Kinder:
@@ -620,7 +626,7 @@
               <li>\(n=4\)</li>
               <li>\(k=2\)</li>
               <li>\(p=0,514\)</li>
-              <li>\(P(2\times \text J)=B(4; 0,514; 2)\approx 37,44\,\%\)</li>
+              <li>\(P(X=2)=B(4; 0,514; 2)\approx 37,44\,\%\)</li>
             </ul>
           </li>
           <li>Sechs Kinder:
@@ -628,7 +634,7 @@
               <li>\(n=6\)</li>
               <li>\(k=3\)</li>
               <li>\(p=0,514\)</li>
-              <li>\(P(3\times \text J)=B(6; 0,514; 3)\approx 31,17\,\%\)</li>
+              <li>\(P(X=3)=B(6; 0,514; 3)\approx 31,17\,\%\)</li>
             </ul>
           </li>
         </ul>
@@ -642,25 +648,144 @@
 
       <details>
         <summary>Smartphones</summary>
-        Höchstens 2 heißt: null, eines oder zwei.
+        <p>
+          Höchstens 2 heißt: null, eines oder zwei.
+        </p>
+        <p>
+          \(X\): Anzahl der Smartphonebesitzer
+        </p>
         <ul>
-              <li>\(n=6\)</li>
-              <li>\(k=0; 1; 2\)</li>
-              <li>\(p=0,23\)</li>
-              <li>\(P(\leq 2)=B(6; 0,23; 0) + B(6; 0,23; 1) + B(6; 0,23; 2)\approx 31,17\,\%\)</li>
-              <li>\(P(\leq 2)\approx 0,2084 + 0,3735 + 0,2789= 86,08\,\%\)</li>
-            </ul>
+          <li>\(n=6\)</li>
+          <li>\(k=0; 1; 2\)</li>
+          <li>\(p=0,23\)</li>
+          <li>\(P(X\leq 2)=B(6; 0,23; 0) + B(6; 0,23; 1) + B(6; 0,23; 2)\)</li>
+          <li>\(P(X\leq 2)\approx 0,2084 + 0,3735 + 0,2789= 86,08\,\%\)</li>
+        </ul>
+
+
+      </details>
+
+      <details>
+        <summary>Internetanschlüsse</summary>
+        <p>
+          Mindestens 8 heißt: acht, neun oder zehn.
+        </p>
+        <p>
+          \(X\): Anzahl der Haushalte mit Internetanschluss
+        </p>
+        <ul>
+          <li>\(n=10\)</li>
+          <li>\(k=8; 9; 10\)</li>
+          <li>\(p=0,73\)</li>
+          <li>\(P(X\geq 8)=B(10; 0,73; 8) + B(10; 0,73; 9) + B(10; 0,73; 10)\)</li>
+          <li>\(P(X\geq 8)\approx 0,2645 + 0,1589 + 0,0429= 46,65\,\%\)</li>
+        </ul>
+
+      </details>
+
+      <details>
+        <summary>Schäferhunde</summary>
+        <p>
+          Mindestens 7 und höchstens 10 heißt: sieben, acht, neun oder zehn.
+        </p>
+        <p>
+          \(X\): Anzahl der Hunde, die das Alter erreichen
+        </p>
+        <ul>
+          <li>\(n=12\)</li>
+          <li>\(k=7; 8; 9; 10\)</li>
+          <li>\(p=0,7\)</li>
+          <li>\(P(7\leq X\leq 10)=B(12; 0,70; 7) + B(12; 0,70; 8) + B(12; 0,70; 9) + B(12; 0,70; 10)\)</li>
+          <li>\(P(7\leq X\leq 10)\approx 0,1584 + 0,2311+0,2397+0,1677= 79,71\,\%\)</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Vereinsmitgliedschaften</summary>
+        <p>
+          Das Gegenereignis lautet: höchstens drei Personen sind in einem Verein.
+        </p>
+        <p>
+          \(X\): Anzahl der Hunde, die das Alter erreichen
+        </p>
+        <p>
+          \(P(X>3)=1-P(X\leq 3)\)
+        </p>
+        <ul>
+          <li>\(n=12\)</li>
+          <li>\(k=0; 1; 2; 3\)</li>
+          <li>\(p=0,3\)</li>
+          <li>\(P(X\leq 3)=B(12; 0,3; 0) + B(12; 0,3; 1) + B(12; 0,3; 2) + B(12; 0,3; 3)\)</li>
+          <li>\(P(X\leq 3)\approx 0,0138 + 0,0711 + 0,1677 + 0,2397= 49,25\,\%\)</li>
+        </ul>
+        <p>
+            \(P(X>3)=100-49,25=50,75\,\%\)
+        </p>
         
 
       </details>
 
       <details>
-        <summary>Vier rote Kugeln</summary>
+        <summary>Mindestens eine Sechs</summary>
+        <p>
+          Hier muss nun rückwärts gerechnet werden. \(n\) ist gesucht.
+        </p>
+        <p>
+          Aus Mindestens eine Sechs folgt: Genau null Sechs (Gegenereignis)
+        </p>
+        <p>
+          \(P(X\geq 1)= 1-P(X=0)\)
+        </p>
+        <ul>
+          <li>\(k=0\)</li>
+          <li>\(p=\frac16\)</li>
+          <li>\(P(X\geq 1)\geq0,98 \Rightarrow P(X=0)< 0,02\)</li>
+        </ul>
+        <p>
+          \(\begin{align*}
+            P(X=0)&=\binom nk \cdot p^k\cdot (1-p)^{n-k} \\
+            P(X=0)&=\cancelto{\,=1}{\binom n0} \cdot \cancelto{\,=1}{\left(\tfrac16\right)^0}\cdot \left(1-\tfrac16\right)^{n\,-\cancel0} \\
+            P(X=0)&=\left(1-\tfrac16\right)^n=\left(\tfrac56\right)^n \\
+            0,02&< \left(\tfrac56\right)^n \quad | \log\\
+            n&> \log_{\tfrac56} 0,02\\
+            n&> 21,45
+          \end{align*}\)
+        </p>
+        <p>
+          Rechenzeichen umgedreht, weil bei Basen kleiner 1 eins größere Exponenten zu kleineren Potenzwerten führen.
+        </p>
+        <p>
+          Es muss mindestens 22 mal Gewürfelt werden, damit mit einer Wahrscheinlichkeit von mindestens \(98\,\%\) mindestens eine Sechs 
+          gewürfelt wird.
+        </p>
 
-        <!-- <ol class="custom-marker parens-around lower-alpha more-spacing"> 
-          <li></li>
+      </details>
 
-        </ol> -->
+      <details>
+        <summary>Briefsendungen</summary>
+        \(X\): Anzahl der pünktlich zugestellten Briefe
+        <ol class="custom-marker parens-around lower-alpha more-spacing"> 
+          <li>
+            <ul>
+          <li>\(n=8\)</li>
+          <li>\(k=8\)</li>
+          <li>\(p=0,9\)</li>
+          <li>\(P(X=8)=B(8; 0,90; 8)\)</li>
+          <li>\(P(X=8)\approx 0,4304= 43,01\,\%\)</li>
+        </ul>
+          </li>
+
+          <li>
+            <ul>
+          <li>\(n=8\)</li>
+          <li>\(k=6; 7; 8\)</li>
+          <li>\(p=0,9\)</li>
+          <li>\(P(X\geq 6)=B(8; 0,9; 6) + B(8; 0,9; 7) + B(8; 0,9; 8)\)</li>
+          <li>\(P(X\geq 6)\approx 0,1488 + 0,3826+0,4304= 96,18\,\%\)</li>
+        </ul>
+          </li>
+
+        </ol>
 
       </details>
 
