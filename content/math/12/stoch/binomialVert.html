@@ -75,7 +75,7 @@
             erhält man eine Binomialverteilung.
           </p>
           <p>
-            Mit der bereits bekannten Formel \(P(k)=B(n; p; k)=\binom{n}{k}\cdot {p}^{k}\cdot (1-{p})^{{n}-k}\)
+            Mit der bereits bekannten Formel \(P(X=k)=B(n; p; k)=\binom{n}{k}\cdot {p}^{k}\cdot (1-{p})^{{n}-k}\)
             berechnet werden:
           </p>
           <p>
@@ -94,7 +94,7 @@
                 <td>\(6\)</td>
               </tr>
               <tr>
-                <th style="background-color: #006977da">Wahrsch. \(P(k)\)</th>
+                <th style="background-color: #006977da">\(P(X=k)\)</th>
                 <td>\(0,075\)</td>
                 <td>\(0,244\)</td>
                 <td>\(0,328\)</td>
@@ -123,14 +123,14 @@
         Heute geht es nur um das Arbeiten mit und erstellen dieser Verteilungen, weshalb es kein Beispiel gibt.
 
 
-        <div class="centered">
+        <!-- <div class="centered">
           <div class="binomial-chart animated" 
               data-nstart="4" data-nend="21" 
               data-pstart="0.3" data-pend="0.3" 
               data-maxp="0.4" data-maxk="20"
               data-scale="1.95" data-plus="0"
               data-duration="4000"></div>
-        </div>
+        </div> -->
       </div>
     </section>
     <!-- <section>
@@ -155,21 +155,284 @@
         <p>
           Der Wert \(B(n; p; k)\) kann in Excel mit <code>=BINOM.VERT(k; n; p; FALSCH)</code> berechnet werden.
         </p>
-        <li>Seite 510 Übung 6 bis 10 <a href="#a3">Lösungen</a></li>
+        <li>Seite 510 Übung 6 bis 9 <a href="#a3">Lösungen</a></li>
       </ul>
     </section>
     <section class="loesungen">
       <h3>Lösungen zur Binomialverteilungen</h3>
 
       <details id="a1">
-        <summary>...</summary>
+        <summary>Verteilungstabellen und -diagramme</summary>
 
         <ol class="custom-marker parens-around lower-alpha more-spacing">
-          <li>...</li>
+          <li>Tabelle:
+            <div class="centered">
+              <table class="wechseltabelle cellCentered" style="margin-bottom: 10px;">
+                <!-- Haken: &#10004; Kreuz: &#x2718; -->
+                <tr>
+                  <th style="background-color: #006977da">Anzahl \(k\)</th>
+                  <td>\(0\)</td>
+                  <td>\(1\)</td>
+                  <td>\(2\)</td>
+                  <td>\(3\)</td>
+                  <td>\(4\)</td>
+                  <td>\(5\)</td>
+                  <td>\(6\)</td>
+                </tr>
+                <tr>
+                  <th style="background-color: #006977da">\(P(X=k)\)</th>
+                  <td>\(0,016\)</td>
+                  <td>\(0,094\)</td>
+                  <td>\(0,234\)</td>
+                  <td>\(0,313\)</td>
+                  <td>\(0,234\)</td>
+                  <td>\(0,094\)</td>
+                  <td>\(0,016\)</td>
+
+                </tr>
+
+              </table>
+            </div>
+          </li>
+          <li>Diagramm:
+            <div class="centered" style="max-height: 260px;">
+              <div class="binomial-chart" data-n="6" data-p="0.5" data-scale="0.95" data-plus="0"></div>
+            </div>
+          </li>
+          <li>Tabelle:
+            <div class="centered">
+              <table class="wechseltabelle cellCentered" style="margin-bottom: 10px;">
+                <!-- Haken: &#10004; Kreuz: &#x2718; -->
+                <tr>
+                  <th style="background-color: #006977da">Anzahl \(k\)</th>
+                  <td>\(0\)</td>
+                  <td>\(1\)</td>
+                  <td>\(2\)</td>
+                  <td>\(3\)</td>
+                  <td>\(4\)</td>
+                  <td>\(5\)</td>
+                  <td>\(6\)</td>
+                </tr>
+                <tr>
+                  <th style="background-color: #006977da">\(P(X=k)\)</th>
+                  <td>\(0,262\)</td>
+                  <td>\(0,393\)</td>
+                  <td>\(0,246\)</td>
+                  <td>\(0,082\)</td>
+                  <td>\(0,015\)</td>
+                  <td>\(0,0015\)</td>
+                  <td>\(0,000006\)</td>
+
+                </tr>
+
+              </table>
+            </div>
+          </li>
+          <li>Diagramm:
+            <div class="centered" style="max-height: 260px;">
+              <div class="binomial-chart" data-n="6" data-p="0.2" data-scale="0.95" data-plus="1"></div>
+            </div>
+          </li>
+          <li>
+            <ul>
+              <li>Das Diagramm mit \(p=0,5\) ist symmetrisch zum Maximum.</li>
+              <li>Das Maximum von \(p=0,2\) ist höher und weiter links.</li>
+              <li>Beide Diagramm decken den gleichen Bereich ab.</li>
+            </ul>
+          </li>
         </ol>
       </details>
 
 
+      <details id="a2">
+        <summary>Eigenschaften der Verteilung</summary>
+
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>Wahrscheinlichkeit \(p\) wird variiert:
+            <ul>
+              <li>Diagramm:
+                <div class="centered">
+                  <div class="binomial-chart animated" data-nstart="10" data-nend="10" data-pstart="0.09"
+                    data-pend="0.91" data-maxp="0.4" data-maxk="10" data-scale="1.95" data-plus="0"
+                    data-duration="4000"></div>
+                </div>
+              </li>
+              <li>Je größer \(p\) desto weiter rechts liegt das Maximum.</li>
+              <li>Bei \(p=0,5\) liegt das Maximum der Verteilung genau in der Mitte.</li>
+              <li>Von \(p=0\) zu \(p=0,5\) wird das Maximum immer kleiner. Danach steigt es wieder an.</li>
+              <li>Die Verteilung ist symmetrisch zu \(p=0,5\), dass heißt die Verteilungen von \(p=0,3\) und \(p=0,7\)
+                sind spiegelsymmetrisch zueinander.
+                <div class="course-container" style="gap: 10px; flex-grow: 1; margin-bottom: 20px;">
+                  <div style="flex: 1; min-width: 250px;">
+                    <div class="centered" style="max-width: 350px">
+                      <div class="binomial-chart" data-n="10" data-p="0.3" data-scale="1.25" data-plus="1"></div>
+                    </div>
+                  </div>
+                  <div style="flex: 1; min-width: 250px;">
+                    <div class="centered" style="max-width: 350px">
+                      <div class="binomial-chart" data-n="10" data-p="0.7" data-scale="1.25" data-plus="1"></div>
+                    </div>
+                  </div>
+                </div>
+                Es gilt: \(B(n; p; k) = B(n; 1-p; n-k)\)
+              </li>
+              <li>Anzahl der Versuche \(n\) wird variiert:
+                <ul>
+                  <li>Diagramm:
+                    <div class="centered" style="transform: scale(1.95); margin-top: 50px; margin-bottom: 50px;">
+                      <div class="binomial-chart animated" data-nstart="5" data-nend="30" data-pstart="0.3"
+                        data-pend="0.3" data-maxp="0.4" data-maxk="30" data-scale="1.95" data-plus="0"
+                        data-duration="4000"></div>
+                    </div>
+                  </li>
+                  <li>Je größer \(n\) desto weiter rechts liegt das Maximum.</li>
+                  <li>Je größer \(n\) desto breiter und flacher ist die Verteilung.</li>
+                  <li>Je größer \(n\) desto symmetrischer wirkt die Verteilung.</li>
+                  <li>Die Verteilung ist symmetrisch zu \(p=0,5\), dass heißt die Verteilungen von \(p=0,3\) und
+                    \(p=0,7\)
+                    sind spiegelsymmetrisch zueinander.
+                    <div class="course-container" style="gap: 10px; flex-grow: 1; margin-bottom: 20px;">
+                      <div style="flex: 1; min-width: 200px;">
+                        <div class="centered" style="max-width: 250px">
+                          <div class="binomial-chart" data-n="5" data-p="0.3" data-scale="1.25" data-plus="1"></div>
+                        </div>
+                      </div>
+                      <div style="flex: 2; min-width: 350px;">
+                        <div class="centered"
+                          style="max-width: 350px; transform: scale(1.8); margin-top: 75px; margin-left: 50px;">
+                          <div class="binomial-chart" data-n="15" data-p="0.3" data-scale="1.05" data-plus="0"
+                            data-maxp="0.4"></div>
+                        </div>
+                      </div>
+                    </div>
+                    Es gilt: \(B(n; p; k) = B(n; 1-p; n-k)\)
+                  </li>
+
+                </ul>
+              </li>
+        </ol>
+      </details>
+
+      <details id="a3">
+        <summary>Würfelwurf</summary>
+
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>Tabelle:
+            <div class="centered">
+              <table class="wechseltabelle cellCentered" style="margin-bottom: 10px;">
+                <!-- Haken: &#10004; Kreuz: &#x2718; -->
+                <tr>
+                  <th style="background-color: #006977da">Anzahl \(k\)</th>
+                  <td>\(0\)</td>
+                  <td>\(1\)</td>
+                  <td>\(2\)</td>
+                  <td>\(3\)</td>
+                  <td>\(4\)</td>
+                  <td>\(5\)</td>
+                  <td>\(6\)</td>
+                </tr>
+                <tr>
+                  <th style="background-color: #006977da">\(P(X=k)\)</th>
+                  <td>\(0,3349\)</td>
+                  <td>\(0,4019\)</td>
+                  <td>\(0,2009\)</td>
+                  <td>\(0,0536\)</td>
+                  <td>\(0,0080\)</td>
+                  <td>\(0,0006\)</td>
+                  <td>\(0,00002\)</td>
+
+                </tr>
+
+              </table>
+            </div>
+          </li>
+          <li>Diagramm:
+            <div class="centered" style="max-height: 260px;">
+              <div class="binomial-chart" data-n="6" data-p="0.166667" data-scale="0.95" data-plus="0"></div>
+            </div>
+          </li>
+          <li>\(P(X=1)=B(6; \tfrac16; 1)=40,19\,\%\)</li>
+          <li>\(k=1\) ist die wahrscheinlichste Trefferzahl bei sechs Würfen.</li>
+          <li>Am seltensten sind sechs Treffer (\(k=6\))</li>
+        </ol>
+      </details>
+
+      <details>
+        <summary>Münzwurf</summary>
+
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>
+          <li>Tabelle:
+            <div class="centered">
+              <table class="wechseltabelle cellCentered" style="margin-bottom: 10px;">
+                <!-- Haken: &#10004; Kreuz: &#x2718; -->
+                <tr>
+                  <th style="background-color: #006977da">Anzahl \(k\)</th>
+                  <td>\(0\)</td>
+                  <td>\(1\)</td>
+                  <td>\(2\)</td>
+                  <td>\(3\)</td>
+                  <td>\(4\)</td>
+                  <td>\(5\)</td>
+                  <td>\(6\)</td>
+                </tr>
+                <tr>
+                  <th style="background-color: #006977da">\(P(X=k)\)</th>
+                  <td>\(0,0156\)</td>
+                  <td>\(0,0938\)</td>
+                  <td>\(0,2344\)</td>
+                  <td>\(0,3125\)</td>
+                  <td>\(0,2344\)</td>
+                  <td>\(0,0938\)</td>
+                  <td>\(0,0156\)</td>
+
+                </tr>
+
+              </table>
+            </div>
+          </li>
+          <li>Diagramm:
+            <div class="centered" style="max-height: 260px;">
+              <div class="binomial-chart" data-n="6" data-p="0.5" data-scale="0.95" data-plus="1"></div>
+            </div>
+          </li>
+          </li>
+          <li>\(P(X=3)=B(6; \tfrac12; 3)=31,25\,\%\)</li>
+          <li>Mit \(n=5\) sind die Wurfzahlen \(k=2\) und \(k=3\) am wahrscheinlichsten (jeweils \(P=31,25\,\%\)).</li>
+        </ol>
+      </details>
+
+      <details>
+        <summary>Verteilungen beurteilen</summary>
+
+        <ol class="more-spacing" type="I">
+          <li>Ja</li>
+          <li>Nein, Verteilung hat zwei nicht nebeneinanderliegende Maxima</li>
+          <li>Ja</li>
+          <li>Nein, Die nebeneinanderliegenden Werte \(P(X=1)=P(X=2)\), obwohl beide nicht das Maximum sind</li>
+        </ol>
+      </details>
+
+      <details>
+        <summary>Binomialverteilung</summary>
+
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>
+            <ol class="more-spacing" type="I">
+              <li>Ist rechtslastig, was auf \(p>0,5\) hindeutet.</li>
+              <li>passt</li>
+              <li>Hat in der Mitte eine Lücke, oder zwei nicht nebeneinanderliegende Maxima</li>
+            </ol>
+          </li>
+          <li>Alle Werte sind geschätzt, Abweichungen in der zweiten Stelle nach dem Komma sind also möglich.
+            <ol class="more-spacing" type="A">
+              <li>\(P(X=4)\approx 0,05\)</li>
+              <li>\(P(3\leq X \leq 5)\approx 0,2 + 0,05 + 0,01=0,26\)</li>
+              <li>\(P(X\not\in \{0; 1; 5; 6\})\approx 0,31+0,2+0,05=0,55\)</li>
+            </ol>
+          </li>
+        </ol>
+      </details>
 
 
     </section>
@@ -180,7 +443,8 @@
         <img src="/img/binom_meme.jpg" style="object-fit: scale-down; max-width: 300px" />
       </div>
       <div class="centered">
-        <a href="https://www.spreadshirt.de/shop/design/funny+nerd+geek+gift+idea+binomial+distribution+thermobecher-D5c6ae6d8e447424a9512689c?sellable=74BRqQozVgumBgV2yDoE-773-39&view=D3">
+        <a
+          href="https://www.spreadshirt.de/shop/design/funny+nerd+geek+gift+idea+binomial+distribution+thermobecher-D5c6ae6d8e447424a9512689c?sellable=74BRqQozVgumBgV2yDoE-773-39&view=D3">
           <h6>Original von Pinosaurier</h6>
         </a>
       </div>
@@ -190,7 +454,7 @@
     <a href="/misc/impressum.html">Impressum</a>
     <div class="lastModified" align="center">
       Zuletzt geändert:<br />
-      14. Juni 2025
+      16. Juni 2025
       <!-- <span id="lastModifiedDate"></span> -->
     </div>
     <a href="/misc/datenschutz.html">Datenschutz</a>
