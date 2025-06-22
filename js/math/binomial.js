@@ -7,7 +7,7 @@ function binomial(n, k, p) {
     return binomCoeff * Math.pow(p, k) * Math.pow(1 - p, n - k);
 }
 
-function createBinomialSVG(n, p, scaleSetting = 'auto', extraTick, fixedMaxP = null, fixedMaxN = null) {
+function createBinomialSVG(n, p, scaleSetting = 'auto', extraTick, fixedMaxP = null, fixedMaxN = null, showMu = false, showSigma = false, showK = true) {
     const svgNS = "http://www.w3.org/2000/svg";
     const probs = Array.from({ length: Math.floor(n) + 1 }, (_, k) => binomial(n, k, p));
     const trueMaxP = Math.max(...probs);
@@ -34,7 +34,7 @@ function createBinomialSVG(n, p, scaleSetting = 'auto', extraTick, fixedMaxP = n
 
     const yAxisX = 0.5; // y-Achse durch k = 0
 
-    
+
 
     // Achsenlinien und Pfeile
     svg.innerHTML += `
@@ -79,14 +79,17 @@ function createBinomialSVG(n, p, scaleSetting = 'auto', extraTick, fixedMaxP = n
         rect.setAttribute("stroke-width", "0.03");
         svg.appendChild(rect);
 
-        const label = document.createElementNS(svgNS, "text");
-        label.setAttribute("x", k + 0.35);
-        label.setAttribute("y", "0.75");
-        label.setAttribute("font-family", "serif");
-        label.setAttribute("font-size", "0.7");
-        label.setAttribute("fill", "#a8a7a7");
-        label.textContent = k;
-        svg.appendChild(label);
+        if (showK) {
+            const label = document.createElementNS(svgNS, "text");
+            label.setAttribute("x", k + 0.35);
+            label.setAttribute("y", "0.75");
+            label.setAttribute("font-family", "serif");
+            label.setAttribute("font-size", "0.7");
+            label.setAttribute("fill", "#a8a7a7");
+            label.textContent = k;
+            svg.appendChild(label);
+        }
+
 
         const tick = document.createElementNS(svgNS, "line");
         tick.setAttribute("x1", k + 0.5);
@@ -97,6 +100,54 @@ function createBinomialSVG(n, p, scaleSetting = 'auto', extraTick, fixedMaxP = n
         tick.setAttribute("stroke-width", "0.03");
         svg.appendChild(tick);
     });
+
+    // Erwartungswert und Standardabweichung
+    if (showMu || showSigma) {
+        const mu = n * p;
+        const sigma = Math.sqrt(n * p * (1 - p));
+
+        if (showMu) {
+            const line = document.createElementNS(svgNS, "line");
+            line.setAttribute("x1", mu + 0.5);
+            line.setAttribute("y1", "0");
+            line.setAttribute("x2", mu + 0.5);
+            line.setAttribute("y2", `${-yScale * maxP - 0.3}`);
+            line.setAttribute("stroke", "magenta");
+            line.setAttribute("stroke-width", "0.05");
+            svg.appendChild(line);
+
+            const label = document.createElementNS(svgNS, "text");
+            label.setAttribute("x", mu + 0.55);
+            label.setAttribute("y", `${-yScale * maxP - 0.6}`);
+            label.setAttribute("font-family", "italic");
+            label.setAttribute("font-size", "0.7");
+            label.setAttribute("fill", "magenta");
+            label.textContent = "μ";
+            svg.appendChild(label);
+        }
+
+        if (showSigma) {
+            [mu - sigma, mu + sigma].forEach((val, i) => {
+                const line = document.createElementNS(svgNS, "line");
+                line.setAttribute("x1", val + 0.5);
+                line.setAttribute("y1", `${-yScale * 0.0225}`);
+                line.setAttribute("x2", val + 0.5);
+                line.setAttribute("y2", `${yScale * 0.0225}`);
+                line.setAttribute("stroke", "salmon");
+                line.setAttribute("stroke-width", "0.05");
+                svg.appendChild(line);
+
+                const label = document.createElementNS(svgNS, "text");
+                label.setAttribute("x", val - 0.25);
+                label.setAttribute("y", `${yScale * 0.035 + 0.32}`);
+                label.setAttribute("font-family", "italic");
+                label.setAttribute("font-size", "0.7");
+                label.setAttribute("fill", "salmon");
+                label.textContent = i === 0 ? "μ − σ" : "μ + σ";
+                svg.appendChild(label);
+            });
+        }
+    }
 
     return svg;
 }
@@ -115,7 +166,11 @@ function renderAllBinomialCharts() {
             const scale = parseFloat(container.dataset.scale);
             const plus = parseInt(container.dataset.plus);
 
-            const svg = createBinomialSVG(n, p, scale * 10, plus);
+            const showK = container.dataset.showk == null ? true : container.dataset.showk === "true";
+            const showMu = container.dataset.showmu === "true";
+            const showSigma = container.dataset.showsigma === "true";
+
+            const svg = createBinomialSVG(n, p, scale * 10, plus, null, null, showMu, showSigma, showK);
             container.innerHTML = '';
             container.appendChild(svg);
         } else {
@@ -129,12 +184,15 @@ function renderAllBinomialCharts() {
             const maxP = parseFloat(container.dataset.maxp);
             const maxK = parseFloat(container.dataset.maxk);
 
+            const showMu = container.dataset.showmu === "true";
+            const showSigma = container.dataset.showsigma === "true";
+
             let t = 0;
             let forward = true;
             const fps = 30;
             const interval = 1000 / fps;
 
-            const svg = createBinomialSVG(nStart, pStart, scale * 10, plus, maxP, maxK);
+            const svg = createBinomialSVG(nStart, pStart, scale * 10, plus, maxP, maxK, showMu, showSigma);
             container.innerHTML = '';
             container.appendChild(svg);
 
