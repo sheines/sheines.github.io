@@ -210,13 +210,14 @@ function renderAllBinomialCharts() {
 
             const showMu = container.dataset.showmu === "true";
             const showSigma = container.dataset.showsigma === "true";
+            const kumm = container.dataset.kumm === "true";
 
             let t = 0;
             let forward = true;
             const fps = 30;
             const interval = 1000 / fps;
 
-            const svg = createBinomialSVG(nStart, pStart, scale * 10, plus, maxP, maxK, showMu, showSigma);
+            const svg = createBinomialSVG(nStart, pStart, scale * 10, plus, maxP, maxK, showMu, showSigma, true, kumm);
             container.innerHTML = '';
             container.appendChild(svg);
 
@@ -235,7 +236,7 @@ function renderAllBinomialCharts() {
                 const nCurrent = nStart + (nEnd - nStart) * eased;
                 const pCurrent = pStart + (pEnd - pStart) * eased;
 
-                const newSVG = createBinomialSVG(nCurrent, pCurrent, scale * 10, plus, maxP, maxK);
+                const newSVG = createBinomialSVG(nCurrent, pCurrent, scale * 10, plus, maxP, maxK, showMu, showSigma, true, kumm);
                 const updatedText = `n = ${nCurrent.toFixed(0)} ↔ p = ${pCurrent.toFixed(2).replace(".", ",")}`;
 
                 // Ersetze altes SVG
