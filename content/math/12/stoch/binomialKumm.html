@@ -70,15 +70,15 @@
         <div class="definition">
           <h4>Kummulierte Binomialverteilung</h4>
           <p>
-            Wenn man die Wahrscheinlichkeiten einer Bernoullikette für \(k=0\) bis \(k=n\) gegenüberstellt,
-            erhält man eine Binomialverteilung.
+            An vielen Stellen ist nicht die Wahrscheinlichkeit eines Ereignisses, z.B. \(P(X=3)\) gesucht, sondern die Wahrscheinlichkeit 
+            eines Bereiches, z.B. \(P(X\leq 3)\).
           </p>
           <p>
-            Mit der bereits bekannten Formel \(P(X=k)=B(n; p; k)=\binom{n}{k}\cdot {p}^{k}\cdot (1-{p})^{{n}-k}\)
-            berechnet werden:
+            Anstatt nun für \(P(X\leq 3)\) alle Einzelwahrscheinlichkeiten \(B(n; p; k)\) zu berechnen kann auch die 
+            kummulierte Binomialdichte \(F(n; p; k)\) verwendet werden.
           </p>
           <p>
-            Für eine Bernoullikette mit \(n=6\) und \(p=0,35\) ergeben sich folgende Werte:
+            Für eine kummulierte Binomialdichte \(F\) mit \(n=6\) und \(p=0,35\) ergeben sich folgende Werte:
           <div class="centered">
             <table class="wechseltabelle cellCentered" style="margin-bottom: 10px;">
               <!-- Haken: &#10004; Kreuz: &#x2718; -->
@@ -93,14 +93,14 @@
                 <td>\(6\)</td>
               </tr>
               <tr>
-                <th style="background-color: #006977da">\(P(X=k)\)</th>
+                <th style="background-color: #006977da">\(P(X\leq k)\)</th>
                 <td>\(0,075\)</td>
-                <td>\(0,244\)</td>
-                <td>\(0,328\)</td>
-                <td>\(0,235\)</td>
-                <td>\(0,095\)</td>
-                <td>\(0,020\)</td>
-                <td>\(0,002\)</td>
+                <td>\(0,319\)</td>
+                <td>\(0,647\)</td>
+                <td>\(0,8825\)</td>
+                <td>\(0,9776\)</td>
+                <td>\(0,9981\)</td>
+                <td>\(1,000\)</td>
 
               </tr>
 
@@ -109,17 +109,49 @@
           Wird diese Verteilung in ein Diagramm übertragen
           </p>
           <div class="centered" style="max-height: 260px;">
-            <div class="binomial-chart" data-n="6" data-p="0.35" data-scale="1.5" data-plus="0"></div>
+            <div class="binomial-chart" data-n="6" data-p="0.35" data-scale="2.5" data-plus="0" data-kumm="true"></div>
           </div>
           <p>
             Das Bild zeigt eine solche Verteilung mit \(n=6\) und \(p=0,35\).
           </p>
           <p>
-
+            Die Wahrscheinlichkeit \(P(X\leq k)= F(n; p; k)\) kann nun mit der kummulierten Wahrscheinlichkeit in einem Schritt berechnet werden.
           </p>
-
+          <p>
+            Der Ausdruck \(F(n; p; k)\) bedeutet dabei:
+          </p>
+          <p>
+            \(\quad \displaystyle F(n; p; k)=\sum_{i=0}^k B(n; p; i)\)
+          </p>
+          <p>
+            Der von der Schule empfohlene Taschenrechner bietet im Menü unter dem Punkt <i>Verteilungsfunktion</i> die Möglichkeit 
+          <i>Binomialdichten kummuliert</i> auf schnellen Wege zu berechnen.
+          </p>
         </div>
-        Heute geht es nur um das Arbeiten mit und erstellen dieser Verteilungen, weshalb es kein Beispiel gibt.
+        <h6>Beispiel 1:</h6>
+        <p>
+          Gesucht ist die Wahrscheinlichkeit beim <span style="color: green">viermaligen</span> <span style="color: magenta">Würfeln</span> <span style="color: orange">höchstens zweimal</span> eine Sechs zu würfeln.
+        </p>
+        <p>
+          \(\qquad \begin{align*}
+            P({\color{orange}X \leq 2})&=F({\color{green}4}; {\color{magenta}\tfrac16}; {\color{orange}2})=\sum_{i=0}^2 B({\color{green}4}; {\color{magenta}\tfrac16}; i)\\
+            P({\color{orange}X \leq 2})&\approx 93,8\,\%
+          \end{align*}\)
+        </p>
+        <h6>Beispiel 2:</h6>
+        <p>
+          Gesucht ist die Wahrscheinlichkeit beim <span style="color: green">zehnmaligen</span> <span style="color: magenta">Münzwerfen</span> <span style="color: orange">mindestens acht mal</span> Kopf zu werden.
+        </p>
+        <p>
+          Da die Binomialdichte immer von null kumuliert wird, brauchen wir hier das Gegenereignis:
+        </p>
+        <p>
+          \(\qquad \begin{align*}
+            P({\color{orange}X \geq 8})&=1-P({\color{salmon}X\leq 7})=1-F({\color{green}10}; {\color{magenta}\tfrac12}; {\color{salmon}7})\\
+            P({\color{orange}X \geq 8})&\approx 1- {\color{salmon}0,945}=5,5\,\%
+          \end{align*}\)
+        </p>
+
 
 
         <!-- <div class="centered">
@@ -142,8 +174,8 @@
     <section id="aufgaben" class="aufgaben">
       <h3>Aufgaben zur Binomialverteilungen</h3>
       <ul class="custom-marker point-after decimal more-spacing">
-        <li>Seite 507 Übung 1 <a href="#a1">Lösungen</a></li>
-        <li>Untersuche die Eigenschaften der Binomialverteilung! <a href="#a2">Lösungen</a></li>
+        <li>Seite 515 Übung 2 <a href="#a1">Lösungen</a></li>
+        <li>Untersuche die Eigenschaften der kummkummul Binomialverteilung! <a href="#a2">Lösungen</a></li>
         <ol class="custom-marker parens-around lower-alpha more-spacing">
           <li>Wie verändert sich die Verteilung, wenn \(p\) verändert wird?</li>
           <li>Wie verändert sich die Verteilung, wenn \(n\) verändert wird?</li>

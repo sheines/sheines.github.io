@@ -2,14 +2,32 @@ function factorial(k) {
     return k <= 1 ? 1 : k * factorial(k - 1);
 }
 
-function binomial(n, k, p) {
-    const binomCoeff = factorial(n) / (factorial(k) * factorial(n - k));
-    return binomCoeff * Math.pow(p, k) * Math.pow(1 - p, n - k);
+// function binomial(n, k, p) {
+//     const binomCoeff = factorial(n) / (factorial(k) * factorial(n - k));
+//     return binomCoeff * Math.pow(p, k) * Math.pow(1 - p, n - k);
+// }
+
+function binomial(n,k,p,kumm) {
+
+    let binomCoeff = factorial(n) / (factorial(k) * factorial(n - k));
+    binomCoeff *= Math.pow(p, k) * Math.pow(1 - p, n - k);
+
+    if (kumm) {
+        if (k == 0)
+            return binomCoeff;
+        else {
+            return binomCoeff + binomial(n, k-1, p, kumm);
+        }
+    }
+    else {
+        return binomCoeff;
+    }
+
 }
 
-function createBinomialSVG(n, p, scaleSetting = 'auto', extraTick, fixedMaxP = null, fixedMaxN = null, showMu = false, showSigma = false, showK = true) {
+function createBinomialSVG(n, p, scaleSetting = 'auto', extraTick, fixedMaxP = null, fixedMaxN = null, showMu = false, showSigma = false, showK = true, kumm = false) {
     const svgNS = "http://www.w3.org/2000/svg";
-    const probs = Array.from({ length: Math.floor(n) + 1 }, (_, k) => binomial(n, k, p));
+    const probs = Array.from({ length: Math.floor(n) + 1 }, (_, k) => binomial(n, k, p, kumm));
     const trueMaxP = Math.max(...probs);
     const maxP = fixedMaxP !== null ? fixedMaxP : trueMaxP;
 
@@ -25,6 +43,9 @@ function createBinomialSVG(n, p, scaleSetting = 'auto', extraTick, fixedMaxP = n
     } else {
         yScale = parseInt(scaleSetting, 10);
     }
+
+    if (kumm)
+        yScale *= 0.2;
 
     const maxN = fixedMaxN !== null ? fixedMaxN : n;
 
@@ -48,7 +69,9 @@ function createBinomialSVG(n, p, scaleSetting = 'auto', extraTick, fixedMaxP = n
   `;
 
     // y-Achse: Beschriftung in 0.1er-Schritten (1 LE = 0.1)
-    for (let i = 0.1; i <= maxP + (extraTick ? 0.101 : 0); i += 0.1) {
+    for (let i = 0.0; i <= maxP + (extraTick ? 0.101 : 0); i += kumm ? 0.2 : 0.1) {
+        if (i == 0) continue;
+
         const y = -yScale * i;
         svg.innerHTML += `
       <line x1="${yAxisX - 0.15}" y1="${y}" x2="${yAxisX}" y2="${y}" stroke="#a7a7a7" stroke-width="0.03"/>
@@ -73,9 +96,9 @@ function createBinomialSVG(n, p, scaleSetting = 'auto', extraTick, fixedMaxP = n
         rect.setAttribute("y", height);
         rect.setAttribute("width", "1.0");
         rect.setAttribute("height", -height);
-        rect.setAttribute("fill", "green");
+        rect.setAttribute("fill", kumm ? "magenta" : "green");
         rect.setAttribute("fill-opacity", "0.6");
-        rect.setAttribute("stroke", "lime");
+        rect.setAttribute("stroke", kumm ? "violet" : "lime");
         rect.setAttribute("stroke-width", "0.03");
         svg.appendChild(rect);
 
@@ -169,8 +192,9 @@ function renderAllBinomialCharts() {
             const showK = container.dataset.showk == null ? true : container.dataset.showk === "true";
             const showMu = container.dataset.showmu === "true";
             const showSigma = container.dataset.showsigma === "true";
+            const kumm = container.dataset.kumm === "true";
 
-            const svg = createBinomialSVG(n, p, scale * 10, plus, null, null, showMu, showSigma, showK);
+            const svg = createBinomialSVG(n, p, scale * 10, plus, null, null, showMu, showSigma, showK, kumm);
             container.innerHTML = '';
             container.appendChild(svg);
         } else {
