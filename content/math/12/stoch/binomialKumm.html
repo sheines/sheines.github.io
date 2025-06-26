@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width" initial-scale="1.0" />
   <meta name="author" content="Sebastian Hitziger" />
   <meta name="robot" content="noindex" />
-  <title>HITZ | Stochastik | kumulierte Binomialverteilung</title>
+  <title>HITZ | Stochastik | Kumulierte Binomialverteilung</title>
   <link rel="stylesheet" type="text/css" href="/css/colors.css" />
   <link rel="stylesheet" type="text/css" href="/css/gridNoTimeline.css" />
   <link rel="stylesheet" type="text/css" href="/css/navbar.css" />
@@ -56,7 +56,7 @@
   </header>
   <main>
     <section>
-      <h2>kumulierte Binomialverteilung</h2>
+      <h2>Kumulierte Binomialverteilung</h2>
       <div class="ziele">
         <p>
           Nachfolgend soll erklärt werden, wofür man die kumulierte Binomialverteilung braucht und wie man damit rechnet.
@@ -68,7 +68,7 @@
 
       <div class="theorie">
         <div class="definition">
-          <h4>kumulierte Binomialverteilung</h4>
+          <h4>Kumulierte Binomialverteilung</h4>
           <p>
             An vielen Stellen ist nicht die Wahrscheinlichkeit eines Ereignisses, z.B. \(P(X=3)\) gesucht, sondern die Wahrscheinlichkeit 
             eines Bereiches, z.B. \(P(X\leq 3)\). Man spricht auch von Intervallwahrscheinlichkeiten.
@@ -143,7 +143,7 @@
         </p>
         <h6>Beispiel 2:</h6>
         <p>
-          Gesucht ist die Wahrscheinlichkeit beim <span style="color: green">zehnmaligen</span> <span style="color: magenta">Münzwerfen</span> <span style="color: orange">mindestens acht mal</span> Kopf zu werden.
+          Gesucht ist die Wahrscheinlichkeit beim <span style="color: green">zehnmaligen</span> <span style="color: magenta">Münzwerfen</span> <span style="color: orange">mindestens acht mal</span> Kopf zu werfen.
         </p>
         <p>
           Da die Binomialdichte immer von null kumuliert wird, brauchen wir hier das Gegenereignis:
@@ -241,6 +241,22 @@
       </details>
 
       <details id="a3">
+        <summary>Schrauben</summary>
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>\(P(X=0)=1-P(X\leq 5)=B(50; 0,02; 0)\approx 36,4\,\%\)</li>
+          <li>\(P(X > 3)=1-P(X\leq 3)=1-F(100; 0,02; 3)\approx 14,1\,\%\)</li>
+          <li>\(P(X< 5)=F(190; 0,02; 4)\approx 94,9\,\%\)</li>
+          <li>
+            <ul>
+              <li>Eine Packung: \(P(X\geq 1)=1-P(X=0)=65,6\%</li>
+              <li>Drei Packungen: \(P(3\times X\geq 1)=0,656^3=25,7\,\%\)</li>
+            </ul>
+          </li>
+        </ol>
+
+      </details>
+
+      <details>
         <summary>Multiple-Choice Test</summary>
         <ol class="custom-marker parens-around lower-alpha more-spacing">
           <li>\(P(X\geq 6)=1-P(X\leq 5)=1-F(12; \tfrac12; 5)\approx 38,7\,\%\)</li>
@@ -259,8 +275,8 @@
         <summary>Torwandschießen</summary>
 
         <ol class="custom-marker parens-around lower-alpha more-spacing">
-          <li>\(P(X\leq 2)=F(10; \tfrac13; 2)\approx 10,4\,\%\)</li>
-          <li>\(P(X\geq 6)=1-F(10; \tfrac13; 5)\approx 1,9\,\%\)</li>
+          <li>\(P(X< 2)=P(X\leq 1)=F(10; \tfrac13; 1)\approx 10,4\,\%\)</li>
+          <li>\(P(X > 6)=1-F(10; \tfrac13; 6)\approx 1,9\,\%\)</li>
           <li>\(P(2\leq X\leq 4)=F(10; \tfrac13; 4) - F(10; \tfrac13; 1)\approx 68,3\,\%\)</li>
         </ol>
       </details>
