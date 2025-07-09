@@ -25,9 +25,9 @@ function binomial(n,k,p,kumm) {
 
 }
 
-function createBinomialSVG(n, p, scaleSetting = 'auto', extraTick, fixedMaxP = null, fixedMaxN = null, showMu = false, showSigma = false, showK = true, kumm = false) {
+function createBinomialSVG(n, p, scaleSetting = 'auto', extraTick, fixedMaxP = null, fixedMaxN = null, showMu = false, showSigma = false, showK = true, kumm = false, yscale = 1) {
     const svgNS = "http://www.w3.org/2000/svg";
-    const probs = Array.from({ length: Math.floor(n) + 1 }, (_, k) => binomial(n, k, p, kumm));
+    const probs = Array.from({ length: Math.floor(n) + 1 }, (_, k) => yscale * binomial(n, k, p, kumm));
     const trueMaxP = Math.max(...probs);
     const maxP = fixedMaxP !== null ? fixedMaxP : trueMaxP;
 
@@ -43,6 +43,7 @@ function createBinomialSVG(n, p, scaleSetting = 'auto', extraTick, fixedMaxP = n
     } else {
         yScale = parseInt(scaleSetting, 10);
     }
+    yScale /=yscale;
 
     if (kumm)
         yScale *= 0.2;
@@ -188,13 +189,14 @@ function renderAllBinomialCharts() {
             const p = parseFloat(container.dataset.p);
             const scale = parseFloat(container.dataset.scale);
             const plus = parseInt(container.dataset.plus);
+            const yscale = container.dataset.yscale == null ? 1 : parseFloat(container.dataset.yscale);
 
             const showK = container.dataset.showk == null ? true : container.dataset.showk === "true";
             const showMu = container.dataset.showmu === "true";
             const showSigma = container.dataset.showsigma === "true";
             const kumm = container.dataset.kumm === "true";
 
-            const svg = createBinomialSVG(n, p, scale * 10, plus, null, null, showMu, showSigma, showK, kumm);
+            const svg = createBinomialSVG(n, p, scale * 10, plus, null, null, showMu, showSigma, showK, kumm, yscale);
             container.innerHTML = '';
             container.appendChild(svg);
         } else {
