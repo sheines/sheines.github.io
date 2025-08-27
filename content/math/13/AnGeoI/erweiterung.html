@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" initial-scale="1.0" />
+  <meta name="author" content="Sebastian Heine" />
+  <meta name="robot" content="noindex" />
+  <title>HEIS | Ana. Geom. I | Erweiterung Koordinatensystem</title>
+  <link rel="stylesheet" type="text/css" href="/css/colors.css" />
+  <link rel="stylesheet" type="text/css" href="/css/gridNoTimeline.css" />
+  <link rel="stylesheet" type="text/css" href="/css/navbar.css" />
+  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="/css/courses.css" />
+  <script type="text/javascript" src="jquery-3.3.1.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  
+</head>
+
+<body>
+  <header>
+    <div class="nav">
+      <input type="checkbox" id="nav-check" />
+      <div class="nav-header">
+        <div class="nav-title">
+          <a href="/">Hr. Heines Unterricht</a>
+        </div>
+      </div>
+      <div class="nav-btn">
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+
+      <div class="nav-links">
+        <a href="/content/math/">Mathematik</a>
+        <a href="/content/math/13/">Klasse 13</a>
+        <a href="/content/math/13/AnGeoI/">Analytische Geometrie I</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section>
+      <h2>Erweiterung des Koordinatensystems</h2>
+      <div class="ziele">
+        <p>
+          Nachfolgend soll erklärt werden, wie Zufallsexperimente, die aus mehreren Schritten bestehen, berechnet und
+          dargestellt werden können.
+        </p>
+        <p>
+          <a href="#aufgaben">Direkt zu den Aufgaben</a>
+        </p>
+      </div>
+
+      <div class="theorie">
+        <div class="definition">
+          <h4>Was ist das?</h4>
+          <p>
+
+          </p>
+
+
+
+        </div>
+
+
+        <h1>Beispiel: Zwei 3D-Grafiken auf einer Seite</h1>
+
+  <!-- SVG 1 -->
+  <h2>Grafik 1: Punkte und Vektoren</h2>
+  <svg id="canvas1" width="600" height="400" viewBox="-400 -300 800 600">
+    <defs>
+      <marker id="arrow" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto" markerUnits="strokeWidth">
+        <path d="M0,0 L0,6 L9,3 z" fill="black" />
+      </marker>
+    </defs>
+  </svg>
+
+  <!-- SVG 2 -->
+  <h2>Grafik 2: Gerade und Ebene</h2>
+  <svg id="canvas2" width="600" height="400" viewBox="-400 -300 800 600">
+    <defs>
+      <marker id="arrow" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto" markerUnits="strokeWidth">
+        <path d="M0,0 L0,6 L9,3 z" fill="black" />
+      </marker>
+    </defs>
+  </svg>
+
+  <!-- JS-Datei mit allen Funktionen -->
+  <script src="/js/math/geo3d.js"></script>
+  <script>
+    const svg1 = document.getElementById("canvas1");
+    const svg2 = document.getElementById("canvas2");
+
+    // === Grafik 1: Punkte und Vektoren ===
+    drawAxes(svg1, 4, 4, 4);
+
+    drawPoint(svg1, [1, 2, 3], "A", "red");
+    drawPoint(svg1, [-1, 1, 2], "B", "green");
+    drawVector(svg1,[0,0,0], [1,0,0], "1", "darkgoldenrod");
+    drawVector(svg1,[1,0,0], [1,0,0], "2", "lime");
+    drawVector(svg1,[2,0,0], [1,0,0], "3", "pink");
+    drawVector(svg1,[3,0,0], [1,0,0], "4", "aqua");
+
+    drawVector(svg1,[0,0,0], [0,1,0], "1", "darkgoldenrod", "below");
+    drawVector(svg1,[0,1,0], [0,1,0], "2", "lime", "below");
+    // drawVector(svg1, [0, 0, 0], [2, 1, 1], "v", "blue");
+    // drawVector(svg1, [1, 2, 3], [-1, -1, 0], "w", "purple");
+
+    // === Grafik 2: Gerade und Ebene ===
+    drawAxes(svg2, 3, 3, "B");
+
+    drawLine(svg2, [0, 0, 0], [1, 1, 0], "g", "teal");
+    drawPlane(svg2, [0, 0, 0], [1, 0, 0], [0, 1, 1], "E", "orange");
+    drawPoint(svg2, [1, 1, 1], "P", "black");
+  </script>
+
+
+
+
+
+        <h6>Rechenbeispiel 2:</h6>
+        <p>
+
+        </p>
+
+      </div>
+    </section>
+    <!-- <section>
+            <div class="videos">
+                <iframe width="360" height="202" src="https://www.youtube.com/embed/19goPRnthCE"
+                    title="Abstand Punkt - Punkt" frameborder="0" allow="web-share" allowfullscreen></iframe>
+
+            </div>
+        </section> -->
+    <section id="aufgaben" class="aufgaben">
+      <h3>Aufgaben zur Erweiterung des Koordinatensystems</h3>
+      <ol class="custom-marker point-after decimal more-spacing">
+        <li>Buch, Seite 15 Übung 1 und 2 <a href="#a1">Lösungen</a></li>
+        <li>Buch, Seite 16 Übung 3 bis 6 <a href="#a2">Lösungen</a></li>
+
+      </ol>
+    </section>
+
+    <section class="loesungen">
+      <h3>Lösungen zur Erweiterung des Koordinatensystems</h3>
+      <details id="a1">
+        <summary>Koordinanten im Raum</summary>
+        <p>
+
+        </p>
+      </details>
+
+    </section>
+
+    <section id="meme">
+      <div class="images">
+        <img src="/img/3d_meme.jpeg" style="object-fit: scale-down; max-width: 300px" />
+      </div>
+      <div class="centered">
+        <a href="https://mes.fm/memes/jayz-in-3d-coordinates">
+          <h6>Original von Math easy Solution</h6>
+        </a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <a href="/misc/impressum.html">Impressum</a>
+    <div class="lastModified" align="center">
+      Zuletzt geändert:<br />
+      27. August 2025
+      <!-- <span id="lastModifiedDate"></span> -->
+    </div>
+    <a href="/misc/datenschutz.html">Datenschutz</a>
+  </footer>
+</body>
