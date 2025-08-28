@@ -1,7 +1,48 @@
-const sqrt2 = Math.sqrt(2);
+/// Vorlage
+
+//<svg id="mysvg" width="600" height="400" viewBox="-400 -300 800 600">
+//          <defs></defs>
+//        </svg>
+//
+//       <!-- JS-Datei mit allen Funktionen -->
+//        <script src="/js/math/geo3d.js"></script>
+//
+//        <script>
+//          const svg = document.getElementById("mysvg");
+//
+//          drawAxes(svg, 4, 4, 4);
+//
+//          const steps = [
+//            { type: "point", args: [[1, 3, 2], "P", "green"] },
+//            { type: "vector", args: [[0, 0, 0], [1, 3, 2], "a", "cyan"] },
+//            { type: "segment", args: [[1, 3, 2], [1, 1, 0], "AB", "orange", "below"] },
+//            { type: "vector", args: [[1, 3, 2], [1, 3, 2], "a", "purple"] },
+//            { type: "vector", args: [[1, 3, 2], [0, 1, 0], "a", "pink"] },
+//            { type: "plane", args: [[1, 3, 2], [1, 3, 2], [0, 1, 0], "E", "darkgoldenrod"] },
+//          ];
+//
+//          drawSequenceWithPersistence(svg, steps, 10000, 1000);
+//
+//          ODER: 
+        //     drawPoint(svg1, [1, 2, 3], "A", "red");
+        //   drawPoint(svg1, [-1, 1, 2], "B", "green");
+        //   drawVector(svg1, [0, 0, 0], [2, 0, 0], "1", "darkgoldenrod");
+        //   drawVector(svg1, [0, 0, 0], [0, 0, -1], "1", "lime");
+
+        //   drawVector(svg1, [0, 0, 0], [0, 1, 0], "1", "darkgoldenrod", "below");
+        //   drawVector(svg1, [0, 1, 0], [0, 1, 0], "2", "lime", "below");
+
+//        </script>
+
 
 // === Projektion ===
 function project([x, y, z]) {
+
+    if ([x, y, z].some(v => isNaN(v))) {
+        console.error("project received invalid coords:", x, y, z);
+        return [0,0]; // fallback
+    }
+
     return [
         (y - x / 2) * 50,
         (-z + x / 2) * 50
@@ -20,28 +61,42 @@ function vectorLabel(text) {
     else if (!isNaN(text))
         return text;
     else
-        return text + "\u20D7"; // z. B. "v⃗"
+        return text + "\u20D7"; // z. B. "v⃗"
+}
+
+// === Parent-SVG finden ===
+function findSVGRoot(element) {
+    while (element && element.tagName !== "svg") {
+        element = element.parentNode;
+    }
+    return element;
 }
 
 // === Vektorpfeil in Farbe
-function ensureArrowMarker(svg, color) {
+function ensureArrowMarker(element, color) {
+    const svgRoot = findSVGRoot(element);
     const id = `arrow_${color.replace("#", "")}`;
-    if (!document.getElementById(id)) {
+
+    if (!svgRoot.querySelector(`#${id}`)) {
         const marker = document.createElementNS("http://www.w3.org/2000/svg", "marker");
         marker.setAttribute("id", id);
         marker.setAttribute("markerWidth", "10");
         marker.setAttribute("markerHeight", "10");
-        marker.setAttribute("refX", "5");
+        marker.setAttribute("refX", "10");        // <<--- wichtig: 10 statt 5
         marker.setAttribute("refY", "3");
         marker.setAttribute("orient", "auto");
         marker.setAttribute("markerUnits", "strokeWidth");
 
         const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
-        path.setAttribute("d", "M0,0 L0,6 L9,3 z");
+        path.setAttribute("d", "M0,0 L0,6 L10,3 z"); // <<--- Pfeilspitze bis refX
         path.setAttribute("fill", color);
         marker.appendChild(path);
 
-        svg.querySelector("defs").appendChild(marker);
+        const defs = svgRoot.querySelector("defs") || svgRoot.insertBefore(
+            document.createElementNS("http://www.w3.org/2000/svg", "defs"),
+            svgRoot.firstChild
+        );
+        defs.appendChild(marker);
     }
     return `url(#${id})`;
 }
@@ -56,14 +111,13 @@ function smartTextStyle(text) {
     };
 }
 
-function drawText(svg, x, y, label, color = "#a7a7a8", position = "belowright") {
-    // Verschiebungen in Pixel für jede Position
+function drawText(target, x, y, label, color = "#a7a7a8", position = "belowright") {
     const offsets = {
         belowright: { dx: 12, dy: 19 },
         belowleft: { dx: -19, dy: 19 },
         aboveright: { dx: 5, dy: -5 },
-        aboveleft: { dx: -5, dy: -5 },
-        left: { dx: -10, dy: 5 },
+        aboveleft: { dx: -15, dy: -15 },
+        left: { dx: -25, dy: 5 },
         right: { dx: 15, dy: 5 },
         above: { dx: 0, dy: -25 },
         below: { dx: 0, dy: 21 },
@@ -73,48 +127,119 @@ function drawText(svg, x, y, label, color = "#a7a7a8", position = "belowright") 
     const offset = offsets[position] || offsets.belowright;
     const style = smartTextStyle(label);
 
-    svg.innerHTML += `<text x="${x + offset.dx}" y="${y + offset.dy}" fill="${color}"
-    font-family="${style['font-family']}"
-    font-style="${style['font-style']}"
-    font-size="${style['font-size']}"
-    dominant-baseline="middle">${label}</text>`;
+    const textEl = document.createElementNS("http://www.w3.org/2000/svg", "text");
+    textEl.setAttribute("x", x + offset.dx);
+    textEl.setAttribute("y", y + offset.dy);
+    textEl.setAttribute("fill", color);
+    textEl.setAttribute("font-family", style["font-family"]);
+    textEl.setAttribute("font-style", style["font-style"]);
+    textEl.setAttribute("font-size", style["font-size"]);
+    textEl.setAttribute("dominant-baseline", "middle");
+    textEl.textContent = label;
+
+    target.appendChild(textEl);
 }
 
 // === Punkte ===
-function drawPoint(svg, pos, label = "", color = "red", position = "belowright") {
+function drawPoint(target, pos, label = "", color = "red", position = "belowright", radius = 4) {
     const [x, y] = project(pos);
-    svg.innerHTML += `<circle cx="${x}" cy="${y}" r="4" fill="${color}" />`;
-    drawText(svg, x, y, label, color, position);
+    const circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+    circle.setAttribute("cx", x);
+    circle.setAttribute("cy", y);
+    circle.setAttribute("r", radius);
+    circle.setAttribute("fill", color);
+    target.appendChild(circle);
+
+    drawText(target, x, y, label, color, position);
 }
 
 // === Vektoren ===
-function drawVector(svg, start, dir, label = "", color = "blue", position = "belowright") {
+function drawVector(target, start, dir, label = "", color = "blue", position = "belowright", thickness = 2.5) {
+
     const [x1, y1] = project(start);
-    const [x2, y2] = project([start[0] + dir[0], start[1] + dir[1], start[2] + dir[2]]);
+    const [x2, y2] = project([
+        start[0] + dir[0],
+        start[1] + dir[1],
+        start[2] + dir[2]
+    ]);
 
-    const markerUrl = ensureArrowMarker(svg, color);
+    const svgRoot = findSVGRoot(target);
+    const markerUrl = ensureArrowMarker(svgRoot, color);
 
-    svg.innerHTML += `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" 
-    stroke="${color}" stroke-width="2.5" marker-end="${markerUrl}" />`;
+    const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+    line.setAttribute("x1", x1);
+    line.setAttribute("y1", y1);
+    line.setAttribute("x2", x2);
+    line.setAttribute("y2", y2);
+    line.setAttribute("stroke", color);
+    line.setAttribute("stroke-width", thickness);
+    line.setAttribute("marker-end", markerUrl);
+    target.appendChild(line);
 
-    drawText(svg, x2, y2, vectorLabel(label), color, position);
+
+    if (label) {
+        // Mittelpunkt für Label
+        const mx = (x1 + x2) / 2;
+        const my = (y1 + y2) / 2;
+
+        drawText(target, mx, my, vectorLabel(label), color, position);
+    }
+
+}
+// === Strecke ===
+function drawSegment(target, p1, p2, label = "", color = "green", position = "above", thickness = 1.5) {
+    // Projektion der Punkte ins 2D
+    const [x1, y1] = project(p1);
+    const [x2, y2] = project(p2);
+
+    // Linie zeichnen
+    const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+    line.setAttribute("x1", x1);
+    line.setAttribute("y1", y1);
+    line.setAttribute("x2", x2);
+    line.setAttribute("y2", y2);
+    line.setAttribute("stroke", color);
+    line.setAttribute("stroke-width", thickness);
+    target.appendChild(line);
+
+    // Mittelpunkt für Label
+    const mx = (x1 + x2) / 2;
+    const my = (y1 + y2) / 2;
+
+    // Label setzen
+    if (label) {
+        drawText(target, mx, my, label, color, position);
+    }
 }
 
 // === Geraden ===
-function drawLine(svg, point, dir, label = "", color = "green", position = "belowright") {
+function drawLine(target, point, dir, label = "", color = "green", position = "belowright", thickness = 1.5) {
     const t = 100;
     const p1 = [point[0] - t * dir[0], point[1] - t * dir[1], point[2] - t * dir[2]];
     const p2 = [point[0] + t * dir[0], point[1] + t * dir[1], point[2] + t * dir[2]];
     const [x1, y1] = project(p1);
     const [x2, y2] = project(p2);
-    svg.innerHTML += `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" 
-                      stroke="${color}" stroke-width="1.5" stroke-dasharray="5,5" />`;
-    drawText(svg, x2, y2, label, color, position);
+
+    // Linie zeichnen
+    const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+    line.setAttribute("x1", x1);
+    line.setAttribute("y1", y1);
+    line.setAttribute("x2", x2);
+    line.setAttribute("y2", y2);
+    line.setAttribute("stroke", color);
+    line.setAttribute("stroke-width", thickness);
+    line.setAttribute("stroke-dasharray", "5,5");
+    target.appendChild(line);
+
+    // Beschriftung am Stützvektor
+    const [px, py] = project(point);
+    drawText(target, px, py, label, color, position);
 }
 
+
 // === Ebenen ===
-function drawPlane(svg, p0, v1, v2, label = "", color = "orange", position = "belowright") {
-    const steps = [-10, 10];
+function drawPlane(target, p0, v1, v2, label = "", color = "orange", position = "belowright") {
+    const steps = [-1.5, 1.5];
     const corners = [
         [0, 0], [1, 0], [1, 1], [0, 1]
     ].map(([a, b]) =>
@@ -122,49 +247,136 @@ function drawPlane(svg, p0, v1, v2, label = "", color = "orange", position = "be
         p0[1] + (a ? steps[1] * v1[1] : steps[0] * v1[1]) + (b ? steps[1] * v2[1] : steps[0] * v2[1]),
         p0[2] + (a ? steps[1] * v1[2] : steps[0] * v1[2]) + (b ? steps[1] * v2[2] : steps[0] * v2[2])]
     );
-    const projected = corners.map(project).map(([x, y]) => `${x},${y}`).join(' ');
+
+    const projected = corners.map(project).map(([x, y]) => `${x},${y}`).join(" ");
     const [xText, yText] = project(p0);
-    svg.innerHTML += `<polygon points="${projected}" 
-                      fill="${color}" fill-opacity="0.25" stroke="${color}" stroke-width="0.5" />`;
-    drawText(svg, xText, yText, label, color);
+
+    const poly = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
+    poly.setAttribute("points", projected);
+    poly.setAttribute("fill", color);
+    poly.setAttribute("fill-opacity", "0.25");
+    poly.setAttribute("stroke", color);
+    poly.setAttribute("stroke-width", "0.5");
+    target.appendChild(poly);
+
+    drawText(target, xText, yText, label, color, position);
 }
 
 // === Koordinatensystem ===
-function drawAxes(svg, xMax = 4, yMax = 4, zMax = 4, xColor = "#a7a7a8", yColor = "#a7a7a8", zColor = "#a7a7a8") {
-    // Farben für Achsen
+function drawAxes(target, xMax = 4, yMax = 4, zMax = 4, xColor = "#a7a7a8", yColor = "#a7a7a8", zColor = "#a7a7a8") {
     const colors = { x: xColor, y: yColor, z: zColor };
 
-    // 2D vs 3D
-    if (isNaN(zMax)){ // 2D
-        // x-Achse
-        const markerX = ensureArrowMarker(svg, colors.x);
-        svg.innerHTML += `<line x1="0" y1="0" x2="${project(plane2space([xMax, 0]))[0]}" y2="${project(plane2space([xMax, 0]))[1]}"
-        stroke="${colors.x}" stroke-width="2" marker-end="${markerX}" />`;
-        drawText(svg, project(plane2space([xMax, 0]))[0], project(plane2space([xMax, 0]))[1], "x", colors.x, "belowright");
+    if (isNaN(zMax)) { // 2D
+        const markerX = ensureArrowMarker(target, colors.x);
+        const [xX, yX] = project(plane2space([xMax, 0]));
+        const lineX = document.createElementNS("http://www.w3.org/2000/svg", "line");
+        lineX.setAttribute("x1", 0);
+        lineX.setAttribute("y1", 0);
+        lineX.setAttribute("x2", xX);
+        lineX.setAttribute("y2", yX);
+        lineX.setAttribute("stroke", colors.x);
+        lineX.setAttribute("stroke-width", "2");
+        lineX.setAttribute("marker-end", markerX);
+        target.appendChild(lineX);
+        drawText(target, xX, yX, "x", colors.x, "belowright");
 
-        // y-Achse
-        const markerY = ensureArrowMarker(svg, colors.y);
-        svg.innerHTML += `<line x1="0" y1="0" x2="${project(plane2space([0, yMax]))[0]}" y2="${project(plane2space([0, yMax]))[1]}"
-        stroke="${colors.y}" stroke-width="2" marker-end="${markerY}" />`;
-        drawText(svg, project(plane2space([0, yMax]))[0], project(plane2space([0, yMax]))[1], "y", colors.y, "above");
+        const markerY = ensureArrowMarker(target, colors.y);
+        const [xY, yY] = project(plane2space([0, yMax]));
+        const lineY = document.createElementNS("http://www.w3.org/2000/svg", "line");
+        lineY.setAttribute("x1", 0);
+        lineY.setAttribute("y1", 0);
+        lineY.setAttribute("x2", xY);
+        lineY.setAttribute("y2", yY);
+        lineY.setAttribute("stroke", colors.y);
+        lineY.setAttribute("stroke-width", "2");
+        lineY.setAttribute("marker-end", markerY);
+        target.appendChild(lineY);
+        drawText(target, xY, yY, "y", colors.y, "above");
+    } else { // 3D
+        const markerX = ensureArrowMarker(target, colors.x);
+        const [xX, yX] = project([xMax, 0, 0]);
+        const lineX = document.createElementNS("http://www.w3.org/2000/svg", "line");
+        lineX.setAttribute("x1", 0);
+        lineX.setAttribute("y1", 0);
+        lineX.setAttribute("x2", xX);
+        lineX.setAttribute("y2", yX);
+        lineX.setAttribute("stroke", colors.x);
+        lineX.setAttribute("stroke-width", "2");
+        lineX.setAttribute("marker-end", markerX);
+        target.appendChild(lineX);
+        drawText(target, xX, yX, "x", colors.x, "belowleft");
+
+        const markerY = ensureArrowMarker(target, colors.y);
+        const [xY, yY] = project([0, yMax, 0]);
+        const lineY = document.createElementNS("http://www.w3.org/2000/svg", "line");
+        lineY.setAttribute("x1", 0);
+        lineY.setAttribute("y1", 0);
+        lineY.setAttribute("x2", xY);
+        lineY.setAttribute("y2", yY);
+        lineY.setAttribute("stroke", colors.y);
+        lineY.setAttribute("stroke-width", "2");
+        lineY.setAttribute("marker-end", markerY);
+        target.appendChild(lineY);
+        drawText(target, xY, yY, "y", colors.y, "right");
+
+        const markerZ = ensureArrowMarker(target, colors.z);
+        const [xZ, yZ] = project([0, 0, zMax]);
+        const lineZ = document.createElementNS("http://www.w3.org/2000/svg", "line");
+        lineZ.setAttribute("x1", 0);
+        lineZ.setAttribute("y1", 0);
+        lineZ.setAttribute("x2", xZ);
+        lineZ.setAttribute("y2", yZ);
+        lineZ.setAttribute("stroke", colors.z);
+        lineZ.setAttribute("stroke-width", "2");
+        lineZ.setAttribute("marker-end", markerZ);
+        target.appendChild(lineZ);
+        drawText(target, xZ, yZ, "z", colors.z, "above");
     }
-    else { // 3D
-        // x-Achse
-        const markerX = ensureArrowMarker(svg, colors.x);
-        svg.innerHTML += `<line x1="0" y1="0" x2="${project([xMax, 0, 0])[0]}" y2="${project([xMax, 0, 0])[1]}"
-        stroke="${colors.x}" stroke-width="2" marker-end="${markerX}" />`;
-        drawText(svg, project([xMax, 0, 0])[0], project([xMax, 0, 0])[1], "x", colors.x, "belowleft");
+}
 
-        // y-Achse
-        const markerY = ensureArrowMarker(svg, colors.y);
-        svg.innerHTML += `<line x1="0" y1="0" x2="${project([0, yMax, 0])[0]}" y2="${project([0, yMax, 0])[1]}"
-        stroke="${colors.y}" stroke-width="2" marker-end="${markerY}" />`;
-        drawText(svg, project([0, yMax, 0])[0], project([0, yMax, 0])[1], "y", colors.y, "right");
-
-        // z-Achse
-        const markerZ = ensureArrowMarker(svg, colors.z);
-        svg.innerHTML += `<line x1="0" y1="0" x2="${project([0, 0, zMax])[0]}" y2="${project([0, 0, zMax])[1]}"
-        stroke="${colors.z}" stroke-width="2" marker-end="${markerZ}" />`;
-        drawText(svg, project([0, 0, zMax])[0], project([0, 0, zMax])[1], "z", colors.z, "above");
+// === Mit Animation ===
+function drawSequenceWithPersistence(svg, steps, duration = 10000, interval = 1000) {
+    let persistent = svg.querySelector("#persistentGroup");
+    if (!persistent) {
+        persistent = document.createElementNS("http://www.w3.org/2000/svg", "g");
+        persistent.setAttribute("id", "persistentGroup");
+        svg.appendChild(persistent);
     }
+
+    let animated = svg.querySelector("#animatedGroup");
+    if (!animated) {
+        animated = document.createElementNS("http://www.w3.org/2000/svg", "g");
+        animated.setAttribute("id", "animatedGroup");
+        svg.appendChild(animated);
+    }
+
+    function clearAnimated() {
+        animated.innerHTML = "";
+    }
+
+    function drawWithFade(target, fn) {
+        fn(target);
+        const last = target.lastElementChild;
+        if (last) last.classList.add("fade-in");
+    }
+
+    function run() {
+        clearAnimated();
+        steps.forEach((step, i) => {
+            setTimeout(() => {
+                const target = step.persistent ? persistent : animated;
+                drawWithFade(target, g => {
+                    if (step.type === "vector") drawVector(g, ...step.args);
+                    else if (step.type === "point") drawPoint(g, ...step.args);
+                    else if (step.type === "segment") drawSegment(g, ...step.args);
+                    else if (step.type === "line") drawLine(g, ...step.args);
+                    else if (step.type === "plane") drawPlane(g, ...step.args);
+                });
+            }, interval * i + interval);
+        });
+
+        setTimeout(run, duration);
+    }
+
+    run();
 }

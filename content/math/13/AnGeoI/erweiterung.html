@@ -11,11 +11,12 @@
   <link rel="stylesheet" type="text/css" href="/css/navbar.css" />
   <link rel="stylesheet" type="text/css" href="/css/styles.css" />
   <link rel="stylesheet" type="text/css" href="/css/courses.css" />
+  <link rel="stylesheet" type="text/css" href="/css/oktanten.css" />
   <script type="text/javascript" src="jquery-3.3.1.js"></script>
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-  
+
 </head>
 
 <body>
@@ -57,66 +58,261 @@
 
       <div class="theorie">
         <div class="definition">
-          <h4>Was ist das?</h4>
+          <h4>Erweiterung des Koordinatensystems</h4>
           <p>
-
+            Den bisherigen zwei Achsen (\(x\) und \(y\)) fügen wir nun eine dritte Raumachse \(z\) hinzu.
+            Aus \(P(x\,|\,y)\) wird \(P(x\,|\,y\,|\,z)\).
           </p>
-
-
-
+          <div class="course-container" style="gap: 10px; flex-grow: 1; margin-bottom: 20px;">
+            <div style="flex: 1; min-width: 250px;">
+              <div class="centered" style="max-width: 450px">
+                <svg id="koord2D" viewBox="-200 -250 600 400">
+                  <defs></defs>
+                </svg>
+              </div>
+            </div>
+            <div style="flex: 1; min-width: 250px;">
+              <div class="centered" style="max-width: 450px">
+                <svg id="koord3D" viewBox="-200 -250 600 400">
+                  <defs></defs>
+                </svg>
+              </div>
+            </div>
+          </div>
+          <p>
+            Die Koordinatenachsen werden nach der Rechten-Hand-Regel (\(x-y-z\)) angeordnet.
+          </p>
+          <p>
+            Die \(x\)-Achse wird im Winkel von \(45\,^\circ\) nach unten gerichtet und um den Faktor
+            \(\frac{1}{\sqrt2}\approx 0,7\) verkürzt.
+            In der Vorstellung liegen die \(y\)- und \(z\)-Achse auf der Bildschirm/Papierebene, während die \(x\)-Achse
+            aus
+            dieser heraus zeigt.
+          </p>
+          <p>
+            Das bedeutet: Auf klassischem quadratischen Kästchenpapier würde eine Einheit in \(y\)- und \(z\)-Richtung
+            zwei Kästchen beinhalten. Die \(x\)-Achse geht dagegen pro Einheit nur ein Kästchen diagonal nach unten.
+          </p>
         </div>
 
+        <h4>Eintragung von Punkten</h4>
+        <p>Um nun einen Punkt in das Koordinatensystem einzutragen, wird ähnlich vorgegangen wie früher.</p>
+        <p>
+          Der Punkt \({\color{magenta}A}({\color{lime}2}\,|\,{\color{cyan}4}\,|\,{\color{orange}3})\) wird
+          folgendermaßen eingetragen:
+        <ul>
+          <li><span style="color: lime">Zwei Schritte in \(x\)-Richtung</span> </li>
+          <li><span style="color: cyan">Vier Schritte in \(y\)-Richtung</span> </li>
+          <li><span style="color: orange">Drei Schritte in \(z\)-Richtung</span> </li>
+        </ul>
+        <div class="centered" style="max-height: 250px;">
+          <svg id="point1" viewBox="-200 -240 600 370">
+            <defs></defs>
+          </svg>
+        </div>
+        </p>
+        <p>
+          Der Punkt \({\color{coral}B}({\color{lime}-4}\,|\,{\color{cyan}-5}\,|\,{\color{orange}-2})\) wird
+          folgendermaßen eingetragen:
+        <ul>
+          <li><span style="color: lime">Vier Schritte in negativer \(x\)-Richtung</span> </li>
+          <li><span style="color: cyan">Fünf Schritte in negativer \(y\)-Richtung</span> </li>
+          <li><span style="color: orange">Zwei Schritte in negativer \(z\)-Richtung</span> </li>
+        </ul>
+        <div class="centered" style="max-height: 250px;">
+          <svg id="point2" viewBox="-200 -240 600 370">
+            <defs></defs>
+          </svg>
+        </div>
+        </p>
+        <p>
+          Durch die Projektion dreier Koordinaten auf eine Ebene mit eigentlich zwei Koordinaten ist der Weg rückwärts
+          ohne weitere Hilfen nicht eindeutig.
+        </p>
+        <p>
+          Die Punkte \({\color{violet}C}(-4\,|\,0\,|\,0)\) und \({\color{pink}D}(0\,|\,2\,|\,2)\) beispielsweise liegen
+          in dieser Ansicht aufeinander, obwohl sie nicht gleich sind:
+        <div class="centered" style="max-height: 250px;">
+          <svg id="point3" viewBox="-200 -240 600 370">
+            <defs></defs>
+          </svg>
+        </div>
+        Es gibt unendlich viele weitere Punkte, die ebenfalls auf diesen Punkten zu liegen scheinen.
+        </p>
 
-        <h1>Beispiel: Zwei 3D-Grafiken auf einer Seite</h1>
 
-  <!-- SVG 1 -->
-  <h2>Grafik 1: Punkte und Vektoren</h2>
-  <svg id="canvas1" width="600" height="400" viewBox="-400 -300 800 600">
-    <defs>
-      <marker id="arrow" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto" markerUnits="strokeWidth">
-        <path d="M0,0 L0,6 L9,3 z" fill="black" />
-      </marker>
-    </defs>
-  </svg>
+        <!-- JS-Datei mit allen Funktionen -->
+        <script src="/js/math/geo3d.js"></script>
 
-  <!-- SVG 2 -->
-  <h2>Grafik 2: Gerade und Ebene</h2>
-  <svg id="canvas2" width="600" height="400" viewBox="-400 -300 800 600">
-    <defs>
-      <marker id="arrow" markerWidth="10" markerHeight="10" refX="5" refY="3" orient="auto" markerUnits="strokeWidth">
-        <path d="M0,0 L0,6 L9,3 z" fill="black" />
-      </marker>
-    </defs>
-  </svg>
+        <script>
+          drawAxes(koord2D, 4, 4, "a");
+          drawAxes(koord3D, 4, 4, 4);
 
-  <!-- JS-Datei mit allen Funktionen -->
-  <script src="/js/math/geo3d.js"></script>
-  <script>
-    const svg1 = document.getElementById("canvas1");
-    const svg2 = document.getElementById("canvas2");
+          drawPoint(koord2D, [0, 2, 1], "P", "green")
+          drawPoint(koord3D, [2, 2, 0], "P", "green")
 
-    // === Grafik 1: Punkte und Vektoren ===
-    drawAxes(svg1, 4, 4, 4);
 
-    drawPoint(svg1, [1, 2, 3], "A", "red");
-    drawPoint(svg1, [-1, 1, 2], "B", "green");
-    drawVector(svg1,[0,0,0], [1,0,0], "1", "darkgoldenrod");
-    drawVector(svg1,[1,0,0], [1,0,0], "2", "lime");
-    drawVector(svg1,[2,0,0], [1,0,0], "3", "pink");
-    drawVector(svg1,[3,0,0], [1,0,0], "4", "aqua");
 
-    drawVector(svg1,[0,0,0], [0,1,0], "1", "darkgoldenrod", "below");
-    drawVector(svg1,[0,1,0], [0,1,0], "2", "lime", "below");
-    // drawVector(svg1, [0, 0, 0], [2, 1, 1], "v", "blue");
-    // drawVector(svg1, [1, 2, 3], [-1, -1, 0], "w", "purple");
+          for (let i = -5.5; i < 5.5; i += 0.5) {
+            drawSegment(point1, [0, -5, i], [0, 5, i], "", "#343434", "below", 1.0);
+          }
+          for (let i = -5; i < 5.5; i += 0.5) {
+            drawSegment(point1, [0, i, -5.5], [0, i, 5.5], "", "#343434", "below", 1.0);
+          }
 
-    // === Grafik 2: Gerade und Ebene ===
-    drawAxes(svg2, 3, 3, "B");
+          drawAxes(point1, 4, 4, 4);
 
-    drawLine(svg2, [0, 0, 0], [1, 1, 0], "g", "teal");
-    drawPlane(svg2, [0, 0, 0], [1, 0, 0], [0, 1, 1], "E", "orange");
-    drawPoint(svg2, [1, 1, 1], "P", "black");
-  </script>
+          let steps = [
+            { type: "vector", args: [[0, 0, 0], [1, 0, 0], "1", "lime", "aboveleft"] },
+            { type: "vector", args: [[1, 0, 0], [1, 0, 0], "2", "lime", "aboveleft"] },
+            { type: "point", args: [[2, 4, 3], "", "transparent"] },
+            { type: "vector", args: [[2, 0, 0], [0, 1, 0], "1", "cyan", "below"] },
+            { type: "vector", args: [[2, 1, 0], [0, 1, 0], "2", "cyan", "below"] },
+            { type: "vector", args: [[2, 2, 0], [0, 1, 0], "3", "cyan", "below"] },
+            { type: "vector", args: [[2, 3, 0], [0, 1, 0], "4", "cyan", "below"] },
+            { type: "point", args: [[2, 4, 3], "", "transparent"] },
+            { type: "vector", args: [[2, 4, 0], [0, 0, 1], "1", "orange", "right"] },
+            { type: "vector", args: [[2, 4, 1], [0, 0, 1], "2", "orange", "right"] },
+            { type: "vector", args: [[2, 4, 2], [0, 0, 1], "3", "orange", "right"] },
+            { type: "point", args: [[2, 4, 3], "A", "magenta", "above", 5] },
+          ];
+
+          drawSequenceWithPersistence(point1, steps, 14000, 750);
+
+          for (let i = -5.5; i < 5.5; i += 0.5) {
+            drawSegment(point2, [0, -5, i], [0, 5, i], "", "#343434", "below", 1.0);
+          }
+          for (let i = -5; i < 5.5; i += 0.5) {
+            drawSegment(point2, [0, i, -5.5], [0, i, 5.5], "", "#343434", "below", 1.0);
+          }
+
+          drawAxes(point2, 4, 4, 4);
+
+          steps = [
+            { type: "vector", args: [[0, 0, 0], [-1, 0, 0], "1", "lime", "belowright"] },
+            { type: "vector", args: [[-1, 0, 0], [-1, 0, 0], "2", "lime", "belowright"] },
+            { type: "vector", args: [[-2, 0, 0], [-1, 0, 0], "3", "lime", "belowright"] },
+            { type: "vector", args: [[-3, 0, 0], [-1, 0, 0], "4", "lime", "belowright"] },
+            { type: "point", args: [[2, 4, 3], "", "transparent"] },
+            { type: "vector", args: [[-4, 0, 0], [0, -1, 0], "1", "cyan", "above"] },
+            { type: "vector", args: [[-4, -1, 0], [0, -1, 0], "2", "cyan", "above"] },
+            { type: "vector", args: [[-4, -2, 0], [0, -1, 0], "3", "cyan", "above"] },
+            { type: "vector", args: [[-4, -3, 0], [0, -1, 0], "4", "cyan", "above"] },
+            { type: "vector", args: [[-4, -4, 0], [0, -1, 0], "5", "cyan", "above"] },
+            { type: "point", args: [[2, 4, 3], "", "transparent"] },
+            { type: "vector", args: [[-4, -5, 0], [0, 0, -1], "1", "orange", "left"] },
+            { type: "vector", args: [[-4, -5, -1], [0, 0, -1], "2", "orange", "left"] },
+            { type: "point", args: [[-4, -5, -2], "B", "coral", "below", 5] },
+          ];
+
+          drawSequenceWithPersistence(point2, steps, 14000, 750);
+
+          for (let i = -5.5; i < 5.5; i += 0.5) {
+            drawSegment(point3, [0, -5, i], [0, 5, i], "", "#343434", "below", 1.0);
+          }
+          for (let i = -5; i < 5.5; i += 0.5) {
+            drawSegment(point3, [0, i, -5.5], [0, i, 5.5], "", "#343434", "below", 1.0);
+          }
+
+          drawAxes(point3, 4, 4, 4);
+
+          drawVector(point3, [0, 0, 0], [-1, 0, 0], "1", "lime", "above");
+          drawVector(point3, [-1, 0, 0], [-1, 0, 0], "2", "lime", "above");
+          drawVector(point3, [-2, 0, 0], [-1, 0, 0], "3", "lime", "above");
+          drawVector(point3, [-3, 0, 0], [-1, 0, 0], "4", "lime", "above");
+
+          drawPoint(point3, [-4, 0, 0], "C", "violet", "above", 8);
+
+          drawVector(point3, [0, 0, 0], [0, 1, 0], "1", "cyan", "below");
+          drawVector(point3, [0, 1, 0], [0, 1, 0], "2", "cyan", "below");
+          drawVector(point3, [0, 2, 0], [0, 0, 1], "1", "orange", "right");
+          drawVector(point3, [0, 2, 1], [0, 0, 1], "2", "orange", "right");
+
+          drawPoint(point3, [-4, 0, 0], "D", "pink", "right", 4);
+
+        </script>
+
+
+        <div class="definition">
+          <h4>Einteilung des Koordinatensystems</h4>
+          <p>
+            Das zweidimensionale Koordinatensystem wurde in vier Quadranten eingeteilt.
+          </p>
+          <p>Das dreidimensionale Koordinatensystem wird dagegen in acht Oktanten eingeteilt.</p>
+          <div class="course-container" style="gap: 10px; flex-grow: 1; margin-bottom: 20px;">
+            <div style="flex: 1; min-width: 250px;">
+              <div class="centered" style="max-width: 450px">
+                <svg viewBox="-5 -5.5 10.5 10.5" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Definiere Pfeilmarker -->
+                  <defs>
+                    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto">
+                      <polygon points="0 0, 0 6, 10 3" fill="#a7a7a8" />
+                    </marker>
+                  </defs>
+
+                  <!-- Achsen mit Pfeilen -->
+                  <line x1="-4.5" y1="0" x2="4.5" y2="0" stroke="#a7a7a8" stroke-width="0.05"
+                    marker-end="url(#arrowhead)" />
+                  <line x1="0" y1="4.5" x2="0" y2="-4.5" stroke="#a7a7a8" stroke-width="0.05"
+                    marker-end="url(#arrowhead)" />
+
+                  <!-- Achsenbeschriftung -->
+                  <text x="4.8" y="0.2" font-size="0.5" fill="#a7a7a8" font-style="italic"
+                    font-family="Times New Roman">x</text>
+                  <text x="0.2" y="-4.6" font-size="0.5" fill="#a7a7a8" font-style="italic"
+                    font-family="Times New Roman">y</text>
+
+                  <!-- Gitterlinien -->
+                  <g stroke="#343434" stroke-width="0.02" opacity="0">
+                    <!-- vertikale Linien -->
+                    <line x1="-4" y1="-4" x2="-4" y2="4" />
+                    <line x1="-3" y1="-4" x2="-3" y2="4" />
+                    <line x1="-2" y1="-4" x2="-2" y2="4" />
+                    <line x1="-1" y1="-4" x2="-1" y2="4" />
+                    <line x1="1" y1="-4" x2="1" y2="4" />
+                    <line x1="2" y1="-4" x2="2" y2="4" />
+                    <line x1="3" y1="-4" x2="3" y2="4" />
+                    <line x1="4" y1="-4" x2="4" y2="4" />
+                    <!-- horizontale Linien -->
+                    <line x1="-4" y1="-4" x2="4" y2="-4" />
+                    <line x1="-4" y1="-3" x2="4" y2="-3" />
+                    <line x1="-4" y1="-2" x2="4" y2="-2" />
+                    <line x1="-4" y1="-1" x2="4" y2="-1" />
+                    <line x1="-4" y1="1" x2="4" y2="1" />
+                    <line x1="-4" y1="2" x2="4" y2="2" />
+                    <line x1="-4" y1="3" x2="4" y2="3" />
+                    <line x1="-4" y1="4" x2="4" y2="4" />
+                  </g>
+
+                  <!-- Quadrantenbeschriftung (römisch) -->
+                  <text x="2" y="-2" font-size="0.7" fill="darkgoldenrod" font-family="Times New Roman" text-anchor="middle" alignment-baseline="middle">I</text>
+                  <!-- oben rechts -->
+                  <text x="-2" y="-2" font-size="0.7" fill="darkgoldenrod" font-family="Times New Roman" text-anchor="middle" alignment-baseline="middle">II</text>
+                  <!-- oben links -->
+                  <text x="-2" y="2" font-size="0.7" fill="darkgoldenrod" font-family="Times New Roman" text-anchor="middle" alignment-baseline="middle">III</text>
+                  <!-- unten links -->
+                  <text x="2" y="2" font-size="0.7" fill="darkgoldenrod" font-family="Times New Roman" text-anchor="middle" alignment-baseline="middle">IV</text>
+                  <!-- unten rechts -->
+
+
+                </svg>
+
+              </div>
+            </div>
+            <div style="flex: 1; min-width: 250px;">
+              <div class="centered" style="max-width: 450px">
+                <svg id="oktanten" viewBox="100 100 400 400" preserveAspectRatio="xMidYMid meet"></svg>
+              </div>                
+
+                <script src="/js/math/oktanten.js"></script>
+            </div>
+          </div>
+          <p>
+            Dementsprechend hat ein Punkt im fünften Oktanten positive \(x\)- und \(y\)-Koordinanten. Die \(z\)-Koordinate
+            ist dagegen negativ. Also z.B. \(P(2\,|\,6\,|\,-3)\).
+          </p>
+        </div>
+
 
 
 
