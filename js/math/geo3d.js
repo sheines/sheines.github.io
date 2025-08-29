@@ -128,10 +128,10 @@ function drawText(target, x, y, label, color = "#a7a7a8", position = "belowright
     const offsets = {
         belowright: { dx: 12, dy: 19 },
         belowleft: { dx: -19, dy: 19 },
-        aboveright: { dx: 5, dy: -5 },
+        aboveright: { dx: 5, dy: -15 },
         aboveleft: { dx: -15, dy: -15 },
         left: { dx: -25, dy: 5 },
-        right: { dx: 15, dy: 5 },
+        right: { dx: 15, dy: 0 },
         above: { dx: 0, dy: -25 },
         below: { dx: 0, dy: 21 },
         center: { dx: 0, dy: 0 }
@@ -200,7 +200,7 @@ function drawVector(target, start, dir, label = "", color = "blue", position = "
 
 }
 // === Strecke ===
-function drawSegment(target, p1, p2, label = "", color = "green", position = "above", thickness = 1.5) {
+function drawSegment(target, p1, p2, label = "", color = "green", position = "above", thickness = 1.5, dashed = false) {
     // Projektion der Punkte ins 2D
     const [x1, y1] = project(p1);
     const [x2, y2] = project(p2);
@@ -213,6 +213,8 @@ function drawSegment(target, p1, p2, label = "", color = "green", position = "ab
     line.setAttribute("y2", y2);
     line.setAttribute("stroke", color);
     line.setAttribute("stroke-width", thickness);
+    if (dashed)
+        line.setAttribute("stroke-dasharray", "5,5");
     target.appendChild(line);
 
     // Mittelpunkt für Label
@@ -283,7 +285,8 @@ function drawPolygon(
     fillColor = "lightblue",
     strokeColor = "cyan",
     position = "center",
-    thickness = 1.5
+    thickness = 1.5,
+    opacity = 0.6
 ) {
     if (!points3D || points3D.length < 3) {
         console.error("drawPolygon benötigt mindestens 3 Punkte.");
@@ -298,7 +301,7 @@ function drawPolygon(
     const poly = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
     poly.setAttribute("points", pointStr);
     poly.setAttribute("fill", fillColor);
-    poly.setAttribute("fill-opacity", 0.6);
+    poly.setAttribute("fill-opacity", opacity);
     poly.setAttribute("stroke", strokeColor);
     poly.setAttribute("stroke-width", thickness);
     target.appendChild(poly);
