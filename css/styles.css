@@ -216,6 +216,20 @@ dd {
   grid-column-start: 2;
 }
 
+.multicol-list {
+  columns: 210px;          /* minimale Spaltenbreite */
+  column-gap: 2em;         /* Abstand zwischen den Spalten */
+  list-style-position: inside;
+  /* padding: 0; */
+  margin: 0;
+}
+
+.multicol-list li {
+  break-inside: avoid;     /* sorgt dafür, dass ein li nicht getrennt wird */
+  -webkit-column-break-inside: avoid;
+  -moz-column-break-inside: avoid;
+}
+
 ol.custom-marker {
   counter-reset: list;
   margin: 5px 0;

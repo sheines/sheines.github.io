@@ -34,6 +34,13 @@
 
 //        </script>
 
+// Variablen
+let invertX = false;
+
+// x-Achse invertieren
+function invertXaxis(){
+    invertX = !invertX;
+}
 
 // === Projektion ===
 function project([x, y, z]) {
@@ -43,10 +50,16 @@ function project([x, y, z]) {
         return [0,0]; // fallback
     }
 
-    return [
-        (y - x / 2) * 50,
-        (-z + x / 2) * 50
-    ];
+    if (!invertX)
+        return [
+            (y - x / 2) * 50,
+            (-z + x / 2) * 50
+        ];
+    else
+        return [
+            (y + x / 2) * 50,
+            (-z - x / 2) * 50
+        ];
 }
 
 // === Unterstützung für 2D
@@ -262,6 +275,45 @@ function drawPlane(target, p0, v1, v2, label = "", color = "orange", position = 
     drawText(target, xText, yText, label, color, position);
 }
 
+// === Polygone ===
+function drawPolygon(
+    target,
+    points3D,
+    label = "",
+    fillColor = "lightblue",
+    strokeColor = "cyan",
+    position = "center",
+    thickness = 1.5
+) {
+    if (!points3D || points3D.length < 3) {
+        console.error("drawPolygon benötigt mindestens 3 Punkte.");
+        return;
+    }
+
+    // Projektion aller Punkte
+    const projected = points3D.map(project);
+    const pointStr = projected.map(([x, y]) => `${x},${y}`).join(" ");
+
+    // Polygon zeichnen
+    const poly = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
+    poly.setAttribute("points", pointStr);
+    poly.setAttribute("fill", fillColor);
+    poly.setAttribute("fill-opacity", 0.6);
+    poly.setAttribute("stroke", strokeColor);
+    poly.setAttribute("stroke-width", thickness);
+    target.appendChild(poly);
+
+    // Beschriftung in der Mitte
+    if (label) {
+        const [mx, my] = projected.reduce(
+            (acc, [x, y]) => [acc[0] + x, acc[1] + y],
+            [0, 0]
+        ).map(sum => sum / projected.length);
+
+        drawText(target, mx, my, label, strokeColor, position);
+    }
+}
+
 // === Koordinatensystem ===
 function drawAxes(target, xMax = 4, yMax = 4, zMax = 4, xColor = "#a7a7a8", yColor = "#a7a7a8", zColor = "#a7a7a8") {
     const colors = { x: xColor, y: yColor, z: zColor };
@@ -371,6 +423,7 @@ function drawSequenceWithPersistence(svg, steps, duration = 10000, interval = 10
                     else if (step.type === "segment") drawSegment(g, ...step.args);
                     else if (step.type === "line") drawLine(g, ...step.args);
                     else if (step.type === "plane") drawPlane(g, ...step.args);
+                    else if (step.type === "polygon") drawPolygon(g, ...step.args);
                 });
             }, interval * i + interval);
         });

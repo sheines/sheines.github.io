@@ -141,98 +141,6 @@
         </p>
 
 
-        <!-- JS-Datei mit allen Funktionen -->
-        <script src="/js/math/geo3d.js"></script>
-
-        <script>
-          drawAxes(koord2D, 4, 4, "a");
-          drawAxes(koord3D, 4, 4, 4);
-
-          drawPoint(koord2D, [0, 2, 1], "P", "green")
-          drawPoint(koord3D, [2, 2, 0], "P", "green")
-
-
-
-          for (let i = -5.5; i < 5.5; i += 0.5) {
-            drawSegment(point1, [0, -5, i], [0, 5, i], "", "#343434", "below", 1.0);
-          }
-          for (let i = -5; i < 5.5; i += 0.5) {
-            drawSegment(point1, [0, i, -5.5], [0, i, 5.5], "", "#343434", "below", 1.0);
-          }
-
-          drawAxes(point1, 4, 4, 4);
-
-          let steps = [
-            { type: "vector", args: [[0, 0, 0], [1, 0, 0], "1", "lime", "aboveleft"] },
-            { type: "vector", args: [[1, 0, 0], [1, 0, 0], "2", "lime", "aboveleft"] },
-            { type: "point", args: [[2, 4, 3], "", "transparent"] },
-            { type: "vector", args: [[2, 0, 0], [0, 1, 0], "1", "cyan", "below"] },
-            { type: "vector", args: [[2, 1, 0], [0, 1, 0], "2", "cyan", "below"] },
-            { type: "vector", args: [[2, 2, 0], [0, 1, 0], "3", "cyan", "below"] },
-            { type: "vector", args: [[2, 3, 0], [0, 1, 0], "4", "cyan", "below"] },
-            { type: "point", args: [[2, 4, 3], "", "transparent"] },
-            { type: "vector", args: [[2, 4, 0], [0, 0, 1], "1", "orange", "right"] },
-            { type: "vector", args: [[2, 4, 1], [0, 0, 1], "2", "orange", "right"] },
-            { type: "vector", args: [[2, 4, 2], [0, 0, 1], "3", "orange", "right"] },
-            { type: "point", args: [[2, 4, 3], "A", "magenta", "above", 5] },
-          ];
-
-          drawSequenceWithPersistence(point1, steps, 14000, 750);
-
-          for (let i = -5.5; i < 5.5; i += 0.5) {
-            drawSegment(point2, [0, -5, i], [0, 5, i], "", "#343434", "below", 1.0);
-          }
-          for (let i = -5; i < 5.5; i += 0.5) {
-            drawSegment(point2, [0, i, -5.5], [0, i, 5.5], "", "#343434", "below", 1.0);
-          }
-
-          drawAxes(point2, 4, 4, 4);
-
-          steps = [
-            { type: "vector", args: [[0, 0, 0], [-1, 0, 0], "1", "lime", "belowright"] },
-            { type: "vector", args: [[-1, 0, 0], [-1, 0, 0], "2", "lime", "belowright"] },
-            { type: "vector", args: [[-2, 0, 0], [-1, 0, 0], "3", "lime", "belowright"] },
-            { type: "vector", args: [[-3, 0, 0], [-1, 0, 0], "4", "lime", "belowright"] },
-            { type: "point", args: [[2, 4, 3], "", "transparent"] },
-            { type: "vector", args: [[-4, 0, 0], [0, -1, 0], "1", "cyan", "above"] },
-            { type: "vector", args: [[-4, -1, 0], [0, -1, 0], "2", "cyan", "above"] },
-            { type: "vector", args: [[-4, -2, 0], [0, -1, 0], "3", "cyan", "above"] },
-            { type: "vector", args: [[-4, -3, 0], [0, -1, 0], "4", "cyan", "above"] },
-            { type: "vector", args: [[-4, -4, 0], [0, -1, 0], "5", "cyan", "above"] },
-            { type: "point", args: [[2, 4, 3], "", "transparent"] },
-            { type: "vector", args: [[-4, -5, 0], [0, 0, -1], "1", "orange", "left"] },
-            { type: "vector", args: [[-4, -5, -1], [0, 0, -1], "2", "orange", "left"] },
-            { type: "point", args: [[-4, -5, -2], "B", "coral", "below", 5] },
-          ];
-
-          drawSequenceWithPersistence(point2, steps, 14000, 750);
-
-          for (let i = -5.5; i < 5.5; i += 0.5) {
-            drawSegment(point3, [0, -5, i], [0, 5, i], "", "#343434", "below", 1.0);
-          }
-          for (let i = -5; i < 5.5; i += 0.5) {
-            drawSegment(point3, [0, i, -5.5], [0, i, 5.5], "", "#343434", "below", 1.0);
-          }
-
-          drawAxes(point3, 4, 4, 4);
-
-          drawVector(point3, [0, 0, 0], [-1, 0, 0], "1", "lime", "above");
-          drawVector(point3, [-1, 0, 0], [-1, 0, 0], "2", "lime", "above");
-          drawVector(point3, [-2, 0, 0], [-1, 0, 0], "3", "lime", "above");
-          drawVector(point3, [-3, 0, 0], [-1, 0, 0], "4", "lime", "above");
-
-          drawPoint(point3, [-4, 0, 0], "C", "violet", "above", 8);
-
-          drawVector(point3, [0, 0, 0], [0, 1, 0], "1", "cyan", "below");
-          drawVector(point3, [0, 1, 0], [0, 1, 0], "2", "cyan", "below");
-          drawVector(point3, [0, 2, 0], [0, 0, 1], "1", "orange", "right");
-          drawVector(point3, [0, 2, 1], [0, 0, 1], "2", "orange", "right");
-
-          drawPoint(point3, [-4, 0, 0], "D", "pink", "right", 4);
-
-        </script>
-
-
         <div class="definition">
           <h4>Einteilung des Koordinatensystems</h4>
           <p>
@@ -241,7 +149,7 @@
           <p>Das dreidimensionale Koordinatensystem wird dagegen in acht Oktanten eingeteilt.</p>
           <div class="course-container" style="gap: 10px; flex-grow: 1; margin-bottom: 20px;">
             <div style="flex: 1; min-width: 250px;">
-              <div class="centered" style="max-width: 450px">
+              <div class="centered" style="max-width: 400px">
                 <svg viewBox="-5 -5.5 10.5 10.5" xmlns="http://www.w3.org/2000/svg">
                   <!-- Definiere Pfeilmarker -->
                   <defs>
@@ -285,13 +193,17 @@
                   </g>
 
                   <!-- Quadrantenbeschriftung (römisch) -->
-                  <text x="2" y="-2" font-size="0.7" fill="darkgoldenrod" font-family="Times New Roman" text-anchor="middle" alignment-baseline="middle">I</text>
+                  <text x="2" y="-2" font-size="0.7" fill="darkgoldenrod" font-family="Times New Roman"
+                    text-anchor="middle" alignment-baseline="middle">I</text>
                   <!-- oben rechts -->
-                  <text x="-2" y="-2" font-size="0.7" fill="darkgoldenrod" font-family="Times New Roman" text-anchor="middle" alignment-baseline="middle">II</text>
+                  <text x="-2" y="-2" font-size="0.7" fill="darkgoldenrod" font-family="Times New Roman"
+                    text-anchor="middle" alignment-baseline="middle">II</text>
                   <!-- oben links -->
-                  <text x="-2" y="2" font-size="0.7" fill="darkgoldenrod" font-family="Times New Roman" text-anchor="middle" alignment-baseline="middle">III</text>
+                  <text x="-2" y="2" font-size="0.7" fill="darkgoldenrod" font-family="Times New Roman"
+                    text-anchor="middle" alignment-baseline="middle">III</text>
                   <!-- unten links -->
-                  <text x="2" y="2" font-size="0.7" fill="darkgoldenrod" font-family="Times New Roman" text-anchor="middle" alignment-baseline="middle">IV</text>
+                  <text x="2" y="2" font-size="0.7" fill="darkgoldenrod" font-family="Times New Roman"
+                    text-anchor="middle" alignment-baseline="middle">IV</text>
                   <!-- unten rechts -->
 
 
@@ -302,26 +214,28 @@
             <div style="flex: 1; min-width: 250px;">
               <div class="centered" style="max-width: 450px">
                 <svg id="oktanten" viewBox="100 100 400 400" preserveAspectRatio="xMidYMid meet"></svg>
-              </div>                
+              </div>
 
-                <script src="/js/math/oktanten.js"></script>
+              <script src="/js/math/oktanten.js"></script>
             </div>
           </div>
           <p>
-            Dementsprechend hat ein Punkt im fünften Oktanten positive \(x\)- und \(y\)-Koordinanten. Die \(z\)-Koordinate
+            Dementsprechend hat ein Punkt im fünften Oktanten positive \(x\)- und \(y\)-Koordinanten. Die
+            \(z\)-Koordinate
             ist dagegen negativ. Also z.B. \(P(2\,|\,6\,|\,-3)\).
           </p>
         </div>
         <h6>Weitere Einordnungen:</h6>
         <p>Die weiter oben beschriebenen Punkte \(A\) bis \(D\) liegen:
-            <ul>
-              <li>\({\color{magenta}A}\): im ersten Oktanten, weil alle Koordinaten positiv sind.</li>
-              <li>\({\color{coral}B}\): im siebten Oktanten, weil alle Koordinaten negativ sind.</li>
-              <li>\({\color{violet}C}\): auf der \(x\)-Achse (und damit keinem Oktanten), weil alle Koordinaten außer der 
-                \(x\)-Achse null sind.</li>
-              <li>\({\color{pink}D}\): in der \(yz\)-Ebene (und damit in keinem Oktanten), weil die \(x\)-Koordinate null ist.</li>
-            </ul>
-          </p>
+        <ul>
+          <li>\({\color{magenta}A}\): im ersten Oktanten, weil alle Koordinaten positiv sind.</li>
+          <li>\({\color{coral}B}\): im siebten Oktanten, weil alle Koordinaten negativ sind.</li>
+          <li>\({\color{violet}C}\): auf der \(x\)-Achse (und damit keinem Oktanten), weil alle Koordinaten außer der
+            \(x\)-Achse null sind.</li>
+          <li>\({\color{pink}D}\): in der \(yz\)-Ebene (und damit in keinem Oktanten), weil die \(x\)-Koordinate null
+            ist.</li>
+        </ul>
+        </p>
       </div>
     </section>
     <!-- <section>
@@ -337,7 +251,7 @@
         <li>Buch, Seite 15 Übung 1 und 2 <a href="#a1">Lösungen</a></li>
         <li>Buch, Seite 16 Übung 3 und 4 (zusätzlich zeichnen) <a href="#a2">Lösungen</a></li>
         <li>Buch, Seite 16 Übung 5 und 6 <a href="#a3">Lösungen</a></li>
-        <li>Für Schnelle: Buch, Seite 16 Übung 6 bis 8</li>
+        <li>Für Schnelle: Buch, Seite 16 Übung 7 und 8  <a href="#a4">Lösungen</a></li>
 
       </ol>
     </section>
@@ -346,12 +260,443 @@
       <h3>Lösungen zur Erweiterung des Koordinatensystems</h3>
       <details id="a1">
         <summary>Koordinanten im Raum</summary>
-        <p>
+        <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
+          <li> \(A(0\,|\,25\,|\,0)\), \(B(-6\,|\,25\,|\,15)\), \(C(-6\,|\,-6\,|\,15)\),
+            \(D(12\,|\,-6\,|\,0)\), \(E(12\,|\,-6\,|\,24)\), \(F(9\,|\,-3\,|\,36)\)
+          </li>
+          <li>
+            \(U\) innerhalb, \(V\) außerhalb, \(W\) innerhalb
+          </li>
+          <li>\(\,\)
+            <div class="centered" style="max-height: 250px;">
+              <svg id="task1c" viewBox="-200 -400 600 600">
+                <defs></defs>
+              </svg>
+            </div>
+          </li>
+        </ol>
+      </details>
+      <details>
+        <summary>Geändertes Koordinatensystem</summary>
+          <div class="centered" style="max-height: 250px;">
+              <svg id="task2" viewBox="-200 -400 600 600">
+                <defs></defs>
+              </svg>
+            </div>
+      </details>
 
+      <details id="a2">
+        <summary>Punkte im Koordinatensystem</summary>
+        <ol class="custom-marker parens-around lower-alpha more-spacing multicol-list"> <!-- decimal -->
+          <li> IV. Oktant
+            <div>
+              <svg id="task3a" viewBox="-200 -300 600 500" style="max-height: 200px;">
+                <defs></defs>
+              </svg>
+            </div> 
+          </li>
+          <li> I. Oktant
+            <div>
+              <svg id="task3b" viewBox="-200 -300 600 500" style="max-height: 200px;">
+                <defs></defs>
+              </svg>
+            </div> 
+          </li>
+          <li> III. Oktant
+            <div>
+              <svg id="task3c" viewBox="-200 -300 600 500" style="max-height: 200px;">
+                <defs></defs>
+              </svg>
+            </div> 
+          </li>
+          <li> VIII. Oktant
+            <div>
+              <svg id="task3d" viewBox="-200 -300 600 500" style="max-height: 200px;">
+                <defs></defs>
+              </svg>
+            </div> 
+          </li>
+
+          <li> VII. Oktant
+            <div>
+              <svg id="task3e" viewBox="-200 -300 600 500" style="max-height: 200px;">
+                <defs></defs>
+              </svg>
+            </div> 
+          </li>
+          <li> II. Oktant
+            <div>
+              <svg id="task3f" viewBox="-200 -300 600 500" style="max-height: 200px;">
+                <defs></defs>
+              </svg>
+            </div> 
+          </li>
+          <li> VI. Oktant
+            <div>
+              <svg id="task3g" viewBox="-200 -300 600 500" style="max-height: 200px;">
+                <defs></defs>
+              </svg>
+            </div> 
+          </li>
+          <li> Kein Quadrant (Ursprung)
+            <div>
+              <svg id="task3h" viewBox="-200 -300 600 500" style="max-height: 200px;">
+                <defs></defs>
+              </svg>
+            </div> 
+          </li>
+        </ol>
+      </details>
+
+      <details >
+        <summary>Punkte auf den Achsen und Koordinantenebenen</summary>
+        <p>
+          Punkte in der \(xz\)-Ebene haben die \(y\)-Koordinate null.
         </p>
+        <p>
+          Punkte auf eine Achse haben zwei Nullen als Koordinanten.
+        </p>
+        
+        <ol class="custom-marker parens-around lower-alpha more-spacing multicol-list"> <!-- decimal -->
+          <li> kein Ebenen- oder Achspunkt
+            <div>
+              <svg id="task4a" viewBox="-200 -300 600 500" style="max-height: 200px;">
+                <defs></defs>
+              </svg>
+            </div> 
+          </li>
+          <li> kein Ebenen- oder Achspunkt (liegt auf \(xy\)-Ebene, aber das ist nicht gefragt)
+            <div>
+              <svg id="task4b" viewBox="-200 -300 600 500" style="max-height: 200px;">
+                <defs></defs>
+              </svg>
+            </div> 
+          </li>
+          <li> liegt auf \(z\)-Achse
+            <div>
+              <svg id="task4c" viewBox="-200 -300 600 520" style="max-height: 200px;">
+                <defs></defs>
+              </svg>
+            </div> 
+          </li>
+          <li> liegt auf \(xz\)-Ebene (und allen anderen Ebenen), liegt auf allen drei Achsen (Ursprung)
+            <div>
+              <svg id="task4d" viewBox="-200 -300 600 500" style="max-height: 200px;">
+                <defs></defs>
+              </svg>
+            </div> 
+          </li>
+
+          <li> liegt auf \(xz\)-Ebene
+            <div>
+              <svg id="task4e" viewBox="-200 -300 600 500" style="max-height: 200px;">
+                <defs></defs>
+              </svg>
+            </div> 
+          </li>
+          <li> kein Ebenen- oder Achspunkt (liegt auf \(yz\)-Ebene, aber das ist nicht gefragt)
+            <div>
+              <svg id="task4f" viewBox="-200 -300 600 500" style="max-height: 200px;">
+                <defs></defs>
+              </svg>
+            </div> 
+          </li>
+          <li> kein Ebenen- oder Achspunkt (liegt auf \(xy\)-Ebene, aber das ist nicht gefragt)
+            <div>
+              <svg id="task4g" viewBox="-200 -300 600 500" style="max-height: 200px;">
+                <defs></defs>
+              </svg>
+            </div> 
+          </li>
+          <li> liegt auf \(x\)-Achse
+            <div>
+              <svg id="task4h" viewBox="-200 -300 600 500" style="max-height: 200px;">
+                <defs></defs>
+              </svg>
+            </div> 
+          </li>
+
+
+        </ol>
+      </details>
+
+      <details id="a3">
+        <summary>Lage von Punkten</summary>
+        Koordinaten <i>ohne</i> Angaben können beliebig gewählt werden.
+        <ol class="custom-marker parens-around lower-alpha more-spacing multicol-list" > <!-- decimal -->
+          <li> 
+            <ul style="list-style: none;">
+              <li>\(x=0\)</li>
+              <li>\(z=0\)</li>
+            </ul>
+          </li>
+          <li> 
+            <ul style="list-style: none;">
+              <li>\(y=0\)</li>
+              <li>\(z=0\)</li>
+            </ul>
+          </li>
+          <li> 
+            <ul style="list-style: none;">
+              <li>\(z=0\)</li>
+            </ul>
+          </li>
+          <li> 
+            <ul style="list-style: none;">
+              <li>\(x=0\)</li>
+            </ul>
+          </li>
+          <li> 
+            <ul style="list-style: none;">
+              <li>\(y=0\)</li>
+            </ul>
+          </li>
+          <li> 
+            <ul style="list-style: none;">
+              <li>\(x=y\)</li>
+              <li>\(x > 0\)</li>
+              <li>\(y > 0\)</li>
+              <li>\(z=0\)</li>
+            </ul>
+          </li>
+        </ol>
+  
+        Für 5f:
+        <div class="centered">
+              <svg id="task5f" viewBox="-200 -300 600 500" style="max-height: 250px;">
+                <defs></defs>
+              </svg>
+            </div> 
+      </details>
+
+      <details>
+        <summary>Schrägbild</summary>
+        <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
+          <li> \(A(0\,|\,6\,|\,9)\), \(B(-8\,|\,6\,|\,9)\), \(C(-8\,|\,8\,|\,7)\),
+            \(D(-8\,|\,12\,|\,3)\), \(E(0\,|\,8\,|\,3)\), \(F(-4\,|\,0\,|\,3)\)
+          </li>
+          <li>
+            \(U\) außerhalb, \(V\) innerhalb, \(W\) auf der (rechten) Dachfläche
+          </li>
+        </ol>
       </details>
 
     </section>
+
+
+
+    <!-- JS-Datei mit allen Funktionen -->
+    <script src="/js/math/geo3d.js"></script>
+
+    <script>
+      drawAxes(koord2D, 4, 4, "a");
+      drawAxes(koord3D, 4, 4, 4);
+
+      drawPoint(koord2D, [0, 2, 1], "P", "green")
+      drawPoint(koord3D, [2, 2, 0], "P", "green")
+
+
+
+      for (let i = -5.5; i < 5.5; i += 0.5) {
+        drawSegment(point1, [0, -5, i], [0, 5, i], "", "#343434", "below", 1.0);
+      }
+      for (let i = -5; i < 5.5; i += 0.5) {
+        drawSegment(point1, [0, i, -5.5], [0, i, 5.5], "", "#343434", "below", 1.0);
+      }
+
+      drawAxes(point1, 4, 4, 4);
+
+      let steps = [
+        { type: "vector", args: [[0, 0, 0], [1, 0, 0], "1", "lime", "aboveleft"] },
+        { type: "vector", args: [[1, 0, 0], [1, 0, 0], "2", "lime", "aboveleft"] },
+        { type: "point", args: [[2, 4, 3], "", "transparent"] },
+        { type: "vector", args: [[2, 0, 0], [0, 1, 0], "1", "cyan", "below"] },
+        { type: "vector", args: [[2, 1, 0], [0, 1, 0], "2", "cyan", "below"] },
+        { type: "vector", args: [[2, 2, 0], [0, 1, 0], "3", "cyan", "below"] },
+        { type: "vector", args: [[2, 3, 0], [0, 1, 0], "4", "cyan", "below"] },
+        { type: "point", args: [[2, 4, 3], "", "transparent"] },
+        { type: "vector", args: [[2, 4, 0], [0, 0, 1], "1", "orange", "right"] },
+        { type: "vector", args: [[2, 4, 1], [0, 0, 1], "2", "orange", "right"] },
+        { type: "vector", args: [[2, 4, 2], [0, 0, 1], "3", "orange", "right"] },
+        { type: "point", args: [[2, 4, 3], "A", "magenta", "above", 5] },
+      ];
+
+      drawSequenceWithPersistence(point1, steps, 14000, 750);
+
+      for (let i = -5.5; i < 5.5; i += 0.5) {
+        drawSegment(point2, [0, -5, i], [0, 5, i], "", "#343434", "below", 1.0);
+      }
+      for (let i = -5; i < 5.5; i += 0.5) {
+        drawSegment(point2, [0, i, -5.5], [0, i, 5.5], "", "#343434", "below", 1.0);
+      }
+
+      drawAxes(point2, 4, 4, 4);
+
+      steps = [
+        { type: "vector", args: [[0, 0, 0], [-1, 0, 0], "1", "lime", "belowright"] },
+        { type: "vector", args: [[-1, 0, 0], [-1, 0, 0], "2", "lime", "belowright"] },
+        { type: "vector", args: [[-2, 0, 0], [-1, 0, 0], "3", "lime", "belowright"] },
+        { type: "vector", args: [[-3, 0, 0], [-1, 0, 0], "4", "lime", "belowright"] },
+        { type: "point", args: [[2, 4, 3], "", "transparent"] },
+        { type: "vector", args: [[-4, 0, 0], [0, -1, 0], "1", "cyan", "above"] },
+        { type: "vector", args: [[-4, -1, 0], [0, -1, 0], "2", "cyan", "above"] },
+        { type: "vector", args: [[-4, -2, 0], [0, -1, 0], "3", "cyan", "above"] },
+        { type: "vector", args: [[-4, -3, 0], [0, -1, 0], "4", "cyan", "above"] },
+        { type: "vector", args: [[-4, -4, 0], [0, -1, 0], "5", "cyan", "above"] },
+        { type: "point", args: [[2, 4, 3], "", "transparent"] },
+        { type: "vector", args: [[-4, -5, 0], [0, 0, -1], "1", "orange", "left"] },
+        { type: "vector", args: [[-4, -5, -1], [0, 0, -1], "2", "orange", "left"] },
+        { type: "point", args: [[-4, -5, -2], "B", "coral", "below", 5] },
+      ];
+
+      drawSequenceWithPersistence(point2, steps, 14000, 750);
+
+      for (let i = -5.5; i < 5.5; i += 0.5) {
+        drawSegment(point3, [0, -5, i], [0, 5, i], "", "#343434", "below", 1.0);
+      }
+      for (let i = -5; i < 5.5; i += 0.5) {
+        drawSegment(point3, [0, i, -5.5], [0, i, 5.5], "", "#343434", "below", 1.0);
+      }
+
+      drawAxes(point3, 4, 4, 4);
+
+      drawVector(point3, [0, 0, 0], [-1, 0, 0], "1", "lime", "above");
+      drawVector(point3, [-1, 0, 0], [-1, 0, 0], "2", "lime", "above");
+      drawVector(point3, [-2, 0, 0], [-1, 0, 0], "3", "lime", "above");
+      drawVector(point3, [-3, 0, 0], [-1, 0, 0], "4", "lime", "above");
+
+      drawPoint(point3, [-4, 0, 0], "C", "violet", "above", 8);
+
+      drawVector(point3, [0, 0, 0], [0, 1, 0], "1", "cyan", "below");
+      drawVector(point3, [0, 1, 0], [0, 1, 0], "2", "cyan", "below");
+      drawVector(point3, [0, 2, 0], [0, 0, 1], "1", "orange", "right");
+      drawVector(point3, [0, 2, 1], [0, 0, 1], "2", "orange", "right");
+
+      drawPoint(point3, [-4, 0, 0], "D", "pink", "right", 4);
+
+      // Alle Koordinaten durch 6
+      drawAxes(task1c, 4, 5, 7);
+
+      drawPolygon(task1c, [[2, 0, 0], [2, -1, 0], [2, -1, 4], [2, 0, 4]], "", "#787878", "darkgoldenrod", "", 4);
+      drawPolygon(task1c, [[2, 0, 0], [1, 0, 0], [1, 0, 4], [2, 0, 4]], "", "#787878", "darkgoldenrod", "", 4);
+      drawPolygon(task1c, [[1, 0, 0], [0, 0, 0], [0, 0, 2.5], [1, 0, 2.5]], "", "#787878", "darkgoldenrod", "", 4);
+      drawPolygon(task1c, [[0, 0, 0], [0, 4.167, 0], [0, 4.167, 2.5], [0, 0, 2.5]], "", "#787878", "darkgoldenrod", "", 4);
+      drawPolygon(task1c, [[0, 4.167, 0], [-1, 4.167, 0], [-1, 4.167, 2.5], [0, 4.167, 2.5]], "", "#787878", "darkgoldenrod", "", 4);
+      drawPolygon(task1c, [[0, 0, 2.5], [0, 4.167, 2.5], [-1, 4.167, 2.5], [-1, 0, 2.5]], "", "#787878", "darkgoldenrod", "", 4);
+      drawPolygon(task1c, [[1, 0, 2.5], [-1, -1, 2.5], [-1, 0, 2.5]], "", "#787878", "darkgoldenrod", "", 4);
+      drawPolygon(task1c, [[2, 0, 4], [1.5, -0.5, 6], [2, -1, 4]], "", "#898989", "darkgoldenrod", "", 4);
+      drawPolygon(task1c, [[2, 0, 4], [1.5, -0.5, 6], [1, 0, 4]], "", "#898989", "darkgoldenrod", "", 4);
+
+      // x-Achse invertieren (für Aufgabe)
+      invertXaxis();
+
+      // Alle Koordinaten durch 2
+      drawPolygon(task2,[[4,0,2],[4,-1,3],[0,-1,3],[0,0,2]], "", "#898989", "darkgoldenrod", "", 4,0.95);
+      drawAxes(task2,7,4,5);
+
+      drawPolygon(task2,[[4,0,0],[0,0,0],[0,0,2],[4,0,2]], "", "#343434", "darkgoldenrod", "", 4);
+      drawPolygon(task2,[[0,3,0],[0,0,0],[0,0,2],[0,3,2]], "", "#343434", "darkgoldenrod", "", 4);
+  
+      drawPolygon(task2,[[0,-2,2],[0,-1,3],[-1,0,3],[-2,0,2]], "", "#898989", "darkgoldenrod", "", 4,0.95);
+      drawPolygon(task2,[[-2,3,2],[-2,0,2],[-1,0,3],[-1,3,3]], "", "#898989", "darkgoldenrod", "", 4,0.95);
+
+      drawPolygon(task2,[[0,3,0],[-2,3,0],[-2,3,2],[-1,3,3],[0,3,2]],"","#787878","darkgoldenrod","",4);
+      drawPolygon(task2,[[-2,0,0],[-2,3,0],[-2,3,2],[-2,0,2]],"","#787878","darkgoldenrod","",4);
+      drawPolygon(task2,[[-2,0,0],[-2,0,2],[0,-2,2],[0,-2,0]],"","#787878","darkgoldenrod","",4);
+
+      // zurück invertieren
+      invertXaxis();
+
+      drawAxes(task3a,4,4,4);
+      drawVector(task3a,[0,0,0],[1,0,0],"","lime");
+      drawVector(task3a,[1,0,0],[0,-1,0],"","cyan");
+      drawVector(task3a,[1,-1,0],[0,0,3],"","orange");
+      drawPoint(task3a,[1,-1,3],"P","red","right",4);
+
+      drawAxes(task3b,4,4,4);
+      drawVector(task3b,[0,0,0],[2,0,0],"","lime");
+      drawVector(task3b,[2,0,0],[0,1,0],"","cyan");
+      drawVector(task3b,[2,1,0],[0,0,2],"","orange");
+      drawPoint(task3b,[2,1,2],"P","red","right",4);
+
+      drawAxes(task3c,4,4,4);
+      drawVector(task3c,[0,0,0],[-1,0,0],"","lime");
+      drawVector(task3c,[-1,0,0],[0,-1,0],"","cyan");
+      drawVector(task3c,[-1,-1,0],[0,0,4],"","orange");
+      drawPoint(task3c,[-1,-1,4],"P","red","right",4);
+
+      drawAxes(task3d,4,4,4);
+      drawVector(task3d,[0,0,0],[1,0,0],"","lime");
+      drawVector(task3d,[1,0,0],[0,-2,0],"","cyan");
+      drawVector(task3d,[1,-2,0],[0,0,-3],"","orange");
+      drawPoint(task3d,[1,-2,-3],"P","red","right",4);
+
+      drawAxes(task3e,4,4,4);
+      drawVector(task3e,[0,0,0],[-2,0,0],"","lime");
+      drawVector(task3e,[-2,0,0],[0,-2,0],"","cyan");
+      drawVector(task3e,[-2,-2,0],[0,0,-3],"","orange");
+      drawPoint(task3e,[-2,-2,-3],"P","red","right",4);
+
+      drawAxes(task3f,4,4,4);
+      drawVector(task3f,[0,0,0],[-2,0,0],"","lime");
+      drawVector(task3f,[-2,0,0],[0,1,0],"","cyan");
+      drawVector(task3f,[-2,1,0],[0,0,1],"","orange");
+      drawPoint(task3f,[-2,1,1],"P","red","right",4);
+
+      drawAxes(task3g,4,4,4);
+      drawVector(task3g,[0,0,0],[-2,0,0],"","lime");
+      drawVector(task3g,[-2,0,0],[0,1,0],"","cyan");
+      drawVector(task3g,[-2,1,0],[0,0,-1],"","orange");
+      drawPoint(task3g,[-2,1,-1],"P","red","right",4);
+
+      drawAxes(task3h,4,4,4);
+      drawPoint(task3h,[0,0,0],"P","red","right",4);
+
+      drawAxes(task4a,4,4,4);
+      drawVector(task4a,[0,0,0],[1,0,0],"","lime");
+      drawVector(task4a,[1,0,0],[0,-1,0],"","cyan");
+      drawVector(task4a,[1,-1,0],[0,0,3],"","orange");
+      drawPoint(task4a,[1,-1,3],"P","red","right",4);
+
+      drawAxes(task4b,4,4,4);
+      drawVector(task4b,[0,0,0],[2,0,0],"","lime");
+      drawVector(task4b,[2,0,0],[0,-1,0],"","cyan");
+      drawPoint(task4b,[2,-1,0],"P","red","left",4);
+      
+
+      drawAxes(task4c,4,4,4);
+      drawVector(task4c,[0,0,0],[0,0,-4],"","orange");
+      drawPoint(task4c,[0,0,-4],"P","red","right",4);
+
+      drawAxes(task4d,4,4,4);
+      drawPoint(task4d,[0,0,0],"P","red","right",4);
+
+      drawPlane(task4e,[0,0,0],[4,0,0],[0,0,2],"","darkgoldenrod")
+      drawAxes(task4e,4,4,4);
+     
+      drawVector(task4e,[0,0,0],[4,0,0],"","lime");
+      drawVector(task4e,[4,0,0],[0,0,-1],"","orange");
+      drawPoint(task4e,[4,0,-1],"P","red","right",4);
+
+      drawAxes(task4f,4,4,4);
+      drawVector(task4f,[0,0,0],[0,1,0],"","cyan");
+      drawVector(task4f,[0,1,0],[0,0,2],"","orange");
+      drawPoint(task4f,[0,1,2],"P","red","right",4);
+
+      drawAxes(task4g,4,4,4);
+      drawVector(task4g,[0,0,0],[1,0,0],"","lime");
+      drawVector(task4g,[1,0,0],[0,-3,0],"","cyan");
+      drawPoint(task4g,[1,-3,0],"P","red","left",4);
+
+      drawAxes(task4h,4,4,4);
+      drawVector(task4h,[0,0,0],[4,0,0],"","lime");
+      drawPoint(task4h,[4,0,0],"P","red","belowright",4);
+
+      
+      drawPlane(task5f,[2,2,0],[2.3,0,0],[0,2,0],"","darkgoldenrod");
+      drawAxes(task5f,4,4,4);
+      drawSegment(task5f,[0,0,0],[4.5,4.5,0],"","magenta",4);
+    </script>
 
     <section id="meme">
       <div class="images">
