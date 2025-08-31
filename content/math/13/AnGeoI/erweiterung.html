@@ -61,7 +61,7 @@
           <h4>Erweiterung des Koordinatensystems</h4>
           <p>
             Den bisherigen zwei Achsen (\(x\) und \(y\)) fügen wir nun eine dritte Raumachse \(z\) hinzu.
-            Aus \(P(x\,|\,y)\) wird \(P(x\,|\,y\,|\,z)\).
+            Aus \(P(x\mid y)\) wird \(P(x\mid y\mid z)\).
           </p>
           <div class="course-container" style="gap: 10px; flex-grow: 1; margin-bottom: 20px;">
             <div style="flex: 1; min-width: 250px;">
@@ -98,7 +98,7 @@
         <h4>Eintragung von Punkten</h4>
         <p>Um nun einen Punkt in das Koordinatensystem einzutragen, wird ähnlich vorgegangen wie früher.</p>
         <p>
-          Der Punkt \({\color{magenta}A}({\color{lime}2}\,|\,{\color{cyan}4}\,|\,{\color{orange}3})\) wird
+          Der Punkt \({\color{magenta}A}({\color{lime}2}\mid{\color{cyan}4}\mid{\color{orange}3})\) wird
           folgendermaßen eingetragen:
         <ul>
           <li><span style="color: lime">Zwei Schritte in \(x\)-Richtung</span> </li>
@@ -112,7 +112,7 @@
         </div>
         </p>
         <p>
-          Der Punkt \({\color{coral}B}({\color{lime}-4}\,|\,{\color{cyan}-5}\,|\,{\color{orange}-2})\) wird
+          Der Punkt \({\color{coral}B}({\color{lime}-4}\mid{\color{cyan}-5}\mid{\color{orange}-2})\) wird
           folgendermaßen eingetragen:
         <ul>
           <li><span style="color: lime">Vier Schritte in negativer \(x\)-Richtung</span> </li>
@@ -130,7 +130,7 @@
           ohne weitere Hilfen nicht eindeutig.
         </p>
         <p>
-          Die Punkte \({\color{violet}C}(-4\,|\,0\,|\,0)\) und \({\color{pink}D}(0\,|\,2\,|\,2)\) beispielsweise liegen
+          Die Punkte \({\color{violet}C}(-4\mid0\mid0)\) und \({\color{pink}D}(0\mid2\mid2)\) beispielsweise liegen
           in dieser Ansicht aufeinander, obwohl sie nicht gleich sind:
         <div class="centered" style="max-height: 250px;">
           <svg id="point3" viewBox="-200 -240 600 370">
@@ -233,7 +233,7 @@
           <p>
             Dementsprechend hat ein Punkt im fünften Oktanten positive \(x\)- und \(y\)-Koordinanten. Die
             \(z\)-Koordinate
-            ist dagegen negativ. Also z.B. \(P(2\,|\,6\,|\,-3)\).
+            ist dagegen negativ. Also z.B. \(P(2\mid6\mid-3)\).
           </p>
         </div>
         <h6>Weitere Einordnungen:</h6>
@@ -275,8 +275,8 @@
       <details id="a1">
         <summary>Koordinanten im Raum</summary>
         <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
-          <li> \(A(0\,|\,25\,|\,0)\), \(B(-6\,|\,25\,|\,15)\), \(C(-6\,|\,-6\,|\,15)\),
-            \(D(12\,|\,-6\,|\,0)\), \(E(12\,|\,-6\,|\,24)\), \(F(9\,|\,-3\,|\,36)\)
+          <li> \(A(0\mid25\mid0)\), \(B(-6\mid25\mid15)\), \(C(-6\mid-6\mid15)\),
+            \(D(12\mid-6\mid0)\), \(E(12\mid-6\mid24)\), \(F(9\mid-3\mid36)\)
           </li>
           <li>
             \(U\) innerhalb, \(V\) außerhalb, \(W\) innerhalb
@@ -486,8 +486,8 @@
       <details>
         <summary>Schrägbild</summary>
         <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
-          <li> \(A(0\,|\,6\,|\,9)\), \(B(-8\,|\,6\,|\,9)\), \(C(-8\,|\,8\,|\,7)\),
-            \(D(-8\,|\,12\,|\,3)\), \(E(0\,|\,8\,|\,3)\), \(F(-4\,|\,0\,|\,3)\)
+          <li> \(A(0\mid6\mid9)\), \(B(-8\mid6\mid9)\), \(C(-8\mid8\mid7)\),
+            \(D(-8\mid12\mid3)\), \(E(0\mid8\mid3)\), \(F(-4\mid0\mid3)\)
           </li>
           <li>
             \(U\) außerhalb, \(V\) innerhalb, \(W\) auf der (rechten) Dachfläche
@@ -500,14 +500,14 @@
 
         <ol class="custom-marker parens-around lower-alpha more-spacing multicol-list" style="columns: 300px;">
           <!-- decimal -->
-          <li> \(A'(2\,|\,0\,|\,2)\), \(B'(3\,|\,0\,|\,1)\), \(C'(5\,|\,0\,|\,5)\)
+          <li> \(A'(2\mid0\mid2)\), \(B'(3\mid0\mid1)\), \(C'(5\mid0\mid5)\)
             <div class="centered">
               <svg id="task7a" viewBox="-200 -300 600 500" style="max-height: 250px;">
                 <defs></defs>
               </svg>
             </div>
           </li>
-          <li> \(A'(0\,|\,3\,|\,2)\), \(B'(0\,|\,5\,|\,1)\), \(C'(0\,|\,5\,|\,5)\)
+          <li> \(A'(0\mid3\mid2)\), \(B'(0\mid5\mid1)\), \(C'(0\mid5\mid5)\)
             <div class="centered">
               <svg id="task7b" viewBox="-200 -300 600 500" style="max-height: 250px;">
                 <defs></defs>
@@ -521,7 +521,7 @@
       <details>
         <summary>Spiegelung eines Dreiecks</summary>
 
-        \(A'(2\,|\,-3\,|\,2)\), \(B'(3\,|\,-5\,|\,1)\), \(C'(5\,|\,-5\,|\,5)\)
+        \(A'(2\mid-3\mid2)\), \(B'(3\mid-5\mid1)\), \(C'(5\mid-5\mid5)\)
         <div class="centered">
           <svg id="task8" viewBox="-400 -300 800 500" style="max-height: 250px;">
             <defs></defs>
@@ -618,10 +618,10 @@
           </li>
           <li> Immer vorn links beginnend, gegen den Uhrzeigersinn
             <ul class="more-spacing" style="list-style: none; margin-top: 10px;">
-              <li>Boden: \((16\,|\,16\,|\,0)\), \((16\,|\,24\,|\,0)\), \((8\,|\,24\,|\,0)\), \((8\,|\,16\,|\,0)\)</li>
-              <li>Decke: \((16\,|\,16\,|\,20)\), \((16\,|\,24\,|\,20)\), \((8\,|\,24\,|\,20)\),
-                \((8\,|\,16\,|\,20)\)</li>
-              <li>Spitze: \((12\,|\,20\,|\,28)\)</li>
+              <li>Boden: \((16\mid16\mid0)\), \((16\mid24\mid0)\), \((8\mid24\mid0)\), \((8\mid16\mid0)\)</li>
+              <li>Decke: \((16\mid16\mid20)\), \((16\mid24\mid20)\), \((8\mid24\mid20)\),
+                \((8\mid16\mid20)\)</li>
+              <li>Spitze: \((12\mid20\mid28)\)</li>
             </ul>
           </li>
           <li>

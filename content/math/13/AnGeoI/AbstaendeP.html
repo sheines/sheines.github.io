@@ -48,7 +48,8 @@
       <h2>Abstand zweier Punkte</h2>
       <div class="ziele">
         <p>
-          Nachfolgend soll erklärt werden, wie der Abstand zweier Punkte im Raum berechnet wird und was damit gemacht werden kann.
+          Nachfolgend soll erklärt werden, wie der Abstand zweier Punkte im Raum berechnet wird und was damit gemacht
+          werden kann.
         </p>
         <p>
           <a href="#aufgaben">Direkt zu den Aufgaben</a>
@@ -59,7 +60,8 @@
         <div class="definition">
           <h4>Abstand</h4>
           <p>
-            Sowohl im zwei- wie im dreidimensionalen kann der Abstand \(d\) zweier Punkte mit dem Satz des Pythagoras berechnet werden.
+            Sowohl im zwei- wie im dreidimensionalen kann der Abstand \(d\) zweier Punkte mit dem Satz des Pythagoras
+            berechnet werden.
           </p>
           <div class="course-container" style="gap: 10px; flex-grow: 1; margin-bottom: 20px;">
             <div style="flex: 1; min-width: 250px;">
@@ -71,10 +73,10 @@
               <p>
                 Für Punkte in der Ebene (2D) gilt:
                 \begin{align*}
-                  d&=\sqrt{(\Delta x)^2+(\Delta y)^2} \\
-                  d&=\sqrt{(x_1-x_2)^2+(y_1-y_2)^2}
-                  \end{align*}
-                
+                d&=\sqrt{(\Delta x)^2+(\Delta y)^2} \\
+                d&=\sqrt{(x_1-x_2)^2+(y_1-y_2)^2}
+                \end{align*}
+
                 Dabei ist \(\Delta x\) die Änderung in \(x\)-Richtung.
               </p>
             </div>
@@ -85,24 +87,133 @@
                 </svg>
               </div>
               <p>
-              Die beiden dargestellten Dreiecke sind rechtwinklig. Das Dreieck 
-              \(\color{aqua}\triangle d'\Delta x\Delta y\) ist  <span style="color: darkgoldenrod; opacity: 0.6;">parallel zur (xy\)-Ebene</span>.
-            </p>
-            <p>
-              Für die Strecke \(d'\) kann die Formel aus der Ebene (3D) verwendet werden.
-            </p>
-            <p>
-              Für Punkte im Raum (3D) gilt:
-              \begin{align*}
-                  d&=\sqrt{(d')^2+(\Delta z)^2} \\
-                  d&=\sqrt{(x_1-x_2)^2+(y_1-y_2)^2+(z_1-z_2)^2}
-                  \end{align*}
-            </p>
+                Die beiden dargestellten Dreiecke sind rechtwinklig (\(d\), bzw. \(d'\) ist jeweils die Hypotenuse). Das
+                Dreieck
+                \(\color{aqua}\triangle d'\Delta x\Delta y\) ist <span
+                  style="color: darkgoldenrod; opacity: 0.6;">parallel zur \(xy\)-Ebene</span>.
+              </p>
+              <p>
+                Für die Strecke \(d'\) kann die Formel aus der Ebene (3D) verwendet werden.
+              </p>
+              <p>
+                Für Punkte im Raum (3D) gilt:
+                \begin{align*}
+                d&=\sqrt{(d')^2+(\Delta z)^2} \\
+                d&=\sqrt{(x_1-x_2)^2+(y_1-y_2)^2+(z_1-z_2)^2}
+                \end{align*}
+              </p>
             </div>
-            
           </div>
-      
+          <p>
+            Aufgrund des Quadrates ist die Reihenfolge der Punkte innerhalb der Klammern egal.
+          </p>
+          <h3>Schreibweisen</h3>
+          <p>
+            Für den Abstand zwischen zwei Punkten, zum Beispiel \(P\) und \(Q\) gibt es mehrere Schreibweisen:
+            <ul class="multicol-list" style="columns: 100px;">
+              <li>\(d_{PQ}\)</li>
+              <li>\(d(P,Q)\)</li>
+              <li>\(|PQ|\)</li>
+              <li>\(|\overline{PQ}|\)</li>
+            </ul>
+            Alle meinen das Selbe. Es ist egal, welche ihr verwendet. Ihr solltet aber die jeweils anderen verstehen. Versucht in euren 
+            Schreibweisen konsistent zu sein.
+          </p>
         </div>
+
+        <h6>Beispiel 1: Ebene (2D)</h6>
+        <p>
+          Es soll der Abstand zwischen den Punkten \(P({\color{green}{4}}\mid {\color{orange}{2}})\)
+          und \(Q({\color{cyan}{1}}\mid {\color{red}{-2}})\) bestimmt werden.
+        </p>
+        <p>
+          Dazu müssen die Punkte lediglich in die Formel eingesetzt werden:
+        </p>
+        <p style="margin-left: 20px;">
+          \(
+          \begin{aligned}
+          d&=\sqrt{({\color{green}{4}}-{\color{cyan}{1}})^2+({\color{orange}{2}}-({\color{red}{-2}}))^2} \\
+          d&=\sqrt{3^2+4^2}=\sqrt{25\phantom{^1}} \\
+          d&=\color{magenta}5\,\text{LE}
+          \end{aligned}
+          \)
+        </p>
+        <p>
+          Die Punkte \(P\) und \(Q\) liegen \(\color{magenta}5\,\text{LE}\) voneinander entfernt.
+        </p>
+
+        <h6>Beispiel 2: Raum (3D)</h6>
+        <p>
+          Es soll der Abstand zwischen den Punkten \(P({\color{green}{4}}\mid {\color{orange}{2}} \mid {\color{magenta}
+          1})\)
+          und \(Q({\color{cyan}{2}}\mid {\color{red}{6}} \mid {\color{salmon}-3})\) bestimmt werden.
+        </p>
+        <p>
+          Dazu müssen die Punkte lediglich in die Formel eingesetzt werden:
+        </p>
+        <p style="margin-left: 20px;">
+          \(
+          \begin{aligned}
+          d&=\sqrt{({\color{green}{4}}-{\color{cyan}{2}})^2+({\color{red}{6}}-{\color{orange}{2}})^2 + ({\color{magenta}
+          1}-({\color{salmon}-3}))^2} \\
+          d&=\sqrt{2^2+4^2+4^2}=\sqrt{36\phantom{^1}} \\
+          d&=\color{violet}6\,\text{LE}
+          \end{aligned}
+          \)
+        </p>
+        <p>
+          Die Punkte \(P\) und \(Q\) liegen \(\color{violet}6\,\text{LE}\) voneinander entfernt.
+        </p>
+        <h6>Beispiel 3: Dreieck</h6>
+        <p>
+          Gegeben ist das Dreieck \(\triangle ABC\): \(A(1\mid -1\mid -2)\), \(B(5\mid 7\mid 6)\) und \(C(3\mid 1\mid
+          4)\).
+        </p>
+        <p>Zu prüfen ist:
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>Ist das Dereieck \(\triangle ABC\) gleichschenklig?</li>
+          <li>Ist das Dreieck \(\triangle ABC\) rechtwinklig?</li>
+        </ol>
+        Zur Beantwortung der Fragen, werden alle drei Seitelängen benötigt:
+        </p>
+        <p style="margin-left: 20px;">
+          \(
+          \begin{aligned}
+          d_{AB}&=\sqrt{4^2+8^2+8^2}=\sqrt{144}=12\,\text{LE}\\
+          d_{BC}&=\sqrt{2^2+6^2+2^2}=\sqrt{44}\approx 6,63\,\text{LE}\\
+          d_{AC}&=\sqrt{2^2+2^2+6^2}=\sqrt{44}\approx 6,63\,\text{LE}\\
+          \end{aligned}
+          \)
+        </p>
+        <p>
+          Lösung:
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>
+            Ja, das Dreieck \(\triangle ABC\) ist gleichschenklig: Zwei Seiten, nämlich \(\overline{BC}\) und
+            \(\overline{AC}\), sind gleich lang.
+          </li>
+          <li>
+            Ein Dreieck ist rechtwinklig, wenn es den Satz des Pythagoras erfüllt. Die Seite \(\overline{AB}\) ist dabei
+            die (potentielle) Hypotenuse,
+            da es die längste Seite ist.
+            <p style="margin-left: 20px;">
+              \(
+              \begin{aligned}
+              {d_{AB}}^2&={d_{BC}}^2 + {d_{AC}}^2 \\
+              12^2&=\sqrt{44}^2+\sqrt{44}^2 \\
+              144&=44+44 \\
+              144&=88 ↯
+              \end{aligned}
+              \)
+            </p>
+            <p>
+              Der Satz des Pythagoras ist nicht erfüllt, das heißt das Dreieck \(\triangle ABC\) ist nicht rechtwinklig.
+            </p>
+          </li>
+        </ol>
+        </p>
+
+
 
       </div>
     </section>
@@ -114,26 +225,21 @@
             </div>
         </section> -->
     <section id="aufgaben" class="aufgaben">
-      <h3>Aufgaben zur Erweiterung des Koordinatensystems</h3>
+      <h3>Aufgaben zur Abstandsberechnung</h3>
       <ol class="custom-marker point-after decimal more-spacing">
-        <li>Buch, Seite 15 Übung 1 und 2 <a href="#a1">Lösungen</a></li>
-        <li>Buch, Seite 16 Übung 3 und 4 (zusätzlich zeichnen) <a href="#a2">Lösungen</a></li>
-        <li>Buch, Seite 16 Übung 5 und 6 <a href="#a3">Lösungen</a></li>
-        <li>Für Schnelle: Buch, Seite 16 Übung 7 und 8 <a href="#a4">Lösungen</a></li>
-        <hr>
-        <li>Buch, Seite 17 Übung 9 und 10 <a href="#a5">Lösungen</a></li>
-        <li>Buch, Seite 18 Übung 1 (Beschreibung direkt drüber) <a href="#a6">Lösungen</a></li>
-        <li>Buch, Seite 19 Übung 2 und 3 <a href="#a7">Lösungen</a></li>
+        <li>Buch, Seite 20 Übung 11 und 12 <a href="#a1">Lösungen</a></li>
+        <li>Buch, Seite 21 Übung 13 bis 15 <a href="#a2">Lösungen</a></li>
+
       </ol>
     </section>
 
     <section class="loesungen">
-      <h3>Lösungen zur Erweiterung des Koordinatensystems</h3>
+      <h3>Lösungen zur Abstandsberechnung</h3>
       <details id="a1">
         <summary>Koordinanten im Raum</summary>
         <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
-          <li> \(A(0\,|\,25\,|\,0)\), \(B(-6\,|\,25\,|\,15)\), \(C(-6\,|\,-6\,|\,15)\),
-            \(D(12\,|\,-6\,|\,0)\), \(E(12\,|\,-6\,|\,24)\), \(F(9\,|\,-3\,|\,36)\)
+          <li> \(A(0\mid25\mid0)\), \(B(-6\mid25\mid15)\), \(C(-6\mid-6\mid15)\),
+            \(D(12\mid-6\mid0)\), \(E(12\mid-6\mid24)\), \(F(9\mid-3\mid36)\)
           </li>
           <li>
             \(U\) innerhalb, \(V\) außerhalb, \(W\) innerhalb
@@ -156,7 +262,7 @@
         </div>
       </details>
 
-      
+
 
     </section>
 
@@ -167,31 +273,32 @@
 
     <script>
       drawAxes(koord2D, 4, 4, "a");
-      drawAxes(koord3D, 4, 4, 4);
+      
 
-      drawSegment(koord2D,[0,1,1],[0,3.5,1], "Δx", "#a7a7a8", "belowleft",1);
-      drawSegment(koord2D,[0,3.5,1],[0,3.5,3], "Δy", "#a7a7a8", "right",1);
+      drawSegment(koord2D, [0, 1, 1], [0, 3.5, 1], "Δx", "#a7a7a8", "belowleft", 1);
+      drawSegment(koord2D, [0, 3.5, 1], [0, 3.5, 3], "Δy", "#a7a7a8", "right", 1);
       drawPoint(koord2D, [0, 1, 1], "P", "green", "left");
       drawPoint(koord2D, [0, 3.5, 3], "Q", "green", "right");
-      drawVector(koord2D, [0,1,1],[0,2.5,2],"","darkgoldenrod");
-      drawVector(koord2D, [0,3.5,3],[0,-2.5,-2],"","darkgoldenrod");
+      drawVector(koord2D, [0, 1, 1], [0, 2.5, 2], "", "darkgoldenrod");
+      drawVector(koord2D, [0, 3.5, 3], [0, -2.5, -2], "", "darkgoldenrod");
       drawSegment(koord2D, [0, 1, 1], [0, 3.5, 3], "d", "darkgoldenrod", "aboveleft")
 
-      
-      drawPlane(koord3D,[3,3,1],[2.2,0,0],[0,2,0],"","darkgoldenrod");
-      drawPolygon(koord3D,[[5, 2, 1],[1,3,1],[5,3,1]],"","lightblue", "aqua","center",1,0.2);
-      drawSegment(koord3D,[5, 2, 1],[1,3,1], "d'", "aqua", "above",1);
-      drawSegment(koord3D,[1,3,4],[1,3,1], "Δz", "#a7a7a8", "right",1);
-      drawSegment(koord3D,[5, 2, 1],[5,3,1], "Δx", "aqua", "belowleft",1);
-      drawSegment(koord3D,[1,3, 1],[5,3,1], "Δy", "aqua", "right",1);
-      
+
+      drawPlane(koord3D, [2.5, 2.5, 0], [2., 0, 0], [0, 2, 0], "", "darkgoldenrod");
+      drawAxes(koord3D, 4, 4, 4);
+      drawPolygon(koord3D, [[5, 2, 1], [1, 3, 1], [5, 3, 1]], "", "lightblue", "aqua", "center", 1, 0.2);
+      drawSegment(koord3D, [5, 2, 1], [1, 3, 1], "d'", "aqua", "above", 1);
+      drawSegment(koord3D, [1, 3, 4], [1, 3, 1], "Δz", "#a7a7a8", "right", 1);
+      drawSegment(koord3D, [5, 2, 1], [5, 3, 1], "Δx", "aqua", "belowleft", 1);
+      drawSegment(koord3D, [1, 3, 1], [5, 3, 1], "Δy", "aqua", "right", 1);
+
       drawPoint(koord3D, [5, 2, 1], "P", "green", "left");
       drawPoint(koord3D, [1, 3, 4], "Q", "green", "right");
-      drawPoint(koord3D, [1, 3, 1], "", "aqua", "right",2);
-      drawPoint(koord3D, [5, 3, 1], "", "aqua", "right",2);
-      drawVector(koord3D, [5, 2, 1],[-4,1,3],"","darkgoldenrod");
-      drawVector(koord3D, [1, 3, 4],[4,-1,-3],"","darkgoldenrod");
-      drawSegment(koord3D, [5, 2, 1],[1, 3, 4], "d", "darkgoldenrod", "aboveleft");
+      drawPoint(koord3D, [1, 3, 1], "", "aqua", "right", 2);
+      drawPoint(koord3D, [5, 3, 1], "", "aqua", "right", 2);
+      drawVector(koord3D, [5, 2, 1], [-4, 1, 3], "", "darkgoldenrod");
+      drawVector(koord3D, [1, 3, 4], [4, -1, -3], "", "darkgoldenrod");
+      drawSegment(koord3D, [5, 2, 1], [1, 3, 4], "d", "darkgoldenrod", "aboveleft");
 
 
 
@@ -200,11 +307,11 @@
 
     <section id="meme">
       <div class="images">
-        <img src="/img/3d_meme.jpeg" style="object-fit: scale-down; max-width: 300px" />
+        <img src="/img/distance_3d_meme.png" style="object-fit: scale-down; max-width: 500px" /> <!-- 300 px!-->
       </div>
       <div class="centered">
-        <a href="https://mes.fm/memes/jayz-in-3d-coordinates">
-          <h6>Original von Math easy Solution</h6>
+        <a href="https://www.blogs.unicamp.br/zero/2381/">
+          <h6>Inspiriert von Zero</h6>
         </a>
       </div>
     </section>
@@ -213,7 +320,7 @@
     <a href="/misc/impressum.html">Impressum</a>
     <div class="lastModified" align="center">
       Zuletzt geändert:<br />
-      27. August 2025
+      31. August 2025
       <!-- <span id="lastModifiedDate"></span> -->
     </div>
     <a href="/misc/datenschutz.html">Datenschutz</a>
