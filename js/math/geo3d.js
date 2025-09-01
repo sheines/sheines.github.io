@@ -318,6 +318,56 @@ function drawPolygon(
     }
 }
 
+// === Kreisbogen ===
+function drawArc(
+    target,
+    center,
+    vStart,
+    vEnd,
+    label = "",
+    color = "blue",
+    position = "center",
+    thickness = 2,
+    largeArc = false 
+) {
+    // 3D -> 2D Projektionen
+    const [cx, cy] = project(center);
+    const [sx, sy] = project([
+        center[0] + vStart[0],
+        center[1] + vStart[1],
+        center[2] + vStart[2]
+    ]);
+    const [ex, ey] = project([
+        center[0] + vEnd[0],
+        center[1] + vEnd[1],
+        center[2] + vEnd[2]
+    ]);
+
+    // Radius im 2D 
+    const rx = Math.abs(sx - cx) * 2.13;
+    const ry = Math.abs(sy - cy) * 2.13;
+
+    // Arc-Pfad bauen
+    const largeArcFlag = largeArc ? 1 : 0;
+    const sweepFlag = 1; // immer im Uhrzeigersinn
+
+    const d = `M ${sx} ${sy} A ${rx} ${ry} 0 ${largeArcFlag} ${sweepFlag} ${ex} ${ey}`;
+
+    const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    path.setAttribute("d", d);
+    path.setAttribute("fill", "none");
+    path.setAttribute("stroke", color);
+    path.setAttribute("stroke-width", thickness);
+    target.appendChild(path);
+
+    // Label ungefähr in die Mitte des Bogens setzen
+    if (label) {
+        const mx = (sx + ex) / 2;
+        const my = (sy + ey) / 2;
+        drawText(target, mx, my, label, color, position);
+    }
+}
+
 // === Koordinatensystem ===
 function drawAxes(target, xMax = 4, yMax = 4, zMax = 4, xColor = "#a7a7a8", yColor = "#a7a7a8", zColor = "#a7a7a8") {
     const colors = { x: xColor, y: yColor, z: zColor };
