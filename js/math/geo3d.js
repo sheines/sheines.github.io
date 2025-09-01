@@ -86,84 +86,33 @@ function findSVGRoot(element) {
 }
 
 // === Vektorpfeil in Farbe
-// === Hilfsfunktion für Doppelpfeil-Marker
-function ensureArrowMarkers(element, color) {
+function ensureArrowMarker(element, color) {
     const svgRoot = findSVGRoot(element);
-    const idStart = `arrow_start_${color.replace("#", "")}`;
-    const idEnd = `arrow_end_${color.replace("#", "")}`;
+    const id = `arrow_${color.replace("#", "")}`;
 
-    // Pfeil für Endpunkt
-    if (!svgRoot.querySelector(`#${idEnd}`)) {
-        const markerEnd = document.createElementNS("http://www.w3.org/2000/svg", "marker");
-        markerEnd.setAttribute("id", idEnd);
-        markerEnd.setAttribute("markerWidth", "10");
-        markerEnd.setAttribute("markerHeight", "10");
-        markerEnd.setAttribute("refX", "5");
-        markerEnd.setAttribute("refY", "3");
-        markerEnd.setAttribute("orient", "auto");
-        markerEnd.setAttribute("markerUnits", "strokeWidth");
+    if (!svgRoot.querySelector(`#${id}`)) {
+        const marker = document.createElementNS("http://www.w3.org/2000/svg", "marker");
+        marker.setAttribute("id", id);
+        marker.setAttribute("markerWidth", "10");
+        marker.setAttribute("markerHeight", "10");
+        marker.setAttribute("refX", "10");        // <<--- wichtig: 10 statt 5
+        marker.setAttribute("refY", "3");
+        marker.setAttribute("orient", "auto");
+        marker.setAttribute("markerUnits", "strokeWidth");
 
-        const pathEnd = document.createElementNS("http://www.w3.org/2000/svg", "path");
-        pathEnd.setAttribute("d", "M0,0 L0,6 L9,3 z");
-        pathEnd.setAttribute("fill", color);
-        markerEnd.appendChild(pathEnd);
+        const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+        path.setAttribute("d", "M0,0 L0,6 L10,3 z"); // <<--- Pfeilspitze bis refX
+        path.setAttribute("fill", color);
+        marker.appendChild(path);
 
-        const defs = svgRoot.querySelector("defs") || svgRoot.insertBefore(document.createElementNS("http://www.w3.org/2000/svg", "defs"), svgRoot.firstChild);
-        defs.appendChild(markerEnd);
+        const defs = svgRoot.querySelector("defs") || svgRoot.insertBefore(
+            document.createElementNS("http://www.w3.org/2000/svg", "defs"),
+            svgRoot.firstChild
+        );
+        defs.appendChild(marker);
     }
-
-    // Pfeil für Startpunkt (gespiegelt)
-    if (!svgRoot.querySelector(`#${idStart}`)) {
-        const markerStart = document.createElementNS("http://www.w3.org/2000/svg", "marker");
-        markerStart.setAttribute("id", idStart);
-        markerStart.setAttribute("markerWidth", "10");
-        markerStart.setAttribute("markerHeight", "10");
-        markerStart.setAttribute("refX", "4");
-        markerStart.setAttribute("refY", "3");
-        markerStart.setAttribute("orient", "auto");
-        markerStart.setAttribute("markerUnits", "strokeWidth");
-
-        const pathStart = document.createElementNS("http://www.w3.org/2000/svg", "path");
-        pathStart.setAttribute("d", "M9,0 L9,6 L0,3 z"); // gespiegelt
-        pathStart.setAttribute("fill", color);
-        markerStart.appendChild(pathStart);
-
-        const defs = svgRoot.querySelector("defs") || svgRoot.insertBefore(document.createElementNS("http://www.w3.org/2000/svg", "defs"), svgRoot.firstChild);
-        defs.appendChild(markerStart);
-    }
-
-    return {
-        start: `url(#${idStart})`,
-        end: `url(#${idEnd})`
-    };
+    return `url(#${id})`;
 }
-// function ensureArrowMarker(element, color) {
-//     const svgRoot = findSVGRoot(element);
-//     const id = `arrow_${color.replace("#", "")}`;
-
-//     if (!svgRoot.querySelector(`#${id}`)) {
-//         const marker = document.createElementNS("http://www.w3.org/2000/svg", "marker");
-//         marker.setAttribute("id", id);
-//         marker.setAttribute("markerWidth", "10");
-//         marker.setAttribute("markerHeight", "10");
-//         marker.setAttribute("refX", "10");        // <<--- wichtig: 10 statt 5
-//         marker.setAttribute("refY", "3");
-//         marker.setAttribute("orient", "auto");
-//         marker.setAttribute("markerUnits", "strokeWidth");
-
-//         const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
-//         path.setAttribute("d", "M0,0 L0,6 L10,3 z"); // <<--- Pfeilspitze bis refX
-//         path.setAttribute("fill", color);
-//         marker.appendChild(path);
-
-//         const defs = svgRoot.querySelector("defs") || svgRoot.insertBefore(
-//             document.createElementNS("http://www.w3.org/2000/svg", "defs"),
-//             svgRoot.firstChild
-//         );
-//         defs.appendChild(marker);
-//     }
-//     return `url(#${id})`;
-// }
 
 // === Allgemeine Textfunktion ===
 function smartTextStyle(text) {
@@ -249,35 +198,6 @@ function drawVector(target, start, dir, label = "", color = "blue", position = "
         drawText(target, mx, my, vectorLabel(label), color, position);
     }
 
-}
-
-// === Doppelpfeil ===
-function drawArrow(target, start, dir, label = "", color = "blue", position = "belowright", thickness = 2.5) {
-    const [x1, y1] = project(start);
-    const [x2, y2] = project([
-        start[0] + dir[0],
-        start[1] + dir[1],
-        start[2] + dir[2]
-    ]);
-
-    const svgRoot = findSVGRoot(target);
-    const markers = ensureArrowMarkers(svgRoot, color);
-
-    const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
-    line.setAttribute("x1", x1);
-    line.setAttribute("y1", y1);
-    line.setAttribute("x2", x2);
-    line.setAttribute("y2", y2);
-    line.setAttribute("stroke", color);
-    line.setAttribute("stroke-width", thickness);
-    line.setAttribute("marker-start", markers.start);
-    line.setAttribute("marker-end", markers.end);
-    target.appendChild(line);
-
-    // Label zentriert in der Mitte
-    const midX = (x1 + x2) / 2;
-    const midY = (y1 + y2) / 2;
-    drawText(target, midX, midY, label, color, position);
 }
 
 // === Strecke ===
