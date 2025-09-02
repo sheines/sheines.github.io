@@ -167,7 +167,7 @@ function drawPoint(target, pos, label = "", color = "red", position = "belowrigh
 }
 
 // === Vektoren ===
-function drawVector(target, start, dir, label = "", color = "blue", position = "belowright", thickness = 2.5) {
+function drawVector(target, start, dir, label = "", color = "blue", position = "belowright", thickness = 2.5, dashed = false) {
 
     const [x1, y1] = project(start);
     const [x2, y2] = project([
@@ -187,6 +187,8 @@ function drawVector(target, start, dir, label = "", color = "blue", position = "
     line.setAttribute("stroke", color);
     line.setAttribute("stroke-width", thickness);
     line.setAttribute("marker-end", markerUrl);
+    if (dashed)
+        line.setAttribute("stroke-dasharray", "5,5");
     target.appendChild(line);
 
 
