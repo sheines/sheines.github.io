@@ -456,11 +456,96 @@
 
     <section class="loesungen">
       <h3>Lösungen zu Vektoren</h3>
-      <details id="a1" style="counter-set: lsg-counter 10;">
-        <summary>P...</summary>
+      <details id="a1" style="counter-set: lsg-counter 0;">
+        <summary>Pfeile im Quader</summary>
+        Pfeile einer Vektorklasse sind gleich lang und zeigen in die gleiche Richtung.
         <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
-          <li> ...</li>
+          <li> \(\overrightarrow{HG}\)</li>
+          <li> \(\overrightarrow{AD}\)</li>
+          <li> \(\overrightarrow{AE}\), \(\overrightarrow{BF}\), \(\overrightarrow{CG}\)</li>
+          <li> \(\overrightarrow{FE}\)</li>
+          <li> \(\overrightarrow{AB}\)</li>
+          <li> \(\overrightarrow{BG}\)</li>
+        </ol>
+      </details>
 
+      <details >
+        <summary>Spaltenvektoren</summary>
+        Pfeile einer Vektorklasse sind gleich lang und zeigen in die gleiche Richtung.
+        <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
+          <li> \(\vector{6\\0\\0}\)</li>
+          <li> \(\vector{-6\\0\\0}\)</li>
+          <li> \(\vector{0\\0\\3}\)</li>
+          <li> \(\vector{-6\\0\\3}\)</li>
+          <li> \(\vector{-6\\-4\\3}\)</li>
+          <li> \(\vector{-6\\0\\3}\)</li>
+          <li> \(\vector{0\\4\\3}\)</li>
+          <li> \(\vector{0\\4\\0}\)</li>
+          <li> \(\vector{-6\\4\\0}\)</li>
+        </ol>
+        Wenn man Breite und Höhe vertauscht hat (\(L\times H\times B\) vs. \(L\times B\times T\)), 
+        werden alle 3en zu 4 und alle 4en zu 3.
+      </details>
+
+      <details >
+        <summary>Pyramide I</summary>
+        Pfeile einer Vektorklasse sind gleich lang und zeigen in die gleiche Richtung.
+        <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
+          <li> \(\vec a=\vector{-3\\3\\0}\)</li>
+          <li> \(\vec b=\vector{-3\\3\\6}\)</li>
+          <li> \(\vec c=\vector{-3\\3\\-6}\)</li>
+          <li> \(\vec h=\vector{0\\0\\6}\)</li>
+
+        </ol>
+      </details>
+
+      <details id="a2">
+        <summary>Verschiebungsvektor I</summary>
+        Pfeile einer Vektorklasse sind gleich lang und zeigen in die gleiche Richtung.
+        <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
+          <li> \(\overrightarrow{PQ}=\vector{4\\3}\)</li>
+          <li> \(\overrightarrow{PQ}=\vector{-4\\4}\)</li>
+          <li> \(\overrightarrow{PQ}=\vector{4\\4\\4}\)</li>
+          <li> \(\overrightarrow{PQ}=\vector{6\\6\\-6}\)</li>
+          <li> \(\overrightarrow{PQ}=\vector{-1\\2\\-5}\)</li>
+          <li> \(\overrightarrow{PQ}=\vector{a-1\\-7\\a+1}\)</li>
+
+        </ol>
+      </details>
+      <details >
+        <summary>Pyramide II</summary>
+        Pfeile einer Vektorklasse sind gleich lang und zeigen in die gleiche Richtung.
+        <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
+          <li> Zeichnung
+            <div class="centered" style="max-width: 300px">
+          <svg id="pyr" viewBox="-150 -250 550 475">
+            <defs></defs>
+          </svg>
+        </div>
+          </li>
+          <li>
+            <ul style="list-style: none;">
+              <li>\(\overrightarrow{AB}=\vector{4\\4\\0}\)</li>
+              <li>\(\overrightarrow{AC}=\vector{-2\\7\\0}\)</li>
+              <li>\(\overrightarrow{AS}=\vector{1\\4\\6}\)</li>
+            </ul> </li>
+            <li>Mittelpunkt heißt halbe Länge, also Vektor halbieren: \(\overrightarrow{AM}=\vector{2\\2\\0}\)</li>
+        </ol>
+      </details>
+      <details id="a3" style="counter-set: lsg-counter 14;">
+        <summary>Verschiebungsvektor II</summary>
+        Pfeile einer Vektorklasse sind gleich lang und zeigen in die gleiche Richtung.
+        <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
+          <li> \(Q(4 \mid 2 \mid 4)\)</li>
+          <li> \(P(1 \mid -2 \mid 3)\)</li>
+          <li> \(Q(2 \mid 0 \mid 1)\)</li>
+          <li> \(P(2 \mid -2 \mid 5)\)</li>
+          <li> \(Q(3 \mid -1 \mid -3)\)</li>
+          <li> \(Q(-1 \mid 2 \mid -3)\)</li>
+          <li> \(Q(0 \mid a+2 \mid -2)\)</li>
+          <li> \(P(a+1 \mid 1 \mid 3)\)</li>
+          <li> \(P(q_1+1 \mid q_2-2 \mid q_3+3)\)</li>
+          <li> \(P( p_1-1Q\mid p_2+2 \mid p_3-3)\)</li>
         </ol>
       </details>
 
@@ -487,6 +572,24 @@
       ];
 
       drawSequenceWithPersistence(darst, steps, 5000, 1000);
+
+      drawAxes(pyr, 5, 7, 4);
+
+      drawSegment(pyr,[1,-1,-2],[5,3,-1],"","darkgoldenrod","center",2.5);
+      drawSegment(pyr,[-1,6,-2],[5,3,-1],"","darkgoldenrod","center",2.5);
+      drawSegment(pyr,[1,-1,-2],[-1,6,-2],"","darkgoldenrod","center",2.5,true);
+
+      drawSegment(pyr,[1,-1,-2],[2,3,4],"","darkgoldenrod","center",2.5);
+      drawSegment(pyr,[2,3,4],[5,3,-1],"","darkgoldenrod","center",2.5);
+      drawSegment(pyr,[-1,6,-2],[2,3,4],"","darkgoldenrod","center",2.5);
+
+      drawPoint(pyr,[1,-1,-2],"A","darkgoldenrod","left",5);
+      drawPoint(pyr,[5,3,-1],"B","darkgoldenrod","below",5);
+      drawPoint(pyr,[-1,6,-2],"C","darkgoldenrod","right",5);
+      drawPoint(pyr,[2,3,4],"S","darkgoldenrod","above",5);
+      
+
+
 
 
 
@@ -515,7 +618,7 @@
     <a href="/misc/impressum.html">Impressum</a>
     <div class="lastModified" align="center">
       Zuletzt geändert:<br />
-      2. September 2025
+      4. September 2025
       <!-- <span id="lastModifiedDate"></span> -->
     </div>
     <a href="/misc/datenschutz.html">Datenschutz</a>
