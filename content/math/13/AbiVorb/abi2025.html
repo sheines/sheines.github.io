@@ -443,6 +443,232 @@
           </ol>
         </details>
 
+        <h4>Aufgabe 1.4: Wahlbereich I</h4>
+        <p>
+          Von den folgenden drei Aufgaben muss nur eine gelöst werden.
+        </p>
+        <h5>Aufgabe 1.4.1: Analysis</h5>
+        <p>
+          Die Abbildung zeigt den Graphen der in \(\mathbb R\) definierten Funktion \(f\) mit 
+          \(f(x)=2\text e^x-2\text e\).
+        </p>
+        <div class="centered" style="max-height: 250px;">
+           <svg xmlns="http://www.w3.org/2000/svg" viewBox="-4.9 -6.9 11.5 14" style="background-color: #232323">
+            <!-- The viewBox is set to (-12, -6, 26, 13) which provides a coordinate space of width 38 and height 19 units.
+                                 The center of the SVG is (0, 0). You can adjust this viewBox as needed. -->
+            <!-- Add grid lines -->
+            <defs>
+              <pattern id="grid" width="1" height="1" patternUnits="userSpaceOnUse">
+                <path d="M 1 0 L 0 0 0 1" fill="none" stroke="#333333" stroke-width="0.05" />
+              </pattern>
+            </defs>
+            <rect x="-4.9" y="-5.9" width="10.8" height="13.6" fill="url(#grid)" />
+
+            <!-- Draw the x-axis line -->
+            <line x1="-5" y1="0" x2="6" y2="0" stroke="#a7a7a7" stroke-width="0.05" />
+
+            <!-- Draw the x-axis arrowhead -->
+            <polygon points="6.5,0 5.8,-0.15 5.8,0.15" fill="#a7a7a7" />
+
+            <!-- Draw the y-axis line -->
+            <line x1="0" y1="7" x2="0" y2="-5" stroke="#a7a7a7" stroke-width="0.05" />
+
+            <!-- Draw the y-axis arrowhead -->
+            <polygon points="0,-5.5 -0.15,-4.8 0.15,-4.8" fill="#a7a7a7" />
+
+            <!-- Add "x" at the end of the x-axis -->
+            <text x="6.0" y="0.85" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">x</text>
+
+            <!-- Add "y" at the end of the y-axis -->
+            <text x="-0.8" y="-5.3" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">y</text>
+
+
+            <!-- Add numbers to x-axis-->
+            <text x="0.85" y="0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">1</text>
+            <text x="-1.25" y="0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">−1</text>
+
+
+            <!-- Add numbers to y-axis-->
+            <text x="-0.75" y="-0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">1</text>
+
+            <path d="M -4.9 5.42 L -4.8 5.42 -4.7 5.42 -4.6 5.42 -4.5 5.41
+                  -4.4 5.41 -4.3 5.41 -4.2 5.41 -4.1 5.4 -4 5.4
+                  -3.9 5.4 -3.8 5.39 -3.7 5.39 -3.6 5.38 -3.5 5.38
+                  -3.4 5.37 -3.3 5.36 -3.2 5.36 -3.1 5.35 -3 5.34
+                  -2.9 5.33 -2.8 5.31 -2.7 5.3 -2.6 5.29 -2.5 5.27
+                  -2.4 5.26 -2.3 5.24 -2.2 5.21 -2.1 5.19 -2 5.17
+                  -1.9 5.14 -1.8 5.11 -1.7 5.07 -1.6 5.03 -1.5 4.99
+                  -1.4 4.94 -1.3 4.89 -1.2 4.83 -1.1 4.77 -1 4.7
+                  -0.9 4.62 -0.8 4.54 -0.7 4.44 -0.6 4.34 -0.5 4.22
+                  -0.4 4.1 -0.3 3.95 -0.2 3.8 -0.1 3.63 0 3.44
+                  0.1 3.23 0.2 2.99 0.3 2.74 0.4 2.45 0.5 2.14
+                  0.6 1.79 0.7 1.41 0.8 0.99 0.9 0.52 1 0
+                  1.1 -0.57 1.2 -1.2 1.3 -1.9 1.4 -2.67 1.5 -3.53
+                  1.6 -4.47 1.7 -5.51" fill="none" stroke="darkgoldenrod"
+              stroke-width="0.075" />
+
+            <text x="2.15" y="-5" font-family="serif" font-size="0.9" font-style="italic" fill="darkgoldenrod">f</text>
+
+
+          </svg>
+        </div>
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+            <li>
+              Weise nach, dass 1 eine Nullstelle von \(f\) ist!
+            </li> 
+            <li>
+              Der Graph von \(f\) schließt mit den Koordinatenachsen eine Fläche ein. 
+              Berechne ihren Inhalt!
+            </li>
+        </ol>
+        <details class="loesungen">
+          <summary class="nonumber">1.4.1 Lösung</summary>
+          <ol class="custom-marker parens-around lower-alpha more-spacing">
+            <li>\(x=1\) einsetzen:
+              <p style="margin-left: 20px;">
+                \(\begin{align*}
+                  f(1)&=2\text e^1-2\text e\\
+                  f(1)&=2\text e-2\text e=0\quad \checkmark
+                  \end{align*}
+                \)
+              </p>
+              <p>
+                \(x=1\) ist eine Nullstelle von \(f\)
+              </p>
+            </li>
+            <li>Die \(y\)-Achse ist bei \(x=0\).
+              <p style="margin-left: 20px;">
+                \(\begin{align*}
+                  A&=\int_0^1 2\text e^x-2\text e\, \text dx \\
+                  A&=\big[2\text e^x-2\text ex\big]_0^1 \\
+                  A&=2\text e^1-2\text e\cdot 1 - \left( 2\text e^0-2\text e\cdot 0\right)\\
+                  A&=2\text e-2\text e-(2-0) \\
+                  A&=-2
+                  \end{align*}
+                \)
+              </p>
+              <p>
+                Der Graph schließt mit den Achsen eine Fläche von \(2\,\text{FE}\) ein.
+              </p>
+            </li>
+          </ol>
+        </details>
+        <h5>Aufgabe 1.4.2: Analytische Geometrie</h5>
+        <p>
+          Gegeben sind die Punkte \(P(0\mid -1\mid 1)\) und \(Q(2\mid 5\mid 3)\).
+        </p>
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+            <li>Durch Spiegelung des Punktes \(P\) am Punkt \(Q\) entsteht der Punkt \(P'\). 
+              Ermittle die Koordinaten von \(P'\)!
+            </li>
+            <li>
+              Die Ebene \(E\) hat die Gleichung \(E:x_1+3x_2+x_3=20\).
+              <p>
+                Weise nach, dass \(Q\) in \(E\) liegt und der Vektor \(\overrightarrow{PQ}\) 
+                ein Normalenvektor von \(E\) ist!
+              </p> 
+            </li>
+        </ol>
+        <details class="loesungen">
+          <summary class="nonumber">1.4.2 Lösung</summary>
+          <ol class="custom-marker parens-around lower-alpha more-spacing">
+            <li>Für den Punkt \(P'\) gilt: \(P \xrightarrow{\overrightarrow{PQ}} Q \xrightarrow{\overrightarrow{PQ}} P' \)
+              <ul style="list-style: none;">
+              <li>Vektor \(\overrightarrow{PQ}\) bestimmen
+                <p style="margin-left: 20px;">
+                  \(\begin{align*}
+                    \overrightarrow{PQ}=\vector{2-0\\5-(-1)\\3-1}=\vector{2\\6\\2}
+                  \end{align*}\)
+                </p>
+              <li>Ortsvektor von \(P'\) bestimmen:
+                <p style="margin-left: 20px;">
+                  \(\begin{align*}
+                    \overrightarrow{OP'}&=\overrightarrow{OQ} + \overrightarrow{PQ} \\
+                    \overrightarrow{OP'}&=\vector{2\\5\\3} + \vector{2\\6\\2} \\
+                    \overrightarrow{OP'}&=\vector{4\\11\\5}
+                  \end{align*}\)
+                </p>
+              </li>
+              
+            </ul>
+            Der Punkt \(P'\) hat die Koordinaten \(P'(4\mid 11\mid 5)\).
+            </li>
+            <li><ul>
+              <li>Liegt \(Q\) in \(E\)?
+                <p> 
+                  \(Q\) in \(E\) einsetzen:
+                </p>   
+              <p style="margin-left: 20px;">
+                \(\begin{align*}
+                    x_1+3x_2+x_3&=20 \\
+                    2+3\cdot 5+3&=20 \\
+                    20&=20\quad \checkmark
+                  \end{align*}
+                \)
+              </p>
+              <p>
+                Das heißt, \(Q\) liegt in \(E\).
+              </p>
+              </li>
+              <li>\(\overrightarrow{PQ}\) ist Normalenvektor?
+                <p>
+                  Normalenvektor von \(E\) ablesen: \(\vec n=\vector{1\\3\\1}\)
+                </p>
+                <p>Wenn \(\overrightarrow{PQ}\) Normalenvektor ist, gilt (Kollinearität):
+                  <p style="margin-left: 20px;">
+                \(\begin{align*}
+                    \overrightarrow{PQ}&=a\cdot \vec n \\
+                    \vector{2\\6\\2}&=2\cdot \vector{1\\3\\1}\quad \checkmark
+                  \end{align*}
+                \)
+              </p>
+              Beide Vektoren sind kollinear, das heißt \(\overrightarrow{PQ}\) ist ein Normalenvektor der Ebene \(E\).
+                </p>
+              </li>
+            </ul>
+              
+            </li>
+          </ol>
+        </details>
+        <h5>Aufgabe 1.4.3: Stochastik</h5>
+        <p>
+          In einer Schwimmgruppe, zu der 20 Kinder gehören, haben 9 Kinder das Schwimmabzeichen Bronze.
+        </p>
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+            <li>Zwei Kinder der Schwimmgruppe werden zufällig ausgewählt. 
+              Berechne die Wahrscheinlichkeit dafür, dass diese beiden Kinder das 
+              Schwimmabzeichen Bronze haben!
+            </li>
+            <li>
+              Geben Sie die Bedeutung des folgenden Terms im Sachzusammenhang an:
+              <p style="margin-left: 20px;">
+                \(\begin{align*}
+                    \frac{\binom92 \cdot \binom{11}{4}}{\binom{20}{6}}
+                  \end{align*}
+                \)
+              </p>
+            </li>
+        </ol>
+        <details class="loesungen">
+          <summary class="nonumber">1.4.3 Lösung</summary>
+          <ol class="custom-marker parens-around lower-alpha more-spacing">
+            <li>\(P=\frac{9}{20}\cdot\frac{8}{10}=\frac{72}{380}=\frac{18}{95}\)
+            </li>
+            <li>
+              Der Term zeigt die Wahrscheinlichkeit einer hypergeometrische Verteilung. 
+              <p>
+                Im Zähler werde links zwei von neun Kindern mit Abzeichen und rechts vier von elf ohne Abzeichen ausgewählt.
+              </p>
+              <p>
+                Im Nenner werden insgesamt sechs von zwanzig Kindern gewählt
+              </p>
+              <p>
+                <b>Antwort:</b> Der Term gibt die Wahrscheinlichkeit an, mit der beim zufälligen 
+                Auswählen von sechs Kindern, zwei von ihnen das Schwimmabzeichen Bronze haben.
+              </p>
+            </li>
+          </ol>
+        </details>
       </div>
     </section>
 
@@ -507,7 +733,7 @@
     <a href="/misc/impressum.html">Impressum</a>
     <div class="lastModified" align="center">
       Zuletzt geändert:<br />
-      31. August 2025
+      9. September 2025
       <!-- <span id="lastModifiedDate"></span> -->
     </div>
     <a href="/misc/datenschutz.html">Datenschutz</a>
