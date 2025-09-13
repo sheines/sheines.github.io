@@ -11,7 +11,6 @@
   <link rel="stylesheet" type="text/css" href="/css/navbar.css" />
   <link rel="stylesheet" type="text/css" href="/css/styles.css" />
   <link rel="stylesheet" type="text/css" href="/css/courses.css" />
-  <link rel="stylesheet" type="text/css" href="/css/oktanten.css" />
   <script type="text/javascript" src="jquery-3.3.1.js"></script>
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -24,6 +23,17 @@
       }
     };
   </script>
+  <style>
+    .chart-container {
+      width: 300px;
+      margin: 2em 0;
+    }
+
+    svg {
+      width: 100%;
+      height: auto;
+    }
+  </style>
 </head>
 
 <body>
@@ -372,8 +382,8 @@
           </style>
 
           <!-- SVG Glücksrad: Kreis mit 8 Sektoren, Sektorenlinien nicht waagrecht/senkrecht, Zahlen in der Mitte, Dreieck oben als Anzeige -->
-          <svg  viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" role="img"
-            aria-label="Glücksrad mit 8 Sektoren" style="border-radius:8px;">
+          <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Glücksrad mit 8 Sektoren"
+            style="border-radius:8px;">
             <!-- Parameter: Zentrum (200,200), Radius 150 -->
             <defs>
               <style>
@@ -429,7 +439,8 @@
                 <li>\(\tfrac38\) steht für eine Wahrscheinlichkeit: Wahrscheinlichkeit eine sechs zu drehen</li>
                 <li>\(()^2\) steht für das zweimalige Eintreten dieses Ereignisses</li>
               </ul>
-              \(\left(\tfrac38\right)^2\) ist die Wahrscheinlichkeit dafür, dass zweimal nacheinander eine sechs gedreht wird.
+              \(\left(\tfrac38\right)^2\) ist die Wahrscheinlichkeit dafür, dass zweimal nacheinander eine sechs gedreht
+              wird.
             </li>
             <li>
               Wahrscheinlichkeit berechnen
@@ -449,11 +460,11 @@
         </p>
         <h5>Aufgabe 1.4.1: Analysis</h5>
         <p>
-          Die Abbildung zeigt den Graphen der in \(\mathbb R\) definierten Funktion \(f\) mit 
+          Die Abbildung zeigt den Graphen der in \(\mathbb R\) definierten Funktion \(f\) mit
           \(f(x)=2\text e^x-2\text e\).
         </p>
         <div class="centered" style="max-height: 250px;">
-           <svg xmlns="http://www.w3.org/2000/svg" viewBox="-4.9 -6.9 11.5 14" style="background-color: #232323">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="-4.9 -6.9 11.5 14" style="background-color: #232323">
             <!-- The viewBox is set to (-12, -6, 26, 13) which provides a coordinate space of width 38 and height 19 units.
                                  The center of the SVG is (0, 0). You can adjust this viewBox as needed. -->
             <!-- Add grid lines -->
@@ -504,8 +515,7 @@
                   0.1 3.23 0.2 2.99 0.3 2.74 0.4 2.45 0.5 2.14
                   0.6 1.79 0.7 1.41 0.8 0.99 0.9 0.52 1 0
                   1.1 -0.57 1.2 -1.2 1.3 -1.9 1.4 -2.67 1.5 -3.53
-                  1.6 -4.47 1.7 -5.51" fill="none" stroke="darkgoldenrod"
-              stroke-width="0.075" />
+                  1.6 -4.47 1.7 -5.51" fill="none" stroke="darkgoldenrod" stroke-width="0.075" />
 
             <text x="2.15" y="-5" font-family="serif" font-size="0.9" font-style="italic" fill="darkgoldenrod">f</text>
 
@@ -513,13 +523,13 @@
           </svg>
         </div>
         <ol class="custom-marker parens-around lower-alpha more-spacing">
-            <li>
-              Weise nach, dass 1 eine Nullstelle von \(f\) ist!
-            </li> 
-            <li>
-              Der Graph von \(f\) schließt mit den Koordinatenachsen eine Fläche ein. 
-              Berechne ihren Inhalt!
-            </li>
+          <li>
+            Weise nach, dass 1 eine Nullstelle von \(f\) ist!
+          </li>
+          <li>
+            Der Graph von \(f\) schließt mit den Koordinatenachsen eine Fläche ein.
+            Berechne ihren Inhalt!
+          </li>
         </ol>
         <details class="loesungen">
           <summary class="nonumber">1.4.1 Lösung</summary>
@@ -527,9 +537,9 @@
             <li>\(x=1\) einsetzen:
               <p style="margin-left: 20px;">
                 \(\begin{align*}
-                  f(1)&=2\text e^1-2\text e\\
-                  f(1)&=2\text e-2\text e=0\quad \checkmark
-                  \end{align*}
+                f(1)&=2\text e^1-2\text e\\
+                f(1)&=2\text e-2\text e=0\quad \checkmark
+                \end{align*}
                 \)
               </p>
               <p>
@@ -539,12 +549,12 @@
             <li>Die \(y\)-Achse ist bei \(x=0\).
               <p style="margin-left: 20px;">
                 \(\begin{align*}
-                  A&=\int_0^1 2\text e^x-2\text e\, \text dx \\
-                  A&=\big[2\text e^x-2\text ex\big]_0^1 \\
-                  A&=2\text e^1-2\text e\cdot 1 - \left( 2\text e^0-2\text e\cdot 0\right)\\
-                  A&=2\text e-2\text e-(2-0) \\
-                  A&=-2
-                  \end{align*}
+                A&=\int_0^1 2\text e^x-2\text e\, \text dx \\
+                A&=\big[2\text e^x-2\text ex\big]_0^1 \\
+                A&=2\text e^1-2\text e\cdot 1 - \left( 2\text e^0-2\text e\cdot 0\right)\\
+                A&=2\text e-2\text e-(2-0) \\
+                A&=-2
+                \end{align*}
                 \)
               </p>
               <p>
@@ -558,75 +568,78 @@
           Gegeben sind die Punkte \(P(0\mid -1\mid 1)\) und \(Q(2\mid 5\mid 3)\).
         </p>
         <ol class="custom-marker parens-around lower-alpha more-spacing">
-            <li>Durch Spiegelung des Punktes \(P\) am Punkt \(Q\) entsteht der Punkt \(P'\). 
-              Ermittle die Koordinaten von \(P'\)!
-            </li>
-            <li>
-              Die Ebene \(E\) hat die Gleichung \(E:x_1+3x_2+x_3=20\).
-              <p>
-                Weise nach, dass \(Q\) in \(E\) liegt und der Vektor \(\overrightarrow{PQ}\) 
-                ein Normalenvektor von \(E\) ist!
-              </p> 
-            </li>
+          <li>Durch Spiegelung des Punktes \(P\) am Punkt \(Q\) entsteht der Punkt \(P'\).
+            Ermittle die Koordinaten von \(P'\)!
+          </li>
+          <li>
+            Die Ebene \(E\) hat die Gleichung \(E:x_1+3x_2+x_3=20\).
+            <p>
+              Weise nach, dass \(Q\) in \(E\) liegt und der Vektor \(\overrightarrow{PQ}\)
+              ein Normalenvektor von \(E\) ist!
+            </p>
+          </li>
         </ol>
         <details class="loesungen">
           <summary class="nonumber">1.4.2 Lösung</summary>
           <ol class="custom-marker parens-around lower-alpha more-spacing">
-            <li>Für den Punkt \(P'\) gilt: \(P \xrightarrow{\overrightarrow{PQ}} Q \xrightarrow{\overrightarrow{PQ}} P' \)
+            <li>Für den Punkt \(P'\) gilt: \(P \xrightarrow{\overrightarrow{PQ}} Q \xrightarrow{\overrightarrow{PQ}} P'
+              \)
               <ul style="list-style: none;">
-              <li>Vektor \(\overrightarrow{PQ}\) bestimmen
-                <p style="margin-left: 20px;">
-                  \(\begin{align*}
+                <li>Vektor \(\overrightarrow{PQ}\) bestimmen
+                  <p style="margin-left: 20px;">
+                    \(\begin{align*}
                     \overrightarrow{PQ}=\vector{2-0\\5-(-1)\\3-1}=\vector{2\\6\\2}
-                  \end{align*}\)
-                </p>
-              <li>Ortsvektor von \(P'\) bestimmen:
-                <p style="margin-left: 20px;">
-                  \(\begin{align*}
+                    \end{align*}\)
+                  </p>
+                <li>Ortsvektor von \(P'\) bestimmen:
+                  <p style="margin-left: 20px;">
+                    \(\begin{align*}
                     \overrightarrow{OP'}&=\overrightarrow{OQ} + \overrightarrow{PQ} \\
                     \overrightarrow{OP'}&=\vector{2\\5\\3} + \vector{2\\6\\2} \\
                     \overrightarrow{OP'}&=\vector{4\\11\\5}
-                  \end{align*}\)
-                </p>
-              </li>
-              
-            </ul>
-            Der Punkt \(P'\) hat die Koordinaten \(P'(4\mid 11\mid 5)\).
+                    \end{align*}\)
+                  </p>
+                </li>
+
+              </ul>
+              Der Punkt \(P'\) hat die Koordinaten \(P'(4\mid 11\mid 5)\).
             </li>
-            <li><ul>
-              <li>Liegt \(Q\) in \(E\)?
-                <p> 
-                  \(Q\) in \(E\) einsetzen:
-                </p>   
-              <p style="margin-left: 20px;">
-                \(\begin{align*}
+            <li>
+              <ul>
+                <li>Liegt \(Q\) in \(E\)?
+                  <p>
+                    \(Q\) in \(E\) einsetzen:
+                  </p>
+                  <p style="margin-left: 20px;">
+                    \(\begin{align*}
                     x_1+3x_2+x_3&=20 \\
                     2+3\cdot 5+3&=20 \\
                     20&=20\quad \checkmark
-                  \end{align*}
-                \)
-              </p>
-              <p>
-                Das heißt, \(Q\) liegt in \(E\).
-              </p>
-              </li>
-              <li>\(\overrightarrow{PQ}\) ist Normalenvektor?
-                <p>
-                  Normalenvektor von \(E\) ablesen: \(\vec n=\vector{1\\3\\1}\)
-                </p>
-                <p>Wenn \(\overrightarrow{PQ}\) Normalenvektor ist, gilt (Kollinearität):
+                    \end{align*}
+                    \)
+                  </p>
+                  <p>
+                    Das heißt, \(Q\) liegt in \(E\).
+                  </p>
+                </li>
+                <li>\(\overrightarrow{PQ}\) ist Normalenvektor?
+                  <p>
+                    Normalenvektor von \(E\) ablesen: \(\vec n=\vector{1\\3\\1}\)
+                  </p>
+                  <p>Wenn \(\overrightarrow{PQ}\) Normalenvektor ist, gilt (Kollinearität):
                   <p style="margin-left: 20px;">
-                \(\begin{align*}
+                    \(\begin{align*}
                     \overrightarrow{PQ}&=a\cdot \vec n \\
                     \vector{2\\6\\2}&=2\cdot \vector{1\\3\\1}\quad \checkmark
-                  \end{align*}
-                \)
-              </p>
-              Beide Vektoren sind kollinear, das heißt \(\overrightarrow{PQ}\) ist ein Normalenvektor der Ebene \(E\).
-                </p>
-              </li>
-            </ul>
-              
+                    \end{align*}
+                    \)
+                  </p>
+                  Beide Vektoren sind kollinear, das heißt \(\overrightarrow{PQ}\) ist ein Normalenvektor der Ebene
+                  \(E\).
+                  </p>
+                </li>
+              </ul>
+
             </li>
           </ol>
         </details>
@@ -635,19 +648,19 @@
           In einer Schwimmgruppe, zu der 20 Kinder gehören, haben 9 Kinder das Schwimmabzeichen Bronze.
         </p>
         <ol class="custom-marker parens-around lower-alpha more-spacing">
-            <li>Zwei Kinder der Schwimmgruppe werden zufällig ausgewählt. 
-              Berechne die Wahrscheinlichkeit dafür, dass diese beiden Kinder das 
-              Schwimmabzeichen Bronze haben!
-            </li>
-            <li>
-              Geben Sie die Bedeutung des folgenden Terms im Sachzusammenhang an:
-              <p style="margin-left: 20px;">
-                \(\begin{align*}
-                    \frac{\binom92 \cdot \binom{11}{4}}{\binom{20}{6}}
-                  \end{align*}
-                \)
-              </p>
-            </li>
+          <li>Zwei Kinder der Schwimmgruppe werden zufällig ausgewählt.
+            Berechne die Wahrscheinlichkeit dafür, dass diese beiden Kinder das
+            Schwimmabzeichen Bronze haben!
+          </li>
+          <li>
+            Geben Sie die Bedeutung des folgenden Terms im Sachzusammenhang an:
+            <p style="margin-left: 20px;">
+              \(\begin{align*}
+              \frac{\binom92 \cdot \binom{11}{4}}{\binom{20}{6}}
+              \end{align*}
+              \)
+            </p>
+          </li>
         </ol>
         <details class="loesungen">
           <summary class="nonumber">1.4.3 Lösung</summary>
@@ -655,21 +668,271 @@
             <li>\(P=\frac{9}{20}\cdot\frac{8}{10}=\frac{72}{380}=\frac{18}{95}\)
             </li>
             <li>
-              Der Term zeigt die Wahrscheinlichkeit einer hypergeometrische Verteilung. 
+              Der Term zeigt die Wahrscheinlichkeit einer hypergeometrische Verteilung.
               <p>
-                Im Zähler werde links zwei von neun Kindern mit Abzeichen und rechts vier von elf ohne Abzeichen ausgewählt.
+                Im Zähler werde links zwei von neun Kindern mit Abzeichen und rechts vier von elf ohne Abzeichen
+                ausgewählt.
               </p>
               <p>
                 Im Nenner werden insgesamt sechs von zwanzig Kindern gewählt
               </p>
               <p>
-                <b>Antwort:</b> Der Term gibt die Wahrscheinlichkeit an, mit der beim zufälligen 
+                <b>Antwort:</b> Der Term gibt die Wahrscheinlichkeit an, mit der beim zufälligen
                 Auswählen von sechs Kindern, zwei von ihnen das Schwimmabzeichen Bronze haben.
               </p>
             </li>
           </ol>
         </details>
+
+        <h4>Aufgabe 1.5: Wahlbereich II</h4>
+        <p>
+          Von den folgenden drei Aufgaben muss nur eine gelöst werden.
+        </p>
+        <h5>Aufgabe 1.5.1: Analysis</h5>
+        <p>
+          Die Abbildung zeigt den Graphen der in \(\mathbb R\) definierten Funktion \(f\)
+          mit \(f(x)=-x^2+4-1\).
+        </p>
+        <p>
+          Betrachtet wird die Gleichung \(\frac{f(x)-0}{x-0}=f'(x)\).
+        </p>
+        <div class="centered" style="max-height: 250px;">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="-2.9 -4.5 9.8 10.9" style="background-color: #232323">
+            <!-- The viewBox is set to (-12, -6, 26, 13) which provides a coordinate space of width 38 and height 19 units.
+                                 The center of the SVG is (0, 0). You can adjust this viewBox as needed. -->
+            <!-- Add grid lines -->
+            <defs>
+              <pattern id="grid" width="1" height="1" patternUnits="userSpaceOnUse">
+                <path d="M 1 0 L 0 0 0 1" fill="none" stroke="#333333" stroke-width="0.05" />
+              </pattern>
+            </defs>
+            <rect x="-2.9" y="-3.9" width="9.8" height="10.6" fill="url(#grid)" />
+
+            <!-- Draw the x-axis line -->
+            <line x1="-3" y1="0" x2="7" y2="0" stroke="#a7a7a7" stroke-width="0.05" />
+
+            <!-- Draw the x-axis arrowhead -->
+            <polygon points="7.5,0 6.8,-0.15 6.8,0.15" fill="#a7a7a7" />
+
+            <!-- Draw the y-axis line -->
+            <line x1="0" y1="7" x2="0" y2="-4" stroke="#a7a7a7" stroke-width="0.05" />
+
+            <!-- Draw the y-axis arrowhead -->
+            <polygon points="0,-4.5 -0.15,-3.8 0.15,-3.8" fill="#a7a7a7" />
+
+            <!-- Add "x" at the end of the x-axis -->
+            <text x="7.0" y="0.85" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">x</text>
+
+            <!-- Add "y" at the end of the y-axis -->
+            <text x="-0.8" y="-3.8" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">y</text>
+
+
+            <!-- Add numbers to x-axis-->
+            <text x="0.85" y="0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">1</text>
+            <text x="-1.25" y="0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">−1</text>
+
+
+            <!-- Add numbers to y-axis-->
+            <text x="-0.75" y="-0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">1</text>
+
+            <path d="M -3.89 31.69 L -3.78 30.41 -3.67 29.15 -3.56 27.91 -3.45 26.7
+                -3.34 25.52 -3.23 24.35 -3.12 23.21 -3.01 22.1 -2.9 21.01
+                -2.79 19.94 -2.68 18.9 -2.57 17.88 -2.46 16.89 -2.35 15.92
+                -2.24 14.98 -2.13 14.06 -2.02 13.16 -1.91 12.29 -1.8 11.44
+                -1.69 10.62 -1.58 9.82 -1.47 9.04 -1.36 8.29 -1.25 7.56
+                -1.14 6.86 -1.03 6.18 -0.92 5.53 -0.81 4.9 -0.7 4.29
+                -0.59 3.71 -0.48 3.15 -0.37 2.62 -0.26 2.11 -0.15 1.62
+                -0.04 1.16 0.07 0.72 0.18 0.31 0.29 -0.08 0.4 -0.44
+                0.51 -0.78 0.62 -1.1 0.73 -1.39 0.84 -1.65 0.95 -1.9
+                1.06 -2.12 1.17 -2.31 1.28 -2.48 1.39 -2.63 1.5 -2.75
+                1.61 -2.85 1.72 -2.92 1.83 -2.97 1.94 -3 2.05 -3
+                2.16 -2.97 2.27 -2.93 2.38 -2.86 2.49 -2.76 2.6 -2.64
+                2.71 -2.5 2.82 -2.33 2.93 -2.14 3.04 -1.92 3.15 -1.68
+                3.26 -1.41 3.37 -1.12 3.48 -0.81 3.59 -0.47 3.7 -0.11
+                3.81 0.28 3.92 0.69 4.03 1.12 4.14 1.58 4.25 2.06
+                4.36 2.57 4.47 3.1 4.58 3.66 4.69 4.24 4.8 4.84
+                4.91 5.47 5.02 6.12 5.13 6.8 5.24 7.5 5.35 8.22
+                5.46 8.97 5.57 9.74 5.68 10.54 5.79 11.36 5.9 12.21
+                6.01 13.08 6.12 13.97 6.23 14.89 6.34 15.84 6.45 16.8
+                6.56 17.79 6.67 18.81 6.78 19.85 6.89 20.91 7 22" fill="none" stroke="darkgoldenrod"
+              stroke-width="0.075" />
+
+            <!-- <text x="2.15" y="-5" font-family="serif" font-size="0.9" font-style="italic" fill="darkgoldenrod">f</text> -->
+
+
+          </svg>
+        </div>
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>Gib einen Term der ersten Ableitungsfunktion \(f'\) von \(f\) an
+            und ermittle rechnerisch die Lösungen der Gleichung!
+          </li>
+          <li>
+            Gib die geometrische Bedeutung der Gleichung an,
+            die sich für deren Lösungen ergibt.
+          </li>
+        </ol>
+        <details class="loesungen">
+          <summary class="nonumber">1.5.1 Lösung</summary>
+          <ol class="custom-marker parens-around lower-alpha more-spacing">
+            <li>Ableitung:
+              <p style="margin-left: 20px;">
+                \(f'(x)=-2x+4\)
+              </p>
+              <p>
+                In Gleichung einsetzen und lösen:
+              </p>
+              <p style="margin-left: 20px;">
+                \(\begin{align*}
+                \frac{f(x)-0}{x-0}&=f'(x) \\
+                \frac{-x^2+4x-1-0}{x-0}&=-2x+4 \\
+                \frac{-x^2+4x-1}{x}&=-2x+4 \quad\quad | \cdot x \\
+                -x^2+4x-1&=-2x^2+4x\quad | +2x^2\\
+                x^2+4x-1&=4x \qquad\qquad\ \ | -4x \\
+                x^2-1&=0 \\
+                &\ldots \\
+                x_{1/2}&=\pm1
+                \end{align*}\)
+              </p>
+              <p>
+                Bedeutung:
+              </p>
+              <p>
+                Ist \(x\) eine Lösung der Gleichung, dann verläuft die
+                Tangente an den Graphen von \(f\) im Punkt \((x\mid f(x))\) durch den
+                Koordinatenursprung:
+              <ul>
+                <li>Tangente, weil die Steigung durch die Ableitung bestimmt wurde.</li>
+                <li>Durch den Koordinatenursprung, die Gleichung die Form \(m=\frac{y_2-y_1}{x_2-x_1}\)
+                  hat und als zweiter Punkt für die Steigung \((0\mid0)\) verwendet wurde.
+                </li>
+              </ul>
+              </p>
+            </li>
+          </ol>
+        </details>
+        <h5>Aufgabe 1.5.2: Analytische Geometrie</h5>
+        <p>Die Ebene \(E\) wird durch die Gleichung
+          \(\vec x=\vector{1\\-3\\0}+r\cdot\vector{-3\\4\\1}+s\cdot\vector{3\\-4\\0}\) mit
+          \(r, s \in \mathbb R\) beschrieben.
+        </p>
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>Zeige, dass der Vektor \(\vector{4\\3\\0}\) senkrecht zur Ebene \(E\) steht!
+          </li>
+          <li>
+            Bestimmen Sie die Koordinaten eines Punkts \(P\) mit folgender Eigenschaft:
+            <p>
+              Wird der Punkt \(P\) an der Ebene \(E\) gespiegelt,
+              so hat der entstehende Punkt \(P'\) vom Punkt \(P\) den Abstand \(20\,\text{LE}\).
+            </p>
+          </li>
+        </ol>
+        <details class="loesungen">
+          <summary class="nonumber">1.5.2 Lösung</summary>
+          <ol class="custom-marker parens-around lower-alpha more-spacing">
+            <li>Ein Vektor steht senkrecht auf einer Ebene, wenn er orthogonal zu seinen beiden Richtungsvektoren steht.
+              <p style="margin-left: 20px;">
+                \(\begin{align*}
+                \vector{4\\3\\0}\circ\vector{-3\\4\\1}&=4\cdot (-3)+3\cdot 4+0\cdot 1\\
+                &=-12+12+0=0\quad \checkmark \\
+                \vector{4\\3\\0}\circ\vector{3\\-4\\0}&=4\cdot 3+3\cdot (-4)+0\cdot 0\\
+                &=12-12+0=0\quad \checkmark \\
+                \end{align*}\)
+              </p>
+              <p>
+                Beide Skalarprodukte sind null, das heißt der Vektor \(\vector{4\\3\\0}\) steht
+                senkrecht zur Ebene \(E\).
+              </p>
+            </li>
+            <li>Anschauung :
+              <div class="centered" style="max-width: 300px">
+                <svg id="task151b" viewBox="-150 -200 550 345">
+                  <defs></defs>
+                </svg>
+              </div>
+              <p>
+                Es ist <i>ein</i> Punkt gesucht. Es gibt aber unendlich viele.
+              </p>
+              <p>
+                Es ist bereits folgendes bekannt:
+              <ul>
+                <li>Der Punkt \(A(1\mid -3\mid 0)\) liegt auf der Ebene. (Stützvektor der Ebene)</li>
+                <li>Der Vektor \(\vec v=\vector{4\\3\\0}\) steht senkrecht auf der Ebene.</li>
+              </ul>
+              Wenn nun der Betrag des Vektors \(\vec v\) bekannt ist, kann damit sehr einfach \(P\) ermittelt werden.
+              </p>
+            <li>Ein Vektor steht senkrecht auf einer Ebene, wenn er orthogonal zu seinen beiden Richtungsvektoren steht.
+              <p style="margin-left: 20px;">
+                \(\begin{align*}
+                \left|\vector{4\\3\\0}\right|&=\sqrt{4^2+3^2+0^2}=5\,\text{LE}
+                \end{align*}\)
+              </p>
+              Damit die gespiegelten Punkte \(20\,\text{LE}\) voneinander entfernt sind, müssen sie jeweils
+              \(10\,\text{LE}\) von der Ebene \(E\) entfernt sein. Da \(\vec v\) genau \(5\,\text{LE}\) lang ist,
+              muss dieser zwei mal angewendet werden:
+              <p style="margin-left: 20px;">
+                \(\begin{align*}
+                \overrightarrow{OP}&=\vector{1\\-3\\0}+2\cdot \vector{4\\3\\0} \\
+                \overrightarrow{OP}&=\vector{9\\3\\0}
+                \end{align*}\)
+              </p>
+              Der Punkt \(P\) könnte bspw. die Koordinanten \(P(9\mid 3\mid 0)\) haben.
+            </li>
+          </ol>
+        </details>
       </div>
+      <h5>Aufgabe 1.5.3: Stochastik</h5>
+      <p>Die Abbildung zeigt die Wahrscheinlichkeitsverteilung einer
+        binomialverteilten Zufallsgröße \(X\) mit den Parametern \(n\) und \(p=0,5\).
+      </p>
+      <div class="centered">
+        <div class="centered" style="margin-top: 50px; margin-bottom: 40px; max-width: 250px; transform: scale(2.5);">
+        <div class="binomial-chart" data-n="21" data-p="0.5" data-scale="1.95" data-plus="1" data-maxk="22" data-showmu="false"
+          data-showsigma="false" ></div>
+      </div>
+      </div>
+      
+      <ol class="custom-marker parens-around lower-alpha more-spacing">
+        <li>Es gilt \(P(X=10)=P(X=11)\). 
+          <p>
+            Begründe, dass \(n\) nicht gerade ist. (Das Original in der Prüfung ist schwarz-weiß, das
+            heißt, dass man nicht sehen kann, wo noch grüne Balken sind.)
+          </p>
+        </li>
+        <li>
+          Es gilt \(P(X\geq 9) \approx 0,81\) und \(P(X=12)\approx 0,14\).
+          <p>
+            Berechne unter Verwendung dieser Werte näherungsweise die Wahrscheinlichkeit \(P(X=10)\)!
+          </p>
+        </li>
+      </ol>
+      <details class="loesungen">
+        <summary class="nonumber">1.5.3 Lösung</summary>
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>Durch \(p=0,5\) gilt, dass die Verteilung symmetrisch und mittig liegt.
+            <p>
+              Da die Wahrscheinlichkeit für \(k=10\) <i>und</i> \(k=11\) ihren größten Wert annimmt, kann der 
+              Erwartungswert \(E(X)=n\cdot 0,5\) nicht ganzzahlig sein. Dies geht nur bei ungeraden \(n\).
+            </p>
+            <p>
+              Aufgrund der Symmetrie der Verteilung gilt:
+              <ul>
+                <li>\(P(X=9)=P(X=12)\approx 0,14\)</li>
+                <li>\(P(X\geq 11)=0,5\)</li>
+              </ul>
+              \(P(X\geq 9)\) enthält \(P(X=9)\), \(P(X=10)\) und \(P(X\geq 11)\).
+            </p>
+            <p>
+              Dementsprechend gilt:
+            </p>
+            <p style="margin-left: 20px;">
+                \(\begin{align*}
+                P(X=10)&=P(X\geq9) - P(X=9) - P(X\geq 11)\\
+                P(X=10)&\approx0,81-0,14-0,5\approx0,17
+                \end{align*}\)
+              </p>
+          </li>
+        </ol>
+      </details>
     </section>
 
     <!-- <section>
@@ -685,8 +948,22 @@
 
     <!-- JS-Datei mit allen Funktionen -->
     <script src="/js/math/geo3d.js"></script>
+    <script src="/js/math/binomial.js"></script>
 
     <script>
+      // drawAxes(task151b, 4, 4, 4);
+
+
+      drawPoint(task151b, [1, 2.5, 1], "", "darkgoldenrod");
+      drawVector(task151b, [1, 2.5, 1], [-1, -2, 0], "", "lightblue", "center", 1.5, true);
+
+      drawPlane(task151b, [1, 2.5, 1], [1.5, 0, 0], [0, 0, 1.5], "",);
+
+      drawVector(task151b, [1, 2.5, 1], [1, 2, 0], "", "cyan");
+
+      drawPoint(task151b, [0, 0.5, 1], "P'", "lightblue", "aboveleft");
+      drawPoint(task151b, [2, 4.5, 1], "P", "cyan");
+
 
     </script>
 
@@ -733,7 +1010,7 @@
     <a href="/misc/impressum.html">Impressum</a>
     <div class="lastModified" align="center">
       Zuletzt geändert:<br />
-      9. September 2025
+      13. September 2025
       <!-- <span id="lastModifiedDate"></span> -->
     </div>
     <a href="/misc/datenschutz.html">Datenschutz</a>

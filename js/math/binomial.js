@@ -7,7 +7,7 @@ function factorial(k) {
 //     return binomCoeff * Math.pow(p, k) * Math.pow(1 - p, n - k);
 // }
 
-function binomial(n,k,p,kumm) {
+function binomial(n, k, p, kumm) {
 
     let binomCoeff = factorial(n) / (factorial(k) * factorial(n - k));
     binomCoeff *= Math.pow(p, k) * Math.pow(1 - p, n - k);
@@ -16,7 +16,7 @@ function binomial(n,k,p,kumm) {
         if (k == 0)
             return binomCoeff;
         else {
-            return binomCoeff + binomial(n, k-1, p, kumm);
+            return binomCoeff + binomial(n, k - 1, p, kumm);
         }
     }
     else {
@@ -43,7 +43,7 @@ function createBinomialSVG(n, p, scaleSetting = 'auto', extraTick, fixedMaxP = n
     } else {
         yScale = parseInt(scaleSetting, 10);
     }
-    yScale /=yscale;
+    yScale /= yscale;
 
     if (kumm)
         yScale *= 0.2;
@@ -125,6 +125,32 @@ function createBinomialSVG(n, p, scaleSetting = 'auto', extraTick, fixedMaxP = n
         svg.appendChild(tick);
     });
 
+    if (fixedMaxN != null) {
+        if (fixedMaxN > n && showK) {
+            let ii = n;
+            for (ii = Math.floor(n) + 1; ii <= fixedMaxN; ++ii) {
+                const label = document.createElementNS(svgNS, "text");
+                label.setAttribute("x", ii + 0.35);
+                label.setAttribute("y", "0.75");
+                label.setAttribute("font-family", "serif");
+                label.setAttribute("font-size", "0.7");
+                label.setAttribute("fill", "#a8a7a7");
+                label.textContent = ii;
+                svg.appendChild(label);
+
+                const tick = document.createElementNS(svgNS, "line");
+                tick.setAttribute("x1", ii + 0.5);
+                tick.setAttribute("y1", "0");
+                tick.setAttribute("x2", ii + 0.5);
+                tick.setAttribute("y2", "0.15");
+                tick.setAttribute("stroke", "#a7a7a7");
+                tick.setAttribute("stroke-width", "0.03");
+                svg.appendChild(tick);
+            }
+        }
+    }
+
+
     // Erwartungswert und Standardabweichung
     if (showMu || showSigma) {
         const mu = n * p;
@@ -195,8 +221,12 @@ function renderAllBinomialCharts() {
             const showMu = container.dataset.showmu === "true";
             const showSigma = container.dataset.showsigma === "true";
             const kumm = container.dataset.kumm === "true";
+            let maxK = parseFloat(container.dataset.maxk);
 
-            const svg = createBinomialSVG(n, p, scale * 10, plus, null, null, showMu, showSigma, showK, kumm, yscale);
+            if (isNaN(maxK))
+                maxK = null;
+
+            const svg = createBinomialSVG(n, p, scale * 10, plus, null, maxK, showMu, showSigma, showK, kumm, yscale);
             container.innerHTML = '';
             container.appendChild(svg);
         } else {
