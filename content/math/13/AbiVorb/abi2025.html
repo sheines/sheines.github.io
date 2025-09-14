@@ -81,8 +81,6 @@
     <!-- Hilfmittelfreier Teil -->
 
     <section>
-
-
       <h3 class="aufgaben">Aufgabe 1: Hilfmittelfreier Teil</h3>
       <p>
         Für die Aufgabe 1 stehen maximal 100 Minuten Bearbeitungszeit zur Verfügung. In dieser Zeit dürfen außer dem
@@ -843,7 +841,7 @@
                 senkrecht zur Ebene \(E\).
               </p>
             </li>
-            <li>Anschauung :
+            <li>Anschauung:
               <div class="centered" style="max-width: 300px">
                 <svg id="task151b" viewBox="-150 -200 550 345">
                   <defs></defs>
@@ -860,7 +858,8 @@
               </ul>
               Wenn nun der Betrag des Vektors \(\vec v\) bekannt ist, kann damit sehr einfach \(P\) ermittelt werden.
               </p>
-            <li>Ein Vektor steht senkrecht auf einer Ebene, wenn er orthogonal zu seinen beiden Richtungsvektoren steht.
+              <p>Ein Vektor steht senkrecht auf einer Ebene, wenn er orthogonal zu seinen beiden Richtungsvektoren
+                steht.
               <p style="margin-left: 20px;">
                 \(\begin{align*}
                 \left|\vector{4\\3\\0}\right|&=\sqrt{4^2+3^2+0^2}=5\,\text{LE}
@@ -876,63 +875,660 @@
                 \end{align*}\)
               </p>
               Der Punkt \(P\) könnte bspw. die Koordinanten \(P(9\mid 3\mid 0)\) haben.
+              </p>
             </li>
           </ol>
         </details>
-      </div>
-      <h5>Aufgabe 1.5.3: Stochastik</h5>
-      <p>Die Abbildung zeigt die Wahrscheinlichkeitsverteilung einer
-        binomialverteilten Zufallsgröße \(X\) mit den Parametern \(n\) und \(p=0,5\).
-      </p>
-      <div class="centered">
-        <div class="centered" style="margin-top: 50px; margin-bottom: 40px; max-width: 250px; transform: scale(2.5);">
-        <div class="binomial-chart" data-n="21" data-p="0.5" data-scale="1.95" data-plus="1" data-maxk="22" data-showmu="false"
-          data-showsigma="false" ></div>
-      </div>
-      </div>
-      
-      <ol class="custom-marker parens-around lower-alpha more-spacing">
-        <li>Es gilt \(P(X=10)=P(X=11)\). 
-          <p>
-            Begründe, dass \(n\) nicht gerade ist. (Das Original in der Prüfung ist schwarz-weiß, das
-            heißt, dass man nicht sehen kann, wo noch grüne Balken sind.)
-          </p>
-        </li>
-        <li>
-          Es gilt \(P(X\geq 9) \approx 0,81\) und \(P(X=12)\approx 0,14\).
-          <p>
-            Berechne unter Verwendung dieser Werte näherungsweise die Wahrscheinlichkeit \(P(X=10)\)!
-          </p>
-        </li>
-      </ol>
-      <details class="loesungen">
-        <summary class="nonumber">1.5.3 Lösung</summary>
+        <h5>Aufgabe 1.5.3: Stochastik</h5>
+        <p>Die Abbildung zeigt die Wahrscheinlichkeitsverteilung einer
+          binomialverteilten Zufallsgröße \(X\) mit den Parametern \(n\) und \(p=0,5\).
+        </p>
+        <div class="centered">
+          <div class="centered" style="margin-top: 50px; margin-bottom: 40px; max-width: 250px; transform: scale(2.5);">
+            <div class="binomial-chart" data-n="21" data-p="0.5" data-scale="1.95" data-plus="1" data-maxk="22"
+              data-showmu="false" data-showsigma="false"></div>
+          </div>
+        </div>
+
         <ol class="custom-marker parens-around lower-alpha more-spacing">
-          <li>Durch \(p=0,5\) gilt, dass die Verteilung symmetrisch und mittig liegt.
+          <li>Es gilt \(P(X=10)=P(X=11)\).
             <p>
-              Da die Wahrscheinlichkeit für \(k=10\) <i>und</i> \(k=11\) ihren größten Wert annimmt, kann der 
-              Erwartungswert \(E(X)=n\cdot 0,5\) nicht ganzzahlig sein. Dies geht nur bei ungeraden \(n\).
+              Begründe, dass \(n\) nicht gerade ist. (Das Original in der Prüfung ist schwarz-weiß, das
+              heißt, dass man nicht sehen kann, wo noch grüne Balken sind.)
             </p>
+          </li>
+          <li>
+            Es gilt \(P(X\geq 9) \approx 0,81\) und \(P(X=12)\approx 0,14\).
             <p>
-              Aufgrund der Symmetrie der Verteilung gilt:
+              Berechne unter Verwendung dieser Werte näherungsweise die Wahrscheinlichkeit \(P(X=10)\)!
+            </p>
+          </li>
+        </ol>
+        <details class="loesungen">
+          <summary class="nonumber">1.5.3 Lösung</summary>
+          <ol class="custom-marker parens-around lower-alpha more-spacing">
+            <li>Durch \(p=0,5\) gilt, dass die Verteilung symmetrisch und mittig liegt.
+              <p>
+                Da die Wahrscheinlichkeit für \(k=10\) <i>und</i> \(k=11\) ihren größten Wert annimmt, kann der
+                Erwartungswert \(E(X)=n\cdot 0,5\) nicht ganzzahlig sein. Dies geht nur bei ungeraden \(n\).
+              </p>
+              <p>
+                Aufgrund der Symmetrie der Verteilung gilt:
               <ul>
                 <li>\(P(X=9)=P(X=12)\approx 0,14\)</li>
                 <li>\(P(X\geq 11)=0,5\)</li>
               </ul>
               \(P(X\geq 9)\) enthält \(P(X=9)\), \(P(X=10)\) und \(P(X\geq 11)\).
-            </p>
-            <p>
-              Dementsprechend gilt:
-            </p>
-            <p style="margin-left: 20px;">
+              </p>
+              <p>
+                Dementsprechend gilt:
+              </p>
+              <p style="margin-left: 20px;">
                 \(\begin{align*}
                 P(X=10)&=P(X\geq9) - P(X=9) - P(X\geq 11)\\
                 P(X=10)&\approx0,81-0,14-0,5\approx0,17
                 \end{align*}\)
               </p>
+            </li>
+          </ol>
+        </details>
+        <!-- <div class="videos">
+          <iframe width="360" height="202" src="https://www.youtube.com/embed/19goPRnthCE" title="Abstand Punkt - Punkt"
+            frameborder="0" allow="web-share" allowfullscreen></iframe>
+
+        </div> -->
+      </div>
+
+
+      <h3 class="aufgaben">Rechenteil</h3>
+      <p>
+        Für die gesamte Prüfung standen 285 Minuten zur Verfügung, davon 100 für den Hilfsmittelfreien Teil.
+        Es verbleiben also etwa 3 Stunden für die restlichen drei Aufgaben.
+      </p>
+      <p>
+        Die Aufgaben 3 und 4 müssen bearbeitet werden.
+      </p>
+      <p>Von den Aufgaben 2.1 und 2.2 muss genau eine Aufgabe bearbeitet werden.</p>
+
+      <div class="aufgaben">
+        <h4 id="a21">Aufgabe 2.1: Analysis &ndash; Windrad</h4>
+        <p>
+          Von den Aufgaben 2.1 und 2.2 muss nur eine gelöst werden.
+        </p>
+        <p>
+          Gegeben ist die in \(\mathbb R\) definierte Funktion \(f\) mit \(f(x)=\tfrac2{25}x^3-\tfrac32x\).
+        </p>
+        <p>Der Graph von \(f\) heißt \(G_f\)</p>
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>Weise nach, dass der Graph \(G_f\) punktsymmetrisch zum Koordinatenursprung ist!
+            <p>
+              Bestimme die Nullstellen von \(f\)!
+            </p>
+          </li>
+          <li>
+            <p>
+              Der Graph \(G_f\) hat genau zwei Extrempunkte.
+            </p>
+            <p>
+              Bestimme die Koordinaten dieser Extrempunkte!
+            </p>
+            <p>
+              Zeige, dass die Gerade durch die Extrempunkte von \(G_f\) die Winkelhalbierende
+              des \(\text{II}\). und \(\text{IV}\). Quadranten ist!
+            </p>
           </li>
         </ol>
-      </details>
+        <p>
+          In einem Malbuch für Kinder wird ein Windrad abgebildet. Zur Modellierung zweier Flügel dieses
+          Windrades werden der Graph \(G_f\) und die Gerade \(g\) mit \(g(x)=\tfrac12x\) im Intervall
+          \(\left[-5;5\right]\) verwendet. Dreht man diese beiden Flügel um \(90^\circ\) gegen
+          den Uhrzeigersinn um den Koordinatenursprung, so erhält man die anderen beiden Flügel (siehe Abbildung).
+          Die durch die Drehung der Geraden \(g\) entstandene Gerade heißt \(g^*,\) die Endpunkte der
+          Flügel auf dieser Geraden heißen \(A^*\) bzw. \(B^*.\) Der Punkt \(A(5 \mid 2,5)\) ist der
+          Schnittpunkt von \(G_f\) mit \(g\) und liegt auf dem abgebildeten Kreis.
+        </p>
+        <div class="centered" style="max-height: 299px; margin-bottom: 10px;">
+          <svg id="task21" xmlns="http://www.w3.org/2000/svg" viewBox="-7.5 -7.5 14 14"
+            style="background-color: #232323">
+            <!-- The viewBox is set to (-12, -6, 26, 13) which provides a coordinate space of width 38 and height 19 units.
+                                 The center of the SVG is (0, 0). You can adjust this viewBox as needed. -->
+            <!-- Add grid lines -->
+            <defs>
+              <pattern id="grid" width="1" height="1" patternUnits="userSpaceOnUse">
+                <path d="M 1 0 L 0 0 0 1" fill="none" stroke="#333333" stroke-width="0.05" />
+              </pattern>
+            </defs>
+            <!-- <rect x="-2.9" y="-3.9" width="9.8" height="10.6" fill="url(#grid)" /> -->
+
+            <!-- Draw the x-axis line -->
+            <line x1="-6.5" y1="0" x2="7" y2="0" stroke="#a7a7a7" stroke-width="0.05" />
+
+            <!-- Draw the x-axis arrowhead -->
+            <polygon points="7.5,0 6.8,-0.15 6.8,0.15" fill="#a7a7a7" />
+
+            <!-- Draw the y-axis line -->
+            <line x1="0" y1="6.5" x2="0" y2="-7" stroke="#a7a7a7" stroke-width="0.05" />
+
+            <!-- Draw the y-axis arrowhead -->
+            <polygon points="0,-7.5 -0.15,-6.8 0.15,-6.8" fill="#a7a7a7" />
+
+            <!-- Add "x" at the end of the x-axis -->
+            <text x="7.0" y="0.85" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">x</text>
+
+            <!-- Add "y" at the end of the y-axis -->
+            <text x="-0.8" y="-6.8" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">y</text>
+
+
+            <!-- Add numbers to x-axis-->
+            <text x="0.85" y="0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">1</text>
+            <text x="4.85" y="0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">5</text>
+            <text x="-1.25" y="0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">−1</text>
+
+
+            <!-- Add numbers to y-axis-->
+            <text x="-0.75" y="-0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">1</text>
+
+            <path d="M -5 2.5 L -4.9 2.06 -4.8 1.65 -4.7 1.26 -4.6 0.89 -4.5 0.54
+                      -4.4 0.21 -4.3 -0.09 -4.2 -0.37 -4.1 -0.64 -4 -0.88
+                      -3.9 -1.1 -3.8 -1.31 -3.7 -1.5 -3.6 -1.67 -3.5 -1.82
+                      -3.4 -1.96 -3.3 -2.08 -3.2 -2.18 -3.1 -2.27 -3 -2.34
+                      -2.9 -2.4 -2.8 -2.44 -2.7 -2.48 -2.6 -2.49 -2.5 -2.5
+                      -2.4 -2.49 -2.3 -2.48 -2.2 -2.45 -2.1 -2.41 -2 -2.36
+                      -1.9 -2.3 -1.8 -2.23 -1.7 -2.16 -1.6 -2.07 -1.5 -1.98
+                      -1.4 -1.88 -1.3 -1.77 -1.2 -1.66 -1.1 -1.54 -1 -1.42
+                      -0.9 -1.29 -0.8 -1.16 -0.7 -1.02 -0.6 -0.88 -0.5 -0.74
+                      -0.4 -0.59 -0.3 -0.45 -0.2 -0.3 -0.1 -0.15 0 0
+                      0.1 0.15 0.2 0.3 0.3 0.45 0.4 0.59 0.5 0.74
+                      0.6 0.88 0.7 1.02 0.8 1.16 0.9 1.29 1 1.42
+                      1.1 1.54 1.2 1.66 1.3 1.77 1.4 1.88 1.5 1.98
+                      1.6 2.07 1.7 2.16 1.8 2.23 1.9 2.3 2 2.36
+                      2.1 2.41 2.2 2.45 2.3 2.48 2.4 2.49 2.5 2.5
+                      2.6 2.49 2.7 2.48 2.8 2.44 2.9 2.4 3 2.34
+                      3.1 2.27 3.2 2.18 3.3 2.08 3.4 1.96 3.5 1.82
+                      3.6 1.67 3.7 1.5 3.8 1.31 3.9 1.1 4 0.88
+                      4.1 0.64 4.2 0.37 4.3 0.09 4.4 -0.21 4.5 -0.54
+                      4.6 -0.89 4.7 -1.26 4.8 -1.65 4.9 -2.06 5 -2.5" fill="none" stroke="darkgoldenrod"
+              stroke-width="0.075" />
+            <path d="M -5 2.5 L -4.9 2.06 -4.8 1.65 -4.7 1.26 -4.6 0.89 -4.5 0.54
+                      -4.4 0.21 -4.3 -0.09 -4.2 -0.37 -4.1 -0.64 -4 -0.88
+                      -3.9 -1.1 -3.8 -1.31 -3.7 -1.5 -3.6 -1.67 -3.5 -1.82
+                      -3.4 -1.96 -3.3 -2.08 -3.2 -2.18 -3.1 -2.27 -3 -2.34
+                      -2.9 -2.4 -2.8 -2.44 -2.7 -2.48 -2.6 -2.49 -2.5 -2.5
+                      -2.4 -2.49 -2.3 -2.48 -2.2 -2.45 -2.1 -2.41 -2 -2.36
+                      -1.9 -2.3 -1.8 -2.23 -1.7 -2.16 -1.6 -2.07 -1.5 -1.98
+                      -1.4 -1.88 -1.3 -1.77 -1.2 -1.66 -1.1 -1.54 -1 -1.42
+                      -0.9 -1.29 -0.8 -1.16 -0.7 -1.02 -0.6 -0.88 -0.5 -0.74
+                      -0.4 -0.59 -0.3 -0.45 -0.2 -0.3 -0.1 -0.15 0 0
+                      0.1 0.15 0.2 0.3 0.3 0.45 0.4 0.59 0.5 0.74
+                      0.6 0.88 0.7 1.02 0.8 1.16 0.9 1.29 1 1.42
+                      1.1 1.54 1.2 1.66 1.3 1.77 1.4 1.88 1.5 1.98
+                      1.6 2.07 1.7 2.16 1.8 2.23 1.9 2.3 2 2.36
+                      2.1 2.41 2.2 2.45 2.3 2.48 2.4 2.49 2.5 2.5
+                      2.6 2.49 2.7 2.48 2.8 2.44 2.9 2.4 3 2.34
+                      3.1 2.27 3.2 2.18 3.3 2.08 3.4 1.96 3.5 1.82
+                      3.6 1.67 3.7 1.5 3.8 1.31 3.9 1.1 4 0.88
+                      4.1 0.64 4.2 0.37 4.3 0.09 4.4 -0.21 4.5 -0.54
+                      4.6 -0.89 4.7 -1.26 4.8 -1.65 4.9 -2.06 5 -2.5" fill="none" stroke="darkgoldenrod"
+              transform="rotate(90)" stroke-width="0.035" stroke-dasharray="0.2,0.2" />
+
+            <circle cx="0" cy="0" r="5.59" fill="none" stroke="#a7a7a8" stroke-width="0.075" />
+
+            <line x1="-2.5" y1="-5" x2="2.5" y2="5" stroke="darkgoldenrod" stroke-width="0.035"
+              stroke-dasharray="0.2,0.2" />
+
+            <line x1="-5" y1="2.5" x2="5" y2="-2.5" stroke="darkgoldenrod" stroke-width="0.075" />
+
+            <text x="-3.75" y="2.5" font-family="serif" font-size="0.9" font-style="italic"
+              fill="darkgoldenrod">g</text>
+            <text x="3.85" y="2.15" font-family="serif" font-size="0.9" font-style="italic" fill="darkgoldenrod">G<tspan
+                baseline-shift="-80%" font-size="0.5">f</tspan></text>
+
+            <text x="5.4" y="-2.35" font-family="serif" font-size="0.9" font-style="italic" fill="#a7a7a8">A</text>
+            <text x="-5.9" y="2.85" font-family="serif" font-size="0.9" font-style="italic" fill="#a7a7a8">B</text>
+
+
+          </svg>
+          <script>
+            const svg21 = document.getElementById("task21");
+
+            for (let i = -6; i <= 6; i++) {
+              if (i === 0) continue; // 0 überspringen
+
+              let line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+              line.setAttribute("x1", i);
+              line.setAttribute("y1", 0);
+              line.setAttribute("x2", i);
+              line.setAttribute("y2", 0.15);
+              line.setAttribute("stroke", "#a7a7a7");
+              line.setAttribute("stroke-width", "0.05");
+
+              svg21.appendChild(line);
+
+              line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+              line.setAttribute("y1", i);
+              line.setAttribute("x1", 0);
+              line.setAttribute("y2", i);
+              line.setAttribute("x2", -0.15);
+              line.setAttribute("stroke", "#a7a7a7");
+              line.setAttribute("stroke-width", "0.05");
+
+              svg21.appendChild(line);
+            }
+          </script>
+        </div>
+        <ol class="custom-marker parens-around lower-alpha more-spacing" style="counter-set: list 2;">
+          <li>
+            <p>
+              Begründe, dass für \(g^*\) gilt: \(g^*(x)=-2 x\)
+            </p>
+            <p>
+              Der Punkt \(A^*\) geht durch die Drehung aus dem Punkt \(A\) hervor.
+            </p>
+            <p>
+              Gib die Koordinaten des Punktes \(A^*\) an.
+            </p>
+          </li>
+          <li>
+            <p>
+              Betrachtet wird die Tangente \(k\) an \(G_f\) im Punkt \(\left(\frac{5\sqrt{3}}{2} \mid 0 \right)\).
+            </p>
+            <p>
+              Bestimme den Steigungswinkel der Tangente \(k\)!
+            </p>
+            <p>
+              Untersuche, ob die folgende Aussage wahr ist:
+            <p style="margin-left: 20px; font-style: italic;">
+              Für den Schnittwinkel \(\alpha\) von \(k\) und \(g\) gilt: \(\sin (\alpha)=\cos (\alpha).\)
+            </p>
+            </p>
+          </li>
+          <li>
+            Im Zusammenhang mit dem Windrad gibt es zwei Flächen: \(A_1\) und \(A_2\).
+            <p>
+              Für den Inhalt der Fläche \(A_1\) gilt: \(A_1=\left(\frac{5 \sqrt{5}}{2}\right)^2 \cdot\pi\).
+            </p>
+            <p>
+              Der Inhalt der Fläche \(A_2\) kann mit der Gleichung \(A_2=4 \cdot \displaystyle\int_0^5 g(x)-f(x) \
+              \text{d} x\) berechnet werden.
+            </p>
+            <p>
+              Veranschauliche die Fläche \(A_1-A_2\) in der Abbildung!
+            </p>
+            <p>
+              Berechne den Inhalt der Fläche \(A_1-A_2\)!
+            </p>
+          </li>
+        </ol>
+        <details class="loesungen">
+          <summary class="nonumber">2.1 Lösung</summary>
+          <ol class="custom-marker parens-around lower-alpha more-spacing">
+            <li>Der Nachweis muss rechnerisch erfolgen. Die ausschließlich ungeraden Exponenten reichen nicht als
+              Nachweis aus:
+              <p style="margin-left: 20px;">
+                \(\begin{align*}
+                f(-x) &= \tfrac{2}{25}\cdot(-x)^3-\tfrac{3}{2} \cdot(-x) \\
+                &= -\tfrac{2}{25} x^3+\tfrac{3}{2} x \\
+                f(-x)&= -f(x)
+                \end{align*}\)
+              </p>
+              <p>
+                Der Graph \(G_f\) ist punktsymmetrisch zum Koordinatenursprung, da \(f(-x)=-f(x)\) gilt.
+              </p>
+              <p>
+                Die erste Nullstelle \(x_1=0\) kann direkt abgelesen werden. Nach Abspaltung dieser Nullstelle bleibt:
+              <p style="margin-left: 20px;">
+                \(\begin{align*}
+                \tfrac{2}{25}x^3-\tfrac{3}{2}x&=x\cdot\left(\tfrac{2}{25}x^2-\tfrac{3}{2}\right) \\[10px]
+                \tfrac{2}{25}x^2-\tfrac{3}{2} &= 0 \ \quad| + \tfrac{3}{2} \\
+                \tfrac{2}{25}x^2 &= \tfrac{3}{2} \ \quad\!\!| : \tfrac{2}{25} \\
+                x^2 &= \tfrac{75}{4} \ \,\, |\, \sqrt{\ } \\
+                x_2 &= -\tfrac{5 \sqrt{3}}{2}\approx -4,33 \\
+                x_3 &= \tfrac{5 \sqrt{3}}{2} \approx 4,33
+                \end{align*}\)
+              </p>
+              </p>
+            </li>
+            <li>
+              Erste Ableitung:
+              <p style="margin-left: 20px;">
+                \(\begin{align*}
+                f'(x)=\tfrac{6}{25}x^2-\tfrac32
+                \end{align*}\)
+              </p>
+              Ableitung null setzen:
+              <p style="margin-left: 20px;">
+                \(\begin{align*}
+                0&=\tfrac{6}{25}x^2-\tfrac32 \\
+                &\ldots \\
+                x_1&=-\tfrac52 \\
+                x_2&=\tfrac52
+                \end{align*}\)
+              </p>
+              Da bereits gegeben ist, dass es genau zwei Extrempunkte gibt, muss nicht mehr mit der zweiten Ableitung
+              geprüft werden.
+              Auch die Art der Extrema ist nicht gefragt.
+              <p>
+                \(y\)-Koordinaten der Extrempunkte bestimmen:
+              <p style="margin-left: 20px;">
+                \(\begin{align*}
+                f(\tfrac52)&=\tfrac{2}{25}\cdot \left(\tfrac52\right)^3-\tfrac{3}{2}\cdot \tfrac52 \\
+                f(\tfrac52)&=-\tfrac52
+                \end{align*}\)
+              </p>
+              Der erste Extrempunkt hat die Koordinanten \(E_1\left(\tfrac52\mid-\tfrac52\right)\), der Zweite
+              \(E_2\left(-\tfrac52\mid\tfrac52\right)\)
+              (z.B. mithilfe der Symmetrie).
+              </p>
+              <p>
+                Gerade \(g\) durch Extrempunkte:
+              <p style="margin-left: 20px;">
+                \(\begin{align*}
+                m&=\frac{y_2-y_1}{x_2-x_1} \\
+                m&=\frac{\tfrac52-\left(-\tfrac52\right)}{-\tfrac52-\tfrac52} \\
+                m&=-1
+                \end{align*}\)
+              </p>
+              Wegen der Punktsymmetrie muss die Gerade durch den Koordinatenursprung verlaufen \(n=0\). (Rechnerisch tut
+              sie das natürlich auch)
+              </p>
+              <p>
+                Die Geradengleichung lautet \(y=-x\). Diese verläuft genau mittig durch den \(\text{II}\). und
+                \(\text{IV}\). Quadranten und ist somit
+                deren Winkelhalbierende.
+              </p>
+            </li>
+            <li>
+              Die Gerade \(g^*\) entsteht durch Drehung von \(g\) um \(90^{\circ}\) gegen den Uhrzeigersinn um den
+              Ursprung.
+              <p>
+                Die Gerade \(g^*\) steht somit orthogonal auf \(g\).
+              </p>
+              <p>
+                Für orthogonale Geraden gilt:
+              <p style="margin-left: 20px;">
+                \(\begin{align*}
+                m_1&=-\frac{1}{m_2} \\
+                -2&=-\frac{1}{\frac12} \\
+                -2 &= -2 \quad\checkmark
+                \end{align*}\)
+              </p>
+              Da \(g\) durch den Ursprung verläuft, muss auch \(g^*\) durch den Ursprung verlaufen (\(n=0\)).
+              </p>
+              <p>
+                Das heißt, es gilt: \(g^*(x)=-2x\).
+              </p>
+              <p>
+                Koordinaten des gedrehten Punktes: \(A^*(-2,5\mid 5)\)
+              </p>
+            </li>
+            <li>Für den Steigungswinkel von \(k\) wird lediglich dessen Steigung \(m_k\) benötigt, nicht jedoch die
+              ganze Tangentengleichung.
+              <p style="margin-left: 20px;">
+                \(\begin{align*}
+                f'(x)&=\tfrac{6}{25}x^2-\tfrac32 \\
+                m_k&=f'\left(\tfrac{5\sqrt3}{2}\right)\\
+                m_k&=\tfrac{6}{25}\cdot\left(\tfrac{5\sqrt3}{2}\right)^2 -\tfrac32 \\
+                m_k&=3
+                \end{align*}\)
+              </p>
+              Steigungswinkel Tangente \(k\):
+              <p style="margin-left: 20px;">
+                \(\begin{align*}
+                \tan \varphi_k &=3 \quad|\,\text{arc} \\
+                \varphi_k &\approx 71,6^\circ
+                \end{align*}\)
+              </p>
+              Steigungswinkel Gerade \(g\):
+              <p style="margin-left: 20px;">
+                \(\begin{align*}
+                \tan \varphi_g &=\tfrac12 \quad|\,\text{arc} \\
+                \varphi_g &\approx 26,6^\circ
+                \end{align*}\)
+              </p>
+              Schnittwinkel \(\alpha\):
+              Steigungswinkel Tangente:
+              <p style="margin-left: 20px;">
+                \(\begin{align*}
+                \alpha&=|\varphi_k - \varphi_g| \\
+                \alpha&=45^\circ
+                \end{align*}\)
+              </p>
+              Aussage prüfen:
+              <p style="margin-left: 20px;">
+                \(\begin{align*}
+                \sin\alpha&=\cos\alpha \\
+                \sin 45^\circ&=\cos 45^\circ \\
+                0,707&=0,707\quad\checkmark
+                \end{align*}\)
+              </p>
+              Die Aussage ist wahr.
+            </li>
+            <li>
+              Anschauung:
+              <ul>
+                <li>\(A_1\) ist die Gleichung für eine Kreisfläche</li>
+                <li>\(A_2\) ist Fläche der vier Flügel, weil es viermal die Fläche zwischen \(f\) und \(g\) rechts der
+                  \(y\)-Achse ist.</li>
+              </ul>
+              <div class="centered" style="max-height: 299px; margin-bottom: 10px;">
+                <svg id="task21e" xmlns="http://www.w3.org/2000/svg" viewBox="-7.5 -7.5 14 14"
+                  style="background-color: #454545">
+                  <!-- The viewBox is set to (-12, -6, 26, 13) which provides a coordinate space of width 38 and height 19 units.
+                                 The center of the SVG is (0, 0). You can adjust this viewBox as needed. -->
+                  <!-- Add grid lines -->
+                  <defs>
+                    <pattern id="grid" width="1" height="1" patternUnits="userSpaceOnUse">
+                      <path d="M 1 0 L 0 0 0 1" fill="none" stroke="#333333" stroke-width="0.05" />
+                    </pattern>
+                  </defs>
+                  <!-- <rect x="-2.9" y="-3.9" width="9.8" height="10.6" fill="url(#grid)" /> -->
+
+                  <circle cx="0" cy="0" r="5.59" fill="darkgoldenrod" opacity="0.5" stroke="#a7a7a8"
+                    stroke-width="0.075" />
+
+                  <path d="M -5 2.5 L -4.9 2.06 -4.8 1.65 -4.7 1.26 -4.6 0.89 -4.5 0.54
+                      -4.4 0.21 -4.3 -0.09 -4.2 -0.37 -4.1 -0.64 -4 -0.88
+                      -3.9 -1.1 -3.8 -1.31 -3.7 -1.5 -3.6 -1.67 -3.5 -1.82
+                      -3.4 -1.96 -3.3 -2.08 -3.2 -2.18 -3.1 -2.27 -3 -2.34
+                      -2.9 -2.4 -2.8 -2.44 -2.7 -2.48 -2.6 -2.49 -2.5 -2.5
+                      -2.4 -2.49 -2.3 -2.48 -2.2 -2.45 -2.1 -2.41 -2 -2.36
+                      -1.9 -2.3 -1.8 -2.23 -1.7 -2.16 -1.6 -2.07 -1.5 -1.98
+                      -1.4 -1.88 -1.3 -1.77 -1.2 -1.66 -1.1 -1.54 -1 -1.42
+                      -0.9 -1.29 -0.8 -1.16 -0.7 -1.02 -0.6 -0.88 -0.5 -0.74
+                      -0.4 -0.59 -0.3 -0.45 -0.2 -0.3 -0.1 -0.15 0 0 -5 2.5" fill="#454545" stroke="none" />
+                  <path d="M -5 2.5 L -4.9 2.06 -4.8 1.65 -4.7 1.26 -4.6 0.89 -4.5 0.54
+                      -4.4 0.21 -4.3 -0.09 -4.2 -0.37 -4.1 -0.64 -4 -0.88
+                      -3.9 -1.1 -3.8 -1.31 -3.7 -1.5 -3.6 -1.67 -3.5 -1.82
+                      -3.4 -1.96 -3.3 -2.08 -3.2 -2.18 -3.1 -2.27 -3 -2.34
+                      -2.9 -2.4 -2.8 -2.44 -2.7 -2.48 -2.6 -2.49 -2.5 -2.5
+                      -2.4 -2.49 -2.3 -2.48 -2.2 -2.45 -2.1 -2.41 -2 -2.36
+                      -1.9 -2.3 -1.8 -2.23 -1.7 -2.16 -1.6 -2.07 -1.5 -1.98
+                      -1.4 -1.88 -1.3 -1.77 -1.2 -1.66 -1.1 -1.54 -1 -1.42
+                      -0.9 -1.29 -0.8 -1.16 -0.7 -1.02 -0.6 -0.88 -0.5 -0.74
+                      -0.4 -0.59 -0.3 -0.45 -0.2 -0.3 -0.1 -0.15 0 0 -5 2.5" fill="#454545" stroke="none"
+                    transform="rotate(90)" />
+                  <path d="M -5 2.5 L -4.9 2.06 -4.8 1.65 -4.7 1.26 -4.6 0.89 -4.5 0.54
+                      -4.4 0.21 -4.3 -0.09 -4.2 -0.37 -4.1 -0.64 -4 -0.88
+                      -3.9 -1.1 -3.8 -1.31 -3.7 -1.5 -3.6 -1.67 -3.5 -1.82
+                      -3.4 -1.96 -3.3 -2.08 -3.2 -2.18 -3.1 -2.27 -3 -2.34
+                      -2.9 -2.4 -2.8 -2.44 -2.7 -2.48 -2.6 -2.49 -2.5 -2.5
+                      -2.4 -2.49 -2.3 -2.48 -2.2 -2.45 -2.1 -2.41 -2 -2.36
+                      -1.9 -2.3 -1.8 -2.23 -1.7 -2.16 -1.6 -2.07 -1.5 -1.98
+                      -1.4 -1.88 -1.3 -1.77 -1.2 -1.66 -1.1 -1.54 -1 -1.42
+                      -0.9 -1.29 -0.8 -1.16 -0.7 -1.02 -0.6 -0.88 -0.5 -0.74
+                      -0.4 -0.59 -0.3 -0.45 -0.2 -0.3 -0.1 -0.15 0 0 -5 2.5" fill="#454545" stroke="none"
+                    transform="rotate(180)" />
+                  <path d="M -5 2.5 L -4.9 2.06 -4.8 1.65 -4.7 1.26 -4.6 0.89 -4.5 0.54
+                      -4.4 0.21 -4.3 -0.09 -4.2 -0.37 -4.1 -0.64 -4 -0.88
+                      -3.9 -1.1 -3.8 -1.31 -3.7 -1.5 -3.6 -1.67 -3.5 -1.82
+                      -3.4 -1.96 -3.3 -2.08 -3.2 -2.18 -3.1 -2.27 -3 -2.34
+                      -2.9 -2.4 -2.8 -2.44 -2.7 -2.48 -2.6 -2.49 -2.5 -2.5
+                      -2.4 -2.49 -2.3 -2.48 -2.2 -2.45 -2.1 -2.41 -2 -2.36
+                      -1.9 -2.3 -1.8 -2.23 -1.7 -2.16 -1.6 -2.07 -1.5 -1.98
+                      -1.4 -1.88 -1.3 -1.77 -1.2 -1.66 -1.1 -1.54 -1 -1.42
+                      -0.9 -1.29 -0.8 -1.16 -0.7 -1.02 -0.6 -0.88 -0.5 -0.74
+                      -0.4 -0.59 -0.3 -0.45 -0.2 -0.3 -0.1 -0.15 0 0 -5 2.5" fill="#454545" stroke="none"
+                    transform="rotate(270)" />
+
+
+                  <!-- Draw the x-axis line -->
+                  <line x1="-6.5" y1="0" x2="7" y2="0" stroke="#a7a7a7" stroke-width="0.05" />
+
+                  <!-- Draw the x-axis arrowhead -->
+                  <polygon points="7.5,0 6.8,-0.15 6.8,0.15" fill="#a7a7a7" />
+
+                  <!-- Draw the y-axis line -->
+                  <line x1="0" y1="6.5" x2="0" y2="-7" stroke="#a7a7a7" stroke-width="0.05" />
+
+                  <!-- Draw the y-axis arrowhead -->
+                  <polygon points="0,-7.5 -0.15,-6.8 0.15,-6.8" fill="#a7a7a7" />
+
+                  <!-- Add "x" at the end of the x-axis -->
+                  <text x="7.0" y="0.85" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">x</text>
+
+                  <!-- Add "y" at the end of the y-axis -->
+                  <text x="-0.8" y="-6.8" font-family="serif" font-size="0.9" font-style="italic"
+                    fill="#a8a7a7">y</text>
+
+
+                  <!-- Add numbers to x-axis-->
+                  <text x="0.85" y="0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">1</text>
+                  <text x="4.85" y="0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">5</text>
+                  <text x="-1.25" y="0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">−1</text>
+
+
+                  <!-- Add numbers to y-axis-->
+                  <text x="-0.75" y="-0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">1</text>
+
+                  <path d="M -5 2.5 L -4.9 2.06 -4.8 1.65 -4.7 1.26 -4.6 0.89 -4.5 0.54
+                      -4.4 0.21 -4.3 -0.09 -4.2 -0.37 -4.1 -0.64 -4 -0.88
+                      -3.9 -1.1 -3.8 -1.31 -3.7 -1.5 -3.6 -1.67 -3.5 -1.82
+                      -3.4 -1.96 -3.3 -2.08 -3.2 -2.18 -3.1 -2.27 -3 -2.34
+                      -2.9 -2.4 -2.8 -2.44 -2.7 -2.48 -2.6 -2.49 -2.5 -2.5
+                      -2.4 -2.49 -2.3 -2.48 -2.2 -2.45 -2.1 -2.41 -2 -2.36
+                      -1.9 -2.3 -1.8 -2.23 -1.7 -2.16 -1.6 -2.07 -1.5 -1.98
+                      -1.4 -1.88 -1.3 -1.77 -1.2 -1.66 -1.1 -1.54 -1 -1.42
+                      -0.9 -1.29 -0.8 -1.16 -0.7 -1.02 -0.6 -0.88 -0.5 -0.74
+                      -0.4 -0.59 -0.3 -0.45 -0.2 -0.3 -0.1 -0.15 0 0
+                      0.1 0.15 0.2 0.3 0.3 0.45 0.4 0.59 0.5 0.74
+                      0.6 0.88 0.7 1.02 0.8 1.16 0.9 1.29 1 1.42
+                      1.1 1.54 1.2 1.66 1.3 1.77 1.4 1.88 1.5 1.98
+                      1.6 2.07 1.7 2.16 1.8 2.23 1.9 2.3 2 2.36
+                      2.1 2.41 2.2 2.45 2.3 2.48 2.4 2.49 2.5 2.5
+                      2.6 2.49 2.7 2.48 2.8 2.44 2.9 2.4 3 2.34
+                      3.1 2.27 3.2 2.18 3.3 2.08 3.4 1.96 3.5 1.82
+                      3.6 1.67 3.7 1.5 3.8 1.31 3.9 1.1 4 0.88
+                      4.1 0.64 4.2 0.37 4.3 0.09 4.4 -0.21 4.5 -0.54
+                      4.6 -0.89 4.7 -1.26 4.8 -1.65 4.9 -2.06 5 -2.5" fill="none" stroke="#a7a7a8"
+                    stroke-width="0.075" />
+                  <path d="M -5 2.5 L -4.9 2.06 -4.8 1.65 -4.7 1.26 -4.6 0.89 -4.5 0.54
+                      -4.4 0.21 -4.3 -0.09 -4.2 -0.37 -4.1 -0.64 -4 -0.88
+                      -3.9 -1.1 -3.8 -1.31 -3.7 -1.5 -3.6 -1.67 -3.5 -1.82
+                      -3.4 -1.96 -3.3 -2.08 -3.2 -2.18 -3.1 -2.27 -3 -2.34
+                      -2.9 -2.4 -2.8 -2.44 -2.7 -2.48 -2.6 -2.49 -2.5 -2.5
+                      -2.4 -2.49 -2.3 -2.48 -2.2 -2.45 -2.1 -2.41 -2 -2.36
+                      -1.9 -2.3 -1.8 -2.23 -1.7 -2.16 -1.6 -2.07 -1.5 -1.98
+                      -1.4 -1.88 -1.3 -1.77 -1.2 -1.66 -1.1 -1.54 -1 -1.42
+                      -0.9 -1.29 -0.8 -1.16 -0.7 -1.02 -0.6 -0.88 -0.5 -0.74
+                      -0.4 -0.59 -0.3 -0.45 -0.2 -0.3 -0.1 -0.15 0 0
+                      0.1 0.15 0.2 0.3 0.3 0.45 0.4 0.59 0.5 0.74
+                      0.6 0.88 0.7 1.02 0.8 1.16 0.9 1.29 1 1.42
+                      1.1 1.54 1.2 1.66 1.3 1.77 1.4 1.88 1.5 1.98
+                      1.6 2.07 1.7 2.16 1.8 2.23 1.9 2.3 2 2.36
+                      2.1 2.41 2.2 2.45 2.3 2.48 2.4 2.49 2.5 2.5
+                      2.6 2.49 2.7 2.48 2.8 2.44 2.9 2.4 3 2.34
+                      3.1 2.27 3.2 2.18 3.3 2.08 3.4 1.96 3.5 1.82
+                      3.6 1.67 3.7 1.5 3.8 1.31 3.9 1.1 4 0.88
+                      4.1 0.64 4.2 0.37 4.3 0.09 4.4 -0.21 4.5 -0.54
+                      4.6 -0.89 4.7 -1.26 4.8 -1.65 4.9 -2.06 5 -2.5" fill="none" stroke="#a7a7a8"
+                    transform="rotate(90)" stroke-width="0.035" stroke-dasharray="0.2,0.2" />
+
+                  <circle cx="0" cy="0" r="5.59" fill="none" stroke="#a7a7a8" stroke-width="0.075" />
+
+                  <line x1="-2.5" y1="-5" x2="2.5" y2="5" stroke="#a7a7a8" stroke-width="0.035"
+                    stroke-dasharray="0.2,0.2" />
+
+                  <line x1="-5" y1="2.5" x2="5" y2="-2.5" stroke="#a7a7a8" stroke-width="0.075" />
+
+                  <text x="-3.75" y="2.5" font-family="serif" font-size="0.9" font-style="italic"
+                    fill="#a7a7a8">g</text>
+                  <text x="3.85" y="2.15" font-family="serif" font-size="0.9" font-style="italic" fill="#a7a7a8">G
+                    <tspan baseline-shift="-80%" font-size="0.5">f</tspan>
+                  </text>
+
+                  <text x="5.4" y="-2.35" font-family="serif" font-size="0.9" font-style="italic"
+                    fill="#a7a7a8">A</text>
+                  <text x="-5.9" y="2.85" font-family="serif" font-size="0.9" font-style="italic"
+                    fill="#a7a7a8">B</text>
+                </svg>
+                <script>
+                  const svg21e = document.getElementById("task21e");
+
+                  for (let i = -6; i <= 6; i++) {
+                    if (i === 0) continue; // 0 überspringen
+
+                    let line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+                    line.setAttribute("x1", i);
+                    line.setAttribute("y1", 0);
+                    line.setAttribute("x2", i);
+                    line.setAttribute("y2", 0.15);
+                    line.setAttribute("stroke", "#a7a7a7");
+                    line.setAttribute("stroke-width", "0.05");
+
+                    svg21e.appendChild(line);
+
+                    line = document.createElementNS("http://www.w3.org/2000/svg", "line");
+                    line.setAttribute("y1", i);
+                    line.setAttribute("x1", 0);
+                    line.setAttribute("y2", i);
+                    line.setAttribute("x2", -0.15);
+                    line.setAttribute("stroke", "#a7a7a7");
+                    line.setAttribute("stroke-width", "0.05");
+
+                    svg21e.appendChild(line);
+                  }
+                </script>
+              </div>
+              \(A_1\) berechnen (Kreis):
+              <p style="margin-left: 20px;">
+                \(\begin{align*}
+                A_1&=\left(\frac{5 \sqrt{5}}{2}\right)^2 \cdot \pi \\
+                A_1&\approx 98,17\,\text{FE}
+                \end{align*}\)
+              </p>
+              \(A_2\) berechnen (Flügel):
+              <p style="margin-left: 20px;">
+                \(\begin{align*}
+                A_2 &= 4 \cdot \int_0^5(g(x)-f(x))\;\text{d} x \\
+                A_2 &= 4 \cdot \int_0^5\left(\tfrac{1}{2} x-\left(\tfrac{2}{25} x^3-\tfrac{3}{2}
+                x\right)\right)\;\text{d} x \\
+                A_2 &= 4 \cdot\int_0^5\left(-\tfrac{2}{25} x^3+2 x\right) \;\text{d}x \\
+                A_2 &= 4 \cdot\left[-\tfrac{1}{50} x^4+x^2\right]_0^5 \\
+                A_2 &= 4 \cdot \left(-\tfrac{1}{50}\cdot 5^4+5^2\right)-\left(-\tfrac{1}{50}\cdot 0^4+0^2\right) \\
+                A_2 &= 4 \cdot \left(\tfrac{25}{2} -0 \right) \\
+                A_2 &= 50\,\text{FE}
+                \end{align*}\)
+              </p>
+              Flächendifferenz berechnen:
+              <p style="margin-left: 20px;">
+                \(\begin{align*}
+                A_1-A_2&\approx 98,17-50\\
+                A_1-A_2&\approx 48,17\,\text{FE}
+                \end{align*}\)
+              </p>
+            </li>
+
+          </ol>
+        </details>
+
+        <!-- <div class="videos">
+          <iframe width="360" height="202" src="https://www.youtube.com/embed/19goPRnthCE" title="Abstand Punkt - Punkt"
+            frameborder="0" allow="web-share" allowfullscreen></iframe>
+
+        </div> -->
+
+
+      </div>
     </section>
 
     <!-- <section>
@@ -942,6 +1538,8 @@
 
             </div>
         </section> -->
+
+
 
 
 
@@ -1010,7 +1608,7 @@
     <a href="/misc/impressum.html">Impressum</a>
     <div class="lastModified" align="center">
       Zuletzt geändert:<br />
-      13. September 2025
+      14. September 2025
       <!-- <span id="lastModifiedDate"></span> -->
     </div>
     <a href="/misc/datenschutz.html">Datenschutz</a>
