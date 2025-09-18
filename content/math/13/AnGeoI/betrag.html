@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" initial-scale="1.0" />
+  <meta name="author" content="Sebastian Heine" />
+  <meta name="robot" content="noindex" />
+  <title>HEIS | Ana Geom I | Betrag</title>
+  <link rel="stylesheet" type="text/css" href="/css/colors.css" />
+  <link rel="stylesheet" type="text/css" href="/css/gridNoTimeline.css" />
+  <link rel="stylesheet" type="text/css" href="/css/navbar.css" />
+  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="/css/courses.css" />
+  <link rel="stylesheet" type="text/css" href="/css/oktanten.css" />
+  <script type="text/javascript" src="jquery-3.3.1.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <script>
+    window.MathJax = {
+      tex: {
+        macros: {
+          vector: ['\\begin{pmatrix}#1\\end{pmatrix}', 1]
+        }
+      }
+    };
+  </script>
+
+</head>
+
+<body>
+  <header>
+    <div class="nav">
+      <input type="checkbox" id="nav-check" />
+      <div class="nav-header">
+        <div class="nav-title">
+          <a href="/">Hr. Heines Unterricht</a>
+        </div>
+      </div>
+      <div class="nav-btn">
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+
+      <div class="nav-links">
+        <a href="/content/math/">Mathematik</a>
+        <a href="/content/math/13/">Klasse 13</a>
+        <a href="/content/math/13/AnGeoI/">Analytische Geometrie I</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section>
+      <h2>Betrag eines Vektors</h2>
+      <div class="ziele">
+        <p>
+          Nachfolgend soll erklärt werden, was der Betrag eines Vektors angibt und wie dieser bestimmt wird.
+        </p>
+        <p>
+          <a href="#aufgaben">Direkt zu den Aufgaben</a>
+        </p>
+      </div>
+
+      <div class="theorie">
+        <div class="definition">
+          <h4>Betrag eines Vektors</h4>
+          <p>
+            Der Betrag \(|\vec a|\) eines Vektors ist die Länge seines Pfeiles. Dieser kann mithilfe
+            des Satzes des Pythagoras berechnet werden.
+          </p>
+          <div class="centered" style="max-height: 250px">
+            <svg id="betr" viewBox="-0 -250 300 280">
+              <defs></defs>
+            </svg>
+          </div>
+          <p>
+            Der Betrag eines Vektors berechnet sich aus:
+            <p style="margin-left: 20px;">
+            \(\begin{align*}
+              \mid\vec v\mid&=\sqrt{{v_x}^2+{v_y}^2+{v_z}^2}
+            \end{align*}\)
+          </p>
+          In der Ebene (2D) fällt natürlich die \({v_z}\)-Komponente weg.
+          </p>
+          <p>
+            Vektoren mit der Länge \(1\,\text{LE}\) heißen <b>Einheitsvektoren</b>.
+          </p>
+          
+
+
+        </div>
+
+        <h6>Beispiel: </h6>
+        <p>
+          Es soll der Betrag des oben gezeigten Vektors \(\color{aqua}\vec v\) berechnet werden:
+          <p style="margin-left: 20px;">
+            \(\begin{align*}
+              {\color{aqua}\vec v}&=\vector{{\color{orange}4}\\{\color{lime}3}} \\
+              \left|{\color{aqua}\vec v}\right|&=\sqrt{{\color{orange}4}^2+{\color{lime}3}^2} \\
+              \left|{\color{aqua}\vec v}\right|&=\sqrt{25}\\
+              \left|{\color{aqua}\vec v}\right|&=5\,\text{LE}
+            \end{align*}\)
+          </p>
+          Der Vektor \(\color{aqua}\vec v\) hat einen Betrag von \(5\,\text{LE}\)
+        </p>
+
+
+
+      </div>
+    </section>
+    <!-- <section>
+            <div class="videos">
+                <iframe width="360" height="202" src="https://www.youtube.com/embed/19goPRnthCE"
+                    title="Abstand Punkt - Punkt" frameborder="0" allow="web-share" allowfullscreen></iframe>
+
+            </div>
+        </section> -->
+    <section id="aufgaben" class="aufgaben">
+      <h3>Aufgaben zum Vektorbetrag</h3>
+      <ol class="custom-marker point-after decimal more-spacing">
+        <li>Buch, Seite ... <a href="#a1">Lösungen</a></li>
+
+      </ol>
+    </section>
+
+    <section class="loesungen">
+      <h3>Lösungen zum Vektorbetrag</h3>
+      <details id="a1" style="counter-set: lsg-counter 10;">
+        <summary>Punktabstand</summary>
+        <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
+          <li> \(...\)</li>
+        </ol>
+      </details>
+      
+
+
+
+
+
+    </section>
+
+
+
+    <!-- JS-Datei mit allen Funktionen -->
+    <script src="/js/math/geo3d.js"></script>
+
+    <script>
+      drawAxes(betr, 6, 4, "a");
+
+      drawVector(betr,[0,1,1],[0,4,3],"v","aqua","aboveleft");
+
+      drawVector(betr,[0,1,1],[0,4,0],"4","orange","below",1.25,true);
+      drawVector(betr,[0,5,1],[0,0,3],"3","lime","right",1.25,true);
+
+
+    </script>
+
+    <section id="meme">
+      <div class="images">
+        <img src="/img/betrag_meme.jpg" style="object-fit: scale-down; max-width: 300px" /> <!-- 300 px!-->
+      </div>
+      <div class="centered">
+        <a href="https://imgflip.com/i/45cab4">
+          <h6>Inspiriert von blake_requiem</h6>
+        </a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <a href="/misc/impressum.html">Impressum</a>
+    <div class="lastModified" align="center">
+      Zuletzt geändert:<br />
+      18. September 2025
+      <!-- <span id="lastModifiedDate"></span> -->
+    </div>
+    <a href="/misc/datenschutz.html">Datenschutz</a>
+  </footer>
+</body>

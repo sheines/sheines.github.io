@@ -1750,16 +1750,17 @@
               Integral berechnen (Stammfunktion ist gegeben):
               <p style="margin-left: 20px;">
                 \(\begin{align*}
-                 \int_{-3}^1 f(x)\, \text dx&=F(1)-F(-3) \\
-                      &=(3-1)\cdot\text e^1-(3-(-3))\cdot\text e^{-3}\\
-                      &=2\text e-\dfrac{6}{\text e^3} \approx 5,14\,\text{FE}
+                \int_{-3}^1 f(x)\, \text dx&=F(1)-F(-3) \\
+                &=(3-1)\cdot\text e^1-(3-(-3))\cdot\text e^{-3}\\
+                &=2\text e-\dfrac{6}{\text e^3} \approx 5,14\,\text{FE}
                 \end{align*}\)
               </p>
               Für die Abweichung gilt dann:
               <p style="margin-left: 20px;">
                 \(\begin{align*}
                 \frac{\text{Schätzung}-\text{Exakt}}{\text{Exakt}} \\[5px]
-                 \frac{\tfrac12\cdot \text e\cdot 4-\left(2\text e-\frac{6}{\text e^3}\right)}{2\text e-\frac{6}{\text e^3}}&\approx 5,8\,\%
+                \frac{\tfrac12\cdot \text e\cdot 4-\left(2\text e-\frac{6}{\text e^3}\right)}{2\text e-\frac{6}{\text
+                e^3}}&\approx 5,8\,\%
                 \end{align*}\)
               </p>
             </li>
@@ -1862,66 +1863,68 @@
         <details class="loesungen">
           <summary class="nonumber">2.2 &ndash; 2 Lösung</summary>
           <ol class="custom-marker parens-around lower-alpha more-spacing">
-            <li>Die Anzahl der abgegebenen Likes seit der Veröffentlichung nimmt immer mehr zu, 
+            <li>Die Anzahl der abgegebenen Likes seit der Veröffentlichung nimmt immer mehr zu,
               steigt aber mit der Zeit immer langsamer und nähert sich irgendwann ca. \(2500\) Likes an.
             </li>
             <li>
               Gegen 16 Uhr \(x=4\) sind es ca. \(2\,300\) Likes, Gegen 14 Uhr \(x=2\) etwa \(1\,500\).
               <p style="margin-left: 20px;">
                 \(\begin{align*}
-                  \frac{2\,300-1\,500}{4-2}&=400
+                \frac{2\,300-1\,500}{4-2}&=400
                 \end{align*}\)
               </p>
               In der Zeit von 14 Uhr bis 16 Uhr wurden durchschnittlich ca. \(400\) Like pro Stunde gegeben.
             </li>
             <li>Skizze:
               <div class="centered" style="max-height: 250px;">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="-1 -7.5 14.5 8.5" style="background-color: #454545">
-            <!-- The viewBox is set to (-12, -6, 26, 13) which provides a coordinate space of width 38 and height 19 units.
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="-1 -7.5 14.5 8.5" style="background-color: #454545">
+                  <!-- The viewBox is set to (-12, -6, 26, 13) which provides a coordinate space of width 38 and height 19 units.
                                  The center of the SVG is (0, 0). You can adjust this viewBox as needed. -->
-            <!-- Add grid lines -->
-            <defs>
-              <pattern id="grid" width="1" height="1" patternUnits="userSpaceOnUse">
-                <path d="M 1 0 L 0 0 0 1" fill="none" stroke="#333333" stroke-width="0.05" />
-              </pattern>
-            </defs>
-            <rect x="0" y="-7.5" width="13.9" height="7.5" fill="url(#grid)" />
+                  <!-- Add grid lines -->
+                  <defs>
+                    <pattern id="grid" width="1" height="1" patternUnits="userSpaceOnUse">
+                      <path d="M 1 0 L 0 0 0 1" fill="none" stroke="#333333" stroke-width="0.05" />
+                    </pattern>
+                  </defs>
+                  <rect x="0" y="-7.5" width="13.9" height="7.5" fill="url(#grid)" />
 
-            <!-- Draw the x-axis line -->
-            <line x1="0" y1="0" x2="13" y2="0" stroke="#a7a7a7" stroke-width="0.05" />
+                  <!-- Draw the x-axis line -->
+                  <line x1="0" y1="0" x2="13" y2="0" stroke="#a7a7a7" stroke-width="0.05" />
 
-            <!-- Draw the x-axis arrowhead -->
-            <polygon points="13.5,0 12.8,-0.15 12.8,0.15" fill="#a7a7a7" />
+                  <!-- Draw the x-axis arrowhead -->
+                  <polygon points="13.5,0 12.8,-0.15 12.8,0.15" fill="#a7a7a7" />
 
-            <!-- Draw the y-axis line -->
-            <line x1="0" y1="0" x2="0" y2="-7" stroke="#a7a7a7" stroke-width="0.05" />
+                  <!-- Draw the y-axis line -->
+                  <line x1="0" y1="0" x2="0" y2="-7" stroke="#a7a7a7" stroke-width="0.05" />
 
-            <!-- Draw the y-axis arrowhead -->
-            <polygon points="0,-7.5 -0.15,-6.8 0.15,-6.8" fill="#a7a7a7" />
+                  <!-- Draw the y-axis arrowhead -->
+                  <polygon points="0,-7.5 -0.15,-6.8 0.15,-6.8" fill="#a7a7a7" />
 
-            <!-- Add "x" at the end of the x-axis -->
-            <text x="13.0" y="0.85" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">x</text>
+                  <!-- Add "x" at the end of the x-axis -->
+                  <text x="13.0" y="0.85" font-family="serif" font-size="0.9" font-style="italic"
+                    fill="#a8a7a7">x</text>
 
-            <!-- Add "y" at the end of the y-axis -->
-            <text x="-0.8" y="-6.75" font-family="serif" font-size="0.9" font-style="italic" fill="#a8a7a7">y</text>
-
-
-            <!-- Add numbers to x-axis-->
-            <text x="-0.5" y="0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">0</text>
-            <text x="1.85" y="0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">1</text>
-            <text x="3.85" y="0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">2</text>
-            <text x="5.85" y="0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">3</text>
-            <text x="7.85" y="0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">4</text>
-            <text x="9.85" y="0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">5</text>
-            <text x="11.85" y="0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">6</text>
+                  <!-- Add "y" at the end of the y-axis -->
+                  <text x="-0.8" y="-6.75" font-family="serif" font-size="0.9" font-style="italic"
+                    fill="#a8a7a7">y</text>
 
 
-            <!-- Add numbers to y-axis-->
-            <text x="-1.65" y="-1.75" font-family="serif" font-size="0.7" fill="#a8a7a7">1000</text>
-            <text x="-1.65" y="-3.75" font-family="serif" font-size="0.7" fill="#a8a7a7">2000</text>
-            <text x="-1.65" y="-5.75" font-family="serif" font-size="0.7" fill="#a8a7a7">3000</text>
+                  <!-- Add numbers to x-axis-->
+                  <text x="-0.5" y="0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">0</text>
+                  <text x="1.85" y="0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">1</text>
+                  <text x="3.85" y="0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">2</text>
+                  <text x="5.85" y="0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">3</text>
+                  <text x="7.85" y="0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">4</text>
+                  <text x="9.85" y="0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">5</text>
+                  <text x="11.85" y="0.75" font-family="serif" font-size="0.7" fill="#a8a7a7">6</text>
 
-            <path d="M 0 0 L
+
+                  <!-- Add numbers to y-axis-->
+                  <text x="-1.65" y="-1.75" font-family="serif" font-size="0.7" fill="#a8a7a7">1000</text>
+                  <text x="-1.65" y="-3.75" font-family="serif" font-size="0.7" fill="#a8a7a7">2000</text>
+                  <text x="-1.65" y="-5.75" font-family="serif" font-size="0.7" fill="#a8a7a7">3000</text>
+
+                  <path d="M 0 0 L
                 0.2 -0.02 0.4 -0.09 0.6 -0.18 0.8 -0.29 1 -0.43
                 1.2 -0.59 1.4 -0.75 1.6 -0.93 1.8 -1.11 2 -1.3
                 2.2 -1.49 2.4 -1.68 2.6 -1.86 2.8 -2.04 3 -2.22
@@ -1936,39 +1939,195 @@
                 11.2 -4.83 11.4 -4.84 11.6 -4.85 11.8 -4.86 12 -4.87
                 12.2 -4.88 12.4 -4.89 12.6 -4.9 12.8 -4.9 13 -4.91
                 13.2 -4.91 13.4 -4.92 13.6 -4.93 13.8 -4.93 14 -4.94" fill="none" stroke="#a7a7a8"
-              stroke-width="0.075" />
+                    stroke-width="0.075" />
 
-            <circle cx="9.8" cy="-4.725" r="0.125" fill="magenta"/> 
-            <circle cx="3.8" cy="-2.85" r="0.125" fill="magenta"/> 
-            <path d="M 3.8 -2.85 L 9.8 -2.85" stroke="magenta"
-              stroke-width="0.025" stroke-dasharray="0.15 0.15"/>
-            <path d="M 9.8 -2.85 L 9.8 -4.725" stroke="magenta"
-              stroke-width="0.025" stroke-dasharray="0.15 0.15"/>
-            <path d="M 3.8 -2.85 L 3.8 0" stroke="magenta"
-              stroke-width="0.025" stroke-dasharray="0.15 0.15"/>
-            
-            <text x="6.5" y="-2.2" font-family="serif" font-size="0.5" fill="magenta">3</text>
-            <text x="10.05" y="-3.5" font-family="serif" font-size="0.5" fill="magenta">1000</text>
+                  <circle cx="9.8" cy="-4.725" r="0.125" fill="magenta" />
+                  <circle cx="3.8" cy="-2.85" r="0.125" fill="magenta" />
+                  <path d="M 3.8 -2.85 L 9.8 -2.85" stroke="magenta" stroke-width="0.025"
+                    stroke-dasharray="0.15 0.15" />
+                  <path d="M 9.8 -2.85 L 9.8 -4.725" stroke="magenta" stroke-width="0.025"
+                    stroke-dasharray="0.15 0.15" />
+                  <path d="M 3.8 -2.85 L 3.8 0" stroke="magenta" stroke-width="0.025" stroke-dasharray="0.15 0.15" />
+
+                  <text x="6.5" y="-2.2" font-family="serif" font-size="0.5" fill="magenta">3</text>
+                  <text x="10.05" y="-3.5" font-family="serif" font-size="0.5" fill="magenta">1000</text>
 
 
-            <!-- <text x="11.15" y="-3.95" font-family="serif" font-size="0.9" font-style="italic"
+                  <!-- <text x="11.15" y="-3.95" font-family="serif" font-size="0.9" font-style="italic"
               fill="darkgoldenrod">a</text> -->
 
 
-          </svg>
-        </div>
-          <p>
-            Da die gestrichelte Linie bei ca. \(x=1,9\) auf die \(x\)-Achse trifft, 
-            ist das die gesuchte Lösung.
-          </p>
-          <p>
-            Die Gleichung liefert denjenigen Zeitpunkt, zu dem die Anzahl der für den Beitrag 
-            abgegebenen Likes um \(1000\) kleiner ist als die Anzahl der Likes drei Stunden später.
-          </p>
+                </svg>
+              </div>
+              <p>
+                Da die gestrichelte Linie bei ca. \(x=1,9\) auf die \(x\)-Achse trifft,
+                ist das die gesuchte Lösung.
+              </p>
+              <p>
+                Die Gleichung liefert denjenigen Zeitpunkt, zu dem die Anzahl der für den Beitrag
+                abgegebenen Likes um \(1000\) kleiner ist als die Anzahl der Likes drei Stunden später.
+              </p>
             </li>
           </ol>
         </details>
 
+        <!-- <section>
+            <div class="videos">
+                <iframe width="360" height="202" src="https://www.youtube.com/embed/19goPRnthCE"
+                    title="Abstand Punkt - Punkt" frameborder="0" allow="web-share" allowfullscreen></iframe>
+
+            </div>
+        </section> -->
+
+        <h4 id="a3">Aufgabe 3: Analytische Geometrie</h4>
+        <p>
+          Die Abbildung zeigt die Pyramide \(ABCDS.\) Ihre Grundfläche \(ABCD\) ist ein
+          Drachenviereck mit den Eckpunkten \(A(0\mid 0\mid 0)\), \(B(2\mid 2\mid 0)\),
+          \(C(0\mid 6\mid 0)\) und \(D(-2\mid 2\mid 0)\). Die Spitze der Pyramide liegt im
+          Punkt \(S(0\mid 0\mid 6)\).
+        <div class="centered">
+          <svg id="task3" viewBox="-200 -400 600 550" style="max-height: 350px;">
+            <defs></defs>
+          </svg>
+        </div>
+        </p>
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li> Berechne die Länge der kürzesten und die
+            Länge der längsten der acht Kanten sowie das
+            Volumen der Pyramide \(ABCDS\)!
+          </li>
+        </ol>
+        <p>
+          Die Seitenfläche \(BCS\) der Pyramide liegt in der Ebene \(E\).
+        </p>
+        <ol class="custom-marker parens-around lower-alpha more-spacing" style="counter-set: list 1;">
+          <li> Ermittle eine Gleichung von \(E\) in Koordinatenform!
+            <p>
+              (zur Kontrolle: \(2x+y+z=6\))
+            </p>
+          </li>
+          <li>
+            Bestimme die Größe des Winkels, den die Ebene \(E\) mit der \(xy\)-Ebene einschließt!
+          </li>
+          <li>
+            Der Punkt \(B\) wird nun so parallel zur \(y\)-Achse verschoben, dass für den dadurch entstehenden Punkt
+            \(B'\) gilt:
+            <p style="margin-left: 20px; font-style: italic;">
+              Das Viereck \(\square AB'CD\) hat in \(B'\) einen rechten Innenwinkel.
+            </p>
+            Um die Koordinaten von \(B'\) zu bestimmen, kann folgender Ansatz verwendet werden:
+            <p style="margin-left: 20px;">
+              \(
+              \vector{2\\y\\0}\circ \vector{2\\y-6\\0}=0
+              \)
+            </p>
+            Erläutere diesen Ansatz!
+          </li>
+        </ol>
+        <details class="loesungen">
+          <summary class="nonumber">3 Lösung</summary>
+          <ol class="custom-marker parens-around lower-alpha more-spacing">
+            <li>
+              <p>Längste Kante: \(\left| \overline{CS} \right|= \left| \vector{0\\-6\\6}
+                \right|=\sqrt{72}\approx8,49\,\text{LE}\)</p>
+              <p>Kürzeste Kante: \(\left| \overline{AB} \right|= \left| \vector{2\\2\\0}
+                \right|=\sqrt{8}\approx2,83\,\text{LE}\)</p>
+              <p>
+                Die Kante \(\overline{AD}\) kann ebenfalls als kürzeste Seite
+                gewählt werden. Sie ist auch ca. \(2,83\,\text{LE}\) lang.
+              </p>
+              <p>
+                Anhand der Koordinaten kann schnell abgelesen werden, dass die
+                Grundfläche ein Drachenviereck mit Diagonalen der Länge
+                \(4\,\text{LE}\) und \(6\,\text{LE}\) ist.
+                Der Flächeninhalt \(A\) der Grundfläche ist somit gegeben durch:
+              <p style="margin-left: 20px;">
+                \(\begin{align*}
+                A&=\tfrac12\cdot 4\cdot 6\\
+                A&=12\,\text{FE}
+                \end{align*}\)
+              </p>
+              Die Grundfläche der Pyramide liegt in der \(xy\)-Ebene.
+              Folglich kann aus den Koordinaten von \(S\) abgelesen werden, dass die
+              Pyramide eine Höhe von \(6\,\text{LE}\) besitzt.
+              Damit ergibt sich für das Volumen \(V\) der Pyramide:
+              <p style="margin-left: 20px;">
+                \(\begin{align*}
+                V&=\tfrac13\cdot 12\cdot 6\\
+                V&=24\,\text{VE}
+                \end{align*}\)
+              </p>
+              </p>
+            </li>
+            <li>
+              Aus den Punkten können zwei Spannvektoren bestimmt werden
+              (andere Vektoren sind möglich und richtig):
+              <p style="margin-left: 20px;">
+                \(\begin{align*}
+                \overrightarrow{BC}&=\vector{-2\\4\\0}\\
+                \overrightarrow{BS}&=\vector{-2\\-2\\6}
+                \end{align*}\)
+              </p>
+              Mit diesen kann die Ebene in Parameterform (weder gefragt noch nötig) aufgestellt werden:
+              <p style="margin-left: 20px;">
+                \(\begin{align*}
+                E: \vec x=\vector{2\\2\\0}+r\cdot\vector{-2\\4\\0}+s\cdot\vector{-2\\-2\\6}
+                \end{align*}\)
+              </p>
+              Mit den beiden Spannvektoren muss nun der Normalenvektor der Ebene bestimmt werden.
+              Das geht bspw. mit einem Gleichungssystem oder mit dem Kreuzprodukt:
+              <p style="margin-left: 20px;">
+                \(\begin{align*}
+                \vector{-2\\4\\0}\times\vector{-2\\-2\\6}&=\vector{4\cdot 6-(-2)\cdot 0\\ 0\cdot (-2)-6\cdot (-2)\\
+                (-2)\cdot(-2)-(-2)\cdot 4}\\[8px]
+                \vec n&=\vector{24 \\ 12 \\ 12}=12\cdot\vector{2\\1\\1}
+                \end{align*}\)
+              </p>
+              (Der Normalenvektor kann beliebig skaliert werden.)
+              <p>
+                Das ergibt: \(E: 2x+y+z=a\)
+              </p>
+              <p>
+                \(a\) kann nun mit dem Einsetzen eines Punktes, z.B. \(C\) berechnet werden:
+              <p style="margin-left: 20px;">
+                \(\begin{align*}
+                a=2\cdot 0+6+0=6
+                \end{align*}\)
+              </p>
+              Das ergibt die Ebenengleichung \(E: 2x+y+z=6\).
+              </p>
+            </li>
+            <li>
+              Es gilt:
+              <p style="margin-left: 20px;">
+                \(\begin{align*}
+                \cos \alpha&=\frac{\vec n_1\circ \vec n_2}{|\vec n_1|\cdot |\vec n_2|} \\
+                \cos \alpha&=\frac{\vector{2\\1\\1}\circ\vector{0\\0\\1}}{\left|\vector{2\\1\\0}\right|\cdot \left|\vector{0\\0\\1}\right|} \\
+                \cos \alpha&=\frac{0+0+1}{\sqrt{2^2+1^2+1^2} \cdot 1}\\
+                \cos \alpha&=\frac{1}{\sqrt{6}}\qquad |\,\text{arc} \\
+                \alpha&\approx 65,9\,^\circ
+                \end{align*}\)
+              </p>
+            </li>
+            <li>
+              Da \(B\) nur entlang der \(y\)-Achse verschoben wird, 
+              können die Koordinaten von \(B'\) in der Form \((2\mid y\mid 0)\) geschrieben 
+              werden. Damit folgt:
+              <p style="margin-left: 20px;">
+                \(\begin{align*}
+                \overrightarrow{CB'}&=\vector{2\\y-6\\0} \\
+                \overrightarrow{AB'}&=\vector{2\\y\\0}
+                \end{align*}\)
+              </p>
+              Die beiden Vektoren schließen den Winkel bei \(B'\) ein.
+              <p>
+                Wenn das Skalarprodukt der beiden Vektoren nun gleich null ist, muss bei \(B'\)
+                ein rechter Winkel vorliegen, weil das Skalarprodukt nur bei orthogonalen Vektoren 
+                null ist.
+              </p>
+            </li>
+          </ol>
+        </details>
       </div>
     </section>
 
@@ -2002,6 +2161,33 @@
 
       drawPoint(task151b, [0, 0.5, 1], "P'", "lightblue", "aboveleft");
       drawPoint(task151b, [2, 4.5, 1], "P", "cyan");
+
+
+      drawPlane(task3, [0, 3, 0], [3.5, 0, 0], [0, 3, 0], "", "darkgoldenrod");
+      drawAxes(task3, 4, 7, 7);
+
+      drawPoint(task3, [0, 0, 0], "A", "magenta", "left");
+      drawPoint(task3, [2, 2, 0], "B", "magenta", "belowleft");
+      drawPoint(task3, [0, 6, 0], "C", "magenta", "aboveright");
+      drawPoint(task3, [-2, 2, 0], "D", "gray", "aboveright");
+      drawPoint(task3, [0, 0, 6], "S", "magenta", "left");
+
+      drawSegment(task3, [0, 0, 0], [-2, 2, 0], "", "gray", "center", 2.5, true);
+      drawSegment(task3, [0, 6, 0], [-2, 2, 0], "", "gray", "center", 2.5, true);
+      drawSegment(task3, [0, 0, 6], [-2, 2, 0], "", "gray", "center", 2.5, true);
+
+      drawSegment(task3, [0, 0, 0], [2, 2, 0], "", "magenta", "center", 2.5);
+      drawSegment(task3, [0, 6, 0], [2, 2, 0], "", "magenta", "center", 2.5);
+      drawSegment(task3, [0, 0, 6], [2, 2, 0], "", "magenta", "center", 2.5);
+      drawSegment(task3, [0, 0, 0], [0, 0, 6], "", "magenta", "center", 2.5);
+      drawSegment(task3, [0, 6, 0], [0, 0, 6], "", "magenta", "center", 2.5);
+
+      for (let i = -4; i < 5; ++i) {
+        drawSegment(task3, [i, -1, 0], [i, 7, 0], "", "#565656", "center", 0.75, true);
+      }
+      for (let i = -1; i < 8; ++i) {
+        drawSegment(task3, [-4, i, 0], [4, i, 0], "", "#565656", "center", 0.75, true);
+      }
 
 
     </script>
@@ -2047,9 +2233,9 @@
   </main>
   <footer>
     <a href="/misc/impressum.html">Impressum</a>
-    <div class="lastModified" align="center">
+    <div class="lastModified centered">
       Zuletzt geändert:<br />
-      17. September 2025
+      18. September 2025
       <!-- <span id="lastModifiedDate"></span> -->
     </div>
     <a href="/misc/datenschutz.html">Datenschutz</a>
