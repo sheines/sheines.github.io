@@ -1,0 +1,57 @@
+\documentclass[11pt]{standalone}
+
+\usepackage{helvet}
+\usepackage{units}
+\usepackage{textcomp}
+
+\usepackage{ifthen}
+\usepackage{tikz} 
+\usetikzlibrary{shapes.misc}
+\usetikzlibrary{arrows,arrows.meta}
+\usetikzlibrary{calc,intersections, patterns, math}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{shapes.geometric}
+
+\definecolor{pfeil}{RGB}{168,167,167}
+\definecolor{petrol}{RGB}{0, 118, 136}
+\definecolor{blue}{RGB}{0, 118, 136}
+\definecolor{white}{RGB}{35,35,35}
+% \definecolor{blue}{RGB}{100, 100, 255}
+\definecolor{darkgoldenrod}{RGB}{184, 134, 11}
+\colorlet{petrol-lighter}{petrol!40}
+\colorlet{darkgoldenrod-lighter}{darkgoldenrod!40}
+\definecolor{background}{RGB}{35,35,35}
+
+\begin{document}
+
+\begin{tikzpicture}[pfeil, xscale=1, yscale=0.25]
+
+	% Stufe 1
+	\node[draw,fill] (S) at (0,0) {};
+	
+	\node[draw,rectangle, thick] (F1) at (4,4) {$K$};
+	\node[draw,rectangle, thick] (F2) at (4,-4) {$\overline K$};
+	
+	\draw[very thick] (S) -- node[above, rotate=15] {$\scriptstyle 28,5\,\%$} (F1);
+	\draw[very thick] (S) -- node[below, rotate=-15] {$\scriptstyle 71,5\,\%$} (F2);
+
+	% Stufe 2
+	\node[draw,rectangle, thick] (F11) at (8,6) {$B$};
+	\node[draw,rectangle, thick] (F12) at (8,2) {$\overline B$};
+	
+	\draw[very thick] (F1) -- node[above, rotate=9] {$\scriptstyle 15,9\,\%$} (F11);
+	\draw[very thick] (F1) -- node[below, rotate=-9] {$\scriptstyle 84,1\,\%$} (F12);
+
+	\node[draw,rectangle, thick] (F21) at (8,-2) {$\scriptstyle B$};
+	\node[draw,rectangle, thick] (F22) at (8,-6) {$\scriptstyle \overline B$};
+	
+	\draw[very thick] (F2) -- node[above, rotate=9] {$\scriptstyle 6,5\,\%$} (F21);
+	\draw[very thick] (F2) -- node[below, rotate=-9] {$\scriptstyle 93,5\,\%$} (F22);
+
+	
+\end{tikzpicture}
+
+
+
+
+\end{document}
