@@ -121,17 +121,104 @@
     <section id="aufgaben" class="aufgaben">
       <h3>Aufgaben zum Vektorbetrag</h3>
       <ol class="custom-marker point-after decimal more-spacing">
-        <li>Buch, Seite ... <a href="#a1">Lösungen</a></li>
+        <li>Buch, Seite 27 Übung 6 und 7 <a href="#a1">Lösungen</a></li>
+        <li>Buch, Seite 28 Übung 9 <a href="#a2">Lösungen</a></li>
+        <li>Buch, Seite 29 Übung 10 und 11 <a href="#a3">Lösungen</a></li>
+        <li>Buch, Seite 26 Übung 4 und 5 <a href="#a3">Lösungen</a></li>
 
       </ol>
     </section>
 
     <section class="loesungen">
       <h3>Lösungen zum Vektorbetrag</h3>
-      <details id="a1" style="counter-set: lsg-counter 10;">
-        <summary>Punktabstand</summary>
+      <details id="a1" style="counter-set: lsg-counter 5;">
+        <summary>Betrag eines Vektors</summary>
         <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
-          <li> \(...\)</li>
+          <li> \(\sqrt{1+a^2}\,\text{LE}\)</li>
+          <li> \(\sqrt{144+25}=13\,\text{LE}\)</li>
+          <li> \(\sqrt{9+25}=\sqrt{34}\approx 5,83\,\text{LE}\)</li>
+          <li> \(\sqrt{25+4+144}=\sqrt{173}\approx 13.15\,\text{LE}\)</li>
+          <li> \(\sqrt{16+36+144}=14\,\text{LE}\)</li>
+          <li> \(\sqrt{9a^2+0+16a^2}=5a\,\text{LE}\)</li>
+        </ol>
+      </details>
+
+      <details>
+        <summary>Parameteraufgabe</summary>
+        Betragsgleichung anwenden, einsetzen und \(t\) berechnen
+        <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
+          <li> Ausführlich:
+            <p style="margin-left: 20px;">
+              \(\begin{align*}
+                \left|\vec a\right|&=\sqrt{t^2+4t^2} \\
+                1&=\sqrt{5t^2} \quad |\, ()^2 \\
+                1&=5t^2 \quad\quad | :5 \\
+                \tfrac15&=t^2 \qquad\ \ |\, \sqrt{\ } \\
+                t&=\pm\tfrac{1}{\sqrt 5}
+              \end{align*}\)
+            </p>
+          </li>
+          <li> \(t=\tfrac32\)</li>
+          <li> \(t=\pm\tfrac53\)</li>
+        </ol>
+      </details>
+
+      <details id="a2" style="counter-set: lsg-counter 8;">
+        <summary>Raumdreieck</summary>
+        <ul class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
+          <li>Spaltenvektoren:
+            <p style="margin-left: 20px;">
+              \(\begin{align*}
+                \overrightarrow{AB}=\vector{-4\\4\\0} \\
+                \overrightarrow{AC}=\vector{-2\\1\\2} \\
+                \overrightarrow{BC}=\vector{2\\-3\\2}
+            \end{align*}\)
+            </p> 
+          </li>
+          <li>Umfang:
+            <p style="margin-left: 20px;">
+              \(\begin{align*}
+                u&=\big|\overrightarrow{AB}\big|+\big|\overrightarrow{AC}\big|+\big|\overrightarrow{BC}\big| \\
+                u&=\sqrt{32}+3+\sqrt{17}\\
+                u&\approx 12,78\,\text{LE}
+              \end{align*}\)
+            </p>
+          </li>
+          <li>Spiegelung:
+            <p style="margin-left: 20px;">
+              \(\begin{align*}
+              \overrightarrow{AP}&=\vector{0\\6\\1}\quad \Rightarrow A'(4\mid 10\mid 4) \\
+              \overrightarrow{BP}&=\vector{4\\2\\1}\quad \Rightarrow B'(8\mid 6\mid 4) \\
+              \overrightarrow{CP}&=\vector{2\\5\\-1}\  \Rightarrow C'(6\mid 9\mid 2)
+            \end{align*}\)
+            </p>  
+          </li>
+          <li>
+            Schrägbild: <span style="color: darkgoldenrod">Original</span>, <span style="color: green">Spiegelung</span>
+            <div class="centered" style="max-height: 250px">
+            <svg id="task9" viewBox="-0 -250 500 350">
+              <defs></defs>
+            </svg>
+          </div>
+          </li>
+        </ul>
+      </details>
+
+      <details id="a3" style="counter-set: lsg-counter 5;">
+        <summary>Vierecke</summary>
+        <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
+          <li> \(\overrightarrow{AB}=\overrightarrow{DC}=\vector{6\\-2}\), \(\overrightarrow{AD}=\overrightarrow{BC}=\vector{3\\3}\) \(\Rightarrow\) Parallelogramm
+            <div class="centered" style="max-height: 200px">
+            <svg id="task10a" viewBox="-0 -250 500 350">
+              <defs></defs>
+            </svg>
+          </div>
+          </li>
+          <li> \(\sqrt{144+25}=13\,\text{LE}\)</li>
+          <li> \(\sqrt{9+25}=\sqrt{34}\approx 5,83\,\text{LE}\)</li>
+          <li> \(\sqrt{25+4+144}=\sqrt{173}\approx 13.15\,\text{LE}\)</li>
+          <li> \(\sqrt{16+36+144}=14\,\text{LE}\)</li>
+          <li> \(\sqrt{9a^2+0+16a^2}=5a\,\text{LE}\)</li>
         </ol>
       </details>
       
@@ -156,6 +243,36 @@
       drawVector(betr,[0,5,1],[0,0,3],"3","lime","right",1.25,true);
 
 
+      drawAxes(task9, 4, 8, 4);
+
+      drawSegment(task9,[0,2,2],[8,6,4],"","gray","",1.5,true)
+
+      drawPoint(task9, [4,-2,2],"A","darkgoldenrod","left", 4);
+      drawPoint(task9, [0,2,2],"B","darkgoldenrod","right", 4);
+      drawPoint(task9, [2,-1,4],"C","darkgoldenrod","above", 4);
+      drawPolygon(task9,[[4,-2,2],[0,2,2],[2,-1,4]],"","none","darkgoldenrod","center",2);
+
+      drawPoint(task9, [4,4,3],"P","magenta","right",4);
+
+      drawPoint(task9, [4,10,4],"A'","green","right", 4);
+      drawPoint(task9, [8,6,4],"B'","green","belowleft", 4);
+      drawPoint(task9, [6,9,2],"C'","green","below", 4);
+
+      drawPolygon(task9,[[4,10,4],[8,6,4],[6,9,2]],"","none","green","center",2);
+
+
+      drawAxes(task10a, 8, 4, "a");
+
+      drawPoint(task10a, [0,-2,1],"A","green","left", 6);
+      drawPoint(task10a, [0,4,-1],"B","green","below", 6);
+      drawPoint(task10a, [0,7,2],"C","green","right", 6);
+      drawPoint(task10a, [0,1,4],"D","green","above", 6);
+      drawVector(task10a,[0,-2,1],[0,6,-2],"","darkgoldenrod");
+      drawVector(task10a,[0,1,4],[0,6,-2],"","darkgoldenrod");
+      drawVector(task10a,[0,-2,1],[0,3,3],"","darkgoldenrod");
+      drawVector(task10a,[0,4,-1],[0,3,3],"","darkgoldenrod");
+
+
     </script>
 
     <section id="meme">
@@ -173,7 +290,7 @@
     <a href="/misc/impressum.html">Impressum</a>
     <div class="lastModified" align="center">
       Zuletzt geändert:<br />
-      18. September 2025
+      21. September 2025
       <!-- <span id="lastModifiedDate"></span> -->
     </div>
     <a href="/misc/datenschutz.html">Datenschutz</a>
