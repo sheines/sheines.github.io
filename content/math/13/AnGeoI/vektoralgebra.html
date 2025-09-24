@@ -454,6 +454,22 @@
             \end{align*}\)
         </p>
 
+        <div class="definition">
+          <h4>Weitere Rechengesetze</h4>
+          <p>
+            Die bekannten Rechengesetze gelten auch in Vektorräumen:
+            <ul>
+              <li><b>Kommutativgesetz I:</b> \(\vec a + \vec b = \vec b + \vec a\)</li>
+			        <li><b>Kommutativgesetz II:</b> \(\vec a \cdot b = b \cdot \vec a\)</li>
+              <li><b>Assoziativgesetz I:</b> \((\vec a+\vec b)+\vec c=\vec a + (\vec b+\vec c)\)</li>
+              <li><b>Assoziativgesetz II:</b> \((a\cdot b)\cdot \vec c=a \cdot (b\cdot\vec c)\)</li>
+              <li><b>Distributivgesetz I:</b> \(a\cdot (\vec b+\vec c)=a\cdot\vec b + a\cdot\vec c\)</li>
+              <li><b>Distributivgesetz II:</b> \((a+b)\cdot \vec c=a\cdot\vec c + b\cdot\vec c\)</li>
+            </ul>
+            Beachte, dass ein Vektor und ein Skalar nicht einfach addiert oder subtrahiert werden können: 
+            \(\vec a + b = ↯\)
+          </p>
+        </div>
 
       </div>
 
@@ -467,7 +483,7 @@
             </div>
         </section> -->
     <section id="aufgaben" class="aufgaben">
-      <h3>Aufgaben zum Vektorbetrag</h3>
+      <h3>Aufgaben zur Vektoralgebra</h3>
       <ol class="custom-marker point-after decimal more-spacing">
         <li>Buch, Seite 32 Übung 1 und 2 <a href="#a1">Lösungen</a></li>
         <li>Buch, Seite 33 Übung 4 <a href="#a2">Lösungen</a></li>
@@ -476,24 +492,198 @@
     </section>
 
     <section class="loesungen">
-      <h3>Lösungen zum Vektorbetrag</h3>
-      <details id="a1" style="counter-set: lsg-counter 5;">
-        <summary>Betrag eines Vektors</summary>
+      <h3>Lösungen zur Vektoralgebra</h3>
+      <details id="a1" style="counter-set: lsg-counter 0;">
+
+        <summary>Summe von Vektoren I</summary>
         <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
-          <li> \(\sqrt{1+a^2}\,\text{LE}\)</li>
-          <li> \(\sqrt{144+25}=13\,\text{LE}\)</li>
-          <li> \(\sqrt{9+25}=\sqrt{34}\approx 5,83\,\text{LE}\)</li>
-          <li> \(\sqrt{25+4+144}=\sqrt{173}\approx 13.15\,\text{LE}\)</li>
-          <li> \(\sqrt{16+36+144}=14\,\text{LE}\)</li>
-          <li> \(\sqrt{9a^2+0+16a^2}=5a\,\text{LE}\)</li>
+          <li> \(\vector{2\\3}+\vector{3\\-4}=\vector{2+3\\3+(-4)}=\vector{5\\-1}\)</li>
+          <li> \(\vector{5\\-3\\4}\)</li>
+          <li> \(\vector{0\\0\\0}\)</li>
+          <li> \(\vector{4\\0\\2}\)</li>
+          <li>Nicht möglich (2D + 3D)</li>
         </ol>
       </details>
 
+      <details style="counter-set: lsg-counter 1;">
+        <summary>Summe von Vektoren II</summary>
+        \(\vec u=\vector{0\\3}\), \(\vec v=\vector{-3\\2}\), \(\vec w=\vector{3\\1}\)
+        <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
+          <li> \(\vec u+\vec v=\vector{-3\\5}\)
+              <div class="centered" style="max-width: 250px">
+                <svg id="task2a" viewBox="-200 -300 400 400">
+                  <defs></defs>
+                </svg>
+              </div>
+          </li>
+          <li> \(\vec u+\vec w=\vector{3\\4}\)
+              <div class="centered" style="max-width: 250px">
+                <svg id="task2b" viewBox="-200 -300 400 400">
+                  <defs></defs>
+                </svg>
+              </div>
+          </li>
+          <li> \(\vec v+\vec w=\vector{0\\3}\)
+              <div class="centered" style="max-width: 250px">
+                <svg id="task2c" viewBox="-200 -300 400 400">
+                  <defs></defs>
+                </svg>
+              </div>
+          </li>
+          <li> \((\vec u + \vec v)+\vec w=\vector{0\\6}\)
+              <div class="centered" style="max-width: 250px">
+                <svg id="task2d" viewBox="-200 -300 400 400">
+                  <defs></defs>
+                </svg>
+              </div>
+          </li>
+          <li> \(\vec v+\vec u=\vector{-3\\5}\)
+              <div class="centered" style="max-width: 250px">
+                <svg id="task2e" viewBox="-200 -300 400 400">
+                  <defs></defs>
+                </svg>
+              </div>
+          </li>
+          <li> \(\vec u + (\vec v+\vec w)=\vector{0\\6}\)
+              <div class="centered" style="max-width: 250px">
+                <svg id="task2f" viewBox="-200 -300 400 400">
+                  <defs></defs>
+                </svg>
+              </div>
+          </li>
+          <li> \(\vec u + \vec u=\vector{0\\6}\)
+              <div class="centered" style="max-width: 250px">
+                <svg id="task2g" viewBox="-200 -300 400 400">
+                  <defs></defs>
+                </svg>
+              </div>
+          </li>
+        </ol>
+      </details>
+      <details id="a2" style="counter-set: lsg-counter 3;">
+        <summary>Subtraktion</summary>
+        <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
+          <li> \(\vec a-\vec b\)
+              <div class="centered" style="max-width: 250px">
+                <svg id="task4a" viewBox="-200 -300 400 400">
+                  <defs></defs>
+                </svg>
+              </div>
+          </li>
+          <li> \(\vec b-\vec a\)
+              <div class="centered" style="max-width: 250px">
+                <svg id="task4b" viewBox="-200 -300 400 400">
+                  <defs></defs>
+                </svg>
+              </div>
+          </li>
+          <li> \(\vec a-\vec b+\vec a\)
+              <div class="centered" style="max-width: 250px">
+                <svg id="task4c" viewBox="-200 -400 400 400">
+                  <defs></defs>
+                </svg>
+              </div>
+          </li>
+          <li> \(-\vec b-\vec a\)
+              <div class="centered" style="max-width: 250px">
+                <svg id="task4d" viewBox="-200 -50 400 400">
+                  <defs></defs>
+                </svg>
+              </div>
+          </li>
+          <li> \(\vec a-\vec b-\vec c\)
+              <div class="centered" style="max-width: 250px">
+                <svg id="task4e" viewBox="-200 -300 400 400">
+                  <defs></defs>
+                </svg>
+              </div>
+          </li>
+          <li> \(-\vec a+\vec b-\vec c\)
+              <div class="centered" style="max-width: 250px">
+                <svg id="task4f" viewBox="-200 -300 400 400">
+                  <defs></defs>
+                </svg>
+              </div>
+          </li>
+        </ol>
+      </details>
 
+      <details id="a3" style="counter-set: lsg-counter 5;">
+        <summary>Vereinfachen I</summary>
+        <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
+          <li> \(\vector{6\\3\\17}\)</li>
+          <li> \(\vector{12\\10\\11}\)</li>
+          <li> \(\vector{0\\-2\\0}\)</li>
+        </ol>
+      </details>
 
+      <details style="counter-set: lsg-counter 6;">
+        <summary>Vereinfachen II</summary>
+        Es gibt immer mehr als eine Möglichkeit.
+        <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
+          <li> \(\tfrac12\cdot \vector{1\\3\\-3}\)</li>
+          <li> \(\tfrac12\cdot \vector{7\\2\\5}\)</li>
+          <li> \(\tfrac14\cdot \vector{1\\2\\-8}\)</li>
+          <li> \(\tfrac1{10}\cdot \vector{10\\4\\6}\)</li>
+          <li> \(\tfrac18\cdot \vector{4\\-2\\1}\)</li>
+        </ol>
+      </details>
 
+      <details style="counter-set: lsg-counter 7;">
+        <summary>Vektorketten I</summary>
+        <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
+          <li> \(-\vector{1\\2} + \vector{3\\2}=\vector{2\\0}\)</li>
+          <li> \(\vector{-4\\3}\)</li>
+          <li> \(\vector{-1\\5}\)</li>
+          <li> \(\vector{-1\\0}\)</li>
+          <li> \(\vector{-1\\-3}\)</li>
+          <li> \(\vector{0\\0}\)</li>
+        </ol>
+      </details>
+      <details style="counter-set: lsg-counter 8;">
+        <summary>Vektorketten II</summary>
+        <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
+          <li> \(2\vec a\)</li>
+          <li> \(5\vec a-2\vec b\)</li>
+          <li> \(-4\vec a+2\vec b+2\vec c\)</li>
+          <li> \(\vec a+\vec b\)</li>
+          <li> \(3\vec a+\vec b\)</li>
+          <li> \(-\vec a+6\vec b-6\vec c\)</li>
+          <li> \(12\vec a+15\vec b\)</li>
+          <li> \(\vec 0\)</li>
+        </ol>
+      </details>
 
+      <details style="counter-set: lsg-counter 9;">
+        <summary>Variable finden</summary>
+        Gleichungen für jede Koordinate aufstellen, z.B. a) \(3x=-6\), und \(x\) berechnen.
+        <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
+          <li> keine Lösung (für \(z\)-Koordinate steht \(x=0\), was aber mit den anderen Koordinaten nicht passt.)</li>
+          <li> keine Lösung </li>
+          <li> \(x=6\)</li>
+          <li> \(x=3\)</li>
+        </ol>
+      </details>
 
+      <details style="counter-set: lsg-counter 10;">
+        <summary>Gleichungen prüfen</summary>
+        
+        <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
+          <li> Vektoren zusammenfassen und vergleichen:
+            <p style="margin-left: 20px;">
+              \(\begin{align*}
+              \vector{2\\2}+2\cdot\vector{2\\1}&=3\cdot\vector{2\\0}-2\cdot\vector{0\\-2}\\
+              \vector{6\\4}&=\vector{6\\4}\quad \checkmark
+              \end{align*}\)
+            </p>
+            Aussage richtig
+          </li>
+          <li> Aussage falsch: \(\vector{2\\4}\neq\vector{2\\6}\)</li>
+          <li> Aussage richtig: \(\vector{0\\1}=\vector{0\\1}\) </li>
+          <li> Aussage falsch: \(\vector{6\\0}\neq\vector{0\\0}\)</li>
+          <li> Aussage richtig: \(\vector{6\\2}=\vector{6\\2}\) </li>
+        </ol>
+      </details>
 
     </section>
 
@@ -503,13 +693,74 @@
     <script src="/js/math/geo3d.js"></script>
 
     <script>
-      drawAxes(betr, 6, 4, "a");
+      let u = [0,0,3];
+      let v = [0,-3,2];
+      let w = [0,3,1]
+      drawVector(task2a,[0,0,0], u, "u", "aqua", "right", 1.5);
+      drawVector(task2a,u, v, "v", "magenta", "aboveright", 1.5);
+      drawVector(task2a,[0,0,0],[0,-3,5],"","lime","belowleft", 1.5);
 
-      drawVector(betr, [0, 1, 1], [0, 4, 3], "v", "aqua", "aboveleft");
+      drawVector(task2b,[0,0,0], u, "u", "aqua", "right", 1.5);
+      drawVector(task2b,u, w, "w", "orange", "aboveleft", 1.5);
+      drawVector(task2b,[0,0,0],[0,3,4],"","lime","belowleft", 1.5);
 
-      drawVector(betr, [0, 1, 1], [0, 4, 0], "4", "orange", "below", 1.25, true);
-      drawVector(betr, [0, 5, 1], [0, 0, 3], "3", "lime", "right", 1.25, true);
+      drawVector(task2c,[0,0,0], v, "v", "magenta", "belowleft", 1.5);
+      drawVector(task2c,v, w, "w", "orange", "aboveleft", 1.5);
+      drawVector(task2c,[0,0,0],[0,0,3],"","lime","belowleft", 1.5);
 
+      drawVector(task2d,[0,0,0], u, "u", "aqua", "right", 1.5);
+      drawVector(task2d,u, v, "v", "magenta", "aboveright", 1.5);
+      drawVector(task2d,[0,0,0],[0,-3,5],"","green","belowleft", 1.5);
+      drawVector(task2d,[0,-3,5], w, "w", "orange", "aboveright", 1.5);
+      drawVector(task2d,[0,0,0],[0,0,6],"","lime","belowleft", 1.5);
+
+      drawVector(task2e,[0,0,0], v, "v", "magenta", "right", 1.5);
+      drawVector(task2e,v, u, "u", "aqua", "left", 1.5);
+      drawVector(task2e,[0,0,0],[0,-3,5],"","lime","belowleft", 1.5);
+
+      drawVector(task2f,[0,0,0], u, "u", "aqua", "right", 1.5);
+      drawVector(task2f,u, v, "v", "magenta", "aboveright", 1.5);
+      drawVector(task2f,[0,-3,5], w, "w", "orange", "aboveright", 1.5);
+      drawVector(task2f,u,[0,0,6],"","green","belowleft", 1.5);
+      drawVector(task2f,[0,0,0],[0,0,6],"","lime","belowleft", 1.5);
+
+      drawVector(task2g,[0,0,0], u, "u", "aqua", "right", 1.5);
+      drawVector(task2g,u, u, "u", "aqua", "aboveright", 1.5);
+      drawVector(task2g,[0,0,0],[0,0,6],"","lime","belowleft", 1.5);
+
+      let a=[0,2,4];
+      let b=[0,-1,3];
+      let c=[0,2,2];
+
+      drawVector(task4a,[0,0,0], a, "a", "aqua", "right", 1.5);
+      drawVector(task4a,[0,0,0], b, "b", "orange", "left", 1.5);
+      drawVector(task4a,b,[0,3,1],"","lime","belowleft", 1.5);
+
+      drawVector(task4b,[0,0,0], a, "a", "aqua", "right", 1.5);
+      drawVector(task4b,[0,0,0], b, "b", "orange", "left", 1.5);
+      drawVector(task4b,a,[0,-3,-1],"","lime","belowleft", 1.5);
+
+      drawVector(task4c,[0,0,0], a, "a", "aqua", "right", 1.5);
+      drawVector(task4c,[0,0,0], b, "b", "orange", "left", 1.5);
+      drawVector(task4c,a, a, "a", "aqua", "right", 1.5);
+      drawVector(task4c,b, [0,3,1], "", "green", "left", 1.5);
+      drawVector(task4c,[0,0,0],[0,4,8],"","lime","belowleft", 1.5);
+
+      drawVector(task4d,[0,1,-3], [0,-2,-4], "-a", "aqua", "right", 1.5);
+      drawVector(task4d,[0,0,0], [0,1,-3], "-b", "orange", "right", 1.5);
+      drawVector(task4d,[0,0,0],[0,-1,-7],"","lime","belowleft", 1.5);
+
+      drawVector(task4e,[0,0,0], a, "a", "aqua", "right", 1.5);
+      drawVector(task4e,[0,0,0], b, "b", "orange", "left", 1.5);
+      drawVector(task4e,b,[0,3,1],"","green","belowleft", 1.5);
+      drawVector(task4e,b, c, "c", "magenta", "above", 1.5);
+      drawVector(task4e,[0,1,5],[0,1,-1],"","lime","belowleft", 1.5);
+
+      drawVector(task4f,b, [0,-2,-4], "-a", "aqua", "left", 1.5);
+      drawVector(task4f,[0,0,0], b, "b", "orange", "right", 1.5);
+      drawVector(task4f,[0,0,0],[0,-3,-1],"","green","belowleft", 1.5);
+      drawVector(task4f,[0,0,0], c, "c", "magenta", "below", 1.5);
+      drawVector(task4f,c,[0,-5,-3],"","lime","belowleft", 1.5);
 
     </script>
 
@@ -528,7 +779,7 @@
     <a href="/misc/impressum.html">Impressum</a>
     <div class="lastModified" align="center">
       Zuletzt geändert:<br />
-      23. September 2025
+      24. September 2025
       <!-- <span id="lastModifiedDate"></span> -->
     </div>
     <a href="/misc/datenschutz.html">Datenschutz</a>
