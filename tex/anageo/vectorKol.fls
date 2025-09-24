@@ -2,8 +2,8 @@ PWD f:/Dokumente/GitHub/sheines.github.io/tex/anageo
 INPUT c:/Program Files/texlive/2024/texmf.cnf
 INPUT c:/Program Files/texlive/2024/texmf-dist/web2c/texmf.cnf
 INPUT c:/Program Files/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT f:/Dokumente/GitHub/sheines.github.io/tex/anageo/vectorSub copy.tex
-OUTPUT vectorSub copy.log
+INPUT f:/Dokumente/GitHub/sheines.github.io/tex/anageo/vectorKol.tex
+OUTPUT vectorKol.log
 INPUT c:/Program Files/texlive/2024/texmf-dist/tex/latex/standalone/standalone.cls
 INPUT c:/Program Files/texlive/2024/texmf-dist/tex/latex/standalone/standalone.cls
 INPUT c:/Program Files/texlive/2024/texmf-dist/tex/latex/tools/shellesc.sty
@@ -190,10 +190,10 @@ INPUT c:/Program Files/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tik
 INPUT c:/Program Files/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryfpu.code.tex
 INPUT c:/Program Files/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 INPUT c:/Program Files/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-INPUT ./vectorSub copy.aux
-INPUT ./vectorSub copy.aux
-INPUT vectorSub copy.aux
-OUTPUT vectorSub copy.aux
+INPUT ./vectorKol.aux
+INPUT ./vectorKol.aux
+INPUT vectorKol.aux
+OUTPUT vectorKol.aux
 INPUT c:/Program Files/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT c:/Program Files/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT c:/Program Files/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -233,9 +233,8 @@ INPUT c:/Program Files/texlive/2024/texmf-dist/tex/latex/esvect/uesvect.fd
 INPUT c:/Program Files/texlive/2024/texmf-dist/fonts/tfm/public/esvect/vect10.tfm
 INPUT c:/Program Files/texlive/2024/texmf-dist/fonts/tfm/public/esvect/vect8.tfm
 INPUT c:/Program Files/texlive/2024/texmf-dist/fonts/tfm/public/esvect/vect6.tfm
-OUTPUT vectorSub copy.pdf
+OUTPUT vectorKol.pdf
 INPUT c:/Program Files/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map
-INPUT vectorSub copy.aux
+INPUT vectorKol.aux
 INPUT c:/Program Files/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 INPUT c:/Program Files/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
-INPUT c:/Program Files/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb

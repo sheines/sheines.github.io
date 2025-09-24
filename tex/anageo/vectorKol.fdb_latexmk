@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1758616521.419 "f:/Dokumente/GitHub/sheines.github.io/tex/anageo/vectorSub copy.tex" "vectorSub copy.pdf" "vectorSub copy" 1758616525.14979 0
+["pdflatex"] 1758729229.57857 "f:/Dokumente/GitHub/sheines.github.io/tex/anageo/vectorKol.tex" "vectorKol.pdf" "vectorKol" 1758729231.14553 0
   "c:/Program Files/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1733768423 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "c:/Program Files/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1733765972 1004 54797486969f23fa377b128694d548df ""
   "c:/Program Files/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1733765972 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -18,7 +18,6 @@
   "c:/Program Files/texlive/2024/texmf-dist/fonts/tfm/public/esvect/vect8.tfm" 1733768083 372 4f0047d7e99a201724968cf4743804cf ""
   "c:/Program Files/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb" 1733765972 36299 5f9df58c2139e7edcf37c8fca4bd384d ""
   "c:/Program Files/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1733765972 35752 024fb6c41858982481f6968b5fc26508 ""
-  "c:/Program Files/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1733765972 32569 5e5ddc8df908dea60932f3c484a54c0d ""
   "c:/Program Files/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1733769859 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "c:/Program Files/texlive/2024/texmf-dist/tex/generic/iftex/ifluatex.sty" 1733768910 492 1994775aa15b0d1289725a0b1bbc2d4c ""
   "c:/Program Files/texlive/2024/texmf-dist/tex/generic/iftex/iftex.sty" 1733768910 7237 bdd120a32c8fdb4b433cf9ca2e7cd98a ""
@@ -138,11 +137,11 @@
   "c:/Program Files/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1733772430 5525386 74fc21b8d3ba932fe283ff0db7f242a6 ""
   "c:/Program Files/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1733772603 3343821 ca53054df7f2145b0f851cc511c80ea1 ""
   "c:/Program Files/texlive/2024/texmf.cnf" 1733772401 713 614551405fc44b98efbf516466e3c909 ""
-  "f:/Dokumente/GitHub/sheines.github.io/tex/anageo/vectorSub copy.tex" 1758613089 1017 c2367546788577abfdaaa17b9e925c98 ""
-  "vectorSub copy.aux" 1758616524 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
-  "vectorSub copy.tex" 1758613089 1017 c2367546788577abfdaaa17b9e925c98 ""
+  "f:/Dokumente/GitHub/sheines.github.io/tex/anageo/vectorKol.tex" 1758729228 1110 6cf6bd62383414a4abf91d6f82013cfc ""
+  "vectorKol.aux" 1758729230 32 3985256e7290058c681f74d7a3565a19 "pdflatex"
+  "vectorKol.tex" 1758729228 1110 6cf6bd62383414a4abf91d6f82013cfc ""
   (generated)
-  "vectorSub copy.aux"
-  "vectorSub copy.log"
-  "vectorSub copy.pdf"
+  "vectorKol.aux"
+  "vectorKol.log"
+  "vectorKol.pdf"
   (rewritten before read)
