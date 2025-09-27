@@ -365,7 +365,7 @@
       <ol class="custom-marker point-after decimal more-spacing">
         <li>Buch, Seite 42 Übung 20 und 21 <a href="#a1">Lösungen</a></li>
         <li>Buch, Seite 43 Übung 22 <a href="#a2">Lösungen</a></li>
-        <li>Buch, Seite 20 Übung 19 <a href="#a3">Lösungen</a></li>
+        <li>Buch, Seite 40 Übung 19 <a href="#a3">Lösungen</a></li>
         <li>Buch, Seite 43 Übung 23 <a href="#a4">Lösungen</a></li>
 
       </ol>
@@ -374,14 +374,146 @@
     <section class="loesungen">
       <h3>Lösungen zur Kollinearität und zur Komplanarität</h3>
 
-      <details id="a1" style="counter-set: lsg-counter 5;">
-        <summary>...</summary>
+      <details id="a1" style="counter-set: lsg-counter 19;">
+        <summary>Kollinearitätsprüfung</summary>
+        Wenn man die Gleichungen andersherum aufstellt, kommt für \(r\) das reziproke heraus: \(\tfrac12 \rightarrow 2\)
         <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
-          <li> \(\sqrt{1+a^2}\,\text{LE}\)</li>
-
+          <li> \(\vector{3\\5}=r\cdot\vector{-6\\-10}\):
+            <p style="margin-left: 20px;">
+              \(
+                \begin{align*}
+                  3&=-6r \quad\; r=-\tfrac12\\
+                  5&=-10r\quad\! r=-\tfrac12
+                \end{align*}
+              \)
+            </p>
+            Es gilt: \(\vector{3\\5}=-\tfrac12\cdot\vector{-6\\-10}\), das heißt die Vektoren sind kollinear.
+          </li>
+          <li>nicht kollinear</li>
+          <li>kollinear: \(r=\tfrac23 \mid \tfrac32\)</li>
+          <li>nicht kollinear</li>
         </ol>
       </details>
 
+      <details  style="counter-set: lsg-counter 20;">
+        <summary>Trapez</summary>
+        <ul class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
+          <li> Schrägbild:
+            <div class="centered" style="max-width: 275px">
+                <svg id="task21" viewBox="-200 -250 650 450">
+                  <defs></defs>
+                </svg>
+              </div>
+          </li>
+          <li>Aus der Zeichnung geht hervor, dass \(\overrightarrow{AB}\) und 
+            \(\overrightarrow{CD}\) verglichen werden müssen.</li>
+          <li>Vektoren:
+            <p style="margin-left: 20px;">
+              \(
+                \begin{align*}
+                  \overrightarrow{AB}&=\vector{-3\\6\\3} \\
+                  \overrightarrow{CD}&=\vector{2\\-4\\2}
+                \end{align*}
+              \)
+            </p>
+          </li>
+          <li>Kollinearität:
+            <p style="margin-left: 20px;">
+              \(
+                \begin{align*}
+                  \overrightarrow{AB}&=-\tfrac23\cdot\overrightarrow{CD}
+                \end{align*}
+              \)
+            </p>
+            Die beiden Vektoren sind kollinear, das heißt, das Viereck ist ein Trapez.
+          </li>
+        </ul>
+      </details>
+
+      <details id="a2" style="counter-set: lsg-counter 21;">
+        <summary>Kollineare Vektoren</summary>
+      
+        <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
+          <li> \(\vector{-2\\4\\2a}=r\cdot\vector{3\\a\\18}\):
+            <p style="margin-left: 20px;">
+              \(
+                \begin{align*}
+                  -2&=3r \quad r=-\tfrac23\\
+                   4&=ar \quad a=-6\\
+                  2a&=18r \\[10px]
+                  2\cdot (-6)&=18\cdot\left(-\tfrac23\right)\\
+                  -12&=-12 \quad\checkmark
+                \end{align*}
+              \)
+            </p>
+            Die Vektoren sind kollinear, wenn \(a=-6\).
+          </li>
+          <li>\(a=\tfrac{1}{15}\)</li>
+        </ol>
+      </details>
+
+      <details id="a3" style="counter-set: lsg-counter 18;">
+        <summary>Linearkombination</summary>
+        Es muss gelten: \(\vec c/\vec d = r\cdot \vec a + s\cdot\vec b\)
+        <ul class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
+          <li> Vektor \(\vec c\): \(\vector{6\\4\\1} = r\cdot \vector{2\\1\\-1} + s\cdot\vector{2\\2\\3}\)
+            <p style="margin-left: 20px;">
+              \(
+                \begin{align*}
+                  6&=2r+2s\\
+                  4&=r+2s\\
+                  1&=-r+3s
+                \end{align*}
+              \)
+            </p>
+            Das Lösen des Gleichungssystems ergibt: \(r=2\) und \(s=1\)
+            <p>
+              Das heißt: \(\vec c = 2\vec a + \vec b\)
+            </p>
+          </li>
+          <li> Vektor \(\vec d\): \(\vector{2\\3\\4} = r\cdot \vector{2\\1\\-1} + s\cdot\vector{2\\2\\3}\)
+            <p style="margin-left: 20px;">
+              \(
+                \begin{align*}
+                  2&=2r+2s\\
+                  3&=r+2s\\
+                  4&=-r+3s
+                \end{align*}
+              \)
+            </p>
+            Das Lösen des Gleichungssystems ergibt, dass es keine Lösung gibt. (\(r\) und \(s\) berechnen und zur Probe
+            in dritte Gleichung einsetzen.)
+            <p>
+              Das heißt \(\vec d\) lässt sich nicht als Linearkombination der Vektoren \(\vec a\) und \(\vec b\) darstellen.
+            </p>
+          </li>
+        </ul>
+      </details>
+
+      <details id="a4" style="counter-set: lsg-counter 22;">
+        <summary>Komplanare Vektoren</summary>
+        
+        <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
+          <li> \(\vector{1\\7\\2}=r\cdot\vector{1\\2\\1}+s\cdot\vector{2\\-1\\1}\):
+            <p style="margin-left: 20px;">
+              \(
+                \begin{align*}
+                  1&=r+2s\\
+                  7&=2r-s\\
+                  2&=r+s
+                \end{align*}
+              \)
+            </p>
+            Das Lösen des Gleichungssystems (und Probe) ergibt: \(r=3\) und \(s=-1\)
+            <p>
+              Das heißt, die drei Vektoren sind komplanar.
+            </p>
+          </li>
+          <li> komplanar (\(r=-\tfrac12\), \(s=\tfrac12\))
+          </li>
+          <li>nicht komplanar</li>
+        </ol>
+      </details>
       
 
 
@@ -396,9 +528,14 @@
     <script src="/js/math/geo3d.js"></script>
 
     <script>
-      drawAxes(betr, 6, 4, "a");
+      drawAxes(task21, 4, 8, 4);
 
-      drawVector(betr, [0, 1, 1], [0, 4, 3], "v", "aqua", "aboveleft");
+      drawPoint(task21,[3,2,-2],"A","darkgoldenrod","below",4);
+      drawPoint(task21,[0,8,1],"B","darkgoldenrod","right",4);
+      drawPoint(task21,[-1,3,3],"C","darkgoldenrod","above",4);
+      drawPoint(task21,[1,-1,1],"D","darkgoldenrod","left",4);
+
+      drawPolygon(task21,[[3,2,-2],[0,8,1],[-1,3,3],[1,-1,1]],"","darkgoldenrod","orange","",2.5,0.2)
 
 
     </script>
@@ -418,7 +555,7 @@
     <a href="/misc/impressum.html">Impressum</a>
     <div class="lastModified" align="center">
       Zuletzt geändert:<br />
-      24. September 2025
+      27. September 2025
       <!-- <span id="lastModifiedDate"></span> -->
     </div>
     <a href="/misc/datenschutz.html">Datenschutz</a>
