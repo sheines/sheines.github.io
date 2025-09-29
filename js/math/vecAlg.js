@@ -110,12 +110,12 @@ function animateSub() {
         delay: 2000,
     });
 
-    subVecA2.animate([{ opacity: 1 }, { opacity: 0.2 }], {
+    subVecA.animate([{ opacity: 1 }, { opacity: 0.2 }], {
         duration: 500,
         fill: "forwards",
         delay: 4000,
     });
-    subVecB2.animate([{ opacity: 1 }, { opacity: 0.2 }], {
+    subVecB.animate([{ opacity: 1 }, { opacity: 0.2 }], {
         duration: 500,
         fill: "forwards",
         delay: 4000,
@@ -134,12 +134,22 @@ function animateSub() {
     });
 
     // ausblenden
-    subVecA2.animate([{ opacity: 0.2 }, { opacity: 0 }], {
+    subVecA.animate([{ opacity: 0.2 }, { opacity: 1 }], {
         duration: 1000,
         fill: "forwards",
         delay: 11000,
     });
-    subVecB2.animate([{ opacity: 0.2 }, { opacity: 0 }], {
+    subVecB.animate([{ opacity: 0.2 }, { opacity: 1 }], {
+        duration: 1000,
+        fill: "forwards",
+        delay: 11000,
+    });
+    subVecA2.animate([{ opacity: 1 }, { opacity: 0 }], {
+        duration: 1000,
+        fill: "forwards",
+        delay: 11000,
+    });
+    subVecB2.animate([{ opacity: 1 }, { opacity: 0 }], {
         duration: 1000,
         fill: "forwards",
         delay: 11000,
