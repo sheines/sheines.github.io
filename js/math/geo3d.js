@@ -489,3 +489,12 @@ function drawSequenceWithPersistence(svg, steps, duration = 10000, interval = 10
 
     run();
 }
+
+
+// Vektorfunktionen
+function vecAdd(a, b){
+    return a.map((val, i) => val + b[i]);
+}
+function vecSub(a, b){
+    return a.map((val, i) => val - b[i]);
+}

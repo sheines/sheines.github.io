@@ -565,42 +565,42 @@
         <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
           <li> \(\vec a-\vec b\)
               <div class="centered" style="max-width: 250px">
-                <svg id="task4a" viewBox="-200 -300 400 400">
+                <svg id="task4a" viewBox="-200 -350 400 400">
                   <defs></defs>
                 </svg>
               </div>
           </li>
           <li> \(\vec b-\vec a\)
               <div class="centered" style="max-width: 250px">
-                <svg id="task4b" viewBox="-200 -300 400 400">
+                <svg id="task4b" viewBox="-200 -350 400 400">
                   <defs></defs>
                 </svg>
               </div>
           </li>
           <li> \(\vec a-\vec b+\vec a\)
               <div class="centered" style="max-width: 250px">
-                <svg id="task4c" viewBox="-200 -400 400 400">
+                <svg id="task4c" viewBox="-200 -400 450 400">
                   <defs></defs>
                 </svg>
               </div>
           </li>
           <li> \(-\vec b-\vec a\)
               <div class="centered" style="max-width: 250px">
-                <svg id="task4d" viewBox="-200 -50 400 400">
+                <svg id="task4d" viewBox="-200 -150 400 500">
                   <defs></defs>
                 </svg>
               </div>
           </li>
           <li> \(\vec a-\vec b-\vec c\)
               <div class="centered" style="max-width: 250px">
-                <svg id="task4e" viewBox="-200 -300 400 400">
+                <svg id="task4e" viewBox="-100 -350 400 400">
                   <defs></defs>
                 </svg>
               </div>
           </li>
           <li> \(-\vec a+\vec b-\vec c\)
               <div class="centered" style="max-width: 250px">
-                <svg id="task4f" viewBox="-200 -300 400 400">
+                <svg id="task4f" viewBox="-300 -300 400 500">
                   <defs></defs>
                 </svg>
               </div>
@@ -730,38 +730,50 @@
       drawVector(task2g,[0,0,0],[0,0,6],"","lime","belowleft", 1.5);
 
       let a=[0,2,4];
+      let ma=[0,-2,-4];
       let b=[0,-1,3];
+      let mb=[0,1,-3];
       let c=[0,2,2];
+      let mc=[0,-2,-2];
 
-      drawVector(task4a,[0,0,0], a, "a", "aqua", "right", 1.5);
-      drawVector(task4a,[0,0,0], b, "b", "orange", "left", 1.5);
-      drawVector(task4a,b,[0,3,1],"","lime","belowleft", 1.5);
+      drawVector(task4a,[0,0,0], a, "a", "aqua", "left", 1.5);
+      drawVector(task4a,a, b, "b", "orange", "right", 1.5, true);
+      drawVector(task4a,a, mb, "−b", "orange", "right", 1.5);
+      drawVector(task4a,[0,0,0],vecAdd(a,mb),"","lime","belowleft", 1.5);
 
-      drawVector(task4b,[0,0,0], a, "a", "aqua", "right", 1.5);
-      drawVector(task4b,[0,0,0], b, "b", "orange", "left", 1.5);
-      drawVector(task4b,a,[0,-3,-1],"","lime","belowleft", 1.5);
+      drawVector(task4b,b, a, "a", "aqua", "right", 1.5, true);
+      drawVector(task4b,b, ma, "−a", "aqua", "right", 1.5);
+      drawVector(task4b,[0,0,0], b, "b", "orange", "right", 1.5);
+      drawVector(task4b,[0,0,0],vecAdd(b,ma),"","lime","belowleft", 1.5);
 
       drawVector(task4c,[0,0,0], a, "a", "aqua", "right", 1.5);
-      drawVector(task4c,[0,0,0], b, "b", "orange", "left", 1.5);
-      drawVector(task4c,a, a, "a", "aqua", "right", 1.5);
-      drawVector(task4c,b, [0,3,1], "", "green", "left", 1.5);
-      drawVector(task4c,[0,0,0],[0,4,8],"","lime","belowleft", 1.5);
+      drawVector(task4c,a, b, "b", "orange", "right", 1.5, true);
+      drawVector(task4c,a, mb, "−b", "orange", "right", 1.5);
+      // drawVector(task4c,[0,0,0], vecAdd(a,mb), "", "green", "left", 1.5);
+      drawVector(task4c,vecAdd(a,mb), a, "a", "aqua", "right", 1.5);
+      drawVector(task4c,[0,0,0],vecAdd(a,vecAdd(a,mb)),"","lime","belowleft", 1.5);  
 
-      drawVector(task4d,[0,1,-3], [0,-2,-4], "-a", "aqua", "right", 1.5);
-      drawVector(task4d,[0,0,0], [0,1,-3], "-b", "orange", "right", 1.5);
-      drawVector(task4d,[0,0,0],[0,-1,-7],"","lime","belowleft", 1.5);
+      drawVector(task4d,mb, ma, "−a", "aqua", "right", 1.5);
+      drawVector(task4d,mb, a, "a", "aqua", "right", 1.5, true);
+      drawVector(task4d,[0,0,0], mb, "−b", "orange", "right", 1.5);
+      drawVector(task4d,[0,0,0], b, "b", "orange", "right", 1.5,true);
+      drawVector(task4d,[0,0,0],vecAdd(mb,ma),"","lime","belowleft", 1.5);
 
       drawVector(task4e,[0,0,0], a, "a", "aqua", "right", 1.5);
-      drawVector(task4e,[0,0,0], b, "b", "orange", "left", 1.5);
-      drawVector(task4e,b,[0,3,1],"","green","belowleft", 1.5);
-      drawVector(task4e,b, c, "c", "magenta", "above", 1.5);
-      drawVector(task4e,[0,1,5],[0,1,-1],"","lime","belowleft", 1.5);
+      drawVector(task4e,a, b, "b", "orange", "right", 1.5,true);
+      drawVector(task4e,a, mb, "−b", "orange", "right", 1.5);
+      // drawVector(task4e,[0,0,0],vecAdd(a,mb),"","green","belowleft", 1.5);
+      drawVector(task4e,vecAdd(a,mb), mc, "−c", "magenta", "right", 1.5);
+      drawVector(task4e,vecAdd(a,mb), c, "c", "magenta", "right", 1.5,true);
+      drawVector(task4e,[0,0,0],vecAdd(vecAdd(a,mb),mc),"","lime","belowleft", 1.5);
 
-      drawVector(task4f,b, [0,-2,-4], "-a", "aqua", "left", 1.5);
-      drawVector(task4f,[0,0,0], b, "b", "orange", "right", 1.5);
-      drawVector(task4f,[0,0,0],[0,-3,-1],"","green","belowleft", 1.5);
-      drawVector(task4f,[0,0,0], c, "c", "magenta", "below", 1.5);
-      drawVector(task4f,c,[0,-5,-3],"","lime","belowleft", 1.5);
+      drawVector(task4f,[0,0,0], ma, "−a", "aqua", "right", 1.5);
+      drawVector(task4f,[0,0,0], a, "a", "aqua", "right", 1.5,true);
+      drawVector(task4f,ma, b, "b", "orange", "right", 1.5);
+      //drawVector(task4f,[0,0,0],vecAdd(ma,b),"","green","belowleft", 1.5);
+      drawVector(task4f,vecAdd(ma,b), mc, "−c", "magenta", "aboveleft", 1.5);
+      drawVector(task4f,vecAdd(ma,b), c, "c", "magenta", "aboveleft", 1.5,true);
+      drawVector(task4f,[0,0,0],vecAdd(vecAdd(ma,b),mc),"","lime","belowleft", 1.5);
 
     </script>
 
