@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" initial-scale="1.0" />
+  <meta name="author" content="Sebastian Heine" />
+  <meta name="robot" content="noindex" />
+  <title>HEIS | Ana Geom I | Skalarprodukt</title>
+  <link rel="stylesheet" type="text/css" href="/css/colors.css" />
+  <link rel="stylesheet" type="text/css" href="/css/gridNoTimeline.css" />
+  <link rel="stylesheet" type="text/css" href="/css/navbar.css" />
+  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="/css/courses.css" />
+  <link rel="stylesheet" type="text/css" href="/css/oktanten.css" />
+  <script type="text/javascript" src="jquery-3.3.1.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <script>
+    window.MathJax = {
+      tex: {
+        macros: {
+          vector: ['\\begin{pmatrix}#1\\end{pmatrix}', 1]
+        }
+      }
+    };
+  </script>
+
+</head>
+
+<body>
+  <header>
+    <div class="nav">
+      <input type="checkbox" id="nav-check" />
+      <div class="nav-header">
+        <div class="nav-title">
+          <a href="/">Hr. Heines Unterricht</a>
+        </div>
+      </div>
+      <div class="nav-btn">
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+
+      <div class="nav-links">
+        <a href="/content/math/">Mathematik</a>
+        <a href="/content/math/13/">Klasse 13</a>
+        <a href="/content/math/13/AnGeoI/">Analytische Geometrie I</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section>
+      <h2>Skalarprodukt</h2>
+      <div class="ziele">
+        <p>
+          Nachfolgend soll erklärt werden, was das Skalarprodukt ist und wie es berechnet wird.
+        </p>
+        <p>
+          <a href="#aufgaben">Direkt zu den Aufgaben</a>
+        </p>
+      </div>
+
+      <div class="theorie">
+        <div class="definition">
+          <h4>Skalarprodukt</h4>
+          <p>
+            In der Physik trifft man immer wieder auf vektorielle Größen, welche miteinander
+            multipliziert werden. So gilt beispielsweise für die Arbeit: \(W =\vec F · \vec s\).
+          <p>
+            Das Ergebnis dieses Produkts zweier Vektoren ist jedoch ein Skalar (einfache Zahl) und kein Vektor.
+          </p>
+          </p>
+          <div class="centered" style="max-height: 150px;">
+            <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'
+               viewBox='0 -72.556 142.529 72.556'>
+              <g id='page1'>
+                <g transform='matrix(1 0 0 -1 0 0)'>
+                  <path
+                    d='M99.84098 44.71813C100.1135 45.19813 100.3754 45.59063 101.0622 45.645C101.1604 45.65594 101.2694 45.65594 101.2694 45.86313C101.2694 45.90688 101.226 45.98313 101.1388 45.98313C100.8769 45.98313 100.5716 45.95032 100.2988 45.95032C99.9282 45.95032 99.52473 45.98313 99.16473 45.98313C99.09941 45.98313 98.95754 45.98313 98.95754 45.77594C98.95754 45.65594 99.05566 45.645 99.12129 45.645C99.38285 45.63407 99.76473 45.54688 99.76473 45.21969C99.76473 45.1 99.71004 45.0125 99.62285 44.86L96.67848 39.72375L96.27504 45.1325C96.2641 45.35063 96.24223 45.63407 97.03848 45.645C97.22379 45.645 97.33285 45.645 97.33285 45.86313C97.33285 45.97219 97.21285 45.98313 97.1691 45.98313C96.73285 45.98313 96.27504 45.95032 95.83879 45.95032C95.58785 45.95032 94.94441 45.98313 94.69379 45.98313C94.62816 45.98313 94.4866 45.98313 94.4866 45.765C94.4866 45.645 94.59566 45.645 94.74816 45.645C95.22816 45.645 95.30441 45.57969 95.32629 45.3725L95.3916 44.53282L92.63254 39.72375L92.21816 45.2525C92.21816 45.38344 92.21816 45.63407 93.04691 45.645C93.15598 45.645 93.27598 45.645 93.27598 45.86313C93.27598 45.98313 93.14535 45.98313 93.12348 45.98313C92.68723 45.98313 92.2291 45.95032 91.78223 45.95032C91.40035 45.95032 91.00785 45.98313 90.636914 45.98313C90.582539 45.98313 90.440664 45.98313 90.440664 45.77594C90.440664 45.645 90.538789 45.645 90.713477 45.645C91.25879 45.645 91.26941 45.54688 91.29129 45.24157L91.78223 38.578753C91.79285 38.382191 91.80379 38.295003 91.9566 38.295003C92.08754 38.295003 92.12004 38.360628 92.21816 38.524066L95.42441 44.08563L95.82785 38.578753C95.84973 38.349691 95.8716 38.295003 96.00223 38.295003C96.1441 38.295003 96.20941 38.404066 96.2641 38.502191L99.84098 44.71813Z'
+                    fill='#a8a7a7' />
+                  <path
+                    d='M112.1819 42.10094C112.34534 42.10094 112.55253 42.10094 112.55253 42.31907C112.55253 42.53719 112.34534 42.53719 112.19284 42.53719H105.660653C105.507841 42.53719 105.300653 42.53719 105.300653 42.31907C105.300653 42.10094 105.507841 42.10094 105.671591 42.10094H112.1819ZM112.19284 39.98532C112.34534 39.98532 112.55253 39.98532 112.55253 40.20344C112.55253 40.42157 112.34534 40.42157 112.1819 40.42157H105.671591C105.507841 40.42157 105.300653 40.42157 105.300653 40.20344C105.300653 39.98532 105.507841 39.98532 105.660653 39.98532H112.19284Z'
+                    fill='#a8a7a7' />
+                  <path
+                    d='M123.66893 47.78144C123.51643 47.63987 123.15643 47.33456 123.15643 47.138C123.15643 47.02894 123.26549 46.91987 123.37455 46.91987C123.47268 46.91987 123.52737 46.99644 123.58174 47.06175C123.71268 47.2255 123.9633 47.53081 124.4433 47.7705C124.51955 47.81425 124.62861 47.86862 124.62861 47.99956C124.62861 48.10862 124.55237 48.16331 124.47612 48.21769C124.23611 48.38144 124.11611 48.57769 124.02893 48.83925C124.00705 48.93737 123.9633 49.07925 123.8108 49.07925C123.65799 49.07925 123.59268 48.93737 123.59268 48.85019C123.59268 48.79581 123.67987 48.44675 123.85455 48.21769H120.17924C119.99393 48.21769 119.79768 48.21769 119.79768 47.99956C119.79768 47.78144 119.99393 47.78144 120.17924 47.78144H123.66893Z'
+                    fill='darkgoldenrod' />
+                  <path
+                    d='M119.50934 42.07907H120.56684C121.38496 42.07907 121.47215 41.90469 121.47215 41.58844C121.47215 41.51219 121.47215 41.38125 121.3959 41.05407C121.37402 40.99969 121.36309 40.95594 121.36309 40.93407C121.36309 40.84688 121.4284 40.80313 121.49402 40.80313C121.60309 40.80313 121.60309 40.83594 121.65746 41.03219L122.25715 43.39875C122.28996 43.51875 122.28996 43.54032 122.28996 43.57313C122.28996 43.595 122.26809 43.69313 122.15902 43.69313C122.04996 43.69313 122.03902 43.63844 121.99559 43.46407C121.76652 42.61344 121.51559 42.41719 120.58871 42.41719H119.59653L120.29434 45.18719C120.39246 45.56875 120.4034 45.6125 120.88309 45.6125H122.32277C123.66402 45.6125 123.91496 45.2525 123.91496 44.41282C123.91496 44.16188 123.91496 44.11844 123.88215 43.82407C123.86027 43.68219 123.86027 43.66032 123.86027 43.62782C123.86027 43.57313 123.89309 43.49688 123.99121 43.49688C124.11121 43.49688 124.12215 43.56219 124.14371 43.76938L124.36184 45.65594C124.39465 45.95032 124.34027 45.95032 124.06746 45.95032H118.72402C118.5059 45.95032 118.39684 45.95032 118.39684 45.7325C118.39684 45.6125 118.49496 45.6125 118.70215 45.6125C119.10559 45.6125 119.4109 45.6125 119.4109 45.41625C119.4109 45.3725 119.4109 45.35063 119.35653 45.15438L117.91715 39.385628C117.80809 38.960316 117.78621 38.873128 116.92465 38.873128C116.739337 38.873128 116.619337 38.873128 116.619337 38.665941C116.619337 38.535003 116.750275 38.535003 116.783087 38.535003C117.099025 38.535003 117.90621 38.567816 118.22246 38.567816C118.58215 38.567816 119.48746 38.535003 119.84715 38.535003C119.94527 38.535003 120.07621 38.535003 120.07621 38.742191C120.07621 38.829378 120.0109 38.851253 120.0109 38.862191C119.97809 38.873128 119.95621 38.873128 119.70559 38.873128C119.46559 38.873128 119.4109 38.873128 119.1384 38.895003C118.82215 38.927503 118.78934 38.971253 118.78934 39.113128C118.78934 39.134691 118.78934 39.200316 118.83309 39.363753L119.50934 42.07907Z'
+                    fill='darkgoldenrod' />
+                  <path
+                    d='M129.25277 41.26125C129.25277 41.5775 128.99121 41.83938 128.67496 41.83938S128.096836 41.5775 128.096836 41.26125S128.35871 40.68344 128.67496 40.68344S129.25277 40.945 129.25277 41.26125Z'
+                    fill='#a8a7a7' />
+                  <path
+                    d='M138.06596 45.02344C137.91346 44.88188 137.55346 44.57657 137.55346 44.38C137.55346 44.27094 137.66252 44.16188 137.77158 44.16188C137.86971 44.16188 137.92439 44.23844 137.97877 44.30375C138.10971 44.4675 138.36033 44.77282 138.84033 45.0125C138.91658 45.05625 139.02564 45.11063 139.02564 45.24157C139.02564 45.35063 138.94939 45.40532 138.87314 45.45969C138.63314 45.62344 138.51314 45.81969 138.42596 46.08125C138.40408 46.17938 138.36033 46.32125 138.20783 46.32125C138.05502 46.32125 137.98971 46.17938 137.98971 46.09219C137.98971 46.03782 138.07689 45.68875 138.25158 45.45969H134.57627C134.39096 45.45969 134.19471 45.45969 134.19471 45.24157C134.19471 45.02344 134.39096 45.02344 134.57627 45.02344H138.06596Z'
+                    fill='lime' />
+                  <path
+                    d='M136.87596 42.61344C136.57064 42.6025 136.35252 42.36282 136.35252 42.12282C136.35252 41.97 136.45064 41.80657 136.69064 41.80657S137.19221 41.99188 137.19221 42.41719C137.19221 42.90782 136.72346 43.355 135.89471 43.355C134.45502 43.355 134.05158 42.24282 134.05158 41.76282C134.05158 40.91219 134.85877 40.74875 135.17502 40.68344C135.74189 40.57438 136.30908 40.45438 136.30908 39.85438C136.30908 39.57094 136.05814 38.655003 134.74971 38.655003C134.59689 38.655003 133.75721 38.655003 133.50627 39.232816C133.92096 39.178441 134.19346 39.505628 134.19346 39.81094C134.19346 40.06157 134.01908 40.1925 133.79002 40.1925C133.50627 40.1925 133.179394 39.96344 133.179394 39.472816C133.179394 38.851253 133.80096 38.415003 134.73877 38.415003C136.50533 38.415003 136.93064 39.73469 136.93064 40.22532C136.93064 40.61782 136.72346 40.89063 136.59252 41.02125C136.29814 41.32657 135.98189 41.38125 135.50221 41.47938C135.10939 41.56657 134.67314 41.64282 134.67314 42.13375C134.67314 42.45 134.93502 43.115 135.89471 43.115C136.16721 43.115 136.71252 43.03875 136.87596 42.61344Z'
+                    fill='lime' />
+                  <path d='M.398437 15.464844L83.2852 70.7227' stroke='darkgoldenrod' fill='none' stroke-width='.79701'
+                    stroke-miterlimit='10' />
+                  <path d='M85.43752 72.156274L80.839861 71.582062L83.28518 70.722681L83.140649 68.132837'
+                    fill='darkgoldenrod' />
+                  <path
+                    d='M46.11695 57.09141C45.96445 56.94985 45.60445 56.64453 45.60445 56.44797C45.60445 56.33891 45.71351 56.22985 45.82258 56.22985C45.9207 56.22985 45.97539 56.30641 46.02976 56.37172C46.1607 56.53547 46.41133 56.84078 46.89133 57.08047C46.96758 57.12422 47.07664 57.1786 47.07664 57.30953C47.07664 57.4186 47.00039 57.47328 46.92414 57.52766C46.68414 57.69141 46.56414 57.88766 46.47695 58.14922C46.45508 58.24735 46.41133 58.38922 46.25883 58.38922C46.10601 58.38922 46.0407 58.24735 46.0407 58.16016C46.0407 58.10578 46.12789 57.75672 46.30258 57.52766H42.62726C42.44195 57.52766 42.2457 57.52766 42.2457 57.30953C42.2457 57.09141 42.44195 57.09141 42.62726 57.09141H46.11695Z'
+                    fill='darkgoldenrod' />
+                  <path
+                    d='M41.95736 51.38904H43.01486C43.83299 51.38904 43.92017 51.21466 43.92017 50.89841C43.92017 50.82216 43.92017 50.69123 43.84392 50.36404C43.82205 50.30966 43.81111 50.26591 43.81111 50.24404C43.81111 50.15685 43.87642 50.1131 43.94205 50.1131C44.05111 50.1131 44.05111 50.14591 44.10549 50.34216L44.70517 52.70873C44.73799 52.82873 44.73799 52.85029 44.73799 52.8831C44.73799 52.90498 44.71611 53.0031 44.60705 53.0031S44.48705 52.94841 44.44361 52.77404C44.21455 51.92341 43.96361 51.72716 43.03674 51.72716H42.04455L42.74236 54.49716C42.84049 54.87872 42.85142 54.92248 43.33111 54.92248H44.7708C46.11205 54.92248 46.36299 54.56247 46.36299 53.72279C46.36299 53.47185 46.36299 53.42841 46.33017 53.13404C46.3083 52.99216 46.3083 52.97029 46.3083 52.93779C46.3083 52.8831 46.34111 52.80685 46.43924 52.80685C46.55924 52.80685 46.57017 52.87216 46.59174 53.07935L46.80986 54.96591C46.84267 55.26029 46.7883 55.26029 46.51549 55.26029H41.17205C40.95392 55.26029 40.84486 55.26029 40.84486 55.04247C40.84486 54.92248 40.94299 54.92248 41.15017 54.92248C41.55361 54.92248 41.85892 54.92248 41.85892 54.72623C41.85892 54.68247 41.85892 54.6606 41.80455 54.46435L40.36517 48.6956C40.25611 48.270287 40.23424 48.1831 39.372674 48.1831C39.187362 48.1831 39.067362 48.1831 39.067362 47.975912C39.067362 47.844975 39.198299 47.844975 39.231112 47.844975C39.547049 47.844975 40.35424 47.877787 40.67049 47.877787C41.03017 47.877787 41.93549 47.844975 42.29517 47.844975C42.3933 47.844975 42.52424 47.844975 42.52424 48.052162C42.52424 48.13935 42.45892 48.161225 42.45892 48.172162C42.42611 48.1831 42.40424 48.1831 42.15361 48.1831C41.91361 48.1831 41.85892 48.1831 41.58642 48.204975C41.27017 48.237475 41.23736 48.281225 41.23736 48.4231C41.23736 48.444662 41.23736 48.510287 41.28111 48.673725L41.95736 51.38904Z'
+                    fill='darkgoldenrod' />
+                  <path d='M85.4375 72.1562V15.464844' stroke='darkgoldenrod' fill='none' stroke-width='.275'
+                    stroke-miterlimit='10' stroke-dasharray='2.98883 2.98883' />
+                  <path d='M.398437 15.464844H139.543' stroke='lime' fill='none' stroke-width='.79701'
+                    stroke-miterlimit='10' />
+                  <path d='M142.13303 15.464844L137.9885 17.53516L139.54319 15.464844L137.9885 13.39063' fill='lime' />
+                  <path
+                    d='M74.15995 10.12445C74.00745 9.98289 73.64745 9.67758 73.64745 9.48101C73.64745 9.37195 73.75651 9.26289 73.86558 9.26289C73.9637 9.26289 74.01839 9.33945 74.07276 9.40476C74.2037 9.56851 74.45433 9.87383 74.93433 10.11351C75.01058 10.15726 75.11964 10.21164 75.11964 10.34258C75.11964 10.45164 75.04339 10.50633 74.96714 10.5607C74.72714 10.72445 74.60714 10.9207 74.51995 11.18226C74.49808 11.28039 74.45433 11.42226 74.30183 11.42226C74.14901 11.42226 74.0837 11.28039 74.0837 11.1932C74.0837 11.13883 74.17089 10.78976 74.34558 10.5607H70.67026C70.48495 10.5607 70.2887 10.5607 70.2887 10.34258C70.2887 10.12445 70.48495 10.12445 70.67026 10.12445H74.15995Z'
+                    fill='lime' />
+                  <path
+                    d='M72.96995 7.71445C72.66464 7.70351 72.44651 7.46383 72.44651 7.22383C72.44651 7.07101 72.54464 6.90758 72.78464 6.90758S73.2862 7.09289 73.2862 7.5182C73.2862 8.00883 72.81745 8.45601 71.9887 8.45601C70.54901 8.45601 70.14558 7.34383 70.14558 6.86383C70.14558 6.0132 70.95276 5.84976 71.26901 5.78445C71.83589 5.67539 72.40308 5.55539 72.40308 4.95539C72.40308 4.67195 72.15214 3.756014 70.8437 3.756014C70.69089 3.756014 69.8512 3.756014 69.60026 4.333827C70.01495 4.279452 70.28745 4.606639 70.28745 4.91195C70.28745 5.16258 70.11308 5.29351 69.88401 5.29351C69.60026 5.29351 69.273389 5.06445 69.273389 4.573827C69.273389 3.952264 69.89495 3.516014 70.83276 3.516014C72.59933 3.516014 73.02464 4.8357 73.02464 5.32633C73.02464 5.71883 72.81745 5.99164 72.68651 6.12226C72.39214 6.42758 72.07589 6.48226 71.5962 6.58039C71.20339 6.66758 70.76714 6.74383 70.76714 7.23476C70.76714 7.55101 71.02901 8.21601 71.9887 8.21601C72.2612 8.21601 72.80651 8.13976 72.96995 7.71445Z'
+                    fill='lime' />
+                  <path d='M28.7461 15.464844C28.7461 21.02734 27.1055 26.4688 24.0352 31.1094' stroke='cyan'
+                    fill='none' stroke-width='.79701' stroke-miterlimit='10' />
+                  <path
+                    d='M21.06586 21.49077C21.06586 23.20264 20.05149 23.73702 19.24461 23.73702C17.75055 23.73702 16.311173 22.17764 16.311173 20.64014C16.311173 19.625769 16.96555 18.797019 18.07774 18.797019C18.76461 18.797019 19.54992 19.047957 20.37867 19.712957C20.52055 19.135144 20.88024 18.797019 21.37117 18.797019C21.94899 18.797019 22.28711 19.396707 22.28711 19.571394C22.28711 19.647644 22.2218 19.680457 22.15617 19.680457C22.07992 19.680457 22.04711 19.647644 22.0143 19.571394C21.81805 19.037019 21.42555 19.037019 21.40367 19.037019C21.06586 19.037019 21.06586 19.887644 21.06586 20.14921C21.06586 20.37827 21.06586 20.40014 21.17461 20.53108C22.19992 21.81764 22.42899 23.08264 22.42899 23.09358C22.42899 23.11546 22.41805 23.20264 22.29805 23.20264C22.18899 23.20264 22.18899 23.17014 22.1343 22.97358C21.93805 22.28671 21.57836 21.45796 21.06586 20.81452V21.49077ZM20.33492 19.99671C19.37555 19.157019 18.53586 19.037019 18.09961 19.037019C17.44524 19.037019 17.11805 19.527644 17.11805 20.22577C17.11805 20.75983 17.40149 21.93764 17.75055 22.49389C18.26305 23.28983 18.85211 23.49702 19.23367 23.49702C20.31336 23.49702 20.31336 22.06858 20.31336 21.21796C20.31336 20.81452 20.31336 20.18202 20.33492 19.99671Z'
+                    fill='cyan' />
+                </g>
+              </g>
+            </svg>
+          </div>
+
+          <p>
+            Das Skalarprodukt kann auf zweierlei Weise berechnet werden:
+          <ul>
+            <li>Mit den Vektorbeträgen und dem eingeschlossenen Winkel:
+              <p style="margin-left: 20px;">
+                \(\begin{align*}
+                W&={\color{darkgoldenrod}\vec F}\cdot{\color{lime}\vec s}=|{\color{darkgoldenrod}\vec F}| \cdot
+                |{\color{lime}\vec s}| \cdot \cos {\color{cyan}\alpha}
+                \end{align*}\)
+              </p>
+              Man kann es als das Produkt vom Betrag von \(\vec s\) und des Betrags der Projektion von \(\vec F\) auf
+              \(\vec s\) interpretieren.
+            </li>
+            <li>Mit den einzelnen Komponenten der Vektoren:
+              <p style="margin-left: 20px;">
+                \(\begin{align*}
+                W&={\color{darkgoldenrod}\vec F}\cdot{\color{lime}\vec
+                s}={\color{darkgoldenrod}\vector{F_x\\F_y\\F_z}}\cdot{\color{lime}\vector{s_x\\s_y\\s_z}} \\[5px]
+                W&={\color{darkgoldenrod}F_x}\cdot{\color{lime}s_x} + {\color{darkgoldenrod}F_y}\cdot{\color{lime}s_y}
+                +{\color{darkgoldenrod}F_z}\cdot{\color{lime}s_z}
+                \end{align*}\)
+              </p>
+              In der Ebene (2D) entfällt die \(z\)-Koordinate.
+            </li>
+          </ul>
+          Dieser Rechenweg gilt natürlich auch für jeden anderen Vektor.
+          </p>
+          <h4>Schreibweisen</h4>
+          <p>
+            In der Literatur findet man zwei Schreibweisen:
+          <ul style="list-style: none;">
+            <li>Mit Punkt: \({\vector{a_x\\a_y\\a_z}}\cdot{\vector{b_x\\b_y\\b_z}}\)</li>
+            <li style="margin-top: 10px;">Mit Kreis: \({\vector{a_x\\a_y\\a_z}}\circ{\vector{b_x\\b_y\\b_z}}\)</li>
+          </ul>
+          Beide Schreibweisen meinen die gleiche Rechenoperation
+          </p>
+          <h4>Rechengesetze</h4>
+          <p>
+            Die bekannten Rechengesetze (Kommutativgesetz, Assoziativgesetz und Distributivgesetz) gelten auch für das
+            Skalarprodukt.
+          </p>
+        </div>
+
+        <h6>Beispiel 1: </h6>
+        <p>
+          Das Skalarprodukt zweier Vektoren soll berechnet werden. Der Vektor \(\color{darkgoldenrod}\vec a\) ist
+          \(\color{darkgoldenrod}3\,\text{LE}\)
+          lang, der Vektor \(\color{lime}\vec b\) ist \(\color{lime}5\,\text{LE}\) lang. Die beiden Vektoren schneiden
+          sich in einem Winkel von \(\color{cyan}60\,^\circ\)
+          ist
+        <p style="margin-left: 20px;">
+          \(\begin{align*}
+          {\color{darkgoldenrod}\vec a}\cdot{\color{lime}\vec b}&=|{\color{darkgoldenrod}\vec a}|\cdot|{\color{lime}\vec
+          b}|\cdot\cos\color{aqua}\alpha\\
+          {\color{darkgoldenrod}\vec a}\cdot{\color{lime}\vec b}&={\color{darkgoldenrod}3}\cdot{\color{lime}5}\cdot\cos
+          {\color{aqua}60\,^\circ}\\
+          {\color{darkgoldenrod}\vec a}\cdot{\color{lime}\vec b}&=7,5
+          \end{align*}\)
+        </p>
+        Das Skalarprodukt hat eigentlich die Einheit \(\text{FE}\) (Flächeneinheit). Diese wird aber eigentlich überall
+        weggelassen.
+        </p>
+
+        <h6>Beispiel 2: </h6>
+        <p>
+          Die Vektoren \(\color{darkgoldenrod}\vec a=\vector{2\\0\\-3}\) und \(\color{lime}\vec b=\vector{5\\-4\\-1}\)
+          sollen
+          multipliziert werden.
+        <p style="margin-left: 20px;">
+          \(\begin{align*}
+          {\color{darkgoldenrod}\vec a}\cdot{\color{lime}\vec
+          b}&={\color{darkgoldenrod}\vector{2\\0\\-3}}\cdot{\color{lime}\vector{5\\-4\\-1}}\\
+          {\color{darkgoldenrod}\vec a}\cdot{\color{lime}\vec b}&={\color{darkgoldenrod}2}\cdot{\color{lime}5}+
+          {\color{darkgoldenrod}0}\cdot{\color{lime}(-4)}+{\color{darkgoldenrod}(-3)}\cdot{\color{lime}(-1)} \\
+          {\color{darkgoldenrod}\vec a}\cdot{\color{lime}\vec b}&=13
+          \end{align*}\)
+        </p>
+        Das Skalarprodukt kann positiv, negativ oder null sein.
+        </p>
+
+      </div>
+    </section>
+    <!-- <section>
+            <div class="videos">
+                <iframe width="360" height="202" src="https://www.youtube.com/embed/19goPRnthCE"
+                    title="Abstand Punkt - Punkt" frameborder="0" allow="web-share" allowfullscreen></iframe>
+
+            </div>
+        </section> -->
+    <section id="aufgaben" class="aufgaben">
+      <h3>Aufgaben zum Skalarprodukt</h3>
+      <ol class="custom-marker point-after decimal more-spacing">
+        <li>Buch, Seite 64 Übung 1 <a href="#a1">Lösungen</a></li>
+        <li>Buch, Seite 65 Übung 2 <a href="#a2">Lösungen</a></li>
+        <li>Buch, Seite 66 Übung 3 bis 7 <a href="#a3">Lösungen</a></li>
+        <li>Wie kann man mit dem Skalarprodukt den Winkel zweier Vektoren bestimmen?</li>
+      </ol>
+    </section>
+
+    <section class="loesungen">
+      <h3>Lösungen zum Skalarprodukt</h3>
+
+      <details id="a1" style="counter-set: lsg-counter 0;">
+        <summary>Skalarprodukt I</summary>
+        Alle Aufgaben erst einmal in Hefter zeichnerisch übertragen. Gemessene Werte immer \(\pm\).
+        <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
+          <li> \(3,2\cdot 4,2\cdot \cos63\,^\circ\approx 6,1\)</li>
+          <li> \(5,0\cdot 4,0\cdot \cos37\,^\circ\approx 16,0\)</li>
+          <li>\(5,8\cdot 7,8\cdot \cos 71\,^\circ\approx14,7\)</li>
+          <li>\(4,5\cdot 7,2 \cdot \cos 30\,^\circ\approx28,1\)</li>
+        </ol>
+      </details>
+
+      <details id="a2" style="counter-set: lsg-counter 1;">
+        <summary>Koordinatenform</summary>
+
+        <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
+          <li> \(3\cdot(-4)+(-5)\cdot(-2)+2\cdot 2=2\)</li>
+          <li> Skalarprodukt aufstellen, vereinfachen und \(u\) berechnen:
+            <p style="margin-left: 20px;">
+              \(\begin{align*}
+              0&=\vec a\cdot \vec b \\
+              0&=4\cdot(-u)+2u\cdot 3+(-1)\cdot 2 \\
+              0&=-4u+6u-2\\
+              0&=2u-2\\
+              2&=2u\\
+              u&=1
+              \end{align*}\)
+            </p>
+          </li>
+        </ol>
+      </details>
+
+      <details id="a3" style="counter-set: lsg-counter 2;">
+        <summary>Skalarprodukt II</summary>
+
+        <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
+          <li>
+            <ul>
+              <li>\(5,7\cdot4,5 \cdot \cos 72\,^\circ\approx7,9\)</li>
+              <li>\(5,0\cdot 6,4\cdot \cos 88\,^\circ\approx1,1\)</li>
+              <li>\(4,5\cdot 5,0\cdot \cos 117\,^\circ\approx-10,2\)</li>
+            </ul>
+          </li>
+          <li>
+            <ul>
+              <li>\(\vector{-4\\4}\cdot\vector{2\\4}=8\)</li>
+              <li>\(\vector{-3\\-4}\cdot\vector{5\\-4}=1\)</li>
+              <li>\(\vector{-2\\-4}\cdot\vector{5\\0}=-10\)</li>
+            </ul>
+          </li>
+        </ol>
+      </details>
+
+      <details style="counter-set: lsg-counter 3;">
+        <summary>Figuren</summary>
+        <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
+          <li>Werte mit Projektion ermittelt:
+            <ul>
+              <li>\(\vec a\cdot \vec b=4\cdot 0=0\)</li>
+              <li>\(\vec a\cdot \vec c=4\cdot 4=16\)</li>
+              <li>\(\vec b\cdot \vec c=3\cdot 3=9\)</li>
+            </ul>
+          </li>
+          <li>Werte mit Projektion ermittelt:
+            <ul>
+              <li>\(\overrightarrow{DA}\cdot \overrightarrow{DF}=6\cdot 6=36\)</li>
+              <li>\(\overrightarrow{FB}\cdot \overrightarrow{FD}=3\cdot (-5)=-15\)</li>
+              <li>\(\overrightarrow{AF}\cdot \overrightarrow{AD}=5\cdot 0=0\)</li>
+              <li>\(\overrightarrow{DC}\cdot \overrightarrow{DF}=8\cdot 5=40\)</li>
+            </ul>
+          </li>
+          <li>Die Innenwinkel eines regelmäßigen Sechsecks betragen \(120\,^\circ\).
+            <ul>
+              <li>\(\vec a\cdot \vec b=5\cdot 5\cdot\cos 60\,^\circ=12,5\)</li>
+              <li>\(\vec a\cdot \vec c=5\cdot 5\cdot\cos 120\,^\circ=-12,5\)</li>
+              <li>\(\vec a\cdot \vec d=5\cdot 5\cdot\cos 180\,^\circ=-25\)</li>
+              <li>\((\vec a+ \vec b)\cdot\vec c=|\vec a+\vec b|\cdot 5\cdot\cos 90\,^\circ=0\)</li>
+              <li>\((\vec a+ \vec b+\vec c)\cdot(\vec d+\vec e+\vec f)=10\cdot 10\cdot\cos 180\,^\circ=-100\)</li>
+            </ul>
+            Der Durchmesser eines regelmäßigen Sechsecks ist die doppelte Kantenlänge des Sechsecks.
+          </li>
+        </ol>
+      </details>
+      <details style="counter-set: lsg-counter 4;">
+        <summary>Skalarprodukt III</summary>
+
+        <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
+          <li> \(8\cdot 0+(-1)\cdot 4+2\cdot 1=-2\)</li>
+          <li> \(2a\cdot a+a\cdot (-a)+1\cdot a=a^2+a\)</li>
+          <li>\(0\)</li>
+          <li>\(-1\)</li>
+        </ol>
+      </details>
+      <details style="counter-set: lsg-counter 5;">
+        <summary>Parameter</summary>
+
+        <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
+          <li> Skalarprodukt aufstellen, vereinfachen und \(a\) berechnen:
+            <p style="margin-left: 20px;">
+              \(\begin{align*}
+              0&=a\cdot 2a+2\cdot 1+4\cdot a \\
+              0&=2a^2+4a+2\\
+              0&=a^2+2a+1\\
+              &\ldots\\
+              a&=-1
+              \end{align*}\)
+            </p>
+          </li>
+          <li>\(a=\tfrac16\) </li>
+          <li>\(a=\tfrac14\) </li>
+        </ol>
+      </details>
+      <details style="counter-set: lsg-counter 6;">
+        <summary>Pyramide</summary>
+        <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
+          <li>
+            <ul style="list-style: none;">
+              <li>\(\overrightarrow{SB}\cdot\overrightarrow{SC}=\vector{3\\3\\-3}\cdot\vector{-3\\3\\-3}=9\)</li>
+              <li>\(\overrightarrow{AD}\cdot\overrightarrow{DC}=\vector{-6\\0\\0}\cdot\vector{0\\6\\0}=0\)</li>
+              <li>\(\overrightarrow{AC}\cdot\overrightarrow{BD}=\vector{-6\\6\\0}\cdot\vector{-6\\-6\\0}=0\)</li>
+              <li>\(\overrightarrow{BA}\cdot\overrightarrow{BS}=\vector{0\\-6\\0}\cdot\vector{-3\\-3\\3}=18\)</li>
+            </ul>
+
+          </li>
+          <li>
+            <ul>
+              <li>Skalarprodukt: \(\vector{3\\-3\\-3}\cdot\vector{3\\3\\-3}=9\)</li>
+              <li>Beträge: \(|\overrightarrow{SA}|=|\overrightarrow{SB}|=\sqrt{27}\approx5,2\,\text{LE}\)</li>
+              <li>Winkel:
+                <p style="margin-left: 20px;">
+                  \(\begin{align*}
+                  \overrightarrow{SA}\cdot
+                  \overrightarrow{SB}&=|\overrightarrow{SA}|\cdot|\overrightarrow{SB}|\cdot\cos\alpha \\
+                  9&=\sqrt{27}\cdot\sqrt{27}\cdot \cos \alpha\quad |:27 \\
+                  \tfrac13&=\cos\alpha \qquad\qquad\qquad\, | \text{arc} \\
+                  \alpha&=70,5\,^\circ
+                  \end{align*}\)
+                </p>
+              </li>
+            </ul>
+
+          </li>
+        </ol>
+      </details>
+
+      <details id="a4" style="counter-set: lsg-counter 3;">
+        <summary>Winkelberechnung </summary>
+        Siehe Aufgabe 7 b).
+        <ul>
+          <li>Skalarprodukt und Beträge berechnen,</li>
+          <li>In Gleichung einsetzen,</li>
+          <li>Nach Winkel umstellen.</li>
+        </ul>
+      </details>
+
+
+
+    </section>
+
+
+
+    <!-- JS-Datei mit allen Funktionen -->
+    <script src="/js/math/geo3d.js"></script>
+
+
+    <!-- <div class="centered" style="max-height: 250px">
+            <svg id="task5a" viewBox="-0 -250 500 525">
+              <defs></defs>
+            </svg>
+          </div> -->
+
+    <script>
+      drawAxes(betr, 6, 4, "a");
+
+      drawVector(betr, [0, 1, 1], [0, 4, 3], "v", "aqua", "aboveleft", 1.5);
+
+
+
+
+
+
+    </script>
+
+    <section id="meme">
+      <div class="images">
+        <img src="/img/skalarprod_meme.jpg" style="object-fit: scale-down; max-width: 300px" /> <!-- 300 px!-->
+      </div>
+      <div class="centered">
+        <a href="https://www.meme-arsenal.com/en/create/meme/3119084">
+          <h6>Original von meme-arsenal</h6>
+        </a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <a href="/misc/impressum.html">Impressum</a>
+    <div class="lastModified" align="center">
+      Zuletzt geändert:<br />
+      4. Oktober 2025
+      <!-- <span id="lastModifiedDate"></span> -->
+    </div>
+    <a href="/misc/datenschutz.html">Datenschutz</a>
+  </footer>
+</body>
