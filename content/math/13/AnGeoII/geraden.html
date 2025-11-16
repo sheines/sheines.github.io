@@ -147,6 +147,46 @@
           </li>
           </ol>
         </p>
+        <div class="definition">
+          <h4>Punkt auf Strecke</h4>
+          <p>
+            Um zu prüfen, ob ein Punkt \(P\) auf der Strecke \(\overline{AB}\) liegt, müssen folgende
+            Schritte unternommen werden:
+            <ol>
+              <li>Geradengleichung \(g\) zwischen \(A\) und \(B\) bestimmen,</li>
+              <li>Prüfen, ob der Punkt \(P\) auf der Geraden \(g\) liegt.</li>
+            </ol>
+            Damit der Punkt \(P\) nun auf der Strecke liegt, muss \(r\) zwischen 0 und 1 liegen. 
+            (Wenn \(\vec m=\overrightarrow{AB}\) und \(\vec a=\overrightarrow{OA}\))
+          </p>
+        </div>
+        <h6>Beispiel:</h6>
+        <p>
+          Es soll geprüft werden, ob der Punkt \(P(7\mid1\mid2)\) auf der Strecke zwischen \(A(1\mid10\mid5)\)
+        und \(B(5\mid4\mid3)\) liegt.
+        </p>
+        <ol>
+          <li>Geradengleichung:
+            <p style="margin-left: 20px;">
+              \(\begin{align*}
+                \vec x&=\vector{1\\10\\5}+r\cdot\vector{5-1\\4-10\\3-5}\\
+                \vec x&=\vector{1\\10\\5}+r\cdot\vector{4\\-6\\-2}
+              \end{align*}\)
+            </p>
+          </li>
+          <li>Punktprobe:
+            <p style="margin-left: 20px;">
+              \(\begin{align*}
+                \vector{7\\1\\2}&=\vector{1\\10\\5}+r\cdot\vector{4\\-6\\-2} \\[5px]
+                  7&=1+4r \quad\ \Rightarrow r=1,5 \\
+                  1&=10-6r \ \ \, \Rightarrow r=1,5 \\
+                  2&=5-2r \  \quad \Rightarrow r=1,5
+              \end{align*}\)
+            </p>
+          </li>
+        </ol>
+        Der Punkt \(P\) liegt zwar auf der Geraden \(g\) (dreimal gleiches \(r\)), aber nicht zwischen
+        den Punkten \(A\) und \(B\).
       </div>
     </section>
     <!-- <section>
@@ -162,6 +202,9 @@
         <li>Buch, Seite 96 Übung 3 und 4 a) <a href="#a1">Lösungen</a></li>
         <li>Buch, Seite 97 Übung 6 bis 9 <a href="#a2">Lösungen</a></li>
         <li>Buch, Seite 96 Übung 4 b) <a href="#a3">Lösungen</a></li>
+        <hr>
+        <li>Buch, Seite 106 Übung 10, 9 und 8 <a href="#a4">Lösungen</a></li>
+        <li>Buch, Seite 105 Übung 5 bis 7 <a href="#a5">Lösungen</a></li>
       </ol>
     </section>
 
@@ -255,6 +298,45 @@
             verlängert/verkürzt.
       </details>
 
+      <hr>
+
+      <details id="a4" style="counter-set: lsg-counter 9;">
+        <summary>Punkt und Strecke</summary>
+        Es gibt immer mehr als eine Möglichkeit die Geradengleichung anzugeben.
+        <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
+          <li><p>
+            \(\begin{align*}
+                g_{AB}:\vec x&=\vector{2\\1\\4}+r\cdot\vector{3\\6\\-3}\\
+                  &\Rightarrow r=\tfrac13
+              \end{align*}\)
+          </p>
+            Der Punkt liegt auf \(\overline{AB}\).
+          </li>
+          <li><p>
+            \(\begin{align*}
+                g_{AB}:\vec x&=\vector{-2\\4\\5}+r\cdot\vector{4\\4\\4}\\
+                  &\Rightarrow r=\tfrac12
+              \end{align*}\)
+          </p>
+            Der Punkt liegt auf \(\overline{AB}\).
+          </li>
+          <li><p>
+            \(\begin{align*}
+                g_{AB}:\vec x&=\vector{3\\0\\7}+r\cdot\vector{1\\1\\-1}\\
+                  &\Rightarrow r=4
+              \end{align*}\)
+          </p>
+            Der Punkt liegt auf \(g\), aber nicht auf \(\overline{AB}\).
+          </li>
+          <li><p>
+            \(\begin{align*}
+                g_{AB}:\vec x&=\vector{2\\1\\3}+r\cdot\vector{4\\6\\-2}\\
+              \end{align*}\)
+          </p>
+            Der Punkt liegt nicht auf \(g\) und damit auch nicht auf \(\overline{AB}\).
+          </li>
+        </ol>
+      </details>
 
     </section>
 
