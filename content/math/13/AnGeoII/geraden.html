@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" initial-scale="1.0" />
+  <meta name="author" content="Sebastian Heine" />
+  <meta name="robot" content="noindex" />
+  <title>HEIS | Ana Geom I | Geraden</title>
+  <link rel="stylesheet" type="text/css" href="/css/colors.css" />
+  <link rel="stylesheet" type="text/css" href="/css/gridNoTimeline.css" />
+  <link rel="stylesheet" type="text/css" href="/css/navbar.css" />
+  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="/css/courses.css" />
+  <link rel="stylesheet" type="text/css" href="/css/oktanten.css" />
+  <script type="text/javascript" src="jquery-3.3.1.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <script>
+    window.MathJax = {
+      tex: {
+        macros: {
+          vector: ['\\begin{pmatrix}#1\\end{pmatrix}', 1]
+        }
+      }
+    };
+  </script>
+
+</head>
+
+<body>
+  <header>
+    <div class="nav">
+      <input type="checkbox" id="nav-check" />
+      <div class="nav-header">
+        <div class="nav-title">
+          <a href="/">Hr. Heines Unterricht</a>
+        </div>
+      </div>
+      <div class="nav-btn">
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+
+      <div class="nav-links">
+        <a href="/content/math/">Mathematik</a>
+        <a href="/content/math/13/">Klasse 13</a>
+        <a href="/content/math/13/AnGeoII/">Analytische Geometrie II</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section>
+      <h2>Geraden im Raum</h2>
+      <div class="ziele">
+        <p>
+          Nachfolgend soll gezeigt werden, wie Geraden im Raum vektoriell dargestellt werden können und die Vorstellung
+          dazu funktioniert.
+        </p>
+        <p>
+          <a href="#aufgaben">Direkt zu den Aufgaben</a>
+        </p>
+      </div>
+
+      <div class="theorie">
+
+
+        <div class="definition">
+          <h4>Vektorielle Geradengleichung</h4>
+          <p>
+            Eine <span style="color: darkgoldenrod">Gerade</span> mit dem <span style="color: magenta">Stützvektor
+              \(\vec a\)</span> und dem
+            <span style="color: lime">Richtungsvektor \(\vec m\)</span> hat die Geradengleichung
+          <p style="margin-left: 20px;">
+            \({\color{darkgoldenrod}g}: \vec x={\color{magenta}\vec a}+r\cdot {\color{lime}\vec m}\)
+          </p>
+          </p>
+
+          <div class="centered" style="max-width: 450px">
+            <svg id="geraden" viewBox="100 80 400 300" preserveAspectRatio="xMidYMid meet"></svg>
+          </div>
+
+          <script src="/js/math/geraden.js"></script>
+
+          <h5>Geradengleichung aus zwei Punkten bestimmen</h5>
+          <ol>
+            <li>Ortsvektor eines der Punkte als Stützvektor \(\vec a\) nutzen.</li>
+            <li>Vektor zwischen den beiden Punkten bestimmen. Das ist der Richtungsvektor \(\vec m\).</li>
+            <li>Geradengleichung der Form \(g: \vec x=\vec a+r\cdot \vec m\) aufstellen.</li>
+          </ol>
+          Für jede Gerade gibt es unendlich viele Möglichkeiten diese zu beschreiben.
+        </div>
+        <h6>Beispiel:</h6>
+        <p>
+          Es soll die Geradengleichung zwischen den Punkte \(A(1\mid5\mid-2)\) und \(B(7\mid2\mid-2)\) bestimmt werden.
+        <ol class="more-spacing">
+          <li>Ortsvektor von \(A\) wird Stützvektor: \(\color{magenta}\vec a=\vector{1\\5\\-2}\)</li>
+          <li>Vektor \(\overrightarrow{AB}\) wird Richtungsvektor: \({\color{lime}\vec
+            m}=\vector{7-1\\2-5\\-2-(-2)}={\color{lime}\vector{6\\-3\\0}}\)</li>
+          <li>Geradengleichung: \(g:\vec x={\color{magenta}\vector{1\\5\\-2}}+r\cdot{\color{lime}\vector{6\\-3\\0}}\)
+          </li>
+        </ol>
+        Es kann natürlich auch \(B\) für den Stützvektor oder der Vektor \(\overrightarrow{BA}\)
+        als Richtungsvektor verwendet werden.
+        </p>
+        <div class="definition">
+          <h4>Punktprobe</h4>
+          <p>Ob ein Punkt \(P\) auf einer gegebenen Gerade \(g\) liegt, kann folgendermaßen geprüft werden:
+          <ol>
+            <li>\(\vec x\) in Geradengleichung \(g\) durch den Ortsvektor von \(P\) ersetzen.</li>
+            <li>Parameter \(r\) für jede Koordinante berechnen.</li>
+            <li>
+              <ul>
+                <li>Ist \(r\) immer gleich, liegt \(P\) auf \(g\).</li>
+                <li>Ist \(r\) verschieden, liegt \(P\) nicht auf \(g\).</li>
+              </ul>
+            </li>
+          </ol>
+          </p>
+        </div>
+        <h6>Beispiel:</h6>
+        <p>
+          Prüfe, ob der Punkt \(P(3\mid0\mid-4)\) auf der Geraden \(g:\vec
+          x=\vector{7\\-6\\2}+r\cdot\vector{2\\-3\\-2}\)
+          liegt!
+        <ol>
+          <li>
+            \(\vec x\) in Geradengleichung \(g\) durch den Ortsvektor von \(P\) ersetzen:
+            <p style="margin-left: 20px;">
+              \(
+              \begin{align*}
+              \vector{3\\0\\-4}&=\vector{7\\-6\\2}+r\cdot\vector{2\\-3\\-2}
+              \end{align*}
+              \)
+            </p>
+          </li>
+          <li>
+            Parameter \(r\) für jede Koordinante berechnen:
+            <p style="margin-left: 20px;">
+              \(
+              \begin{align*}
+              3&=7+r\cdot 2 \qquad\quad \Rightarrow r=-2 \\
+              0&=-6+r\cdot (-3) \ \ \, \Rightarrow r=-2 \\
+              -4&=2+r\cdot (-2) \ \, \quad \Rightarrow r=3
+              \end{align*}
+              \)
+            </p>
+          </li>
+          <li>
+            Da \(r\) nicht für alle Koordinaten gleich ist, liegt der Punkt \(P\) nicht auf der Geraden \(g\).
+          </li>
+        </ol>
+        </p>
+        <div class="definition">
+          <h4>Punkt auf Strecke</h4>
+          <p>
+            Um zu prüfen, ob ein Punkt \(P\) auf der Strecke \(\overline{AB}\) liegt, müssen folgende
+            Schritte unternommen werden:
+          <ol>
+            <li>Geradengleichung \(g\) zwischen \(A\) und \(B\) bestimmen,</li>
+            <li>Prüfen, ob der Punkt \(P\) auf der Geraden \(g\) liegt.</li>
+          </ol>
+          Damit der Punkt \(P\) nun auf der Strecke liegt, muss \(r\) zwischen 0 und 1 liegen.
+          (Wenn \(\vec m=\overrightarrow{AB}\) und \(\vec a=\overrightarrow{OA}\))
+          </p>
+        </div>
+        <h6>Beispiel:</h6>
+        <p>
+          Es soll geprüft werden, ob der Punkt \(P(7\mid1\mid2)\) auf der Strecke zwischen \(A(1\mid10\mid5)\)
+          und \(B(5\mid4\mid3)\) liegt.
+        </p>
+        <ol>
+          <li>Geradengleichung:
+            <p style="margin-left: 20px;">
+              \(\begin{align*}
+              \vec x&=\vector{1\\10\\5}+r\cdot\vector{5-1\\4-10\\3-5}\\
+              \vec x&=\vector{1\\10\\5}+r\cdot\vector{4\\-6\\-2}
+              \end{align*}\)
+            </p>
+          </li>
+          <li>Punktprobe:
+            <p style="margin-left: 20px;">
+              \(\begin{align*}
+              \vector{7\\1\\2}&=\vector{1\\10\\5}+r\cdot\vector{4\\-6\\-2} \\[5px]
+              7&=1+4r \quad\ \Rightarrow r=1,5 \\
+              1&=10-6r \ \ \, \Rightarrow r=1,5 \\
+              2&=5-2r \ \quad \Rightarrow r=1,5
+              \end{align*}\)
+            </p>
+          </li>
+        </ol>
+        Der Punkt \(P\) liegt zwar auf der Geraden \(g\) (dreimal gleiches \(r\)), aber nicht zwischen
+        den Punkten \(A\) und \(B\).
+      </div>
+    </section>
+    <!-- <section>
+            <div class="videos">
+                <iframe width="360" height="202" src="https://www.youtube.com/embed/19goPRnthCE"
+                    title="Abstand Punkt - Punkt" frameborder="0" allow="web-share" allowfullscreen></iframe>
+
+            </div>
+        </section> -->
+    <section id="aufgaben" class="aufgaben">
+      <h3>Aufgaben zu Geraden im Raum</h3>
+      <ol class="custom-marker point-after decimal more-spacing">
+        <li>Buch, Seite 96 Übung 3 und 4 a) <a href="#a1">Lösungen</a></li>
+        <li>Buch, Seite 97 Übung 6 bis 9 <a href="#a2">Lösungen</a></li>
+        <li>Buch, Seite 96 Übung 4 b) <a href="#a3">Lösungen</a></li>
+        <hr>
+        <li>Buch, Seite 106 Übung 10, 9 und 8 <a href="#a4">Lösungen</a></li>
+        <li>Buch, Seite 105 Übung 5 bis 6 <a href="#a5">Lösungen</a></li>
+      </ol>
+    </section>
+
+    <section class="loesungen">
+      <h3>Lösungen zu Geraden im Raum</h3>
+      <details id="a1" style="counter-set: lsg-counter 2;">
+        <summary>Geradengleichungen I</summary>
+        Es gibt immer mehr als eine Möglichkeit die Geradengleichung anzugeben.
+        <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
+          <li> Stützvektor: \(\vec a_A=\vector{3\\3}\)
+            <p>
+              Richtungsvektor: \(\vec m_{\overrightarrow{BA}}=\vector{1\\2}\)
+            </p>
+            <p>
+              Geradengleichung: \(g:\vec x=\vector{3\\3}+r\cdot \vector{1\\2}\)
+            </p>
+          </li>
+          <li>\(g:\vec x=\vector{-3\\1\\0}+r\cdot\vector{7\\-1\\2}\)</li>
+          <li>\(g:\vec x=\vector{-3\\2\\1}+r\cdot\vector{7\\-1\\6}\)</li>
+        </ol>
+      </details>
+      <details style="counter-set: lsg-counter 3;">
+        <summary>Geradengleichung II</summary>
+        Stützvektor: \(\vec a_P=\vector{3\\2\\0}\)
+        <p>
+          Richtungsvektor: \(\vec m_{y}=\vector{0\\1\\0}\)
+        </p>
+        <p>
+          Geradengleichung: \(g:\vec x=\vector{3\\2\\0}+r\cdot \vector{0\\1\\0}\)
+        </p>
+      </details>
+      <details id="a2" style="counter-set: lsg-counter 5;">
+        <summary>Geradengleichungen III</summary>
+        Es gibt immer mehr als eine Möglichkeit die Geradengleichung anzugeben.
+        <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
+          <li>\(g:\vec x=\vector{1\\2\\0}+r\cdot\vector{-2\\6\\0}\)</li>
+          <li>\(g:\vec x=\vector{-3\\2\\1}+r\cdot\vector{6\\-1\\1}\)</li>
+          <li>\(g:\vec x=\vector{3\\3\\-4}+r\cdot\vector{1\\2\\-7}\)</li>
+          <li>\(g:\vec x=\vector{a_1\\a_2\\a_3}+r\cdot\vector{a_1-b_1\\a_2-b_2\\a_3-b_3}\)</li>
+        </ol>
+      </details>
+      <details style="counter-set: lsg-counter 6;">
+        <summary>Punkt und Gerade</summary>
+        <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
+          <li>\(\vector{1\\3\\0}=\vector{3\\2\\0}+r\cdot\vector{-4\\2\\0}\)
+            <p>
+              Für alle Koordinate gilt: \(r=\tfrac12\)
+            </p>
+            <p>
+              Das heißt \(P\) liegt auf \(G\), oder mathematisch: \(P\in g\)
+            </p>
+          </li>
+          <li>\(P\not\in g\)</li>
+          <li>\(P\in g\)</li>
+          <li>\(P\not\in g\)</li>
+        </ol>
+      </details>
+      <details style="counter-set: lsg-counter 7;">
+        <summary>Zuordnung</summary>
+        <ul class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
+          <li>\(I \rightarrow l\)</li>
+          <li>\(II \rightarrow k\)</li>
+          <li>\(III \rightarrow n\)</li>
+          <li>\(IV \rightarrow g\)</li>
+          <li>\(V \rightarrow p\)</li>
+          <li>\(VI \rightarrow h\)</li>
+          <li>\(VII \rightarrow f\)</li>
+          <li>\(VIII \rightarrow e\)</li>
+          <li>\(IX \rightarrow m\)</li>
+        </ul>
+      </details>
+      <details style="counter-set: lsg-counter 8;">
+        <summary>Punkt und Gerade</summary>
+        Es gibt immer mehr als eine Möglichkeit die Geradengleichung anzugeben.
+        <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
+          <li>\(g:\vec x=\vector{3\\2\\0}+r\cdot\vector{0\\1\\0}\)</li>
+          <li>\(g:\vec x=\vector{0\\0\\0}+r\cdot\vector{2\\4\\-2}\)</li>
+          <li>\(g:\vec x=\vector{0\\0\\0}+r\cdot\vector{1\\0\\1}\)</li>
+        </ol>
+      </details>
+      <details id="a3" style="counter-set: lsg-counter 3;">
+        <summary>Geradengleichung IV</summary>
+        Stützvektor: \(\vec a_O=\vector{0\\0\\0}\)
+        <p>
+          Richtungsvektor: \(\vec m_{\overrightarrow{OP}}=\vector{a\\2a\\-a}=a\cdot\vector{1\\2\\-1}\)
+        </p>
+        <p>
+          Geradengleichung: \(g:\vec x=\vector{0\\0\\0}+r\cdot \vector{1\\2\\-1}\)
+        </p>
+        Das \(a\) muss nicht in der Geradengleichung auftauchen, weil es als Kontante nur den Richtungsvektor
+        verlängert/verkürzt.
+      </details>
+
+      <hr>
+
+      <details id="a4" style="counter-set: lsg-counter 9;">
+        <summary>Punkt und Strecke</summary>
+        <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
+          <li>
+            <p style="margin-left: 20px;">
+              \(\begin{align*}
+              g_{AB}:\vec x&=\vector{2\\1\\4}+r\cdot\vector{3\\6\\-3}\\
+              &\Rightarrow r=\tfrac13
+              \end{align*}\)
+            </p>
+            Der Punkt liegt auf \(\overline{AB}\).
+          </li>
+          <li>
+            <p style="margin-left: 20px;">
+              \(\begin{align*}
+              g_{AB}:\vec x&=\vector{-2\\4\\5}+r\cdot\vector{4\\4\\4}\\
+              &\Rightarrow r=\tfrac12
+              \end{align*}\)
+            </p>
+            Der Punkt liegt auf \(\overline{AB}\).
+          </li>
+          <li>
+            <p style="margin-left: 20px;">
+              \(\begin{align*}
+              g_{AB}:\vec x&=\vector{3\\0\\7}+r\cdot\vector{1\\1\\-1}\\
+              &\Rightarrow r=4
+              \end{align*}\)
+            </p>
+            Der Punkt liegt auf \(g\), aber nicht auf \(\overline{AB}\).
+          </li>
+          <li>
+            <p style="margin-left: 20px;">
+              \(\begin{align*}
+              g_{AB}:\vec x&=\vector{2\\1\\3}+r\cdot\vector{4\\6\\-2}\\
+              \end{align*}\)
+            </p>
+            Der Punkt liegt nicht auf \(g\) und damit auch nicht auf \(\overline{AB}\).
+          </li>
+        </ol>
+      </details>
+
+      <details style="counter-set: lsg-counter 8;">
+        <summary>Optische Täuschung</summary>
+        <p>
+          Variante 1: Punktprobe \(\Rightarrow\) Die Punkte liegen nicht auf der Geraden.
+        </p>
+        <p>
+          Variante 2: Überlegungen:
+        <ul>
+          <li>Die Punkte \(A\) und \(B\) haben die gleiche \(z\)-Koordinate.</li>
+          <li>Das heißt, die \(z\)-Koordinate des Richtungsvektors der Geraden ist null.</li>
+          <li>Mit \(z=0\) im Richtungsvektor und \(z=3\) im Stützvektor ist es nicht möglich auf \(z=5\) für \(Q\) oder
+            \(z=6\) für \(P\) zu kommen
+          </li>
+        </ul>
+        Die beiden Punkte liegen also nicht auf der Geraden zu liegen.
+        </p>
+
+      </details>
+
+      <details style="counter-set: lsg-counter 7;">
+        <summary>Punktprobe</summary>
+        <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
+          <li>
+            <p style="margin-left: 20px;">
+              \(\begin{align*}
+              g_{AB}:\vec x&=\vector{0\\0\\5}+r\cdot\vector{1\\2\\-1}
+              \end{align*}\)
+            </p>
+            <p>
+              \(P\) liegt drauf (\(r=3\)), \(Q\) liegt nicht drauf.
+            </p>
+          </li>
+          <li>
+            <p style="margin-left: 20px;">
+              \(\begin{align*}
+              g_{AB}:\vec x&=\vector{6\\3\\0}+r\cdot\vector{-6\\3\\6}
+              \end{align*}\)
+            </p>
+            <p>
+              \(P\) liegt drauf (\(r=\tfrac23\)), \(Q\) liegt nicht drauf.
+            </p>
+          </li>
+        </ol>
+      </details>
+
+      <details id="a5" style="counter-set: lsg-counter 4;">
+        <summary>Bogenschießen</summary>
+        <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
+          <li>
+            <p style="margin-left: 20px;">
+              \(\begin{align*}
+              g:\vec x&=\vector{0\\0\\15}+r\cdot\vector{-1\\3\\0,5}
+              \end{align*}\)
+            </p>
+            <p>
+              Die Scheibe W(olf) wird getroffen.
+            </p>
+            <p>
+              Entfernung:
+            <p style="margin-left: 20px;">
+              \(\begin{align*}
+              d(P,W)&=\sqrt{155^2+465^2+(85-15)^2}\\
+              d(P,W)&\approx496,24\,\text{dm}\approx 50\,\text m
+              \end{align*}\)
+            </p>
+            Geschwindigkeit:
+            <p style="margin-left: 20px;">
+              \(\begin{align*}
+              v&=\frac st\\
+              v&=\frac{50\,\text m}{1\,\text s}\\
+              v&=50\,\tfrac{\text m}{\text s}=180\,\tfrac{\text{km}}{\text h}
+              \end{align*}\)
+            </p>
+            </p>
+          </li>
+          <li>
+            Richtungsvektor:
+            <p style="margin-left: 20px;">
+              \(\begin{align*}
+              \vec w&=\vector{-160-0\\640-0\\95-15}\\
+              \vec w&=\vector{-160\\640\\80}\hat=\vector{-1\\4\\0,5}
+              \end{align*}\)
+            </p>
+          </li>
+        </ol>
+      </details>
+
+      <details style="counter-set: lsg-counter 5;">
+        <summary>Motorradstunt</summary>
+        <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
+          <li>Geradengleichung
+            <p style="margin-left: 20px;">
+              \(\begin{align*}
+              g: \vec x&=\vector{20\\20\\0}+r\cdot\vector{200\\400\\80}
+              \end{align*}\)
+            </p>
+            Punktproben:
+            <ul>
+              <li>\(S_1\) passt</li>
+              <li>\(S_2\) und \(S_3\) passen nicht</li>
+            </ul>
+            Wenn man in \(S_2\) und \(S_3\) die \(z\)-Koordinate offen lässt, kann \(S_2\) auf \(40\,\text m\)
+            verlängert
+            werden, um zu passen.\(S_3\) liegt nicht unter/über der Gerade.
+          </li>
+          <li>
+            Drahtlänge:
+            <p style="margin-left: 20px;">
+              \(\begin{align*}
+              d(A,B)&=\sqrt{200^2+400^2+80^2}\\
+              d(P,W)&\approx454,31\,\text{m}
+              \end{align*}\)
+            </p>
+            Fahrzeit:
+            <p style="margin-left: 20px;">
+              \(\begin{align*}
+              v&=\frac st \\
+              t&=\frac sv\\
+              t&=\frac{454,31\text m}{20\,\tfrac{\text{km}}{\text h}}\approx\frac{454,31\text
+              m}{5,56\,\tfrac{\text{m}}{\text s}}\\
+              t&\approx 81,71\,\text s
+              \end{align*}\)
+            </p>
+            Der Stunt dauert etwa eine Minute und 22 Sekunden.
+          </li>
+          <li>Um die Rechnung etwas zu vereinfachen, werden die beiden relevanten Vektoren etwas vereinfacht.
+            <ul>
+              <li>
+                Vektor am Boden: \(\vec b = \vector{200\\400\\0}=100\cdot\vector{2\\4\\0}\)
+              </li>
+              <li>
+                Drahtvektor: \(\vec d=\vector{200\\400\\80}=40\cdot\vector{5\\10\\2}\)
+              </li>
+            </ul>
+            <p>
+              Winkelberechnung:
+            <p style="margin-left: 20px;">
+              \(\begin{align*}
+              \cos\alpha&=\frac{\vec d\cdot \vec b}{|\vec d|\cdot|\vec b|} \\
+              \cos\alpha&=\frac{10+40+0}{\sqrt{25+100+4}\cdot\sqrt{4+16+0}} \\
+              \cos\alpha&\approx0,9844\\
+              \alpha&\approx10,14^\circ
+              \end{align*}\)
+            </p>
+            </p>
+          </li>
+        </ol>
+      </details>
+
+    </section>
+
+
+
+    <!-- JS-Datei mit allen Funktionen -->
+    <script src="/js/math/geo3d.js"></script>
+
+    <script>
+      drawAxes(koord2D, 4, 4, "a");
+      drawAxes(koord3D, 4, 4, 4);
+
+    </script>
+
+    <section id="meme">
+      <div class="images">
+        <img src="/img/angeo_meme.webp" style="object-fit: scale-down; max-width: 300px" />
+      </div>
+      <div class="centered">
+        <a href="https://9gag.com/gag/aEYQE7O">
+          <h6>Original von 2knk</h6>
+        </a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <a href="/misc/impressum.html">Impressum</a>
+    <div class="lastModified" align="center">
+      Zuletzt geändert:<br />
+      1. November 2025
+      <!-- <span id="lastModifiedDate"></span> -->
+    </div>
+    <a href="/misc/datenschutz.html">Datenschutz</a>
+  </footer>
+</body>
