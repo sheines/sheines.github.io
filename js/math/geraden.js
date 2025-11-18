@@ -118,7 +118,7 @@ function render() {
 }
 
 function animate() {
-    angle += 0.002;
+    angle += 0.0075;
     render();
     requestAnimationFrame(animate);
 }
