@@ -581,16 +581,193 @@
 
     <section class="loesungen">
       <h3>Lösungen zu Lagebeziehungen</h3>
-      <details id="a1" style="counter-set: lsg-counter 2;">
-        <summary>Geradengleichungen I</summary>
+      <details id="a1" style="counter-set: lsg-counter 1;">
+        <summary>Lagebeziehungen I</summary>
 
         <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
-          <li> ...
+          <li> Richtungsvektoren nicht kollinear, Gleichsetzen erfolgreich: schneidend (\(r=-2\), \(s=1\), \(S(-4\mid-1\mid8)\))</li>
+          <li> Richtungsvektoren kollinear, Punktprobe nicht erfolgreich: echt parallel</li>
+          <li> Richtungsvektoren nicht kollinear, Gleichsetzen nicht erfolgreich: windschief</li>
+          <li> Richtungsvektoren nicht kollinear, Gleichsetzen erfolgreich: schneidend (\(r=2\), \(s=3\), \(S(6\mid2\mid-1)\))</li>
+        </ol>
+      </details>
+
+      <details style="counter-set: lsg-counter 2;">
+        <summary>Parallele Geraden I</summary>
+
+        <ul class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
+          <li> \(u:\vec x=\vector{2\\-2\\3}+t\cdot\vector{-4\\2\\-2}\)</li>
+          <li> \(v:\vec x=\vector{2\\0\\0}+t\cdot\vector{-2\\3\\3}\)</li>
+          <li>Lagen:
+            <ul>
+              <li>\(g\cap h=\{S(4\mid-1,5\mid3,5)\}\)</li>
+              <li>\(g\parallel u\)</li>
+              <li>\(g\) und \(v\): windschief</li>
+              <li>\(h\) und \(u\): windschief</li>
+              <li>\(h\parallel v\)</li>
+              <li>\(u\) und \(v\): windschief</li>
+            </ul>
+          </li>
+        </ul>
+      </details>
+
+      <details id="a2" style="counter-set: lsg-counter 11;">
+        <summary>Parallele Geraden II</summary>
+
+       <div class="table-wrapper centered">
+                    <table class="wechseltabelle cellCentered" style="width: max-content; white-space: nowrap;">
+                        <!-- Haken: &#10004; Kreuz: &#x2718; -->
+                        <tr>
+                            <th style="color: transparent;">......</th>
+                            <th >\(g\)</th>
+                            <th >\(h\)</th>
+                            <th >\(k\)</th>
+                            <th >\(u\)</th>
+                            <th >\(v\)</th>
+                            <th >\(w\)</th>
+                        </tr>
+                        <tr>
+                            <th >\(g\)</th>
+                            <td></td>
+                            <td>&ndash;</td>
+                            <td>p</td>
+                            <td>p</td>
+                            <td>i</td>
+                            <td>&ndash;</td>
+                        </tr>
+                        <tr>
+                            <th >\(h\)</th>
+                            <td>&ndash;</td>
+                            <td></td>
+                            <td>&ndash;</td>
+                            <td>&ndash;</td>
+                            <td>&ndash;</td>
+                            <td>p</td>
+                        </tr>
+                        <tr>
+                            <th >\(k\)</th>
+                            <td>p</td>
+                            <td>&ndash;</td>
+                            <td></td>
+                            <td>i</td>
+                            <td>p</td>
+                            <td>&ndash;</td>
+                        </tr>
+                        <tr>
+                            <th >\(u\)</th>
+                            <td>p</td>
+                            <td>&ndash;</td>
+                            <td>i</td>
+                            <td></td>
+                            <td>p</td>
+                            <td>&ndash;</td>
+                        </tr>
+                        <tr>
+                            <th >\(v\)</th>
+                            <td>i</td>
+                            <td>&ndash;</td>
+                            <td>p</td>
+                            <td>p</td>
+                            <td></td>
+                            <td>&ndash;</td>
+                        </tr>
+                        <tr>
+                            <th >\(w\)</th>
+                            <td>&ndash;</td>
+                            <td>p</td>
+                            <td>&ndash;</td>
+                            <td>&ndash;</td>
+                            <td>&ndash;</td>
+                            <td></td>
+                        </tr>
+                        
+                        
+
+                    </table>
+                    
+                </div>
+                <div class="centered">p..(echt) parallel, i..identisch</div>
+      </details>
+    
+      <details style="counter-set: lsg-counter 12;">
+        <summary>Schnittpunktberechnung</summary>
+        Geraden gleichsetzen, \(r\) und/oder \(s\) berechnen und in \(g\), bzw. \(h\) einsetzen für \(S\)
+        <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
+          <li> 
+            <ul>
+              <li>\(g:\vec x=\vector{3\\1\\2}+r\cdot\vector{2\\2\\2}\)</li>
+              <li>\(h:\vec x=\vector{2\\1\\1}+s\cdot\vector{1\\2\\1}\)</li>
+              <li>\(r=-1\), \(s=-1\)</li>
+              <li>\(S(1\mid -1\mid 0)\)</li>
+            </ul>
+          </li>
+          <li> 
+            <ul>
+              <li>\(g:\vec x=\vector{1\\0\\0}+r\cdot\vector{0\\1\\1}\)</li>
+              <li>\(h:\vec x=\vector{2\\5\\4}+s\cdot\vector{1\\2\\3}\)</li>
+              <li>\(r=2\), \(s=-1\)</li>
+              <li>\(S(1\mid 2\mid 2)\)</li>
+            </ul>
+          </li>
+          <li> 
+            <ul>
+              <li>\(g:\vec x=\vector{4\\1\\5}+r\cdot\vector{2\\-1\\1}\)</li>
+              <li>\(h:\vec x=\vector{1\\2\\3}+s\cdot\vector{-3\\3\\0}\)</li>
+              <li>\(r=-2\), \(s=\tfrac13\)</li>
+              <li>\(S(0\mid 3\mid 3)\)</li>
+            </ul>
           </li>
 
         </ol>
       </details>
-      
+
+      <details style="counter-set: lsg-counter 13;">
+        <summary>Windschiefe Geraden</summary>
+        Für alle drei Aufgaben:
+        <ul>
+          <li>Richtungsvektoren auf Kollinearität prüfen: \(\rightarrow\) nicht kollinear</li>
+          <li>Geraden gleichsetzen, Gleichungssystem aufstellen und lösen: \(\rightarrow\) führt immer zu Widerspruch </li>
+        </ul>
+        Deshalb sind alle drei Geradenpaare windschief.
+      </details>
+
+      <details style="counter-set: lsg-counter 14;">
+        <summary>Lagebeziehungen II</summary>
+
+        <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
+          <li> 
+            <ul>
+              <li>\(g:\vec x=\vector{-1\\1\\1}+r\cdot\vector{2\\0\\-2}\)</li>
+              <li>\(h:\vec x=\vector{1\\1\\1}+s\cdot\vector{-1\\0\\1}\)</li>
+              <li>Richtungsvektoren sind kollinear</li>
+              <li>Punktprobe nicht erfolgtreich</li>
+              <li>Geraden sind echt parallel</li>
+            </ul>
+          </li>
+          <li> 
+            <ul>
+              <li>\(g:\vec x=\vector{4\\2\\1}+r\cdot\vector{-4\\2\\2}\)</li>
+              <li>\(h:\vec x=\vector{1\\2\\1}+s\cdot\vector{2\\2\\2}\)</li>
+              <li>Richtungsvektoren sind nicht kollinear</li>
+              <li>Gleichsetzen ergibt: \(r=\tfrac12\) und \(s=\tfrac12\)</li>
+              <li>Geraden schneiden sich (\(S(2\mid3\mid2)\))</li>
+            </ul>
+          </li>
+          <li> 
+            <ul>
+              <li>\(g:\vec x=\vector{2\\0\\4}+r\cdot\vector{2\\2\\-1}\)</li>
+              <li>\(h:\vec x=\vector{6\\4\\2}+s\cdot\vector{4\\4\\-2}\)</li>
+              <li>Richtungsvektoren sind kollinear</li>
+              <li>Punktprobe erfolgtreich</li>
+              <li>Geraden identisch</li>
+            </ul>
+          </li>
+
+
+        </ol>
+      </details>
+
+
 
     </section>
 
@@ -620,7 +797,7 @@
     <a href="/misc/impressum.html">Impressum</a>
     <div class="lastModified" align="center">
       Zuletzt geändert:<br />
-      23. November 2025
+      24. November 2025
       <!-- <span id="lastModifiedDate"></span> -->
     </div>
     <a href="/misc/datenschutz.html">Datenschutz</a>
