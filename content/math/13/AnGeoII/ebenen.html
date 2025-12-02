@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" initial-scale="1.0" />
+  <meta name="author" content="Sebastian Heine" />
+  <meta name="robot" content="noindex" />
+  <title>HEIS | Ana Geom I | Ebenen</title>
+  <link rel="stylesheet" type="text/css" href="/css/colors.css" />
+  <link rel="stylesheet" type="text/css" href="/css/gridNoTimeline.css" />
+  <link rel="stylesheet" type="text/css" href="/css/navbar.css" />
+  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="/css/courses.css" />
+  <link rel="stylesheet" type="text/css" href="/css/oktanten.css" />
+  <script type="text/javascript" src="jquery-3.3.1.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <script>
+    window.MathJax = {
+      tex: {
+        macros: {
+          vector: ['\\begin{pmatrix}#1\\end{pmatrix}', 1]
+        }
+      }
+    };
+  </script>
+
+</head>
+
+<body>
+  <header>
+    <div class="nav">
+      <input type="checkbox" id="nav-check" />
+      <div class="nav-header">
+        <div class="nav-title">
+          <a href="/">Hr. Heines Unterricht</a>
+        </div>
+      </div>
+      <div class="nav-btn">
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+
+      <div class="nav-links">
+        <a href="/content/math/">Mathematik</a>
+        <a href="/content/math/13/">Klasse 13</a>
+        <a href="/content/math/13/AnGeoII/">Analytische Geometrie II</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section>
+      <h2>Ebenen im Raum</h2>
+      <div class="ziele">
+        <p>
+          Nachfolgend soll gezeigt werden, wie Ebenen im Raum vektoriell dargestellt werden können und die Vorstellung
+          dazu funktioniert.
+        </p>
+        <p>
+          <a href="#aufgaben">Direkt zu den Aufgaben</a>
+        </p>
+      </div>
+
+      <div class="theorie">
+
+
+        <div class="definition">
+          <h4>Vektorielle Geradengleichung</h4>
+          <p>
+            Eine <span style="color: darkgoldenrod">Ebene</span> mit dem <span style="color: cyan">Stützvektor
+              \(\vec a\)</span> und den
+            Richtungsvektoren <span style="color: lime">\(\vec u\)</span> und 
+            <span style="color: magenta">\(\vec v\)</span> hat die Geradengleichung
+          <p style="margin-left: 20px;">
+            \({\color{darkgoldenrod}E}: \vec x={\color{cyan}\vec a}+r\cdot {\color{lime}\vec u}+s\cdot {\color{magenta}\vec u}\)
+          </p>
+          <p>
+            Diese Gleichung heißt <b>Parametergleichung</b> der Ebene.
+          </p>
+          </p>
+
+          <div class="centered" style="max-width: 450px">
+            <svg id="ebenen" viewBox="100 80 400 300" preserveAspectRatio="xMidYMid meet"></svg>
+          </div>
+
+          <script src="/js/math/ebenen.js"></script>
+
+          <h5>Dreipunktegleichung</h5>
+          Eine Ebene ist durch drei Punkte eindeutig bestimmt. 
+          <p>
+            Wenn die Punkte \(\color{red}A\), \(\color{orange}B\) und \(\color{violet}C\) nicht auf einer Geraden liegen,
+            so spannen diese eine Ebene auf. Mithilfe der Ortsvektoren \(\color{red}\vec a\), \(\color{lightgreen}\vec b\) 
+            und \(\color{violet}\vec c\) ergibt sich die Ebenegleichung:
+            <p style="margin-left: 20px;">
+            \({\color{darkgoldenrod}E}: \vec x={\color{red}\vec a}+r\cdot\left({\color{lightgreen}\vec b}-{\color{red}\vec a}\right)
+              +r\cdot\left({\color{violet}\vec c}-{\color{red}\vec a}\right)\)
+          </p>
+          </p>
+          Für jede Ebene gibt es unendlich viele Möglichkeiten diese zu beschreiben.
+        </div>
+        <h6>Beispiel:</h6>
+        <p>
+          Es soll die Geradengleichung zwischen den Punkte \(A(1\mid5\mid-2)\) und \(B(7\mid2\mid-2)\) bestimmt werden.
+        <ol class="more-spacing">
+          <li>Ortsvektor von \(A\) wird Stützvektor: \(\color{magenta}\vec a=\vector{1\\5\\-2}\)</li>
+          <li>Vektor \(\overrightarrow{AB}\) wird Richtungsvektor: \({\color{lime}\vec
+            m}=\vector{7-1\\2-5\\-2-(-2)}={\color{lime}\vector{6\\-3\\0}}\)</li>
+          <li>Geradengleichung: \(g:\vec x={\color{magenta}\vector{1\\5\\-2}}+r\cdot{\color{lime}\vector{6\\-3\\0}}\)
+          </li>
+        </ol>
+        Es kann natürlich auch \(B\) für den Stützvektor oder der Vektor \(\overrightarrow{BA}\)
+        als Richtungsvektor verwendet werden.
+        </p>
+        <div class="definition">
+          <h4>Punktprobe</h4>
+          <p>Ob ein Punkt \(P\) auf einer gegebenen Gerade \(g\) liegt, kann folgendermaßen geprüft werden:
+          <ol>
+            <li>\(\vec x\) in Geradengleichung \(g\) durch den Ortsvektor von \(P\) ersetzen.</li>
+            <li>Parameter \(r\) für jede Koordinate berechnen.</li>
+            <li>
+              <ul>
+                <li>Ist \(r\) immer gleich, liegt \(P\) auf \(g\).</li>
+                <li>Ist \(r\) verschieden, liegt \(P\) nicht auf \(g\).</li>
+              </ul>
+            </li>
+          </ol>
+          </p>
+        </div>
+        <h6>Beispiel:</h6>
+        <p>
+          Prüfe, ob der Punkt \(P(3\mid0\mid-4)\) auf der Geraden \(g:\vec
+          x=\vector{7\\-6\\2}+r\cdot\vector{2\\-3\\-2}\)
+          liegt!
+        <ol>
+          <li>
+            \(\vec x\) in Geradengleichung \(g\) durch den Ortsvektor von \(P\) ersetzen:
+            <p style="margin-left: 20px;">
+              \(
+              \begin{align*}
+              \vector{3\\0\\-4}&=\vector{7\\-6\\2}+r\cdot\vector{2\\-3\\-2}
+              \end{align*}
+              \)
+            </p>
+          </li>
+          <li>
+            Parameter \(r\) für jede Koordinante berechnen:
+            <p style="margin-left: 20px;">
+              \(
+              \begin{align*}
+              3&=7+r\cdot 2 \qquad\quad \Rightarrow r=-2 \\
+              0&=-6+r\cdot (-3) \ \ \, \Rightarrow r=-2 \\
+              -4&=2+r\cdot (-2) \ \, \quad \Rightarrow r=3
+              \end{align*}
+              \)
+            </p>
+          </li>
+          <li>
+            Da \(r\) nicht für alle Koordinaten gleich ist, liegt der Punkt \(P\) nicht auf der Geraden \(g\).
+          </li>
+        </ol>
+        </p>
+        
+      </div>
+    </section>
+    <!-- <section>
+            <div class="videos">
+                <iframe width="360" height="202" src="https://www.youtube.com/embed/19goPRnthCE"
+                    title="Abstand Punkt - Punkt" frameborder="0" allow="web-share" allowfullscreen></iframe>
+
+            </div>
+        </section> -->
+    <section id="aufgaben" class="aufgaben">
+      <h3>Aufgaben zu Ebenen im Raum</h3>
+      <ol class="custom-marker point-after decimal more-spacing">
+        <li>Buch, Seite ... <a href="#a1">Lösungen</a></li>
+      </ol>
+    </section>
+
+    <section class="loesungen">
+      <h3>Lösungen zu Ebenen im Raum</h3>
+      <details id="a1" style="counter-set: lsg-counter 2;">
+        <summary>...</summary>
+        <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
+          <li> ...
+          </li>
+          <li>\(g:\vec x=\vector{-3\\1\\0}+r\cdot\vector{7\\-1\\2}\)</li>
+          <li>\(g:\vec x=\vector{-3\\2\\1}+r\cdot\vector{7\\-1\\6}\)</li>
+        </ol>
+      </details>
+      
+
+    </section>
+
+
+
+    <!-- JS-Datei mit allen Funktionen -->
+    <script src="/js/math/geo3d.js"></script>
+
+    <script>
+      drawAxes(koord2D, 4, 4, "a");
+      drawAxes(koord3D, 4, 4, 4);
+
+    </script>
+
+    <section id="meme">
+      <div class="images">
+        <img src="/img/ebene_meme.png" style="object-fit: scale-down; max-width: 300px" />
+      </div>
+      <div class="centered">
+        <a href="https://www.instagram.com/p/CfeGg9JrxFn/">
+          <h6>Original von engineeringmemesguy</h6>
+        </a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <a href="/misc/impressum.html">Impressum</a>
+    <div class="lastModified" align="center">
+      Zuletzt geändert:<br />
+      2. Dezember 2025
+      <!-- <span id="lastModifiedDate"></span> -->
+    </div>
+    <a href="/misc/datenschutz.html">Datenschutz</a>
+  </footer>
+</body>
