@@ -29,89 +29,119 @@ function render() {
     const cam = getCamera(angle);
     let inner = '';
 
-    // Stütz- und Richtungsvektor
-    const a = [2, 3, 4];
-    const m = [-3, 0.5, -1];
+    // === Ebene: Stütz- und Richtungsvektoren ===
+    const a = [2, 3, 1];
+    const u = [3, -1, 0.5];
+    const v = [-1, -2, 1.5];
 
-    // Gerade durch a + r*m
-    const rMin = -2.0, rMax = 2.5;
-    const g1 = [a[0] + rMin*m[0], a[1] + rMin*m[1], a[2] + rMin*m[2]];
-    const g2 = [a[0] + rMax*m[0], a[1] + rMax*m[1], a[2] + rMax*m[2]];
+    // Parameterbereich der Ebene (kleines Rechteck)
+    const sMin = -1.2, sMax = 1.2;
+    const tMin = -1.2, tMax = 1.2;
 
-    // === Reihenfolge dynamisch ===
-    const axisBefore = angle % (2*Math.PI) > Math.PI;
-    const drawOrder = axisBefore ? ['z','line'] : ['line','z'];
+    // 4 Eckpunkte des Ebenen-Parallelogramms
+    const P = [
+        [a[0] + sMin * u[0] + tMin * v[0],
+         a[1] + sMin * u[1] + tMin * v[1],
+         a[2] + sMin * u[2] + tMin * v[2]],
 
-    // --- Marker-Definitionen ---
+        [a[0] + sMax * u[0] + tMin * v[0],
+         a[1] + sMax * u[1] + tMin * v[1],
+         a[2] + sMax * u[2] + tMin * v[2]],
+
+        [a[0] + sMax * u[0] + tMax * v[0],
+         a[1] + sMax * u[1] + tMax * v[1],
+         a[2] + sMax * u[2] + tMax * v[2]],
+
+        [a[0] + sMin * u[0] + tMax * v[0],
+         a[1] + sMin * u[1] + tMax * v[1],
+         a[2] + sMin * u[2] + tMax * v[2]]
+    ];
+
+    // === Defs ===
     const defs = `
-                <defs>
-                    <marker id="arrowGray" markerWidth="7" markerHeight="6" refX="6" refY="3" orient="auto">
-                    <path d="M0,1 L7,3 L0,5 Z" fill="#a7a7a8"/>
-                    </marker>
-                    <marker id="arrowMag" markerWidth="7" markerHeight="6" refX="6" refY="3" orient="auto">
-                    <path d="M0,1 L7,3 L0,5 Z" fill="magenta"/>
-                    </marker>
-                    <marker id="arrowLime" markerWidth="7" markerHeight="6" refX="6" refY="3" orient="auto">
-                    <path d="M0,1 L7,3 L0,5 Z" fill="lime"/>
-                    </marker>
-                </defs>
-                `;
+        <defs>
+            <marker id="arrowMag" markerWidth="7" markerHeight="6" refX="6" refY="3" orient="auto">
+                <path d="M0,1 L7,3 L0,5 Z" fill="magenta"/>
+            </marker>
+            <marker id="arrowLime" markerWidth="7" markerHeight="6" refX="6" refY="3" orient="auto">
+                <path d="M0,1 L7,3 L0,5 Z" fill="lime"/>
+            </marker>
+            <marker id="arrowGray" markerWidth="7" markerHeight="6" refX="6" refY="3" orient="auto">
+                <path d="M0,1 L7,3 L0,5 Z" fill="#a7a7a8"/>
+            </marker>
+            <marker id="arrowCyan" markerWidth="7" markerHeight="6" refX="6" refY="3" orient="auto">
+                <path d="M0,1 L7,3 L0,5 Z" fill="cyan"/>
+            </marker>
+        </defs>
+    `;
 
-    // --- X/Y-Achsen ---
-    axes.slice(0,2).forEach(a => {
-        const [x1, y1] = project2(...a.from, angle);
-        const [x2, y2] = project2(...a.to, angle);
+    // === XY-Achsen zeichnen wie gehabt ===
+    axes.slice(0,2).forEach(ax => {
+        const [x1,y1] = project2(...ax.from, angle);
+        const [x2,y2] = project2(...ax.to, angle);
         inner += `
-          <line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}"
-                stroke="${a.color}" stroke-width="2"
-                marker-end="url(#arrowGray)"/>
+            <line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}"
+                  stroke="${ax.color}" stroke-width="2"
+                  marker-end="url(#arrowGray)"/>
         `;
-        const [lx, ly] = project2(...a.to.map((v,i)=>v*1.15), angle);
+        const [lx,ly] = project2(...ax.to.map((v,i)=>v*1.15), angle);
         inner += `<text x="${lx}" y="${ly}" font-family="Times" font-style="italic"
-                      font-size="14" fill="${a.color}"
-                      text-anchor="middle" alignment-baseline="middle">${a.label}</text>`;
+                    font-size="14" fill="${ax.color}"
+                    text-anchor="middle">${ax.label}</text>`;
     });
 
-    // --- Gerade ---
-    const [gx1, gy1] = project2(...g1, angle);
-    const [gx2, gy2] = project2(...g2, angle);
-    const lineElement = `<line x1="${gx1}" y1="${gy1}" x2="${gx2}" y2="${gy2}"
-                            stroke="darkgoldenrod" stroke-width="2"/>`;
+    // === Ebene als Polygon ===
+    const projected = P.map(p => project2(...p, angle));
+    const polygonPoints = projected.map(p => p.join(',')).join(' ');
 
-    // --- Z-Achse ---
-    const z = axes[2];
-    const [zx1, zy1] = project2(...z.from, angle);
-    const [zx2, zy2] = project2(...z.to, angle);
-    let zAxisElement = `
-      <line x1="${zx1}" y1="${zy1}" x2="${zx2}" y2="${zy2}"
-            stroke="${z.color}" stroke-width="2"
-            marker-end="url(#arrowGray)"/>
+    const planeElement = `
+        <polygon points="${polygonPoints}"
+                 fill="darkgoldenrod"
+                 fill-opacity="0.35"
+                 stroke="darkgoldenrod"
+                 stroke-width="1.5"/>
     `;
-    const [zlx, zly] = project2(...z.to.map((v,i)=>v*1.15), angle);
-    zAxisElement += `<text x="${zlx}" y="${zly}" font-family="Times" font-style="italic"
-                      font-size="14" fill="${z.color}"
-                      text-anchor="middle" alignment-baseline="middle">z</text>`;
 
-    // --- Vektoren ---
-    const da = 0.985;
-    const [a0x, a0y] = project2(0, 0, 0, angle);
-    const [a1x, a1y] = project2(a[0]*da,a[1]*da,a[2]*da, angle);
-    const mend = [a[0] + m[0], a[1] + m[1], a[2] + m[2]];
-    const [m1x, m1y] = project2(...a, angle);
-    const [m2x, m2y] = project2(...mend, angle);
+    // === Z-Achse ===
+    const z = axes[2];
+    const [zx1,zy1] = project2(...z.from, angle);
+    const [zx2,zy2] = project2(...z.to, angle);
+
+    let zAxisElement = `
+        <line x1="${zx1}" y1="${zy1}" x2="${zx2}" y2="${zy2}"
+              stroke="${z.color}" stroke-width="2"
+              marker-end="url(#arrowGray)"/>
+    `;
+    const [zlx,zly] = project2(...z.to.map((v,i)=>v*1.15), angle);
+    zAxisElement += `<text x="${zlx}" y="${zly}" font-family="Times"
+                      font-style="italic" font-size="14"
+                      fill="${z.color}">z</text>`;
+
+    // === Vektoren zur Ebene ===
+    // Stützvektor: cyan vom Ursprung zum Punkt a
+    const [oX, oY] = project2(0,0,0, angle);
+    const [ax,ay] = project2(...a, angle);
+    const [uEndx, uEndy] = project2(a[0]+u[0], a[1]+u[1], a[2]+u[2], angle);
+    const [vEndx, vEndy] = project2(a[0]+v[0], a[1]+v[1], a[2]+v[2], angle);
 
     const vectors = `
-      <line x1="${a0x}" y1="${a0y}" x2="${a1x}" y2="${a1y}"
-            stroke="magenta" stroke-width="2.5" marker-end="url(#arrowMag)"/>
-      <line x1="${m1x}" y1="${m1y}" x2="${m2x}" y2="${m2y}"
-            stroke="lime" stroke-width="2.5" marker-end="url(#arrowLime)"/>
-      <circle cx="${a1x}" cy="${a1y}" r="2." fill="magenta"/>
-      <circle cx="${m2x}" cy="${m2y}" r="2." fill="lime"/>
+        <!-- Stützvektor (cyan) -->
+        <line x1="${oX}" y1="${oY}" x2="${ax}" y2="${ay}"
+              stroke="cyan" stroke-width="2.5" marker-end="url(#arrowCyan)"/>
+        <circle cx="${ax}" cy="${ay}" r="3" fill="cyan" stroke="black" stroke-width="0.6"/>
+
+        <!-- Richtungsvektoren -->
+        <line x1="${ax}" y1="${ay}" x2="${uEndx}" y2="${uEndy}"
+              stroke="magenta" stroke-width="2.5" marker-end="url(#arrowMag)"/>
+        <line x1="${ax}" y1="${ay}" x2="${vEndx}" y2="${vEndy}"
+              stroke="lime" stroke-width="2.5" marker-end="url(#arrowLime)"/>
     `;
 
-    // --- Zusammenbau ---
-    if (drawOrder[0] === 'z') inner += zAxisElement + lineElement;
-    else inner += lineElement + zAxisElement;
+    // === Reihenfolge: Ebene kann vor oder hinter z liegen ===
+    const axisBefore = angle % (2*Math.PI) > Math.PI;
+    if (axisBefore) inner += zAxisElement + planeElement;
+    else inner += planeElement + zAxisElement;
+
     inner += vectors;
 
     geraden.innerHTML = defs + inner;
@@ -123,3 +153,32 @@ function animate() {
     requestAnimationFrame(animate);
 }
 animate();
+
+function depthOfPoint(x,y,z, angle) {
+    const cosA = Math.cos(angle);
+    const sinA = Math.sin(angle);
+    const xRot = x * cosA - y * sinA;
+    const yRot = x * sinA + y * cosA;
+    // wie beim project2, aber OHNE 2D-Projektion — wir geben die Tiefe zurück
+    return z + yRot * 0.1;
+}
+
+
+
+// === Defs ===
+    const defs = `
+        <defs>
+            <marker id="arrowMag" markerWidth="7" markerHeight="6" refX="6" refY="3" orient="auto">
+                <path d="M0,1 L7,3 L0,5 Z" fill="magenta"/>
+            </marker>
+            <marker id="arrowLime" markerWidth="7" markerHeight="6" refX="6" refY="3" orient="auto">
+                <path d="M0,1 L7,3 L0,5 Z" fill="lime"/>
+            </marker>
+            <marker id="arrowGray" markerWidth="7" markerHeight="6" refX="6" refY="3" orient="auto">
+                <path d="M0,1 L7,3 L0,5 Z" fill="#a7a7a8"/>
+            </marker>
+            <marker id="arrowCyan" markerWidth="7" markerHeight="6" refX="6" refY="3" orient="auto">
+                <path d="M0,1 L7,3 L0,5 Z" fill="cyan"/>
+            </marker>
+        </defs>
+    `;
