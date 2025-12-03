@@ -30,7 +30,7 @@ function render() {
     let inner = '';
 
     // === Ebene: Stütz- und Richtungsvektoren ===
-    const a = [2, 3, 1];
+    const a = [2, 3, 1.5];
     const u = [3, -1, 0.5];
     const v = [-1, -2, 1.5];
 
