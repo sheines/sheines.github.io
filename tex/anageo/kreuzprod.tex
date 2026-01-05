@@ -1,0 +1,96 @@
+\documentclass[11pt]{beamer}
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{headline}{}
+\setbeamertemplate{footline}{}
+\setbeamertemplate{sidebar left}{}
+\setbeamertemplate{sidebar right}{}
+\setbeamertemplate{background canvas}[default]
+
+\usecolortheme{default}
+\usefonttheme{default}
+
+\setbeamercolor{background canvas}{bg=white}
+\setbeamercolor{normal text}{fg=black,bg=white}
+
+\usepackage{fontspec}
+\usepackage{unicode-math}
+\setmainfont{Tex Gyre Pagella}
+\setmathfont{Tex Gyre Pagella Math}
+
+\usepackage{ifthen}
+\usepackage{amsmath, amssymb}
+\usepackage{tikz} 
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+\usepackage[d]{esvect}
+\usetikzlibrary{shapes.misc}
+\usetikzlibrary{arrows,arrows.meta}
+\usetikzlibrary{calc,intersections, patterns, math}
+
+\usetikzlibrary{angles,quotes,babel,shapes}
+\usetikzlibrary{decorations}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{arrows}
+\usepgfplotslibrary{fillbetween}
+\usetikzlibrary{animations}
+\usetikzlibrary{decorations.text}
+\usetikzlibrary{math}
+\usetikzlibrary{3d}
+\usetikzlibrary{trees}
+
+\definecolor{pfeil}{RGB}{168,167,167}
+\definecolor{petrol}{RGB}{0, 118, 136}
+\definecolor{darkgoldenrod}{RGB}{184, 134, 11}
+\colorlet{petrol-lighter}{petrol!40}
+\colorlet{darkgoldenrod-lighter}{darkgoldenrod!40}
+
+\newcommand{\vektor}[1]{
+\begin{pmatrix}
+	#1
+\end{pmatrix}
+}
+
+\tikzset{%
+	add/.style args={#1 and #2}{to path={($(\tikztostart)!-#1!(\tikztotarget)$)--($(\tikztotarget)!-#2!(\tikztostart)$)\tikztonodes}}
+}
+
+\begin{document}
+
+\begin{frame}[plain]
+\tikzstyle{every picture}+=[remember picture]
+
+\begin{align*} 
+\underset{\begin{matrix} \tikz[baseline]\node (x11) {$x_1$}; \\ \tikz[baseline]\node (y11) {$y_1$}; \end{matrix}}%
+	{\vektor{\tikz[baseline]\node (x1) {$x_1$}; \\ \tikz[baseline]\node (y1) {$y_1$}; \\ \tikz[baseline]\node (z1) {$z_1$};}} 
+\times \underset{\begin{matrix} \tikz[baseline]\node (x22) {$x_2$}; \\ \tikz[baseline]\node (y22) {$y_2$}; \end{matrix}}%
+	{\vektor{\tikz[baseline]\node (x2) {$x_2$}; \\ \tikz[baseline]\node (y2) {$y_2$}; \\ \tikz[baseline]\node (z2) {$z_2$};}}
+&= \vektor{\color{green!70!black}y_1\cdot z_2 \color{black} - \color{blue} y_2\cdot z_1 \\[0.5em] 
+	\color{cyan}z_1\cdot x_2 \color{black} - \color{orange} z_2\cdot x_1 \\[0.5em] 
+	\color{magenta}x_1\cdot y_2 \color{black} - \color{teal} x_2\cdot y_1} \\
+\underset{\begin{matrix} \tikz[baseline]\node (x33) {$2$}; \\ \tikz[baseline]\node (y33) {$5$}; \end{matrix}}
+	{\vektor{\tikz[baseline]\node (x3) {$2$}; \\ \tikz[baseline]\node (y3) {$5$}; \\ \tikz[baseline]\node (z3) {$1$};}} 
+\times \underset{\begin{matrix} \tikz[baseline]\node (x44) {$3$}; \\ \tikz[baseline]\node (y44) {$6$}; \end{matrix}}
+	{\vektor{\tikz[baseline]\node (x4) {$3$}; \\ \tikz[baseline]\node (y4) {$6$}; \\ \tikz[baseline]\node (z4) {$2$};}}
+&= \vektor{\color{green!70!black}5\cdot 2 \color{black} - \color{blue} 6\cdot 1 \\[0.5em] 
+		\color{cyan}1\cdot 3 \color{black} - \color{orange} 2\cdot 2 \\[0.5em] 
+		\color{magenta}2\cdot 6 \color{black} - \color{teal} 3\cdot 5}
+= \vektor{4 \\[0.5em] -1 \\[0.5em] -3}
+\end{align*}
+\begin{tikzpicture}[overlay,thick, add=0.05 and 0.05, line width=16pt, line cap=round, opacity=0.4,pfeil]
+	\draw [green!70!black] (y1) to (z2);
+	\draw [blue] (y2) to (z1);
+	\draw [cyan] (z1) to (x22);
+	\draw [orange] (z2) to (x11);
+	\draw [magenta] (x11) to (y22);
+	\draw [teal] (x22) to (y11); 
+	
+	\draw [green!70!black] (y3) to (z4);
+	\draw [blue] (y4) to (z3);
+	\draw [cyan] (z3) to (x44);
+	\draw [orange] (z4) to (x33);
+	\draw [magenta] (x33) to (y44);
+	\draw [teal] (x44) to (y33);
+\end{tikzpicture}
+\end{frame}
+\end{document}
