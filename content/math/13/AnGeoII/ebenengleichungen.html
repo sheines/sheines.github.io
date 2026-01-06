@@ -265,6 +265,35 @@
             </li>  
           </ol>
         </p>
+        <h6>Beispiel 6: Koordinatengleichung in Normalengleichung</h6>
+        <p>
+          Gegeben ist die Ebene \(E: {\color{orange}-6}x+{\color{orange}13}y{\color{orange}-3}z=43\)
+          <ol>
+            <li>Stützpunkt finden:
+              <p>
+                Jeder Punkt, dessen Koordinaten in der Ebenengleichung eine wahre Aussage erzeugen, liegt auf dieser Ebene.
+              </p>
+              <p>
+                Um die Suche zu vereinfachen, kann man eine oder zwei Koordinaten null setzen und die Restliche(n) berechnen
+                oder durch Probieren finden.
+              </p>
+              <p>
+                Hier zum Beispiel: \(z=0\) ergibt:
+                <p style="margin-left: 20px;">
+                  \(\begin{align*}
+                    -6x+13y-3\cdot {\color{cyan}0}&=43 \\
+                    -6\cdot ({\color{cyan}-5})+13\cdot{\color{cyan}1}-3\cdot {\color{cyan}0}&=43 \\
+                    \vec a&=\color{cyan}\vector{-5\\1\\0}
+                  \end{align*}\)
+                    
+                </p>
+              </p>
+            </li>
+            <li>
+              Normalengleichung: \(E: \left[\vec x -{\color{cyan}\vector{-5\\1\\0}}\right]\cdot {\color{orange}\vector{-6\\13\\-3}}=0\)
+            </li>
+          </ol>
+
 
 
       </div>
@@ -277,19 +306,59 @@
             </div>
         </section> -->
     <section id="aufgaben" class="aufgaben">
-      <h3>Aufgaben zu Ebenen im Raum</h3>
+      <h3>Aufgaben zu Ebenengleichungen</h3>
       <ol class="custom-marker point-after decimal more-spacing">
         <li>Buch, Seite 134/135 Übung 3 bis 6 <a href="#a1">Lösungen</a></li>
       </ol>
     </section>
 
     <section class="loesungen">
-      <h3>Lösungen zu Ebenen im Raum</h3>
-      <details id="a1"> <!-- style="counter-set: lsg-counter 2;" -->
-        <summary>...</summary>
-
+      <h3>Lösungen zu Ebenengleichungen</h3>
+      <details id="a1" style="counter-set: lsg-counter 2;"> <!-- style="counter-set: lsg-counter 2;" -->
+        <summary>Umwandlung KG \(\leftrightarrow\) NG</summary>
+        Es gibt viele Möglichkeiten den Stützvektor anzugeben.
         <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
-          <li> 
+          <li> \(E:\left[\vec x-\vector{6\\0\\0}\right]\cdot\vector{2\\3\\4}=0\)
+          </li>
+          <li> \(E: 2x+3y+z=6\)</li>
+        </ol>
+      </details>
+
+      <details style="counter-set: lsg-counter 3;"> <!-- style="counter-set: lsg-counter 2;" -->
+        <summary>Umwandlung von Ebenengleichungen I</summary>
+        Es gibt viele Möglichkeiten den Normalenvektor anzugeben.
+        <ul class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
+          <li> \(E: 2x-y-z=-2\)</li>
+        </ul>
+      </details>
+
+      <details style="counter-set: lsg-counter 4;"> <!-- style="counter-set: lsg-counter 2;" -->
+        <summary>Umwandlung von Ebenengleichungen II</summary>
+        Es gibt viele Möglichkeiten die Stütz- und Richtungsvektoren anzugeben.
+        <ul class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
+          <li> \(E: \vec x=\vector{4\\0\\0}+r\cdot\vector{2\\3\\0}+s\cdot\vector{0\\3\\1}\)</li>
+        </ul>
+      </details>
+
+      <details style="counter-set: lsg-counter 5;"> <!-- style="counter-set: lsg-counter 2;" -->
+        <summary>Umwandlung von Ebenengleichungen III</summary>
+        Es gibt viele Möglichkeiten die verschiedenen Vektoren anzugeben.
+        <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
+          <li> \(E: \vec x=\vector{5\\0\\0}+r\cdot\vector{1\\0\\-1}+s\cdot\vector{5\\2\\0}\) und 
+                \(E:\left[\vec x-\vector{5\\0\\0}\right]\cdot\vector{2\\-5\\2}=0\) </li>
+          <li> \(E: \vec x=\vector{6\\0\\0}+r\cdot\vector{3\\0\\1}+s\cdot\vector{2\\1\\0}\) und 
+                \(E:\left[\vec x-\vector{6\\0\\0}\right]\cdot\vector{-1\\2\\3}=0\)
+          </li>
+          <li> \(E: \vec x=\vector{2\\0\\4}+r\cdot\vector{2\\0\\-1}+s\cdot\vector{5\\2\\0}\) und 
+              \(E: 2x-5y+4z=20\)
+          </li>
+          <li> \(E: \vec x=\vector{6\\3\\2}+r\cdot\vector{0\\1\\1}+s\cdot\vector{2\\1\\0}\) und
+              \(E: x-2y+2z=4\) </li>
+          <li> \(E:\left[\vec x-\vector{1\\1\\2}\right]\cdot\vector{1\\-1\\2}=0\) und 
+              \(E: x-y+2z=4\)
+          </li>
+          <li> \(E:\left[\vec x-\vector{1\\-2\\2}\right]\cdot\vector{2\\-5\\4}=0\) und 
+              \(E: 2x-5y+4z=20\)
           </li>
         </ol>
       </details>
