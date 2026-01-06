@@ -104,28 +104,75 @@
         <h6>Beispiel:</h6>
         <p>
           Es sollen die Spurpunkte der Ebene 
-          \(\vec x=\vector{3\\2\\1}+r\cdot\vector{1\\0\\0}+s\cdot\vector{0\\2\\-1}\)
+          \(\vec x=\vector{5\\-2\\-3}+r\cdot\vector{-4\\4\\3}+s\cdot\vector{5\\2\\-9}\)
           bestimmt werden.
         </p>
         <p>
           Für den Spurpunkt mit der \(x\)-Achse müssen die \(y\)- und 
           \(z\)-Koordinate null gesetzt werden:
           <p style="margin-left: 20px;">
-            \(\vector{A\\0\\0}=\vector{3\\2\\1}+r\cdot\vector{1\\0\\0}+s\cdot\vector{0\\2\\-1}\)
+            \(\vector{A\\0\\0}=\vector{5\\-2\\-3}+r\cdot\vector{-4\\4\\3}+s\cdot\vector{5\\2\\-9}\)
           </p>
           Das ergibt das folgende Gleichunssystem:
           <p style="margin-left: 20px;">
             \(\begin{align*}
-          I\quad A&=3+r\quad \\
-          II\quad 0&=2+2s \\
-          III\quad 0&=1-s
+          I\quad A&=5-4r+5s\quad \\
+          II\quad 0&=-2+4r+2s \\
+          III\quad 0&=-3+3r-9s
           \end{align*}\)
           </p>
-          
-          
+          Mithilfe von Gleichung \(II\) und \(III\) kann \(r=\tfrac47\)
+          und \(s=-\tfrac17\) ermittelt werden.    
         </p>
-        
+        <p>
+          Damit kann nun \(A\) berechnet werden:
+           <p style="margin-left: 20px;">
+            \(\begin{align*}
+          I\quad A&=5-4r+5s\quad \\
+                A&=5-4\cdot\tfrac47+5\cdot\left(-\tfrac17\right) \\
+                A&=5-\tfrac{16}{7}-\tfrac{5}{7}\\
+                A&=2
+          \end{align*}\)
+          </p>
+          Das heißt die Ebene schneidet die \(x\)-Achse im Punkt \(S_x(2\mid0\mid0)\).
+        </p>
+        <p>
+          Die Spurpunkte mit den anderen Achsen können analog ermittelt werden.
+          <p style="margin-left: 20px;">
+            \(\begin{align*}
+          &S_y(0\mid 4\mid0)&&S_z(0\mid0\mid3)
+          \end{align*}\)
+          </p>
+        </p>
 
+        <div class="definition">
+          <h4>Spurgerade</h4>
+          <p>
+            Die Schnittgeraden einer Ebene mit den drei Koordinatenebenen werden als
+            <span style="color:cyan">Spurgerade</span> genannt.
+            Die Schnittgerade mit der \(xy\)-Ebene wird \(g_{xy}\) genannt. 
+            Analog sind \(g_{xz}\) und \(g_{yz}\)
+            die Spurgeraden mit der \(xz\)-, bzw. \(yz\)-Ebene. 
+          </p>
+          <div class="centered" style="max-width: 250px">
+                <svg id="spurgerade" viewBox="-150 -250 420 430">
+                  <defs></defs>
+                </svg>
+              </div>
+              <p>
+                Um die Spurgeraden zu berechnen, müssen
+                <ol>
+                  <li>Die Spurpunkte bestimmt werden und dann</li>
+                  <li>Die Geraden durch diese Spurpunkte aufgestellt werden.</li>
+                </ol>
+                Sollte es weniger als drei Spurpunkte geben, müssen die Richtungsvektoren
+                der parallel laufenden Achsen verwendet werden.
+              </p>
+              <p>
+                Jede Ebene hat mindestens eine und maximal drei Spurgeraden.
+              </p>
+
+        </div>
       </div>
     </section>
     <!-- <section>
@@ -166,6 +213,16 @@
 
       drawAxes(spurpunkte, 4, 4, 4);
       drawPolygon(spurpunkte, [[2,0,0], [0,3,0], [0,0,3]], "E", "darkgoldenrod", "orange");
+      drawPoint(spurpunkte, [0,0,3], "", "cyan", "aboveleft", 6);
+      drawPoint(spurpunkte, [2,0,0], "", "cyan", "belowleft", 6);
+      drawPoint(spurpunkte, [0,3,0], "", "cyan", "right", 6);
+
+      drawAxes(spurgerade, 4, 4, 4);
+      drawPolygon(spurgerade, [[4,0,0], [0,0,0], [0,0,4],[4,0,4]], "", "gray", "");
+      drawPolygon(spurgerade, [[4,0,0], [0,0,0], [0,4,0],[4,4,0]], "", "gray", "");
+      drawPolygon(spurgerade, [[0,0,4], [0,0,0], [0,4,0],[0,4,4]], "", "gray", "");
+      
+      drawPolygon(spurgerade, [[2,0,0], [0,3,0], [0,0,3]], "", "darkgoldenrod", "cyan","",3);
       drawPoint(spurpunkte, [0,0,3], "", "cyan", "aboveleft", 6);
       drawPoint(spurpunkte, [2,0,0], "", "cyan", "belowleft", 6);
       drawPoint(spurpunkte, [0,3,0], "", "cyan", "right", 6);
