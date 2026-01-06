@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" initial-scale="1.0" />
+  <meta name="author" content="Sebastian Heine" />
+  <meta name="robot" content="noindex" />
+  <title>HEIS | Ana Geom II | Ebenengleichungen</title>
+  <link rel="stylesheet" type="text/css" href="/css/colors.css" />
+  <link rel="stylesheet" type="text/css" href="/css/gridNoTimeline.css" />
+  <link rel="stylesheet" type="text/css" href="/css/navbar.css" />
+  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="/css/courses.css" />
+  <link rel="stylesheet" type="text/css" href="/css/oktanten.css" />
+  <script type="text/javascript" src="jquery-3.3.1.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <script>
+    window.MathJax = {
+      tex: {
+        macros: {
+          vector: ['\\begin{pmatrix}#1\\end{pmatrix}', 1]
+        }
+      }
+    };
+  </script>
+
+</head>
+
+<body>
+  <header>
+    <div class="nav">
+      <input type="checkbox" id="nav-check" />
+      <div class="nav-header">
+        <div class="nav-title">
+          <a href="/">Hr. Heines Unterricht</a>
+        </div>
+      </div>
+      <div class="nav-btn">
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+
+      <div class="nav-links">
+        <a href="/content/math/">Mathematik</a>
+        <a href="/content/math/13/">Klasse 13</a>
+        <a href="/content/math/13/AnGeoII/">Analytische Geometrie II</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section>
+      <h2>Ebenengleichungen</h2>
+      <div class="ziele">
+        <p>
+          Nachfolgend soll gezeigt werden, wie Ebenen im Raum auf verschiedene Art beschrieben werden können.
+        </p>
+        <p>
+          <a href="#aufgaben">Direkt zu den Aufgaben</a>
+        </p>
+      </div>
+
+      <div class="theorie">
+
+
+        <div class="definition">
+          <h4>Art der Ebenengleichung</h4>
+          <h5 style="color: darkgoldenrod;">Parametergleichung</h5>
+          <p>
+            Eine <span style="color: darkgoldenrod">Ebene</span> mit dem <span style="color: cyan">Stützvektor
+              \(\vec a\)</span> und den
+            Richtungsvektoren <span style="color: lime">\(\vec u\)</span> und
+            <span style="color: magenta">\(\vec v\)</span> hat die bereits bekannte Ebenengleichung
+          <p style="margin-left: 20px;">
+            \({\color{darkgoldenrod}E}: \vec x={\color{cyan}\vec a}+r\cdot {\color{lime}\vec u}+s\cdot
+            {\color{magenta}\vec v}\)
+          </p>
+          </p>
+
+          <div class="centered" style="max-width: 450px">
+            <svg id="paraform" viewBox="100 80 400 300" preserveAspectRatio="xMidYMid meet"></svg>
+          </div>
+
+
+          <h5 style="color: darkgoldenrod;">Normalengleichung</h5>
+          <p>
+            Eine <span style="color: darkgoldenrod">Ebene</span> mit dem <span style="color: cyan">Stützvektor
+              \(\vec a\)</span> und dem
+            Normalenvektor <span style="color: orange">\(\vec n\)</span>  hat die Ebenengleichung
+          <p style="margin-left: 20px;">
+            \({\color{darkgoldenrod}E}: \left(\vec x - {\color{cyan}\vec a}\right)\cdot {\color{orange}\vec n}=0\)
+          </p>
+          </p>
+
+          <div class="centered" style="max-width: 450px">
+            <svg id="normform" viewBox="100 80 400 300" preserveAspectRatio="xMidYMid meet"></svg>
+          </div>
+
+
+          <script src="/js/math/ebenengleichungen.js"></script>
+
+          <h5 style="color: darkgoldenrod;">Koordinatengleichung</h5>
+          <p>
+            Eine <span style="color: darkgoldenrod">Ebene</span> mit dem 
+            Normalenvektor <span style="color: orange">\(\vec n\)</span>  hat die Ebenengleichung
+          <p style="margin-left: 20px;">
+            \({\color{darkgoldenrod}E}: {\color{orange}a}x+{\color{orange}b}y+{\color{orange}c}z=d\)
+          </p>
+          </p>
+
+        </div>
+        <h6>Beispiel:</h6>
+        <p>
+          Die folgenden Gleichungen beschreiben alle die gleiche Ebene:
+          <ul>
+            <li>Parametergleichung: \({\color{darkgoldenrod}E}:\vec x={\color{cyan}\vector{2\\4\\-1}}+r\cdot {\color{lime}\vector{-2\\0\\4}}+s\cdot {\color{magenta}\vector{6\\3\\1}}\)</li>
+            <li>Normalengleichung: \({\color{darkgoldenrod}E}:\left[\vec x -{\color{cyan}\vector{2\\4\\-1}}\right]\cdot {\color{orange}\vector{-6\\13\\-3}}=0\)</li>
+            <li>Koordinatengleichung: \({\color{darkgoldenrod}E}: {\color{orange}-6}x+{\color{orange}13}y{\color{orange}-3}z=43\)</li>
+          </ul>
+          Die Farben stehen hierbei für <span style="color: cyan">Stützvektor</span>, 
+          <span style="color: lime">Richtungs</span><span style="color: magenta">vektoren</span> und
+          <span style="color: orange">Normalenvektor</span>.
+        </p>
+        <div class="definition">
+          <h4>Umrechnung</h4>
+          Je nach Fall ist die eine oder andere Form der Ebenengleichung nötig. Hier folgen die insgesamt sechs 
+          Umrechnungswege:
+          
+          <h5 style="color: darkgoldenrod;">Parametergleichung in Normalengleichung</h5>
+          <ol>
+            <li>Normalenvektor berechnen,</li>
+            <li>Normalengleichung mit Normalenvektor und Stützvektor aufstellen.</li>
+          </ol>
+
+          <h5 style="color: darkgoldenrod;">Parametergleichung in Koordinatengleichung</h5>
+          <ol>
+            <li>Normalenvektor berechnen,</li>
+            <li>Normalenvektor für \(a\), \(b\) und \(c\), sowie Stützvektor für \(x\), \(y\) und \(z\) einsetzen, 
+              um \(d\) zu berechnen,</li>
+              <li>Koordinatengleichung mit Normalenvektor und berechnetem \(d\) aufstellen.</li>
+          </ol>
+
+          <h5 style="color: darkgoldenrod;">Normalengleichung in Parametergleichung</h5>
+          <ol>
+            <li>Richtungsvektoren durch clevere Anwendung des Skalarproduktes mit Normalenvektor finden,</li>
+            <li>Parametergleichung mit Stützvektor und Richtungsvektoren aufstellen.</li>
+          </ol>
+
+          <h5 style="color: darkgoldenrod;">Normalengleichung in Koordinatengleichung</h5>
+          <ol>
+            <li>Normalenvektor für \(a\), \(b\) und \(c\), sowie Stützvektor für \(x\), \(y\) und \(z\) einsetzen, 
+              um \(d\) zu berechnen,</li>
+            <li>Koordinatengleichung mit Normalenvektor und berechnetem \(d\) aufstellen.</li>
+          </ol>
+
+          <h5 style="color: darkgoldenrod;">Koordinatengleichung in Parametergleichung</h5>
+          <ol>
+            <li>Stützpunkt/-vektor durch Probieren finden,</li>
+            <li>Richtungsvektoren durch clevere Anwendung des Skalarproduktes mit Normalenvektor finden,</li>
+            <li>Parametergleichung mit Stützvektor und Richtungsvektoren aufstellen.</li>
+          </ol>
+
+          <h5 style="color: darkgoldenrod;">Koordinatengleichung in Normalengleichung</h5>
+          <ol>
+            <li>Stützpunkt/-vektor durch Probieren finden,</li>
+            <li>Normalengleichung mit Normalenvektor und Stützvektor aufstellen.</li>
+          </ol>
+        </div>
+        <h6>Beispiel 1: Parametergleichung in Normalengleichung</h6>
+        <p>
+          Gegeben ist die Ebene \(E:\vec x={\color{cyan}\vector{2\\4\\-1}}+r\cdot {\color{lime}\vector{-2\\0\\4}}+s\cdot {\color{magenta}\vector{6\\3\\1}}\)
+          <ol>
+            <li>Normalenvektor: \({\color{lime}\vector{-2\\0\\4}}\times{\color{magenta}\vector{6\\3\\1}}={\color{orange}\vector{-12\\26\\-6}}=2\cdot{\color{orange}\vector{-6\\13\\-3}}\)</li>
+            <li>Normalengleichung: \(E: \left[\vec x -{\color{cyan}\vector{2\\4\\-1}}\right]\cdot {\color{orange}\vector{-6\\13\\-3}}=0\)</li>
+          </ol>
+        </p>
+        <h6>Beispiel 2: Parametergleichung in Koordinatengleichung</h6>
+        <p>
+          Gegeben ist die Ebene \(E:\vec x={\color{cyan}\vector{2\\4\\-1}}+r\cdot {\color{lime}\vector{-2\\0\\4}}+s\cdot {\color{magenta}\vector{6\\3\\1}}\)
+          <ol>
+            <li>Normalenvektor: \({\color{lime}\vector{-2\\0\\4}}\times{\color{magenta}\vector{6\\3\\1}}={\color{orange}\vector{-12\\26\\-6}}=2\cdot{\color{orange}\vector{-6\\13\\-3}}\)</li>
+            <li>Vektoren einsetzen: \({\color{orange}-6}\cdot {\color{cyan}2}+{\color{orange}13}\cdot {\color{cyan}4}\, {\color{orange}-3}\cdot ( {\color{cyan}-1})=d\) ergibt \(\color{salmon}d=43\)</li>
+            <li>Koordinatengleichung: : \(E: {\color{orange}-6}x+{\color{orange}13}y{\color{orange}-3}z=\color{salmon}43\) </li>
+          </ol>
+        </p>
+
+
+        <h6>Beispiel 3: Normalengleichung in Parametergleichung</h6>
+        <p>
+          Gegeben ist die Ebene \(E: \left[\vec x -{\color{cyan}\vector{2\\4\\-1}}\right]\cdot {\color{orange}\vector{-6\\13\\-3}}=0\)
+          <ol>
+            <li>Richtungsvektoren:
+              <p>
+                Es gilt: \(\vec n\cdot\vec u=0\) und \(\vec n\cdot\vec v=0\). Diese Gleichung kann einfach erfüllt werden,
+                indem man eine Koordinate von \(\vec u\), bzw. \(\vec v\) null setzt und anschließend die verbleibenden 
+                beiden Koordinaten tauscht und bei <i>einer</i> dieser das Vorzeichen umdreht. Für \(\vec u\) und \(\vec v\)
+                sollten natürlich verschiedene Koordinaten null gesetzt werden:
+                <p style="margin-left: 20px;">
+                  \(\begin{align*}
+                    {\color{orange}\vector{\color{green}-6\\13\\\color{green}-3}} \cdot \vector{\color{coral}3\\0\\\color{coral}-6}&=0 \quad\Rightarrow \vec u={\color{lime}\vector{3\\0\\\ -6}} \\[10px]
+                    {\color{orange}\vector{-6\\\color{green}13\\\color{green}-3}} \cdot \vector{0\\ \color{coral}3\\\color{coral}13}&=0 \quad\Rightarrow \vec u={\color{magenta}\vector{0\\3\\13}}
+                  \end{align*}\)
+                </p>
+              </p>
+            </li>
+            <li>
+              Parametergleichung: \(E:\vec x={\color{cyan}\vector{2\\4\\-1}}+r\cdot {\color{lime}\vector{3\\0\\6}}+s\cdot {\color{magenta}\vector{0\\3\\13}}\)
+            </li>     
+          </ol>
+        </p>
+        <h6>Beispiel 4: Normalengleichung in Koordinatengleichung</h6>
+        <p>
+          Gegeben ist die Ebene \(E: \left[\vec x -{\color{cyan}\vector{2\\4\\-1}}\right]\cdot {\color{orange}\vector{-6\\13\\-3}}=0\)
+          <ol>
+            <li>Vektoren einsetzen: \({\color{orange}-6}\cdot {\color{cyan}2}+{\color{orange}13}\cdot {\color{cyan}4}\, {\color{orange}-3}\cdot ( {\color{cyan}-1})=d\) ergibt \(\color{salmon}d=43\)</li>
+            <li>Koordinatengleichung: : \(E: {\color{orange}-6}x+{\color{orange}13}y{\color{orange}-3}z=\color{salmon}43\) </li>
+          </ol>
+        </p>
+
+
+        <h6>Beispiel 5: Koordinatengleichung in Parametergleichung</h6>
+        <p>
+          Gegeben ist die Ebene \(E: {\color{orange}-6}x+{\color{orange}13}y{\color{orange}-3}z=43\)
+          <ol>
+            <li>Stützpunkt finden:
+              <p>
+                Jeder Punkt, dessen Koordinaten in der Ebenengleichung eine wahre Aussage erzeugen, liegt auf dieser Ebene.
+              </p>
+              <p>
+                Um die Suche zu vereinfachen, kann man eine oder zwei Koordinaten null setzen und die Restliche(n) berechnen
+                oder durch Probieren finden.
+              </p>
+              <p>
+                Hier zum Beispiel: \(z=0\) ergibt:
+                <p style="margin-left: 20px;">
+                  \(\begin{align*}
+                    -6x+13y-3\cdot {\color{cyan}0}&=43 \\
+                    -6\cdot ({\color{cyan}-5})+13\cdot{\color{cyan}1}-3\cdot {\color{cyan}0}&=43 \\
+                    \vec a&=\color{cyan}\vector{-5\\1\\0}
+                  \end{align*}\)
+                    
+                </p>
+              </p>
+            </li>
+            <li>Richtungsvektoren:
+              <p>
+                Es gilt: \(\vec n\cdot\vec u=0\) und \(\vec n\cdot\vec v=0\). Diese Gleichung kann einfach erfüllt werden,
+                indem man eine Koordinate von \(\vec u\), bzw. \(\vec v\) null setzt und anschließend die verbleibenden 
+                beiden Koordinaten tauscht und bei <i>einer</i> dieser das Vorzeichen umdreht. Für \(\vec u\) und \(\vec v\)
+                sollten natürlich verschiedene Koordinaten null gesetzt werden:
+                <p style="margin-left: 20px;">
+                  \(\begin{align*}
+                    {\color{orange}\vector{\color{green}-6\\13\\\color{green}-3}} \cdot \vector{\color{coral}3\\0\\\color{coral}-6}&=0 \quad\Rightarrow \vec u={\color{lime}\vector{3\\0\\\ -6}} \\[10px]
+                    {\color{orange}\vector{-6\\\color{green}13\\\color{green}-3}} \cdot \vector{0\\ \color{coral}3\\\color{coral}13}&=0 \quad\Rightarrow \vec u={\color{magenta}\vector{0\\3\\13}}
+                  \end{align*}\)
+                </p>
+              </p>
+            </li>
+            <li>
+              Parametergleichung: \(E:\vec x={\color{cyan}\vector{-5\\1\\0}}+r\cdot {\color{lime}\vector{3\\0\\6}}+s\cdot {\color{magenta}\vector{0\\3\\13}}\)
+            </li>  
+          </ol>
+        </p>
+
+
+      </div>
+    </section>
+    <!-- <section>
+            <div class="videos">
+                <iframe width="360" height="202" src="https://www.youtube.com/embed/19goPRnthCE"
+                    title="Abstand Punkt - Punkt" frameborder="0" allow="web-share" allowfullscreen></iframe>
+
+            </div>
+        </section> -->
+    <section id="aufgaben" class="aufgaben">
+      <h3>Aufgaben zu Ebenen im Raum</h3>
+      <ol class="custom-marker point-after decimal more-spacing">
+        <li>Buch, Seite 134/135 Übung 3 bis 6 <a href="#a1">Lösungen</a></li>
+      </ol>
+    </section>
+
+    <section class="loesungen">
+      <h3>Lösungen zu Ebenen im Raum</h3>
+      <details id="a1"> <!-- style="counter-set: lsg-counter 2;" -->
+        <summary>...</summary>
+
+        <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
+          <li> 
+          </li>
+        </ol>
+      </details>
+
+      
+
+
+
+    </section>
+
+
+
+    <!-- JS-Datei mit allen Funktionen -->
+    <script src="/js/math/geo3d.js"></script>
+
+    <script>
+
+      drawAxes(paraglei, 4, 4, 4);
+      
+
+    </script>
+
+    <section id="meme">
+      <div class="images">
+        <img src="/img/ebene_meme.png" style="object-fit: scale-down; max-width: 300px" />
+      </div>
+      <div class="centered">
+        <a href="https://www.instagram.com/p/CfeGg9JrxFn/">
+          <h6>Original von engineeringmemesguy</h6>
+        </a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <a href="/misc/impressum.html">Impressum</a>
+    <div class="lastModified" align="center">
+      Zuletzt geändert:<br />
+      2. Dezember 2025
+      <!-- <span id="lastModifiedDate"></span> -->
+    </div>
+    <a href="/misc/datenschutz.html">Datenschutz</a>
+  </footer>
+</body>
