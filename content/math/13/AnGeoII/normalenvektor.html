@@ -94,7 +94,7 @@
           den beiden Richtungsvektoren \(\vec u\) und \(\vec v\).
         </p>
         <p>
-          Das heißt es gilt: \(\vec n\cdot\vec u=0\) und \(\vec n\cdot\vec u=0\):
+          Das heißt es gilt: \(\vec n\cdot\vec u=0\) und \(\vec n\cdot\vec v=0\):
         <p style="margin-left: 20px;">
           \(\begin{align*}
           0&=\vec n\cdot \vec u\\
@@ -126,6 +126,62 @@
           <p>
             Mit der Berechnung des Kreuzprodukten \(\vec n=\vec u\times \vec v\) erhält man sofort einen
             Vektor, der orthogonal auf beiden Vektoren \(\vec u\) und \(\vec v\) steht.
+          </p>
+          
+        </div>
+        <h6>Beispiel 1: Gleichungssystem</h6>
+        <p>
+          Es soll ein Normalenvektor der Ebene \(E:\vec
+          x=\vector{2\\1\\-2}+r\cdot\vector{1\\0\\-1}+s\cdot\vector{0\\2\\2}\)
+          bestimmt werden.
+        <ol>
+          <li>Normalenvektor: \(\vec n=\vector{x\\y\\z}\)</li>
+          <li>Gleichungen aufstellen:
+            <p style="margin-left: 20px;">
+              \(\begin{align*}
+              0&=\vec n\cdot \vec u\\
+              0&=\vector{x\\y\\z} \cdot\vector{1\\0\\-1} \\
+              I:\ 0&=x+0y-z=x-z\\[15px]
+              0&=\vec n\cdot \vec v\\
+              0&=\vector{x\\y\\z}\cdot\vector{0\\2\\2} \\
+              II:\ 0&=0x+2y+2z=2y+2z
+              \end{align*}\)
+            </p>
+          </li>
+          <li>Beide Gleichungen enthalten bereits nur zwei Variablen, sodass ein weiteres
+            Umstellen unnötig ist.</li>
+          <li>Beliebige Variable festlegen: \(z=1\), da beide Gleichungen \(z\) enthalten.
+            <p>
+              Damit ergibt sich aus Gleichung \(I\): \(x=1\)<br>
+              und aus Gleichung \(II:\) \(y=-1\)
+            </p>
+          </li>
+        </ol>
+        Das ergibt einen Normalenvektor von \(\vec n=\vector{1\\-1\\1}\).
+        </p>
+        <p>
+          Da \(z\) beliebig gewählt werden kann, gibt es auch beliebig viele Möglichkeiten den Normalenvektor
+          anzugeben. Alle möglichen Normalenvektoren sind kollinear zueinander.
+        </p>
+        <div class="definition">
+          <h4>Exkurs Kreuzprodukt</h4>
+          <p>
+            Im Gegensatz zum Skalarprodukt ergibt das Vektor-/Kreuzprodukt keine Zahl
+            (Skalar), sondern einen neuen Vektor.
+          </p>
+          <p>
+            Schreibweise:
+          <p style="margin-left: 20px;">
+            \(\begin{align*}
+            \text{Skalarprodukt:}&\, \vec a \cdot \vec b = c & \text{Kreuzprodukt:}&\, \vec a \times \vec b = \vec c
+            \end{align*}\)</p>
+          Der entstehende Vektor \(\vec c\) steht senkrecht sowohl auf dem
+          Vektor \(\vec a\) als auch auf dem Vektor \(\vec b\). Die Richtung kann
+          mithilfe der Rechten-Hand-Regel bestimmt werden.
+          </p>
+          <h5>Vorgehen:</h5>
+          <p>
+            Beide Vektoren werden verlängert und anschließend über Kreuz multipliziert.
           </p>
           <div class="centered" style="max-height: 450px;">
             <svg version='1.1' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'
@@ -592,61 +648,6 @@
             </svg>
             <script type="text/javascript" src="/js/math/normalenVektorAnimation.js"></script>
           </div>
-        </div>
-        <h6>Beispiel 1: Gleichungssystem</h6>
-        <p>
-          Es soll ein Normalenvektor der Ebene \(E:\vec
-          x=\vector{2\\1\\-2}+r\cdot\vector{1\\0\\-1}+s\cdot\vector{0\\2\\2}\)
-          bestimmt werden.
-        <ol>
-          <li>Normalenvektor: \(\vec n=\vector{x\\y\\z}\)</li>
-          <li>Gleichungen aufstellen:
-            <p style="margin-left: 20px;">
-              \(\begin{align*}
-              0&=\vec n\cdot \vec u\\
-              0&=\vector{x\\y\\z} \cdot\vector{1\\0\\-1} \\
-              I:\ 0&=x+0y-z=x-z\\[15px]
-              0&=\vec n\cdot \vec v\\
-              0&=\vector{x\\y\\z}\cdot\vector{0\\2\\2} \\
-              II:\ 0&=0x+2y+2z=2y+2z
-              \end{align*}\)
-            </p>
-          </li>
-          <li>Beide Gleichungen enthalten bereits nur zwei Variablen, sodass ein weiteres
-            Umstellen unnötig ist.</li>
-          <li>Beliebige Variable festlegen: \(z=1\), da beide Gleichungen \(z\) enthalten.
-            <p>
-              Damit ergibt sich aus Gleichung \(I\): \(x=1\)<br>
-              und aus Gleichung \(II:\) \(y=-1\)
-            </p>
-          </li>
-        </ol>
-        Das ergibt einen Normalenvektor von \(\vec n=\vector{1\\-1\\1}\).
-        </p>
-        <p>
-          Da \(z\) beliebig gewählt werden kann, gibt es auch beliebig viele Möglichkeiten den Normalenvektor
-          anzugeben. Alle möglichen Normalenvektoren sind kollinear zueinander.
-        </p>
-        <div class="definition">
-          <h4>Exkurs Kreuzprodukt</h4>
-          <p>
-            Im Gegensatz zum Skalarprodukt ergibt das Vektor-/Kreuzprodukt keine Zahl
-            (Skalar), sondern einen neuen Vektor.
-          </p>
-          <p>
-            Schreibweise:
-          <p style="margin-left: 20px;">
-            \(\begin{align*}
-            \text{Skalarprodukt:}&\, \vec a \cdot \vec b = c & \text{Kreuzprodukt:}&\, \vec a \times \vec b = \vec c
-            \end{align*}\)</p>
-          Der entstehende Vektor \(\vec c\) steht senkrecht sowohl auf dem
-          Vektor \(\vec a\) als auch auf dem Vektor \(\vec b\). Die Richtung kann
-          mithilfe der Rechten-Hand-Regel bestimmt werden.
-          </p>
-          <h5>Vorgehen:</h5>
-          <p>
-            Beide Vektoren werden verlängert und anschließend über Kreuz multipliziert.
-          </p>
         </div>
         <h6>Beispiel 2: Kreuzprodukt</h6>
         <p>
