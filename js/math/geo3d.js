@@ -256,7 +256,7 @@ function drawLine(target, point, dir, label = "", color = "green", position = "b
 
 
 // === Ebenen ===
-function drawPlane(target, p0, v1, v2, label = "", color = "orange", position = "belowright") {
+function drawPlane(target, p0, v1, v2, label = "", color = "orange", position = "belowright", thickness = 0.25) {
     const steps = [-1.5, 1.5];
     const corners = [
         [0, 0], [1, 0], [1, 1], [0, 1]
@@ -274,7 +274,7 @@ function drawPlane(target, p0, v1, v2, label = "", color = "orange", position = 
     poly.setAttribute("fill", color);
     poly.setAttribute("fill-opacity", "0.25");
     poly.setAttribute("stroke", color);
-    poly.setAttribute("stroke-width", "0.5");
+    poly.setAttribute("stroke-width", thickness);
     target.appendChild(poly);
 
     drawText(target, xText, yText, label, color, position);
