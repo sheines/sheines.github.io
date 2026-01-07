@@ -13,6 +13,11 @@ a:hover {
   color: var(--bloom-fg);
   text-shadow: 0 0 1em var(--shadow-fg);
 }
+
+h6 {
+  color: aqua;
+}
+
 sf {
   text-decoration-color: darkred;
   text-decoration-line: line-through;
