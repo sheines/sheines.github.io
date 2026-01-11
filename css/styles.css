@@ -3,7 +3,11 @@ body {
   font-family: "segoe ui";
 }
 
-a {
+h6 {
+  color: aqua;
+}
+
+a, a h6 {
   cursor: pointer;
   color: var(--fg-header);
   text-decoration: none;
@@ -12,10 +16,6 @@ a {
 a:hover {
   color: var(--bloom-fg);
   text-shadow: 0 0 1em var(--shadow-fg);
-}
-
-h6 {
-  color: aqua;
 }
 
 sf {
