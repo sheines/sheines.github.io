@@ -101,6 +101,33 @@
                 gibt es für diese Achse keinen Spurpunkt.
               </p>
         </div>
+        <h6>Beispiel: Aus Koordinatenform</h6>
+        <p>
+          Es sollen die Spurpunkte der Ebene 
+          \(2x+4y-3z=12\)
+          bestimmt werden.
+        </p>
+        <p>
+          Für den Spurpunkt mit der \(x\)-Achse müssen die \(y\)- und 
+          \(z\)-Koordinate null gesetzt werden:
+          <p style="margin-left: 20px;">
+            \(\begin{align*}
+              2x+4\cdot 0-3\cdot 0&=12 \\
+              2x&=12 \\
+              x&=6
+            \end{align*}\)
+          </p>
+          Das heißt die Ebene schneidet die \(x\)-Achse im Punkt \(S_x(6\mid0\mid0)\).
+        </p>
+        <p>
+          Die anderen beiden Spurpunkte können analog berechnet werden.
+          <p style="margin-left: 20px;">
+            \(\begin{align*}
+          &S_y(0\mid 3\mid0)&&S_z(0\mid0\mid -4)
+          \end{align*}\)
+          </p>
+        </p>
+
         <h6>Beispiel: Aus Parameterform</h6>
         <p>
           Es sollen die Spurpunkte der Ebene 
@@ -141,32 +168,6 @@
           <p style="margin-left: 20px;">
             \(\begin{align*}
           &S_y(0\mid 4\mid0)&&S_z(0\mid0\mid3)
-          \end{align*}\)
-          </p>
-        </p>
-        <h6>Beispiel: Aus Koordinatenform</h6>
-        <p>
-          Es sollen die Spurpunkte der Ebene 
-          \(2x+4y-3z=12\)
-          bestimmt werden.
-        </p>
-        <p>
-          Für den Spurpunkt mit der \(x\)-Achse müssen die \(y\)- und 
-          \(z\)-Koordinate null gesetzt werden:
-          <p style="margin-left: 20px;">
-            \(\begin{align*}
-              2x+4\cdot 0-3\cdot 0&=12 \\
-              2x&=12 \\
-              x&=6
-            \end{align*}\)
-          </p>
-          Das heißt die Ebene schneidet die \(x\)-Achse im Punkt \(S_x(6\mid0\mid0)\).
-        </p>
-        <p>
-          Die anderen beiden Spurpunkte können analog berechnet werden.
-          <p style="margin-left: 20px;">
-            \(\begin{align*}
-          &S_y(0\mid 3\mid0)&&S_z(0\mid0\mid -4)
           \end{align*}\)
           </p>
         </p>
@@ -455,10 +456,11 @@
           </li>
           <li> Richtungsvektoren von Spurgeraden: \(E:\vec x=\vector{3\\0\\0}+r\cdot\vector{-1\\2\\0}+s\cdot\vector{0\\3\\4}\)
             <div class="centered" style="max-width: 250px">
-                <svg id="task6c" viewBox="-210 -440 500 710">
+                <svg id="task6c" viewBox="-210 -300 590 610">
                   <defs></defs>
                 </svg>
               </div>
+              Angegebene Spurpunkte aus Geradengleichungen abgelesen.
           </li>
 
         </ol>
@@ -584,6 +586,13 @@
       drawPolygon(task6b, [[0,0,6], [4,0,6], [4,4,0],[0,4,0]], "", "darkgoldenrod", "orange");
       drawPoint(task6b, [0,0,6], "", "cyan", "aboveleft", 6);
       drawPoint(task6b, [0,4,0], "", "cyan", "right", 6);
+
+      drawAxes(task6c, 4, 7, 4);
+      drawPolygon(task6c, [[0,6,0], [3,0,0], [0,3,-4]], "", "darkgoldenrod", "orange");
+      drawLine(task6c,[3,0,0],[-1,2,0],"","cyan","",2.5, false);
+      drawLine(task6c,[0,6,0],[0,3,4],"","cyan","",2.5, false);
+      drawPoint(task6c, [3,0,0], "", "cyan", "aboveleft", 6);
+      drawPoint(task6c, [0,6,0], "", "cyan", "right", 6);
 
 
     </script>

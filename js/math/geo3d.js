@@ -231,7 +231,7 @@ function drawSegment(target, p1, p2, label = "", color = "green", position = "ab
 }
 
 // === Geraden ===
-function drawLine(target, point, dir, label = "", color = "green", position = "belowright", thickness = 1.5) {
+function drawLine(target, point, dir, label = "", color = "green", position = "belowright", thickness = 1.5, dashed=false) {
     const t = 100;
     const p1 = [point[0] - t * dir[0], point[1] - t * dir[1], point[2] - t * dir[2]];
     const p2 = [point[0] + t * dir[0], point[1] + t * dir[1], point[2] + t * dir[2]];
@@ -246,7 +246,8 @@ function drawLine(target, point, dir, label = "", color = "green", position = "b
     line.setAttribute("y2", y2);
     line.setAttribute("stroke", color);
     line.setAttribute("stroke-width", thickness);
-    line.setAttribute("stroke-dasharray", "5,5");
+    if (dashed)
+        line.setAttribute("stroke-dasharray", "5,5");
     target.appendChild(line);
 
     // Beschriftung am Stützvektor
