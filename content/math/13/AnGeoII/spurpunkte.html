@@ -408,6 +408,33 @@
         </ul>
       </details>
 
+      <details id="a3" style="counter-set: lsg-counter 11;"> <!-- style="counter-set: lsg-counter 2;" -->
+        <summary>Achsenabschnitt einer Ebene</summary>
+        <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
+          <li> \(S_x(4\mid0\mid0)\), \(S_y(0\mid2\mid0)\) und \(S_z(0\mid0\mid-4)\)
+            <div class="centered" style="max-width: 250px">
+                <svg id="task5a" viewBox="-210 -250 500 610">
+                  <defs></defs>
+                </svg>
+              </div>
+          </li>
+          <li> \(S_x(5\mid0\mid0)\) und \(S_y(0\mid2\mid0)\), parallel zur \(z\)-Achse
+            <div class="centered" style="max-width: 250px">
+                <svg id="task5b" viewBox="-210 -250 500 450">
+                  <defs></defs>
+                </svg>
+              </div>
+          </li>
+          <li> \(S_z(0\mid0\mid4)\), parallel zur \(xy\)-Ebene
+            <div class="centered" style="max-width: 250px">
+                <svg id="task5c" viewBox="-210 -290 500 450">
+                  <defs></defs>
+                </svg>
+              </div>
+          </li>
+        </ol>
+      </details>
+
 
     </section>
 
@@ -500,6 +527,25 @@
       drawPolygon(task3e, [[0,0,0], [4,4,0], [4,4,3],[0,0,3]], "", "darkgoldenrod", "orange");
       drawPoint(task3e, [0,0,0], "", "cyan", "aboveleft", 6);
 
+
+
+      drawAxes(task5a, 5, 4, 3);
+      drawPolygon(task5a, [[0,0,-4], [0,2,0], [4,0,0]], "", "darkgoldenrod", "orange");
+      drawPoint(task5a, [4,0,0], "", "cyan", "aboveleft", 6);
+      drawPoint(task5a, [0,2,0], "", "cyan", "aboveleft", 6);
+      drawPoint(task5a, [0,0,-4], "", "cyan", "aboveleft", 6);
+      drawSegment(task5a, [0,0,0],[0,0,-5],"","#a7a7a8","",1,true);
+
+      drawAxes(task5b, 6, 4, 3);
+      drawPolygon(task5b, [[5,0,0],[5,0,3], [0,2,3], [0,2,0]], "", "darkgoldenrod", "orange");
+      drawPoint(task5b, [5,0,0], "", "cyan", "aboveleft", 6);
+      drawPoint(task5b, [0,2,0], "", "cyan", "aboveleft", 6);
+
+      drawAxes(task5c, 4, 4, 5);
+      drawPolygon(task5c, [[0,0,4],[4,0,4], [4,4,4], [0,4,4]], "", "darkgoldenrod", "orange");
+      drawPoint(task5c, [0,0,4], "", "cyan", "aboveleft", 6);
+
+
     </script>
 
     <section id="meme">
@@ -516,8 +562,8 @@
   <footer>
     <a href="/misc/impressum.html">Impressum</a>
     <div class="lastModified" align="center">
-      Zuletzt geändert:<br />
-      2. Dezember 2025
+      Erstellt am:<br />
+      12. Januar 2026
       <!-- <span id="lastModifiedDate"></span> -->
     </div>
     <a href="/misc/datenschutz.html">Datenschutz</a>
