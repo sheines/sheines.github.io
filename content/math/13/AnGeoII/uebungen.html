@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" initial-scale=1.0 />
+    <meta name="author" content="Sebastian Heine" />
+    <meta name="robot" content="noindex" />
+    <title> HEIS | Ana Geom II | Übungen</title>
+    <link rel="stylesheet" type="text/css" href="/css/colors.css" />
+    <link rel="stylesheet" type="text/css" href="/css/gridNoTimeline.css" />
+    <link rel="stylesheet" type="text/css" href="/css/navbar.css" />
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="/css/courses.css" />
+    <link rel="stylesheet" type="text/css" href="/css/oktanten.css" />
+    <script type="text/javascript" src="jquery-3.3.1.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <script>
+        window.MathJax = {
+            tex: {
+                macros: {
+                    vector: ['\\begin{pmatrix}#1\\end{pmatrix}', 1]
+                }
+            }
+        };
+    </script>
+
+</head>
+
+<body>
+    <header>
+        <div class="nav">
+            <input type="checkbox" id="nav-check">
+            <div class="nav-header">
+                <div class="nav-title">
+                    <a href="/">Hr. Heines Unterricht</a>
+                </div>
+            </div>
+            <div class="nav-btn">
+                <label for="nav-check">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+
+            <div class="nav-links">
+                <a href="/content/math/">Mathematik</a>
+                <a href="/content/math/13/">Klasse 13</a>
+                <a href="/content/math/13/AnGeoII/">Analytische Geometrie II</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section>
+            <h2>Übungs- und Anwendungsaufgaben</h2>
+            <div class="ziele">
+                <p>
+                    Nachfolgend sollen die in den vorherigen Kapitel erlernten Fähigkeiten vertieft und gefestigt
+                    werden.
+                </p>
+            </div>
+
+            <h3>Themen</h3>
+            <ul class="more-spacing">
+                <li>Ebenengleichung aufstellen</li>
+                <li>Ebenengleichung umformen</li>
+                <li>Achsenabschnittspunkte und Spurgeraden bestimmen</li>
+                <li>Schrägbilder zeichnen</li>
+            </ul>
+            <!-- <details class="openClose" style="border-color: lightblue; margin-top: 10px;">
+                <summary class="nonumber" data-open="Funktionen einklappen" data-close="Funktionen ausklappen">
+                </summary>
+                <ol class="custom-marker parens-around lower-alpha more-spacing">
+                    <li>\(a(x)=2x-3\)</li>
+                    <li>\(b(x)=-4x+6\)</li>
+                    <li>\(c(x)=\frac15x-4\)</li>
+                    <li>\(d(x)=-\frac13x-8\)</li>
+                    <li>\(e(x)=-\frac32x+12\)</li>
+                    <li>\(f(x)=\frac58x-\frac38 \)</li>
+                </ol>
+            </details> -->
+            <section id="aufgaben" class="aufgaben">
+                <h3>Aufgaben zu Spurpunkten und -geraden</h3>
+                <ol class="custom-marker point-after decimal">
+                    <li> Buch Seite 139 Übungen 5 bis 9 <a href="#a1">Lösungen</a> </li>
+                    <li> Buch Seite 140 Übungen 10 bis 13 <a href="#a2">Lösungen</a> </li>
+
+                </ol>
+            </section>
+            <section class="loesungen">
+                <h3>Lösungen zu Übungs- und Anwendungsaufgaben</h3>
+
+                <details id="a1" style="counter-set: lsg-counter 4;"> <!-- style="counter-set: lsg-counter 2;" -->
+                    <summary>Ebenengleichungen</summary>
+                    Es gibt mehrere Möglichkeiten die Ebenen zu beschreiben. Alle kürzbaren Vektoren wurden auf die
+                    kleinste ganzzahlige Variante reduziert.
+                    <ol class="custom-marker parens-around lower-alpha more-spacing">
+                        <li>Ebenengleichungen:
+                            <p style="margin-left: 20px;">
+                                \(\begin{align*}
+                                E: \vec x&=\vector{1\\2\\-2}+r\cdot\vector{-1\\3\\2}+s\cdot\vector{2\\-1\\0} \\
+                                E: 0&=\left[\vec x-\vector{1\\2\\-2}\right]\cdot\vector{2\\4\\-5}\\
+                                E: 20&=2x+4y-5z
+                                \end{align*}\)
+                            </p>
+                        </li>
+                        <li>Ebenengleichungen:
+                            <p style="margin-left: 20px;">
+                                \(\begin{align*}
+                                E: \vec x&=\vector{2\\1\\1}+r\cdot\vector{2\\1\\1}+s\cdot\vector{1\\2\\3} \\
+                                E: 0&=\left[\vec x-\vector{2\\1\\1}\right]\cdot\vector{1\\-5\\3}\\
+                                E: 0&=x-5y+3z
+                                \end{align*}\)
+                            </p>
+                        </li>
+
+                    </ol>
+                </details>
+
+                <details> <!-- style="counter-set: lsg-counter 2;" -->
+                    <summary>Aufstellen der Normalengleichung</summary>
+                    Es gibt mehrere Möglichkeiten die Ebenen zu beschreiben. Alle kürzbaren Vektoren wurden auf die
+                    kleinste ganzzahlige Variante reduziert.
+                    <ol class="custom-marker parens-around lower-alpha more-spacing">
+                        <li>Der zu findende Stützvektor muss die Koordinatengleichung erfüllen.
+                            <p style="margin-left: 20px;">
+                                \(\begin{align*}
+                                E: \left[\vec x-\vector{-3\\0\\0}\right]\cdot\vector{-4\\5\\3}&=0
+                                \end{align*}\)
+                            </p>
+                        </li>
+                        <li>Der zu findende Stützvektor muss die Koordinatengleichung erfüllen.
+                            <p style="margin-left: 20px;">
+                                \(\begin{align*}
+                                E: \left[\vec x-\vector{4\\0\\0}\right]\cdot\vector{1\\0\\2}&=0
+                                \end{align*}\)
+                            </p>
+                        </li>
+                        <li>Normelenvektor mittels Gleichungssystem oder Kreuzprodukt bestimmen.
+                            <p style="margin-left: 20px;">
+                                \(\begin{align*}
+                                E: \left[\vec x-\vector{1\\0\\0}\right]\cdot\vector{3\\-2\\1}&=0
+                                \end{align*}\)
+                            </p>
+                        </li>
+                        <li>Normelenvektor mittels Gleichungssystem oder Kreuzprodukt bestimmen.
+                            <p style="margin-left: 20px;">
+                                \(\begin{align*}
+                                E: \left[\vec x-\vector{5\\2\\3}\right]\cdot\vector{-1\\4\\5}&=0
+                                \end{align*}\)
+                            </p>
+                        </li>
+                        <li>Stützvektor ist bspw. \(\overrightarrow{OA}\), Normalenvektor aus \(\overrightarrow{AB}\)
+                            und \(\overrightarrow{AC}\) bestimmen.
+                            <p style="margin-left: 20px;">
+                                \(\begin{align*}
+                                E: \left[\vec x-\vector{0\\2\\0}\right]\cdot\vector{2\\-2\\-3}&=0
+                                \end{align*}\)
+                            </p>
+                        </li>
+                        <li>Stützvektor ist Koordinatenursprung, Normalenvektor ist \(z\)-Achse.
+                            <p style="margin-left: 20px;">
+                                \(\begin{align*}
+                                E: \left[\vec x-\vector{0\\0\\0}\right]\cdot\vector{0\\0\\1}=\vec x\cdot\vector{0\\0\\1}&=0
+                                \end{align*}\)
+                            </p>
+                        </li>
+                        <li>Stützvektor ist Koordinatenursprung, Normalenvektor ist Winkelhalbierende der \(xy\)-Ebene.
+                            <p style="margin-left: 20px;">
+                                \(\begin{align*}
+                                E: \left[\vec x-\vector{0\\0\\0}\right]\cdot\vector{1\\1\\0}=\vec x\cdot\vector{1\\1\\0}&=0
+                                \end{align*}\)
+                            </p>
+                            Da nicht spezifiziert ist, welche Winkelhalbierende (es gibt zwei) gemeint ist, ist der
+                            Normalenvektor
+                            \(\vector{1\\-1\\0}\) auch richtig.
+                        </li>
+                        <li>Stützvektor ist Koordinatenursprung, Richtungsvektoren sind \(z\)-Achse und
+                            \(\overrightarrow{OP}\).
+                            <p style="margin-left: 20px;">
+                                \(\begin{align*}
+                                E: \left[\vec x-\vector{0\\0\\0}\right]\cdot\vector{-1\\1\\0}=\vec x\cdot\vector{-1\\1\\0}&=0
+                                \end{align*}\)
+                            </p>
+                        </li>
+                    </ol>
+                </details>
+
+                <details> <!-- style="counter-set: lsg-counter 2;" -->
+                    <summary>Aufstellen der Koordinatengleichung</summary>
+                    Es gibt mehrere Möglichkeiten die Ebenen zu beschreiben.
+                    <ol class="custom-marker parens-around lower-alpha more-spacing">
+                        <li>Achsenabschnittsgleichung:
+                            <p style="margin-left: 20px;">
+                                \(\begin{align*}
+                                E: \tfrac x3+\tfrac y5+\tfrac z2&=1
+                                \end{align*}\)
+                            </p>
+                        </li>
+                        <li>Auf \(y\)-Achse heißt \(b=0\). Da außerdem \(P(4\mid0\mid4)\) enthalten ist, muss \(a=-c\)
+                            gelten.
+                            <p style="margin-left: 20px;">
+                                \(\begin{align*}
+                                E: x-z&=0
+                                \end{align*}\)
+                            </p>
+                        </li>
+                        <li>Nicht eindeutig, da \(A\) und \(C\) der gleiche Punkt sind.</li>
+                        <li>Nicht eindeutig, da es unendlich viele Ebenen gibt, die auf \(F\) senkrecht stehen. Diese
+                            könnten alle um den Punkt \(P\) rotieren. </li>
+                    </ol>
+                </details>
+
+                <details> <!-- style="counter-set: lsg-counter 2;" -->
+                    <summary>Aufstellen der Parametergleichung</summary>
+                    Es gibt mehrere Möglichkeiten die Ebenen zu beschreiben.
+                    <ol class="custom-marker parens-around lower-alpha more-spacing">
+                        <li>\(E: \vec x=\vector{6\\0\\0}+r\cdot\vector{1\\2\\0}+s\cdot\vector{0\\3\\2}\)
+                        </li>
+                        <li>\(E: \vec x=\vector{1\\0\\3}+r\cdot\vector{0\\-2\\3}+s\cdot\vector{-1\\2\\0}\)
+                        </li>
+                        <li>Stützvektor ist Koordinatenursprung, Richtungsvektoren sind \(x\)-Achse und \(vec n_F\).
+                            <p style="margin-left: 20px;">
+                                \(\begin{align*}
+                                E: \vec x&=r\cdot\vector{1\\0\\0}+s\cdot\vector{2\\-1\\2}
+                                \end{align*}\)
+                            </p>
+                        </li>
+                    </ol>
+                </details>
+
+                <details> <!-- style="counter-set: lsg-counter 2;" -->
+                    <summary>Aufstellen der Ebenengleichung</summary>
+                    Es gibt mehrere Möglichkeiten die Ebenen zu beschreiben. Andere Formen sind oftmals gleichwertig.
+                    <ol class="custom-marker parens-around lower-alpha more-spacing">
+                        <li>\(x\) und \(y\) können beliebig gewählt werden, nur \(z\) ist fest:
+                            <p style="margin-left: 20px;">
+                                \(\begin{align*}
+                                E: z=0
+                                \end{align*}\)
+                            </p>
+                        </li>
+                        <li>Achsenabschnittsgleichung:
+                            <p style="margin-left: 20px;">
+                                \(\begin{align*}
+                                E: \tfrac x4+\tfrac y2+\tfrac z6&=1
+                                \end{align*}\)
+                            </p>
+                        </li>
+                        <li>\(y\) und \(z\) können beliebig gewählt werden, nur \(x\) ist fest:
+                            <p style="margin-left: 20px;">
+                                \(\begin{align*}
+                                E: x=2
+                                \end{align*}\)
+                            </p>
+                        </li>
+                        <li>Stützvektor ist \(\overrightarrow{OP}\), Richtungsvektoren sind \(z\)-Achse und
+                            \(\overrightarrow{PS_y}\):
+                            <p style="margin-left: 20px;">
+                                \(\begin{align*}
+                                E: \vec x&=\vector{4\\4\\0}+r\cdot\vector{0\\0\\1}+s\cdot\vector{-1\\2\\0}
+                                \end{align*}\)
+                            </p>
+                        </li>
+                        <li>Stützvektor ist \(\overrightarrow{OA}\), Richtungsvektoren sind \(z\)-Achse und
+                            \(\overrightarrow{BA}\):
+                            <p style="margin-left: 20px;">
+                                \(\begin{align*}
+                                E: \vec x&=\vector{2\\-1\\5}+r\cdot\vector{0\\0\\1}+s\cdot\vector{3\\2\\-4}
+                                \end{align*}\)
+                            </p>
+                        </li>
+                        <li>Variante 1: Punkte ablesen und Punktrichtungsgleichung (Parametergleichung) aufstellen.
+                            <p>
+                                Variante 2: Achsenabschnitte ablesen und Achsenabschnittsgleichung aufstellen
+                            <p style="margin-left: 20px;">
+                                \(\begin{align*}
+                                E_1: & \tfrac x3+\tfrac y3-\tfrac z3=1 \\
+                                E_2: &\tfrac x2 + \tfrac z2=1
+                                \end{align*}\)
+                            </p>
+                            </p>
+
+                        </li>
+                    </ol>
+                </details>
+
+            </section>
+            <section id="meme">
+                <div class="images">
+                    <img src="/img/uebe-meme.jpg" style="object-fit:scale-down; max-width: 300px;">
+                </div>
+                <div class="centered">
+                    <!-- <a href="https://mrkylebrown.weebly.com/1-slope--rate-of-change.html"> -->
+                    <h6>Original von JK</h6>
+                    <!-- </a> -->
+                </div>
+            </section>
+    </main>
+    <footer>
+        <a href="/misc/impressum.html">Impressum</a>
+        <div class="lastModified" align="center">
+            Erstellt am:<br>
+            13. Januar 2026
+            <!-- <span id="lastModifiedDate"></span> -->
+        </div>
+        <a href="/misc/datenschutz.html">Datenschutz</a>
+    </footer>
+</body>
