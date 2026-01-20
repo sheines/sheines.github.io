@@ -36,6 +36,11 @@ img {
   height: auto;
 }
 
+svg {
+  width: 100%;
+  height: 100%;
+}
+
 .scale {
   scale: 1.2;
 }
@@ -196,7 +201,7 @@ details summary::before {
 .centered {
   display: flex;
   justify-content: center;
-  
+  aspect-ratio: 1 / 1;
 }
 .videos {
   display: flex;
