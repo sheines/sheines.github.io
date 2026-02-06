@@ -1,4 +1,0 @@
-# This file is used internally by FFMPEG.
-file 'file:F:/Dokumente/GitHub/sheines.github.io/python/media/videos/intro/1080p60/partial_movie_files/Intro/3977891868_3711393081_223132457.mp4'
-file 'file:F:/Dokumente/GitHub/sheines.github.io/python/media/videos/intro/1080p60/partial_movie_files/Intro/2852726489_3113009368_2674554463.mp4'
-file 'file:F:/Dokumente/GitHub/sheines.github.io/python/media/videos/intro/1080p60/partial_movie_files/Intro/2852726489_3890345977_295479618.mp4'
