@@ -2,13 +2,9 @@ from manim import *
 
 class EbenePunkt(ThreeDScene):
     def construct(self):
-
-
-        
+   
         # Hintergrundfarbe
-        self.camera.background_color = "#003744"
-
-
+        self.camera.background_color = None
 
         # ---------------------------
         # Koordinatensystem
