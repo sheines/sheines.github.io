@@ -1,6 +1,6 @@
 from manim import *
 
-class EbeneGerade1(ThreeDScene):
+class EbeneGerade2(ThreeDScene):
     def construct(self):
 
         # Hintergrundfarbe
@@ -82,7 +82,7 @@ class EbeneGerade1(ThreeDScene):
         # Gerade in Parameterform: R(t) = R0 + t*dir
         # ---------------------------
         R0 = np.array([1, 1, 1])
-        dir_vec = np.array([1, -1, 0])
+        dir_vec = np.array([0.75, -1.5, -0.5])
 
         def ger(t):
             return R0 + t*dir_vec

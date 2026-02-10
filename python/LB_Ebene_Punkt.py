@@ -61,8 +61,8 @@ class EbenePunkt(ThreeDScene):
         )
 
         # Farbe + Transparenz
-        plane_surface.set_fill(ORANGE, opacity=0.5)
-        plane_surface.set_stroke(ORANGE, width=1)
+        plane_surface.set_fill(SVGNAMES.DARKGOLDENROD, opacity=0.5)
+        plane_surface.set_stroke(SVGNAMES.DARKGOLDENROD, width=1)
 
         # Ebene hinzufügen
         self.add(plane_surface)
@@ -71,8 +71,8 @@ class EbenePunkt(ThreeDScene):
         # Punkt im Raum
         # ---------------------------
         # punkt_pos = np.array([2, 1, 3])
-        punkt1 = Dot3D(point=np.array([2, 1, 3]), radius=0.05, color=RED_D)
-        punkt2 = Dot3D(point=np.array([1, 1, 0]), radius=0.05, color=GREEN_D)
+        punkt1 = Dot3D(point=np.array([2, 1, 3]), radius=0.05, color=SVGNAMES.CORAL)
+        punkt2 = Dot3D(point=np.array([1, 1, 0]), radius=0.05, color=SVGNAMES.LIME)
         # punkt_label = MathTex("P").scale(0.6).next_to(punkt, UP)
 
         self.add(punkt1, punkt2)
