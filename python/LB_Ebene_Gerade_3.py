@@ -1,6 +1,6 @@
 from manim import *
 
-class EbeneGerade2(ThreeDScene):
+class EbeneGerade3(ThreeDScene):
     def construct(self):
 
         # Hintergrundfarbe
@@ -81,29 +81,20 @@ class EbeneGerade2(ThreeDScene):
         # ---------------------------
         # Gerade in Parameterform: R(t) = R0 + t*dir
         # ---------------------------
-        R0 = np.array([1, 1, 1])
-        dir_vec = np.array([0.75, 1., 0])
+        R0 = np.array([1, 1, 0.2])
+        dir_vec = np.array([1, -1, 0])
 
         def ger(t):
             return R0 + t*dir_vec
 
         # Gerade als Linie mit Mesh (z.B. 20 Punkte)
-        t_values = np.linspace(-2.75, 1.75, 2)
+        t_values = np.linspace(-1.75, 1.75, 2)
         line_points = [ger(t) for t in t_values]
         gerade = Line3D(line_points[0], line_points[-1], color=SVGNAMES.MAGENTA)
         gerade.set_stroke(width=1)
         # gerade_label = MathTex("g").scale(0.6).next_to(line_points[-1], RIGHT)
 
         self.add(gerade)
-
-        # ---------------------------
-        # SchnittPunkt
-        # ---------------------------
-
-        punkt1 = Dot3D(point=np.array([1/7,-1/7,1]), radius=0.075, color=SVGNAMES.LIME)
-
-        self.add(punkt1)
-
 
         # ---------------------------
         # Kamera initial position

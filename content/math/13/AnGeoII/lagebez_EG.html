@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width" initial-scale="1.0" />
   <meta name="author" content="Sebastian Heine" />
   <meta name="robot" content="noindex" />
-  <title>HEIS | Ana Geom II | Lagebeziehungen Punkt Ebene</title>
+  <title>HEIS | Ana Geom II | Lagebeziehungen Gerade Ebene</title>
   <link rel="stylesheet" type="text/css" href="/css/colors.css" />
   <link rel="stylesheet" type="text/css" href="/css/gridNoTimeline.css" />
   <link rel="stylesheet" type="text/css" href="/css/navbar.css" />
@@ -54,10 +54,11 @@
   </header>
   <main>
     <section>
-      <h2>Lagebeziehungen von Punkten und Ebenen</h2>
+      <h2>Lagebeziehungen von Geraden und Ebenen</h2>
       <div class="ziele">
         <p>
-          Nachfolgend soll gezeigt werden, wie Punkte und Ebenen im Raum zueinander stehen können und wie man das bestimmt.
+          Nachfolgend soll gezeigt werden, wie Geraden und Ebenen im Raum zueinander stehen können und wie man das
+          bestimmt.
         </p>
         <p>
           <a href="#aufgaben">Direkt zu den Aufgaben</a>
@@ -75,126 +76,98 @@
           </style>
           <h4>Lagebeziehungen</h4>
           <p>
-            Geraden können im Raum, im Gegensatz zur Ebene, auf zweierleiweise zueinander stehen:
-            <div class="centered" style="max-width: 600px;">
-              <video
-                src="/python/media/videos/LB_Ebene_Punkt/1080p60/EbenePunkt.webm"
-                autoplay
-                loop
-                muted
-                playsinline
-                width="100%"
-              ></video>
-            </div>
-            Punkte können entweder <span style="color: lime;">in der Ebene</span> oder <span style="color: coral">außerhalb der Ebene</span> liegen.
+            Geraden können im Raum, im Gegensatz zur Ebene, auf dreierleiweise zueinander stehen:
+
+          <ul>
+            <li>Geraden können echt parallel zur Ebene sein:
+              <div class="centered" style="max-width: 600px;">
+                <video src="/python/media/videos/LB_Ebene_Gerade_1/1080p60/EbeneGerade1.webm" autoplay loop muted
+                  playsinline width="100%"></video>
+              </div>
+            </li>
+            <li>Geraden können die Ebene in <span style="color: lime;">einem Punkt</span> schneiden:
+              <div class="centered" style="max-width: 600px;">
+                <video src="/python/media/videos/LB_Ebene_Gerade_2/1080p60/EbeneGerade2.webm" autoplay loop muted
+                  playsinline width="100%"></video>
+              </div>
+            </li>
+            <li>Geraden können in der Ebene liegen:
+              <div class="centered" style="max-width: 600px;">
+                <video src="/python/media/videos/LB_Ebene_Gerade_3/1080p60/EbeneGerade3.webm" autoplay loop muted
+                  playsinline width="100%"></video>
+              </div>
+            </li>
+          </ul>
+
           </p>
-          
+
 
           <h5>Lagebeziehungen bestimmen:</h5>
           <p>
-            Für die Prüfung muss die Punktprobe durchgeführt werden.
+            Die Prüfung ist am einfachsten mit der Koordinatenform der Ebene durchführbar.
+          </p>
+          <p>
+            Dazu muss die Geradengleichung lediglich Koordinatenweise in die Ebenengleichung eingesetzt und \(r\) berechnet werden.
+          </p>
+          <p>
+            Es können drei Fälle auftreten:
             <ul>
-              <li><b>Parameterform: </b>
-                <ol>
-                  <li>Gleichungssystem mit Ortsvektor des Punktes für jede Koordinate aufstellen,</li>
-                  <li>\(r\) und \(s\) mit zwei der Gleichungen berechnen,</li>
-                  <li>Prüfen, ob dritte Gleichung mit den Werten erfüllt ist.</li>
-                </ol>
-              </li>
-              <li><b>Normalenform:</b>
-                <ol>
-                  <li>Ortsvektor des Punktes für \(\vec x\) einsetzen,</li>
-                  <li>Prüfen, ob Gleichung erfüllt ist.</li>
-                </ol>
-              </li>
-              <li><b>Koordinatenform:</b>
-                <ol>
-                  <li>Koordinaten des Punktes für \(x\), \(y\) und \(z\) einsetzen,</li>
-                  <li>Prüfen, ob Gleichung erfüllt ist.</li>
-                </ol>
-              </li>
+              <li>\(r=a\): Die Gerade schneidet die Ebene.</li>
+              <li>\(a=a\) (wahre Aussage): Die Gerade liegt in der Ebene.</li>
+              <li>\(a=b\) (falsche Aussage): Die Gerade ist echt parallel zur Ebene.</li>
+            </ul>
+          </p>
+          <p>
+            In den anderen Formen muss wie folgt vorgegangen werden:
+            <ul>
+              <li>Parametergleichung: Geraden- und Ebenengleichung gleichsetzen, Gleichungssystem aufstellen und \(r\), \(s\) und \(t\) bestimmen.</li>
+              <li>Normalengleichung: Geradengleichung für \(\vec x\) einsetzen, Skalarprodukt ausführen und \(r\) berechnen.</li>
             </ul>
           </p>
         </div>
         <h6>Beispiel 1:</h6>
         <p>
-          Es soll die Lage des Punktes \(P(3\mid2\mid-1)\) zur Ebene \(E:\vec x=\vector{4\\2\\1}+r\cdot\vector{1\\0\\1}+s\cdot\vector{0\\1\\1}\)
+          Es soll die Lage der Gerade \(g:\vec x=\vector{{\color{lime}2}\\{\color{magenta}4}\\{\color{aqua}2}}+r\cdot\vector{{\color{lime}0}\\{\color{magenta}2}\\{\color{aqua}1}}\) zur Ebene \(E:x+2y+3z=9\)
           bestimmt werden.
-          <ol class="more-spacing">
-            <li>Gleichungssystem aufstellen (\(\vec x = \overrightarrow{OP}\))
-              <p style="margin-left: 20px;">
-                \(
-                  \begin{align*}
-                    I\quad\quad 3&=4+r \\
-                    II\quad\quad2&=2+s\\
-                    III\quad-1&=1+r+s
-                \end{align*}
-                \)
-              </p>
-            </li>
-            <li>
-              Aus \(I\) folgt, dass \(r=-1\). Aus \(II\) folgt, dass \(s=0\).
-            </li>
-             <li> 
-                \(r\) und \(s\) in \(III\) einsetzen:
-                <p style="margin-left: 20px;">
-                \(
-                  \begin{align*}
-                    III\quad-1&=1+r+s \\
-                            -1&=1+(-1)+0 \\
-                            -1&=0\quad ↯
-                \end{align*}
-                \)
-              </p>
-            
-            </li>
-          </ol>
-          Das bedeutet, dass der Punkt \(P\) nicht auf der Ebene \(E\) liegt.
-        </p>
+
+            <p style="margin-left: 20px;">
+              \(
+              \begin{align*}
+                9&=x+2y+3z \\
+                9&=({\color{lime}2+0r})+2\cdot({\color{magenta}4+2r})+3\cdot ({\color{aqua}2+r}) \\
+                9&=2+8+4r+6+3r \\
+                9&=16+7r \quad | -16 \\
+                -7&=7r \qquad\quad\ |:7 \\
+                r&=-1
+              \end{align*}
+              \)
+            </p>
+          \(r\) hat einen festen Wert, das heißt, die Gerade \(g\) schneidet die Ebene \(E\).
+          <p>
+            Für die Berechnung des Schnittpunktes, hier \(S(2\mid2\mid1)\) muss das berechnete \(r\) lediglich in die Geradengleichung eingesetzt werden.
+          </p>
         
+        </p>
+
         <h6>Beispiel 2:</h6>
         <p>
-          Es soll die Lage des Punktes \(P(3\mid2\mid-1)\) zur Ebene \(E:\left[\vec x-\vector{3\\1\\-4}\right]\cdot\vector{4\\3\\-1}=0\)
-          bestimmt werden.
+          Es soll die Lage der Gerade \(g:\vec x=\vector{{\color{lime}2}\\{\color{magenta}3}\\{\color{aqua}1}}+r\cdot\vector{{\color{lime}1}\\{\color{magenta}1}\\{\color{aqua}-1}}\) zur Ebene \(E:x+2y+3z=9\)
+          bestimmt werden.     
 
-
-            <p>Ortsvektor einsetzen und ausrechnen:
-              <p style="margin-left: 20px;">
-                \(
-                  \begin{align*}
-                    \left[\vector{3\\2\\-1}-\vector{3\\1\\-4}\right]\cdot\vector{4\\3\\-1}&=0 \\
-                    \vector{0\\1\\3}\cdot\vector{4\\3\\-1}&=0 \\
-                    0\cdot 4 + 1\cdot 3+3\dot (-1)&=0\\
-                    0&=0\quad \checkmark
-                \end{align*}
-                \)
-              </p>
-              Die Gleichung ist erfüllt, der Punkt \(P\) liegt also auf der Ebene \(E\).
+            <p style="margin-left: 20px;">
+              \(
+              \begin{align*}
+                9&=x+2y+3z \\
+                9&=({\color{lime}2+r})+2\cdot({\color{magenta}3+r})+3\cdot ({\color{aqua}1-r}) \\
+                9&=2+r+6+2r+3-3r \\
+                9&=11 \quad ↯
+              \end{align*}
+              \)
             </p>
-            
+            Die Gleichung führt in einen Widerspruch, das heißt, die Gerade ist echt parallel zur Ebene.
         </p>
 
-        <h6>Beispiel 3:</h6>
-        <p>
-          Es soll die Lage des Punktes \(P(3\mid2\mid-1)\) zur Ebene \(E: 3x-5y+2z=3\)
-          bestimmt werden.
 
-
-            <p>Ortsvektor einsetzen und ausrechnen:
-              <p style="margin-left: 20px;">
-                \(
-                  \begin{align*}
-                    3\cdot3 -5\cdot 2+2\cdot (-1)&=3 \\
-                    9-10-2&=3\\
-                    -3&=3\quad ↯
-                \end{align*}
-                \)
-              </p>
-              Die Gleichung ist nicht erfüllt, der Punkt \(P\) liegt also nicht auf der Ebene \(E\).
-            </p>
-            
-        </p>
-        
       </div>
     </section>
     <!-- <section>
@@ -207,98 +180,36 @@
     <section id="aufgaben" class="aufgaben">
       <h3>Aufgaben zu Lagebeziehungen</h3>
       <ol class="custom-marker point-after decimal more-spacing">
-        <li>Buch, Seite 142 Übung 1 bis 3 <a href="#a1">Lösungen</a></li>
-        <li>Buch, Seite 143 Übung 4 und 5 (Erklärung direkt da drüber) <a href="#a2">Lösungen</a></li>
+        <li>Buch, Seite 146 Übung 7 <a href="#a1">Lösungen</a></li>
+        <li>Buch, Seite 146 Übung 6 bis 10 <a href="#a2">Lösungen</a></li>
 
       </ol>
     </section>
 
     <section class="loesungen">
       <h3>Lösungen zu Lagebeziehungen</h3>
-      <details id="a1"> <!-- style="counter-set: lsg-counter 1;" -->
-        <summary>Punktproben I</summary>
+      <details id="a1" style="counter-set: lsg-counter 6;"> <!-- style="counter-set: lsg-counter 1;" -->
+        <summary>Lagebeziehungen Gerade/Ebene (KF)</summary>
 
         <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
-          <li>\(P\in E_1\), \(Q\not\in E_1\)</li>
-          <li>\(P\in E_2\), \(Q\not\in E_2\)</li>
+          <li> \(2(-1+2r)+6r+2r=4\) ergibt\(r=\tfrac12\)<br> Das heißt \(g\) und \(E\) schneiden einander in \(S(0\mid3\mid1)\).</li>
+          <li> \(4r+4(3-2r)+2(2+2r)=8\) ergibt\(16=8\)<br> Das heißt \(g\) und \(E\) sind echt parallel zueinander.</li>
+          <li> \(2(1+2r)+2(2+r)+3(0-2r)=6\) ergibt\(6=6\)<br> Das heißt \(g\) liegt in \(E\).</li>
         </ol>
       </details>
 
-      <details >
-        <summary>Punktproben II</summary>
+      <details>
+        <summary>...</summary>
 
         <ul class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
-          <li> \(A\in E\), \(B\not\in E\)</li>
-          <li> 
-            Es gilt:
-            <p style="margin-left: 20px;">
-                \(
-                  \begin{align*}
-                    3a-(a+1)+2\cdot 2=5
-                \end{align*}
-                \)
-              </p>
-              Ergibt: \(a=1\) und \(P(3\mid2\mid2)\)
-          </li>
-          <li> 
-            Es gilt:
-            <p style="margin-left: 20px;">
-                \(
-                  \begin{align*}
-                    a-(2a+3)+2\cdot (3-2a)=5
-                \end{align*}
-                \)
-              </p>
-              Ergibt: \(a=-\tfrac25\) und \(P(-\tfrac25\mid\tfrac{11}5\mid\tfrac{19}5)\)
-          </li>
+          <li> ...</li>
           
+
         </ul>
       </details>
 
-      <details >
-        <summary>Punktproben III</summary>
+      
 
-        <ul class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
-          <li> \(A\in E\), \(B\not\in E\), \(c\in E\)</li>
-          <li> \(D\in E\) für \(a\in \mathbb R\)<br>
-                \(F\in E\) für \(a=3\)
-          </li>
-          <li>\(E: x-y+2z=3\)</li>
-          <li>\(E: \vec x=\vector{2\\1\\1}+r\cdot\vector{1\\1\\0}+s\cdot\vector{2\\0\\-1}\)</li>
-        </ul>
-      </details>
-
-      <details id="a2" >
-        <summary>Lage Punkt/Dreieck</summary>
-        Die Richtungsvektoren dürfen hier natürlich nicht gekürzt werden.
-        <ul>
-          <li>Ebenengleichung: \(\vec x=\vector{6\\3\\1}+r\cdot\vector{0\\6\\0}+s\cdot\vector{-6\\0\\2}\)</li>
-          <li>\(P\): \(r=\tfrac13\) und \(s=\tfrac12\) \(\rightarrow\) \(P\) liegt im Dreieck </li>
-          <li>\(Q\): \(r=\tfrac23\) und \(s=\tfrac12\) \(\rightarrow\) \(Q\) liegt nicht im Dreieck </li>
-        </ul>
-       
-      </details>
-
-      <details >
-        <summary>Lage Punkt/Parallelogramm</summary>
-        <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
-          <li> Im Parallelogramm sind gegenüberliegende Seiten gleichlang und parallel.
-            <p>
-              Es gilt: \(\overrightarrow{AB}=\overrightarrow{DC}=\vector{-2\\2\\2}\) und 
-                \(\overrightarrow{BC}=\overrightarrow{AD}=\vector{--3\\0\\2}\)
-            </p>
-            Gegenüberliegende Vektoren sind gleich: Ja, es ist ein Parallelogramm.
-            </li>
-          <li>Ebenengleichung: \(\vec x=\vector{4\\1\\0}+r\cdot\vector{-2\\2\\2}+s\cdot\vector{-3\\0\\2}\)
-            <ul>
-          <li>\(P\): \(r=\tfrac14\) und \(s=\tfrac12\) \(\rightarrow\) \(P\) liegt im Parallelogramm </li>
-          <li>\(Q\): \(r=1,5\) und \(s=1\) \(\rightarrow\) \(Q\) liegt nicht im Parallelogramm </li>
-        </ul>
-          </li>
-        </ol>
-       
-      </details>
-    
 
 
     </section>
@@ -319,7 +230,8 @@
         <img src="/img/EP_meme.png" style="object-fit: scale-down; max-width: 300px" />
       </div>
       <div class="centered">
-        <a href="https://syarifh.medium.com/heres-the-picture-of-a-plane-with-red-dots-in-some-area-of-its-body-8da70b004238">
+        <a
+          href="https://syarifh.medium.com/heres-the-picture-of-a-plane-with-red-dots-in-some-area-of-its-body-8da70b004238">
           <h6>Original von Syarif Hidayatullah</h6>
         </a>
       </div>
@@ -329,7 +241,7 @@
     <a href="/misc/impressum.html">Impressum</a>
     <div class="lastModified" align="center">
       Erstellt am:<br />
-      6. Febuar 2026
+      10. Febuar 2026
       <!-- <span id="lastModifiedDate"></span> -->
     </div>
     <a href="/misc/datenschutz.html">Datenschutz</a>
