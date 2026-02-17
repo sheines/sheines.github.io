@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" initial-scale="1.0" />
+  <meta name="author" content="Sebastian Heine" />
+  <meta name="robot" content="noindex" />
+  <title>HEIS | Ana Geom II | Lagebeziehungen Ebene Ebene</title>
+  <link rel="stylesheet" type="text/css" href="/css/colors.css" />
+  <link rel="stylesheet" type="text/css" href="/css/gridNoTimeline.css" />
+  <link rel="stylesheet" type="text/css" href="/css/navbar.css" />
+  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="/css/courses.css" />
+  <link rel="stylesheet" type="text/css" href="/css/oktanten.css" />
+  <script type="text/javascript" src="jquery-3.3.1.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <script>
+    window.MathJax = {
+      tex: {
+        macros: {
+          vector: ['\\begin{pmatrix}#1\\end{pmatrix}', 1]
+        }
+      }
+    };
+  </script>
+
+</head>
+
+<body>
+  <header>
+    <div class="nav">
+      <input type="checkbox" id="nav-check" />
+      <div class="nav-header">
+        <div class="nav-title">
+          <a href="/">Hr. Heines Unterricht</a>
+        </div>
+      </div>
+      <div class="nav-btn">
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+
+      <div class="nav-links">
+        <a href="/content/math/">Mathematik</a>
+        <a href="/content/math/13/">Klasse 13</a>
+        <a href="/content/math/13/AnGeoII/">Analytische Geometrie II</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section>
+      <h2>Lagebeziehungen von Ebenen zueinander</h2>
+      <div class="ziele">
+        <p>
+          Nachfolgend soll gezeigt werden, wie mehrere Ebenen im Raum zueinander stehen können und wie man das
+          bestimmt.
+        </p>
+        <p>
+          <a href="#aufgaben">Direkt zu den Aufgaben</a>
+        </p>
+      </div>
+
+      <div class="theorie">
+
+
+        <div class="definition">
+          <style>
+            h5 {
+              color: darkgoldenrod;
+            }
+          </style>
+          <h4>Lagebeziehungen</h4>
+          <p>
+            Ebenen können im Raum auf dreierleiweise zueinander stehen:
+
+          <ul>
+            <li>Ebenen können echt parallel zueinander sein:
+              <div class="centered" style="max-width: 600px;">
+                <video src="/python/media/videos/LB_Ebene_Ebene_1/1080p60/EbeneEbene1.webm" autoplay loop muted
+                  playsinline width="100%"></video>
+              </div>
+            </li>
+            <li>Ebenen können sich schneiden, es entsteht eine <span style="color: magenta;">Schnittgerade</span>:
+              <div class="centered" style="max-width: 600px;">
+                <video src="/python/media/videos/LB_Ebene_Ebene_2/1080p60/EbeneEbene2.webm" autoplay loop muted
+                  playsinline width="100%"></video>
+              </div>
+            </li>
+            <li>Ebenen können ineinander liegen:
+              <div class="centered" style="max-width: 600px;">
+                <video src="/python/media/videos/LB_Ebene_Ebene_3/1080p60/EbeneEbene3.webm" autoplay loop muted
+                  playsinline width="100%"></video>
+              </div>
+            </li>
+          </ul>
+
+          </p>
+
+
+          <h5>Lagebeziehungen bestimmen I:</h5>
+          <p>
+            Die Prüfung ist am einfachsten mit der Koordinaten- oder Normalenform der Ebene durchführbar.
+          </p>
+          <p>Normalenvektoren auf Kollinearität prüfen
+          <ol class="more-spacing">
+            <li>Wenn nicht kollinear: <b>Ebenen schneiden sich</b></li>
+            <li>Wenn kollinear: Punktprobe eines beliebigen Punktes \(P\) von Ebene \(E_1\) mit Ebene \(E_2\):
+              <ul>
+                <li>\(P\) liegt in \(E_2\): <b>Ebenen sind identisch</b></li>
+                <li>\(P\) liegt nicht in \(E_2\): <b>Ebenen sind echt parallel</b></li>
+              </ul>
+            </li>
+          </ol>
+          </p>
+
+          <h5>Lagebeziehungen bestimmen II:</h5>
+          <p>
+            Wenn eine Ebene in Parameterform vorliegt, wird die zweite Ebene vorzugsweise in Koordinatenform genutzt:
+          </p>
+          <p>Ebene der Parametergleichung koordinatenweise in andere Ebenengleichung einsetzen und vereinfachen:
+          <p>
+            Mögliche Ergebnisse:
+          <ol class="more-spacing">
+            <li>Es gibt eine Lösung (z.B. \(r=7s+3\)): <b>Ebenen schneiden sich</b></li>
+            <li>Wahre Aussage (z.B. \(4=4\)): <b>Ebenen sind identisch</b></li>
+            <li>Widerspruch (z.B. \(3=7\): <b>Ebenen sind echt parallel</b></li>
+          </ol>
+          </p>
+          </p>
+        </div>
+        <h6>Beispiel 1:</h6>
+        <p>
+          Es soll die Lage der Ebenen \(E: {\color{orange}4}x+{\color{orange}6}y+{\color{orange}8}z=24\)
+          zur Ebene \(F:{\color{magenta}2}x+{\color{magenta}3}y+{\color{magenta}4}z=12\)
+          bestimmt werden.
+
+        <p style="margin-left: 20px;">
+          \(
+          \begin{align*}
+          \vec n_E&={\color{orange}\vector{4\\6\\8}} & \vec n_F&={\color{magenta}\vector{2\\3\\4}}
+          \end{align*}
+          \)
+        </p>
+        Gleichsetzen ergibt, dass \({\color{orange}\vec n_E}=2\cdot\color{magenta}\vec n_F\), dass heißt die
+        Normalenvektoren sind kollinear.
+        </p>
+        <p>
+          Nun wird ein beiliebiger Punkt der Ebene \(E\) benötigt. So liegt der Punkt \(\color{cyan}P(0\mid0\mid3)\) auf
+          \(E\).
+        </p>
+        <p>
+          Punktprobe:
+        <p style="margin-left: 20px;">
+          \(
+          \begin{align*}
+            {\color{magenta}2}\cdot {\color{cyan}0}+{\color{magenta}3}\cdot {\color{cyan}0}+{\color{magenta}4}\cdot {\color{cyan}3}&=12 \\
+            12&=12\quad \checkmark
+          \end{align*}
+          \)
+        </p>
+        Das Einsetzen ergibt eine wahre Aussage, das heißt der Punkt \(P\) liegt auf \(E\) und \(F\).
+        </p>
+        <p>
+          Das bedeutet, die beiden Ebenen liegen ineinander.
+        </p>
+
+        <h6>Beispiel 2:</h6>
+        <p>
+          Es soll die Lage der Ebene \(E:\vec
+          x=\vector{{\color{lime}0}\\{\color{orange}0}\\{\color{aqua}3}}+r\cdot\vector{{\color{lime}3}\\{\color{orange}2}\\{\color{aqua}-1}}+s\cdot\vector{{\color{lime}3}\\{\color{orange}9}\\{\color{aqua}-1}}\)
+          zur Ebene \(F:\color{magenta}4x+3y+6z=36\)
+          bestimmt werden.
+
+        <p style="margin-left: 20px;">
+          \(
+          \begin{align*}
+          \color{magenta}36&\color{magenta}=4\cdot({\color{lime}0+3r+3s})+3\cdot({\color{orange}0+2r+9s})+6\cdot({\color{cyan}3-r-s}) \\
+          36&=12r+12s+6r+27s+18-6r-6s \\
+          36&=12r+33s+18 \\
+          18&=12r+33s \\
+          r&=\tfrac32-\tfrac{11}{4}s
+          \end{align*}
+          \)
+        </p>
+        Die Gleichung hat eine Lösung, das heißt, die beiden Ebenen schneiden sich.
+        </p>
+
+
+      </div>
+    </section>
+    <!-- <section>
+            <div class="videos">
+                <iframe width="360" height="202" src="https://www.youtube.com/embed/19goPRnthCE"
+                    title="Abstand Punkt - Punkt" frameborder="0" allow="web-share" allowfullscreen></iframe>
+
+            </div>
+        </section> -->
+    <section id="aufgaben" class="aufgaben">
+      <h3>Aufgaben zu Lagebeziehungen</h3>
+      <ol class="custom-marker point-after decimal more-spacing">
+        <li>Buch, Seite 154 und 155 Übung 26 und 27 <a href="#a1">Lösungen</a></li>
+        <li>Buch, Seite 158 Übung 29 <a href="#a2">Lösungen</a></li>
+
+      </ol>
+    </section>
+
+    <section class="loesungen">
+      <h3>Lösungen zu Lagebeziehungen</h3>
+      <details id="a1" style="counter-set: lsg-counter 6;"> <!-- style="counter-set: lsg-counter 1;" -->
+        <summary>...</summary>
+
+        <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
+          <li> ....</li>
+        </ol>
+      </details>
+
+      <details>
+        <summary>...</summary>
+
+        <ul class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
+          <li> ...</li>
+
+
+        </ul>
+      </details>
+
+
+
+
+
+    </section>
+
+
+
+    <!-- JS-Datei mit allen Funktionen -->
+    <script src="/js/math/geo3d.js"></script>
+
+    <script>
+      drawAxes(koord2D, 4, 4, "a");
+      drawAxes(koord3D, 4, 4, 4);
+
+    </script>
+
+    <section id="meme">
+      <div class="images">
+        <img src="/img/planes_meme.jpg" style="object-fit: scale-down; max-width: 300px" />
+      </div>
+      <div class="centered">
+        <a href="https://de.pinterest.com/pin/174725660517241091/">
+          <h6>Original von Steve Fetkenhour</h6>
+        </a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <a href="/misc/impressum.html">Impressum</a>
+    <div class="lastModified" align="center">
+      Erstellt am:<br />
+      17. Febuar 2026
+      <!-- <span id="lastModifiedDate"></span> -->
+    </div>
+    <a href="/misc/datenschutz.html">Datenschutz</a>
+  </footer>
+</body>
