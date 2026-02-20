@@ -257,7 +257,7 @@ function drawLine(target, point, dir, label = "", color = "green", position = "b
 
 
 // === Ebenen ===
-function drawPlane(target, p0, v1, v2, label = "", color = "orange", position = "belowright", thickness = 0.25) {
+function drawPlane(target, p0, v1, v2, label = "", color = "orange", position = "belowright", thickness = 0.25, opacity = 0.25) {
     const steps = [-1.5, 1.5];
     const corners = [
         [0, 0], [1, 0], [1, 1], [0, 1]
@@ -273,7 +273,7 @@ function drawPlane(target, p0, v1, v2, label = "", color = "orange", position = 
     const poly = document.createElementNS("http://www.w3.org/2000/svg", "polygon");
     poly.setAttribute("points", projected);
     poly.setAttribute("fill", color);
-    poly.setAttribute("fill-opacity", "0.25");
+    poly.setAttribute("fill-opacity", opacity);
     poly.setAttribute("stroke", color);
     poly.setAttribute("stroke-width", thickness);
     target.appendChild(poly);

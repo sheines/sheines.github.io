@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" initial-scale="1.0" />
+  <meta name="author" content="Sebastian Heine" />
+  <meta name="robot" content="noindex" />
+  <title>HEIS | Ana Geom II | Schnittwinkel</title>
+  <link rel="stylesheet" type="text/css" href="/css/colors.css" />
+  <link rel="stylesheet" type="text/css" href="/css/gridNoTimeline.css" />
+  <link rel="stylesheet" type="text/css" href="/css/navbar.css" />
+  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="/css/courses.css" />
+  <link rel="stylesheet" type="text/css" href="/css/oktanten.css" />
+  <script type="text/javascript" src="jquery-3.3.1.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <script>
+    window.MathJax = {
+      tex: {
+        macros: {
+          vector: ['\\begin{pmatrix}#1\\end{pmatrix}', 1]
+        }
+      }
+    };
+  </script>
+
+</head>
+
+<body>
+  <header>
+    <div class="nav">
+      <input type="checkbox" id="nav-check" />
+      <div class="nav-header">
+        <div class="nav-title">
+          <a href="/">Hr. Heines Unterricht</a>
+        </div>
+      </div>
+      <div class="nav-btn">
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+
+      <div class="nav-links">
+        <a href="/content/math/">Mathematik</a>
+        <a href="/content/math/13/">Klasse 13</a>
+        <a href="/content/math/13/AnGeoII/">Analytische Geometrie II</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section>
+      <h2>Schnittwinkel</h2>
+      <div class="ziele">
+        <p>
+          Nachfolgend soll gezeigt werden, was Schnittwinkel sind und wie man diese
+          berechnet.
+        </p>
+        <p>
+          <a href="#aufgaben">Direkt zu den Aufgaben</a>
+        </p>
+      </div>
+
+      <div class="theorie">
+
+
+        <div class="definition">
+          <style>
+            h5 {
+              color: darkgoldenrod;
+            }
+          </style>
+          <h4>Schnittwinkel</h4>
+          <p>
+            Der Schnittwinkel zwischen Geraden und/oder Ebenen wird genauso wie der Winkel zwischen zwei Vektoren
+            berechnet:
+          <ul class="more-spacing">
+            <li>Gerade &ndash; Gerade:
+              <p style="margin-left: 20px;">
+                \(
+                \begin{align*}
+                \cos \alpha &=\frac{|\vec m_1\cdot \vec m_2|}{|\vec m_1|\cdot |\vec m_2|}
+                \end{align*}
+                \)
+              </p>
+            </li>
+            <li>Gerade &ndash; Ebene:
+              <p style="margin-left: 20px;">
+                \(
+                \begin{align*}
+                \sin \alpha &=\frac{|\vec m_g\cdot \vec n_E|}{|\vec m_g|\cdot |\vec n_E|}
+                \end{align*}
+                \)
+              </p>
+            </li>
+            <li>Ebene &ndash; Ebene:
+              <p style="margin-left: 20px;">
+                \(
+                \begin{align*}
+                \cos \alpha &=\frac{|\vec n_1\cdot \vec n_2|}{|\vec n_1|\cdot |\vec n_2|}
+                \end{align*}
+                \)
+              </p>
+            </li>
+          </ul>
+          Dabei steht \(\vec m\) für den Richtungsvektor der Geraden und \(\vec n\) für den Normalenvektor der Ebenen.
+          </p>
+          <p>
+            Während sich die jeweils orthogonal stehenden Normalenvektoren der Ebenen ausgleichen, sodass die
+            Winkelfunktion (\(\cos\))
+            gleichbleibt, muss bei Gerade &ndash; Ebene die Winkelfunktion geändert werden, da ja der Winkel zwischen
+            Ebene und Gerade gesucht ist.
+            Genutzt wird jedoch der orthogonale Normalenvektor.
+          <div class="centered" style="max-width: 250px">
+            <svg id="bsp" viewBox="-150 -300 420 430">
+              <defs></defs>
+            </svg>
+          </div>
+          </p>
+
+
+
+
+
+        </div>
+        <h6>Beispiel 1:</h6>
+
+        <p>
+          Es soll der Winkel zwischen den Geraden \(g_1 : \vec x=\vector{2\\-3\\1}+r\cdot\vector{1\\3\\2}\)
+          und \(g_2 : \vec x=\vector{2\\-3\\1}+r\cdot\vector{-2\\4\\-1}\) bestimmt werden:
+        <p style="margin-left: 20px;">
+          \(
+          \begin{align*}
+          \vec m_1&=\vector{1\\3\\2}\qquad \vec m_2=\vector{-2\\4\\-1}
+          \end{align*}
+          \)
+        </p>
+        Das muss nun nur noch eingesetzt und ausgerechnet werden:
+        <p style="margin-left: 20px;">
+          \(
+          \begin{align*}
+          \cos \alpha &=\frac{|\vec m_1\cdot \vec m_2|}{|\vec m_1|\cdot |\vec m_2|} \\
+          \cos \alpha &=\frac{\left|\vector{1\\3\\2} \cdot \vector{-2\\4\\-1}\right|}{\left| \vector{1\\3\\2}
+          \right|\cdot \left| \vector{-2\\4\\-1} \right|} \\
+          \cos \alpha &=\frac{\left|1\cdot(-2)+3\cdot 4+2\cdot(-1)\right|}{ \sqrt{1^2+3^2+2^2}
+          \cdot \sqrt{(-2)^2+4^2+(-1)^2}} \\
+          \cos \alpha &=\frac{8}{\sqrt{14} \cdot \sqrt{21}} \approx 0,4666\qquad |\, \text{arc} \\
+          \alpha&=62,2\,^\circ
+          \end{align*}
+          \)
+        </p>
+        Die beiden Geraden schneiden sich in einem Winkel von \(62,2\,^\circ\).
+        </p>
+
+        <h6>Beispiel 2:</h6>
+
+        <p>
+          Es soll der Winkel zwischen der Geraden \(g : \vec x=\vector{2\\-3\\1}+r\cdot\vector{1\\3\\2}\)
+          und der Ebene \(E : 2x-4y+z=6\) bestimmt werden:
+        <p style="margin-left: 20px;">
+          \(
+          \begin{align*}
+          \vec m_g&=\vector{1\\3\\2}\qquad \vec n_E=\vector{2\\-4\\1}
+          \end{align*}
+          \)
+        </p>
+        Das muss nun nur noch eingesetzt und ausgerechnet werden:
+        <p style="margin-left: 20px;">
+          \(
+          \begin{align*}
+          \sin \alpha &=\frac{|\vec m_g\cdot \vec n_E|}{|\vec m_g|\cdot |\vec n_E|} \\
+          \sin \alpha &=\frac{\left|\vector{1\\3\\2} \cdot \vector{2\\-4\\1}\right|}{\left| \vector{1\\3\\2}
+          \right|\cdot \left| \vector{2\\-4\\1} \right|} \\
+          \sin \alpha &=\frac{8}{\sqrt{14} \cdot \sqrt{21}} \approx 0,4666\qquad |\, \text{arc} \\
+          \alpha&=27,8\,^\circ
+          \end{align*}
+          \)
+        </p>
+        Die Gerade schneidet die Ebene in einem Winkel von \(27,8\,^\circ\).
+        </p>
+
+
+
+      </div>
+    </section>
+    <!-- <section>
+            <div class="videos">
+                <iframe width="360" height="202" src="https://www.youtube.com/embed/19goPRnthCE"
+                    title="Abstand Punkt - Punkt" frameborder="0" allow="web-share" allowfullscreen></iframe>
+
+            </div>
+        </section> -->
+    <section id="aufgaben" class="aufgaben">
+      <h3>Aufgaben zu Lagebeziehungen</h3>
+      <ol class="custom-marker point-after decimal more-spacing">
+        <li>Buch, Seite 174 und 175 Übung 1 bis 3 <a href="#a1">Lösungen</a></li>
+        <li>Buch, Seite 176 und 177 Übung 4 bis 9 <a href="#a2">Lösungen</a></li>
+      </ol>
+    </section>
+
+    <section class="loesungen">
+      <h3>Lösungen zu Schnittwinkeln</h3>
+      <details id="a1"> <!-- style="counter-set: lsg-counter 1;" -->
+        <summary>...</summary>
+
+        <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
+          <li> ....</li>
+        </ol>
+      </details>
+
+      <details>
+        <summary>...</summary>
+
+        <ul class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
+          <li> ...</li>
+
+
+        </ul>
+      </details>
+
+
+
+
+
+    </section>
+
+
+
+    <!-- JS-Datei mit allen Funktionen -->
+    <script src="/js/math/geo3d.js"></script>
+
+    <script>
+      drawAxes(bsp, 4, 4, 4);
+
+      drawSegment(bsp, [1, 1, 1], [-0.5, -0.5, -0.25], "", "lime", "", 2.5)
+      drawPlane(bsp, [1, 1, 1], [-0.5, 0.5, 0], [0, 1, -0.5], "", "darkgoldenrod", "", 1, 0.9)
+      drawSegment(bsp, [1, 1, 1], [4, 4, 3.5], "", "lime", "", 2.5)
+      drawVector(bsp, [1, 1, 1], [1, 1, 2], "", "magenta")
+
+
+    </script>
+
+    <section id="meme">
+      <div class="images">
+        <img src="/img/angle_meme.jpg" style="object-fit: scale-down; max-width: 300px" />
+      </div>
+      <div class="centered">
+        <a href="https://de.pinterest.com/pin/to-get-that-angle-at-any-cost--83809243043788108/">
+          <h6>Original von Pulse Productions</h6>
+        </a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <a href="/misc/impressum.html">Impressum</a>
+    <div class="lastModified" align="center">
+      Erstellt am:<br />
+      20. Febuar 2026
+      <!-- <span id="lastModifiedDate"></span> -->
+    </div>
+    <a href="/misc/datenschutz.html">Datenschutz</a>
+  </footer>
+</body>
