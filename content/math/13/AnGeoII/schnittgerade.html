@@ -160,22 +160,85 @@
 
     <section class="loesungen">
       <h3>Lösungen zu Lagebeziehungen</h3>
-      <details id="a1" style="counter-set: lsg-counter 6;"> <!-- style="counter-set: lsg-counter 1;" -->
-        <summary>...</summary>
-
+      <details id="a1" style="counter-set: lsg-counter 29;"> <!-- style="counter-set: lsg-counter 1;" -->
+        <summary>Schnittgeraden von Ebenen</summary>
+        Ob \(E_1\) oder \(E_2\) umgewandelt wird ist egal. Ob nach \(r\) oder \(s\) umgestellt wird, ist egal.
         <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
-          <li> ....</li>
+          <li> Ansatz:
+            <p style="margin-left: 20px;">
+              \(\begin{align*}
+                4(5r+s)+2(6-4r-5s)+6(2-2r-2s)&=12 \\
+                        &\ldots \\
+                        1-6r&=s
+              \end{align*}\)
+            </p>
+            In \(E_2\) einsetzen:
+            <p style="margin-left: 20px;">
+              \(\begin{align*}
+                g:\vec x&=\vector{0\\6\\2}+r\cdot\vector{5\\-4\\-2}+(1-6r)\cdot\vector{1\\-5\\-2} \\
+                        &\ldots \\
+                g:\vec x&=\vector{3\\4\\0}+r\cdot\vector{-15\\-4\\12}       
+              \end{align*}\)
+            </p>
+          </li>
+          <li>
+            Parametergleichung \(E_2:\vec x=\vector{0\\4\\0}+r\cdot\vector{0\\-1\\2}+s\vector{3\\1\\0}\) 
+            <p>
+              Einsetzen ergibt \(s=0\)
+            </p>
+            <p>
+              Schnittgerade: \(g:\vec x=\vector{0\\4\\0}+r\cdot\vector{0\\-1\\2}\)
+            </p>
+          </li>
+          <li>
+            Parametergleichung \(E_2:\vec x=\vector{0\\0\\1}+r\cdot\vector{-1\\2\\0}+s\vector{0\\-4\\3}\) 
+            <p>
+              Einsetzen ergibt \(r=-1\)
+            </p>
+            <p>
+              Schnittgerade: \(g:\vec x=\vector{1\\-2\\1}+s\cdot\vector{0\\-4\\3}\)
+            </p>
+          </li>
+          <li>
+            <p>
+              Koordinatengleichung: \(E_1: 2x+y+z=10\)
+            </p>
+            Parametergleichung \(E_2:\vec x=\vector{-4\\5\\0}+r\cdot\vector{0\\-1\\1}+s\vector{4\\0\\5}\) 
+            <p>
+              Einsetzen ergibt \(s=1\)
+            </p>
+            <p>
+              Schnittgerade: \(g:\vec x= \vector{0\\5\\5}+r\cdot\vector{0\\-1\\1}\)
+            </p>
+          </li>
         </ol>
       </details>
 
-      <details>
-        <summary>...</summary>
+      <details style="counter-set: lsg-counter 31;">
+        <summary>Ebenengleichungen</summary>
 
-        <ul class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
-          <li> ...</li>
+        <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
+          <li>
+            Zwei Möglichkeiten:
+            <ul class="more-spacing">
+              <li>Variante 1: \(A\) in \(E\) einsetzen und \(d\) neu berechnen: \(F:2x-3y+2z=4\) </li>
+              <li>Variante 2: Normalengleichung mit \(\vec n_E\) und \(A\) als Stützpunkt aufstellen: 
+                  \(F: \left[\vec x-\vector{1\\2\\4}\right]\cdot\vector{2\\-3\\2}=0\)</li>
+            </ul>
+          </li>
+          <li>
+            Normalenvektor berechnen: \(\vec n_E=\vector{0\\-3\\2}\)
+            <p>
+              Dann Vorgehen wie in a):
+              <ul class="more-spacing">
+              <li>Koordinatengleichung: \(F:-3y+2z=-22\) </li>
+              <li>Normalengleichung : 
+                  \(F: \left[\vec x-\vector{-2\\6\\-2}\right]\cdot\vector{0\\-3\\2}=0\)</li>
+            </ul>
+            </p>
+          </li>
 
-
-        </ul>
+        </ol>
       </details>
 
 
