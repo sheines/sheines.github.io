@@ -370,7 +370,11 @@
                 <li>Schnittwinkel: \(\alpha_F=45\,^\circ\)</li>
               </ul>
             </p>  
-            
+            <div class="centered" style="max-width: 250px">
+                  <svg id="task7a" viewBox="-150 -350 470 520">
+                    <defs></defs>
+                  </svg>
+                </div>
           </li>
           <li> \(\vec n_E=\vector{0\\0\\1}\), \(\vec n_F=\vector{1\\0\\0}\) und \(\vec n_g=\vector{-2\\1\\2}\),  
             <p>Mit \(E\):
@@ -384,7 +388,12 @@
                 <li>Einsetzen ergibt: \(r=1\) und \(T(0\mid4\mid4)\)</li>
                 <li>Schnittwinkel: \(\alpha_F=41,81\,^\circ\)</li>
               </ul>
-            </p>      
+            </p>  
+            <div class="centered" style="max-width: 250px">
+                  <svg id="task7b" viewBox="-150 -350 470 520">
+                    <defs></defs>
+                  </svg>
+                </div>    
           </li>
           <li> \(\vec n_E=\vector{0\\1\\0}\), \(\vec n_F=\vector{1\\0\\0}\) und \(\vec n_g=\vector{-2\\1\\-1}\),  
             <p>Mit \(E\):
@@ -398,10 +407,60 @@
                 <li>Einsetzen ergibt: \(r=1\) und \(T(0\mid3\mid2)\)</li>
                 <li>Schnittwinkel: \(\alpha_F=54,74\,^\circ\)</li>
               </ul>
-            </p>      
+            </p>    
+            <div class="centered" style="max-width: 250px">
+                  <svg id="task7c" viewBox="-150 -350 470 520">
+                    <defs></defs>
+                  </svg>
+                </div>    
           </li>
+        </ol>
+      </details>
 
+      <details>
+        <summary>Schnittwinkel Ebene/Ebene II</summary>
 
+        <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
+          <li> \(\alpha=90\,^\circ\)</li>
+          <li> \(\alpha=45\,^\circ\)</li>
+          <li> \(\alpha=71,57\,^\circ\)</li>
+        </ol>
+      </details>
+
+      <details>
+        <summary>Hausdach</summary>
+        Es gibt, verschiedene Wege diese Aufgabe zu lösen.
+        <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
+          <li> 
+            Ebenengleichung des Dachs: \(D:\vec x=\vector{0\\12\\6}+r\cdot\vector{-1\\0\\0}+s\cdot\vector{0\\-6\\4}\)
+            <p>
+              Normalenvektor des Dachs: \(\vec n_D=\vector{0\\4\\6}\)
+            </p>
+            <p>
+              Richtungsvektor Antenne: \(\vec m_A=\vector{0\\0\\1}\)
+            </p>
+            <p>
+              Schnittwinkel: \(\alpha=56,31\,^\circ\)
+            </p>
+          </li>
+          <li>
+            Anfang und Ende des Stabs: \(S_A(-8\mid6\mid10)\) und \(S_E(-8\mid 9\mid16)\)
+            <p>
+              Richtungsvektor Stab: \(\overrightarrow{S_ES_A}=\vector{0\\-3\\-6}\)
+            </p>
+            <p>
+              Richtungsvektor Antenne: \(\vec m_A=\vector{0\\0\\-1}\)
+            </p>
+            <p>
+              Normalenvektor des Dachs: \(\vec n_D=\vector{0\\4\\6}\)
+            </p>
+            <p>
+              Schnittwinkel Antenne &ndash; Stab: \(\alpha=26,57\,^\circ\)
+            </p>
+            <p>
+              Schnittwinkel Dach &ndash; Stab: \(\alpha=82,87\,^\circ\)
+            </p>
+          </li>
         </ol>
       </details>
 
@@ -416,12 +475,39 @@
     <script src="/js/math/geo3d.js"></script>
 
     <script>
-      drawAxes(bsp, 4, 4, 4);
+      drawAxes(task7a, 6, 6, 6);
 
-      drawSegment(bsp, [1, 1, 1], [-0.5, -0.5, -0.25], "", "lime", "", 2.5)
-      drawPlane(bsp, [1, 1, 1], [-0.5, 0.5, 0], [0, 1, -0.5], "", "darkgoldenrod", "", 1, 0.9)
-      drawSegment(bsp, [1, 1, 1], [4, 4, 3.5], "", "lime", "", 2.5)
-      drawVector(bsp, [1, 1, 1], [1, 1, 2], "", "magenta")
+      drawLine(task7a, [4,1,2],[0,1,-1],"","magenta","",1.5,true);
+      drawPolygon(task7a,[[0,0,0],[5,0,0],[5,5,0],[0,5,0]],"","darkgoldenrod","orange");
+      drawPolygon(task7a,[[0,0,0],[5,0,0],[5,0,5],[0,0,5]],"","darkgoldenrod","orange");
+
+      drawSegment(task7a,[4,3,0],[4,0,3],"","magenta","",3);
+      drawPoint(task7a,[4,3,0],"S","lime","above",8);
+      drawPoint(task7a,[4,0,3],"T","lime","above",8);
+
+
+      drawAxes(task7b, 6, 6, 6);
+
+      drawLine(task7b, [2,3,2],[-2,1,2],"","magenta","",1.5,true);
+      drawPolygon(task7b,[[0,0,0],[5,0,0],[5,5,0],[0,5,0]],"","darkgoldenrod","orange");
+      drawPolygon(task7b,[[0,0,0],[0,5,0],[0,5,5],[0,0,5]],"","darkgoldenrod","orange");
+
+      drawSegment(task7b,[4,2,0],[0,4,4],"","magenta","",3);
+      drawPoint(task7b,[4,2,0],"S","lime","above",8);
+      drawPoint(task7b,[0,4,4],"T","lime","above",8);
+
+
+      drawAxes(task7c, 6, 6, 6);
+
+      drawLine(task7c, [2,2,3],[-2,1,-1],"","magenta","",1.5,true);
+      drawPolygon(task7c,[[0,0,0],[6.5,0,0],[6.5,0,5.5],[0,0,5.5]],"","darkgoldenrod","orange");
+      drawPolygon(task7c,[[0,0,0],[0,5,0],[0,5,5],[0,0,5]],"","darkgoldenrod","orange");
+
+      drawSegment(task7c,[6,0,5],[0,3,2],"","magenta","",3);
+      drawPoint(task7c,[6,0,5],"S","lime","above",8);
+      drawPoint(task7c,[0,3,2],"T","lime","above",8);
+
+      
 
 
     </script>
