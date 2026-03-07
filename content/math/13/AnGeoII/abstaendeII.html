@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" initial-scale="1.0" />
+  <meta name="author" content="Sebastian Heine" />
+  <meta name="robot" content="noindex" />
+  <title>HEIS | Ana Geom II | Abstände zu Ebenen II</title>
+  <link rel="stylesheet" type="text/css" href="/css/colors.css" />
+  <link rel="stylesheet" type="text/css" href="/css/gridNoTimeline.css" />
+  <link rel="stylesheet" type="text/css" href="/css/navbar.css" />
+  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="/css/courses.css" />
+  <link rel="stylesheet" type="text/css" href="/css/oktanten.css" />
+  <script type="text/javascript" src="jquery-3.3.1.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <script>
+    window.MathJax = {
+      tex: {
+        macros: {
+          vector: ['\\begin{pmatrix}#1\\end{pmatrix}', 1]
+        }
+      }
+    };
+  </script>
+
+</head>
+
+<body>
+  <header>
+    <div class="nav">
+      <input type="checkbox" id="nav-check" />
+      <div class="nav-header">
+        <div class="nav-title">
+          <a href="/">Hr. Heines Unterricht</a>
+        </div>
+      </div>
+      <div class="nav-btn">
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+
+      <div class="nav-links">
+        <a href="/content/math/">Mathematik</a>
+        <a href="/content/math/13/">Klasse 13</a>
+        <a href="/content/math/13/AnGeoII/">Analytische Geometrie II</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section>
+      <h2>Abstände zu Ebenen II</h2>
+      <div class="ziele">
+        <p>
+          Nachfolgend soll gezeigt werden, der Abstand von Punkten, Geraden und Ebenen zu einer anderen Ebene berechnet
+          wird.
+        </p>
+        <p>
+          <a href="#aufgaben">Direkt zu den Aufgaben</a>
+        </p>
+      </div>
+
+      <div class="theorie">
+
+
+        <div class="definition">
+          <h4>Hessische Normalenform</h4>
+          <p>
+            Die Gleichung \(E: (\vec x-\vec a)\cdot \vec n_0=0\) heißt <b>Hessische Normalengleichung</b> der Ebene
+          </p>
+          <p>
+            Dabei stehen:
+            <ul>
+              <li>\(\vec x\) Allgemeiner Ortsvektor der Ebene</li>
+              <li>\(\vec a\) Stützvektor der Ebene</li>
+              <li>\(\vec n_0\) Normalenvektor der Ebene mit \(|\vec n_0|=1\)</li>
+            </ul>
+            Der Normalenvektor \(\vec n_0\) wird folgendermaßen berechnet:
+            <p style="margin-left: 20px;">
+              \(\vec n_0=\dfrac{1}{|\vec n|}\cdot \vec n\)
+            </p>
+          </p>
+
+
+          <h5>Abstandberechnung</h5>
+          <p>
+            Mit der Hessischen Normelengleichung gilt: \((\vec p-\vec a)\cdot \vec n_0 = d\), das heißt, wenn ein beliebiger Punkt 
+            in die Ebenengleichung eingesetzt wird, errechnet man direkt den Abstand dieses Punktes zur Ebene.
+          </p>
+          <p>
+            Gegebenfalls muss am Ende noch der Betrag des Abstandes genommen werden.
+          </p>
+          
+        </div>
+        <h6>Beispiel 1:</h6>
+        <p>
+          Es soll der Abstand des Punktes \(P({\color{aqua}4}\mid{\color{aqua}4}\mid{\color{aqua}5})\) zur 
+          Ebene \(E: \left[\vec x-\vector{2\\2\\1}\right]\cdot{\color{darkgoldenrod}\vector{2\\3\\6}}=0\) bestimmt werden:
+          <ol>
+            <li>Hessische Normalengleichung bestimmen:
+              <p style="margin-left: 20px;">
+                \(\begin{align*}
+                  |\vec n|&=\sqrt{{\color{darkgoldenrod}2}^2+{\color{darkgoldenrod}3}^2+{\color{darkgoldenrod}6}^2} \\
+                  |\vec n|&=7 \\[10px]
+                  \vec n_0&=\tfrac17\cdot {\color{darkgoldenrod}\vector{2\\3\\6}} \\
+                  \vec n_0&=\vector{\tfrac27\\\tfrac37\\\tfrac67}\\[10px]
+                   0&=\left[\vec x-\vector{2\\2\\1}\right]\cdot\vector{\tfrac27\\\tfrac37\\\tfrac67}
+                \end{align*}\)
+              </p>
+            </li>
+            <li>Punkt \(\color{aqua}P\) einsetzen und ausrechnen:
+              <p style="margin-left: 20px;">
+                \(\begin{align*}
+                  d&=\left[\vector{\color{aqua}4\\\color{aqua}4\\\color{aqua}5}-\vector{2\\2\\1}\right]\cdot\vector{\tfrac27\\\tfrac37\\\tfrac67} \\
+                  d&=\vector{2\\2\\4}\cdot\vector{\tfrac27\\\tfrac37\\\tfrac67} \\
+                  d&=2\cdot\tfrac27+2\cdot\tfrac37+4\cdot\tfrac67 \\
+                  d&=\tfrac47+\tfrac67+\tfrac{24}7 \\
+                  d&=\tfrac{34}7\approx4,86\,\text{LE}
+                \end{align*}\)
+              </p>
+            </li>
+          </ol>
+          Der Punkte \(P\) ist ca. \(4,86\,\text{LE}\) von der Ebene \(E\) entfernt.
+        </p>
+        <p>
+          Alternativ könnte man übrigens auch erst am Ende durch den Betrag des Normalenvektors teilen.
+        </p>
+
+        <h6>Beispiel 2:</h6>
+        <p>
+          Es soll der Abstand des Punktes \(P({\color{aqua}3}\mid{\color{aqua}1}\mid{\color{aqua}-2})\) zur 
+          Ebene \(E: \left[\vec x-\vector{5\\-2\\3}\right]\cdot{\color{darkgoldenrod}\vector{2\\1\\-2}}=0\) bestimmt werden:
+          <ol>
+            <li>Hessische Normalengleichung bestimmen:
+              <p style="margin-left: 20px;">
+                \(\begin{align*}
+                  |\vec n|&=\sqrt{{\color{darkgoldenrod}2}^2+{\color{darkgoldenrod}1}^2+{\color{darkgoldenrod}2}^2} \\
+                  |\vec n|&=3 \\[10px]
+                  \vec n_0&=\tfrac13\cdot {\color{darkgoldenrod}\vector{2\\1\\-2}} \\[10px]
+                   0&=\left[\vec x-\vector{5\\-2\\3}\right]\cdot\tfrac13\cdot {\color{darkgoldenrod}\vector{2\\1\\-2}}
+                \end{align*}\)
+              </p>
+            </li>
+            <li>Punkt \(\color{aqua}P\) einsetzen und ausrechnen:
+              <p style="margin-left: 20px;">
+                \(\begin{align*}
+                  d&=\left[\vector{\color{aqua}3\\\color{aqua}1\\\color{aqua}-2}-\vector{5\\-2\\3}\right]\cdot\tfrac13\cdot \vector{2\\1\\-2} \\
+                  d&=\tfrac13\cdot \vector{-2\\3\\-5}\cdot\vector{2\\1\\-2} \\
+                  d&=\tfrac13\cdot\left( -2\cdot2+3\cdot 1+ (-5)\cdot(-2)\right) \\
+                  d&=\tfrac13\cdot(-4+3+10)=\tfrac13\cdot9 \\
+                  d&=3\,\text{LE}
+                \end{align*}\)
+              </p>
+            </li>
+          </ol>
+          Der  Punkte \(P\) ist  \(3\,\text{LE}\) von der Ebene \(E\) entfernt.
+        </p>
+
+
+      </div>
+    </section>
+    <!-- <section>
+            <div class="videos">
+                <iframe width="360" height="202" src="https://www.youtube.com/embed/19goPRnthCE"
+                    title="Abstand Punkt - Punkt" frameborder="0" allow="web-share" allowfullscreen></iframe>
+
+            </div>
+        </section> -->
+    <section id="aufgaben" class="aufgaben">
+      <h3>Aufgaben zu Abstand von Ebenen</h3>
+      <ol class="custom-marker point-after decimal more-spacing">
+        <li>Buch, Seite 182 Übung 8 <a href="#a1">Lösungen</a></li>
+        <li>Buch, Seite 185 Übung 9 und 11  <a href="#a2">Lösungen</a></li>
+        <li>Buch, Seite 187 Übung 17 (mit Hessischer Normalengleichung) <a href="#a3">Lösungen</a></li>
+      </ol>
+    </section>
+
+    <section class="loesungen">
+      <h3>Lösungen zu Abstand von Ebenen</h3>
+      <details id="a1"> <!-- style="counter-set: lsg-counter 2;" -->
+        <summary>...</summary>
+        <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
+          <li> ...
+          </li>
+          
+        </ol>
+      </details>
+
+
+
+
+    </section>
+
+
+
+    <!-- JS-Datei mit allen Funktionen -->
+    <script src="/js/math/geo3d.js"></script>
+
+    <script>
+
+      // drawAxes(expl1, 4, 4, 4);
+      // drawVector(expl1, [0, 0, 0], [-1, 1, 1], "a", "coral", "aboveleft");
+      // drawPolygon(expl1, [[-1, 1, 1], [1, 1, 0], [1, 5, 2]], "E", "darkgoldenrod", "orange");
+      // drawPoint(expl1, [-1, 1, 1], "A", "coral", "aboveleft", 6);
+      // drawPoint(expl1, [1, 1, 0], "B", "lightgreen", "belowleft", 6);
+      // drawPoint(expl1, [1, 5, 2], "C", "violet", "right", 6);
+
+
+    </script>
+
+    <section id="meme">
+      <div class="images">
+        <img src="/img/planedist_meme.webp" style="object-fit: scale-down; max-width: 300px" />
+      </div>
+      <div class="centered">
+        <a href="https://it.memedroid.com/memes/detail/3989445/Especially-if-its-wearing-a-mask">
+          <h6>Original von prlugo</h6>
+        </a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <a href="/misc/impressum.html">Impressum</a>
+    <div class="lastModified" align="center">
+      Erstellt am:<br />
+      2. Dezember 2025
+      <!-- <span id="lastModifiedDate"></span> -->
+    </div>
+    <a href="/misc/datenschutz.html">Datenschutz</a>
+  </footer>
+</body>
