@@ -258,15 +258,138 @@
 
     <section class="loesungen">
       <h3>Lösungen zu Abstand von Ebenen</h3>
-      <details id="a1"> <!-- style="counter-set: lsg-counter 2;" -->
-        <summary>...</summary>
+      <details id="a1" style="counter-set: lsg-counter 0;"> <!-- style="counter-set: lsg-counter 2;" -->
+        <summary>Abstand Punkt Ebene</summary>
         <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
-          <li> ...
+          <li> Lotgerade: \(\vec x=\vector{5\\-5\\6}+r\cdot\vector{4\\-4\\2}\)
+            <p>
+              Lotfußpunkt bei \(r=-1\): \(F(1\mid -1\mid4)\)
+            </p>
+            <p>
+              Abstand: \(d=6\,\text{LE}\)
+            </p>
           </li>
-          
+          <li> Lotgerade: \(\vec x=\vector{-3\\7\\5}+r\cdot\vector{-4\\5\\1}\)
+            <p>
+              Lotfußpunkt bei \(r=-1\): \(F(1\mid 2\mid4)\)
+            </p>
+            <p>
+              Abstand: \(d=\sqrt{42}\approx6,48\,\text{LE}\)
+            </p>
+          </li>
         </ol>
       </details>
 
+      <details id="a2" style="counter-set: lsg-counter 3;"> <!-- style="counter-set: lsg-counter 2;" -->
+        <summary>Abstand Punkt/Ebene <Input:b></Input:b></summary>
+        <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
+          <li> Punkt \(P\):
+            <ul>
+              <li>Lotgerade: \(\vec x=\vector{7\\7\\14}+r\cdot\vector{3\\4\\12}\)</li>
+              <li>Lotfußpunkt bei \(r=-1\): \(F(4\mid 3\mid2)\)</li>
+              <li>Abstand: \(d=13\,\text{LE}\)</li>
+            </ul>
+            Punkt \(Q\):
+            <ul>
+              <li>Lotgerade: \(\vec x=\vector{-1\\4\\13}+r\cdot\vector{3\\4\\12}\)</li>
+              <li>Lotfußpunkt bei \(r=-\tfrac{121}{169}\): \(F(-3,15\mid 1,14\mid4,41)\)</li>
+              <li>Abstand: \(d=9,3\,\text{LE}\)</li>
+            </ul>         
+          </li>
+          <li> Punkt \(P\):
+            <ul>
+              <li>Lotgerade: \(\vec x=\vector{6,5\\6\\9}+r\cdot\vector{2\\3\\6}\)</li>
+              <li>Lotfußpunkt bei \(r=-1\): \(F(4,5\mid 3\mid3)\)</li>
+              <li>Abstand: \(d=7\,\text{LE}\)</li>
+            </ul>
+            Punkt \(Q\):
+            <ul>
+              <li>Lotgerade: \(\vec x=\vector{-2\\1\\-2}+r\cdot\vector{2\\3\\6}\)</li>
+              <li>Lotfußpunkt bei \(r=1\): \(F(0\mid 4\mid4)\)</li>
+              <li>Abstand: \(d=7\,\text{LE}\)</li>
+            </ul>        
+          </li>
+          <li> Ebene in Koordinatenform: \(x+4y+8z=32\)
+            <p>
+              Punkt \(P\): \(d=7\,\text{LE}\)
+            </p>
+            <p>
+              Punkt \(Q\): \(d=0\,\text{LE}\)
+            </p>           
+          </li>
+          <li> Ebene in Koordinatenform: \(2x+5y+14z=70\)
+            <p>
+              Punkt \(P\): \(d=15\,\text{LE}\)
+            </p>
+            <p>
+              Punkt \(Q\): \(d=15\,\text{LE}\)
+            </p>           
+          </li>
+        </ol>
+      </details>
+
+      <details id="a3" style="counter-set: lsg-counter 9;"> <!-- style="counter-set: lsg-counter 2;" -->
+        <summary>Abstand Punkt/Ebene II</summary>
+        <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
+          <li>Ebene in Koordinatenform: \(-4x+4x+7z=56\)
+            <p>
+              Abstand: \(d=9\,\text{LE}\)
+            </p>
+          </li>
+          <li>Ebene in Koordinatenform: \(3x+4z=24\)
+            <p>
+              Abstand: \(d=5\,\text{LE}\)
+            </p>
+          </li>
+          <li> Abstand: \(d=10\,\text{LE}\)
+          </li>
+          <li> Abstand: \(d=11\,\text{LE}\)
+          </li>
+          <li>Ebene in Koordinatenform: \(6x+6y+7z=84\)
+            <p>
+              Abstand: \(d=11\,\text{LE}\)
+            </p>
+          </li>
+          <li>Ebene in Koordinatenform: \(-2x-3y-6z=-36\)
+            <p>
+              Abstand: \(d=7\,\text{LE}\)
+            </p>
+          </li>
+        </ol>
+      </details>
+      <details id="a4" style="counter-set: lsg-counter 16;"> <!-- style="counter-set: lsg-counter 2;" -->
+        <summary>Abstand Ebene/Ebene und Gerade/Ebene</summary>
+        <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
+          <li>Parallelität: \(\vec n_E=-2\cdot\vec n_G \)   
+            <p>
+              Punkt auf \(E\): z.B. \(P(4\mid0\mid0)\)
+            </p>          
+            <p>
+              Abstand: \(d=6\,\text{LE}\)
+            </p>
+          </li>
+          <li>Parallelität: z.B. \(\vec m_g \cdot \vec n_E=0 \)   
+            <p>
+              Punkt auf \(g\): z.B. \(P(7\mid-1\mid4)\)
+            </p>          
+            <p>
+              Abstand: \(d=7\,\text{LE}\)
+            </p>
+          </li>
+          <li>Ebene in Koordinatenform: \(2x+2y+z=5\)
+            <p>
+              Parallelität: z.B. \(\vec m_g \cdot \vec n_E=0 \)  
+            </p>
+             
+            <p>
+              Punkt auf \(g\): z.B. \(P(5\mid2\mid0)\)
+            </p>          
+            <p>
+              Abstand: \(d=3\,\text{LE}\)
+            </p>
+          </li>
+        </ol>
+      </details>
 
 
 
