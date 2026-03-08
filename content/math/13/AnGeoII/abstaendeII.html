@@ -175,19 +175,170 @@
       <h3>Aufgaben zu Abstand von Ebenen</h3>
       <ol class="custom-marker point-after decimal more-spacing">
         <li>Buch, Seite 182 Übung 8 <a href="#a1">Lösungen</a></li>
-        <li>Buch, Seite 185 Übung 9 und 11  <a href="#a2">Lösungen</a></li>
+        <li>Buch, Seite 185 Übung 9  <a href="#a2">Lösungen</a></li>
         <li>Buch, Seite 187 Übung 17 (mit Hessischer Normalengleichung) <a href="#a3">Lösungen</a></li>
       </ol>
     </section>
 
     <section class="loesungen">
       <h3>Lösungen zu Abstand von Ebenen</h3>
-      <details id="a1"> <!-- style="counter-set: lsg-counter 2;" -->
-        <summary>...</summary>
+      <details id="a1" style="counter-set: lsg-counter 7;"> <!-- style="counter-set: lsg-counter 2;" -->
+        <summary>Die Hessische Normalengleichung</summary>
         <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
-          <li> ...
+          <li> Betrag Normalenvektor: \(|\vec n|=3\)
+            <p>Hessische Normalengleichung:
+              <p style="margin-left: 20px;">
+                \(\begin{align*}
+                  \left[\vec x-\vector{1\\0\\3}\right]\cdot\tfrac13\cdot\vector{1\\2\\2}&=0 \\
+                  \left[\vec x-\vector{1\\0\\3}\right]\cdot\vector{\tfrac13\\\tfrac23\\\tfrac23}&=0
+                \end{align*}\)
+              </p>
+            </p>
           </li>
-          
+          <li> Betrag Normalenvektor: \(|\vec n|=\sqrt{6}\approx 2,45\)
+            <p>
+              Punkt auf \(E\): z.B. \(P(3\mid 0\mid 0)\)
+            </p>
+            <p>Hessische Normalengleichung:
+              <p style="margin-left: 20px;">
+                \(\begin{align*}
+                  \left[\vec x-\vector{3\\0\\0}\right]\cdot\tfrac1{\sqrt 6}\cdot\vector{2\\1\\-1}&=0 \\
+                  \left[\vec x-\vector{3\\0\\0}\right]\cdot\vector{\tfrac2{\sqrt 6}\\\tfrac1{\sqrt 6}\\-\tfrac1{\sqrt 6}}&=0
+                \end{align*}\)
+              </p>
+            </p>
+          </li>
+          <li> Normalenvektor: \(\vec n=17\cdot\vector{-1\\3\\-3}\)
+            <p>
+              Betrag Normalenvektor: \(|\vec n|=\sqrt{19}\approx 4,36\)
+            </p>      
+            <p>
+              Punkt auf \(E\): z.B. \(P(1\mid 4\mid 3)\)
+            </p>
+            <p>Hessische Normalengleichung:
+              <p style="margin-left: 20px;">
+                \(\begin{align*}
+                  \left[\vec x-\vector{1\\4\\3}\right]\cdot\tfrac1{\sqrt{19}}\cdot\vector{-1\\3\\-3}&=0 \\
+                  \left[\vec x-\vector{1\\4\\3}\right]\cdot\vector{-\tfrac1{\sqrt{19}}\\\tfrac3{\sqrt{19}}\\-\tfrac3{\sqrt{19}}}&=0
+                \end{align*}\)
+              </p>
+            </p>
+          </li>
+        </ol>
+      </details>
+
+      <details id="a2" style="counter-set: lsg-counter 8;"> <!-- style="counter-set: lsg-counter 2;" -->
+        <summary>Hessische Normalengleichung</summary>
+        <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
+          <li> Betrag Normalenvektor: \(|\vec n|=3\)
+            <p>Hessische Normalengleichung:
+              <p style="margin-left: 20px;">
+                \(\begin{align*}
+                  \left[\vec x-\vector{1\\1\\0}\right]\cdot\tfrac13\cdot\vector{1\\2\\2}&=0 \\
+                  \left[\vec x-\vector{1\\1\\0}\right]\cdot\vector{\tfrac13\\\tfrac23\\\tfrac23}&=0
+                \end{align*}\)
+              </p>
+            </p>
+          </li>
+          <li>
+            Ortsvektor des Punktes für \(\vec x\) einsetzen und ausrechnen:
+            <ul>
+              <li>Punkt \(P\): 
+                <p style="margin-left: 20px;">
+                \(\begin{align*}
+                  d&=\left[\vector{2\\3\\2}-\vector{1\\1\\0}\right]\cdot\tfrac13\cdot\vector{1\\2\\2} \\
+                  d&=\tfrac13\cdot\vector{1\\2\\2}\cdot\vector{1\\2\\2} \\
+                  d&=\tfrac13\cdot(1\cdot 1+2\cdot 2+2\cdot 2)=\tfrac13\cdot9 \\
+                  d&=3\,\text{LE}
+                \end{align*}\)
+              </p>
+              </li>
+              <li>\(Q\): \(d=\left[\vector{0\\4\\5}-\vector{1\\1\\0}\right]\cdot\tfrac13\cdot\vector{1\\2\\2}=5\,\text{LE}\)</li>
+              <li>\(R\): \(d=\left[\vector{3\\-2\\2}-\vector{1\\1\\0}\right]\cdot\tfrac13\cdot\vector{1\\2\\2}=0\,\text{LE}\)</li>
+            </ul>
+          </li>
+         
+        </ol>
+      </details>
+
+      <details id="a3" style="counter-set: lsg-counter 16;"> <!-- style="counter-set: lsg-counter 2;" -->
+        <summary>Abstand Ebene/Ebene und Gerade/Ebene</summary>
+        Parallelität: siehe letzte Stunde
+        <ol class="custom-marker parens-around lower-alpha more-spacing"> <!-- decimal -->
+          <li> Betrag Normalenvektor von \(E\): \(|\vec n_E|=6\)
+            <p>
+              Punkt auf \(E\): z.B. \(P(4\mid0\mid0)\)
+            </p>
+            <p>Hessische Normalengleichung:
+              <p style="margin-left: 20px;">
+                \(\begin{align*}
+                  \left[\vec x-\vector{4\\0\\0}\right]\cdot\tfrac16\cdot\vector{4\\2\\-4}&=0
+                \end{align*}\)
+              </p>
+            </p>
+            <p>                               
+              Punkt auf \(G\): z.B. \(Q(13\mid0\mid0)\)
+            </p>
+            <p>\(Q\) in \(E\) einsetzen und ausrechnen:
+              <p style="margin-left: 20px;">
+                \(\begin{align*}
+                  d&=\left[\vector{13\\0\\0}-\vector{4\\0\\0}\right]\cdot\tfrac16\cdot\vector{4\\2\\-4} \\
+                  d&=6\,\text{LE}
+                \end{align*}\)
+              </p>
+            </p>
+          </li>
+          <li> Betrag Normalenvektor von \(E\): \(|\vec n_E|=7\)
+            <p>
+              Punkt auf \(E\): z.B. \(P(0\mid-2\mid1)\)
+            </p>
+            <p>Hessische Normalengleichung:
+              <p style="margin-left: 20px;">
+                \(\begin{align*}
+                  \left[\vec x-\vector{0\\-2\\1}\right]\cdot\tfrac17\cdot\vector{6\\-2\\3}&=0
+                \end{align*}\)
+              </p>
+            </p>
+            <p>                               
+              Punkt auf \(g\): z.B. \(Q(7\mid-1\mid4)\)
+            </p>
+            <p>\(Q\) in \(E\) einsetzen und ausrechnen:
+              <p style="margin-left: 20px;">
+                \(\begin{align*}
+                  d&=\left[\vector{7\\-1\\4}-\vector{0\\-2\\1}\right]\cdot\tfrac17\cdot\vector{6\\-2\\3} \\
+                  d&=7\,\text{LE}
+                \end{align*}\)
+              </p>
+            </p>
+          </li>
+          <li> Normalenvektor: \(\vec n=\vector{2\\2\\1}\)
+            <p>
+              Betrag Normalenvektor von \(E\): \(|\vec n_E|=3\)
+            </p>
+            <p>
+              Punkt auf \(E\): z.B. \(P(0\mid0\mid5)\)
+            </p>
+            <p>Hessische Normalengleichung:
+              <p style="margin-left: 20px;">
+                \(\begin{align*}
+                  \left[\vec x-\vector{0\\0\\5}\right]\cdot\tfrac13\cdot\vector{2\\2\\1}&=0
+                \end{align*}\)
+              </p>
+            </p>
+            <p>                               
+              Punkt auf \(g\): z.B. \(Q(5\mid2\mid0)\)
+            </p>
+            <p>\(Q\) in \(E\) einsetzen und ausrechnen:
+              <p style="margin-left: 20px;">
+                \(\begin{align*}
+                  d&=\left[\vector{5\\2\\0}-\vector{0\\0\\5}\right]\cdot\tfrac13\cdot\vector{2\\2\\1} \\
+                  d&=3\,\text{LE}
+                \end{align*}\)
+              </p>
+            </p>
+          </li>
+
+         
         </ol>
       </details>
 
