@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" initial-scale=1.0 />
+    <meta name="author" content="Sebastian Heine" />
+    <meta name="robot" content="noindex" />
+    <title> HEIS | Ana Geom II | Übungen II</title>
+    <link rel="stylesheet" type="text/css" href="/css/colors.css" />
+    <link rel="stylesheet" type="text/css" href="/css/gridNoTimeline.css" />
+    <link rel="stylesheet" type="text/css" href="/css/navbar.css" />
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="/css/courses.css" />
+    <link rel="stylesheet" type="text/css" href="/css/oktanten.css" />
+    <script type="text/javascript" src="jquery-3.3.1.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+    <script>
+        window.MathJax = {
+            tex: {
+                macros: {
+                    vector: ['\\begin{pmatrix}#1\\end{pmatrix}', 1]
+                }
+            }
+        };
+    </script>
+
+
+</head>
+
+
+<script>
+    // window.addEventListener("load", () => {
+    //     document.querySelectorAll("details").forEach(d => d.open = true);
+    // });
+</script>
+
+
+
+<body>
+    <header>
+        <div class="nav">
+            <input type="checkbox" id="nav-check">
+            <div class="nav-header">
+                <div class="nav-title">
+                    <a href="/">Hr. Heines Unterricht</a>
+                </div>
+            </div>
+            <div class="nav-btn">
+                <label for="nav-check">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+
+            <div class="nav-links">
+                <a href="/content/math/">Mathematik</a>
+                <a href="/content/math/13/">Klasse 13</a>
+                <a href="/content/math/13/AnGeoII/">Analytische Geometrie II</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section>
+            <h2>Übungs- und Anwendungsaufgaben</h2>
+            <div class="ziele">
+                <p>
+                    Nachfolgend sollen die in den vorherigen Kapitel erlernten Fähigkeiten vertieft und gefestigt
+                    werden.
+                </p>
+            </div>
+
+            <h3>Themen</h3>
+            <ul class="more-spacing">
+                <li>Lagebeziehungen von Punkten, Geraden und Ebenen zueinander</li>
+                <li>Abstände und Winkel von Punkten, Geraden und Ebenen zueinander</li>
+                <li>Allgemeine Grundlagen der analytischen Geometrie</li>
+            </ul>
+            <!-- <details class="openClose" style="border-color: lightblue; margin-top: 10px;">
+                <summary class="nonumber" data-open="Funktionen einklappen" data-close="Funktionen ausklappen">
+                </summary>
+                <ol class="custom-marker parens-around lower-alpha more-spacing">
+                    <li>\(a(x)=2x-3\)</li>
+                    <li>\(b(x)=-4x+6\)</li>
+                    <li>\(c(x)=\frac15x-4\)</li>
+                    <li>\(d(x)=-\frac13x-8\)</li>
+                    <li>\(e(x)=-\frac32x+12\)</li>
+                    <li>\(f(x)=\frac58x-\frac38 \)</li>
+                </ol>
+            </details> -->
+            <section id="aufgaben" class="aufgaben">
+                <h3>Aufgaben</h3>
+                <ol class="custom-marker point-after decimal">
+                    <li> Buch Seite 186 Übungen 14 und 16 <a href="#a1">Lösungen</a> </li>
+                    <li> Buch Seite 193 Übungen 3 <a href="#a2">Lösungen</a> </li>
+                    <li> Buch Seite 195 Übungen 11 <a href="#a3">Lösungen</a> </li>
+                    <li> Buch Seite 198 Übungen 12 bis 15 <a href="#a4">Lösungen</a> </li>
+                    <li> Buch Seite 199 Übungen 16 und 17 <a href="#a5">Lösungen</a> </li>
+
+                </ol>
+            </section>
+            <section class="loesungen">
+                <h3>Lösungen zu Übungs- und Anwendungsaufgaben</h3>
+
+                <details id="a1" style="counter-set: lsg-counter 13;"> <!-- style="counter-set: lsg-counter 2;" -->
+                    <summary>Pyramide: Höhe und Volumen</summary>
+                    <ol class="custom-marker parens-around lower-alpha more-spacing">
+                        <li>Für ein Quadrat gilt:
+                            <ul>
+                                <li>Gegenüberliegende Seiten sind gleich lang.</li>
+                                <li>Alle Seiten sind gleichlang.</li>
+                                <li>Alle Innenwinkel sind rechtwinklig.</li>
+                            </ul>
+                            <p>
+                                Grundseitenvektoren:
+                            <ul>
+                                <li>\(\overrightarrow{AB}=\vector{-10\\0\\0}\)</li>
+                                <li>\(\overrightarrow{BC}=\vector{0\\-8\\6}\)</li>
+                                <li>\(\overrightarrow{DC}=\vector{-10\\0\\0}\)</li>
+                                <li>\(\overrightarrow{AD}=\vector{0\\-8\\6}\)</li>
+                            </ul>
+                            Die gegenüberliegenden Vektoren sind gleich lang.
+                            </p>
+                            <p>
+                                Länge der Seiten:
+                            <ul>
+                                <li>\(|\overrightarrow{AB}|=\sqrt{10^2+0^2+0^2}=10\,\text{LE}\)</li>
+                                <li>\(|\overrightarrow{BC}|=\sqrt{0^2+8^2+6^2}=10\,\text{LE}\)</li>
+                            </ul>
+                            Alle Seiten sind gleich lang.
+                            </p>
+                            <p>
+                                Rechtwinkligkeit prüfen:
+                            <p style="margin-left: 20px;">
+                                \(\begin{align*}
+                                \overrightarrow{AB}\cdot\overrightarrow{BC}&=0 \\
+                                -10\cdot 0 + 0\cdot (-8) + 0\cdot 6&=0 \\
+                                0&=0\quad \checkmark
+                                \end{align*}\)
+                            </p>
+                            Die (benachbarten) Seitenvektoren stehen senkrecht aufeinander.
+                            </p>
+                            Es sind alle Voraussetzungen erfüllt, das heißt, die Grundseite ist ein Quadrat.
+                        </li>
+                        <li>Die Pyramidenhöhe ist der Abstand von \(S\) zur Grundfläche.
+                            <p>
+                                Grundfläche:
+                            <p style="margin-left: 20px;">
+                                \(\begin{align*}
+                                E:\vec x=\vector{0\\8\\0}+r\cdot\vector{-10\\0\\0}+s\cdot\vector{0\\-8\\6}
+                                \end{align*}\)
+                            </p>
+                            </p>
+                            <p>
+                                Grundfläche in Normalenform (\(\vec n\) gekürzt):
+                            <p style="margin-left: 20px;">
+                                \(\begin{align*}
+                                E:\left[\vec x-\vector{0\\8\\0}\right]\cdot\vector{0\\3\\4}=0
+                                \end{align*}\)
+                            </p>
+                            </p>
+                            <p>
+                                Hessische Normalenform (\(|\vec n|=5\)):
+                            <p style="margin-left: 20px;">
+                                \(\begin{align*}
+                                E:\left[\vec x-\vector{0\\8\\0}\right]\cdot\tfrac15\cdot\vector{0\\3\\4}=0
+                                \end{align*}\)
+                            </p>
+                            </p>
+                            <p>
+                                Höhe \(h\) ist Abstand von \(S\) zu \(E\):
+                            <p style="margin-left: 20px;">
+                                \(\begin{align*}
+                                h&=\left[\vector{-5\\10\\11}-\vector{0\\8\\0}\right]\cdot\tfrac15\cdot\vector{0\\3\\4}
+                                \\
+                                h&=10\,\text{LE}
+                                \end{align*}\)
+                            </p>
+                            </p>
+                        </li>
+                        <li>Volumen Pyramide: \(V=\tfrac13\cdot A_G\cdot h\)
+                            <p style="margin-left: 20px;">
+                                \(\begin{align*}
+                                    V&=\tfrac13\cdot \underbrace{10^2}_{\text{Quadrat}}\cdot 10 \\
+                                    V&=333,33\,\text{VE}
+                                \end{align*}\)
+                            </p>
+                        </li>
+                    </ol>
+                </details>
+
+                <details style="counter-set: lsg-counter 15;"> <!-- style="counter-set: lsg-counter 2;" -->
+                    <summary>Antenne</summary>
+                    <ul class="custom-marker parens-around lower-alpha more-spacing">
+                        <li>Dachebene:
+                            <p style="margin-left: 20px;">
+                                \(\begin{align*}
+                                    E: \vec x&=\vector{0\\8\\3}+r\cdot\vector{1\\0\\0}+s\cdot\vector{0\\-4\\3} \\
+                                    0&=\left[\vec x-\vector{0\\8\\3}\right]\cdot\tfrac15\cdot\vector{0\\3\\4}
+                                \end{align*}\)
+                            </p>
+                        </li>
+                        <li>Koordinaten von P: \((-8\mid8\mid9,25)\)</li>
+                        <li>Abstand \(P\) zu \(E\):
+                            <p style="margin-left: 20px;">
+                                \(\begin{align*}
+                                    d&=\left[\vector{-8\\8\\9,25}-\vector{0\\8\\3}\right]\cdot\tfrac15\cdot\vector{0\\3\\4} \\
+                                    d&=5\,\text{LE}
+                                \end{align*}\)
+                            </p>
+                        </li>
+                    </ul>
+                    Der Stab ist \(5\,\text m\) lang.
+                </details>
+
+                <details open id="a2" style="counter-set: lsg-counter 2;"> <!-- style="counter-set: lsg-counter 2;" -->
+                    <summary>Antenne</summary>
+                    <ol class="custom-marker parens-around lower-alpha more-spacing">
+                        <li>Ebenengleichungen:
+                            <ul>
+                                <li>\(E_1: \vec x=\vector{10\\0\\0} +r\cdot\vector{0\\1\\1}+s\cdot\vector{-1\\0\\1} \)</li>
+                                <li>\(E_2: \vec x=\vector{10\\10\\0} +t\cdot\vector{0\\-1\\1}+u\cdot\vector{-1\\0\\1} \)</li>
+                                <li>\(E_2\) in Koordinatenform: \(x+y+z=20\)</li>
+                            </ul>
+                            \(E_1\) in \(E_2\) einsetzen:
+                            <p style="margin-left: 20px;">
+                                \(\begin{align*}
+                                    10 - s + r + r + s &= 20 \\
+                                    10 +2r&=20\quad |-10\ |:2 \\
+                                    r&=5
+                                \end{align*}\)
+                            </p>
+                            \(r\) in \(E_1\) einsetzen ergibt Schnittgerade \(g\):
+                            <p style="margin-left: 20px;">
+                                \(\begin{align*}
+                                    g:\vec x&=\vector{10\\0\\0} + 5\cdot\vector{0\\1\\1}+s\cdot\vector{-1\\0\\1} \\
+                                    g:\vec x&=\vector{10\\0\\0} + \vector{0\\5\\5}+s\cdot\vector{-1\\0\\1}\\
+                                    g:\vec x&=\vector{10\\5\\5}+s\cdot\vector{0\\-1\\1}
+                                \end{align*}\)
+                            </p>
+                        </li>
+                        <li>
+                            Normalenvektoren (vereinfacht):
+                            <ul>
+                                <li>\(n_1 = \vector{1\\-1\\1} \)</li>
+                                <li>\(n_2 = \vector{1\\1\\1} \)</li>
+                            </ul>
+                            Schnittwinkel berechnen:
+                            <p style="margin-left: 20px;">
+                                \(\begin{align*}
+                                    \cos\alpha&=\frac{\left| \vector{1\\-1\\1} \cdot \vector{1\\1\\1} \right|}{\left| \vector{1\\-1\\1} \right|\cdot \left| \vector{1\\1\\1} \right|} \\
+                                    \cos\alpha&=\frac{1}{\sqrt{3}\cdot\sqrt{3}}=\tfrac13\quad|\,\text{arc}\\
+                                    \alpha&=70,52\,^\circ
+                                \end{align*}\)
+                            </p>
+                        </li>
+                        <li>Koordinaten:
+                            <ul>
+                                <li>\(U(5\mid5\mid10) \)</li>
+                                <li>\(V(10\mid5\mid5) \)</li>
+                            </ul>
+                            Länge berechnen:
+                            <p style="margin-left: 20px;">
+                                \(\begin{align*}
+                                    d&=\sqrt{(10-5)^2+(5-5)^2+(10-5)^2}\\
+                                    d&=\sqrt{50}\approx7,07\,\text{LE}
+                                \end{align*}\)
+                            </p>
+                        </li>
+                        <li>Volumen Pyramide: \(V=\tfrac13\cdot A_G\cdot h\)
+                            <ul>
+                                <li>Grundfläche ist ein gleichseitiges Dreieck</li>
+                                <li>Seitenlänge dieses Dreiecks: </li>
+                            </ul>
+
+                        </li>
+                    </ol>
+                </details>
+
+
+                <!-- <p style="margin-left: 20px;">
+                                \(\begin{align*}
+                                
+                                \end{align*}\)
+                            </p> -->
+
+
+                <!-- JS-Datei mit allen Funktionen -->
+                <script src="/js/math/geo3d.js"></script>
+
+                <!-- <div class="centered" style="max-width: 250px">
+                                <svg id="task6c" viewBox="-210 -300 590 610">
+                                    <defs></defs>
+                                </svg>
+                            </div> -->
+
+                <script>
+                    drawAxes(task5a, 5, 4, 3);
+                    drawPolygon(task5a, [[0, 0, -4], [0, 2, 0], [4, 0, 0]], "", "darkgoldenrod", "orange");
+                    drawPoint(task5a, [4, 0, 0], "", "cyan", "aboveleft", 6);
+                    drawPoint(task5a, [0, 2, 0], "", "cyan", "aboveleft", 6);
+                    drawPoint(task5a, [0, 0, -4], "", "cyan", "aboveleft", 6);
+                    drawSegment(task5a, [0, 0, 0], [0, 0, -5], "", "#a7a7a8", "", 1, true);
+
+                </script>
+
+            </section>
+            <section id="meme">
+                <div class="images">
+                    <img src="/img/uebe-meme.jpg" style="object-fit:scale-down; max-width: 300px;">
+                </div>
+                <div class="centered">
+                    <!-- <a href="https://mrkylebrown.weebly.com/1-slope--rate-of-change.html"> -->
+                    <h6>Original von JK</h6>
+                    <!-- </a> -->
+                </div>
+            </section>
+    </main>
+    <footer>
+        <a href="/misc/impressum.html">Impressum</a>
+        <div class="lastModified" align="center">
+            Erstellt am:<br>
+            13. Januar 2026
+            <!-- <span id="lastModifiedDate"></span> -->
+        </div>
+        <a href="/misc/datenschutz.html">Datenschutz</a>
+    </footer>
+</body>
