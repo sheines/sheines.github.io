@@ -215,8 +215,8 @@
                     Der Stab ist \(5\,\text m\) lang.
                 </details>
 
-                <details open id="a2" style="counter-set: lsg-counter 2;"> <!-- style="counter-set: lsg-counter 2;" -->
-                    <summary>Antenne</summary>
+                <details id="a2" style="counter-set: lsg-counter 2;"> <!-- style="counter-set: lsg-counter 2;" -->
+                    <summary>Ebenen im Würfel</summary>
                     <ol class="custom-marker parens-around lower-alpha more-spacing">
                         <li>Ebenengleichungen:
                             <ul>
@@ -272,12 +272,262 @@
                         <li>Volumen Pyramide: \(V=\tfrac13\cdot A_G\cdot h\)
                             <ul>
                                 <li>Grundfläche ist ein gleichseitiges Dreieck</li>
-                                <li>Seitenlänge dieses Dreiecks: </li>
+                                <li>Seitenlänge dieses Dreiecks: \(a=\sqrt{200}\approx 14,14\,\text{LE}\) </li>
+                                <li>Fläche Grundseite: \(A_G=\frac{\sqrt{3}}4\cdot (\sqrt{200})^2\)</li>
+                                <li>Ebenengleichung Grundseite in Normalengleichung (siehe b)): \(\left[\vec x-\vector{10\\0\\0}\right]\cdot\vector{1\\-1\\1}=0\)</li>
+                                <li>Hessesche Normalegleichung der Grundseite: \(\left[\vec x-\vector{10\\0\\0}\right]\cdot\frac{1}{\sqrt 3}\cdot\vector{1\\-1\\1}=0\)</li>
+                                <li>Abstand \(F\) zu \(E_1\): \(d=\left[\vector{10\\0\\10}-\vector{10\\0\\0}\right]\cdot\frac{1}{\sqrt 3}\cdot\vector{1\\-1\\1}=\frac{10}{\sqrt 3}\)</li>
                             </ul>
-
+                            Volumen: \(V=\tfrac13\cdot \frac{\sqrt{3}}4\cdot (\sqrt{200})^2 \cdot \frac{10}{\sqrt 3}=\tfrac{500}3\approx 166,67\,\text{VE}\) 
                         </li>
                     </ol>
                 </details>
+
+                <details id="a3" style="counter-set: lsg-counter 10;"> <!-- style="counter-set: lsg-counter 2;" -->
+                    <summary>Haus mit Walmdach</summary>
+                    <ol class="custom-marker parens-around lower-alpha more-spacing">
+                        <li>\(B(9\mid5\mid0)\), \(D(-5\mid3\mid0)\), \(E(3\mid-3\mid5)\), \(G(1\mid11\mid5)\), \(H(-5\mid3\mid5)\)
+                        </li>
+                        <li>\(E_1:\vec x=\vector{9\\5\\5}+r\cdot\vector{-5\\-2,5\\4}+s\cdot\vector{3\\-8,5\\4}\)
+                        </li>
+                        <li>
+                            Seitenvektoren und Winkel:
+                            <ul>
+                                <li>\(\overrightarrow{FS}=\vector{-5\\-2,5\\4}\), \(\overrightarrow{FE}=\vector{-6\\-8\\0}\) 
+                                    \(\Rightarrow\) \(\alpha=43,3\,^\circ\)</li>
+                                <li>\(\overrightarrow{ES}=\vector{1\\5,5\\4}\), \(\overrightarrow{EF}=\vector{6\\8\\0}\) 
+                                    \(\Rightarrow\) \(\beta=43,3\,^\circ\)</li>
+                                <li>\(\overrightarrow{SE}=\vector{-1\\-5,5\\-4}\), \(\overrightarrow{SF}=\vector{5\\2,5\\-4}\) 
+                                    \(\Rightarrow\) \(\gamma=93,3\,^\circ\)</li>
+                            </ul>
+                        </li>
+                        <li>Punkt \(M\): \(M(6\mid 1\mid 5)\)
+                            <p>
+                                Vektor \(\overrightarrow{MS}=\vector{-2\\1,5\\4}\)
+                            </p>
+                            <p>
+                                Es gilt: \(\overrightarrow{MS}\cdot\overrightarrow{EF}=0\), also orthogonal
+                            </p>
+                            <p>
+                                Fläche: \(A=\tfrac12\cdot|\overrightarrow{MS}|\cdot|\overrightarrow{EF}|\approx 23,58\,\text{FE}\)
+                            </p>
+
+                        </li>
+                        <li>
+                            Spitze des Schornsteins: \(P'(3\mid7\mid9)\)
+                            <p>
+                                Geradengleichung des Schattens: \(s:\vec x=\vector{3\\7\\9}+r\cdot\vector{5\\0\\-6}\)
+                            </p>
+                            <p>
+                                Ebene \(E_1\) (siehe b)) in Koordinatenform (\(\vec n\) gekürzt): \(12x+16y+25z=313\)
+                            </p>
+                            <p>
+                                Schnittpunkt \(s\) und \(E_1\) bei \(r=\tfrac23\): \(P''(\tfrac{19}{3}\mid7\mid5)\)
+                            </p>
+                            <p>
+                                Abstand Spitze zu Schattenende: \(l\approx 3,70\,\text m\)
+                            </p>
+                        </li>
+                    </ol>
+                </details>
+
+                <details id="a4" style="counter-set: lsg-counter 11;"> <!-- style="counter-set: lsg-counter 2;" -->
+                    <summary>Flugbahnen I</summary>
+                    <ol class="custom-marker parens-around lower-alpha more-spacing">
+                        <li>Düsenjet: \(f:\vec x=\vector{16\\0\\2}+r\cdot\vector{-8\\4\\1}\)
+                            <p>
+                                Segelflugzeug: \(g:\vec x=\vector{-6\\2\\7}+s\cdot\vector{2\\2\\-1}\)
+                            </p>
+                        </li>
+                        <li>Gleichsetzen ergibt \(r=2\) und \(s=2\): \(S(0\mid8\mid4)\)
+                        </li>
+                        <li>Geschwindigkeit: \(v=\frac st\)
+                            <ul>
+                                <li>Düsenjet: \(v_f=\frac{\left|\vector{-8\\4\\1}\right|}{1\,\text{min}}=9\,\tfrac{\text{km}}{\text{min}}=540\,\tfrac{\text{km}}{\text{h}}\)</li>
+                                <li>Segelflugzeug: \(v_g=\frac{\left|\vector{2\\2\\-1}\right|}{1\,\text{min}}=3\,\tfrac{\text{km}}{\text{min}}=180\,\tfrac{\text{km}}{\text{h}}\)</li>
+                            </ul>
+                            Abstand: 
+                            <ul>
+                                <li>Position von Segler, wenn Jet bei \(S\): \(s=2\) in \(g\) einsetzen: \(E(-2\mid 6\mid 5)\)</li>
+                                <li>Abstand Segler &ndash; Jet: \(d=3\,\text{km}\)</li>
+                            </ul>
+                        </li>
+                        <li>Skizze:
+                            <div class="centered" style="max-width: 250px">
+                                <svg id="task11d" viewBox="-210 -300 590 610">
+                                    <defs></defs>
+                                </svg>
+                            </div>
+                        </li>
+                    </ol>
+                </details>
+
+                <details style="counter-set: lsg-counter 14;"> <!-- style="counter-set: lsg-counter 2;" -->
+                    <summary>Ballon</summary>
+                    <ol class="custom-marker parens-around lower-alpha more-spacing">
+                        <li>Vektor \(\overrightarrow{AB}=\vector{-2\\2\\1}\), \(|\overrightarrow{AB}|=3\,\text{km}\), 
+                                d.h. eine Vektorlänge entspricht \(\tfrac16\) Stunde, was \(10\) Minuten sind.
+                            <p>
+                                Nach 30 Minuten hat der Ballon also drei Vektorlängen zurückgelegt: \(P(10\mid10\mid5)\)
+                            </p>
+                        </li>
+                        <li>
+                                Die Beobachtung des Ballons startet in einer Höhe von 2 Kilometern. Alle 10 Minuten steigt der Ballon einen 
+                                weiteren Kilometer hinauf. Es fehlen 6 Kilometer, also dauert der Aufstieg 60 Minuten.
+                                <p>
+                                    Nach sechs Vektorlängen erreicht der Ballon die geforderte Höhe im Punkt \(H(4\mid16\mid 8)\)
+                                </p>
+                        </li>
+                        <li>
+                            Hessesche Normalenform des Hanges: \(\left[\vec x-\vector{0\\-10\\5}\right]\cdot\tfrac1{10}\cdot\vector{0\\-8\\6}=0\)
+                            <p>
+                                Abstand des Punktes C: \(d=5\,\text{km}\)
+                            </p>
+                        </li>
+                    </ol>
+                </details>
+
+                <details id="a5" style="counter-set: lsg-counter 15;"> <!-- style="counter-set: lsg-counter 2;" -->
+                    <summary>Flugbahnen II</summary>
+                    <ol class="custom-marker parens-around lower-alpha more-spacing">
+                        <li>Entfernen Flugzeug &ndash; Flugplatz: \(d=12\,\text{km}\)
+                            <p>
+                                Zeit bei \(360\,\tfrac{\text{km}}{\text h}\): \(t=\frac{12}{360}=\tfrac{1}{30}\,\text h=2\,\text{min}\)
+                            </p>
+                        </li>
+                        <li>
+                            Flugbahnen:
+                            <ul>
+                                <li>Flugzeug: \(f:\vec x=\vector{-4\\4\\4}+r\cdot\vector{8\\-8\\-4}\)</li>
+                                <li>Hubschrauber: \(g:\vec x=\vector{0\\11\\2}+s\cdot\vector{0\\-7\\2}\)</li>
+                            </ul>
+                            Gleichsetzen ergibt: \(r=\tfrac12\) und \(s=\tfrac{11}{18}\), also Schnittpunkt bei \(S(0\mid0\mid2)\)
+                            <p>
+                                Abstände zum Schnittpunkt und Flugzeit dahin:
+                                <ul>
+                                    <li>Flugzeug: \(d=6\,\text{km}\), dauert \(1\,\text{min}\)</li>
+                                    <li>Hubschrauber: \(d=11\,\text{km}\), dauert \(1:50\,\text{min}\)</li>
+                                </ul>
+                            </p>
+                            Es besteht keine Kollisionsgefahr.
+                        </li>
+                        <li>
+                            Der Flugvektor \(\vector{8\\-8\\-4}\) entspricht einer Flugzeit von zwei Minuten (siehe a) und b)). 
+                            <p>
+                                Nach 1,5 Minuten sind also \(\tfrac34\) der Strecke geschafft: \(r=\tfrac34\) in \(f\) ergibt: \(P(2\mid-2\mid1)\) 
+                            </p>
+                        </li>
+                        <li>
+                            Flugvektor nach Manöver: \(\vec v=\vector{-4\\-4\\2}\)
+                            <p>
+                                Normalenvektor der Nebenwand: \(\vec n=\vector{2\\-2\\0}\)
+                            </p>
+                            <p>
+                                Der Flugvektor ist parallel zur Ebene, wenn gilt: \(\vec v\cdot \vec n=0\)
+                            </p>
+                            <p>
+                                Skalarprodukt:
+                                <p style="margin-left: 20px;">
+                                \(\begin{align*}
+                                    \vector{-4\\-4\\2}\cdot\vector{2\\-2\\0}&=0 \\
+                                    -4\cdot 2+(-4)\cdot(-2)+2\cdot 0&=0\\
+                                        0&=0\quad \checkmark
+                                \end{align*}\)
+                            </p>
+                            Ja, das Flugzeug fliegt nun parallel zur Nebelwand.
+                            </p>
+                        </li>
+                        <li>Hessesche Normalengleichung der Nebelwand:
+                            <p style="margin-left: 20px;">
+                                \(\begin{align*}
+                                    \left[\vec x-\vector{6\\0\\0}\right]\cdot\tfrac{1}{\sqrt 8}\cdot\vector{2\\-2\\0}&=0
+                                \end{align*}\)
+                            </p>
+                            Abstand berechnen:
+                            <p style="margin-left: 20px;">
+                                \(\begin{align*}
+                                    d&=\left[\vector{2\\-2\\1}-\vector{6\\0\\0}\right]\cdot\tfrac{1}{\sqrt 8}\cdot\vector{2\\-2\\0}\\
+                                    d&=\sqrt 2\approx1,41\,\text{km}
+                                \end{align*}\)
+                            </p>
+                        </li>
+                        <li>
+                            Neue Flugbahn: \(f':\vec x=\vector{2\\-2\\1}+r\cdot\vector{-4\\-4\\2}\)
+                            Gleichsetzen ergibt: \(r=\tfrac12\) und \(s=\tfrac56\), also Schnittpunkt bei \(S(0\mid-4\mid2)\)
+                            <p>
+                                Abstände zum Schnittpunkt und Flugzeit dahin:
+                                <ul>
+                                    <li>Flugzeug: \(d=3\,\text{km}\), dauert \(1\,\text{min} + 1,5\,\text{min}\) (vor Richtungsänderung) </li>
+                                    <li>Hubschrauber: \(d=15\,\text{km}\), dauert \(2,5\,\text{min}\)</li>
+                                </ul>
+                                Beide benötigen gleichlang bis zum Schnittpunkt: Es besteht die Gefahr einer Kollision.
+                            </p>
+                        </li>
+                    </ol>
+                </details>
+
+                <details style="counter-set: lsg-counter 15;"> <!-- style="counter-set: lsg-counter 2;" -->
+                    <summary>Ballonaufstieg</summary>
+                    <ol class="custom-marker parens-around lower-alpha more-spacing">
+                        <li>Der Ballon ist in 12 Minuten 2 Kilometer hoch gestiegen. Für die Höhe von 10 Kilometern benötigt er die fünffache
+                            Zeit, also 60 Minuten.
+                            <p>
+                                Der Ballon erreicht die Zielhöhe nach einer Stunde um 13:30 Uhr.
+                            </p>
+                            <p>
+                                Flug-, bzw. Fahrvektor, des Ballons: \(\vec v=\vector{-4\\4\\2}\)
+                            </p>
+                            <p>
+                                Damit ergibt sich ein Punkt \(C\) mit \((-12\mid18\mid10)\)
+                            </p>
+                        </li>
+                        <li>
+                            \(v=\frac{\left|\vector{-4\\4\\2}\right|}{12\,\text{min}}=\tfrac12\,\tfrac{\text{km}}{\text{min}}=30\,\tfrac{\text{km}}{\text{h}}\)
+                        </li>
+                        <li>
+                            Flugbahn des Ballons: \(b:\vec x=\vector{8\\-2\\0}+r\cdot\vector{-4\\4\\2}\)
+                            <p>
+                                Ebene \(F\) in Koordinatenform (\(\vec n\) vereinfacht): \(2x-2y-z=-24\) 
+                            </p>
+                            <p>
+                                Schnittpunkte mit den beiden Ebenen:
+                                <ul>
+                                    <li>Ebene \(E\): \(r=3\) ergibt \(S_E(-4\mid10\mid6)\)</li>
+                                    <li>Ebene \(F\): \(r=\tfrac72\) ergibt \(S_F(-6\mid12\mid7)\)</li>
+                                </ul>
+                                Abstand der Schnittpunkte: \(d=3\,\text{km}\)
+                            </p>
+                            <p>
+                                Flugzeit: \(t=\frac 3{30}=\tfrac1{10}\,\text h=6\,\text{min}\)
+                            </p>
+                            <p>
+                                Es dauert sechs Minuten die Nebenwand zu durchfliegen.
+                            </p>
+                        </li>
+                        <li>
+                            Die beiden Normalenvektoren der Ebenen sind kollinear:
+                            <p style="margin-left: 20px;">
+                                \(\begin{align*}
+                                    \vec n_E&=-1\cdot\vec n_F
+                                \end{align*}\)
+                            </p>
+                            Das heißt, die beiden Ebenen sind parallel, weil der Stützvektor von \(F\) nicht in \(E\) liegt.
+                            <p>
+                                Hessesche Normalenform von \(F:\left[\vec x-\vector{0\\12\\19}\right]\cdot\vector{2\\-2\\-1}\)
+                            </p>
+                            <p>
+                                Punkt auf \(E\): \(P(0\mid17\mid0)\)
+                            </p>
+                            <p>
+                                Abstand der Ebenen: \(d=3\,\text{km}\)
+                            </p>
+                            <p>
+                                Die Nebenschicht ist drei Kilometer dick.
+                            </p>
+                        </li>
+                    </ol>
+                </details>
+
 
 
                 <!-- <p style="margin-left: 20px;">
@@ -297,12 +547,20 @@
                             </div> -->
 
                 <script>
-                    drawAxes(task5a, 5, 4, 3);
-                    drawPolygon(task5a, [[0, 0, -4], [0, 2, 0], [4, 0, 0]], "", "darkgoldenrod", "orange");
-                    drawPoint(task5a, [4, 0, 0], "", "cyan", "aboveleft", 6);
-                    drawPoint(task5a, [0, 2, 0], "", "cyan", "aboveleft", 6);
-                    drawPoint(task5a, [0, 0, -4], "", "cyan", "aboveleft", 6);
-                    drawSegment(task5a, [0, 0, 0], [0, 0, -5], "", "#a7a7a8", "", 1, true);
+
+                    // Alle Werte durch 2
+                    drawAxes(task11d, 7, 4, 5);
+                    drawPoint(task11d, [8, 0, 1], "A", "cyan", "aboveleft", 6);
+                    drawPoint(task11d, [4, 2, 1.5], "B", "cyan", "below", 6);
+                    drawLine(task11d, [8,0,1],[-4,2,0.5],"f","cyan","below",3);
+
+                    drawPoint(task11d, [-3,1,3.5], "C", "lime", "right", 6);
+                    drawPoint(task11d, [-2,2,3], "D", "lime", "right", 6);
+                    drawLine(task11d, [-3,1,3.5],[1,1,-0.5],"g","lime","left",3);
+
+
+                    drawPoint(task11d, [0,4,2], "S", "orange", "aboveright", 9);
+                    // drawSegment(task5a, [0, 0, 0], [0, 0, -5], "", "#a7a7a8", "", 1, true);
 
                 </script>
 
