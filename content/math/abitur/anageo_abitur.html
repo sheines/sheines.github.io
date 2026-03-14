@@ -1,0 +1,1202 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" initial-scale=1.0 />
+    <meta name="author" content="Sebastian Heine" />
+    <meta name="robot" content="noindex" />
+    <title> HEIS | Analytische Geometrie | Abituraufgaben</title>
+    <link rel="stylesheet" type="text/css" href="/css/colors.css" />
+    <link rel="stylesheet" type="text/css" href="/css/gridNoTimeline.css" />
+    <link rel="stylesheet" type="text/css" href="/css/navbar.css" />
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+    <link rel="stylesheet" type="text/css" href="/css/courses.css" />
+    <script type="text/javascript" src="jquery-3.3.1.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="text/javascript" async
+        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+
+
+    <style>
+        .chart-container {
+            width: 300px;
+            margin: 2em 0;
+        }
+
+        svg {
+            width: 100%;
+            height: auto;
+        }
+    </style>
+
+    <script>
+        window.MathJax = {
+            tex: {
+                macros: {
+                    vector: ['\\begin{pmatrix}#1\\end{pmatrix}', 1]
+                }
+            }
+        };
+    </script>
+
+</head>
+
+<body>
+    <header>
+        <div class="nav">
+            <input type="checkbox" id="nav-check">
+            <div class="nav-header">
+                <div class="nav-title">
+                    <a href="/">Hr. Heines Unterricht</a>
+                </div>
+            </div>
+            <div class="nav-btn">
+                <label for="nav-check">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+
+            <div class="nav-links">
+                <a href="/content/math/">Mathematik</a>
+                <a href="/content/math/13/AbiVorb/">Abiturvorbereitung</a>
+                <a href="/content/math/13/AnGeoII/">Analytische Geometrie II</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section>
+            <h2>Abituraufgaben</h2>
+            <div class="ziele">
+                <p>
+                    Nachfolgend werden einige Abituraufgaben zum Thema der Analytischen Geometre aufgezeigt. Alle
+                    Aufgaben sollten mit dem bekannten Wissen aus der Analytischen Geometrie lösbar sein.
+                </p>
+                <p>
+                    Die Aufgaben sind weder nach Datum noch nach Schwierigkeit sortiert.
+                </p>
+                <p>
+                    Die Aufgabentypen sind zweigeteilt:
+                <ul>
+                    <li><a href="#hmf">Aufgaben <i>ohne</i> Hilfsmittel</a></li>
+                    <li><a href="#rt">Aufgaben <i>mit</i> Hilfsmitteln</a></li>
+                </ul>
+                </p>
+            </div>
+        </section>
+
+        <section class="aufgaben" id="hmf">
+            <h3>Aufgaben aus dem Hilfsmittelfreien Teil</h3>
+
+
+            <ol class="more-spacing" start="1">
+                <li>
+                    Zwei sich schneidende Ebenen sind gegeben durch ihre Gleichungen:
+                    <p style="margin-left: 20px;">
+                        \(E:2x+y+4z=6\) und \(F:\left[\vec x-\vector{1\\-8\\3}\right]\cdot\vector{-5\\2\\8}=0\).
+                    </p>
+                    <ol class="custom-marker parens-around lower-alpha more-spacing">
+                        <li>Gib eine Gleichung der Ebene \(F\) in Koordinatenform an!
+                        </li>
+                        <li>Die Gerade \(s:\,\vec x=\vector{1\\-4\\2}+r\cdot\vector{0\\8\\-2}\) liegt in der Ebene
+                            \(F\).
+                            <p>
+                                Weise nach, dass die Gerade \(s\) auch in der Ebene \(E\) liegt!
+                            </p>
+                        </li>
+                        <li>
+                            Ermittle eine Gleichung einer Ebene \(H\), die zu den beiden Ebenen \(E\) und \(F\)
+                            senkrecht verläuft!
+                        </li>
+                    </ol>
+                    <details class="loesungen">
+                        <summary class="nonumber">Lösung</summary>
+                        <ol class="custom-marker parens-around lower-alpha more-spacing">
+                            <li> Normalen- und Stützvektor einsetzen, um \(d\) zu berechnen:
+                                <p style="margin-left: 20px;">
+                                    \(\begin{align*}
+                                    F: -5x+2y+8z&=d \\
+                                    -5\cdot 1 +2\cdot (-8) + 8\cdot 3&=3 \\[10px]
+                                    F:-5x+2y+8z&=3
+                                    \end{align*}\)
+                                </p>
+                            </li>
+                            <li>\(s\) in \(E\) einsetzen:
+                                <p style="margin-left: 20px;">
+                                    \(\begin{align*}
+                                    2\cdot(1+0\cdot r)+(-4+8\cdot r)+4\cdot(2-2\cdot r)&=6\\
+                                    2-4+8r+8-8r&=6\\
+                                    6&=6
+                                    \end{align*}\)
+                                </p>
+                                Damit ist die Aussage wahr. Die Gerade \(s\) liegt in der Ebene \(E\).
+                            </li>
+                            <li>
+                                Damit die Ebene \(H\) senkrecht zu den beiden Ebenen \(E\) und \(F\) verläuft,
+                                müssen die Normalenvektoren \(\overrightarrow{n_E}\) und \(\overrightarrow{n_F}\)
+                                jeweils senkrecht zu \(\overrightarrow{n_H}\) stehen.
+                                <p>
+                                    \(\vec n_H\) kann entweder mit dem Kreuzprodukt oder mit einem Gleichungssystem aus
+                                    den Skalarprodukten berechnet werden:
+                                <p style="margin-left: 20px;">
+                                    \(\begin{align*}
+                                    \vec n_H&=\vector{0\\4\\-1}
+                                    \end{align*}\)
+                                    (gekürzt)
+                                </p>
+                                Eine mögliche Gleichung für eine Ebene \(H\) ist zum Beispiel: \(4y-1z=0.\)
+                                </p>
+                                <b>Alternativ:</b> Die Gerade \(s\) liegt sowohl in \(E\) als auch in \(F\). Sie ist
+                                also die
+                                Schnittgerade der beiden
+                                Ebenen. Entsprechend muss der Richtungsvektor \(\vec m=\vector{0\\8\\-2}\) orthogonal zu
+                                beiden Normalenvektoren der Ebenen sein.
+                                <p>
+                                    Damit kann \(\vec m\) Normalenvektor der Ebene \(H\) sein.
+                                </p>
+                        </ol>
+                    </details>
+                </li>
+            </ol>
+
+            <ol class="more-spacing" start="2">
+                <li>
+                    <p>
+                        Gegeben ist der Punkt \(P(4\mid6\mid4)\) und die
+                        Ebene \(E: \vec x=\vector{1\\2\\3}+r\cdot\vector{0\\2\\1}+s\cdot\vector{3\\0\\-1}\).
+                    </p>
+
+                    <ol class="custom-marker parens-around lower-alpha more-spacing">
+                        <li>Weise nach, dass der Punkt \(P\) in der Ebene \(E\) liegt!</li>
+                        <li>Die Gerade \(g\)
+                            <ul>
+                                <li>liegt in der Ebene \(E\),</li>
+                                <li>geht durch den Punkt \(P\) und</li>
+                                <li>hat keinen Schnittpunkt mit der \(xy\)-Ebene.</li>
+                            </ul>
+                            Gib eine Gleichung der Geraden \(g\) an!
+                        </li>
+                    </ol>
+                    <details class="loesungen">
+                        <summary class="nonumber">Lösung</summary>
+                        <ol class="custom-marker parens-around lower-alpha more-spacing">
+                            <li>Einsetzen des Ortsvektors von \(P\) in die Geradengleichung liefert:
+                                <p style="margin-left: 20px;">
+                                    \(\begin{align*}
+                                    \pmatrix{4\\6\\4}&=\pmatrix{1\\2\\3}+t\cdot\pmatrix{0\\2\\1}+s\cdot\pmatrix{3\\0\\-1}
+                                    \end{align*}\)
+                                </p>
+                                Und das Gleichungssystem:
+                                <p style="margin-left: 20px;">
+                                    \(\begin{align*}
+                                    4&=1+3s \\
+                                    6&=2+2r \\
+                                    4&=3+r-s
+                                    \end{align*}\)
+                                </p>
+                                Das ergibt: \(r=2\) und \(s=1\) (und eine wahre Aussage in der dritten Gleichung), das
+                                heißt \(P\) liegt in \(E\).
+                            </li>
+                            <li>Überlegungen:
+                                <ul>
+                                    <li>Die Gerade \(g\) schneidet die \(xy\)-Ebene nicht, wenn alle Punkte auf ihr, die
+                                        gleiche \(z\)-Koordinate haben. </li>
+                                    <li>Es wird also ein weiterer Punkt \(Q\) benötigt, der in \(E\) liegt und die
+                                        gleiche \(z\)-Koordinate
+                                        wie \(P\) hat: \(Q(x\mid y\mid 4)\)</li>
+                                </ul>
+                                Berechnung von \(Q\):
+                                <p>
+                                    Ortsvektor in \(E\) einsetzen:
+                                <p style="margin-left: 20px;">
+                                    \(\begin{align*}
+                                    x&=1+3s \\
+                                    y&=2+2r \\
+                                    4&=3+r-s
+                                    \end{align*}\)
+                                </p>
+                                Eine mögliche Lösung für den Punkt \(Q\) ist z.B. \(Q(1\mid4\mid4)\).
+                                </p>
+                                <p>
+                                    Aus den Punkten \(Q\) und \(P\) folgt dann für eine Geradengleichung von \(g\):
+                                <p style="margin-left: 20px;">
+                                    \(\begin{align*}
+                                    g: \vec x=\pmatrix{4\\6\\4}+t\cdot\pmatrix{-3\\-2\\0}
+                                    \end{align*}\)
+                                </p>
+                                </p>
+                            </li>
+                        </ol>
+                    </details>
+                </li>
+            </ol>
+
+            <ol class="more-spacing" start="3">
+                <li>
+                    <p>
+                        Gegeben ist die Ebene \(E:3x-2y=0\).
+                    </p>
+
+                    <ol class="custom-marker parens-around lower-alpha more-spacing">
+                        <li>Prüfe, ob der Punkt \((1\mid 1,5\mid 7)\) in \(E\) liegt! </li>
+                        <li>Beschreibe die Lage von \(E\) im Koordinatensystem!</li>
+                        <li>Bestimme diejenige reelle Zahl \(s\), für die die Ebene \(F:2x+sy+z=4\) senkrecht zu \(E\)
+                            steht!</li>
+                    </ol>
+                    <details class="loesungen">
+                        <summary class="nonumber">Lösung</summary>
+                        <ol class="custom-marker parens-around lower-alpha more-spacing">
+                            <li>Punktprobe:
+                                <p style="margin-left: 20px;">
+                                    \(\begin{align*}
+                                    3\cdot 1-2\cdot 1,5&=0\\
+                                    3-3&=0 \\
+                                    0&=0 \quad \checkmark
+                                    \end{align*}\)
+                                </p>
+                                Der Punkt \(P\) liegt in der Ebene \(E\).
+                            </li>
+                            <li>
+                                Die Ebene \(E\) enthält die \(z\)-Achse, da keine \(z\)-Koordinate in der
+                                Koordinatenform vorkommt und \(d=0\) ist.
+                            </li>
+                            <li>
+                                Normalenvektoren der Ebenen sind \(n_E=\pmatrix{3\\2\\0}\) und
+                                \(n_F=\pmatrix{2\\s\\1}\).
+                                Die beiden Ebenen sind senkrecht zueinander, wenn ihr Skalarprodukt gleich Null ergibt:
+                                <p style="margin-left: 20px;">
+                                    \(\begin{align*}
+                                    \pmatrix{3\\2\\0}\cdot\pmatrix{2\\s\\1}&=0 \\
+                                    6+2s&=0 \quad |-6 \ |:2 \\
+                                    s&=-3
+                                    \end{align*}\)
+                                </p>
+                            </li>
+                        </ol>
+                    </details>
+                </li>
+            </ol>
+
+            <ol class="more-spacing" start="4">
+                <li>
+                    <p>
+                        Gegeben sind die Punkte \(A(0\mid 0\mid 0)\), \(B(8\mid 6\mid 0)\), und \(C(4\mid 3\mid z)\),
+                        wobei \(z\) eine positive reelle Zahl ist.
+                    </p>
+
+                    <ol class="custom-marker parens-around lower-alpha more-spacing">
+                        <li>Zeige, dass es sich beim Dreieck \(ABC\) um ein gleichschenkliges Dreieck mit der Basis
+                            \(\overline {AB} \) handelt!</li>
+                        <li>Das Dreieck \(ABC\) hat den Flächeninhalt \(35\). Bestimme den Wert von \(z\)!</li>
+                    </ol>
+                    <details class="loesungen">
+                        <summary class="nonumber">Lösung</summary>
+                        <ol class="custom-marker parens-around lower-alpha more-spacing">
+                            <li>Dreiecksseiten berechnen:
+                                <p style="margin-left: 20px;">
+                                    \(\begin{align*}
+                                    | \overline{AC} |&=\sqrt{4^2+3^2+z^2}=\sqrt{25+z^2} \\
+                                    | \overline{BC} |&=\sqrt{(8-4)^2+(6-3)^2+z^2}=\sqrt{25+z^2}
+                                    \end{align*}\)
+                                </p>
+                                Damit sind die beiden Seiten gleich lang und das Dreieck somit gleichschenklig.
+                            </li>
+                            <li>Für die Flächenberechnung wird nun die Höhe des Dreiecks benötigt. Da das Dreieck
+                                gleichschenklig ist, kann hier einfach der
+                                Mittelpunkt \(M\) der Basis \(\overline{AB}\) als Referenz verwendet werden: \(M(4\mid
+                                3\mid 0)\)
+                                <p>
+                                    Für die Fläche gilt: \(A=\tfrac12\cdot g\cdot
+                                    h=\tfrac12\cdot|\overline{AB}|\cdot|\overline{MC}|\)
+                                <ul>
+                                    <li>\(| \overline{AB}| =\sqrt{8^2+6^2}=\sqrt{100}=10\,\text{LE}\)</li>
+                                    <li>\(| \overline{MC}| =\sqrt{(4-4)^2+(3-3)^2+z^2}=\sqrt{z^2}=z\)</li>
+                                </ul>
+                                Damit gilt:
+                                <p style="margin-left: 20px;">
+                                    \(\begin{align*}
+                                    A&=\tfrac12\cdot|\overline{AB}|\cdot|\overline{MC}| \\
+                                    35&=\tfrac12\cdot 10 \cdot z \\
+                                    35&=5z\quad |:5 \\
+                                    z&=7
+                                    \end{align*}\)
+                                </p>
+                                </p>
+
+                            </li>
+                        </ol>
+                    </details>
+                </li>
+            </ol>
+
+            <ol class="more-spacing" start="5">
+                <li>
+                    <p>
+                        Gegeben sind die Gerade \(g: \overrightarrow{x}=\pmatrix{2\\3\\-7}+s \cdot\pmatrix{1\\0\\5}\),
+                        sowie die Gerade \(h\) durch die Punkte \(A(4 \mid 0 \mid 0)\) und \(B(5 \mid 1 \mid b)\) mit
+                        einer reellen Zahl \(b\).
+                    </p>
+
+                    <ol class="custom-marker parens-around lower-alpha more-spacing">
+                        <li>Begründe, dass \(A\) nicht auf \(g\) liegt! </li>
+                        <li>Die Geraden \(g\) und \(h\) haben einen gemeinsamen Punkt. Ermittle den Wert von \(b\)!</li>
+                    </ol>
+                    <details class="loesungen">
+                        <summary class="nonumber">Lösung</summary>
+                        <ol class="custom-marker parens-around lower-alpha more-spacing">
+                            <li>
+                                Die \(y\)-Koordinate von \(A\) ist Null, während die \(y\)-Koordinaten aller Punkte die
+                                auf \(g\) liegen den Wert \(3\) haben.
+                            </li>
+                            <li>
+                                Eine mögliche Geradengleichung von \(h\) ist \(h: \vec x = \pmatrix{4\\0\\0}+r\cdot
+                                \pmatrix{1\\1\\b}\).
+                                <p>
+                                    \(g\) und \(h\) gleichsetzen ergibt:
+                                <p style="margin-left: 20px;">
+                                    \(\begin{align*}
+                                    \pmatrix{2\\3\\-7}+s\cdot \pmatrix{1\\0\\5}&= \pmatrix{4\\0\\0}+r\cdot
+                                    \pmatrix{1\\1\\b}
+                                    \end{align*}\)
+                                </p>
+                                Das dazugehörige Gleichungssystem lautet:
+                                <p>
+                                    \(g\) und \(h\) gleichsetzen ergibt:
+                                <p style="margin-left: 20px;">
+                                    \(\begin{align*}
+                                    2+s&=4+r \\
+                                    3&=r \\
+                                    -7+5s&=b\cdot r
+                                    \end{align*}\)
+                                </p>
+                                Aus Gleichung 2 folgt \(r=3\). Damit ergibt sich mit Gleichung 1 \(s=5\). Damit kann nun
+                                \(b\) mit Gleichung 3 berechnet werden:
+                                <p style="margin-left: 20px;">
+                                    \(\begin{align*}
+                                    -7+5s&=b\cdot r \\
+                                    -7+5\cdot 5&=b\cdot 3 \\
+                                    18&=3b\quad |:3 \\
+                                    b&=6
+                                    \end{align*}\)
+                                </p>
+                                </p>
+                            </li>
+                        </ol>
+                    </details>
+                </li>
+            </ol>
+
+            <ol class="more-spacing" start="6">
+                <li>
+                    <p>
+                        Gegeben sind die drei Eckpunkte eines Dreiecks \(ABC\) mit \(A(1\mid 0\mid 2), B(3\mid 2\mid
+                        10)\) und \(C(4\mid 3\mid 5)\).
+                    </p>
+
+                    <ol class="custom-marker parens-around lower-alpha more-spacing">
+                        <li>Weise nach, dass der Abstand von \(C\) zu \(A\) genauso groß ist wie der Abstand von \(C\)
+                            zu \(B\)!</li>
+                        <li>Ermittle die Koordinaten eines Punktes \(D\) mit \(D \neq C\) für den gilt:
+                            <ol type="I">
+                                <li>\(\left|\overline{DA}\right| = \left|\overline{DB}\right|\)</li>
+                                <li>\(\left|\overline{DA}\right| = \left|\overline{CA}\right|\)</li>
+                            </ol>
+                        </li>
+                    </ol>
+                    <details class="loesungen">
+                        <summary class="nonumber">Lösung</summary>
+                        <ol class="custom-marker parens-around lower-alpha more-spacing">
+                            <li>Abstände berechnen:
+                                <ul>
+                                    <li>\(|\overline{AC}|=\sqrt{(4-1)^2+(3-0)^2+(5-2)^2} = \sqrt{27}\)</li>
+                                    <li>\(|\overline{BC}|=\sqrt{(4-3)^2+(3-2)^2+(10-5)^2} = \sqrt{27}\)</li>
+                                </ul>
+                                Die Seiten sind gleich lang.
+                            </li>
+                            <li>Eine Möglichkeit einen solchen Punkt \(D\) zu ermitteln, besteht darin, den Punkt \(C\)
+                                am Mittelpunkt der Strecke \(\overline{AB}\) zu spiegeln:
+                                <p style="margin-left: 20px;">
+                                    \(\begin{align*}
+                                    \overrightarrow{OM_{AB}} &= \overrightarrow{OA} +
+                                    \frac{1}{2}\cdot\overrightarrow{BA} \\
+                                    \overrightarrow{OM_{AB}} &= \pmatrix{1\\0\\2} + \frac{1}{2}\cdot\pmatrix{2\\2\\8}=
+                                    \pmatrix{2\\1\\6} \\[15px]
+                                    \overrightarrow{OD} &= \overrightarrow{OC} + 2\cdot\overrightarrow{CM_{AB}} \\
+                                    \overrightarrow{OD} &= \pmatrix{4\\3\\5}+2\cdot\pmatrix{-2\\-2\\1} =
+                                    \pmatrix{0\\-1\\7}
+                                    \end{align*}\)
+                                </p>
+                                Der Punkt \(D\) hat somit die Koordinaten \(D(0\mid -1\mid 7)\).
+                            </li>
+                        </ol>
+                    </details>
+                </li>
+            </ol>
+
+            <ol class="more-spacing" start="7">
+                <li>
+                    <p>
+                        Gegeben sind die Punkte \(P(2\mid0\mid 23)\) und \(Q(6\mid t\mid 20)\) mit \(t \in \mathbb{R}\).
+                    </p>
+
+                    <ol class="custom-marker parens-around lower-alpha more-spacing">
+                        <li>Entscheide, ob es einen Wert von \(t\) gibt, für den die Gerade \(PQ\) parallel zur
+                            \(xy\)-Ebene verläuft!
+                            Begründe deine Entscheidung!</li>
+                        <li>Der Koordinatenursprung und die Punkte \(P\) und \(Q\) bilden ein Dreieck.
+                            <p>
+                                Ermittle diejenigen Werte von \(t\), für die das Dreieck in \(Q\) einen rechten Winkel
+                                hat!
+                            </p>
+                        </li>
+                    </ol>
+                    <details class="loesungen">
+                        <summary class="nonumber">Lösung</summary>
+                        <ol class="custom-marker parens-around lower-alpha more-spacing">
+                            <li>
+                                Damit die Gerade \(PQ\) parallel zur \(xy\)-Ebene verläuft, müssen alle Punkte auf
+                                dieser die gleiche \(z\) Koordinate besitzen.
+                                Da die \(z\)-Koordinaten von \(P\) und \(Q\) verschieden sind, gibt es keine
+                                Möglichkeit, dass Gerade \(PQ\) parallel zur \(xy\)-Ebene verläuft.
+                            </li>
+                            <li>
+                                Damit das Dreieck in \(Q\) einen rechten Winkel hat muss das Skalarprodukt der
+                                Seitenvektoren Null sein:
+                                <p style="margin-left: 20px;">
+                                    \(\begin{align*}
+                                    \overrightarrow{QO}\cdot\overrightarrow{QP}&=0 \\[10px]
+                                    \pmatrix{0-6\\0-t\\0-20}\cdot\pmatrix{2-6\\0-t\\23-20}&=0 \\[5px]
+                                    \pmatrix{-6\\-t\\-20}\cdot\pmatrix{-4\\-t\\3}&=0 \\[15px]
+                                    24+t^2-60&=0 \quad\ \ | +36\\
+                                    t^2&=36 \quad | \sqrt{\ }\\
+                                    t_{1/2}&=\pm6
+                                    \end{align*}\)
+                                </p>
+                                Ob man für die Rechnung \(\overrightarrow{OQ}\) oder \(\overrightarrow{QO}\) nutzt, ist
+                                egal.
+                            </li>
+                        </ol>
+                    </details>
+                </li>
+            </ol>
+            <ol class="more-spacing" start="8">
+                <li>
+                    <p>
+                        Gegeben ist das Dreieck \(ABC\) mit den Eckpunkten \(A, B\) und \(C\).
+                        Für den Punkt \(D\) gilt \(\overrightarrow{OD}=\overrightarrow{OC}-2 \cdot
+                        \overrightarrow{AB}\),
+                        wobei \(O\) den Koordinatenursprung bezeichnet.
+                    <p>
+                        Ermittle das Verhältnis des Inhalts der Fläche des Dreiecks \(ABC\) zum Inhalt der Fläche des
+                        Trapezes \(ABCD\)!
+                    </p>
+                    <p>
+                        Stelle dein Vorgehen durch eine geeignete Ergänzung der Abbildung dar!
+                    </p>
+                    <div class="centered" style="max-width: 250px">
+                        <svg id="taskH8" viewBox="-50 -50 300 100">
+                            <defs></defs>
+                        </svg>
+                    </div>
+
+                    </p>
+                    <details class="loesungen">
+                        <summary class="nonumber">Lösung</summary>
+                        <ul class="custom-marker parens-around lower-alpha more-spacing">
+                            <li>Verhältnis der Flächeninhalte ermitteln:
+                                <p>
+                                    Der Flächeninhalt des Dreiecks \(ABC\) ergibt ergibt sich aus
+                                    \(A_{\text{Dreieck}}=\frac12\cdot\left|\overline{AB}\right\|\cdot h\),
+                                    wobei \(h\) die Höhe von \(C\) bezüglich der Seite \(\overline{AB}\) ist.
+                                </p>
+                                <p>
+                                    Da laut Aufgabenstellung \(\overrightarrow{OD}=\overrightarrow{OC}-2 \cdot
+                                    \overrightarrow{AB}\) gilt,
+                                    folgt \(\left|\overline{CD}\right|=2\cdot\left|\overline{AB}\right|\).
+                                    Für den Flächeninhalt des Trapezes gilt somit:
+                                <p style="margin-left: 20px;">
+                                    \(\begin{align*}
+                                    A_{\text{Trapez}}&=\tfrac{1}{2}
+                                    \cdot\left(\left\vert\overline{AB}\right\vert+\left\vert\overline{CD}\right\vert\right)
+                                    \cdot h \\[5pt]
+                                    A_{\text{Trapez}}&=\tfrac12
+                                    \left(\left\vert\overline{AB}\right\vert+2\cdot\left\vert\overline{AB}\right\vert\right)
+                                    \cdot h \\[5pt]
+                                    A_{\text{Trapez}}&=\tfrac32 \cdot\left\vert\overline{AB}\right\vert \cdot h
+                                    \end{align*}\)
+                                </p>
+                                Der Flächeninhalt des Trapezes ist dreimal so groß wie der des Dreiecks.
+                                Damit ist das Verhältnis des Flächeninhalts des Dreiecks zu dem des Trapezes \(1:3\)
+                                </p>
+                                <div class="centered" style="max-width: 250px">
+                                    <svg id="taskH8L" viewBox="-150 -150 400 200">
+                                        <defs></defs>
+                                    </svg>
+                                </div>
+
+                            </li>
+                        </ul>
+                    </details>
+                </li>
+            </ol>
+
+            <ol class="more-spacing" start="9">
+                <li>
+                    <p>
+                        Gegeben sind die Punkte \(A(3\mid4\mid 0)\) und \(M(1\mid2\mid-1)\).
+                    </p>
+                    <p>
+                        Ermittle die Koordinaten von zwei möglichen Punkten \(B\) und \(C,\) so dass die beiden
+                        folgenden Bedingungen erfüllt sind:
+                    <ol type="I">
+                        <li>\(A, B\) und \(C\) haben jeweils denselben Abstand zu \(M\). </li>
+                        <li>\(A, B\) und \(C\) sind Eckpunkte eines gleichschenkligen Dreiecks.</li>
+                    </ol>
+                    </p>
+                    <details class="loesungen">
+                        <summary class="nonumber">Lösung</summary>
+                        <p>
+                            Die erste Bedingung liefert, dass die Punkte \(A, B\) und \(C\) auf einem Kreis mit
+                            Mittelpunkt \(M\) liegen.
+                            Die zweite Bedingung wird zum Beispiel durch folgendes Dreieck erfüllt:
+                        <div class="centered" style="max-height: 200px;">
+                            <svg version='1.1' xmlns='http://www.w3.org/2000/svg'
+                                xmlns:xlink='http://www.w3.org/1999/xlink' viewBox='0 -130.057 144.681 130.057'>
+                                <g id='page1'>
+                                    <g transform='matrix(1 0 0 -1 0 0)'>
+                                        <path
+                                            d='M129.1328 57.289062C129.1328 88.6016 103.75 113.9844 72.437497 113.9844C41.1289 113.9844 15.7461 88.6016 15.7461 57.289062C15.7461 25.9805 41.1289 .5977 72.437497 .5977C103.75 .5977 129.1328 25.9805 129.1328 57.289062Z'
+                                            stroke='#a8a7a7' fill='none' stroke-width='1.19553'
+                                            stroke-miterlimit='10' />
+                                        <path d='M72.437497 57.289062V113.9844' stroke='darkgoldenrod' fill='none'
+                                            stroke-width='.79701' stroke-miterlimit='10'
+                                            stroke-dasharray='2.98883 2.98883' />
+                                        <path d='M72.437497 71.4648C64.60937 71.4648 58.2656 65.11719 58.2656 57.289062'
+                                            stroke='darkgoldenrod' fill='none' stroke-width='.3985'
+                                            stroke-miterlimit='10' />
+                                        <path
+                                            d='M67.47656 62.96094C67.47656 63.35156 67.16015 63.66797 66.76953 63.66797C66.3789 63.66797 66.0625 63.35156 66.0625 62.96094C66.0625 62.57031 66.3789 62.25 66.76953 62.25C67.16015 62.25 67.47656 62.57031 67.47656 62.96094Z'
+                                            fill='darkgoldenrod' />
+                                        <path
+                                            d='M67.47656 62.96094C67.47656 63.35156 67.16015 63.66797 66.76953 63.66797C66.3789 63.66797 66.0625 63.35156 66.0625 62.96094C66.0625 62.57031 66.3789 62.25 66.76953 62.25C67.16015 62.25 67.47656 62.57031 67.47656 62.96094Z'
+                                            stroke='darkgoldenrod' fill='none' stroke-width='1.19553'
+                                            stroke-miterlimit='10' />
+                                        <path d='M15.7461 57.289062H129.1328L72.437497 113.9844Z' fill='darkgoldenrod'
+                                            fill-opacity='.2' />
+                                        <path d='M15.7461 57.289062H129.1328L72.437497 113.9844Z' stroke='darkgoldenrod'
+                                            fill='none' stroke-width='1.19553' stroke-miterlimit='10' />
+                                        <path
+                                            d='M17.1641 57.289062C17.1641 58.074218 16.5273 58.70703 15.7461 58.70703C14.9609 58.70703 14.3281 58.074218 14.3281 57.289062C14.3281 56.507812 14.9609 55.875 15.7461 55.875C16.5273 55.875 17.1641 56.507812 17.1641 57.289062Z'
+                                            fill='darkgoldenrod' />
+                                        <path
+                                            d='M17.1641 57.289062C17.1641 58.074218 16.5273 58.70703 15.7461 58.70703C14.9609 58.70703 14.3281 58.074218 14.3281 57.289062C14.3281 56.507812 14.9609 55.875 15.7461 55.875C16.5273 55.875 17.1641 56.507812 17.1641 57.289062Z'
+                                            stroke='darkgoldenrod' fill='none' stroke-width='1.19553'
+                                            stroke-miterlimit='10' />
+                                        <path
+                                            d='M10.9207 59.40418C10.9207 60.53855 10.08101 61.22543 8.25976 61.22543H4.97726L4.91195 60.71293H5.19539C5.90414 60.71293 6.05695 60.65824 6.05695 60.41855C6.05695 60.33137 6.0132 60.1023 5.95883 59.88418L4.562889 54.69324C4.399452 54.104491 4.399452 54.104491 4.312264 54.017304C4.203202 53.919179 3.930389 53.864491 3.516014 53.864491H3.352577L3.297889 53.351991H7.25664C9.4157 53.351991 10.50633 54.202616 10.50633 55.59855C10.50633 56.4598 9.95008 57.04887 8.79414 57.39793C10.13539 57.64855 10.9207 58.33574 10.9207 59.40418ZM9.62289 59.56793C9.62289 58.41199 8.91414 57.64855 7.47445 57.64855H6.56945L7.20195 59.97137C7.37633 60.63668 7.45289 60.71293 8.01976 60.71293H8.33601C9.23039 60.71293 9.62289 60.36387 9.62289 59.56793ZM9.1757 55.80574C9.1757 54.75887 8.49976 53.864491 6.98383 53.864491H6.43851C5.84976 53.864491 5.67539 53.930116 5.67539 54.158866C5.67539 54.246054 5.69695 54.37699 5.7407 54.54074L6.43851 57.13605H7.1257C8.59789 57.13605 9.1757 56.68887 9.1757 55.80574Z'
+                                            fill='darkgoldenrod' />
+                                        <path
+                                            d='M130.5508 57.289062C130.5508 58.074218 129.9141 58.70703 129.1328 58.70703C128.3516 58.70703 127.7148 58.074218 127.7148 57.289062C127.7148 56.507812 128.3516 55.875 129.1328 55.875C129.9141 55.875 130.5508 56.507812 130.5508 57.289062Z'
+                                            fill='darkgoldenrod' />
+                                        <path
+                                            d='M130.5508 57.289062C130.5508 58.074218 129.9141 58.70703 129.1328 58.70703C128.3516 58.70703 127.7148 58.074218 127.7148 57.289062C127.7148 56.507812 128.3516 55.875 129.1328 55.875C129.9141 55.875 130.5508 56.507812 130.5508 57.289062Z'
+                                            stroke='darkgoldenrod' fill='none' stroke-width='1.19553'
+                                            stroke-miterlimit='10' />
+                                        <path
+                                            d='M140.64965 53.783471H140.37684C139.77715 53.783471 139.65715 53.881596 139.54809 54.44878L138.18497 61.30816H137.73778L134.139341 55.10316C133.561216 54.143471 133.114028 53.783471 132.525278 53.783471L132.470903 53.270971H135.40434L135.46965 53.783471H135.20778C134.6409 53.783471 134.45559 53.892533 134.45559 54.219721C134.45559 54.38316 134.5209 54.60128 134.65184 54.81941L135.25153 55.86628H138.03247L138.28309 54.52503C138.30497 54.3941 138.32684 54.252533 138.32684 54.175971C138.32684 53.859721 138.23965 53.783471 137.61809 53.783471H137.36715L137.31247 53.270971H140.59497L140.64965 53.783471ZM137.94497 56.37878H135.5459L137.3234 59.50878L137.94497 56.37878Z'
+                                            fill='darkgoldenrod' />
+                                        <path
+                                            d='M73.85547 113.9844C73.85547 114.7656 73.222653 115.4023 72.437497 115.4023C71.656247 115.4023 71.02343 114.7656 71.02343 113.9844C71.02343 113.2031 71.656247 112.5664 72.437497 112.5664C73.222653 112.5664 73.85547 113.2031 73.85547 113.9844Z'
+                                            fill='darkgoldenrod' />
+                                        <path
+                                            d='M73.85547 113.9844C73.85547 114.7656 73.222653 115.4023 72.437497 115.4023C71.656247 115.4023 71.02343 114.7656 71.02343 113.9844C71.02343 113.2031 71.656247 112.5664 72.437497 112.5664C73.222653 112.5664 73.85547 113.2031 73.85547 113.9844Z'
+                                            stroke='darkgoldenrod' fill='none' stroke-width='1.19553'
+                                            stroke-miterlimit='10' />
+                                        <path
+                                            d='M76.17234 126.17822H75.77984L75.12547 125.54572C74.60203 126.16729 74.04578 126.41822 73.21703 126.41822C70.93797 126.41822 68.833279 123.98635 68.833279 121.43447C68.833279 119.49322 70.09828 118.217599 72.03922 118.217599C73.53328 118.217599 74.59109 118.926349 75.31078 120.61666L74.86359 120.81291C74.13297 119.275099 73.38078 118.751661 72.22484 118.751661C70.86172 118.751661 70.1964 119.72229 70.1964 120.99822C70.1964 123.10291 71.39578 125.94916 73.30422 125.94916C74.41672 125.94916 75.03828 125.17479 75.11453 123.12479H75.56172L76.17234 126.17822Z'
+                                            fill='darkgoldenrod' />
+                                        <path
+                                            d='M73.85547 57.289062C73.85547 58.074218 73.222653 58.70703 72.437497 58.70703C71.656247 58.70703 71.02343 58.074218 71.02343 57.289062C71.02343 56.507812 71.656247 55.875 72.437497 55.875C73.222653 55.875 73.85547 56.507812 73.85547 57.289062Z'
+                                            fill='darkgoldenrod' />
+                                        <path
+                                            d='M73.85547 57.289062C73.85547 58.074218 73.222653 58.70703 72.437497 58.70703C71.656247 58.70703 71.02343 58.074218 71.02343 57.289062C71.02343 56.507812 71.656247 55.875 72.437497 55.875C73.222653 55.875 73.85547 56.507812 73.85547 57.289062Z'
+                                            stroke='darkgoldenrod' fill='none' stroke-width='1.19553'
+                                            stroke-miterlimit='10' />
+                                        <path
+                                            d='M77.5897 53.05441H75.23403L71.51559 47.16566L70.93747 53.05441H68.2984L68.24403 52.54191H68.52747C69.23653 52.54191 69.38903 52.48722 69.38903 52.24754C69.38903 52.16035 69.34528 51.96379 69.27997 51.71316L68.16778 47.54722C67.753404 45.998786 67.535279 45.715349 66.749967 45.693474L66.695592 45.180974H69.42184L69.47622 45.693474C68.82184 45.693474 68.50559 45.889724 68.50559 46.29316C68.50559 46.53316 68.51653 46.57691 68.75653 47.54722L69.87965 51.74597L70.5559 45.180974H70.9484L75.15778 51.89847L73.7184 46.52222C73.55465 45.933474 73.55465 45.933474 73.46747 45.846286C73.34747 45.737224 73.22778 45.693474 72.6934 45.693474H72.50778L72.4534 45.180974H75.91028L75.97559 45.693474H75.69215C74.9834 45.693474 74.83059 45.748161 74.83059 45.987849C74.83059 46.064411 74.87434 46.3041 74.93965 46.52222L76.32465 51.71316C76.4884 52.31285 76.4884 52.31285 76.57559 52.3891C76.69559 52.49816 76.83715 52.54191 77.3825 52.54191H77.5353L77.5897 53.05441Z'
+                                            fill='darkgoldenrod' />
+                                    </g>
+                                </g>
+                            </svg>
+                        </div>
+                        Für den Ortsvektor des Punkts \(B\) folgt somit:
+                        <p style="margin-left: 20px;">
+                            \(\begin{align*}
+                            \overrightarrow{OB}&=\overrightarrow{OA}+2\cdot\overrightarrow{AM} \\[5pt]
+                            \overrightarrow{OB}&=\pmatrix{3\\4\\0}+2\cdot\pmatrix{1-3\\2-4\\-1-0} \\[5pt]
+                            \overrightarrow{OB}&=\pmatrix{-1\\0\\-2}
+                            \end{align*}\)
+                        </p>
+                        Ein Vektor \(\vec v\), der senkrecht auf \(\overrightarrow{AM}\) steht,
+                        das heißt für den \(\overrightarrow{AM}\cdot\vec v=0\) gilt,
+                        ist zum Beispiel gegeben durch:
+                        <p style="margin-left: 20px;">
+                            \(\begin{align*}
+                            \vec v=\pmatrix{1\\-1\\0}
+                            \end{align*}\)
+                        </p>
+                        Der Vektor \(\overrightarrow{MC}\) muss nun ein Vielfaches dieses Vektors sein und
+                        den gleichen Betrag wie \(\overrightarrow{AM}\) besitzen. Somit folgt:
+                        <p style="margin-left: 20px;">
+                            \(\begin{align*}
+                            \overrightarrow{OC}&=\overrightarrow{OM}+\overrightarrow{MC} \\[5pt]
+                            \overrightarrow{OC}&=\overrightarrow{OM}+\dfrac{\left\vert\overrightarrow{AM}\right\vert}{\left\vert\vec
+                            v\right\vert} \cdot \vec v \\[5pt]
+                            \overrightarrow{OC}&=\pmatrix{1\\2\\-1}+\dfrac{\sqrt{(-2)^2+(-2)^2+(-1)^2}}{\sqrt{1^2+(-1)^2}}\cdot\pmatrix{1\\-1\\0}
+                            \\[5pt]
+                            \overrightarrow{OC}&=\pmatrix{1\\2\\-1}+\dfrac{3}{\sqrt{2}}\cdot\pmatrix{1\\-1\\0} \\[5pt]
+                            \overrightarrow{OC}&=\pmatrix{1+\frac{3}{\sqrt{2}}\\2-\frac{3}{\sqrt{2}}\\-1}
+                            \end{align*}\)
+                        </p>
+                        Die Koordinaten von zwei möglichen Punkten \(B\) und \(C,\) die die beiden Bedingungen erfüllen,
+                        können also \(B(-1\mid0\mid-2)\) und
+                        \(C\left(1+\frac{3}{\sqrt{2}}\;\left\vert\;2-\frac{3}{\sqrt{2}}\;\right\vert\;-1\right)\) sein.
+                        </p>
+                    </details>
+                </li>
+            </ol>
+
+            <!-- <ol class="more-spacing" start="3">
+                <li>
+                    <p>
+
+                    </p>
+
+                    <ol class="custom-marker parens-around lower-alpha more-spacing">
+                        <li></li>
+                    </ol>
+                    <details class="loesungen">
+                        <summary class="nonumber">Lösung</summary>
+                        <ol class="custom-marker parens-around lower-alpha more-spacing">
+                            <li>
+                    
+                            </li>
+                        </ol>
+                    </details>
+                </li>
+            </ol> -->
+        </section>
+
+
+        <section class="aufgaben" id="rt">
+            <h3>Aufgaben aus dem Rechenteil</h3>
+
+            <ol class="more-spacing" start="1">
+                <li>
+                    <p>
+                        Die Eckpunkte eines Holzkörpers werden durch \(A(0\mid 0\mid 0)\), \(B(10 \mid 0 \mid 0)\),
+                        \(C(10 \mid 10 \mid 0)\),
+                        \(D(0 \mid 10 \mid 0)\) und \(E(0 \mid 10 \mid 6)\) dargestellt (vgl. Abbildung). Die Punkte
+                        \(B\), \(D\) und \(E\) liegen
+                        im Modell in der Symmetrieebene des Körpers.
+                    </p>
+                    <p>
+                        Eine Längeneinheit im Koordinatensystem entspricht einem Zentimeter in der Realität.
+                    </p>
+                    <div class="centered" style="max-width: 250px">
+                        <svg id="task1" viewBox="-210 -300 550 470">
+                            <defs></defs>
+                        </svg>
+                    </div>
+
+                    <ol class="custom-marker parens-around lower-alpha more-spacing">
+                        <li>Zeige, dass das Dreieck \(BCE\) rechtwinklig ist, und berechne den Inhalt der
+                            Gesamtoberfläche des Holzkörpers!
+                        </li>
+                        <li>Gib eine Gleichung der Geraden \(h\) an, auf der die Punkte \(C\) und \(E\) liegen!
+                            <p>
+                                Begründe, dass diese Gerade windschief zur Geraden durch die Punkte \(B\) und \(D\)
+                                verläuft!
+                            </p>
+                        </li>
+                        <li>Bestimme eine Gleichung der Ebene \(L,\) in der das Dreieck \(BCE\) liegt, in
+                            Koordinatenform!
+                            <p>
+                                Zur Kontrolle: \(L: 3x +5z = 30\)
+                            </p>
+                        </li>
+                        <li>
+                            Die quadratische Grundfläche des Holzkörpers schließt mit der Seitenfläche,
+                            die durch das Dreieck \(BCE\) dargestellt wird, einen Winkel ein.
+                            <p>
+                                Berechne die Größe dieses Winkels!
+                            </p>
+                        </li>
+                        <li>
+                            Entscheide und begründe für jede der folgenden Ebenengleichungen,
+                            ob diese Ebene das Quadrat \(ABCD\) in zwei Figuren mit gleichem Flächeninhalt teilt:
+                            <p style="margin-left: 20px;">
+                                \(\begin{align*}
+                                E_1:& y=5 \\[2pt]
+                                E_2:& -x+y = 0 \\[2pt]
+                                E_3:& z=5
+                                \end{align*}\)
+                            </p>
+                        </li>
+                        <li>
+                            Die Punkte \(A\) und \(D\) werden auf der \(y\)-Achse jeweils so verschoben,
+                            dass ein gleichschenkliges Trapez \(A\) entsteht, dessen Fläche \(\frac45\) der Fläche des
+                            Quadrats \(ABCD\) beträgt.
+                            Die Punkte \(A\) und \(D\) liegen auf der Strecke \(\overline{AD}\).
+                            <p>
+                                Ermittle die Koordinaten der Punkte \(A\) und \(D\)!
+                            </p>
+                        </li>
+                        <li>
+                            Der Holzkörper soll mit einer möglichst kurzen Linie versehen werden,
+                            die im Modell vom Eckpunkt \(A\) über die Kante \(\overline{BE}\) zum Punkt \(C\) verläuft.
+                            Die Länge dieser Linie in Zentimetern kann folgendermaßen ermittelt werden:
+                            <p style="margin-left: 20px;">
+                                \(\begin{align*}
+                                &P(10 -10t \mid 10 t \mid 6 t) \\[10pt]
+                                &\overrightarrow{PC} \cdot \overrightarrow{PB} = 0 \Rightarrow t= \frac{25}{59} \\[10pt]
+                                &2\cdot \left|\overrightarrow{PC} \right| \approx 15,2
+                                \end{align*}\)
+                            </p>
+                            Erläutere dieses Vorgehen!
+                        </li>
+                    </ol>
+                    <p>
+                        Der Schnittpunkt der Ebene \(L\) mit der \(z\)-Achse wird mit \(F\) bezeichnet.
+                    </p>
+                    <ol class="custom-marker parens-around lower-alpha more-spacing" style="counter-set: list 7;">
+                        <li>Zeichne \(F\) sowie die Geraden, in denen \(L\) die \(xz\)- und die \(yz\)-Ebene schneidet,
+                            in die Abbildung ein!
+                        </li>
+                        <li>Ermittle, um wie viel Prozent das Volumen des Körpers \(ABCDEF\) größer ist als das Volumen
+                            des Körpers \(ABCDE\),
+                            ohne für diese Volumina konkrete Werte zu berechnen!</li>
+                    </ol>
+                    <details class="loesungen">
+                        <summary class="nonumber">Lösung</summary>
+                        <ol class="custom-marker parens-around lower-alpha more-spacing">
+                            <li>Rechterwinkel:
+                                <p style="margin-left: 20px;">
+                                    \(\begin{align*}
+                                    \overrightarrow{CB} \cdot \overrightarrow{CE}=
+                                    \pmatrix{0\\-10\\0}\cdot\pmatrix{-10\\0\\6}=0
+                                    \end{align*}\)
+                                </p>
+                                Oberfläche:
+                                <p>
+                                    Aufgrund der Symmetrie gilt \(A_{BCE} = A_{EAB}\) und \(A_{CDE}= A_{ADE}\).
+                                </p>
+                                <p>
+                                    Weiterhin gilt:
+                                <p style="margin-left: 20px;">
+                                    \(\begin{align*}
+                                    \overrightarrow{DC}\cdot \overrightarrow{DE}=0
+                                    \end{align*}\)
+                                </p>
+                                Das Dreieck \(CDE\) besitzt also einen rechten Winkel im Punkt \(D\).
+                                Die Grundfläche des Körpers ist quadratisch mit der Seitenlänge \(10\,\text{cm}\).
+                                </p>
+                                <p style="margin-left: 20px;">
+                                    \(\begin{align*}
+                                    A_{BCE} &= \tfrac12\cdot\left|\overrightarrow{CB}\right| \cdot
+                                    \left|\overrightarrow{CE}\right| \\[5pt]
+                                    A_{BCE} &= \tfrac12\cdot\left|\pmatrix{0\\-10\\0} \right| \cdot
+                                    \left|\pmatrix{-10\\0\\6} \right| \\[5pt]
+                                    A_{BCE} &= \tfrac12\cdot10\cdot \sqrt{(-10)^2 + 0^2 +6^2} \\[5pt] =& 40\cdot
+                                    \sqrt{17}\,\text{cm}^2 \\[10pt]
+                                    A_{CDE} &= \tfrac12\cdot\left|\overrightarrow{DC}\right| \cdot
+                                    \left|\overrightarrow{DE}\right| \\[5pt]
+                                    A_{CDE} &= \tfrac12\cdot\left|\pmatrix{10\\0\\0} \right| \cdot
+                                    \left|\pmatrix{0\\0\\6} \right| \\[5pt]
+                                    A_{CDE} &= \tfrac12\cdot10\cdot 6 \\[5pt]
+                                    A_{CDE} &= 30 \,\text{cm}^2\\[10pt]
+                                    A_{ABCD} &= 10^2 \\
+                                    A_{ABCD} &=100\,\text{cm}^2
+                                    \end{align*}\)
+                                </p>
+                                Insgesamt ergibt sich der Oberflächeninhalt des Holzkörpers wie folgt:
+                                <p style="margin-left: 20px;">
+                                    \(\begin{align*}
+                                    O &= 2\cdot A_{BCE} + 2\cdot A_{CDE} + A_{ABCD} \\[5pt]
+                                    O &= 2\cdot 40\cdot \sqrt{17} \,\text{cm}^2 + 2\cdot 30 \,\text{cm}^2+
+                                    100\,\text{cm}^2 \\[5pt]
+                                    O &\approx 277\,\text{cm}^2
+                                    \end{align*}\)
+                                </p>
+                            </li>
+                            <li>
+                                Geradengleichung: \(h:\vec x=\vector{10\\10\\0}+r\cdot\vector{-10\\0\\6}\)
+                                <p>
+                                    Zwei Geraden heißen windschief, wenn sie sich weder schneiden noch parallel
+                                    zueinander sind.
+                                    Die Gerade \(h\) verläuft durch die Punkte \(C\) und \(E\) und schneidet die
+                                    \(xy\)-Ebene in \(C\).
+                                </p>
+                                <p> Die Gerade durch die Punkte \(B\) und \(D\) liegt in der \(xy\)-Ebene und verläuft
+                                    gleichzeitig nicht
+                                    durch den Punkt \(C\). Somit sind die beiden Geraden windschief zueinander.
+                                </p>
+                            </li>
+                            <li>Parametergleichung der Ebene \(L\): \(\vec
+                                x=\pmatrix{10\\10\\0}+r\cdot\pmatrix{0\\-10\\0}+s\cdot\pmatrix{-10\\0\\6}\)
+                                <p>
+                                    Normalenvektor von \(L\) (gekürzt): \(\vec n_L=\vector{3\\0\\5}\)
+                                </p>
+                                <p>
+                                    Stützvektor in \(L\) einsetzen, ergibt \(d=30\).
+                                </p>
+                                <p>
+                                    Koordinatengleichung von \(L\): \(3x+5z=30\)
+                                </p>
+                            </li>
+                            <li>Normalenvektoren:
+                                <p style="margin-left: 20px;">
+                                    \(\begin{align*}
+                                    \vec n_L&=\vector{3\\0\\5} \\
+                                    \vec n_\text{Grundseite}&=\vector{0\\0\\1}
+                                    \end{align*}\)
+                                </p>
+                                Winkelberechnung:
+                                <p style="margin-left: 20px;">
+                                    \(\begin{align*}
+                                    \cos \varphi &=\frac{|\vec n_L \cdot \vec n_\text{Grundseite}|}{|\vec n_L| \cdot
+                                    |\vec n_\text{Grundseite}|} \\
+                                    \varphi&\approx 31\,^\circ
+                                    \end{align*}\)
+                                </p>
+                                Der Winkel, den die quadratische Grundfläche mit der Seitenfläche,
+                                die durch das Dreieck \(BCE\) (Ebene \(L\)) dargestellt wird, einschließt, ist ca.
+                                \(31\,^\circ\) groß.
+                            </li>
+                            <li>Begründungen der Ebenen:
+                                <ol>
+                                    <li>Die Ebene \(E_1\) ist parallel zur \(xz\)-Ebene und steht damit senkrecht auf
+                                        dem Quadrat \(ABCD\).
+                                        Außerdem verläuft die Ebene \(E_1\) durch den Mittelpunkt der Strecke
+                                        \(\overline{AD}\) und durch den
+                                        Mittelpunkt der Strecke \(\overline{BC}\). Damit teilt die Ebene \(E_1\) das
+                                        Quadrat \(ABCD\) in zwei
+                                        Figuren mit gleichem Flächeninhalt.
+                                    </li>
+                                    <li>Die Ebene \(E_2\) verläuft senkrecht zum Quadrat \(ABCD\) und durch die
+                                        Punkte \(A\) und \(C\). Damit teilt die Ebene \(E_2\) das Quadrat \(ABCD\) in
+                                        zwei
+                                        Figuren gleichen Flächeninhalts.</li>
+                                    <li>Die Ebene \(E_3\) verläuft parallel zur \(xy\)-Ebene und liegt damit parallel
+                                        zum Quadrat \(ABCD\).
+                                        Damit kann \(E_3\) das Quadrat \(ABCD\) nicht in zwei Figuren mit gleichem
+                                        Flächeninhalt teilen.</li>
+                                </ol>
+                            </li>
+                            <li>Der Flächeninhalt des Trapez lässt sich aus dem Flächeninhalt des Quadrats berechnen:
+                                <p style="margin-left: 20px;">
+                                    \(\begin{align*}
+                                    A_{A'BCD'}&=\tfrac45\cdot A_{ABCD} \\
+                                    A_{A'BCD'}&=\tfrac45\cdot100\\
+                                    A_{A'BCD'}&=80\,\text{FE}
+                                    \end{align*}\)
+                                </p>
+                                Damit ist die Fläche des Trapez um \(20\,\text{FE}\) kleiner als die Fläche des
+                                Quadrats.
+                                Um ein gleichschenkliges Trapez zu erzeugen, wird auf beiden Seiten gleich viel Fläche
+                                entfernt.
+                                Die Dreiecke \(BAA'\) und \(CD'D\) müssen also den gleichen Flächeninhalt von
+                                \(10\,\text{FE}\) haben:
+                                <p style="margin-left: 20px;">
+                                    \(\begin{align*}
+                                    A_{BAA'}&=\tfrac12\cdot|\overline{BA}|\cdot|\overline{AA'}| \\
+                                    10&=\tfrac12\cdot10\cdot|\overline{AA'}| \\
+                                    |\overline{AA'}|&=2
+                                    \end{align*}\)
+                                </p>
+                                Die Länge von \(\overline{AA'\) muss daher \(2\,\text{LE}\) betragen.
+                                <p>
+                                    Damit können die gesuchten Koordinaten der Punkte \(A'\) und \(D'\) bestimmt werden,
+                                    indem die \(y\)-Koordinate der Punkte \(A\) und \(D\) um \(2\) in Richtung des
+                                    Mittelpunkts
+                                    der Strecke \(\overline{AD}\) verschoben werden:
+                                <p style="margin-left: 20px;">
+                                    \(A'(0\mid2\mid0)\) und \(D'(0\mid 8\mid 0)\)
+                                </p>
+                                </p>
+                            </li>
+                            <li>
+                                Bezeichnet man im Modell denjenigen Punkt der gesuchten Linie, der auf
+                                \(\overline{BE}\) liegt, mit \(P,\) so ist die Länge der Linie aufgrund der
+                                Symmetrie des Körpers \(2\cdot \left| \overrightarrow{PC}\right|\).
+                                Da die Linie möglichst kurz sein soll, steht \(\overline{PC}\) senkrecht zu
+                                \(\overline{PB}\).
+                            </li>
+                            <li>Zeichnung:
+                                <div class="centered" style="max-width: 250px">
+                                    <svg id="task1L" viewBox="-210 -300 550 470">
+                                        <defs></defs>
+                                    </svg>
+                                </div>
+                            </li>
+                            <li>
+                                Das Volumen des Körpers \(ABCDE\) lässt sich mit der Volumenformel für Pyramiden berechnen:
+                                <p style="margin-left: 20px;">
+                                    \(\begin{align*}
+                                    V_{ABCDE}=\tfrac13\cdot|\overline{AB}|^2\cdot|\overline{DE}|
+                                    \end{align*}\)
+                                </p>
+                                Der Körper \(ABCDEF\) hingegen ist ein Prisma mit dreieckiger Grundfläche: 
+                                <p style="margin-left: 20px;">
+                                    \(\begin{align*}
+                                    V_{ABCDE}=\tfrac12\cdot|\overline{AB}|\cdot|\overline{AF}|\cdot|\overline{AD}|
+                                    \end{align*}\)
+                                </p>
+                                Wegen der Parallelitäten gilt: \(|\overline{AF}|=|\overline{DE}|\) und \(|\overline{AD}|=|\overline{AB}|\)
+                                <p style="margin-left: 20px;">
+                                    \(\begin{align*}
+                                    V_{ABCDEF}&=\tfrac12\cdot|\overline{AB}|\cdot|\overline{DE}|\cdot|\overline{AB}| \\
+                                    V_{ABCDEF}&=\tfrac12\cdot|\overline{AB}|^2\cdot|\overline{DE}|\\
+                                    V_{ABCDEF}&=\tfrac32\cdot V_{ABCDE}=1,5\cdot V_{ABCDE}
+                                    \end{align*}\)
+                                </p>
+                                Damit ist das Volumen des Körpers \(ABCDEF\) um \(50\,\%\) größer als das Volumen des Körpers \(ABCDE\).
+                            </li>
+                        </ol>
+                    </details>
+                </li>
+            </ol>
+
+            <ol class="more-spacing" start="2">
+                <li>
+                    <p>
+                        Die Abbildung zeigt modellhaft das Dach eines Kirchturms. Die Eckpunkte der dreieckigen Giebelflächen 
+                        (markierte Flächen) und der viereckigen Dachflächen werden durch die Punkte \(A\), \(B(8\mid 0\mid 0)\), 
+                        \(C(8\mid 8\mid 0)\), \(D\), \(E(4\mid 0\mid 6)\), \(F(8\mid 4\mid 6)\), 
+                        \(G(4\mid 8\mid 6)\), \(H\) und \(S(4\mid 4\mid 12)\) dargestellt. 
+                        Die vier Dachflächen haben die gleiche Form und die gleiche Größe. 
+                    </p>
+                    <p>
+                        Im verwendeten Koordinatensystem entspricht eine Längeneinheit einem Meter in der Realität. 
+                        Die Materialstärken der Bauteile des Dachs sollen im Folgenden vernachlässigt werden. 
+                    </p>
+                    <div class="centered" style="max-width: 400px">
+                                <svg id="task2" viewBox="-170 -400 590 610">
+                                    <defs></defs>
+                                </svg>
+                            </div>
+
+                    <ol class="custom-marker parens-around lower-alpha more-spacing">
+                        <li></li>
+                    </ol>
+                    <details class="loesungen">
+                        <summary class="nonumber">Lösung</summary>
+                        <ol class="custom-marker parens-around lower-alpha more-spacing">
+                            <li>
+                    
+                            </li>
+                        </ol>
+                    </details>
+                </li>
+            </ol>
+
+
+
+            <!-- <ol class="more-spacing" start="3">
+                <li>
+                    <p>
+
+                    </p>
+
+                    <ol class="custom-marker parens-around lower-alpha more-spacing">
+                        <li></li>
+                    </ol>
+                    <details class="loesungen">
+                        <summary class="nonumber">Lösung</summary>
+                        <ol class="custom-marker parens-around lower-alpha more-spacing">
+                            <li>
+                    
+                            </li>
+                        </ol>
+                    </details>
+                </li>
+            </ol> -->
+        </section>
+
+
+
+        <!-- <p style="margin-left: 20px;">
+                                \(\begin{align*}
+                                
+                                \end{align*}\)
+                            </p> -->
+
+
+        <!-- JS-Datei mit allen Funktionen -->
+        <script src="/js/math/geo3d.js"></script>
+
+        <!-- <div class="centered" style="max-width: 250px">
+                                <svg id="task6c" viewBox="-210 -300 590 610">
+                                    <defs></defs>
+                                </svg>
+                            </div> -->
+
+        <script>
+
+            // Nr. 8 HF-Teil
+            A = [0, -0.5, -1];
+            B = [0, 3, -1.25];
+            C = [0, 4.5, 1.5];
+            drawSegment(taskH8, A, B, "", "darkgoldenrod", "", 2.5);
+            drawSegment(taskH8, C, B, "", "darkgoldenrod", "", 2.5);
+            drawSegment(taskH8, C, A, "", "darkgoldenrod", "", 2.5);
+            drawPoint(taskH8, A, "A", "darkgoldenrod", "left", 5);
+            drawPoint(taskH8, B, "B", "darkgoldenrod", "right", 5);
+            drawPoint(taskH8, C, "C", "darkgoldenrod", "above", 5);
+
+
+            AB = [0, B[1] - A[1], B[2] - A[2]];
+            MAB = [0, -AB[1], -AB[2]];
+            D = [0, C[1] + 2 * MAB[1], C[2] + 2 * MAB[2]];
+            M = [0, C[1] + MAB[1], C[2] + MAB[2]];
+            H = [0, -0.25, 1.8];
+            drawSegment(taskH8L, A, B, "", "darkgoldenrod", "", 2.5);
+            drawSegment(taskH8L, C, B, "", "darkgoldenrod", "", 2.5);
+            drawSegment(taskH8L, C, A, "", "darkgoldenrod", "", 2.5);
+            drawPoint(taskH8L, A, "A", "darkgoldenrod", "left", 5);
+            drawPoint(taskH8L, B, "B", "darkgoldenrod", "right", 5);
+            drawPoint(taskH8L, C, "C", "darkgoldenrod", "above", 5);
+
+            drawSegment(taskH8L, A, D, "", "darkgoldenrod", "", 2.5);
+            drawSegment(taskH8L, C, D, "", "darkgoldenrod", "", 2.5);
+            drawPoint(taskH8L, D, "D", "darkgoldenrod", "aboveleft", 5);
+
+            drawVector(taskH8L, A, AB, "", "cyan");
+            drawVector(taskH8L, C, MAB, "", "cyan");
+            drawVector(taskH8L, M, MAB, "", "cyan");
+
+            drawSegment(taskH8L, A, H, "h", "darkgoldenrod", "aboveleft", 2.5, true);
+
+
+            // Nr. 1 RE-Teil
+
+            // alles durch 2
+            A = [0, 0, 0];
+            B = [5, 0, 0];
+            C = [5, 5, 0];
+            D = [0, 5, 0];
+            E = [0, 5, 3];
+
+            drawAxes(task1, 6, 6, 5);
+            drawPolygon(task1, [A, D, E], "", "darkgoldenrod", "darkgoldenrod", "", 2, 0.3);
+            drawPolygon(task1, [A, B, C, D], "", "darkgoldenrod", "darkgoldenrod", "", 2, 0.3);
+            drawSegment(task1, D, A, "", "darkgoldenrod", "", 4, true);
+            drawPolygon(task1, [A, E, B], "", "darkgoldenrod", "darkgoldenrod", "", 2, 0.3);
+            drawPolygon(task1, [A, E, B], "", "darkgoldenrod", "darkgoldenrod", "", 2, 0.3);
+            drawPolygon(task1, [B, C, E], "", "darkgoldenrod", "darkgoldenrod", "", 2, 0.3);
+            drawPolygon(task1, [C, D, E], "", "darkgoldenrod", "darkgoldenrod", "", 2, 0.3);
+
+            drawPoint(task1, A, "A", "darkgoldenrod", "aboveleft", 6);
+            drawPoint(task1, B, "B", "darkgoldenrod", "below", 6);
+            drawPoint(task1, C, "C", "darkgoldenrod", "belowright", 6);
+            drawPoint(task1, D, "D", "darkgoldenrod", "belowright", 6);
+            drawPoint(task1, E, "E", "darkgoldenrod", "above", 6);
+
+            // Lösung
+
+            F = [0,0,3];
+            drawAxes(task1L, 6, 6, 5);
+            drawPolygon(task1L, [A, D, E], "", "darkgoldenrod", "darkgoldenrod", "", 2, 0.3);
+            drawPolygon(task1L, [A, B, C, D], "", "darkgoldenrod", "darkgoldenrod", "", 2, 0.3);
+            drawSegment(task1L, D, A, "", "darkgoldenrod", "", 4, true);
+            drawPolygon(task1L, [A, E, B], "", "darkgoldenrod", "darkgoldenrod", "", 2, 0.3);
+            drawPolygon(task1L, [A, E, B], "", "darkgoldenrod", "darkgoldenrod", "", 2, 0.3);
+            drawPolygon(task1L, [B, C, E], "", "darkgoldenrod", "darkgoldenrod", "", 2, 0.3);
+            drawPolygon(task1L, [C, D, E], "", "darkgoldenrod", "darkgoldenrod", "", 2, 0.3);
+
+            drawPoint(task1L, A, "A", "darkgoldenrod", "aboveleft", 6);
+            drawPoint(task1L, B, "B", "darkgoldenrod", "below", 6);
+            drawPoint(task1L, C, "C", "darkgoldenrod", "belowright", 6);
+            drawPoint(task1L, D, "D", "darkgoldenrod", "belowright", 6);
+            drawPoint(task1L, E, "E", "darkgoldenrod", "above", 6);
+
+            drawLine(task1L, B,[-5,0,3],"","cyan","",3,true);
+            drawLine(task1L, E,[0,-5,0],"","cyan","",3,true);
+
+            drawPoint(task1L, F, "F", "cyan", "belowright", 6);
+
+
+            // Nr. 2 RE-Teil
+
+            // Alles durch 2
+            A=[0,0,0];
+            B=[4,0,0];
+            C=[4,4,0];
+            D=[0,4,0];
+            E=[2,0,3];
+            F=[4,2,3];
+            G=[2,4,3];
+            H=[0,2,3];
+            S=[2,2,6];
+
+            drawAxes(task2, 5, 5, 7);
+
+            drawSegment(task2,A,E,"","darkgoldenrod","",5,true);
+            drawSegment(task2,B,E,"","darkgoldenrod","",5);
+            drawSegment(task2,A,B,"","darkgoldenrod","",5,true);
+            drawSegment(task2,A,D,"","darkgoldenrod","",5,true);
+            drawSegment(task2,A,H,"","darkgoldenrod","",5,true);
+            drawSegment(task2,D,H,"","darkgoldenrod","",5,true);
+            drawSegment(task2,[0,0.75,0],[0,2.75,0],"","darkgoldenrod","",5);
+
+            drawPolygon(task2,[A,D,H],"","darkgoldenrod", "", "", 2, 0.3);
+            drawPolygon(task2,[A,E,B],"","darkgoldenrod", "", "", 2, 0.3);
+            drawPolygon(task2,[B,C,F],"","darkgoldenrod", "darkgoldenrod", "", 5, 0.3);
+            drawPolygon(task2,[C,D,G],"","darkgoldenrod", "darkgoldenrod", "", 5, 0.3);
+
+            drawSegment(task2,E,S,"","darkgoldenrod","",5);
+            drawSegment(task2,F,S,"","darkgoldenrod","",5);
+            drawSegment(task2,G,S,"","darkgoldenrod","",5);
+            drawSegment(task2,H,S,"","darkgoldenrod","",5);
+
+            drawPoint(task2, A, "A", "darkgoldenrod", "belowright", 6);
+            drawPoint(task2, B, "B", "darkgoldenrod", "below", 6);
+            drawPoint(task2, C, "C", "darkgoldenrod", "belowright", 6);
+            drawPoint(task2, D, "D", "darkgoldenrod", "belowright", 6);
+            drawPoint(task2, E, "E", "darkgoldenrod", "left", 6);
+            drawPoint(task2, F, "F", "darkgoldenrod", "aboveright", 6);
+            drawPoint(task2, G, "G", "darkgoldenrod", "right", 6);
+            drawPoint(task2, H, "H", "darkgoldenrod", "left", 6);
+            drawPoint(task2, S, "S", "darkgoldenrod", "above", 6);
+
+            
+
+
+
+
+        </script>
+
+        <section id="meme">
+            <div class="images">
+                <img src="/img/abi_meme.jpg" style="object-fit:scale-down; max-width: 300px;">
+            </div>
+            <div class="centered">
+                <a href="https://imgflip.com/i/3fdeio">
+                    <h6>Original von JacksonPuntney</h6>
+                    <!-- </a> -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <a href="/misc/impressum.html">Impressum</a>
+        <div class="lastModified" align="center">
+            Erstellt am:<br>
+            14. März 2026 (\(\pi\)-Day)
+            <!-- <span id="lastModifiedDate"></span> -->
+        </div>
+        <a href="/misc/datenschutz.html">Datenschutz</a>
+    </footer>
+</body>
