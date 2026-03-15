@@ -14,22 +14,6 @@
     <script type="text/javascript" src="jquery-3.3.1.js"></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
     <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script type="text/javascript" async
-        src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
-
-
-    <style>
-        .chart-container {
-            width: 300px;
-            margin: 2em 0;
-        }
-
-        svg {
-            width: 100%;
-            height: auto;
-        }
-    </style>
 
     <script>
         window.MathJax = {
@@ -78,13 +62,12 @@
                 <p>
                     Die Aufgaben sind weder nach Datum noch nach Schwierigkeit sortiert.
                 </p>
-                <p>
-                    Die Aufgabentypen sind zweigeteilt:
+                Die Aufgabentypen sind zweigeteilt:
                 <ul>
                     <li><a href="#hmf">Aufgaben <i>ohne</i> Hilfsmittel</a></li>
                     <li><a href="#rt">Aufgaben <i>mit</i> Hilfsmitteln</a></li>
                 </ul>
-                </p>
+
             </div>
         </section>
 
@@ -141,13 +124,13 @@
                                 <p>
                                     \(\vec n_H\) kann entweder mit dem Kreuzprodukt oder mit einem Gleichungssystem aus
                                     den Skalarprodukten berechnet werden:
-                                <p style="margin-left: 20px;">
-                                    \(\begin{align*}
-                                    \vec n_H&=\vector{0\\4\\-1}
-                                    \end{align*}\)
-                                    (gekürzt)
-                                </p>
-                                Eine mögliche Gleichung für eine Ebene \(H\) ist zum Beispiel: \(4y-1z=0.\)
+                                    <p style="margin-left: 20px;">
+                                        \(\begin{align*}
+                                        \vec n_H&=\vector{0\\4\\-1}
+                                        \end{align*}\)
+                                        (gekürzt)
+                                    </p>
+                                    Eine mögliche Gleichung für eine Ebene \(H\) ist zum Beispiel: \(4y-1z=0.\)
                                 </p>
                                 <b>Alternativ:</b> Die Gerade \(s\) liegt sowohl in \(E\) als auch in \(F\). Sie ist
                                 also die
@@ -157,6 +140,7 @@
                                 <p>
                                     Damit kann \(\vec m\) Normalenvektor der Ebene \(H\) sein.
                                 </p>
+                            </li>
                         </ol>
                     </details>
                 </li>
@@ -325,7 +309,6 @@
                                     \end{align*}\)
                                 </p>
                                 </p>
-
                             </li>
                         </ol>
                     </details>
@@ -1068,19 +1051,21 @@
                                 Punktprobe:
                                 <p style="margin-left: 20px;">
                                     \(\begin{align*}
-                                    \vector{4\\4\\12}=\vector{8 \\ 8 \\ 0}+r \cdot \vector{0 \\ -4 \\ 6}+s \cdot \vector{-4
+                                    \vector{4\\4\\12}=\vector{8 \\ 8 \\ 0}+r \cdot \vector{0 \\ -4 \\ 6}+s \cdot
+                                    \vector{-4
                                     \\ 0 \\ 6}
                                     \end{align*}\)
                                 </p>
                                 Ergibt \(r=1\) und \(s=1\). Das heißt \(S\) liegt auf \(L\).
                             </li>
                             <li>
-                                Wenn die Ebene \(N\) parallel zur Ebene \(L\) verläuft, 
+                                Wenn die Ebene \(N\) parallel zur Ebene \(L\) verläuft,
                                 so sind \(\vec n\), \(\overrightarrow{GC}\) und \(\overrightarrow{FC}\) orthogonal:
                                 <p style="margin-left: 20px;">
                                     \(\begin{align*}
-                                        \vector{3 \\ 3 \\ 2} \cdot \vector{0 \\ -4 \\ 6} &= 0+(-12)+12=0\quad \checkmark \\[5pt]
-                                        \vector{3 \\ 3 \\ 2} \cdot \vector{-4 \\ 0 \\ 6} &= (-12)+0+12=0\quad \checkmark
+                                    \vector{3 \\ 3 \\ 2} \cdot \vector{0 \\ -4 \\ 6} &= 0+(-12)+12=0\quad \checkmark
+                                    \\[5pt]
+                                    \vector{3 \\ 3 \\ 2} \cdot \vector{-4 \\ 0 \\ 6} &= (-12)+0+12=0\quad \checkmark
                                     \end{align*}\)
                                 </p>
                                 Das ergibt die Ebenengleichung: \(N: 3 x+3 y+2 z=24\)
@@ -1088,72 +1073,81 @@
                             <li>Bei einer Raute sind zwei gegenüberliegende Seiten parallel und gleich lang:
                                 <p style="margin-left: 20px;">
                                     \(\begin{align*}
-                                        \overrightarrow{CF}&=\vector{0 \\ -4 \\ 6}=\overrightarrow{GS} \\
+                                    \overrightarrow{CF}&=\vector{0 \\ -4 \\ 6}=\overrightarrow{GS} \\
                                     |\overrightarrow{CG}|&=\left| \vector{-4 \\ 0 \\ 6} \right|=|\overrightarrow{CF}|
                                     \end{align*}\)
                                 </p>
                                 Ja, es ist eine Raute.
                             </li>
-                            <li>\(M_2\) stellt eine Symmetrieebene dar. \(M_2\) verläuft durch die Punkte \(A, C\) und \(S\).
+                            <li>\(M_2\) stellt eine Symmetrieebene dar. \(M_2\) verläuft durch die Punkte \(A, C\) und
+                                \(S\).
                             </li>
                             <li>Innenwinkelberechnung:
                                 <p style="margin-left: 20px;">
                                     \(\begin{align*}
-                                        \cos \varphi&=\dfrac{ \left|\vector{4 \\ 0 \\ -6} \cdot \vector{0 \\ 4 \\ -6}\right|}{\left|\vector{4 \\ 0 \\ -6}\right| \cdot \left| \vector{0 \\ 4 \\ -6}\right| }\\
-                                        \cos \varphi&=\tfrac{36}{52}\quad |\,\text{arc} \\
-                                        \varphi&\approx 46\,^\circ
+                                    \cos \varphi&=\dfrac{ \left|\vector{4 \\ 0 \\ -6} \cdot \vector{0 \\ 4 \\
+                                    -6}\right|}{\left|\vector{4 \\ 0 \\ -6}\right| \cdot \left| \vector{0 \\ 4 \\
+                                    -6}\right| }\\
+                                    \cos \varphi&=\tfrac{36}{52}\quad |\,\text{arc} \\
+                                    \varphi&\approx 46\,^\circ
                                     \end{align*}\)
                                 </p>
                                 Dachfläche:
                                 <p style="margin-left: 20px;">
                                     \(\begin{align*}
-                                        A&=4 \cdot \dfrac{1}{2}\cdot |\overrightarrow{FG}| \cdot| \overrightarrow{CS}| \\
-                                        A&=2 \cdot \left| \vector{-4 \\ 4 \\ 0} \cdot \right| \cdot \left|\vector{-4 \\ -4 \\ 12} \right| \\
-                                        A&=2 \cdot \sqrt{32} \cdot \sqrt{176} \approx 150\,\text m^2
+                                    A&=4 \cdot \dfrac{1}{2}\cdot |\overrightarrow{FG}| \cdot| \overrightarrow{CS}| \\
+                                    A&=2 \cdot \left| \vector{-4 \\ 4 \\ 0} \cdot \right| \cdot \left|\vector{-4 \\ -4
+                                    \\ 12} \right| \\
+                                    A&=2 \cdot \sqrt{32} \cdot \sqrt{176} \approx 150\,\text m^2
                                     \end{align*}\)
                                 </p>
-                                Der Flächeninhalt beträgt etwa \(150\,\text m^2\). 
+                                Der Flächeninhalt beträgt etwa \(150\,\text m^2\).
                             </li>
-                            <li>Die Dreiecke \(S Q_1 Q_2\) und \(SFG\) haben bei \(S\) einen gemeinsamen Innenwinkel, 
+                            <li>Die Dreiecke \(S Q_1 Q_2\) und \(SFG\) haben bei \(S\) einen gemeinsamen Innenwinkel,
                                 die Gerade \(Q_1 Q_2\) ist parallel zur Gerade \(FG\).
                                 <p>
-                                    Damit sind die beiden Dreiecke ähnlich. 
-                                    \(\overline{SQ_1}\) ist doppelt so lang wie \(\overline{SF}\). 
-                                    Folglich ist der Abstand von \(Q_1\) und \(Q_2\) doppelt so groß wie der 
+                                    Damit sind die beiden Dreiecke ähnlich.
+                                    \(\overline{SQ_1}\) ist doppelt so lang wie \(\overline{SF}\).
+                                    Folglich ist der Abstand von \(Q_1\) und \(Q_2\) doppelt so groß wie der
                                     Abstand von \(F\) und \(G\).
                                 </p>
                             </li>
-                            <li>Die vier Geraden durch \(S\) und die Punkte \(E, F, G\) und \(H\) bilden mit der 
-                                \(xy\)-Ebene eine Pyramide, deren quadratische Grundfläche eine Kantenlänge 
-                                von \(\sqrt{128}\,\text m\) hat. 
-                                Der Term \(\tfrac13 \cdot 128\,\text m^2 \cdot 12\,\text m\) gibt das Volumen dieser Pyramide an. 
+                            <li>Die vier Geraden durch \(S\) und die Punkte \(E, F, G\) und \(H\) bilden mit der
+                                \(xy\)-Ebene eine Pyramide, deren quadratische Grundfläche eine Kantenlänge
+                                von \(\sqrt{128}\,\text m\) hat.
+                                Der Term \(\tfrac13 \cdot 128\,\text m^2 \cdot 12\,\text m\) gibt das Volumen dieser
+                                Pyramide an.
                                 <p>
-                                    Subtrahiert werden muss davon das Volumen von 4 gleich großen kleinen Pyramiden mit 
-                                    dreieckiger Grundfläche. Jede dieser Pyramiden, z. B. 
-                                    die mit den Eckpunkten \(B\), \(Q_1\), \(C\) und \(F\) hat ein Volumen von 
+                                    Subtrahiert werden muss davon das Volumen von 4 gleich großen kleinen Pyramiden mit
+                                    dreieckiger Grundfläche. Jede dieser Pyramiden, z. B.
+                                    die mit den Eckpunkten \(B\), \(Q_1\), \(C\) und \(F\) hat ein Volumen von
                                     \(\tfrac13 \cdot 16\,\text m^2 \cdot 6\,\text m\).
                                 </p>
                             </li>
-                            <li>Die Stütze ist genau dann möglichst kurz, 
-                                wenn sie orthogonal auf dem durch \(\overline{SF}\) dargestellten Balken auf. 
-                                Zunächst wird also der Mittelpunkt \(T\) des Stahlträgers \(\overline{EG}\) bestimmt. 
+                            <li>Die Stütze ist genau dann möglichst kurz,
+                                wenn sie orthogonal auf dem durch \(\overline{SF}\) dargestellten Balken auf.
+                                Zunächst wird also der Mittelpunkt \(T\) des Stahlträgers \(\overline{EG}\) bestimmt.
                                 <p>
-                                   Die Koordinaten des Mittelpunkts von \(\overline{EG}\) lauten \( T (4 \mid 4 \mid 6)\).
+                                    Die Koordinaten des Mittelpunkts von \(\overline{EG}\) lauten \( T (4 \mid 4 \mid
+                                    6)\).
                                 </p>
                                 <p>
-                                    Da der Punkt \(R\) auf dem Balken liegen soll, 
-                                    ergeben sich die Koordinaten zu \(\overrightarrow{OR}= \overrightarrow{OS} +t \cdot \overrightarrow{SF}\).
+                                    Da der Punkt \(R\) auf dem Balken liegen soll,
+                                    ergeben sich die Koordinaten zu \(\overrightarrow{OR}= \overrightarrow{OS} +t \cdot
+                                    \overrightarrow{SF}\).
                                 </p>
                                 <p>
-                                    Die Stütze ist orthogonal, wenn \(\overline{TR}\) orthogonal zu \(\overline{SF}\) ist.
+                                    Die Stütze ist orthogonal, wenn \(\overline{TR}\) orthogonal zu \(\overline{SF}\)
+                                    ist.
                                 </p>
                                 <p>
                                     Es gilt also:
-                                    <p style="margin-left: 20px;">
+                                <p style="margin-left: 20px;">
                                     \(\begin{align*}
-                                        \overrightarrow{TR} \cdot \overrightarrow{SF}&=0 \\[5pt] 
-                                        (\overrightarrow{OR}-\overrightarrow{OT}) \cdot \overrightarrow{SF}&=0 \\[5pt] 
-                                        (\overrightarrow{OS} +t \cdot \overrightarrow{SF}-\overrightarrow{OT}) \cdot \overrightarrow{SF}&=0
+                                    \overrightarrow{TR} \cdot \overrightarrow{SF}&=0 \\[5pt]
+                                    (\overrightarrow{OR}-\overrightarrow{OT}) \cdot \overrightarrow{SF}&=0 \\[5pt]
+                                    (\overrightarrow{OS} +t \cdot \overrightarrow{SF}-\overrightarrow{OT}) \cdot
+                                    \overrightarrow{SF}&=0
                                     \end{align*}\)
                                 </p>
                                 Jetzt kann \(t\) bestimmt werden und damit die Koordinaten von \(R\).
