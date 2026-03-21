@@ -185,7 +185,7 @@ function drawBinomialAxes(
     // Achsenbeschriftung
     const xlabel = document.createElementNS("http://www.w3.org/2000/svg", "text");
     xlabel.setAttribute("x", width + extraX + 20);
-    xlabel.setAttribute("y", originY + 5);
+    xlabel.setAttribute("y", originY + 18);
     xlabel.setAttribute("font-size", "18");
     xlabel.setAttribute("font-family", "serif");
     xlabel.setAttribute("font-style", "italic");
@@ -233,9 +233,9 @@ function drawBinomialBar(
     rect.setAttribute("width", barWidth);
     rect.setAttribute("height", barHeight);
     rect.setAttribute("fill", cumulative ? "magenta" :  color);
-    rect.setAttribute("fill-opacity", "0.5");
+    rect.setAttribute("fill-opacity", "0.3");
     rect.setAttribute("stroke", cumulative ? "magenta" : stroke);
-    rect.setAttribute("stroke-width", "1");
+    rect.setAttribute("stroke-width", "0.75");
     target.appendChild(rect);
 }
 

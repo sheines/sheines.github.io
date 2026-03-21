@@ -121,7 +121,8 @@
             Binomialverteilung.
           </p>
           <p>
-            Die ausführliche Beschreibung der Binomialverteilung findet sich <a href="/content/math/12/stoch/binomialVert.html" target="_blank">hier</a>.
+            Die ausführliche Beschreibung der Binomialverteilung findet sich <a
+              href="/content/math/12/stoch/binomialVert.html" target="_blank">hier</a>.
           </p>
         </div>
         <h6>Beispiel:</h6>
@@ -164,76 +165,85 @@
         <div class="definition">
           <h4>Binomialverteilung (kummuliert)</h4>
           <p>
-            Die kummulierte Binomialverteilung summiert die Wahrscheinlichkeitswert bis \(k\), sodass diese die Wahrscheinlichkeit für alle Wert bis einschließlick \(k\) wiedergibt:
-            <p style="margin-left: 20px;">
+            Die kummulierte Binomialverteilung summiert die Wahrscheinlichkeitswert bis \(k\), sodass diese die
+            Wahrscheinlichkeit für alle Wert bis einschließlick \(k\) wiedergibt:
+          <p style="margin-left: 20px;">
             \(\begin{align*}
-              P(X\leq k)=F(n; p; k)=\sum_{i=0}^k B(n; p; i)
+            P(X\leq k)=F(n; p; k)=\sum_{i=0}^k B(n; p; i)
             \end{align*}\)
           </p>
           </p>
           <p>
-            Die ausführliche Beschreibung der kummulierten Binomialverteilung findet sich <a href="/content/math/12/stoch/binomialKumm.html" target="_blank">hier</a>.
+            Die ausführliche Beschreibung der kummulierten Binomialverteilung findet sich <a
+              href="/content/math/12/stoch/binomialKumm.html" target="_blank">hier</a>.
           </p>
         </div>
         <h6>Beispiel:</h6>
         <p>
-          In der Realität ist die Wahrscheinlichkeit beim <i>Mensch-Ärgere-Dich-Nicht</i> eine Sechs zu Werfen eine andere, da man ja
+          In der Realität ist die Wahrscheinlichkeit beim <i>Mensch-Ärgere-Dich-Nicht</i> eine Sechs zu Werfen eine
+          andere, da man ja
           nach dem Werfen einer Sechs aufhört zu Würfeln. Theoretisch können man aber mehr als eine Sechs werfen.
-          <p style="margin-left: 20px;">
-            \(\begin{align*}
-              P(X\geq 1)&=1-P(X\leq 0) \\
-              P(X\geq 1)&=1-F(3; \tfrac16; 0) \\
-              P(X\geq 1)&=1-0,5787\approx 42,1\,\%
-            \end{align*}\)
-          </p>
-          Das heißt, die wirkliche Wahrscheinlichkeit beim dreimaligen Würfeln <i>mindestens</i> eine Sechs zu Würfeln liegt bei \(42,1\,\%\).
+        <p style="margin-left: 20px;">
+          \(\begin{align*}
+          P(X\geq 1)&=1-P(X\leq 0) \\
+          P(X\geq 1)&=1-F(3; \tfrac16; 0) \\
+          P(X\geq 1)&=1-0,5787\approx 42,1\,\%
+          \end{align*}\)
+        </p>
+        Das heißt, die wirkliche Wahrscheinlichkeit beim dreimaligen Würfeln <i>mindestens</i> eine Sechs zu Würfeln
+        liegt bei \(42,1\,\%\).
         </p>
         <p>
-          Das Beispiel ist natürlich dahingehend etwas unsinnig, als das \(F(3; \tfrac16; 0)=B(3; \tfrac16; 0)\), aber das Prizip sollte klar sein.
+          Das Beispiel ist natürlich dahingehend etwas unsinnig, als das \(F(3; \tfrac16; 0)=B(3; \tfrac16; 0)\), aber
+          das Prizip sollte klar sein.
         </p>
         <p>
-          Es bleibt zu beachten, dass \(F(n; p; k)\) immer \(P(X\leq k)\) berechnet. Das heißt, man muss gegebenenfalls clever mit Gegenereignissen arbeiten.
+          Es bleibt zu beachten, dass \(F(n; p; k)\) immer \(P(X\leq k)\) berechnet. Das heißt, man muss gegebenenfalls
+          clever mit Gegenereignissen arbeiten.
         </p>
 
         <div class="definition">
           <h4>Erwartungswert und Standardabweichung</h4>
           <p>
-            Der Erwartungswert \(\mu\) oder \(E\) gibt den Wert an, welcher bei sehr vielen Versuchen, am wahrscheinlichsten eintritt:
-            <p style="margin-left: 20px;">
+            Der Erwartungswert \(\mu\) (mü) oder \(E\) gibt den Wert an, welcher bei sehr vielen Versuchen, am
+            wahrscheinlichsten eintritt:
+          <p style="margin-left: 20px;">
             \(\begin{align*}
-              \mu&=E(X)=n\cdot p
+            \mu&=E(X)=n\cdot p
             \end{align*}\)
           </p>
-            Die Standardabweichung \(\sigma\) ist ein Maß dafür, wie stark die Trefferzahlen um den Erwartungswert streuen.
-            <p style="margin-left: 20px;">
+          Die Standardabweichung \(\sigma\) (sigma) ist ein Maß dafür, wie stark die Trefferzahlen um den Erwartungswert
+          streuen.
+          <p style="margin-left: 20px;">
             \(\begin{align*}
-              \sigma&=\sqrt{n\cdot p\cdot(1-p)}
+            \sigma&=\sqrt{n\cdot p\cdot(1-p)}
             \end{align*}\)
           </p>
           </p>
           <p>
-            Die ausführliche Beschreibung des Erwartungswerts und der Standardabweichung findet sich <a href="/content/math/12/stoch/binomialVertKenn.html" target="_blank">hier</a>.
+            Die ausführliche Beschreibung des Erwartungswerts und der Standardabweichung findet sich <a
+              href="/content/math/12/stoch/binomialVertKenn.html" target="_blank">hier</a>.
           </p>
         </div>
         <h6>Beispiel</h6>
-          <p>
-            Im <i>Mensch-Ärgere-Dich-Nicht</i>-Beispiel beträgt der Erwartungswert:
-            <p style="margin-left: 20px;">
-            \(\begin{align*}
-              \mu&=E(X)=3\cdot\tfrac16=\tfrac12
-            \end{align*}\)
-          </p>
-          Es wird also im Mittel ein Halbes Mal eine Sechs gewürfelt bei drei Würfen.
-          </p>
-          <p>
-            Für die Standardabweichung gilt:
-            <p style="margin-left: 20px;">
-            \(\begin{align*}
-              \sigma&=\sqrt{3\cdot\tfrac16\cdot(1-\tfrac16)}\\
-              \sigma&\approx 0,64
-            \end{align*}\)
-          </p>
-          </p>
+        <p>
+          Im <i>Mensch-Ärgere-Dich-Nicht</i>-Beispiel beträgt der Erwartungswert:
+        <p style="margin-left: 20px;">
+          \(\begin{align*}
+          \mu&=E(X)=3\cdot\tfrac16=\tfrac12
+          \end{align*}\)
+        </p>
+        Es wird also im Mittel ein Halbes Mal eine Sechs gewürfelt bei drei Würfen.
+        </p>
+        <p>
+          Für die Standardabweichung gilt:
+        <p style="margin-left: 20px;">
+          \(\begin{align*}
+          \sigma&=\sqrt{3\cdot\tfrac16\cdot(1-\tfrac16)}\\
+          \sigma&\approx 0,64
+          \end{align*}\)
+        </p>
+        </p>
       </div>
     </section>
     <!-- <section>
@@ -247,33 +257,33 @@
       <h3>Aufgaben zur Wiederholung</h3>
       <ul class="custom-marker point-after decimal more-spacing">
         <li>Bernoulliketten: <a href="#a1">Lösungen</a></li>
-          <ul>
-            <li>Seite 213 Übung 3 und 4 
-            <li>Seite 217 Übung 10
-          </ul>
+        <ul>
+          <li>Seite 213 Übung 3 und 4
+          <li>Seite 217 Übung 10
+        </ul>
         </li>
         <li>Binomialverteilung: <a href="#a1">Lösungen</a></li>
-          <ul>
-            <li>Seite 213 Übung 5
-            <li>Seite 217 Übung 13 und 14 a)
-          </ul>
+        <ul>
+          <li>Seite 213 Übung 5
+          <li>Seite 217 Übung 13 und 14 a)
+        </ul>
         </li>
         <li>Kummulierte: Binomialverteilung: <a href="#a1">Lösungen</a></li>
-          <ul>
-            <li>Seite 214 Übung 7 
-            <li>Seite 217 Übung 14 b) 
-          </ul>
+        <ul>
+          <li>Seite 214 Übung 7
+          <li>Seite 217 Übung 14 b)
+        </ul>
         </li>
         <li>Erwartungswert und Standardabweichung: <a href="#a1">Lösungen</a></li>
-          <ul>
-            <li>Seite 215 Übung 8 
-            <li>Seite 217 Übung 15
-          </ul>
+        <ul>
+          <li>Seite 215 Übung 8
+          <li>Seite 217 Übung 15
+        </ul>
         </li>
         <li>Vermischt: <a href="#a1">Lösungen</a></li>
-          <ul>
-            <li>Seite 217 Übung 14 und 16
-          </ul>
+        <ul>
+          <li>Seite 217 Übung 14 und 16
+        </ul>
         </li>
       </ul>
     </section>
