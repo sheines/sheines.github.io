@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" initial-scale="1.0" />
+  <meta name="author" content="Sebastian Heine" />
+  <meta name="robot" content="noindex" />
+  <title>HEIS | Stochastik | Wiederholung Binomialverteilung</title>
+  <link rel="stylesheet" type="text/css" href="/css/colors.css" />
+  <link rel="stylesheet" type="text/css" href="/css/gridNoTimeline.css" />
+  <link rel="stylesheet" type="text/css" href="/css/navbar.css" />
+  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="/css/courses.css" />
+  <link rel="stylesheet" type="text/css" href="/css/vierfelder.css" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <script src="/js/math/binomial2d.js"></script>
+
+
+</head>
+
+<body>
+  <header>
+    <div class="nav">
+      <input type="checkbox" id="nav-check" />
+      <div class="nav-header">
+        <div class="nav-title">
+          <a href="/">Hr. Heines Unterricht</a>
+        </div>
+      </div>
+      <div class="nav-btn">
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+
+      <div class="nav-links">
+        <a href="/content/math/">Mathematik</a>
+        <a href="/content/math/13/">Klasse 13</a>
+        <a href="/content/math/13/stoch/">Stochastik</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section>
+      <h2>Binomialverteilung</h2>
+      <div class="ziele">
+        <p>
+          Nachfolgend werden die Sigma-Regeln erklärt und berechnet.
+        </p>
+        <p>
+          <a href="#aufgaben">Direkt zu den Aufgaben</a>
+        </p>
+      </div>
+
+      <div class="theorie">
+        <div class="definition">
+          <h4>Sigma-Regeln</h4>
+          <p>
+            Bernoulli-Ketten bestehen oft aus einer großen Zahl \(n\) von Versuchen. Dann kann die trefferzahl \(X\) sehr viele Werte
+            annehmen. Ein Einzelwert hat in diesem Fall zwangsläufig nur noch eine (sehr) kleine Wahrscheinlichkeit. Er tritt also sehr 
+            selten auf und wird so als Ergebnis uninteressant.
+          </p>
+          <p>
+            Man interessiert sich dann eher dafür, mit welcher Wahrscheinlichkeit die Trefferzahl \(X\) in bestimmte Intervalle 
+            um den Erwartungswert \(\mu\) fällt.
+          </p>
+          <p>
+            Mithilfe der Standardabweichung \(\sigma\) kann man nun Intervalle um den Erwartungswert finden, in welchen die Trefferzahl \(X\)
+            mit einer festen Wahrscheinlichkeit liegt.
+          </p>
+        </div>
+        <h6>Beispiel: \(1\sigma\)-Intervall</h6>
+
+        <p>
+          Ein Würfel wird fünfzig mal geworfen. Das Werfen einer Sechs zählt als Treffer.
+        </p>
+        <p>
+          Das ergibt einen Erwartungswert und eine Standardabweichung von:
+          <p style="margin-left: 20px;">
+            \(\begin{align*}
+            \mu&=50\cdot\tfrac16\approx 8,33\\
+            \sigma&=\sqrt{50\cdot\tfrac16\cdot(1-\tfrac16)}\approx2,64
+            \end{align*}\)
+          </p>
+          Nun wird die Wahrscheinlichkeit des \(1\sigma\)-Intervalls um \(\mu\) berechnet:
+          <p style="margin-left: 20px;">
+            \(\begin{align*}
+            [\mu-\sigma, \mu+\sigma]&=[8,33-2.64, 8,33+2,64] \\
+            [\mu-\sigma, \mu+\sigma]&=[5,69, 10,97]
+            \end{align*}\)
+          </p>
+          Da \(X\) ganzzahlig ist muss das Intervall entsprechend angepasst werden:
+          <p style="margin-left: 20px;">
+            \(\begin{align*}
+            P(5,69\leq X \leq 10,97)&=P(6\leq X\leq 10) \\
+                                    &=P(X\leq 10) - P(X\leq 5)\\
+                                    &=F(50; \tfrac16; 10) - F(50; \tfrac16; 5)\\
+                                    &\approx 0,7986 - 0,1388 \\
+            P(5,69\leq X \leq 10,97)&\approx65,9\,\%
+            \end{align*}\)
+          </p>
+          Das heißt, mit einer Wahrscheinlichkeit von knapp \(65,9\,\%\) landet die Trefferzahl zwischen sechs und 10.
+        </p>
+        <p>
+          Erhöht man jetzt die Zahl der Versuche, ergibt sich folgendes Bild:
+          <div class="centered">
+          <table class="wechseltabelle cellCentered" style="margin-bottom: 10px;">
+            <!-- Haken: &#10004; Kreuz: &#x2718; -->
+            <tr>
+              <th style="background-color: #006977da">Versuche <br> \(n\)</th>
+              <th style="background-color: #006977da">Erwartungsw.<br> \(\mu\)</th>
+              <th style="background-color: #006977da">Standardabw.<br> \(\sigma\)</th>
+              <th style="background-color: #006977da">Wahrscheinlichkeit <br>\(P(\mu-\sigma \leq X\leq \mu+\sigma)\)</th>
+            </tr>
+            <tr>
+              <td>\(50\)</td>
+              <td>\(8,33\)</td>
+              <td>\(2,64\)</td>
+              <td>\(65,9\,\%\)</td>
+            </tr>
+            <tr>
+              <td>\(100\)</td>
+              <td>\(16,67\)</td>
+              <td>\(3,73\)</td>
+              <td>\(71,8\,\%\)</td>
+            </tr>
+            <tr>
+              <td>\(1\,000\)</td>
+              <td>\(166,67\)</td>
+              <td>\(11,79\)</td>
+              <td>\(69,2\,\%\)</td>
+            </tr>
+            <tr>
+              <td>\(10\,000\)</td>
+              <td>\(1\,666,67\)</td>
+              <td>\(37,27\)</td>
+              <td>\(67,9\,\%\)</td>
+            </tr>
+            <tr>
+              <td>\(100\,000\)</td>
+              <td>\(16\,666,67\)</td>
+              <td>\(117,85\)</td>
+              <td>\(68,3\,\%\)</td>
+            </tr>
+            <tr>
+              <td>\(1\,000\,000\)</td>
+              <td>\(166\,666,67\)</td>
+              <td>\(372,68\)</td>
+              <td>\(68,3\,\%\)</td>
+            </tr>
+
+          </table>
+        </div>
+        Man sieht, dass sich der Wert bei etwa \(68,3\,\%\) einpendelt,<b>das heißt, dass \(1\sigma\)-Intervall beinhaltet \(68,3\,\%\) aller Erfolge.</b>
+        </p>
+
+        <!-- Und das Ganze als Diagramm:
+        <div class="centered" style="max-height: 200px;">
+          <svg id="binomBsp" viewBox="0 0 420 260"></svg>
+        </div>
+
+        <script>
+          drawBinomialDistribution(binomBsp, 3, 0.1667);
+        </script> -->
+
+        
+      </div>
+    </section>
+    <!-- <section>
+            <div class="videos">
+                <iframe width="360" height="202" src="https://www.youtube.com/embed/19goPRnthCE"
+                    title="Abstand Punkt - Punkt" frameborder="0" allow="web-share" allowfullscreen></iframe>
+
+            </div>
+        </section> -->
+    <section id="aufgaben" class="aufgaben">
+      <h3>Aufgaben zur Wiederholung</h3>
+      <ul class="custom-marker point-after decimal more-spacing">
+        <li>Seite 213 Übung 3 und 4 <a href="#a1">Lösungen</a></li>
+        <li>Seite 217 Übung 10 <a href="#a2">Lösungen</a></li>     
+      </ul>
+    </section>
+    <section class="loesungen">
+      <h3>Lösungen zur Wiederholung</h3>
+
+      <details id="a1">
+        <summary>...</summary>
+
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>
+          </li>
+
+        </ol>
+      </details>
+
+
+
+
+    </section>
+
+    <script src="/js/math/binomial.js"></script>
+    <section id="meme">
+      <div class="images">
+        <img src="/img/std_abw_meme.jpg" style="object-fit: scale-down; max-width: 300px" />
+      </div>
+      <div class="centered">
+        <a
+          href="https://medium.com/@obandoandrew8/bell-curve-meme-avoiding-the-middle-with-statistics-6301a8f5cfa1">
+          <h6>Original von Andrew Obando</h6>
+        </a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <a href="/misc/impressum.html">Impressum</a>
+    <div class="lastModified" align="center">
+      Erstellt am:<br />
+      21. März 2026
+      <!-- <span id="lastModifiedDate"></span> -->
+    </div>
+    <a href="/misc/datenschutz.html">Datenschutz</a>
+  </footer>
+</body>
