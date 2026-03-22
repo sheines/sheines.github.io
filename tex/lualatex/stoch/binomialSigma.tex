@@ -1,0 +1,97 @@
+\documentclass[11pt]{standalone}
+
+\usepackage{fontspec}
+\usepackage{unicode-math}
+
+\setmainfont{TeX Gyre Pagella}
+\setsansfont{Linux Biolinum O}
+\setmathfont{TeX Gyre Schola Math}
+
+\usepackage{ifthen}
+\usepackage{amsmath}
+
+
+\usepackage[d]{esvect}
+
+\usepackage[svgnames]{xcolor}
+\usepackage{tikz}
+\usetikzlibrary{shapes.misc}
+\usetikzlibrary{arrows,arrows.meta}
+\usetikzlibrary{calc,intersections, patterns, math}
+
+\definecolor{pfeil}{RGB}{168,167,167}
+\definecolor{salmon}{RGB}{250,128,114}
+\definecolor{petrol}{RGB}{0, 118, 136}
+% \definecolor{darkgoldenrod}{RGB}{184, 134, 11}
+\colorlet{petrol-lighter}{petrol!40}
+\colorlet{darkgoldenrod-lighter}{DarkGoldenrod!40}
+
+\tikzset{>={Stealth[scale=1.25]}}
+
+\usepackage{luacode}
+
+\begin{luacode}
+function binom(n, p, k)
+    local binom = 1
+    k = math.floor(k + 0.5)
+    if k > 0 then
+        for i = 1, k do
+            binom = binom * (n - i + 1) / i
+        end
+    end
+    return binom * p^k * (1 - p)^(n - k)
+end
+\end{luacode}
+
+\pgfmathdeclarefunction{binom}{3}{%
+  \pgfmathparse{%
+    \directlua{
+      tex.print(binom(\pgfmathfloatvalueof{#1},
+                           \pgfmathfloatvalueof{#2},
+                           \pgfmathfloatvalueof{#3}))
+    }%
+  }%
+}
+
+\begin{document}
+
+\begin{tikzpicture}[pfeil, very thick, yscale=20, xscale=1.25]
+			
+	
+
+	\draw[thin] (3.333,0) -- ++ (0,-0.0025) node[below] {$\mu$};
+
+	\draw[thin, DarkGoldenrod] (2.5,0) -- ++ (0,-0.005) node[below] {$\scriptstyle\mu-\sigma$};
+	\draw[thin, DarkGoldenrod] (4.167,0) -- ++ (0,-0.005) node[below] {$\scriptstyle\mu+\sigma$};
+
+	\draw[thin, Green] (1.5,0) -- ++ (0,-0.0075) node[below] {$\scriptstyle\mu-2\sigma$};
+	\draw[thin, Green] (5.167,0) -- ++ (0,-0.0075) node[below] {$\scriptstyle\mu+2\sigma$};
+
+	\draw[thin, Magenta] (0.5,0) -- ++ (0,-0.01) node[below] {$\scriptstyle\mu-3\sigma$};
+	\draw[thin, Magenta] (6.167,0) -- ++ (0,-0.01) node[below] {$\scriptstyle\mu+3\sigma$};
+
+	\foreach \k in {13,...,17}{
+		\draw[DarkGoldenrod, fill, fill opacity=0.4] ({(\k-5)/3-0.167},0) rectangle ++ ({0.333},{binom(30,0.5,\k)});
+	}
+	\foreach \k in {10,11,12,18,19,20}{
+		\draw[Green, fill, fill opacity=0.4] ({(\k-5)/3-0.167},0) rectangle ++ ({0.333},{binom(30,0.5,\k)});
+	}
+	\foreach \k in {7,8,9,21,22,23}{
+		\draw[Magenta, fill, fill opacity=0.4] ({(\k-5)/3-0.167},0) rectangle ++ ({0.333},{binom(30,0.5,\k)});
+	}
+	\foreach \k in {5,6,24,25}{
+		\draw[LightBlue, fill, fill opacity=0.4] ({(\k-5)/3-0.167},0) rectangle ++ ({0.333},{binom(30,0.5,\k)});
+	}
+
+	% \foreach \k in {5,...,25}{
+	% 	\draw[red] ({(\k-5)/3-0.167},0) rectangle ++ ({0.333},{binom(30,0.5,\k)});
+	% }
+
+
+	\draw[thick,->] (0,0) -- (7,0) node[below] {$k$};
+
+	\draw[thick,->] (0,0) -- (0,0.175) node[left] {$P$};
+
+\end{tikzpicture}			
+
+\end{document}

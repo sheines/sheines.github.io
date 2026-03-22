@@ -282,7 +282,7 @@
         </li>
         <li>Vermischt: <a href="#a1">Lösungen</a></li>
         <ul>
-          <li>Seite 217 Übung 14 und 16
+          <li>Seite 217 Übung 12 und 16
         </ul>
         </li>
       </ul>
@@ -290,18 +290,298 @@
     <section class="loesungen">
       <h3>Lösungen zur Wiederholung</h3>
 
-      <details id="a1">
-        <summary>...</summary>
+      <details id="a1" style="counter-set: lsg-counter 2;">
+        <summary>Taschenrechner</summary>
 
         <ol class="custom-marker parens-around lower-alpha more-spacing">
-          <li>
+          <li>\(0,2051\)</li>
+          <li>\(0,0031\)</li>
+          <li>\(0,1124\)</li>
+          <li>\(0,1488\)</li>
+
+        </ol>
+      </details>
+      <details style="counter-set: lsg-counter 3;">
+        <summary>Punktwahrscheinlichkeit</summary>
+        \(n=8\), \(p=\tfrac16\), \(k=3\)
+        <p>
+          \(B(8; \tfrac16; 3)=10,4\,\%\)
+        </p>
+      </details>
+      <details style="counter-set: lsg-counter 9;">
+        <summary>Formel von Bernoulli</summary>
+        \(n=4\), \(p=\tfrac12\), \(k=3\)
+        <p>
+          \(\begin{align*}
+          P(X=3)&=\binom{4}{3}\cdot\left(\tfrac12\right)^3\cdot\left(1-\tfrac12\right)^{4-3} \\
+          P(X=3)&=4\cdot\tfrac{1}{8}\cdot\tfrac{1}{32} \\
+          P(X=3)&=25\,\%
+          \end{align*}\)
+        </p>
+        Probieren ergibt: \(k=2\) ist am wahrscheinlichsten (\(P(X=2)=37,5\,\%\))
+      </details>
+
+      <details id="a2" style="counter-set: lsg-counter 4;">
+        <summary>Wahrscheinlichkeitsverteilung</summary>
+        <div class="centered">
+          <table class="wechseltabelle cellCentered" style="margin-bottom: 10px;">
+            <!-- Haken: &#10004; Kreuz: &#x2718; -->
+            <tr>
+              <th style="background-color: #006977da">\(k\)</th>
+              <th style="background-color: #006977da">\(B(10; 0,6; k)\)</th>
+            </tr>
+            <tr>
+              <td>\(0\)</td>
+              <td>\(0,0001\)</td>
+            </tr>
+            <tr>
+              <td>\(1\)</td>
+              <td>\(0,0016\)</td>
+            </tr>
+            <tr>
+              <td>\(2\)</td>
+              <td>\(0,0106\)</td>
+            </tr>
+            <tr>
+              <td>\(3\)</td>
+              <td>\(0,0425\)</td>
+            </tr>
+            <tr>
+              <td>\(4\)</td>
+              <td>\(0,1115\)</td>
+            </tr>
+            <tr>
+              <td>\(5\)</td>
+              <td>\(0,2007\)</td>
+            </tr>
+            <tr>
+              <td>\(6\)</td>
+              <td>\(0,2508\)</td>
+            </tr>
+            <tr>
+              <td>\(7\)</td>
+              <td>\(0,2150\)</td>
+            </tr>
+            <tr>
+              <td>\(8\)</td>
+              <td>\(0,1209\)</td>
+            </tr>
+            <tr>
+              <td>\(9\)</td>
+              <td>\(0,0403\)</td>
+            </tr>
+            <tr>
+              <td>\(10\)</td>
+              <td>\(0,0060\)</td>
+            </tr>
+
+          </table>
+        </div>
+
+      </details>
+
+      <details style="counter-set: lsg-counter 12;">
+        <summary>Histogramme I</summary>
+        Mit zunehmenden \(n\) verschiebt sich die Verteilung nach rechts und wird flacher und breiter.
+
+      </details>
+
+      <details style="counter-set: lsg-counter 13;">
+        <summary>Histogramme II</summary>
+
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>Tabelle:
+            <div class="centered">
+              <table class="wechseltabelle cellCentered" style="margin-bottom: 10px;">
+                <!-- Haken: &#10004; Kreuz: &#x2718; -->
+                <tr>
+                  <th style="background-color: #006977da">\(k\)</th>
+                  <th style="background-color: #006977da">\(B(6; 0,4; k)\)</th>
+                </tr>
+                <tr>
+                  <td>\(0\)</td>
+                  <td>\(0,0467\)</td>
+                </tr>
+                <tr>
+                  <td>\(1\)</td>
+                  <td>\(0,1866\)</td>
+                </tr>
+                <tr>
+                  <td>\(2\)</td>
+                  <td>\(0,3110\)</td>
+                </tr>
+                <tr>
+                  <td>\(3\)</td>
+                  <td>\(0,2765\)</td>
+                </tr>
+                <tr>
+                  <td>\(4\)</td>
+                  <td>\(0,1382\)</td>
+                </tr>
+                <tr>
+                  <td>\(5\)</td>
+                  <td>\(0,0369\)</td>
+                </tr>
+                <tr>
+                  <td>\(6\)</td>
+                  <td>\(0,0041\)</td>
+                </tr>
+              </table>
+            </div>
+            Histogramm:
+            <div class="centered" style="max-height: 200px;">
+              <svg id="task14a" viewBox="0 0 420 260"></svg>
+            </div>
+
+            <script>
+              drawBinomialDistribution(task14a, 6, 0.4);
+            </script>
           </li>
+        </ol>
+      </details>
+
+      <details id="a3" style="counter-set: lsg-counter 6;">
+        <summary>Taschenrechner II</summary>
+
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>\(0,8281\)</li>
+          <li>\(0,8981\)</li>
+          <li>\(0,9619\)</li>
+          <li>\(0,0035\)</li>
+
+        </ol>
+      </details>
+
+      <details style="counter-set: lsg-counter 13">
+        <summary>Histogramme III</summary>
+
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>Tabelle:
+            <div class="centered">
+              <table class="wechseltabelle cellCentered" style="margin-bottom: 10px;">
+                <!-- Haken: &#10004; Kreuz: &#x2718; -->
+                <tr>
+                  <th style="background-color: #006977da">\(k\)</th>
+                  <th style="background-color: #006977da">\(F(6; 0,4; k)\)</th>
+                </tr>
+                <tr>
+                  <td>\(0\)</td>
+                  <td>\(0,0467\)</td>
+                </tr>
+                <tr>
+                  <td>\(1\)</td>
+                  <td>\(0,2333\)</td>
+                </tr>
+                <tr>
+                  <td>\(2\)</td>
+                  <td>\(0,5443\)</td>
+                </tr>
+                <tr>
+                  <td>\(3\)</td>
+                  <td>\(0,8208\)</td>
+                </tr>
+                <tr>
+                  <td>\(4\)</td>
+                  <td>\(0,9590\)</td>
+                </tr>
+                <tr>
+                  <td>\(5\)</td>
+                  <td>\(0,9959\)</td>
+                </tr>
+                <tr>
+                  <td>\(6\)</td>
+                  <td>\(1,0000\)</td>
+                </tr>
+              </table>
+            </div>
+            Histogramm:
+            <div class="centered" style="max-height: 200px;">
+              <svg id="task14b" viewBox="0 0 420 260"></svg>
+            </div>
+
+            <script>
+              drawBinomialDistribution(task14b, 6, 0.4, true);
+            </script>
+          </li>
+        </ol>
+      </details>
+      
+      <details id="a4" style="counter-set: lsg-counter 7;">
+        <summary>Erwartungswert</summary>
+
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>\(\mu=12\cdot\tfrac16=2\)</li>
+          <li>\(\mu=70\cdot\tfrac15=14\)</li>
+        </ol>
+      </details>
+
+      <details style="counter-set: lsg-counter 14;">
+        <summary>Erwartungswert und Standardabweichung</summary>
+
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>\(\mu=20\cdot\tfrac16=\tfrac{10}{3}\)</li>
+          <li>\(\sigma=\sqrt{20\cdot\tfrac16\cdot\tfrac56}=\tfrac53\)</li>
+          <li>Viermal so oft, also 80 Mal:
+            <p>
+              \(\sqrt{n\cdot\tfrac16\cdot\tfrac56}=\tfrac{10}{3}\)
+            </p>
+          </li>
+
+        </ol>
+      </details>
+
+      <details id="a5" style="counter-set: lsg-counter 11;">
+        <summary>Binomialverteilung</summary>
+
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>\(P(X=4)=B(7; 0,3; 4)=9,7\,\%\)</li>
+          <li>\(P(X=3)=B(7; 0,3; 3)=22,7\,\%\)</li>
+          <li>\(P(X\geq 4)=1-P(X\leq 3) \)\(\,=1-F(7; 0,3; 3) \)\(\,=12,6\,\%\)</li>
+          <li>\(P(3\leq X\leq 5)=P(X\leq 5) - P(X\leq 2) \)\(\,= F(7; 0,3; 5)-F(7; 0,3; 2) \)\(\,=34,9\,\%\)</li>
+
+
+        </ol>
+      </details>
+
+      <details style="counter-set: lsg-counter 15;">
+        <summary>Würfelspiel</summary>
+
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>\(\mu=54\cdot\tfrac16=9\)</li>
+          <li>Genau 8: \(P(X=8)=B(54; \tfrac16; 8)=14,1\,\%\)
+            <p>
+              Höchstens 8: \(P(X\leq 8)=F(54; \tfrac16; 8)=44,4\,\%\)
+            </p>
+          </li>
+          <li>Erwarteter Gewinn: \(9\,\)€
+            <p>
+              Einsatz: \(10\,\)€
+            </p>
+            <p>
+              Erwarteter Gewinn \(\neq\) Einsatz: Das Spiel ist nicht fair. Es bevorteilt die Bank.
+            </p>
+          </li>
+          <li>
+            Da der zu erwartende Gewinn bei \(9\,\)€ liegt, muss der Einsatz ebenfalls bei \(9\,\)€ liegen.
+          </li>
+
 
         </ol>
       </details>
 
 
 
+      <!-- <details id="a1" style="counter-set: lsg-counter 2;">
+        <summary>Taschenrechner</summary>
+
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>\(0,2051\)</li>
+          <li>\(0,0031\)</li>
+          <li>\(0,1124\)</li>
+          <li>\(0,1488\)</li>
+
+        </ol>
+      </details> -->
 
     </section>
 

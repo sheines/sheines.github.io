@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" initial-scale="1.0" />
+  <meta name="author" content="Sebastian Heine" />
+  <meta name="robot" content="noindex" />
+  <title>HEIS | Stochastik | Prognoseintervalle</title>
+  <link rel="stylesheet" type="text/css" href="/css/colors.css" />
+  <link rel="stylesheet" type="text/css" href="/css/gridNoTimeline.css" />
+  <link rel="stylesheet" type="text/css" href="/css/navbar.css" />
+  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="/css/courses.css" />
+  <link rel="stylesheet" type="text/css" href="/css/vierfelder.css" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <script src="/js/math/binomial2d.js"></script>
+
+
+</head>
+
+<body>
+  <header>
+    <div class="nav">
+      <input type="checkbox" id="nav-check" />
+      <div class="nav-header">
+        <div class="nav-title">
+          <a href="/">Hr. Heines Unterricht</a>
+        </div>
+      </div>
+      <div class="nav-btn">
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+
+      <div class="nav-links">
+        <a href="/content/math/">Mathematik</a>
+        <a href="/content/math/13/">Klasse 13</a>
+        <a href="/content/math/13/stoch/">Stochastik</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section>
+      <h2>Prognoseintervalle</h2>
+      <div class="ziele">
+        <p>
+          Nachfolgend werden die Prognoseintervalle erklärt und berechnet.
+        </p>
+        <p>
+          <a href="#aufgaben">Direkt zu den Aufgaben</a>
+        </p>
+      </div>
+
+      <div class="theorie">
+        <div class="definition">
+          <h4>Grundidee</h4>
+          <p>
+            In den Medien werden immer wieder statistische Schätzungen &ndash; eben Prognosen &ndash; verwendet. Das
+            bekannteste Beispiel
+            sind sicher die ersten Hochrechnungen an einem Wahltag.
+          </p>
+          <h5 style="color: darkgoldenrod;">Begriffe</h5>
+          <ul>
+            <li><b>Grundgesamtheit:</b> Bezuggruppe, z.B. alle Wahlberechtigten Personen</li>
+            <li><b>Stichprobe:</b> Auswahl für Untersuchung, z.B. 1000 Befragte bei Wahl</li>
+          </ul>
+          <p>
+            Je nach Art spricht man auch von einer Zufallsstichprobe.
+          </p>
+
+          <p>
+            Für Stichproben <b>mit Zurücklegen</b> eignet sich das Modell der Bernoullikette. In der Realität wird
+            &ndash; im Allgemeinen &ndash; darauf geachtet, dass keine Person doppelt befragt wird. Es ist also eine
+            Stichprobe <b>ohne Zurücklegen</b>.
+          </p>
+          <p>
+            Andererseite ist die Stickprobe im Vergleich zur Grundgesamtheit meist sehr klein, sodass die Ergebnisse
+            mit Bernoulliketten sehr gut angenähert werden können.
+          </p>
+        </div>
+        <h5 style="color: darkgoldenrod;">Problemstellungen</h5>
+        <p>
+          Es gibt nun zwei Problemstellungen, die hier betrachtet werden können:
+        <ul>
+          <li><b>Schluss von Grundgesamtheit auf Stichprobe:</b>
+            <p>
+              Es ist bekannt, dass in der Bevölkerung (Grundgesamtheit) \(10\) bis \(15\,\%\) der Personen
+              Linkshänder sind. Wie viel Linkshänder sitzen dann in einer Klasse (Stichprobe)?
+            </p>
+          </li>
+          <li><b>Schluss von Stichprobe auf Grundgesamtheit:</b>
+            <p>
+              Eine Umfrage von 1000 Personen (Stichprobe) ergab, dass diese zu \(X\,\%\) (un)zufrieden mit der aktuellen
+              Regierungsarbeit ist. Wie sieht das die gesamte Bevölkerung (Grundgesamtheit)?
+            </p>
+          </li>
+        </ul>
+        </p>
+
+        <div class="definition">
+          <h4>Prognoseintervall</h4>
+          <p>Wenn die Trefferwahrscheinlichkeit \(p\) eines Merkmals in der Grundgesamtheit bekannt ist, interessiert
+            man sich oft für die Anzahl der Treffer \(X\) in einer zukünftigen Stichprobe.
+          </p>
+          <p>
+            Es ist klar, dass man diese Trefferzahl \(X\) nicht exakt vorhersagen kann. Es ist jedoch möglich ein Intervall
+            anzugeben, innerhalb dessen die Trefferzahl mit einer gewissen Wahrscheinlichkeit liegt.
+          </p>
+          <p>
+            Dieses Intervall nennt man <b>Prognoseintervall</b> und seine Wahrscheinlichkeit 
+            <b>Sicherheitswahrscheinlichkeit</b>.
+          </p>
+          <p>
+            Prognoseintervalle schließen von der Grundgesamtheit auf die Stichprobe.
+          </p>
+        </div>
+        <h6>Beispiel: </h6>
+        <p>
+          Eine Fluggesellschaft weiß, dass im Schnitt \(5\,\%\) der Passagiere eines Fluges nicht erscheinen.
+        </p>
+        <p>
+          Sie möchte nun eine Prognose darüber, wie viele Passagiere bei einem vollausgebuchten Flugzeug mit \(300\)
+          Plätzen mit einer Sicherheit von \(95\,\%\) nicht erscheinen werden. 
+        </p>
+        <ul>
+          <li>Erwartungswert und Standardabweichung:
+            <p style="margin-left: 20px;">
+          \(\begin{align*}
+          \mu&=300\cdot 0,05=15\\
+          \sigma&=\sqrt{300\cdot0,05\cdot0,95}\approx3,77
+          \end{align*}\)
+        </p>
+          </li>
+          <li>Laplace-Bedingung prüfen:
+            <p style="margin-left: 20px;">
+              \(\begin{align*}
+              \sigma&\approx3,77>3 \quad\checkmark
+              \end{align*}\)
+            </p>
+          </li>
+          <li>Intervall berechnen: \(95\,\%\) entspricht \(\mu\pm1,96\sigma \)
+            <p style="margin-left: 20px;">
+              \(\begin{align*}
+              \mu-1,96\sigma&=15-1,96\cdot3,77\\
+              \mu-1,96\sigma&\approx7,61 \\[8px]
+              \mu+1,96\sigma&=15+1,96\cdot3,77\\
+              \mu+1,96\sigma&\approx22,39
+              \end{align*}\)
+            </p>
+          </li>
+          <li>Schlüsse ziehen:
+            <p>
+              Das bedeutet, mit einer Sicherheit von \(95\,\%\) werden zwischen 7 und 23 Passagiere nicht den Flug antreten.
+            </p>
+          </li>
+        </ul>
+
+        
+
+      </div>
+
+
+    </section>
+    <!-- <section>
+            <div class="videos">
+                <iframe width="360" height="202" src="https://www.youtube.com/embed/19goPRnthCE"
+                    title="Abstand Punkt - Punkt" frameborder="0" allow="web-share" allowfullscreen></iframe>
+
+            </div>
+        </section> -->
+    <section id="aufgaben" class="aufgaben">
+      <h3>Aufgaben zu Prognoseintervallen</h3>
+      <ul class="custom-marker point-after decimal more-spacing">
+        <li>Seite 225 Übung 1 bis 3 <a href="#a1">Lösungen</a></li>
+        <li>Seite 226 Übung 4 und 5 <a href="#a2">Lösungen</a></li>
+        <li>Seite 228 Übung 7 bis 10 <a href="#a3">Lösungen</a></li>
+      </ul>
+    </section>
+    <section class="loesungen">
+      <h3>Lösungen zu Prognoseintervallen</h3>
+
+      <details id="a1">
+        <summary>...</summary>
+
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>
+          </li>
+
+        </ol>
+      </details>
+
+
+
+
+    </section>
+
+    <script src="/js/math/binomial.js"></script>
+    <section id="meme">
+      <div class="images">
+        <img src="/img/lying_meme.webp" style="object-fit: scale-down; max-width: 300px" />
+      </div>
+      <div class="centered">
+        <a href="https://www.reddit.com/r/technicallythetruth/comments/oshzoi/yep_i_gotta_agree_with_this_one/">
+          <h6>Original von 8__Gr13f3r__8</h6>
+        </a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <a href="/misc/impressum.html">Impressum</a>
+    <div class="lastModified" align="center">
+      Erstellt am:<br />
+      22. März 2026
+      <!-- <span id="lastModifiedDate"></span> -->
+    </div>
+    <a href="/misc/datenschutz.html">Datenschutz</a>
+  </footer>
+</body>
