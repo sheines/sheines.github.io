@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" initial-scale="1.0" />
+  <meta name="author" content="Sebastian Heine" />
+  <meta name="robot" content="noindex" />
+  <title>HEIS | Stochastik | Konfidenzintervalle</title>
+  <link rel="stylesheet" type="text/css" href="/css/colors.css" />
+  <link rel="stylesheet" type="text/css" href="/css/gridNoTimeline.css" />
+  <link rel="stylesheet" type="text/css" href="/css/navbar.css" />
+  <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+  <link rel="stylesheet" type="text/css" href="/css/courses.css" />
+  <link rel="stylesheet" type="text/css" href="/css/vierfelder.css" />
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+  <script src="/js/math/binomial2d.js"></script>
+
+
+</head>
+
+<body>
+  <header>
+    <div class="nav">
+      <input type="checkbox" id="nav-check" />
+      <div class="nav-header">
+        <div class="nav-title">
+          <a href="/">Hr. Heines Unterricht</a>
+        </div>
+      </div>
+      <div class="nav-btn">
+        <label for="nav-check">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+      </div>
+
+      <div class="nav-links">
+        <a href="/content/math/">Mathematik</a>
+        <a href="/content/math/13/">Klasse 13</a>
+        <a href="/content/math/13/Stoch/">Stochastik</a>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section>
+      <h2>Konfidenzintervalle</h2>
+      <div class="ziele">
+        <p>
+          Nachfolgend werden die Konfidenzintervalle erklärt und berechnet.
+        </p>
+        <p>
+          <a href="#aufgaben">Direkt zu den Aufgaben</a>
+        </p>
+      </div>
+
+      <div class="theorie">
+        <div class="definition">
+          <h4>Grundidee</h4>
+          <p>
+            In den Medien werden immer wieder statistische Schätzungen &ndash; eben Prognosen &ndash; verwendet. Das
+            bekannteste Beispiel
+            sind sicher die ersten Hochrechnungen an einem Wahltag.
+          </p>
+          <h5 style="color: darkgoldenrod;">Begriffe</h5>
+          <ul>
+            <li><b>Grundgesamtheit:</b> Bezuggruppe, z.B. alle Wahlberechtigten Personen</li>
+            <li><b>Stichprobe:</b> Auswahl für Untersuchung, z.B. 1000 Befragte bei Wahl</li>
+          </ul>
+          <p>
+            Je nach Art spricht man auch von einer Zufallsstichprobe.
+          </p>
+
+          <p>
+            Für Stichproben <b>mit Zurücklegen</b> eignet sich das Modell der Bernoullikette. In der Realität wird
+            &ndash; im Allgemeinen &ndash; darauf geachtet, dass keine Person doppelt befragt wird. Es ist also eine
+            Stichprobe <b>ohne Zurücklegen</b>.
+          </p>
+          <p>
+            Andererseite ist die Stickprobe im Vergleich zur Grundgesamtheit meist sehr klein, sodass die Ergebnisse
+            mit Bernoulliketten sehr gut angenähert werden können.
+          </p>
+        </div>
+        <h5 style="color: darkgoldenrod;">Problemstellungen</h5>
+        <p>
+          Es gibt nun zwei Problemstellungen, die hier betrachtet werden können:
+        <ul>
+          <li><b>Schluss von Grundgesamtheit auf Stichprobe:</b>
+            <p>
+              Es ist bekannt, dass in der Bevölkerung (Grundgesamtheit) \(10\) bis \(15\,\%\) der Personen
+              Linkshänder sind. Wie viel Linkshänder sitzen dann in einer Klasse (Stichprobe)?
+            </p>
+          </li>
+          <li><b>Schluss von Stichprobe auf Grundgesamtheit:</b>
+            <p>
+              Eine Umfrage von 1000 Personen (Stichprobe) ergab, dass diese zu \(X\,\%\) (un)zufrieden mit der aktuellen
+              Regierungsarbeit ist. Wie sieht das die gesamte Bevölkerung (Grundgesamtheit)?
+            </p>
+          </li>
+        </ul>
+        </p>
+
+        <div class="definition">
+          <h4>Konfidenzintervall</h4>
+          <p>
+            Wenn die Trefferwahrscheinlichkeit \(p\) eines Merkmals in der Grundgesamtheit unbekannt ist,
+            wird versucht mithilfe einer Stichprobe \(n\) aus der relativen Häufigkeit \(\frac Xn\) des Merkmals
+            auf dessen Wahrscheinlichkeit zu schließen.
+          </p>
+          <p>Wenn die Trefferwahrscheinlichkeit \(p\) eines Merkmals in der Grundgesamtheit unbekannt ist, interessiert
+            man sich oft für die Anzahl der Treffer \(X\) in einer zukünftigen Stichprobe.
+          </p>
+          <p>
+            Es ist klar, dass die relative Häufigkeit eines Merkmals nur ein Indiz ist, weshalb auch hier eine
+            Spanne angegeben wird.
+          </p>
+          <p>
+            Dieses Intervall nennt man <b>Konfidenz- </b> oder <b>Vertrauensintervall</b>..
+          </p>
+          <p>
+            Konfidenzintervalle schließen von einer Stichprobe auf die Grundgesamtheit.
+          </p>
+          <h5 style="color: darkgoldenrod;">Begriffe</h5>
+          <ul>
+            <li>\(p\): unbekannte Wahrscheinlichkeit des Merkmals in der Grundgesamtheit</li>
+            <li>\(n\): Umfang der Stichprobe</li>
+            <li>\(X\): Absolute Häufigkeit des Merkmals in der Stichprobe</li>
+            <li>\(\frac Xn=h_n\): Relative Häufigkeit des Merkmals in der Stichprobe</li>
+          </ul>
+          <h5 style="color: darkgoldenrod;">Sicherheitsintervalle</h5>
+          <p>
+            Für die Konfidenzintervalle werden bevorzugt die folgenden \(z\cdot\frac \sigma n\)-Umgebungen verwendet:
+          <div class="course-container" style="gap: 10px; flex-grow: 1; margin-bottom: 20px;">
+            <div style="flex: 1; min-width: 250px;">
+              Ganzzahlige Sicherheiten:
+              <ul>
+            <li>\(z=1,64\) \(\Rightarrow\) \(90\,\%\) Sicherheit</li>
+            <li>\(z=1,96\) \(\Rightarrow\) \(95\,\%\) Sicherheit</li>
+            <li>\(z=2,58\) \(\Rightarrow\) \(99\,\%\) Sicherheit</li>
+          </ul>
+            </div>
+            <div style="flex: 1; min-width: 250px;">
+              Ganzzahlige \(z\)-Werte:
+              <ul>
+            <li>\(z=1\) \(\Rightarrow\) \(68,3\,\%\) Sicherheit</li>
+            <li>\(z=2\) \(\Rightarrow\) \(95,5\,\%\) Sicherheit</li>
+            <li>\(z=3\) \(\Rightarrow\) \(99,7\,\%\) Sicherheit</li>
+          </ul>
+            </div>
+          </div>
+
+
+          
+
+
+          Die relative Häufigkeit liegt dann zwischen:
+          <p style="margin-left: 20px;">
+            \(\begin{align*}
+            p-z\cdot\tfrac\sigma n \leq h_n \leq p+z\cdot\tfrac\sigma n
+            \end{align*}\)
+          </p>
+          Das kann man nun nach der gesuchten Größe \(p\) umstellen und erhält damit das <b>Konfidenzintervall</b>:
+          <p style="margin-left: 20px;">
+            \(\begin{align*}
+            h_n-z\cdot\sqrt{\frac{h_n\cdot\left(1-h_n\right)}{n}}\leq p
+            \leq h_n+z\cdot\sqrt{\frac{h_n\cdot\left(1-h_n\right)}{n}}
+            \end{align*}\)
+          </p>
+          Auch hier muss die folgende Laplace-Bedingung erfüllt sein:
+          <p style="margin-left: 20px;">
+            \(\begin{align*}
+            \sigma^*&=\sqrt{n\cdot h_n\cdot\left(1-h_n\right)}>3
+            \end{align*}\)
+          </p>
+          </p>
+
+        </div>
+
+
+
+        <h6>Beispiel: </h6>
+        <p>
+          Eine Fluggesellschaft möchte ihren eigenen Marktanteil abschätzen.
+          Sie lässt dafür eine Umfrage mit 1500 Personen durchführen. 630 der befragten gaben an, dass sie
+          diese Fluggesellschaft schon einmal genutzt haben.
+        </p>
+        <p>
+          Der Marktanteil soll mit einer Sicherheit von \(90\,\) abgeschätzt werden.
+        </p>
+        <ul>
+          <li>Absolute und relative Häufigkeit:
+            <p style="margin-left: 20px;">
+              \(\begin{align*}
+              X&=630 \\
+              h_n&=\tfrac{630}{1\,500}=0,42
+              \end{align*}\)
+            </p>
+          </li>
+          <li>Laplace-Bedingung prüfen:
+            <p style="margin-left: 20px;">
+              \(\begin{align*}
+              \sigma^*&=\sqrt{1\,500\cdot0,42\cdot(1-0,42)} \\
+              \sigma^*&\approx19,1>3 \quad\checkmark
+              \end{align*}\)
+            </p>
+          </li>
+          <li>Intervall berechnen: \(90\,\%\) entspricht \(\mu\pm1,64\sigma \)
+            <p style="margin-left: 20px;">
+              \(\begin{align*}
+              p_1&=h_n-z\cdot\sqrt{\frac{h_n\cdot\left(1-h_n\right)}{n}} \\
+              &=0,42-1,64\cdot\sqrt{\frac{0,42\cdot\left(1-0,42\right)}{1\,500}} \\
+              p_1&=39,9\,\% \\[8px]
+              p_2&=h_n+z\cdot\sqrt{\frac{h_n\cdot\left(1-h_n\right)}{n}} \\
+              &=0,42+1,64\cdot\sqrt{\frac{0,42\cdot\left(1-0,42\right)}{1\,500}} \\
+              p_2&=44,1\,\% \\[8px]
+              \end{align*}\)
+            </p>
+          </li>
+          <li>Schlüsse ziehen:
+            <p>
+              Das bedeutet, mit einer Sicherheit von \(90\,\%\) liegt der Marktanteil
+              der Fluggesellschaft zwischen \(39,9\) und \(44,1\,\%\).
+            </p>
+          </li>
+        </ul>
+
+
+
+      </div>
+
+
+    </section>
+    <!-- <section>
+            <div class="videos">
+                <iframe width="360" height="202" src="https://www.youtube.com/embed/19goPRnthCE"
+                    title="Abstand Punkt - Punkt" frameborder="0" allow="web-share" allowfullscreen></iframe>
+
+            </div>
+        </section> -->
+    <section id="aufgaben" class="aufgaben">
+      <h3>Aufgaben zu Prognoseintervallen</h3>
+      <ul class="custom-marker point-after decimal more-spacing">
+        <li>Seite 237 Übung 1 und 2 <a href="#a1">Lösungen</a></li>
+        <li>Seite 238 Übung 3 bis 6 <a href="#a2">Lösungen</a></li>
+        <li>Seite 239 Übung 7 <a href="#a3">Lösungen</a></li>
+      </ul>
+    </section>
+    <section class="loesungen">
+      <h3>Lösungen zu Prognoseintervallen</h3>
+
+      <details id="a1">
+        <summary>...</summary>
+
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>
+          </li>
+
+        </ol>
+      </details>
+
+
+
+
+    </section>
+
+    <script src="/js/math/binomial.js"></script>
+    <section id="meme">
+      <div class="images">
+        <img src="/img/confi_meme.jpg" style="object-fit: scale-down; max-width: 600px" />
+      </div>
+      <div class="centered">
+        <a href="https://de.pinterest.com/pin/funnymargin-of-error-and-confidence-level--121949102386998920/">
+          <h6>Original von Maria</h6>
+        </a>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <a href="/misc/impressum.html">Impressum</a>
+    <div class="lastModified" align="center">
+      Erstellt am:<br />
+      23. März 2026
+      <!-- <span id="lastModifiedDate"></span> -->
+    </div>
+    <a href="/misc/datenschutz.html">Datenschutz</a>
+  </footer>
+</body>

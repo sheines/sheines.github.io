@@ -417,16 +417,256 @@
     <section class="loesungen">
       <h3>Lösungen zu Sigma-Regeln</h3>
 
-      <details id="a1">
-        <summary>...</summary>
+      <details id="a1" style="counter-set: lsg-counter 1;">
+        <summary>Sigma-Umgebungen</summary>
 
         <ol class="custom-marker parens-around lower-alpha more-spacing">
-          <li>
-          </li>
+          <li> + b) 
+            <div class="centered">
+            <table class="wechseltabelle cellCentered" style="margin-bottom: 10px;">
+              <!-- Haken: &#10004; Kreuz: &#x2718; -->
+              <tr><th></th>
+                <th>Erwart. <br> \(\mu\)</th>
+                <th>Standard. <br>\(\sigma\)</th>
+                <th>Laplace-B. <br>erfüllt?</th>
+              </tr>
+              <tr>
+                <td>I</td>
+                <td>\( 60\)</td>
+                <td>\( 4,90\)</td>
+                <td>ja</td>
+              </tr>
+              <tr>
+                <td>II</td>
+                <td>\( 25\)</td>
+                <td>\( 3,54\)</td>
+                <td>ja</td>
+              </tr>
+              <tr>
+                <td>III</td>
+                <td>\( 10\)</td>
+                <td>\( 3\)</td>
+                <td>nein</td>
+              </tr>
+              <tr>
+                <td>IV</td>
+                <td>\( 400\)</td>
+                <td>\( 15,49\)</td>
+                <td>ja</td>
+              </tr>
 
+            </table>
+          </div>
+          </li>
+        </ol>
+        <ol class="custom-marker parens-around lower-alpha more-spacing" style="counter-set: list 2;">
+          <li><ol type="I">
+            <li>\(1\sigma\)-Umgebung: \([55,1; 64,9]\)
+              <p style="margin-left: 20px;">
+              \(\begin{align*}
+              P(56\leq X\leq 64)&=P(X\leq 64)-P(X\leq 55)\\
+                                &\approx 0,8205-0,1789 \\
+              P(56\leq X\leq 64)&\approx 64,1\,\%
+              \end{align*}\)
+            </p>
+            </li>
+            <li>\(2\sigma\)-Umgebung: \([17,92; 32,08]\)
+              <p style="margin-left: 20px;">
+              \(\begin{align*}
+              P(18\leq X\leq 32)&\approx 96,72\,\%
+              \end{align*}\)
+            </p>
+            </li>
+            <li>\(3\sigma\)-Umgebung: \([1; 19]\)
+              <p style="margin-left: 20px;">
+              \(\begin{align*}
+              P(1\leq X\leq 19)&\approx 99,8\,\%
+              \end{align*}\)
+            </p>
+            </li>
+            <li>\(1,64\sigma\)-Umgebung: \([374,6; 425,4]\)
+              <p style="margin-left: 20px;">
+              \(\begin{align*}
+              P(375\leq X\leq 425)&\approx 90,1\,\%
+              \end{align*}\)
+            </p>
+            </li>
+          </ol>
+          </li>
         </ol>
       </details>
 
+      <details>
+        <summary>Sigma-Umgebungen</summary>
+
+        <ul class="custom-marker parens-around lower-alpha more-spacing">
+          <li>Erwartungswert \(\mu=30\)
+          </li> 
+          <li>Standardabweichung \(\sigma\approx 4,58\)</li>
+          <li>\(2\sigma\)-Umgebung: \([20,84; 39,16]\)</li>
+          <li>Rechnung:
+            <p style="margin-left: 20px;">
+              \(\begin{align*}
+              P(21\leq X\leq 39)&=P(X\leq 39)-P(X\leq 20)\\
+              P(56\leq X\leq 64)&\approx 96,3\,\%
+              \end{align*}\)
+            </p>
+          </li>
+          <li>Ja stimmt.</li>
+        </ul>
+      </details>
+
+      <details>
+        <summary>Laplace-Bedingung</summary>
+
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>\(\sigma=1,22 < 3\)
+          </li> 
+          <li>
+            <ul class="custom-marker parens-around lower-alpha more-spacing">
+          <li>Erwartungswert \(\mu=2,4\)
+          </li> 
+          <li>Standardabweichung \(\sigma\approx 1,30\)</li>
+          <li>\(21\sigma\)-Umgebung: \([0,78; 3,22]\)</li>
+          <li>Rechnung:
+            <p style="margin-left: 20px;">
+              \(\begin{align*}
+              P(1\leq X\leq 3)&=P(X\leq 3)-P(X=0)\\
+              P(56\leq X\leq 64)&\approx 78,6\,\% > 68,3\,\%
+              \end{align*}\)
+            </p>
+          </li>
+          <li>Die Abweichung ist zu stark.</li>
+        </ul>
+          </li>
+          <p>
+            Es gilt:
+            <p style="margin-left: 20px;">
+              \(\begin{align*}
+              \sqrt{n\cdot p\cdot (1-p)}&>3    
+              \end{align*}\)
+            </p>
+            Ungleichung lösen ergibt: \(p_1< 0,1\) und \(p_2 > 0,9\), also z.B: \(p=0,05\)
+          </p>
+        </ol>
+      </details>
+
+      <details>
+        <summary>Spiel</summary>
+
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>\(\mu=20\)</li>
+          <li>\(1,64\sigma\)-Umgebung:
+            <ul>
+              <li>Standardabw.:\(\sigma=4\)</li>
+              <li>Umgebung: \([13,44; 26,56]\)</li>
+              <li>\(14\leq X\leq 26\)</li>
+            </ul>
+          </li>
+          <li>
+            \(P(17\leq X \leq 23)\approx 61,9\,\%\)
+            <p>
+              Das Ergebnis ist höher als \(50\,\%\), also ist die Wette für den Zuschauer günstig.
+            </p>
+          </li>
+        </ol>
+      </details>
+
+      <details>
+        <summary>\(50\,\%\)-Intervall</summary>
+
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>\(\mu=100\),\(\sigma\approx7,07\)</li>
+          <li>\(\sigma\approx7,07>3\): ist erfüllt</li>
+          <li>\(1\sigma\)-Intervall: \([93; 107]\)</li>
+          <li>Symmetrisch heißt, gleiche Abstände von \(\mu\):
+            <p>
+              Mit Probieren erhält man:
+              <ul>
+                <li>\(\mu\pm 1\): \(P(99\leq X \leq 101)=16,79\,\%\)</li>
+                <li>\(\mu\pm 2\): \(P(98\leq X \leq 102)=27,62\,\%\)</li>
+                <li>\(\mu\pm 3\): \(P(97\leq X \leq 103)=37,93\,\%\)</li>
+                <li>\(\mu\pm 4\): \(P(96\leq X \leq 104)=47,54\,\%\)</li>
+                <li>\(\mu\pm 5\): \(P(95\leq X \leq 105)=56,32\,\%\)</li>
+              </ul>
+            </p>
+            Das Intervall von 96 bis 104 ist am Geeignesten.
+          </li>
+        </ol>
+      </details>
+
+      <details id="a2">
+        <summary>Sigma-Regeln & exakte Wahrscheinlichkeit</summary>
+
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>\(\mu=200\),\(\sigma=10\)</li>
+          <li>Umgebungen:
+            <ul>
+              <li>\(1\sigma\): \(P\approx 70,6\,\%\)</li>
+              <li>\(2\sigma\): \(P\approx 96,0\,\%\)</li>
+              <li>\(3\sigma\): \(P\approx 99,8\,\%\)</li>
+            </ul>
+          </li>
+          <li>\(1\sigma\)-Intervall:\([93; 107]\)</li>
+          <li>Umgebungen:
+            <ul>
+              <li>\(90\,\%\) in \(1,64\sigma\): \([184; 216]\)</li>
+              <li>\(95\,\%\) in \(1,96\sigma\): \([181; 219]\)</li>
+              <li>\(99\,\%\) in \(2,58\sigma\): \([175; 225]\)</li>
+            </ul>
+          </li>
+          <li>
+            \(P(184\leq X\leq 216)\approx 89,0\,\%\)
+          </li>
+        </ol>
+      </details>
+
+      <details>
+        <summary>Trefferzahl beim Würfelwurf</summary>
+
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>\(\mu=50\), \(\sigma\approx6,45 > 3\ \checkmark\) </li>
+          <li>\(1,96\sigma\): \([38; 62]\)
+          </li>
+        </ol>
+      </details>
+
+      <details>
+        <summary>Laplace-Bedingung</summary>
+
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>\(\mu=5\), \(\sigma=2 < 3\) nein </li>
+          <li>\(\sqrt{n\cdot 0,2\cdot0,8} > 3\) \(\Rightarrow n>57\) </li>
+          <li>\(\sqrt{n\cdot 0,01\cdot0,99} > 3\) \(\Rightarrow n>909\) </li>
+          <li>\(\sqrt{n\cdot p\cdot (1-p)} > 3\) 
+            <p>
+              Der Graph von \(f(p)=p\cdot(1-p)=p-p^2\) ist eine nach unten geöffnete Parabel mit Nullstellen bei 
+              \(p=0\) und \(p=1\), sowie einem Maximum bei \(p=0,5\) (\(f(0,5)=0,25\)).
+            </p>
+            <p>Aus \(\sqrt{n\cdot 0,25} > n\) ergibt sich \(n>36\), also muss \(n\) mindestens \(37\) betragen.
+            </p>
+           </li>
+        </ol>
+      </details>
+
+      <details>
+        <summary>Hühnerhof</summary>
+
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>\(\mu(X)=160\), \(\mu(Y)=1200\) </li>
+          <li>\(\sigma(X)\approx5,66\), \(\sigma(Y)\approx15,49\)
+            <p>
+              \(90\,\%\) entspricht \(1,64\sigma\)
+              <ul>
+                <li>Er sollte mit \(151\) Freilandeiern rechnen.</li>
+                <li>Er sollte mit \(1175\) Stalleiern rechnen.</li>
+              </ul>
+            </p>
+          </li>
+          <li>\(151\cdot0,15+1175\cdot0,09=128,40\) €</li>
+          
+        </ol>
+      </details>
 
 
 
