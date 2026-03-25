@@ -136,23 +136,23 @@
             <div style="flex: 1; min-width: 250px;">
               Ganzzahlige Sicherheiten:
               <ul>
-            <li>\(z=1,64\) \(\Rightarrow\) \(90\,\%\) Sicherheit</li>
-            <li>\(z=1,96\) \(\Rightarrow\) \(95\,\%\) Sicherheit</li>
-            <li>\(z=2,58\) \(\Rightarrow\) \(99\,\%\) Sicherheit</li>
-          </ul>
+                <li>\(z=1,64\) \(\Rightarrow\) \(90\,\%\) Sicherheit</li>
+                <li>\(z=1,96\) \(\Rightarrow\) \(95\,\%\) Sicherheit</li>
+                <li>\(z=2,58\) \(\Rightarrow\) \(99\,\%\) Sicherheit</li>
+              </ul>
             </div>
             <div style="flex: 1; min-width: 250px;">
               Ganzzahlige \(z\)-Werte:
               <ul>
-            <li>\(z=1\) \(\Rightarrow\) \(68,3\,\%\) Sicherheit</li>
-            <li>\(z=2\) \(\Rightarrow\) \(95,5\,\%\) Sicherheit</li>
-            <li>\(z=3\) \(\Rightarrow\) \(99,7\,\%\) Sicherheit</li>
-          </ul>
+                <li>\(z=1\) \(\Rightarrow\) \(68,3\,\%\) Sicherheit</li>
+                <li>\(z=2\) \(\Rightarrow\) \(95,5\,\%\) Sicherheit</li>
+                <li>\(z=3\) \(\Rightarrow\) \(99,7\,\%\) Sicherheit</li>
+              </ul>
             </div>
           </div>
 
 
-          
+
 
 
           Die relative Häufigkeit liegt dann zwischen:
@@ -240,7 +240,7 @@
             </div>
         </section> -->
     <section id="aufgaben" class="aufgaben">
-      <h3>Aufgaben zu Prognoseintervallen</h3>
+      <h3>Aufgaben zu Konfidenzintervallen</h3>
       <ul class="custom-marker point-after decimal more-spacing">
         <li>Seite 237 Übung 1 und 2 <a href="#a1">Lösungen</a></li>
         <li>Seite 238 Übung 3 bis 6 <a href="#a2">Lösungen</a></li>
@@ -248,16 +248,228 @@
       </ul>
     </section>
     <section class="loesungen">
-      <h3>Lösungen zu Prognoseintervallen</h3>
+      <h3>Lösungen zu Konfidenzintervallen</h3>
 
       <details id="a1">
-        <summary>...</summary>
+        <summary>Sonntagfrage</summary>
 
+        <ul class="custom-marker parens-around lower-alpha more-spacing">
+          <li>Rel. Häufigkeiten:
+            <p style="margin-left: 20px;">
+              \(\begin{align*}
+              h_A&=\frac{500}{1000}=\tfrac12\\
+              h_B&=\frac{50}{1000}=\tfrac1{20}
+              \end{align*}\)
+            </p>
+          </li>
+          <li>Laplace-Bedingung:
+            <p style="margin-left: 20px;">
+              \(\begin{align*}
+              \sigma^*_A&=\sqrt{1000\cdot\tfrac12\cdot\tfrac12}\\
+              \sigma^*_A&\approx 15,81 > 3\quad \checkmark \\[8px]
+              \sigma^*_B&=\sqrt{1000\cdot\tfrac1{20}\cdot\tfrac{19}{20}}\\
+              \sigma^*_B&\approx 6,89 > 3\quad \checkmark \\[8px]
+              \end{align*}\)
+            </p>
+          </li>
+          <li>Wahrscheinlichkeiten (\(99\,\%\) entspricht \(2,58\sigma\)):
+            <p>
+              Partei A:
+            <p style="margin-left: 20px;">
+              \(\begin{align*}
+              p_1&=\tfrac12-2,58\cdot\sqrt{\frac{\tfrac12\cdot\tfrac12}{1000}} \\
+              p_1&\approx46\,\% \\[8px]
+              p_2&=\tfrac12+2,58\cdot\sqrt{\frac{\tfrac12\cdot\tfrac12}{1000}} \\
+              p_2&\approx54\,\% \\[8px]
+              &0,46\leq p\leq 0,54
+              \end{align*}\)
+            </p>
+            Partei A wird mit einer Sicherheit von \(99\,\%\) von \(46\,\) bis \(54\,\%\) gewählt.
+            </p>
+            <p>
+              Partei B:
+            <p style="margin-left: 20px;">
+              \(\begin{align*}
+              p_1&\approx3\,\% \\[8px]
+              p_2&\approx7\,\% \\[1px]
+              &0,03\leq p\leq 0,07
+              \end{align*}\)
+            </p>
+            Partei B wird mit einer Sicherheit von \(99\,\%\) von \(3\,\) bis \(7\,\%\) gewählt.
+            </p>
+          </li>
+
+        </ul>
+      </details>
+
+      <details>
+        <summary>Vergrößerung der Stichprobe</summary>
+
+        <ul class="custom-marker parens-around lower-alpha more-spacing">
+          <li>Im Beispiel gegeben:
+            <p style="margin-left: 20px;">
+              \(\begin{align*}
+              \sigma^*&=17,23 > 3\\
+              &0,422\leq p\leq 0,478
+              \end{align*}\)
+            </p>
+          </li>
+          <li>Neue Relative Häufigkeit: \(h_n=\tfrac{1080}{2400}=0,45\)</li>
+          <li>Neue Laplace-Bedingung:
+            <p style="margin-left: 20px;">
+              \(\begin{align*}
+              \sigma^*&=\sqrt{2400\cdot0,45\cdot0,55} \\
+              \sigma^*&\approx24,37 > 3
+              \end{align*}\)
+            </p>
+          </li>
+          <li>Neuer Marktanteil: (\(95\,\%\) entspricht \(1,96\sigma\)):
+
+            <p style="margin-left: 20px;">
+              \(\begin{align*}
+              p_1&=0,45-1,96\cdot\sqrt{\frac{0,45\cdot0,55}{2400}} \\
+              p_1&\approx43\,\% \\[8px]
+              p_2&=0,45+1,96\cdot\sqrt{\frac{0,45\cdot0,55}{2400}} \\
+              p_2&\approx47\,\% \\[1px]
+              &0,43\leq p\leq 0,47
+              \end{align*}\)
+            </p>
+          </li>
+        </ul>
+        Die Intervallgrenzen rücken näher zusammen, bzw. die Fehlerquote sinkt.
+      </details>
+
+      <details id="a2">
+        <summary>Wurf von Reißnägeln</summary>
+        \(n=500\), \(h_n=\frac{210}{500}=0,42\), \(\sigma^*\approx 24,37 > 3\)
         <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>\(90\,\%\) entspricht \(1,64\sigma\):
+            <p style="margin-left: 20px;">
+              \(\begin{align*}
+              p_1&=0,42-1,64\cdot\sqrt{\frac{0,42\cdot0,58}{500}}\\
+              p_1&\approx38,4\,\% \\[8px]
+              p_2&=0,42+1,64\cdot\sqrt{\frac{0,42\cdot0,58}{500}}\\
+              p_2&\approx45,6\,\% \\[8px]
+              \end{align*}\)
+            </p>
+            Konfidenzintervall für \(90\,\%\): \(0,384\leq p\leq 0,456\)
+          </li>
+          <li>\(99\,\%\) entspricht \(2,58\sigma\):
+            <p style="margin-left: 20px;">
+              \(\begin{align*}
+              p_1&=0,42-2,58\cdot\sqrt{\frac{0,42\cdot0,58}{500}}\\
+              p_1&\approx36,3\,\% \\[8px]
+              p_2&=0,42+2,58\cdot\sqrt{\frac{0,42\cdot0,58}{500}}\\
+              p_2&\approx47,7\,\% \\[8px]
+              \end{align*}\)
+            </p>
+            Konfidenzintervall für \(99\,\%\): \(0,363\leq p\leq 0,477\)
+          </li>
           <li>
+            Spanne des \(90\)er-Intervalls: \(\Delta=7,2\,\%\), Spanne des \(99\)er-Intervalls: \(\Delta=11,4\,\%\).
+            <p>
+              Wegen der höheren Sicherheit ist das \(99\)er-Intervall größer.
+            </p>
+          </li>
+        </ol>
+      </details>
+
+      <details>
+        <summary>Werbekampagne</summary>
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>\(\sigma^*\approx 16,0 > 3\quad \checkmark\)
+          </li>
+          <li>\(90\,\%\) entspricht \(1,64\sigma\):
+            <p style="margin-left: 20px;">
+              \(\begin{align*}
+              p_1&\approx20,3\,\% \\[8px]
+              p_2&\approx23,8\,\% \\[8px]
+              \end{align*}\)
+            </p>
+            Konfidenzintervall für \(90\,\%\): \(0,203\leq p\leq 0,238\)
+          </li>
+          <li>
+            Es ist keine weitere Kampagne nötig, da \(p_1 > 20\,\%\).
+          </li>
+        </ol>
+      </details>
+
+      <details>
+        <summary>Internetausbau</summary>
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>\(\sigma^*\approx 6,9 > 3\quad \checkmark\)
+          </li>
+          <li>\(90\,\%\) entspricht \(1,64\sigma\):
+            <p style="margin-left: 20px;">
+              \(\begin{align*}
+              p_1&\approx54,3\,\% \\[8px]
+              p_2&\approx65,7\,\% \\[8px]
+              \end{align*}\)
+            </p>
+            Konfidenzintervall für \(90\,\%\): \(0,543\leq p\leq 0,657\)
+            <p>
+              Da der Grenzwert von \(65\,\%\) von \(p_2\) gerade so überschritten wurde, dürfte sich ein weiterer Ausbau lohnen.
+            </p>
+          </li>
+        </ol>
+      </details>
+
+      <details>
+        <summary>Kundenzufriedenheit</summary>
+        <ol class="custom-marker parens-around lower-alpha more-spacing">
+          <li>\(p_1\approx 75,4\,\% > 75\,\%\)
+            <p>
+              Mit \(90\,\%\)-iger Sicherheit hat die Firma ihr Ziel erreicht.
+            </p>
+          </li>
+          <li>\(p_1\approx 74,5\,\% < 75\,\%\)
+            <p>
+              Mit \(9%\,\%\)-iger Sicherheit ist dagegen, wenn auch knapp, nicht gegeben.
+            </p>
+          </li>
+          <li>
+            Bei höherer Sicherheit vergrößert sich das Konfidenzintervall.
+            <p>
+              Im Fall b) kann nicht ausgeschlossen werden, dass der Wert nicht doch unter \(75\,\%\) liegt.
+            </p>
           </li>
 
         </ol>
+      </details>
+
+      <details id="a3">
+        <summary>Anteil guter Zensuren</summary>
+        \(h_n=\frac{20}{50}=0,4\), \(\sigma^*\approx 3,46 > 3\quad \checkmark\)
+        <ul class="custom-marker parens-around lower-alpha more-spacing">
+          <li>\(68,3\,\%\) entspricht \(1\sigma\)
+            <p style="margin-left: 20px;">
+              \(\begin{align*}
+              p_1&=0,4-1\cdot\sqrt{\frac{0,4\cdot0,6}{50}}\\
+              p_1&\approx33,1\,\% \\[8px]
+              p_2&=0,4+1\cdot\sqrt{\frac{0,4\cdot0,6}{50}}\\
+              p_2&\approx46,9\,\% \\[8px]
+              \end{align*}\)
+            </p>
+            Der Anteil guter Schüler liegt mit \(68,3\,\%\)-iger Sicherheit zwischen \(33,1\) und \(46,9\,\%\).
+          </li>
+          <li>\(99,7\,\%\) entspricht \(3\sigma\)
+            <p style="margin-left: 20px;">
+              \(\begin{align*}
+              p_1&=0,4-3\cdot\sqrt{\frac{0,4\cdot0,6}{50}}\\
+              p_1&\approx19,2\,\% \\[8px]
+              p_2&=0,4+3\cdot\sqrt{\frac{0,4\cdot0,6}{50}}\\
+              p_2&\approx60,8\,\% \\[8px]
+              \end{align*}\)
+            </p>
+            Der Anteil guter Schüler liegt mit \(99,7\,\%\)-iger Sicherheit zwischen \(19,2\) und \(60,8\,\%\).
+          </li>
+          <li>
+            Bei einer Sicherheit von \(99,7\,\%\) beträgt die Streuung von \(p\) \(41,6\%\). 
+            Ein Konfidenzintervall mit so großer Streuung ist unbrauchbar.
+          </li>
+
+
+        </ul>
       </details>
 
 
