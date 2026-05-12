@@ -512,7 +512,7 @@
           </p>
           <p>
             \(\begin{align*}
-            P({\color{magenta}X=k})=\binom{\color{lime}n}{\color{magenta}k}\cdot {\color{cyan}p}^{\color{magenta}k}\cdot
+            P({X=\color{magenta}k})=\binom{\color{lime}n}{\color{magenta}k}\cdot {\color{cyan}p}^{\color{magenta}k}\cdot
             (1-{\color{cyan}p})^{{\color{lime}n}-\color{magenta}k}
             \end{align*}\)
           </p>
@@ -521,7 +521,7 @@
           </p>
           <p>
             \(\begin{align*}
-            P({\color{magenta}X=k})=B({\color{lime}n}; {\color{cyan}p}; {\color{magenta}k})
+            P({X=\color{magenta}k})=B({\color{lime}n}; {\color{cyan}p}; {\color{magenta}k})
             \end{align*}\)
           </p>
           <p>
@@ -545,9 +545,9 @@
         </p>
         <p>
           \(\begin{align*}
-          P({\color{magenta}X=4})=B({\color{lime}10}; {\color{cyan}\tfrac16};
+          P({X=\color{magenta}4})=B({\color{lime}10}; {\color{cyan}\tfrac16};
           {\color{magenta}4})=\binom{\color{lime}10}{\color{magenta}4}
-          \cdot{\color{cyan}\tfrac16}^{\color{magenta}4}\cdot
+          \cdot\left({\color{cyan}\tfrac16}\right)^{\color{magenta}4}\cdot
           (1-{\color{cyan}\tfrac16})^{{\color{lime}10}-{\color{magenta}4}} \approx 5,4\,\%
           \end{align*}\)
         </p>
@@ -556,7 +556,7 @@
         <ul class="more-spacing" style="list-style-type: none;"">
             <li>\(X\): Anzahl der geworfenen Sechsen</li>
               <li>\(\displaystyle\binom{\color{lime}10}{\color{magenta}4}\): Anzahl der Möglichkeiten 4 aus 10 zu ziehen</li>
-              <li>\(\quad{\color{cyan}\tfrac16}^{\color{magenta}4}\): Wahrscheinlichkeit für vier Sechsen</li>
+              <li>\(\quad\left({\color{cyan}\tfrac16}\right)^{\color{magenta}4}\): Wahrscheinlichkeit für vier Sechsen</li>
               <li>\((1-{\color{cyan}\tfrac16})^{{\color{lime}10}-{\color{magenta}4}}=\left(\tfrac56\right)^6\): 
                 Wahrscheinlichkeit für sechsmal keine Sechs (Gegenereignis)</li>
           </li>
@@ -568,16 +568,16 @@
           Beim Elfmeterschießen versuchen \(\color{lime}\overset{n}{5}\) Spieler aus kurzer Entfernung das Tor zu treffen.
         </p>
         <p>Die <i>Dabendorfer \(\pi\)raten</i> haben eine durchschnittliche Trefferquote von \(\color{cyan}\overset{p}{70\,\%}\).</p>
-        <p>Wie groß ist die Wahrscheinlichkeit, dass sie mindestens drei Schüsse verwandeln?</p>
+        <p>Wie groß ist die Wahrscheinlichkeit, dass sie mindestens \(\color{magenta}\overset{k}{\text{drei}}\) Schüsse verwandeln?</p>
         <p>
           \(\begin{align*}
-          P({\color{magenta}X\geq 3})&=P({\color{orange}X=3})+P({\color{salmon}X=4})+P({\color{violet}X=5}) \\
-          P({\color{magenta}X\geq 3})&=B({\color{lime}5}; {\color{cyan}0,7}; {\color{orange}3}) + B({\color{lime}5}; {\color{cyan}0,7}; {\color{salmon}4}) + B({\color{lime}5}; {\color{cyan}0,7}; {\color{violet}5})   \\
-          P({\color{magenta}X\geq 3})&=\binom{\color{lime}5}{\color{orange}3}\cdot{\color{cyan}0,7}^{\color{orange}3}\cdot (1-{\color{cyan}0,7})^{{\color{lime}5}-{\color{orange}3}} \\[0.5em]
+          P({X\geq \color{magenta}3})&=P({X=\color{orange}3})+P({X=\color{salmon}4})+P({X=\color{violet}5}) \\
+          P({X\geq \color{magenta}3})&=B({\color{lime}5}; {\color{cyan}0,7}; {\color{orange}3}) + B({\color{lime}5}; {\color{cyan}0,7}; {\color{salmon}4}) + B({\color{lime}5}; {\color{cyan}0,7}; {\color{violet}5})   \\
+          P({X\geq \color{magenta}3})&=\binom{\color{lime}5}{\color{orange}3}\cdot{\color{cyan}0,7}^{\color{orange}3}\cdot (1-{\color{cyan}0,7})^{{\color{lime}5}-{\color{orange}3}} \\[0.5em]
           &\quad + \binom{\color{lime}5}{\color{salmon}4}\cdot{\color{cyan}0,7}^{\color{salmon}4}\cdot (1-{\color{cyan}0,7})^{{\color{lime}5}-{\color{salmon}4}} \\[0.5em]
           &\quad + \binom{\color{lime}5}{\color{violet}5}\cdot{\color{cyan}0,7}^{\color{violet}5}\cdot (1-{\color{cyan}0,7})^{{\color{lime}5}-{\color{violet}5}} \\[0.5em]
           &\approx{\color{orange}30,9\,\%} + {\color{salmon}36,0\,\%} + {\color{violet}16,8\,\%} \\
-          P({\color{magenta}X\geq 3})&\approx83,6\,\%
+          P({X\geq \color{magenta}3})&\approx83,6\,\%
           \end{align*}\)
         </p>
         <p>
